@@ -205,10 +205,9 @@ jobs:
       - name: Health check and warmup
         run: |
           sudo apt-get install -y curl
-          BASE_URL="https://houle.ai"
           ATTEMPTS=40; SLEEP=3; OK=0
           for i in $(seq 1 $ATTEMPTS); do
-            STATUS=$(curl -o /dev/null -s -w "%{http_code}" -L "$BASE_URL/")
+            STATUS=$(curl -o /dev/null -s -w "%{http_code}" -L "https://houle.ai/fr/")
             if [ "$STATUS" -eq 200 ]; then
               echo "✅ Health check OK"
               OK=1
@@ -221,14 +220,14 @@ jobs:
 
           echo "[deploy] Warming up paths..."
           for path in "/" "/en/" "/fr/"; do
-            curl -fsSL "$BASE_URL$path" >/dev/null 2>&1 || true
+            curl -fsSL "https://houle.ai$path" >/dev/null 2>&1 || true
           done
 
           echo "[deploy] Simple warmup of next/image URLs (non-blocking)"
           for locale in en fr; do
-            HTML=$(curl -fsSL "$BASE_URL/$locale/" || true)
+            HTML=$(curl -fsSL "https://houle.ai/$locale/" || true)
             echo "$HTML" | grep -Eo '/_next/image/\?url=[^" ]+' | sed 's/&amp;/\&/g' | head -n 30 | while read -r u; do
-              curl -fsSL "$BASE_URL$u" >/dev/null 2>&1 || true
+              curl -fsSL "https://houle.ai$u" >/dev/null 2>&1 || true
             done
           done
 
