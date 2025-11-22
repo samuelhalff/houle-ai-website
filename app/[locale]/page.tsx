@@ -102,9 +102,9 @@ export default function HomePage({
 
   return (
     <div className="max-w-[1080px] mx-auto w-full px-6 pb-12 pt-10 space-y-14">
-      <section className="relative overflow-hidden rounded-3xl border bg-gradient-to-br from-primary/10 via-background to-background p-8 sm:p-12 shadow-[0_20px_70px_rgba(0,0,0,0.08)]">
-        <div className="absolute -left-16 -top-24 h-64 w-64 rounded-full bg-primary/10 blur-3xl" />
-        <div className="absolute -right-20 -bottom-28 h-72 w-72 rounded-full bg-accent/30 blur-3xl" />
+      <section className="relative overflow-hidden rounded-3xl border bg-gradient-to-br from-primary/[0.08] via-accent/[0.03] to-background p-8 sm:p-12 shadow-[0_20px_70px_rgba(0,0,0,0.08)] dark:shadow-[0_20px_70px_rgba(0,0,0,0.3)]">
+        <div className="absolute -left-16 -top-24 h-64 w-64 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 blur-3xl" />
+        <div className="absolute -right-20 -bottom-28 h-72 w-72 rounded-full bg-gradient-to-tl from-accent/25 to-accent/5 blur-3xl" />
         <div className="relative space-y-6 sm:space-y-8">
           <div className="inline-flex items-center gap-2 rounded-full bg-primary/15 px-4 py-2 text-sm font-medium text-primary">
             <span className="inline-block h-2 w-2 rounded-full bg-primary" />
@@ -125,9 +125,9 @@ export default function HomePage({
             {t.highlights.map((item) => (
               <span
                 key={item}
-                className="inline-flex items-center gap-2 rounded-full bg-foreground px-4 py-2 text-sm font-semibold text-background shadow-sm ring-1 ring-foreground/20"
+                className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-primary/90 to-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-sm ring-1 ring-primary/30 dark:ring-primary/50"
               >
-                <span className="inline-block h-2 w-2 rounded-full bg-background" />
+                <span className="inline-block h-2 w-2 rounded-full bg-primary-foreground" />
                 {item}
               </span>
             ))}
@@ -136,7 +136,7 @@ export default function HomePage({
       </section>
 
       <section className="grid gap-6 sm:grid-cols-2">
-        <div className="rounded-2xl border bg-card p-6 shadow-sm">
+        <div className="group rounded-2xl border bg-gradient-to-br from-primary/[0.06] via-primary/[0.03] to-card p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/30">
           <p className="text-sm font-semibold text-primary uppercase tracking-[0.14em]">
             Products
           </p>
@@ -145,7 +145,7 @@ export default function HomePage({
             {t.productsBody}
           </p>
         </div>
-        <div className="rounded-2xl border bg-card p-6 shadow-sm">
+        <div className="group rounded-2xl border bg-gradient-to-br from-accent/[0.08] via-accent/[0.04] to-card p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:border-accent/30">
           <p className="text-sm font-semibold text-primary uppercase tracking-[0.14em]">
             Security & Privacy
           </p>
