@@ -98,7 +98,8 @@ jobs:
             artifact/next-standalone.tar.gz.part \
             "$USER@$HOST:sites/houle.ai/artifact/"
 
-      - name: Extract, symlink and cleanup releases
+      - name: Test SSH connectivity (non-critical)
+        continue-on-error: true
         run: |
           sudo apt-get install -y sshpass
           HOST="${{ secrets.DEPLOY_SSH_HOST }}"
@@ -110,8 +111,17 @@ jobs:
           if sshpass -p "$PASS" ssh -o StrictHostKeyChecking=no -o ConnectTimeout=10 -p "$PORT" "$USER@$HOST" 'echo "SSH probe successful"' 2>/dev/null; then
             echo "[deploy] SSH probe successful"
           else
-            echo "[deploy] SSH probe failed (this may be expected); proceeding with deployment"
+            echo "[deploy] SSH probe failed (this may be expected)"
+            exit 1
           fi
+
+      - name: Extract, symlink and cleanup releases
+        run: |
+          sudo apt-get install -y sshpass
+          HOST="${{ secrets.DEPLOY_SSH_HOST }}"
+          USER="${{ secrets.DEPLOY_SSH_USER }}"
+          PASS="${{ secrets.DEPLOY_SSH_PASSWORD }}"
+          PORT="${{ secrets.DEPLOY_SSH_PORT }}"; [ -z "$PORT" ] && PORT=22
 
           sshpass -p "$PASS" ssh -p "$PORT" -o StrictHostKeyChecking=no "$USER@$HOST" bash -lc '
             set -euo pipefail
