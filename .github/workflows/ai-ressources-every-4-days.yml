@@ -1,0 +1,121 @@
+name: AI Resources Update (every 4 days)
+
+on:
+  schedule:
+    - cron: "0 0 */4 * *" # every 4 days at 00:00 UTC
+  workflow_dispatch:
+
+concurrency:
+  group: ai-content-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # to commit changes
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          # Use PAT to allow commits to trigger other workflows
+          token: ${{ secrets.PAT_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run AI update (FR + translations via Azure Agent)
+        env:
+          AZURE_AGENT_ENDPOINT: ${{ secrets.AZURE_AGENT_ENDPOINT }}
+          AZURE_AGENT_ID: ${{ secrets.AZURE_AGENT_ID }}
+          AZURE_TENANT_ID: ${{ fromJson(secrets.AZURE_CREDENTIALS).tenantId }}
+          AZURE_CLIENT_ID: ${{ fromJson(secrets.AZURE_CREDENTIALS).clientId }}
+          AZURE_CLIENT_SECRET: ${{ fromJson(secrets.AZURE_CREDENTIALS).clientSecret }}
+          # Optional: a distinct agent for translation
+          AZURE_TRANSLATE_AGENT_ID: ${{ secrets.AZURE_TRANSLATE_AGENT_ID }}
+          # Adjust if longer draft generations are needed
+          AZURE_AGENT_RUN_TIMEOUT_MS: 180000
+        run: |
+          node scripts/ai-ressources-update.js --apply
+
+      - name: Clean up bad article references (unreachable URLs)
+        continue-on-error: true
+        run: |
+          echo "🧹 Removing unreachable article reference links..."
+          node scripts/clean-bad-article-refs.js --all-locales || echo "⚠️ Reference cleanup had issues (continuing...)"
+
+      - name: Final verification (informational only)
+        continue-on-error: true
+        run: |
+          echo "✅ Running final verification..."
+          node scripts/check-ressources-links.js --all-locales || echo "::warning::Some references missing after cleanup"
+          node scripts/check-ressources-links.js --all-locales --remote || echo "::warning::Some URLs still unreachable after cleanup"
+          echo "✅ Verification complete. Proceeding with deployment..."
+
+      - name: Validate article references (fail on 404/410)
+        run: npm run validate:article-refs  -- --no-fail
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add src/translations/**/ressources.json || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore(ressources): every 4 days AI article update" --author="samuelhalff <660062+samuelhalff@users.noreply.github.com>"
+            echo "⏳ Waiting 30 seconds before push to avoid deployment conflicts..."
+            sleep 30
+            git push
+          fi
+
+      # Note: No need to trigger deployment explicitly
+      # The push above will automatically trigger build-and-deploy.yml via push event
+
+      - name: Wait for deployment
+        run: |
+          echo "⏳ Waiting 5 minutes for deployment to complete..."
+          sleep 300
+
+      - name: Health check
+        continue-on-error: true
+        run: |
+          echo "🏥 Checking site health..."
+          for locale in fr en de es pt; do
+            echo "Checking /${locale}/"
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" "https://houle.ai/${locale}/")
+            if [ "$STATUS" = "200" ]; then
+              echo "✅ ${locale}: OK"
+            else
+              echo "::warning::❌ ${locale}: Failed (HTTP $STATUS)"
+            fi
+          done
+
+          echo "Checking /fr/ressources/"
+          STATUS=$(curl -s -o /dev/null -w "%{http_code}" "https://houle.ai/fr/ressources/")
+          if [ "$STATUS" = "200" ]; then
+            echo "✅ Resources page: OK"
+          else
+            echo "::warning::❌ Resources page: Failed (HTTP $STATUS)"
+          fi
+
+      - name: Summary
+        if: always()
+        run: |
+          echo "## 🎉 AI Resources Update Complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### What Happened" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ AI generated a new long-form article (FR canonical + translations)" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ References cleaned automatically when possible" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Changes committed and deployed" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Notes" >> $GITHUB_STEP_SUMMARY
+          echo "- Check the commit diff to see what was added/removed" >> $GITHUB_STEP_SUMMARY
+          echo "- Check warnings above if any cleanup was needed" >> $GITHUB_STEP_SUMMARY
+          echo "- The workflow **always succeeds** - bad content is auto-removed" >> $GITHUB_STEP_SUMMARY

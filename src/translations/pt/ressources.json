@@ -1,0 +1,21 @@
+{
+    "IntroTitle": "Recursos",
+    "IntroText": "Artigos e guias sobre IA privada para Microsoft 365.",
+    "IntroShort": "Recursos",
+    "ArticlesTitle": "Artigos recentes",
+    "LoadMoreArticles": "Carregar mais artigos",
+    "ShowAllArticles": "Mostrar tudo",
+    "ReadArticle": "Ler artigo",
+    "By": "Por",
+    "Published": "Publicado em",
+    "Articles": [],
+    "FAQ": {
+        "Title": "Perguntas frequentes",
+        "Items": []
+    },
+    "Contact": {
+        "Title": "Perguntas?",
+        "Description": "Nossos especialistas estão aqui para ajudá-lo a integrar a IA em sua empresa.",
+        "ButtonText": "Contate-nos"
+    }
+}

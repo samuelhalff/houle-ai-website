@@ -11,7 +11,7 @@ export default function HomePage({
       tagline: "houle — Private AI, right inside Microsoft 365",
       headline: "AI that lives in your Microsoft tools and stays private.",
       subtext:
-        "We are creating Office add-ins with AI for Microsoft 365 that feel native to Outlook and Word, plus a Swiss-hosted GPT you control. It works with your data, follows your rules, and keeps every conversation private.",
+        "We are creating Office add-ins with AI for Microsoft 365 that feel native to Outlook and Word, plus a Swiss-hosted GPT you control. Based in the Lake Geneva region, we serve clients across Geneva, Lausanne, Bern, Zurich, and Valais. It works with your data, follows your rules, and keeps every conversation private.",
       highlights: [
         "Office add-ins with AI for Microsoft 365",
         "Swiss-hosted GPT built for privacy",

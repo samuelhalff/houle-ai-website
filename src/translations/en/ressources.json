@@ -1,0 +1,72 @@
+{
+    "IntroTitle": "Resources",
+    "IntroText": "Articles and guides on Private AI for Microsoft 365.",
+    "IntroShort": "Resources",
+    "ArticlesTitle": "Recent Articles",
+    "LoadMoreArticles": "Load more articles",
+    "ShowAllArticles": "Show all",
+    "ReadArticle": "Read article",
+    "By": "By",
+    "Published": "Published on",
+    "Articles": [
+        {
+            "slug": "ia-sur-mesure-agents-foundry",
+            "title": "Custom AI: why choose dedicated agents over generic assistants",
+            "description": "Discover how custom Add-ins connected to Azure Foundry offer a secure and controlled alternative to generic AI assistants.",
+            "content": "## Introduction\n\nThe hype around generic AI assistants is undeniable. However, for critical business processes, these \"one-size-fits-all\" tools quickly show their limits: lack of specific context, privacy risks, and absence of control over the models used.\n\nAt houle, we believe in a different approach: **custom AI**. It is integrated directly into your daily tools via Office Add-ins and powered by autonomous agents hosted in your own Azure Foundry environment.\n\n## The limits of generic assistants\n\nConsumer solutions or even \"turnkey\" enterprise assistants often suffer from several flaws for advanced uses. Data opacity makes it difficult to know exactly how your data transits or if it is used to improve the global service. Furthermore, a generalist assistant lacks specialization; it can write a poem, but might struggle to validate an invoice according to the specific Swiss accounting rules of your sector. Finally, hidden costs like per-user licenses can quickly become prohibitive for large-scale deployment.\n\n## The houle alternative: Add-ins and Foundry\n\nOur approach combines the flexibility of **Office Add-ins** (in Outlook, Word, Excel) with the power of **Microsoft Azure Foundry** (formerly Azure AI Studio).\n\n### Your own models, your own rules\n\nUsing Azure Foundry, we deploy models (GPT-4, Llama 3, or lighter SLM models) that are dedicated to you. You keep control over **grounding**, as your corporate data (RAG) is indexed securely without ever leaking outside. You also master **moderation** with strict content filters adapted to your corporate policy, and the **lifecycle**, deciding when to update the model to avoid unexpected behavior changes.\n\n### Seamless integration\n\nThe user does not need to learn a new tool because AI is where they work. In Outlook, a side panel analyzes attachments and proposes a response based on your internal knowledge base. In Excel, a custom function queries your agent to classify thousands of rows in a few seconds. In Word, a drafting assistant generates contract clauses validated by your legal department.\n\n## Security and sovereignty\n\nUnlike shared SaaS solutions, our \"single-tenant\" architecture ensures that your data and models remain in your Azure subscription. For our Swiss clients, this means everything can remain confined in the **Switzerland North** or **West** regions, ensuring full compliance with FADP and GDPR.\n\n## Conclusion\n\nDon't let your AI strategy depend on a \"black box\". With houle's custom AI solutions, you regain control. You offer your employees powerful, secure tools perfectly adapted to their job, while mastering your costs and data.",
+            "author": "houle Team",
+            "date": "2025-11-20",
+            "references": [
+                {
+                    "labelKey": "Azure AI Foundry",
+                    "url": "https://azure.microsoft.com/en-us/products/ai-foundry"
+                },
+                {
+                    "labelKey": "Federal Act on Data Protection (FADP)",
+                    "url": "https://www.fedlex.admin.ch/eli/cc/2022/491/en"
+                }
+            ]
+        },
+        {
+            "slug": "optimiser-processus-add-ins-office",
+            "title": "Optimizing business processes with custom Office Add-ins",
+            "description": "Don't leave your Office applications anymore: discover how custom Add-ins can connect Outlook, Word, and Excel to your business tools.",
+            "content": "## Introduction\n\nHow many times a day do your employees switch between Outlook, Excel, and your CRM or ERP? These constant back-and-forths harm concentration and productivity. The solution often lies in direct integration via **Office Add-ins**.\n\n## What is an Office Add-in?\n\nAn Office Add-in is a web application that runs inside Microsoft 365 applications (Outlook, Word, Excel, PowerPoint). Unlike old VBA macros, modern Add-ins use standard web technologies (HTML, JavaScript/TypeScript, React) and work on all platforms: Windows, Mac, Web, and Mobile.\n\n## Concrete use cases\n\nCRM integration in Outlook is a prime example. Imagine receiving an email from a prospect: with a custom Add-in, a side panel automatically opens to display the client's history from your CRM (Salesforce, Dynamics, or in-house solution). You can create an opportunity or archive the email in one click, without ever leaving Outlook.\n\nDocument generation in Word is also transformed. For legal or HR departments, contract creation is repetitive. A Word Add-in can retrieve variable data (name, address, dates) from a database and automatically fill a template, ensuring compliance and saving precious time.\n\nFinally, data analysis in Excel becomes smoother. Connect Excel directly to your internal APIs to import financial data in real-time, without manual and risky CSV exports. The Add-in can also offer custom functions for specific business calculations.\n\n## Why develop a custom Add-in?\n\nCustom development offers a seamless user experience because the tool integrates where users are already working. Maintenance is simplified since, being web applications, updates are deployed centrally without intervention on client workstations. Finally, security is reinforced as Add-ins run in a secure sandbox and respect the organization's policies.\n\n## houle expertise\n\nAt houle, we develop custom Add-ins that meet your exact needs. From user interface design to integration with your secure APIs, we create bridges between your tools to streamline your processes.\n\n## Conclusion\n\nOffice Add-ins are underestimated productivity levers. By reducing friction between applications, they allow your teams to focus on their added value.",
+            "author": "houle Team",
+            "date": "2025-11-18",
+            "references": [
+                {
+                    "labelKey": "Office Add-ins Documentation",
+                    "url": "https://learn.microsoft.com/en-us/office/dev/add-ins/overview/office-add-ins"
+                }
+            ]
+        },
+        {
+            "slug": "automatisation-intelligente-power-automate",
+            "title": "Intelligent automation: Power Automate and AI for enterprise",
+            "description": "Reduce manual and repetitive tasks thanks to the alliance of Power Automate and artificial intelligence.",
+            "content": "## Introduction\n\nAutomation is no longer reserved for large industries. With Microsoft's **Power Platform**, and specifically **Power Automate**, any company can automate its digital workflows. The recent addition of AI features (AI Builder, Copilot) multiplies these possibilities.\n\n## Power Automate: the conductor\n\nPower Automate allows connecting hundreds of applications (Microsoft 365, Dropbox, Twitter, SQL, etc.) together. A \"flow\" can be triggered by an event (receipt of an email, modification of a file) to execute a series of actions.\n\n## The contribution of AI with AI Builder\n\nAI Builder is the artificial intelligence component of the Power Platform. It allows integrating AI models into your flows without writing code.\n\nInvoice processing is a great example: a flow retrieves invoices received by email, uses AI Builder to extract key information (number, amount, supplier), and automatically inserts them into your accounting software.\n\nSentiment analysis allows automatically analyzing customer feedback or support tickets to detect dissatisfaction and alert a manager.\n\nFinally, image classification can automatically identify products or defects on photos taken by field technicians.\n\n## Governance and security\n\nAdopting \"low-code\" requires strict governance to avoid \"shadow IT\". Power Automate offers powerful administration tools (DLP Policies) to control which connectors can be used and by whom, ensuring that company data does not leak to unauthorized services.\n\n## Conclusion\n\nIntelligent automation is a growth accelerator. By freeing your employees from administrative tasks, you give them back time for innovation and customer relations. houle helps you identify eligible processes and build robust and sustainable automations.",
+            "author": "houle Team",
+            "date": "2025-11-15",
+            "references": [
+                {
+                    "labelKey": "Power Automate Documentation",
+                    "url": "https://learn.microsoft.com/en-us/power-automate/"
+                },
+                {
+                    "labelKey": "AI Builder Overview",
+                    "url": "https://learn.microsoft.com/en-us/ai-builder/overview"
+                }
+            ]
+        }
+    ],
+    "FAQ": {
+        "Title": "Frequently Asked Questions",
+        "Items": []
+    },
+    "Contact": {
+        "Title": "Questions?",
+        "Description": "Our experts are here to help you integrate AI into your business.",
+        "ButtonText": "Contact us"
+    }
+}

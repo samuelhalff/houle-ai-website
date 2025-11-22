@@ -1,0 +1,72 @@
+{
+    "IntroTitle": "Ressourcen",
+    "IntroText": "Artikel und Leitfäden zu privater KI für Microsoft 365.",
+    "IntroShort": "Ressourcen",
+    "ArticlesTitle": "Aktuelle Artikel",
+    "LoadMoreArticles": "Mehr Artikel laden",
+    "ShowAllArticles": "Alle anzeigen",
+    "ReadArticle": "Artikel lesen",
+    "By": "Von",
+    "Published": "Veröffentlicht am",
+    "Articles": [
+        {
+            "slug": "ia-sur-mesure-agents-foundry",
+            "title": "Maßgeschneiderte KI: Warum dedizierte Agenten generischen Assistenten vorzuziehen sind",
+            "description": "Entdecken Sie, wie benutzerdefinierte Add-ins, die mit Azure Foundry verbunden sind, eine sichere und kontrollierte Alternative zu generischen KI-Assistenten bieten.",
+            "content": "## Einführung\n\nDer Hype um generische KI-Assistenten ist unbestreitbar. Doch für kritische Geschäftsprozesse zeigen diese \"One-Size-Fits-All\"-Tools schnell ihre Grenzen: fehlender spezifischer Kontext, Datenschutzrisiken und fehlende Kontrolle über die verwendeten Modelle.\n\nBei houle glauben wir an einen anderen Ansatz: **Maßgeschneiderte KI**, die über Office-Add-ins direkt in Ihre täglichen Tools integriert ist und von autonomen Agenten angetrieben wird, die in Ihrer eigenen Azure Foundry-Umgebung gehostet werden.\n\n## Die Grenzen generischer Assistenten\n\nVerbraucherlösungen oder sogar \"schlüsselfertige\" Unternehmensassistenten leiden oft unter mehreren Mängeln für fortgeschrittene Anwendungen. Die Datenundurchsichtigkeit macht es manchmal schwierig, genau zu wissen, wie Ihre Daten übertragen werden oder ob sie zur Verbesserung des globalen Dienstes verwendet werden. Zudem fehlt einem generalistischen Assistenten oft die Spezialisierung; er kann ein Gedicht schreiben, aber kaum eine Rechnung nach den spezifischen Schweizer Buchhaltungsregeln Ihrer Branche validieren. Schließlich können versteckte Kosten wie Pro-Benutzer-Lizenzen bei einer groß angelegten Bereitstellung schnell unerschwinglich werden.\n\n## Die houle-Alternative: Add-ins und Foundry\n\nUnser Ansatz kombiniert die Flexibilität von **Office-Add-ins** (in Outlook, Word, Excel) mit der Leistung von **Microsoft Azure Foundry** (ehemals Azure AI Studio).\n\n### Ihre eigenen Modelle, Ihre eigenen Regeln\n\nMit Azure Foundry stellen wir Modelle bereit (GPT-4, Llama 3 oder leichtere SLM-Modelle), die Ihnen gewidmet sind. Sie behalten die Kontrolle über das **Grounding**, da Ihre Unternehmensdaten (RAG) sicher indexiert werden, ohne jemals nach außen zu dringen. Sie beherrschen auch die **Moderation** durch strenge Inhaltsfilter, die an Ihre Unternehmensrichtlinien angepasst sind, sowie den **Lebenszyklus**, indem Sie entscheiden, wann das Modell aktualisiert wird, um unerwartete Verhaltensänderungen zu vermeiden.\n\n### Nahtlose Integration\n\nDer Benutzer muss kein neues Tool lernen, da die KI dort ist, wo er arbeitet. In Outlook analysiert ein Seitenbereich Anhänge und schlägt eine Antwort basierend auf Ihrer internen Wissensdatenbank vor. In Excel fragt eine benutzerdefinierte Funktion Ihren Agenten ab, um Tausende von Zeilen in wenigen Sekunden zu klassifizieren. In Word generiert ein Entwurfsassistent Vertragsklauseln, die von Ihrer Rechtsabteilung validiert wurden.\n\n## Sicherheit und Souveränität\n\nIm Gegensatz zu geteilten SaaS-Lösungen garantiert unsere \"Single-Tenant\"-Architektur, dass Ihre Daten und Modelle in Ihrem Azure-Abonnement verbleiben. Für unsere Schweizer Kunden bedeutet dies, dass alles in den Regionen **Switzerland North** oder **West** verbleiben kann, was eine vollständige Einhaltung von DSG und DSGVO gewährleistet.\n\n## Fazit\n\nLassen Sie Ihre KI-Strategie nicht von einer \"Black Box\" abhängen. Mit den maßgeschneiderten KI-Lösungen von houle gewinnen Sie die Kontrolle zurück. Sie bieten Ihren Mitarbeitern leistungsstarke, sichere Tools, die perfekt an ihre Arbeit angepasst sind, und behalten gleichzeitig die Kontrolle über Ihre Kosten und Daten.",
+            "author": "houle Team",
+            "date": "2025-11-20",
+            "references": [
+                {
+                    "labelKey": "Azure AI Foundry",
+                    "url": "https://azure.microsoft.com/en-us/products/ai-foundry"
+                },
+                {
+                    "labelKey": "Bundesgesetz über den Datenschutz (DSG)",
+                    "url": "https://www.fedlex.admin.ch/eli/cc/2022/491/de"
+                }
+            ]
+        },
+        {
+            "slug": "optimiser-processus-add-ins-office",
+            "title": "Geschäftsprozesse optimieren mit benutzerdefinierten Office-Add-ins",
+            "description": "Verlassen Sie Ihre Office-Anwendungen nicht mehr: Entdecken Sie, wie benutzerdefinierte Add-ins Outlook, Word und Excel mit Ihren Unternehmenstools verbinden können.",
+            "content": "## Einführung\n\nWie oft am Tag wechseln Ihre Mitarbeiter zwischen Outlook, Excel und Ihrem CRM oder ERP? Dieses ständige Hin und Her schadet der Konzentration und Produktivität. Die Lösung liegt oft in der direkten Integration: **Office-Add-ins**.\n\n## Was ist ein Office-Add-in?\n\nEin Office-Add-in ist eine Webanwendung, die innerhalb von Microsoft 365-Anwendungen (Outlook, Word, Excel, PowerPoint) ausgeführt wird. Im Gegensatz zu alten VBA-Makros verwenden moderne Add-ins Standard-Webtechnologien (HTML, JavaScript/TypeScript, React) und funktionieren auf allen Plattformen: Windows, Mac, Web und Mobile.\n\n## Konkrete Anwendungsfälle\n\nDie CRM-Integration in Outlook ist ein Paradebeispiel. Stellen Sie sich vor, Sie erhalten eine E-Mail von einem Interessenten: Mit einem benutzerdefinierten Add-in öffnet sich automatisch ein Seitenbereich, der die Historie des Kunden aus Ihrem CRM (Salesforce, Dynamics oder Eigenlösung) anzeigt. Sie können mit einem Klick eine Verkaufschance erstellen oder die E-Mail archivieren, ohne Outlook jemals zu verlassen.\n\nAuch die Dokumentenerstellung in Word wird transformiert. Für Rechts- oder Personalabteilungen ist die Vertragserstellung repetitiv. Ein Word-Add-in kann variable Daten (Name, Adresse, Daten) aus einer Datenbank abrufen und eine Vorlage automatisch ausfüllen, was Konformität garantiert und wertvolle Zeit spart.\n\nSchließlich wird die Datenanalyse in Excel reibungsloser. Verbinden Sie Excel direkt mit Ihren internen APIs, um Finanzdaten in Echtzeit zu importieren, ohne manuelle und riskante CSV-Exporte. Das Add-in kann auch benutzerdefinierte Funktionen für spezifische Geschäftsberechnungen anbieten.\n\n## Warum ein benutzerdefiniertes Add-in entwickeln?\n\nEine maßgeschneiderte Entwicklung bietet eine nahtlose Benutzererfahrung, da sich das Tool dort integriert, wo die Benutzer bereits arbeiten. Die Wartung ist vereinfacht, da Updates als Webanwendungen zentral ohne Eingriff auf den Client-Arbeitsstationen bereitgestellt werden. Schließlich wird die Sicherheit erhöht, da Add-ins in einer sicheren Sandbox ausgeführt werden und die Richtlinien der Organisation respektieren.\n\n## Die Expertise von houle\n\nBei houle entwickeln wir maßgeschneiderte Add-ins, die genau Ihren Anforderungen entsprechen. Vom Design der Benutzeroberfläche bis zur Integration mit Ihren sicheren APIs bauen wir Brücken zwischen Ihren Tools, um Ihre Prozesse zu fluidisieren.\n\n## Fazit\n\nOffice-Add-ins sind unterschätzte Produktivitätshebel. Indem sie die Reibung zwischen Anwendungen reduzieren, ermöglichen sie Ihren Teams, sich auf ihre Wertschöpfung zu konzentrieren.",
+            "author": "houle Team",
+            "date": "2025-11-18",
+            "references": [
+                {
+                    "labelKey": "Office Add-ins Documentation",
+                    "url": "https://learn.microsoft.com/en-us/office/dev/add-ins/overview/office-add-ins"
+                }
+            ]
+        },
+        {
+            "slug": "automatisation-intelligente-power-automate",
+            "title": "Intelligente Automatisierung: Power Automate und KI für Unternehmen",
+            "description": "Reduzieren Sie manuelle und repetitive Aufgaben dank der Allianz von Power Automate und künstlicher Intelligenz.",
+            "content": "## Einführung\n\nAutomatisierung ist nicht mehr nur großen Industrien vorbehalten. Mit der **Power Platform** von Microsoft, und speziell **Power Automate**, kann jedes Unternehmen seine digitalen Arbeitsabläufe automatisieren. Die kürzliche Hinzufügung von KI-Funktionen (AI Builder, Copilot) vervielfacht diese Möglichkeiten.\n\n## Power Automate: Der Dirigent\n\nPower Automate ermöglicht es, Hunderte von Anwendungen (Microsoft 365, Dropbox, Twitter, SQL usw.) miteinander zu verbinden. Ein „Flow“ kann durch ein Ereignis (Empfang einer E-Mail, Änderung einer Datei) ausgelöst werden, um eine Reihe von Aktionen auszuführen.\n\n## Der Beitrag von KI mit AI Builder\n\nAI Builder ist die Komponente für künstliche Intelligenz der Power Platform. Sie ermöglicht es, KI-Modelle in Ihre Flows zu integrieren, ohne Code zu schreiben.\n\nDie Rechnungsverarbeitung ist ein hervorragendes Beispiel: Ein Flow ruft per E-Mail empfangene Rechnungen ab, verwendet AI Builder, um Schlüsselinformationen (Nummer, Betrag, Lieferant) zu extrahieren, und fügt sie automatisch in Ihre Buchhaltungssoftware ein.\n\nDie Stimmungsanalyse ermöglicht es, Kundenfeedback oder Support-Tickets automatisch zu analysieren, um Unzufriedenheit zu erkennen und einen Verantwortlichen zu alarmieren.\n\nSchließlich kann die Bildklassifizierung Produkte oder Defekte auf Fotos, die von Außendiensttechnikern aufgenommen wurden, automatisch identifizieren.\n\n## Governance und Sicherheit\n\nDie Einführung von „Low-Code“ erfordert eine strikte Governance, um „Schatten-IT“ zu vermeiden. Power Automate bietet leistungsstarke Verwaltungstools (DLP-Richtlinien), um zu kontrollieren, welche Konnektoren von wem verwendet werden können, und stellt sicher, dass Unternehmensdaten nicht an nicht autorisierte Dienste abfließen.\n\n## Fazit\n\nIntelligente Automatisierung ist ein Wachstumsbeschleuniger. Indem Sie Ihre Mitarbeiter von administrativen Aufgaben befreien, geben Sie ihnen Zeit für Innovation und Kundenbeziehungen zurück. houle hilft Ihnen, geeignete Prozesse zu identifizieren und robuste und nachhaltige Automatisierungen aufzubauen.",
+            "author": "houle Team",
+            "date": "2025-11-15",
+            "references": [
+                {
+                    "labelKey": "Power Automate Documentation",
+                    "url": "https://learn.microsoft.com/en-us/power-automate/"
+                },
+                {
+                    "labelKey": "AI Builder Overview",
+                    "url": "https://learn.microsoft.com/en-us/ai-builder/overview"
+                }
+            ]
+        }
+    ],
+    "FAQ": {
+        "Title": "Häufig gestellte Fragen",
+        "Items": []
+    },
+    "Contact": {
+        "Title": "Fragen?",
+        "Description": "Unsere Experten helfen Ihnen gerne bei der Integration von KI in Ihr Unternehmen.",
+        "ButtonText": "Kontaktieren Sie uns"
+    }
+}
