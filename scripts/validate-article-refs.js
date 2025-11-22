@@ -52,6 +52,10 @@ async function headOrGet(url) {
 }
 
 async function main() {
+  if (!fs.existsSync(TRANSLATIONS_DIR)) {
+    console.log(`Translations directory not found at ${TRANSLATIONS_DIR}; skipping article reference validation.`);
+    return;
+  }
   const locales = fs.readdirSync(TRANSLATIONS_DIR).filter((d) => fs.statSync(path.join(TRANSLATIONS_DIR, d)).isDirectory());
   const results = [];
   const tasks = [];
