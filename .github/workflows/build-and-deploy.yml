@@ -96,7 +96,7 @@ jobs:
           sshpass -p "$PASS" rsync -av \
             -e "ssh -o StrictHostKeyChecking=no -p $PORT" \
             artifact/next-standalone.tar.gz.part \
-            "$USER@$HOST:sites/houle.ai/artifact/"
+            "$USER@$HOST:/srv/customer/sites/houle.ai/artifact/"
 
       - name: Test SSH connectivity (non-critical)
         continue-on-error: true
@@ -125,7 +125,7 @@ jobs:
 
           sshpass -p "$PASS" ssh -p "$PORT" -o StrictHostKeyChecking=no "$USER@$HOST" bash -lc '
             set -euo pipefail
-            BASE_DIR="sites/houle.ai"
+            BASE_DIR="/srv/customer/sites/houle.ai"
             RELEASES_DIR="$BASE_DIR/releases"
             CURRENT_LINK="$BASE_DIR/current"
             ARTIFACT="$BASE_DIR/artifact/next-standalone.tar.gz"
@@ -197,7 +197,7 @@ jobs:
           echo "[restart] Starting new process (refreshing symlink each restart)..."
           sshpass -p "$PASS" ssh -p "$PORT" -o StrictHostKeyChecking=no "$USER@$HOST" '
             set -e
-            nohup bash -lc "while true; do cd sites/houle.ai/current && node server.js >> server.out 2>&1; echo \"Node crashed, restarting...\" >> server.out; sleep 1; done" &
+            nohup bash -lc "while true; do cd /srv/customer/sites/houle.ai/current && node server.js >> server.out 2>&1; echo \"Node crashed, restarting...\" >> server.out; sleep 1; done" &
           ' || echo "[restart] SSH command completed"
 
           sleep 30
