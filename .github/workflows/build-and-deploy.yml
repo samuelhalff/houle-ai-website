@@ -98,8 +98,7 @@ jobs:
             artifact/next-standalone.tar.gz.part \
             "$USER@$HOST:/srv/customer/sites/houle.ai/artifact/"
 
-      - name: Test SSH connectivity (non-critical)
-        continue-on-error: true
+      - name: Extract, symlink and cleanup releases
         run: |
           sudo apt-get install -y sshpass
           HOST="${{ secrets.DEPLOY_SSH_HOST }}"
@@ -111,17 +110,8 @@ jobs:
           if sshpass -p "$PASS" ssh -o StrictHostKeyChecking=no -o ConnectTimeout=10 -p "$PORT" "$USER@$HOST" 'echo "SSH probe successful"' 2>/dev/null; then
             echo "[deploy] SSH probe successful"
           else
-            echo "[deploy] SSH probe failed (this may be expected)"
-            exit 1
+            echo "[deploy] SSH probe failed (this may be expected); proceeding with deployment"
           fi
-
-      - name: Extract, symlink and cleanup releases
-        run: |
-          sudo apt-get install -y sshpass
-          HOST="${{ secrets.DEPLOY_SSH_HOST }}"
-          USER="${{ secrets.DEPLOY_SSH_USER }}"
-          PASS="${{ secrets.DEPLOY_SSH_PASSWORD }}"
-          PORT="${{ secrets.DEPLOY_SSH_PORT }}"; [ -z "$PORT" ] && PORT=22
 
           sshpass -p "$PASS" ssh -p "$PORT" -o StrictHostKeyChecking=no "$USER@$HOST" bash -lc '
             set -euo pipefail
@@ -190,13 +180,6 @@ jobs:
 
           echo "[restart] Killing old process..."
           curl -X POST "https://houle.ai/api/kill/" -H "Authorization: Bearer $TOKEN" -s -o /dev/null -w "[restart] Kill request status: %{http_code}\n" || echo "[restart] Kill request failed or no process to kill"
-
-          echo "[restart] Ensuring all node processes are stopped via SSH..."
-          sshpass -p "$PASS" ssh -p "$PORT" -o StrictHostKeyChecking=no "$USER@$HOST" '
-            pkill -f "node server.js" || true
-            pkill -f "sites/houle.ai" || true
-            sleep 2
-          ' || echo "[restart] SSH kill completed"
 
           echo "[restart] Waiting for process to terminate..."
           sleep 30
