@@ -191,6 +191,13 @@ jobs:
           echo "[restart] Killing old process..."
           curl -X POST "https://houle.ai/api/kill/" -H "Authorization: Bearer $TOKEN" -s -o /dev/null -w "[restart] Kill request status: %{http_code}\n" || echo "[restart] Kill request failed or no process to kill"
 
+          echo "[restart] Ensuring all node processes are stopped via SSH..."
+          sshpass -p "$PASS" ssh -p "$PORT" -o StrictHostKeyChecking=no "$USER@$HOST" '
+            pkill -f "node server.js" || true
+            pkill -f "sites/houle.ai" || true
+            sleep 2
+          ' || echo "[restart] SSH kill completed"
+
           echo "[restart] Waiting for process to terminate..."
           sleep 30
 
