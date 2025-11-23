@@ -9,7 +9,8 @@ export default function HomePage({
     en: {
       badge: "AI Products & Consulting for Microsoft 365",
       tagline: "houle — AI Solutions for Modern Business",
-      headline: "Transform your business with AI products and expert consulting.",
+      headline:
+        "Transform your business with AI products and expert consulting.",
       subtext:
         "Based in the Lake Geneva region, we offer Swiss-made Office add-ins with AI for Microsoft 365 and professional consulting services. From ready-to-use products to custom AI solutions, we help businesses across Geneva, Lausanne, Bern, Zurich, and Valais leverage AI while keeping data private and secure.",
       highlights: [
@@ -40,7 +41,10 @@ export default function HomePage({
       ],
       productsTitle: "Conçu pour Microsoft 365",
       productsBody:
-        "Des add-ins Office avec IA qui s’intègrent aux outils que vos équipes ouvrent déjà—Outlook et Word d’abord. À associer à un GPT hébergé en Suisse qui se connecte à vos données, les garde sous contrôle et simplifie le quotidien.",
+        "Des add-ins Office avec IA qui s'intègrent aux outils que vos équipes ouvrent déjà—Outlook et Word d'abord. À associer à un GPT hébergé en Suisse qui se connecte à vos données, les garde sous contrôle et simplifie le quotidien.",
+      consultingTitle: "Conseil Expert en IA & Microsoft",
+      consultingBody:
+        "Solutions IA personnalisées, optimisation Microsoft 365 et conseil stratégique. Nous vous aidons à implémenter l'IA, intégrer les systèmes et transformer les flux de travail. Du proof-of-concept au déploiement en production.",
       securityTitle: "Fiable par conception",
       securityBody:
         "Conçu avec la confidentialité en premier. Vos contenus restent à leur place, les échanges sont protégés et les administrateurs gardent la main sur ce qui est partagé ou non.",
@@ -48,7 +52,8 @@ export default function HomePage({
     de: {
       badge: "KI-Produkte & Beratung für Microsoft 365",
       tagline: "houle — KI-Lösungen für Moderne Unternehmen",
-      headline: "Transformieren Sie Ihr Unternehmen mit KI-Produkten und Expertenberatung.",
+      headline:
+        "Transformieren Sie Ihr Unternehmen mit KI-Produkten und Expertenberatung.",
       subtext:
         "Mit Sitz in der Genferseeregion bieten wir in der Schweiz entwickelte Office-Add-Ins mit KI für Microsoft 365 und professionelle Beratungsdienstleistungen. Von gebrauchsfertigen Produkten bis zu massgeschneiderten KI-Lösungen helfen wir Unternehmen in Genf, Lausanne, Bern, Zürich und Wallis, KI zu nutzen und dabei Daten privat und sicher zu halten.",
       highlights: [
@@ -90,7 +95,8 @@ export default function HomePage({
     pt: {
       badge: "Produtos IA & Consultoria para Microsoft 365",
       tagline: "houle — Soluções IA para Empresas Modernas",
-      headline: "Transforme sua empresa com produtos IA e consultoria especializada.",
+      headline:
+        "Transforme sua empresa com produtos IA e consultoria especializada.",
       subtext:
         "Sediados na região do Lago Lemano, oferecemos suplementos do Office com IA para Microsoft 365 fabricados na Suíça e serviços de consultoria profissional. De produtos prontos para uso a soluções IA personalizadas, ajudamos empresas em Genebra, Lausanne, Berna, Zurique e Valais a aproveitar IA mantendo os dados privados e seguros.",
       highlights: [
@@ -153,27 +159,21 @@ export default function HomePage({
             Products
           </p>
           <h2 className="mt-2 text-xl font-bold">{t.productsTitle}</h2>
-          <p className="mt-3 text-muted-foreground">
-            {t.productsBody}
-          </p>
+          <p className="mt-3 text-muted-foreground">{t.productsBody}</p>
         </div>
         <div className="group rounded-2xl border bg-gradient-to-br from-blue-500/[0.06] via-blue-500/[0.03] to-card p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:border-blue-500/30">
           <p className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-[0.14em]">
             Consulting
           </p>
           <h2 className="mt-2 text-xl font-bold">{t.consultingTitle}</h2>
-          <p className="mt-3 text-muted-foreground">
-            {t.consultingBody}
-          </p>
+          <p className="mt-3 text-muted-foreground">{t.consultingBody}</p>
         </div>
         <div className="group rounded-2xl border bg-gradient-to-br from-accent/[0.08] via-accent/[0.04] to-card p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:border-accent/30 sm:col-span-2 lg:col-span-1">
           <p className="text-sm font-semibold text-primary uppercase tracking-[0.14em]">
             Security & Privacy
           </p>
           <h2 className="mt-2 text-xl font-bold">{t.securityTitle}</h2>
-          <p className="mt-3 text-muted-foreground">
-            {t.securityBody}
-          </p>
+          <p className="mt-3 text-muted-foreground">{t.securityBody}</p>
         </div>
       </section>
     </div>

@@ -182,6 +182,43 @@ export function buildServiceSchema(cfg: ServiceSchemaConfig) {
   } as const;
 }
 
+export interface ProductSchemaConfig {
+  name: string;
+  description: string;
+  url: string;
+  brand?: string;
+  offers?: {
+    price?: string;
+    priceCurrency?: string;
+  };
+}
+
+export function buildProductSchema(cfg: ProductSchemaConfig) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    name: cfg.name,
+    description: cfg.description,
+    url: cfg.url,
+    brand: {
+      "@type": "Organization",
+      name: cfg.brand || "houle.ai",
+    },
+    ...(cfg.offers
+      ? {
+          offers: {
+            "@type": "Offer",
+            availability: "https://schema.org/PreOrder",
+            ...(cfg.offers.price ? { price: cfg.offers.price } : {}),
+            ...(cfg.offers.priceCurrency
+              ? { priceCurrency: cfg.offers.priceCurrency }
+              : {}),
+          },
+        }
+      : {}),
+  } as const;
+}
+
 export interface LocalBusinessConfig {
   name: string;
   description: string;

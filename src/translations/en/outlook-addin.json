@@ -1,74 +1,74 @@
 {
-  "Hero": {
-    "Badge": "AI for Microsoft Outlook",
-    "Title": "AI Assistant for Outlook",
-    "Description": "Supercharge your email workflow with AI-powered assistance. Draft emails faster, manage communications smarter, all within your Microsoft 365 environment."
-  },
-  "Features": {
-    "Title": "Intelligent Email Features",
-    "Description": "Everything you need to communicate better and manage emails efficiently.",
-    "Chat": {
-      "Title": "Email Draft Assistant",
-      "Description": "Generate professional email drafts with AI. Get tone suggestions, improve clarity, and craft perfect responses in seconds based on conversation context."
+    "Hero": {
+        "Badge": "AI for Microsoft Outlook",
+        "Title": "AI Assistant for Outlook",
+        "Description": "Supercharge your email workflow with AI-powered assistance. Draft emails faster, manage communications smarter, all within your Microsoft 365 environment."
     },
-    "Templates": {
-      "Title": "Smart Email Templates",
-      "Description": "Create and fill email templates with client data from your CRM. Automate follow-ups, proposals, and client communications with personalized AI-generated content."
+    "Features": {
+        "Title": "Intelligent Email Features",
+        "Description": "Everything you need to communicate better and manage emails efficiently.",
+        "Chat": {
+            "Title": "Email Draft Assistant",
+            "Description": "Generate professional email drafts with AI. Get tone suggestions, improve clarity, and craft perfect responses in seconds based on conversation context."
+        },
+        "Templates": {
+            "Title": "Smart Email Templates",
+            "Description": "Create and fill email templates with client data from your CRM. Automate follow-ups, proposals, and client communications with personalized AI-generated content."
+        },
+        "Summaries": {
+            "Title": "Email Thread Summaries",
+            "Description": "Get instant summaries of long email chains. Extract action items, key decisions, and important dates automatically from conversations."
+        },
+        "Actions": {
+            "Title": "Quick Email Actions",
+            "Description": "Translate emails, adjust tone for different audiences, generate replies, or schedule follow-ups with one-click AI actions tailored to your workflow."
+        }
     },
-    "Summaries": {
-      "Title": "Email Thread Summaries",
-      "Description": "Get instant summaries of long email chains. Extract action items, key decisions, and important dates automatically from conversations."
+    "Benefits": {
+        "Title": "Why Choose Our Outlook Add-in",
+        "Privacy": {
+            "Title": "Email Privacy Protected",
+            "Description": "Your emails and contacts stay in your Microsoft 365 environment. AI processing respects your data sovereignty. Swiss-hosted options for maximum privacy."
+        },
+        "Integration": {
+            "Title": "Native Outlook Integration",
+            "Description": "Seamless authentication with Microsoft Entra ID. Works within Outlook's interface with your existing policies. No additional login or data sync required."
+        },
+        "Customization": {
+            "Title": "Tailored Email Workflows",
+            "Description": "Configure AI agents for different email scenarios. Create team templates, manage prompts centrally, and integrate with your CRM for automated personalization."
+        },
+        "Compliance": {
+            "Title": "Enterprise Email Compliance",
+            "Description": "Built for regulated communications. Full audit trails, email logging, and admin controls. Meets Swiss and EU standards for business email management."
+        }
     },
-    "Actions": {
-      "Title": "Quick Email Actions",
-      "Description": "Translate emails, adjust tone for different audiences, generate replies, or schedule follow-ups with one-click AI actions tailored to your workflow."
+    "UseCases": {
+        "Title": "Perfect for Client Communications",
+        "Description": "Designed for professionals who manage high volumes of client emails in the Lake Geneva region.",
+        "Sales": {
+            "Title": "Sales Teams",
+            "Description": "Generate personalized outreach emails, follow-up sequences, and proposal communications. Track client conversations and automate routine responses."
+        },
+        "Support": {
+            "Title": "Client Support",
+            "Description": "Respond to client inquiries faster with AI-suggested replies. Maintain consistent tone and quality across all support communications."
+        },
+        "Management": {
+            "Title": "Client Management",
+            "Description": "Summarize email threads for quick context. Extract action items and deadlines. Keep client communications organized and actionable."
+        }
+    },
+    "Pricing": {
+        "Title": "Simple, Transparent Pricing",
+        "Description": "Choose the plan that fits your team's email volume and needs.",
+        "Contact": "Contact us for enterprise pricing and custom deployment options."
+    },
+    "CTA": {
+        "Title": "Ready to Transform Your Email Workflow?",
+        "Description": "Get started with a free trial or schedule a demo to see how AI can enhance your email productivity.",
+        "Demo": "Schedule Demo",
+        "Trial": "Start Free Trial",
+        "Contact": "Contact Sales"
     }
-  },
-  "Benefits": {
-    "Title": "Why Choose Our Outlook Add-in",
-    "Privacy": {
-      "Title": "Email Privacy Protected",
-      "Description": "Your emails and contacts stay in your Microsoft 365 environment. AI processing respects your data sovereignty. Swiss-hosted options for maximum privacy."
-    },
-    "Integration": {
-      "Title": "Native Outlook Integration",
-      "Description": "Seamless authentication with Microsoft Entra ID. Works within Outlook's interface with your existing policies. No additional login or data sync required."
-    },
-    "Customization": {
-      "Title": "Tailored Email Workflows",
-      "Description": "Configure AI agents for different email scenarios. Create team templates, manage prompts centrally, and integrate with your CRM for automated personalization."
-    },
-    "Compliance": {
-      "Title": "Enterprise Email Compliance",
-      "Description": "Built for regulated communications. Full audit trails, email logging, and admin controls. Meets Swiss and EU standards for business email management."
-    }
-  },
-  "UseCases": {
-    "Title": "Perfect for Client Communications",
-    "Description": "Designed for professionals who manage high volumes of client emails in the Lake Geneva region.",
-    "Sales": {
-      "Title": "Sales Teams",
-      "Description": "Generate personalized outreach emails, follow-up sequences, and proposal communications. Track client conversations and automate routine responses."
-    },
-    "Support": {
-      "Title": "Client Support",
-      "Description": "Respond to client inquiries faster with AI-suggested replies. Maintain consistent tone and quality across all support communications."
-    },
-    "Management": {
-      "Title": "Client Management",
-      "Description": "Summarize email threads for quick context. Extract action items and deadlines. Keep client communications organized and actionable."
-    }
-  },
-  "Pricing": {
-    "Title": "Simple, Transparent Pricing",
-    "Description": "Choose the plan that fits your team's email volume and needs.",
-    "Contact": "Contact us for enterprise pricing and custom deployment options."
-  },
-  "CTA": {
-    "Title": "Ready to Transform Your Email Workflow?",
-    "Description": "Get started with a free trial or schedule a demo to see how AI can enhance your email productivity.",
-    "Demo": "Schedule Demo",
-    "Trial": "Start Free Trial",
-    "Contact": "Contact Sales"
-  }
 }
