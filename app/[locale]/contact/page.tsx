@@ -7,8 +7,15 @@ const ContactForm = dynamic(() => import("@/src/components/ui/contact-form"), {
   loading: () => null,
 });
 
-export async function generateMetadata(): Promise<Metadata> {
-  return await generateMetadataForPage("en", "/contact");
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: string };
+}): Promise<Metadata> {
+  return await generateMetadataForPage(
+    params.locale as "en" | "fr" | "de" | "es" | "pt",
+    "/contact"
+  );
 }
 
 const copy = {
@@ -202,21 +209,29 @@ export default function ContactPage({
     <div className="mx-auto w-full max-w-[var(--breakpoint-xl)] px-6 py-12 space-y-10">
       <div className="text-center space-y-3">
         <p className="text-sm uppercase tracking-[0.18em] text-muted-foreground">
-      Contact
-    </p>
-    <h1 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight">
-      {strings.title}
-    </h1>
-    <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-      {strings.subtitle}
-    </p>
-    <p className="text-base text-muted-foreground">
-      {strings.emailLabel}{" "}
-      <a className="text-primary underline" href="mailto:contact@houle.ai">
-        contact@houle.ai
-      </a>
-    </p>
-  </div>
+          {locale === "fr"
+            ? "Contact"
+            : locale === "de"
+            ? "Kontakt"
+            : locale === "es"
+            ? "Contacto"
+            : locale === "pt"
+            ? "Contato"
+            : "Contact"}
+        </p>
+        <h1 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight">
+          {strings.title}
+        </h1>
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          {strings.subtitle}
+        </p>
+        <p className="text-base text-muted-foreground">
+          {strings.emailLabel}{" "}
+          <a className="text-primary underline" href="mailto:contact@houle.ai">
+            contact@houle.ai
+          </a>
+        </p>
+      </div>
 
       <ContactForm
         showTitle={false}

@@ -106,7 +106,7 @@ const AIConsultingPage = async ({ params }: { params: { locale: string } }) => {
       <section className="relative w-full pt-24 pb-16 md:pt-32 md:pb-20">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-background" />
         <div className="relative max-w-[1200px] mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="grid md:grid-cols-2 gap-12 items-start md:items-center">
             <div className="max-w-[600px]">
               <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-primary/10 text-primary text-sm font-medium">
                 {params.locale === "fr"
@@ -127,7 +127,7 @@ const AIConsultingPage = async ({ params }: { params: { locale: string } }) => {
                   "Transform your business with AI solutions tailored to your needs."}
               </p>
             </div>
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl md:mt-0">
               <ResponsiveImage
                 mobileSrc="/assets/hero/services/ai-consulting-hero-mobile.avif"
                 desktopSrc="/assets/hero/services/ai-consulting-hero.avif"

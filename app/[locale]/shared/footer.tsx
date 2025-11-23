@@ -22,13 +22,29 @@ export default function Footer({ locale }: { locale?: string }) {
             href={`${localePrefix}/`}
             className="text-sm font-medium hover:text-primary"
           >
-            Home
+            {locale === "fr"
+              ? "Accueil"
+              : locale === "de"
+              ? "Startseite"
+              : locale === "es"
+              ? "Inicio"
+              : locale === "pt"
+              ? "Início"
+              : "Home"}
           </a>
           <a
             href={`${localePrefix}/contact`}
             className="text-sm font-medium hover:text-primary"
           >
-            Contact
+            {locale === "fr"
+              ? "Contact"
+              : locale === "de"
+              ? "Kontakt"
+              : locale === "es"
+              ? "Contacto"
+              : locale === "pt"
+              ? "Contato"
+              : "Contact"}
           </a>
         </div>
       </div>
