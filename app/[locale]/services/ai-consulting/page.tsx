@@ -332,7 +332,7 @@ const AIConsultingPage = async ({ params }: { params: { locale: string } }) => {
                     return cases.map((item: any, index: number) => (
                       <Link
                         key={index}
-                        href={`${localePrefix}/ressources/${item.Slug}`}
+                        href={`${localePrefix}/ressources/articles/${item.Slug}`}
                         className="block p-6 rounded-lg bg-primary/5 border border-primary/10 hover:border-primary/30 hover:shadow-lg transition-all group"
                       >
                         <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
