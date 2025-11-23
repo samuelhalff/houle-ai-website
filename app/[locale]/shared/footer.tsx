@@ -10,6 +10,12 @@ export default function Footer({ locale }: { locale?: string }) {
               ? "IA privée intégrée aux outils Microsoft que vous utilisez déjà."
               : "Private AI built into the Microsoft tools you already use."}
           </p>
+          <a
+            href="mailto:contact@houle.ai"
+            className="text-sm text-primary hover:underline"
+          >
+            contact@houle.ai
+          </a>
         </div>
         <div className="flex items-center gap-4">
           <a

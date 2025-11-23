@@ -1,0 +1,61 @@
+{
+    "Hero": {
+        "Title": "Beratung für künstliche Intelligenz",
+        "Description": "Transformieren Sie Ihr Unternehmen mit maßgeschneiderten KI-Lösungen. Wir unterstützen Sie bei der Integration künstlicher Intelligenz, um Ihre Prozesse zu automatisieren, Ihre Entscheidungen zu verbessern und Mehrwert zu schaffen."
+    },
+    "Presentation": {
+        "Intro": "Künstliche Intelligenz ist nicht mehr nur großen Unternehmen vorbehalten. Heute können KMU diese Technologien nutzen, um effizienter zu werden, Kosten zu senken und bessere Kundenerlebnisse zu bieten. Unser pragmatischer Ansatz ermöglicht es Ihnen, KI schrittweise einzuführen, ohne Ihre Organisation zu stören.",
+        "Why": {
+            "Title": "Warum jetzt in KI investieren",
+            "Text": "Technologien der künstlichen Intelligenz haben einen Reifegrad erreicht, der sie für Unternehmen jeder Größe zugänglich und rentabel macht. Ob zur Automatisierung repetitiver Aufgaben, zur Analyse großer Datenmengen oder zur Verbesserung Ihres Kundenservice - KI bietet konkrete Transformationsmöglichkeiten. Wir stellen regelmäßig fest, dass Unternehmen, die diese Werkzeuge einsetzen, an Produktivität gewinnen und gleichzeitig ihre Teams für wertvollere Aufgaben freistellen."
+        },
+        "Services": {
+            "Title": "Unsere Fachgebiete",
+            "Automation": {
+                "Title": "Intelligente Automatisierung",
+                "Text": "Wir identifizieren repetitive Prozesse in Ihrem Unternehmen und entwickeln KI-basierte Automatisierungslösungen. Dies kann die automatische Dokumentenverarbeitung, Datenklassifizierung oder Kundenanfragen-Management umfassen. Ziel ist es, die Zeit für Routineaufgaben zu reduzieren und menschliche Fehler zu minimieren."
+            },
+            "Analytics": {
+                "Title": "Prädiktive Analytik",
+                "Text": "Ihre Daten enthalten wertvolle Informationen über Ihre Kunden, Abläufe und Wachstumschancen. Wir implementieren prädiktive Analysemodelle, die Ihnen helfen, Trends zu antizipieren, Bestände zu optimieren oder Angebote zu personalisieren. Diese Werkzeuge verwandeln Ihre Daten in greifbare Wettbewerbsvorteile."
+            },
+            "Chatbots": {
+                "Title": "Konversationsassistenten",
+                "Text": "Chatbots und virtuelle Assistenten verbessern Ihren Kundenservice und entlasten Ihre Teams. Wir entwickeln Lösungen, die natürliche Sprache verstehen und eine breite Palette von Anfragen bearbeiten können, vom technischen Support bis zu Verkaufsanfragen. Diese Assistenten arbeiten rund um die Uhr und verbessern sich kontinuierlich durch maschinelles Lernen."
+            },
+            "Custom": {
+                "Title": "Maßgeschneiderte Lösungen",
+                "Text": "Jedes Unternehmen hat spezifische Bedürfnisse. Wir entwerfen maßgeschneiderte KI-Anwendungen, die sich perfekt in Ihre bestehende Umgebung integrieren. Ob Bilderkennung, natürliche Sprachverarbeitung oder Optimierung komplexer Prozesse - wir entwickeln die Lösung, die Ihre Herausforderungen präzise adressiert."
+            }
+        },
+        "Approach": {
+            "Title": "Unsere Arbeitsmethode",
+            "Text": "Wir beginnen immer damit, Ihre aktuellen Prozesse zu verstehen und Verbesserungsmöglichkeiten zu identifizieren. Dann entwickeln wir ein Pilotprojekt, das den Wert von KI in Ihrem Kontext schnell demonstriert. Dieser schrittweise Ansatz ermöglicht es Ihnen, die Vorteile zu sehen, bevor Sie die Lösung in Ihrer gesamten Organisation ausweiten. Wir bleiben an Ihrer Seite, um Ihre Teams zu schulen und den Implementierungserfolg sicherzustellen."
+        },
+        "Technologies": {
+            "Title": "Technologien und Werkzeuge",
+            "Text": "Wir arbeiten mit den leistungsstärksten KI-Plattformen auf dem Markt, darunter OpenAI, Microsoft Azure AI und andere spezialisierte Lösungen je nach Ihren Bedürfnissen. Unsere Expertise umfasst maschinelles Lernen, natürliche Sprachverarbeitung, Computer Vision und Datenanalyse. Wir wählen immer die Technologien aus, die am besten zu Ihrer Situation passen, wobei wir Zuverlässigkeit und Wartungsfreundlichkeit priorisieren."
+        },
+        "Benefits": {
+            "Title": "Vorteile für Ihr Unternehmen",
+            "Items": [
+                {
+                    "Title": "Produktivitätssteigerung",
+                    "Desc": "Automatisieren Sie repetitive Aufgaben und ermöglichen Sie Ihren Teams, sich auf Aktivitäten mit hohem Mehrwert zu konzentrieren."
+                },
+                {
+                    "Title": "Kostenreduktion",
+                    "Desc": "Senken Sie Ihre Betriebskosten durch Optimierung Ihrer Prozesse und Reduzierung manueller Fehler."
+                },
+                {
+                    "Title": "Bessere Entscheidungsfindung",
+                    "Desc": "Basieren Sie Ihre Entscheidungen auf fundierten Datenanalysen statt nur auf Intuition."
+                },
+                {
+                    "Title": "Wettbewerbsvorteil",
+                    "Desc": "Übernehmen Sie die Technologien, die in den kommenden Jahren den Unterschied gegenüber Ihren Wettbewerbern ausmachen werden."
+                }
+            ]
+        }
+    }
+}

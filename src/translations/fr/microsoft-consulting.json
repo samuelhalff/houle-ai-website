@@ -1,0 +1,65 @@
+{
+    "Hero": {
+        "Title": "Conseil Microsoft",
+        "Description": "Optimisez votre productivité avec l'écosystème Microsoft. Nous vous aidons à tirer le meilleur parti de Power Automate, SharePoint, Power BI et SPFx pour automatiser vos processus et améliorer la collaboration."
+    },
+    "Presentation": {
+        "Intro": "Les entreprises qui utilisent Microsoft 365 ne profitent souvent que d'une fraction des possibilités offertes par cette plateforme. Entre Power Automate pour l'automatisation, SharePoint pour la gestion documentaire, Power BI pour l'analyse de données et SPFx pour le développement d'applications, l'écosystème Microsoft offre des outils puissants qui restent sous-utilisés. Nous vous accompagnons pour exploiter pleinement ces technologies et transformer votre façon de travailler.",
+        "Why": {
+            "Title": "Pourquoi optimiser votre environnement Microsoft",
+            "Text": "Si votre entreprise utilise déjà Microsoft 365, vous disposez probablement d'une licence qui inclut de nombreux outils dont vous n'exploitez pas le potentiel. Power Automate peut automatiser des centaines de tâches répétitives, SharePoint peut structurer et sécuriser toutes vos informations d'entreprise, Power BI peut transformer vos données en tableaux de bord interactifs, et SPFx vous permet de créer des applications personnalisées parfaitement intégrées. Le retour sur investissement est rapide car vous utilisez des outils que vous possédez déjà."
+        },
+        "Services": {
+            "Title": "Nos services Microsoft",
+            "PowerAutomate": {
+                "Title": "Automatisation avec Power Automate",
+                "Text": "Power Automate permet de créer des workflows automatisés entre vos applications Microsoft et des centaines de services tiers. Nous concevons des automatisations qui éliminent les tâches manuelles et répétitives comme la collecte de données, l'envoi de notifications, la création de rapports ou la synchronisation entre systèmes. Chaque workflow est documenté et peut être facilement modifié par vos équipes internes une fois mis en place."
+            },
+            "SharePoint": {
+                "Title": "Solutions SharePoint",
+                "Text": "SharePoint est bien plus qu'un simple espace de stockage de fichiers. Nous créons des sites SharePoint qui structurent vos informations, automatisent vos processus métier et facilitent la collaboration entre équipes. Que ce soit pour gérer des projets, centraliser des connaissances ou créer des intranets modernes, nous configurons SharePoint selon vos besoins spécifiques tout en respectant les bonnes pratiques de gouvernance."
+            },
+            "PowerBI": {
+                "Title": "Tableaux de bord Power BI",
+                "Text": "Power BI transforme vos données en visualisations interactives qui facilitent la prise de décision. Nous connectons vos sources de données existantes, qu'elles soient dans Excel, SharePoint, votre CRM ou votre système de gestion, et créons des tableaux de bord qui actualisent automatiquement vos indicateurs clés. Ces rapports peuvent être consultés depuis n'importe quel appareil et partagés en toute sécurité avec les bonnes personnes."
+            },
+            "SPFx": {
+                "Title": "Développement SPFx",
+                "Text": "Le SharePoint Framework permet de créer des applications web modernes qui s'intègrent parfaitement dans votre environnement Microsoft 365. Nous développons des web parts personnalisés, des extensions et des applications qui étendent les fonctionnalités natives de SharePoint. Ces solutions sont conçues pour être maintenables, sécurisées et évolutives selon les standards Microsoft."
+            }
+        },
+        "Integration": {
+            "Title": "Intégration et écosystème",
+            "Text": "La force de l'écosystème Microsoft réside dans l'intégration entre ses différents outils. Nous concevons des solutions qui combinent Power Automate, SharePoint, Power BI et Teams pour créer des environnements de travail cohérents. Par exemple, un workflow Power Automate peut déclencher des actions dans SharePoint, mettre à jour des données dans Power BI et envoyer des notifications dans Teams, le tout de manière transparente pour l'utilisateur."
+        },
+        "Training": {
+            "Title": "Formation et accompagnement",
+            "Text": "Nous ne nous contentons pas de mettre en place des solutions, nous formons aussi vos équipes pour qu'elles puissent les maintenir et les faire évoluer. Nos sessions de formation sont adaptées au niveau de chacun et incluent de la documentation claire. L'objectif est de rendre votre entreprise autonome tout en sachant que nous restons disponibles pour les besoins plus complexes."
+        },
+        "UseCases": {
+            "Title": "Cas d'usage courants",
+            "Text": "Nous avons aidé des entreprises à automatiser leurs processus d'approbation, créer des bases de connaissances internes, développer des portails clients dans SharePoint, mettre en place des tableaux de bord financiers dans Power BI, et bien plus encore. Chaque projet commence par une analyse de vos besoins et se termine par une solution qui s'intègre naturellement dans votre quotidien."
+        },
+        "Benefits": {
+            "Title": "Bénéfices pour votre organisation",
+            "Items": [
+                {
+                    "Title": "Meilleure utilisation des licences",
+                    "Desc": "Exploitez pleinement les outils inclus dans vos abonnements Microsoft 365 sans coûts supplémentaires."
+                },
+                {
+                    "Title": "Processus automatisés",
+                    "Desc": "Éliminez les tâches manuelles et réduisez les risques d'erreur grâce à l'automatisation."
+                },
+                {
+                    "Title": "Collaboration améliorée",
+                    "Desc": "Facilitez le travail d'équipe avec des outils modernes et intégrés."
+                },
+                {
+                    "Title": "Données exploitables",
+                    "Desc": "Transformez vos données en insights actionnables avec des tableaux de bord clairs et actualisés."
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,65 @@
+{
+    "Hero": {
+        "Title": "Microsoft-Beratung",
+        "Description": "Optimieren Sie Ihre Produktivität mit dem Microsoft-Ökosystem. Wir helfen Ihnen, das Beste aus Power Automate, SharePoint, Power BI und SPFx herauszuholen, um Ihre Prozesse zu automatisieren und die Zusammenarbeit zu verbessern."
+    },
+    "Presentation": {
+        "Intro": "Unternehmen, die Microsoft 365 nutzen, schöpfen oft nur einen Bruchteil der Möglichkeiten dieser Plattform aus. Zwischen Power Automate für Automatisierung, SharePoint für Dokumentenverwaltung, Power BI für Datenanalyse und SPFx für Anwendungsentwicklung bietet das Microsoft-Ökosystem leistungsstarke Werkzeuge, die untergenutzt bleiben. Wir unterstützen Sie dabei, diese Technologien voll auszuschöpfen und Ihre Arbeitsweise zu transformieren.",
+        "Why": {
+            "Title": "Warum Ihre Microsoft-Umgebung optimieren",
+            "Text": "Wenn Ihr Unternehmen bereits Microsoft 365 nutzt, haben Sie wahrscheinlich eine Lizenz, die viele Werkzeuge umfasst, deren Potenzial Sie nicht ausschöpfen. Power Automate kann Hunderte von repetitiven Aufgaben automatisieren, SharePoint kann alle Ihre Geschäftsinformationen strukturieren und sichern, Power BI kann Ihre Daten in interaktive Dashboards verwandeln, und SPFx ermöglicht es Ihnen, perfekt integrierte benutzerdefinierte Anwendungen zu erstellen. Der Return on Investment ist schnell, da Sie Werkzeuge verwenden, die Sie bereits besitzen."
+        },
+        "Services": {
+            "Title": "Unsere Microsoft-Dienstleistungen",
+            "PowerAutomate": {
+                "Title": "Automatisierung mit Power Automate",
+                "Text": "Power Automate ermöglicht es Ihnen, automatisierte Workflows zwischen Ihren Microsoft-Anwendungen und Hunderten von Drittanbieterdiensten zu erstellen. Wir entwickeln Automatisierungen, die manuelle und repetitive Aufgaben wie Datenerfassung, Benachrichtigungsversand, Berichterstellung oder Synchronisierung zwischen Systemen eliminieren. Jeder Workflow ist dokumentiert und kann nach der Einrichtung von Ihren internen Teams einfach modifiziert werden."
+            },
+            "SharePoint": {
+                "Title": "SharePoint-Lösungen",
+                "Text": "SharePoint ist viel mehr als nur ein Dateispeicher. Wir erstellen SharePoint-Sites, die Ihre Informationen strukturieren, Ihre Geschäftsprozesse automatisieren und die Zusammenarbeit im Team erleichtern. Ob Projektverwaltung, Wissenszentralisierung oder Erstellung moderner Intranets - wir konfigurieren SharePoint nach Ihren spezifischen Bedürfnissen unter Einhaltung von Governance-Best-Practices."
+            },
+            "PowerBI": {
+                "Title": "Power BI-Dashboards",
+                "Text": "Power BI verwandelt Ihre Daten in interaktive Visualisierungen, die die Entscheidungsfindung erleichtern. Wir verbinden Ihre vorhandenen Datenquellen, ob in Excel, SharePoint, Ihrem CRM oder Ihrem Managementsystem, und erstellen Dashboards, die Ihre Schlüsselindikatoren automatisch aktualisieren. Diese Berichte können von jedem Gerät aus aufgerufen und sicher mit den richtigen Personen geteilt werden."
+            },
+            "SPFx": {
+                "Title": "SPFx-Entwicklung",
+                "Text": "Das SharePoint Framework ermöglicht es Ihnen, moderne Webanwendungen zu erstellen, die sich perfekt in Ihre Microsoft 365-Umgebung integrieren. Wir entwickeln benutzerdefinierte Web Parts, Erweiterungen und Anwendungen, die die nativen Funktionalitäten von SharePoint erweitern. Diese Lösungen sind wartbar, sicher und nach Microsoft-Standards skalierbar."
+            }
+        },
+        "Integration": {
+            "Title": "Integration und Ökosystem",
+            "Text": "Die Stärke des Microsoft-Ökosystems liegt in der Integration zwischen seinen verschiedenen Werkzeugen. Wir entwerfen Lösungen, die Power Automate, SharePoint, Power BI und Teams kombinieren, um kohärente Arbeitsumgebungen zu schaffen. Beispielsweise kann ein Power Automate-Workflow Aktionen in SharePoint auslösen, Daten in Power BI aktualisieren und Benachrichtigungen in Teams senden - alles nahtlos für den Benutzer."
+        },
+        "Training": {
+            "Title": "Schulung und Unterstützung",
+            "Text": "Wir implementieren nicht nur Lösungen, sondern schulen auch Ihre Teams, damit sie diese pflegen und weiterentwickeln können. Unsere Schulungen sind auf das Niveau jedes Einzelnen abgestimmt und beinhalten klare Dokumentation. Das Ziel ist es, Ihr Unternehmen autonom zu machen, während wir für komplexere Bedürfnisse verfügbar bleiben."
+        },
+        "UseCases": {
+            "Title": "Häufige Anwendungsfälle",
+            "Text": "Wir haben Unternehmen geholfen, ihre Genehmigungsprozesse zu automatisieren, interne Wissensdatenbanken zu erstellen, Kundenportale in SharePoint zu entwickeln, Finanz-Dashboards in Power BI einzurichten und vieles mehr. Jedes Projekt beginnt mit einer Analyse Ihrer Bedürfnisse und endet mit einer Lösung, die sich natürlich in Ihren Alltag integriert."
+        },
+        "Benefits": {
+            "Title": "Vorteile für Ihre Organisation",
+            "Items": [
+                {
+                    "Title": "Bessere Lizenznutzung",
+                    "Desc": "Nutzen Sie die in Ihren Microsoft 365-Abonnements enthaltenen Werkzeuge vollständig ohne zusätzliche Kosten."
+                },
+                {
+                    "Title": "Automatisierte Prozesse",
+                    "Desc": "Eliminieren Sie manuelle Aufgaben und reduzieren Sie Fehlerrisiken durch Automatisierung."
+                },
+                {
+                    "Title": "Verbesserte Zusammenarbeit",
+                    "Desc": "Erleichtern Sie die Teamarbeit mit modernen und integrierten Werkzeugen."
+                },
+                {
+                    "Title": "Umsetzbare Daten",
+                    "Desc": "Verwandeln Sie Ihre Daten in umsetzbare Erkenntnisse mit klaren und aktualisierten Dashboards."
+                }
+            ]
+        }
+    }
+}

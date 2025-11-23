@@ -76,11 +76,10 @@ export default async function RootLayout({
   const userAgent = headers().get("user-agent") || "";
   const isIOS = /iPad|iPhone|iPod/.test(userAgent);
   const isAndroid = /Android/.test(userAgent);
-  const gaId = isIOS
-    ? "G-6YG8R7QMN7"
-    : isAndroid
-    ? "G-PBFJ9TQ7NR"
-    : "G-BXZ54E31FL";
+  const gaId =
+    process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ||
+    process.env.NEXT_PUBLIC_GA_ID ||
+    "G-H6EBEK7685";
   const currentLocale = getCurrentLocale();
 
   const cookieLabels = {

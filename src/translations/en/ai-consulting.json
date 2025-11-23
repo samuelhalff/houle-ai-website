@@ -1,0 +1,61 @@
+{
+    "Hero": {
+        "Title": "Artificial intelligence consulting",
+        "Description": "Transform your business with AI solutions tailored to your needs. We support you in integrating artificial intelligence to automate your processes, improve your decisions and create value."
+    },
+    "Presentation": {
+        "Intro": "Artificial intelligence is no longer reserved for large corporations. Today, SMEs can leverage these technologies to gain efficiency, reduce costs and deliver better customer experiences. Our pragmatic approach allows you to adopt AI progressively, without disrupting your organization.",
+        "Why": {
+            "Title": "Why invest in AI now",
+            "Text": "Artificial intelligence technologies have reached a level of maturity that makes them accessible and profitable for businesses of all sizes. Whether automating repetitive tasks, analyzing large amounts of data, or improving your customer service, AI offers concrete transformation opportunities. We regularly see that companies adopting these tools gain productivity while freeing their teams for higher value missions."
+        },
+        "Services": {
+            "Title": "Our areas of expertise",
+            "Automation": {
+                "Title": "Intelligent automation",
+                "Text": "We identify repetitive processes in your business and design AI-based automation solutions. This can include automatic document processing, data classification, or customer request management. The goal is to reduce time spent on routine tasks and minimize human errors."
+            },
+            "Analytics": {
+                "Title": "Predictive analytics",
+                "Text": "Your data contains valuable information about your customers, operations and growth opportunities. We implement predictive analytics models that help you anticipate trends, optimize inventory or personalize your offerings. These tools transform your data into tangible competitive advantages."
+            },
+            "Chatbots": {
+                "Title": "Conversational assistants",
+                "Text": "Chatbots and virtual assistants improve your customer service while reducing your team workload. We develop solutions that understand natural language and can handle a wide range of requests, from technical support to sales inquiries. These assistants work around the clock and continuously improve through machine learning."
+            },
+            "Custom": {
+                "Title": "Custom solutions",
+                "Text": "Every business has specific needs. We design custom AI applications that integrate perfectly into your existing environment. Whether image recognition, natural language processing or complex process optimization, we develop the solution that precisely addresses your challenges."
+            }
+        },
+        "Approach": {
+            "Title": "Our working method",
+            "Text": "We always start by understanding your current processes and identifying improvement opportunities. Then we develop a pilot project that quickly demonstrates the value of AI in your context. This progressive approach allows you to see the benefits before extending the solution across your organization. We stay by your side to train your teams and ensure implementation success."
+        },
+        "Technologies": {
+            "Title": "Technologies and tools",
+            "Text": "We work with the most powerful AI platforms on the market, including OpenAI, Microsoft Azure AI, and other specialized solutions according to your needs. Our expertise covers machine learning, natural language processing, computer vision and data analysis. We always select the technologies best suited to your situation, prioritizing reliability and ease of maintenance."
+        },
+        "Benefits": {
+            "Title": "Benefits for your business",
+            "Items": [
+                {
+                    "Title": "Productivity gains",
+                    "Desc": "Automate repetitive tasks and allow your teams to focus on high-value activities."
+                },
+                {
+                    "Title": "Cost reduction",
+                    "Desc": "Lower your operational costs by optimizing your processes and reducing manual errors."
+                },
+                {
+                    "Title": "Better decision making",
+                    "Desc": "Base your decisions on in-depth data analysis rather than intuition alone."
+                },
+                {
+                    "Title": "Competitive advantage",
+                    "Desc": "Adopt the technologies that will make the difference against your competitors in the years to come."
+                }
+            ]
+        }
+    }
+}

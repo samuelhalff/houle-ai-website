@@ -7,6 +7,7 @@ import { usePathname } from "next/navigation";
 import type { NavData } from "@/src/components/navigation/types";
 import { buttonVariants } from "@/src/components/ui/button";
 import { cn } from "@/src/lib/utils";
+import ServicesDropdown from "@/src/components/navigation/ServicesDropdown";
 
 const HeaderControls = dynamic(
   () => import("@/src/components/navigation/HeaderControls"),
@@ -97,6 +98,12 @@ export default function NavbarServer({
                     {navData.labels.products}
                   </Link>
                 </li>
+                <ServicesDropdown
+                  locale={locale}
+                  localePrefix={localePrefix}
+                  navData={navData}
+                  isActive={isSection(`${localePrefix}/services`)}
+                />
                 <li>
                   <Link
                     href={`${localePrefix}/ressources`}

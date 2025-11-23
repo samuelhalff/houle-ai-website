@@ -154,6 +154,30 @@ const MobileMenu = ({
               </div>
             </div>
             <div>
+              <div className="px-2 py-2 text-xs font-semibold text-muted-foreground uppercase tracking-wide">
+                {navData.labels.services}
+              </div>
+              {navData.services.map((service) => (
+                <Link
+                  key={service.href}
+                  href={`${localePrefix}${service.href}`}
+                  onClick={handleLinkClick}
+                  prefetch={false}
+                  locale={locale}
+                  className="flex items-start gap-3 text-md px-4 py-2 rounded hover:bg-accent active:scale-[0.99] transition-all"
+                >
+                  <div className="flex-1">
+                    <div className="font-medium">{service.title}</div>
+                    {service.description && (
+                      <div className="text-xs text-muted-foreground mt-0.5">
+                        {service.description}
+                      </div>
+                    )}
+                  </div>
+                </Link>
+              ))}
+            </div>
+            <div>
               <Link
                 href={`${localePrefix}/ressources`}
                 onClick={handleLinkClick}

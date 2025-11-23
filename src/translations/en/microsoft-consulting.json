@@ -1,0 +1,65 @@
+{
+    "Hero": {
+        "Title": "Microsoft consulting",
+        "Description": "Optimize your productivity with the Microsoft ecosystem. We help you get the most out of Power Automate, SharePoint, Power BI and SPFx to automate your processes and improve collaboration."
+    },
+    "Presentation": {
+        "Intro": "Companies using Microsoft 365 often leverage only a fraction of the possibilities offered by this platform. Between Power Automate for automation, SharePoint for document management, Power BI for data analysis and SPFx for application development, the Microsoft ecosystem offers powerful tools that remain underused. We support you to fully exploit these technologies and transform how you work.",
+        "Why": {
+            "Title": "Why optimize your Microsoft environment",
+            "Text": "If your company already uses Microsoft 365, you likely have a license that includes many tools whose potential you are not exploiting. Power Automate can automate hundreds of repetitive tasks, SharePoint can structure and secure all your business information, Power BI can transform your data into interactive dashboards, and SPFx allows you to create custom applications perfectly integrated. The return on investment is quick because you are using tools you already own."
+        },
+        "Services": {
+            "Title": "Our Microsoft services",
+            "PowerAutomate": {
+                "Title": "Automation with Power Automate",
+                "Text": "Power Automate allows you to create automated workflows between your Microsoft applications and hundreds of third-party services. We design automations that eliminate manual and repetitive tasks such as data collection, sending notifications, creating reports or synchronizing between systems. Each workflow is documented and can be easily modified by your internal teams once set up."
+            },
+            "SharePoint": {
+                "Title": "SharePoint solutions",
+                "Text": "SharePoint is much more than just a file storage space. We create SharePoint sites that structure your information, automate your business processes and facilitate team collaboration. Whether managing projects, centralizing knowledge or creating modern intranets, we configure SharePoint according to your specific needs while respecting governance best practices."
+            },
+            "PowerBI": {
+                "Title": "Power BI dashboards",
+                "Text": "Power BI transforms your data into interactive visualizations that facilitate decision making. We connect your existing data sources, whether in Excel, SharePoint, your CRM or your management system, and create dashboards that automatically update your key indicators. These reports can be accessed from any device and shared securely with the right people."
+            },
+            "SPFx": {
+                "Title": "SPFx development",
+                "Text": "The SharePoint Framework allows you to create modern web applications that integrate perfectly into your Microsoft 365 environment. We develop custom web parts, extensions and applications that extend the native functionalities of SharePoint. These solutions are designed to be maintainable, secure and scalable according to Microsoft standards."
+            }
+        },
+        "Integration": {
+            "Title": "Integration and ecosystem",
+            "Text": "The strength of the Microsoft ecosystem lies in the integration between its different tools. We design solutions that combine Power Automate, SharePoint, Power BI and Teams to create coherent work environments. For example, a Power Automate workflow can trigger actions in SharePoint, update data in Power BI and send notifications in Teams, all seamlessly for the user."
+        },
+        "Training": {
+            "Title": "Training and support",
+            "Text": "We do not just implement solutions, we also train your teams so they can maintain and evolve them. Our training sessions are adapted to everyone's level and include clear documentation. The goal is to make your company autonomous while knowing that we remain available for more complex needs."
+        },
+        "UseCases": {
+            "Title": "Common use cases",
+            "Text": "We have helped companies automate their approval processes, create internal knowledge bases, develop customer portals in SharePoint, set up financial dashboards in Power BI, and much more. Each project starts with an analysis of your needs and ends with a solution that naturally integrates into your daily routine."
+        },
+        "Benefits": {
+            "Title": "Benefits for your organization",
+            "Items": [
+                {
+                    "Title": "Better license utilization",
+                    "Desc": "Fully exploit the tools included in your Microsoft 365 subscriptions without additional costs."
+                },
+                {
+                    "Title": "Automated processes",
+                    "Desc": "Eliminate manual tasks and reduce error risks through automation."
+                },
+                {
+                    "Title": "Improved collaboration",
+                    "Desc": "Facilitate teamwork with modern and integrated tools."
+                },
+                {
+                    "Title": "Actionable data",
+                    "Desc": "Transform your data into actionable insights with clear and updated dashboards."
+                }
+            ]
+        }
+    }
+}

@@ -136,7 +136,7 @@ export default function CookieConsent({ nonce, locale = "fr", labels }: Props) {
     () =>
       process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ||
       process.env.NEXT_PUBLIC_GA_ID ||
-      "G-BXZ54E31FL",
+      "G-H6EBEK7685",
     []
   );
 

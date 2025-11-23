@@ -1,0 +1,61 @@
+{
+    "Hero": {
+        "Title": "Consultoría en inteligencia artificial",
+        "Description": "Transforme su empresa con soluciones de IA adaptadas a sus necesidades. Le acompañamos en la integración de inteligencia artificial para automatizar sus procesos, mejorar sus decisiones y crear valor."
+    },
+    "Presentation": {
+        "Intro": "La inteligencia artificial ya no está reservada a las grandes empresas. Hoy, las PYME pueden aprovechar estas tecnologías para ganar en eficiencia, reducir costos y ofrecer mejores experiencias a sus clientes. Nuestro enfoque pragmático le permite adoptar la IA progresivamente, sin alterar su organización.",
+        "Why": {
+            "Title": "Por qué invertir en IA ahora",
+            "Text": "Las tecnologías de inteligencia artificial han alcanzado un nivel de madurez que las hace accesibles y rentables para empresas de todos los tamaños. Ya sea para automatizar tareas repetitivas, analizar grandes cantidades de datos o mejorar su servicio al cliente, la IA ofrece oportunidades concretas de transformación. Constatamos regularmente que las empresas que adoptan estas herramientas ganan en productividad mientras liberan a sus equipos para misiones de mayor valor."
+        },
+        "Services": {
+            "Title": "Nuestras áreas de intervención",
+            "Automation": {
+                "Title": "Automatización inteligente",
+                "Text": "Identificamos los procesos repetitivos en su empresa y diseñamos soluciones de automatización basadas en IA. Esto puede incluir el procesamiento automático de documentos, la clasificación de datos o la gestión de solicitudes de clientes. El objetivo es reducir el tiempo dedicado a tareas rutinarias y minimizar los errores humanos."
+            },
+            "Analytics": {
+                "Title": "Análisis predictivo",
+                "Text": "Sus datos contienen información valiosa sobre sus clientes, operaciones y oportunidades de crecimiento. Implementamos modelos de análisis predictivo que le ayudan a anticipar tendencias, optimizar inventarios o personalizar sus ofertas. Estas herramientas transforman sus datos en ventajas competitivas tangibles."
+            },
+            "Chatbots": {
+                "Title": "Asistentes conversacionales",
+                "Text": "Los chatbots y asistentes virtuales mejoran su servicio al cliente mientras reducen la carga de trabajo de sus equipos. Desarrollamos soluciones que comprenden el lenguaje natural y pueden gestionar una amplia gama de solicitudes, desde soporte técnico hasta consultas comerciales. Estos asistentes funcionan las 24 horas y mejoran continuamente gracias al aprendizaje automático."
+            },
+            "Custom": {
+                "Title": "Soluciones personalizadas",
+                "Text": "Cada empresa tiene necesidades específicas. Diseñamos aplicaciones de IA personalizadas que se integran perfectamente en su entorno existente. Ya sea reconocimiento de imágenes, procesamiento del lenguaje natural u optimización de procesos complejos, desarrollamos la solución que aborda precisamente sus desafíos."
+            }
+        },
+        "Approach": {
+            "Title": "Nuestro método de trabajo",
+            "Text": "Siempre comenzamos por comprender sus procesos actuales e identificar oportunidades de mejora. Luego desarrollamos un proyecto piloto que demuestra rápidamente el valor de la IA en su contexto. Este enfoque progresivo le permite constatar los beneficios antes de extender la solución a toda su organización. Permanecemos a su lado para formar a sus equipos y asegurar el éxito de la implementación."
+        },
+        "Technologies": {
+            "Title": "Tecnologías y herramientas",
+            "Text": "Trabajamos con las plataformas de IA más potentes del mercado, incluyendo OpenAI, Microsoft Azure AI y otras soluciones especializadas según sus necesidades. Nuestra experiencia cubre el aprendizaje automático, el procesamiento del lenguaje natural, la visión por computadora y el análisis de datos. Siempre seleccionamos las tecnologías mejor adaptadas a su situación, privilegiando la fiabilidad y la facilidad de mantenimiento."
+        },
+        "Benefits": {
+            "Title": "Ventajas para su empresa",
+            "Items": [
+                {
+                    "Title": "Ganancia de productividad",
+                    "Desc": "Automatice las tareas repetitivas y permita que sus equipos se concentren en actividades de alto valor."
+                },
+                {
+                    "Title": "Reducción de costos",
+                    "Desc": "Disminuya sus costos operativos optimizando sus procesos y reduciendo los errores manuales."
+                },
+                {
+                    "Title": "Mejor toma de decisiones",
+                    "Desc": "Base sus decisiones en análisis de datos profundos en lugar de solo la intuición."
+                },
+                {
+                    "Title": "Ventaja competitiva",
+                    "Desc": "Adopte las tecnologías que marcarán la diferencia frente a sus competidores en los próximos años."
+                }
+            ]
+        }
+    }
+}

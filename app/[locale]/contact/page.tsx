@@ -16,6 +16,7 @@ const copy = {
     title: "Get in touch",
     subtitle:
       "We are onboarding a small number of teams for early pilots on Microsoft 365.",
+    emailLabel: "Email us at",
     orContactUs: "Prefer email or a call?",
     bookingButton: "Schedule a call",
     labels: {
@@ -50,6 +51,7 @@ const copy = {
     title: "Contactez-nous",
     subtitle:
       "Nous accueillons quelques équipes pour des pilotes sur Microsoft 365.",
+    emailLabel: "Écrivez-nous à",
     orContactUs: "Préférez un e-mail ou un appel ?",
     bookingButton: "Planifier un appel",
     labels: {
@@ -84,6 +86,7 @@ const copy = {
     title: "Kontakt aufnehmen",
     subtitle:
       "Wir nehmen eine kleine Anzahl von Teams für frühe Pilotprojekte auf Microsoft 365 auf.",
+    emailLabel: "Schreiben Sie an",
     orContactUs: "Lieber E-Mail oder Anruf?",
     bookingButton: "Termin vereinbaren",
     labels: {
@@ -118,6 +121,7 @@ const copy = {
     title: "Contactar",
     subtitle:
       "Estamos incorporando un pequeño número de equipos para pilotos iniciales en Microsoft 365.",
+    emailLabel: "Escríbenos a",
     orContactUs: "¿Prefieres correo electrónico o llamada?",
     bookingButton: "Programar una llamada",
     labels: {
@@ -152,6 +156,7 @@ const copy = {
     title: "Entre em contato",
     subtitle:
       "Estamos integrando um pequeno número de equipes para pilotos iniciais no Microsoft 365.",
+    emailLabel: "Envie um e-mail para",
     orContactUs: "Prefere e-mail ou ligação?",
     bookingButton: "Agendar uma ligação",
     labels: {
@@ -197,15 +202,21 @@ export default function ContactPage({
     <div className="mx-auto w-full max-w-[var(--breakpoint-xl)] px-6 py-12 space-y-10">
       <div className="text-center space-y-3">
         <p className="text-sm uppercase tracking-[0.18em] text-muted-foreground">
-          Contact
-        </p>
-        <h1 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight">
-          {strings.title}
-        </h1>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          {strings.subtitle}
-        </p>
-      </div>
+      Contact
+    </p>
+    <h1 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight">
+      {strings.title}
+    </h1>
+    <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+      {strings.subtitle}
+    </p>
+    <p className="text-base text-muted-foreground">
+      {strings.emailLabel}{" "}
+      <a className="text-primary underline" href="mailto:contact@houle.ai">
+        contact@houle.ai
+      </a>
+    </p>
+  </div>
 
       <ContactForm
         showTitle={false}

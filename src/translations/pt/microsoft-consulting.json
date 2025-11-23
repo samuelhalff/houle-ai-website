@@ -1,0 +1,65 @@
+{
+  "Hero": {
+    "Title": "Consultoria Microsoft",
+    "Description": "Otimize sua produtividade com o ecossistema Microsoft. Ajudamos você a tirar o máximo proveito do Power Automate, SharePoint, Power BI e SPFx para automatizar seus processos e melhorar a colaboração."
+  },
+  "Presentation": {
+    "Intro": "As empresas que utilizam o Microsoft 365 geralmente aproveitam apenas uma fração das possibilidades oferecidas por esta plataforma. Entre Power Automate para automatização, SharePoint para gestão documental, Power BI para análise de dados e SPFx para desenvolvimento de aplicações, o ecossistema Microsoft oferece ferramentas poderosas que permanecem subutilizadas. Acompanhamos você para explorar plenamente essas tecnologias e transformar sua forma de trabalhar.",
+    "Why": {
+      "Title": "Por que otimizar seu ambiente Microsoft",
+      "Text": "Se sua empresa já utiliza o Microsoft 365, você provavelmente possui uma licença que inclui muitas ferramentas cujo potencial não está sendo explorado. O Power Automate pode automatizar centenas de tarefas repetitivas, o SharePoint pode estruturar e proteger todas as suas informações empresariais, o Power BI pode transformar seus dados em painéis interativos, e o SPFx permite criar aplicações personalizadas perfeitamente integradas. O retorno sobre o investimento é rápido porque você está usando ferramentas que já possui."
+    },
+    "Services": {
+      "Title": "Nossos serviços Microsoft",
+      "PowerAutomate": {
+        "Title": "Automatização com Power Automate",
+        "Text": "O Power Automate permite criar fluxos de trabalho automatizados entre suas aplicações Microsoft e centenas de serviços de terceiros. Concebemos automatizações que eliminam tarefas manuais e repetitivas como coleta de dados, envio de notificações, criação de relatórios ou sincronização entre sistemas. Cada fluxo é documentado e pode ser facilmente modificado por suas equipes internas uma vez configurado."
+      },
+      "SharePoint": {
+        "Title": "Soluções SharePoint",
+        "Text": "O SharePoint é muito mais do que um simples espaço de armazenamento de arquivos. Criamos sites SharePoint que estruturam suas informações, automatizam seus processos de negócio e facilitam a colaboração entre equipes. Seja para gerenciar projetos, centralizar conhecimentos ou criar intranets modernas, configuramos o SharePoint segundo suas necessidades específicas respeitando as melhores práticas de governança."
+      },
+      "PowerBI": {
+        "Title": "Painéis Power BI",
+        "Text": "O Power BI transforma seus dados em visualizações interativas que facilitam a tomada de decisão. Conectamos suas fontes de dados existentes, sejam no Excel, SharePoint, seu CRM ou seu sistema de gestão, e criamos painéis que atualizam automaticamente seus indicadores-chave. Esses relatórios podem ser consultados de qualquer dispositivo e compartilhados com segurança com as pessoas certas."
+      },
+      "SPFx": {
+        "Title": "Desenvolvimento SPFx",
+        "Text": "O SharePoint Framework permite criar aplicações web modernas que se integram perfeitamente em seu ambiente Microsoft 365. Desenvolvemos web parts personalizados, extensões e aplicações que ampliam as funcionalidades nativas do SharePoint. Essas soluções são projetadas para serem mantíveis, seguras e escaláveis segundo os padrões da Microsoft."
+      }
+    },
+    "Integration": {
+      "Title": "Integração e ecossistema",
+      "Text": "A força do ecossistema Microsoft reside na integração entre suas diferentes ferramentas. Concebemos soluções que combinam Power Automate, SharePoint, Power BI e Teams para criar ambientes de trabalho coerentes. Por exemplo, um fluxo do Power Automate pode desencadear ações no SharePoint, atualizar dados no Power BI e enviar notificações no Teams, tudo de maneira transparente para o usuário."
+    },
+    "Training": {
+      "Title": "Formação e acompanhamento",
+      "Text": "Não nos contentamos em implementar soluções, também formamos suas equipes para que possam mantê-las e fazê-las evoluir. Nossas sessões de formação são adaptadas ao nível de cada um e incluem documentação clara. O objetivo é tornar sua empresa autônoma sabendo que permanecemos disponíveis para as necessidades mais complexas."
+    },
+    "UseCases": {
+      "Title": "Casos de uso comuns",
+      "Text": "Ajudamos empresas a automatizar seus processos de aprovação, criar bases de conhecimento internas, desenvolver portais de clientes no SharePoint, implementar painéis financeiros no Power BI, e muito mais. Cada projeto começa com uma análise de suas necessidades e termina com uma solução que se integra naturalmente em seu cotidiano."
+    },
+    "Benefits": {
+      "Title": "Benefícios para sua organização",
+      "Items": [
+        {
+          "Title": "Melhor utilização de licenças",
+          "Desc": "Explore plenamente as ferramentas incluídas em suas assinaturas Microsoft 365 sem custos adicionais."
+        },
+        {
+          "Title": "Processos automatizados",
+          "Desc": "Elimine as tarefas manuais e reduza os riscos de erro graças à automatização."
+        },
+        {
+          "Title": "Colaboração melhorada",
+          "Desc": "Facilite o trabalho em equipe com ferramentas modernas e integradas."
+        },
+        {
+          "Title": "Dados acionáveis",
+          "Desc": "Transforme seus dados em insights acionáveis com painéis claros e atualizados."
+        }
+      ]
+    }
+  }
+}

@@ -36,22 +36,48 @@ export default async function LocaleLayout({
           labels: {
             home: "Accueil",
             products: "Produits",
+            services: "Services",
             ressources: "Ressources",
             contact: "Contact",
             mobileNavigation: "Menu",
           },
           products: [],
+          services: [
+            {
+              href: "/services/ai-consulting",
+              title: "Conseil en IA",
+              description: "Solutions d'intelligence artificielle sur mesure",
+            },
+            {
+              href: "/services/microsoft-consulting",
+              title: "Conseil Microsoft",
+              description: "Power Automate, SharePoint, Power BI et SPFx",
+            },
+          ],
           hideProducts: true,
         }
       : {
           labels: {
             home: "Home",
             products: "Products",
+            services: "Services",
             ressources: "Resources",
             contact: "Contact",
             mobileNavigation: "Menu",
           },
           products: [],
+          services: [
+            {
+              href: "/services/ai-consulting",
+              title: "AI consulting",
+              description: "Custom artificial intelligence solutions",
+            },
+            {
+              href: "/services/microsoft-consulting",
+              title: "Microsoft consulting",
+              description: "Power Automate, SharePoint, Power BI and SPFx",
+            },
+          ],
           hideProducts: true,
         };
 
