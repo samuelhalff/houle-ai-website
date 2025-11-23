@@ -11,6 +11,7 @@ import {
   buildProfessionalServiceSchema,
 } from "@/src/lib/structuredData";
 import { localizePath } from "@/src/lib/paths";
+import ResponsiveImage from "@/src/components/media/ResponsiveImage";
 
 export const runtime = "nodejs";
 export const revalidate = false;
@@ -105,25 +106,47 @@ const AIConsultingPage = async ({ params }: { params: { locale: string } }) => {
       <section className="relative w-full pt-24 pb-16 md:pt-32 md:pb-20">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-background" />
         <div className="relative max-w-[1200px] mx-auto px-6">
-          <div className="max-w-[800px]">
-            <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-primary/10 text-primary text-sm font-medium">
-              {params.locale === "fr"
-                ? "Services"
-                : params.locale === "de"
-                ? "Dienstleistungen"
-                : params.locale === "es"
-                ? "Servicios"
-                : params.locale === "pt"
-                ? "Serviços"
-                : "Services"}
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="max-w-[600px]">
+              <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-primary/10 text-primary text-sm font-medium">
+                {params.locale === "fr"
+                  ? "Services"
+                  : params.locale === "de"
+                  ? "Dienstleistungen"
+                  : params.locale === "es"
+                  ? "Servicios"
+                  : params.locale === "pt"
+                  ? "Serviços"
+                  : "Services"}
+              </div>
+              <h1 className="text-4xl xs:text-5xl md:text-6xl font-bold mb-6 leading-tight tracking-tight">
+                {(tService("Hero.Title") as string) || "AI consulting"}
+              </h1>
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                {(tService("Hero.Description") as string) ||
+                  "Transform your business with AI solutions tailored to your needs."}
+              </p>
             </div>
-            <h1 className="text-4xl xs:text-5xl md:text-6xl font-bold mb-6 leading-tight tracking-tight">
-              {(tService("Hero.Title") as string) || "AI consulting"}
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              {(tService("Hero.Description") as string) ||
-                "Transform your business with AI solutions tailored to your needs."}
-            </p>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+              <ResponsiveImage
+                src="/assets/hero/services/samuel-ferrara-XQZRB1IU4Dc-unsplash.jpg"
+                alt={
+                  params.locale === "fr"
+                    ? "Équipe travaillant sur des solutions d'intelligence artificielle"
+                    : params.locale === "de"
+                    ? "Team arbeitet an künstlichen Intelligenzlösungen"
+                    : params.locale === "es"
+                    ? "Equipo trabajando en soluciones de inteligencia artificial"
+                    : params.locale === "pt"
+                    ? "Equipe trabalhando em soluções de inteligência artificial"
+                    : "Team working on artificial intelligence solutions"
+                }
+                width={800}
+                height={600}
+                priority
+                className="object-cover w-full h-full"
+              />
+            </div>
           </div>
         </div>
       </section>
