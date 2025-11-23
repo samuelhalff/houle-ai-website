@@ -7,6 +7,8 @@ import StructuredData from "@/src/components/seo/StructuredData";
 import {
   buildBreadcrumbList,
   buildServiceSchema,
+  buildOrganizationSchema,
+  buildProfessionalServiceSchema,
 } from "@/src/lib/structuredData";
 import { localizePath } from "@/src/lib/paths";
 
@@ -75,9 +77,29 @@ const AIConsultingPage = async ({ params }: { params: { locale: string } }) => {
     },
   });
 
+  const organizationJsonLd = buildOrganizationSchema();
+
+  const professionalServiceJsonLd = buildProfessionalServiceSchema(
+    `${baseUrl}/${params.locale}${localizePath(
+      "/services/ai-consulting",
+      params.locale as Locale
+    )}/`,
+    (tService("Hero.Title") as string) || "AI consulting",
+    (tService("Hero.Description") as string) ||
+      "Transform your business with AI solutions tailored to your needs."
+  );
+
   return (
     <div className="min-h-screen">
-      <StructuredData nonce={nonce} data={[breadcrumbJsonLd, serviceJsonLd]} />
+      <StructuredData
+        nonce={nonce}
+        data={[
+          breadcrumbJsonLd,
+          serviceJsonLd,
+          organizationJsonLd,
+          professionalServiceJsonLd,
+        ]}
+      />
 
       {/* Hero Section */}
       <section className="relative w-full pt-24 pb-16 md:pt-32 md:pb-20">

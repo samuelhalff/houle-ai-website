@@ -7,6 +7,8 @@ import StructuredData from "@/src/components/seo/StructuredData";
 import {
   buildBreadcrumbList,
   buildServiceSchema,
+  buildOrganizationSchema,
+  buildProfessionalServiceSchema,
 } from "@/src/lib/structuredData";
 import { localizePath } from "@/src/lib/paths";
 
@@ -79,8 +81,29 @@ const MicrosoftConsultingPage = async ({
     },
   });
 
+  const organizationJsonLd = buildOrganizationSchema();
+
+  const professionalServiceJsonLd = buildProfessionalServiceSchema(
+    `${baseUrl}/${params.locale}${localizePath(
+      "/services/microsoft-consulting",
+      params.locale as Locale
+    )}/`,
+    (tService("Hero.Title") as string) || "Microsoft consulting",
+    (tService("Hero.Description") as string) ||
+      "Optimize your productivity with the Microsoft ecosystem."
+  );
+
   return (
     <div className="min-h-screen">
+      <StructuredData
+        nonce={nonce}
+        data={[
+          breadcrumbJsonLd,
+          serviceJsonLd,
+          organizationJsonLd,
+          professionalServiceJsonLd,
+        ]}
+      />
       <StructuredData nonce={nonce} data={[breadcrumbJsonLd, serviceJsonLd]} />
 
       {/* Hero Section */}
