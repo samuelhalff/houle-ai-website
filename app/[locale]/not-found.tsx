@@ -132,9 +132,7 @@ export default async function NotFoundPage() {
         <p className="text-8xl md:text-9xl font-black tracking-tight text-muted-foreground/20 mb-4">
           404
         </p>
-        <h1 className="text-3xl md:text-4xl font-bold mb-4">
-          {content.title}
-        </h1>
+        <h1 className="text-3xl md:text-4xl font-bold mb-4">{content.title}</h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
           {content.description}
         </p>
