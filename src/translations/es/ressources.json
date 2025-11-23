@@ -58,6 +58,294 @@
                     "url": "https://learn.microsoft.com/en-us/ai-builder/overview"
                 }
             ]
+        },
+        {
+            "slug": "automatisation-courrier-entrant-ia",
+            "title": "Automatizar correo postal y email con IA para despachos en Ginebra",
+            "description": "Un bufete ginebrino redujo el tiempo de clasificación en un 80 % con Azure OpenAI y Microsoft 365.",
+            "content": "## Panorama\n\nAutomatizamos escaneos y buzones compartidos con Azure Document Intelligence, Azure OpenAI y Microsoft 365 para que los expedientes sigan alojados en Suiza. Cada correo y email se clasifica, se envía a SharePoint y se busca con Azure AI Search sobre un grounding privado.\n\n## Resultados\n\nLos asuntos urgentes llegan al abogado correcto en minutos y el equipo recupera casi una jornada a la semana.",
+            "author": "houle Team",
+            "date": "2025-11-22",
+            "references": [
+                {
+                    "labelKey": "Azure Document Intelligence",
+                    "url": "https://azure.microsoft.com/en-us/products/ai-services/ai-document-intelligence"
+                },
+                {
+                    "labelKey": "Azure OpenAI Service",
+                    "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
+                }
+            ]
+        },
+        {
+            "slug": "detection-delais-spfx-calendriers",
+            "title": "Controlar plazos críticos con SPFx y calendarios compartidos",
+            "description": "Una notaría de Ginebra dejó de perder plazos legales con una app de SharePoint que detecta fechas y las sincroniza en Teams.",
+            "content": "## Panorama\n\nCreamos una aplicación SharePoint Framework que analiza contratos con Azure OpenAI, extrae plazos legales suizos y los sincroniza en calendarios de Outlook y Teams. Todo vive en Microsoft 365, sin sacar documentos fuera de Suiza.\n\n## Resultados\n\nNo se escapa ninguna fecha y todos los equipos en Ginebra ven el mismo calendario actualizado.",
+            "author": "houle Team",
+            "date": "2025-11-21",
+            "references": [
+                {
+                    "labelKey": "SharePoint Framework Overview",
+                    "url": "https://learn.microsoft.com/en-us/sharepoint/dev/spfx/sharepoint-framework-overview"
+                },
+                {
+                    "labelKey": "Microsoft Teams Integration",
+                    "url": "https://learn.microsoft.com/en-us/microsoftteams/platform/overview"
+                }
+            ]
+        },
+        {
+            "slug": "relance-factures-impayees-power-automate",
+            "title": "Cobro inteligente de facturas con Power Automate y IA",
+            "description": "Una firma financiera de Ginebra redujo su DSO un 40 % con recordatorios personalizados.",
+            "content": "## Panorama\n\nCon Power Automate, AI Builder y Azure OpenAI personalizamos los recordatorios según segmento y comportamiento de pago, manteniendo los datos financieros en Suiza. Los envíos salen desde Outlook y el seguimiento queda en SharePoint y Power BI.\n\n## Resultados\n\nEl DSO baja de forma notable y el equipo administrativo gana un día por semana.",
+            "author": "houle Team",
+            "date": "2025-11-20",
+            "references": [
+                {
+                    "labelKey": "Power Automate AI Builder",
+                    "url": "https://learn.microsoft.com/en-us/ai-builder/overview"
+                },
+                {
+                    "labelKey": "Azure OpenAI Service",
+                    "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
+                }
+            ]
+        },
+        {
+            "slug": "resume-documents-juridiques-azure-ai",
+            "title": "Resumir documentos jurídicos con Azure AI",
+            "description": "Un gestor patrimonial de Ginebra revisa diez veces más contratos con resúmenes alojados en Suiza.",
+            "content": "## Panorama\n\nCombinamos Azure AI Search y Azure OpenAI para condensar expedientes extensos apoyándonos en bibliotecas privadas de SharePoint. Los analistas obtienen riesgos y resúmenes sin sacar datos del tenant suizo.\n\n## Resultados\n\nLas revisiones son más rápidas, el equipo legal mantiene el control y Microsoft 365 sigue siendo el único entorno de trabajo.",
+            "author": "houle Team",
+            "date": "2025-11-19",
+            "references": [
+                {
+                    "labelKey": "Azure AI Document Intelligence",
+                    "url": "https://azure.microsoft.com/en-us/products/ai-services/ai-document-intelligence"
+                },
+                {
+                    "labelKey": "Azure AI Search",
+                    "url": "https://azure.microsoft.com/en-us/products/ai-services/ai-search"
+                }
+            ]
+        },
+        {
+            "slug": "assistant-redaction-contrats-ia",
+            "title": "Asistente de redacción contractual con Word Add-ins y IA",
+            "description": "Una casa de trading en Ginebra redujo a un tercio el tiempo de redacción con un asistente conectado a su biblioteca de cláusulas.",
+            "content": "## Panorama\n\nUn complemento de Word recupera cláusulas aprobadas desde SharePoint, usa Azure AI Search y OpenAI para proponer textos y resalta cambios para validación jurídica. Todo ocurre en Microsoft 365 para cumplir las normas suizas.\n\n## Resultados\n\nLos contratos salen más rápido, el riesgo baja y los juristas se concentran en los casos especiales.",
+            "author": "houle Team",
+            "date": "2025-11-18",
+            "references": [
+                {
+                    "labelKey": "Office Add-ins Development",
+                    "url": "https://learn.microsoft.com/en-us/office/dev/add-ins/"
+                },
+                {
+                    "labelKey": "Azure AI Search",
+                    "url": "https://azure.microsoft.com/en-us/products/ai-services/ai-search"
+                }
+            ]
+        },
+        {
+            "slug": "allocation-taches-dynamique-teams-planner",
+            "title": "Asignación dinámica de tareas con Teams, Planner y Power Automate",
+            "description": "Una fiduciaria de Ginebra equilibra la carga de los contables con asignaciones por habilidades y disponibilidad.",
+            "content": "## Panorama\n\nSuperpusimos Microsoft Planner, Teams y Power Automate para asignar tareas según skills, fechas y capacidad. Todos ven la misma cola en Teams y los clientes en Suiza reciben respuestas más rápidas.\n\n## Resultados\n\nBajan las horas extras, se cumplen mejor los SLAs y los gestores tienen visibilidad en tiempo real.",
+            "author": "houle Team",
+            "date": "2025-11-22",
+            "references": [
+                {
+                    "labelKey": "Microsoft Planner",
+                    "url": "https://www.microsoft.com/en-us/microsoft-365/business/task-management-software"
+                },
+                {
+                    "labelKey": "Power Automate Documentation",
+                    "url": "https://learn.microsoft.com/en-us/power-automate/"
+                }
+            ]
+        },
+        {
+            "slug": "validation-notes-frais-power-automate-approvals",
+            "title": "Aprobación inteligente de gastos con Power Automate y AI Builder",
+            "description": "Una consultora redujo el ciclo de notas de gastos en un 75 % con controles de IA.",
+            "content": "## Panorama\n\nLos recibos se leen con AI Builder, se validan contra la política y se enrutan por Power Automate en Teams. Azure OpenAI marca anomalías mientras los datos financieros permanecen en Suiza.\n\n## Resultados\n\nReembolsos más rápidos y menos tiempo invertido en correcciones.",
+            "author": "houle Team",
+            "date": "2025-11-21",
+            "references": [
+                {
+                    "labelKey": "AI Builder Receipt Processing",
+                    "url": "https://learn.microsoft.com/en-us/ai-builder/prebuilt-receipt-processing"
+                },
+                {
+                    "labelKey": "Power Automate Approvals",
+                    "url": "https://learn.microsoft.com/en-us/power-automate/get-started-approvals"
+                }
+            ]
+        },
+        {
+            "slug": "onboarding-clients-automatise-sharepoint-forms",
+            "title": "Onboarding de clientes automatizado con SharePoint, Forms y Teams",
+            "description": "Un banco privado de Ginebra redujo en un 60 % la apertura de cuentas con un recorrido totalmente trazado.",
+            "content": "## Panorama\n\nMontamos un formulario de Microsoft Forms, un espacio de SharePoint y un canal de Teams que orquestan pasos KYC, controles con Azure OpenAI y aprobaciones. Los datos se quedan en tenants suizos y todos ven el mismo estado.\n\n## Resultados\n\nLos clientes firman antes, compliance tiene evidencias claras y los banqueros pueden dedicar más tiempo a la relación.",
+            "author": "houle Team",
+            "date": "2025-11-20",
+            "references": [
+                {
+                    "labelKey": "SharePoint Site Templates",
+                    "url": "https://learn.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-design-overview"
+                },
+                {
+                    "labelKey": "Microsoft Forms",
+                    "url": "https://support.microsoft.com/en-us/forms"
+                }
+            ]
+        },
+        {
+            "slug": "tableau-bord-projets-power-bi-project",
+            "title": "Paneles de proyectos en tiempo real con Power BI y Microsoft Project",
+            "description": "Una oficina de ingeniería en Ginebra dirige 40 proyectos en vivo con Power BI alimentado por Project y Teams.",
+            "content": "## Panorama\n\nMicrosoft Project for the web alimenta un espacio de Power BI con hitos, presupuestos y riesgos en obras suizas y europeas. Las actualizaciones de Teams aparecen solas para que jefes de obra y PMO compartan una única vista.\n\n## Resultados\n\nLas decisiones son más rápidas, se detectan antes las desviaciones de margen y los clientes reciben reportes claros.",
+            "author": "houle Team",
+            "date": "2025-11-19",
+            "references": [
+                {
+                    "labelKey": "Power BI Documentation",
+                    "url": "https://learn.microsoft.com/en-us/power-bi/"
+                },
+                {
+                    "labelKey": "Microsoft Project for the web",
+                    "url": "https://www.microsoft.com/en-us/microsoft-365/project/project-management-software"
+                }
+            ]
+        },
+        {
+            "slug": "gestion-contrats-spfx-alertes-metadata",
+            "title": "Gestión de contratos con SPFx, metadatos inteligentes y alertas",
+            "description": "Una inmobiliaria de Ginebra protege 800 contratos con etiquetas automáticas y avisos en SharePoint.",
+            "content": "## Panorama\n\nUna app de SharePoint Framework sugiere metadatos con Azure OpenAI, aplica plantillas y envía alertas de vencimiento a Teams. Los contratos permanecen en centros de datos suizos y la búsqueda se acelera con Azure AI Search.\n\n## Resultados\n\nNo se pierden renovaciones, las cláusulas se encuentran en segundos y las auditorías quedan limpias.",
+            "author": "houle Team",
+            "date": "2025-11-17",
+            "references": [
+                {
+                    "labelKey": "SharePoint Framework",
+                    "url": "https://learn.microsoft.com/en-us/sharepoint/dev/spfx/sharepoint-framework-overview"
+                },
+                {
+                    "labelKey": "SharePoint Metadata",
+                    "url": "https://learn.microsoft.com/en-us/sharepoint/metadata-and-content-types"
+                }
+            ]
+        },
+        {
+            "slug": "analyse-predictive-ventes-azure-ml",
+            "title": "Predicción de ventas y stock con Azure Machine Learning",
+            "description": "Un distribuidor farmacéutico de Ginebra redujo roturas de stock en un 70 % con modelos de demanda.",
+            "content": "## Panorama\n\nAzure Machine Learning pronostica la demanda por producto y cantón, alimenta reglas de stock de seguridad en el ERP y Power BI. Los modelos se ejecutan en Suiza y usan datos de Microsoft 365 y puntos de venta.\n\n## Resultados\n\nMenos urgencias de reposición, mejor caja y servicio más fiable para farmacias suizas.",
+            "author": "houle Team",
+            "date": "2025-11-16",
+            "references": [
+                {
+                    "labelKey": "Azure Machine Learning",
+                    "url": "https://azure.microsoft.com/en-us/products/machine-learning"
+                },
+                {
+                    "labelKey": "Time Series Forecasting",
+                    "url": "https://learn.microsoft.com/en-us/azure/machine-learning/how-to-auto-train-forecast"
+                }
+            ]
+        },
+        {
+            "slug": "base-connaissances-recherche-semantique-ai",
+            "title": "Base de conocimiento con búsqueda semántica e IA",
+            "description": "Un centro de soporte en Ginebra redujo los tiempos de resolución en un 55 % con Azure AI Search y respuestas generadas.",
+            "content": "## Panorama\n\nIndexamos artículos, SOP y tickets de Microsoft 365 en Azure AI Search con ranking semántico y lo unimos a Azure OpenAI para redactar respuestas con fuentes. Los datos se quedan en Suiza y los agentes reciben sugerencias rápidas.\n\n## Resultados\n\nMejora la resolución al primer contacto y los nuevos agentes aprenden más rápido gracias a la IA con grounding.",
+            "author": "houle Team",
+            "date": "2025-11-15",
+            "references": [
+                {
+                    "labelKey": "Azure AI Search",
+                    "url": "https://azure.microsoft.com/en-us/products/ai-services/ai-search"
+                },
+                {
+                    "labelKey": "Semantic Search",
+                    "url": "https://learn.microsoft.com/en-us/azure/search/semantic-search-overview"
+                }
+            ]
+        },
+        {
+            "slug": "transcription-reunions-extraction-actions",
+            "title": "Transcripción de reuniones y acciones con IA",
+            "description": "Una firma de auditoría en Ginebra ahorra doce horas semanales con notas asistidas por IA.",
+            "content": "## Panorama\n\nLa transcripción en vivo de Teams junto con Azure Speech y OpenAI resume reuniones, riesgos y acciones en SharePoint. Todo corre en tenants suizos para preservar la confidencialidad.\n\n## Resultados\n\nMenos tecleo para los consultores, seguimientos más claros y cartas de encargo más rápidas.",
+            "author": "houle Team",
+            "date": "2025-11-14",
+            "references": [
+                {
+                    "labelKey": "Microsoft Teams Transcription",
+                    "url": "https://support.microsoft.com/en-us/office/view-live-transcription-in-microsoft-teams-meetings-dc1a8f23-2e20-4684-885e-2152e06a4a8b"
+                },
+                {
+                    "labelKey": "Azure Speech Services",
+                    "url": "https://azure.microsoft.com/en-us/products/ai-services/speech-to-text"
+                }
+            ]
+        },
+        {
+            "slug": "controle-qualite-vision-ia-production",
+            "title": "Control de calidad con visión artificial para la producción suiza",
+            "description": "Un proveedor relojero en Ginebra redujo en un 98 % los defectos enviados con Azure Custom Vision en el edge.",
+            "content": "## Panorama\n\nCámaras en el edge con Azure Custom Vision e IoT Edge inspeccionan cada pieza en talleres de Vaud y Ginebra en tiempo real. Los defectos generan alertas en Teams y los datos permanecen en el tenant suizo.\n\n## Resultados\n\nMenos retrabajo, calidad más estable y operarios que confían en los controles de IA.",
+            "author": "houle Team",
+            "date": "2025-11-13",
+            "references": [
+                {
+                    "labelKey": "Azure Custom Vision",
+                    "url": "https://azure.microsoft.com/en-us/products/ai-services/custom-vision-service"
+                },
+                {
+                    "labelKey": "Azure IoT Edge",
+                    "url": "https://azure.microsoft.com/en-us/products/iot-edge"
+                }
+            ]
+        },
+        {
+            "slug": "analyse-sentiment-client-reseaux-sociaux",
+            "title": "Análisis de sentimiento en reseñas y redes sociales",
+            "description": "Una cadena hotelera alrededor de Ginebra mejora la experiencia con seguimiento de sentimiento asistido por IA.",
+            "content": "## Panorama\n\nRecogemos reseñas y publicaciones en francés, inglés, alemán y español, las analizamos con Azure AI Language y Azure OpenAI y proponemos respuestas. Los paneles de Power BI muestran tendencias para equipos en Ginebra y los Alpes.\n\n## Resultados\n\nMenores tiempos de respuesta, mejores rankings y alertas tempranas para marketing.",
+            "author": "houle Team",
+            "date": "2025-11-12",
+            "references": [
+                {
+                    "labelKey": "Azure AI Language Sentiment Analysis",
+                    "url": "https://learn.microsoft.com/en-us/azure/ai-services/language-service/sentiment-opinion-mining/overview"
+                },
+                {
+                    "labelKey": "Social Listening",
+                    "url": "https://learn.microsoft.com/en-us/dynamics365/customer-insights/social-listening-overview"
+                }
+            ]
+        },
+        {
+            "slug": "workflows-approbation-multi-niveaux-adaptive-cards",
+            "title": "Flujos de aprobación multinivel con Adaptive Cards de Teams",
+            "description": "Una aseguradora suiza redujo en un 70 % el tiempo de aprobación de pólizas con flujos automáticos en Teams.",
+            "content": "## Panorama\n\nPower Automate orquesta rutas de aprobación según prima, riesgo y región, enviando Adaptive Cards en Teams. Las escaladas respetan ausencias y cada paso se registra para auditorías compatibles con FINMA.\n\n## Resultados\n\nLos corredores reciben respuestas rápidas, la gobernanza es más sólida y los directivos ven KPIs en vivo en Power BI.",
+            "author": "houle Team",
+            "date": "2025-11-11",
+            "references": [
+                {
+                    "labelKey": "Adaptive Cards for Microsoft Teams",
+                    "url": "https://learn.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards"
+                },
+                {
+                    "labelKey": "Power Automate Approvals",
+                    "url": "https://learn.microsoft.com/en-us/power-automate/get-started-approvals"
+                }
+            ]
         }
     ],
     "FAQ": {

@@ -349,12 +349,12 @@
         }
     ],
     "FAQ": {
-            "Title": "Questions fréquentes",
-            "Items": []
-        },
-        "Contact": {
-            "Title": "Des questions ?",
-            "Description": "Nos experts sont là pour vous aider à intégrer l'IA dans votre entreprise.",
-            "ButtonText": "Contactez-nous"
-        }
+        "Title": "Questions fréquentes",
+        "Items": []
+    },
+    "Contact": {
+        "Title": "Des questions ?",
+        "Description": "Nos experts sont là pour vous aider à intégrer l'IA dans votre entreprise.",
+        "ButtonText": "Contactez-nous"
     }
+}

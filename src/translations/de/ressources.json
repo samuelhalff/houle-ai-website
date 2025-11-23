@@ -58,6 +58,294 @@
                     "url": "https://learn.microsoft.com/en-us/ai-builder/overview"
                 }
             ]
+        },
+        {
+            "slug": "automatisation-courrier-entrant-ia",
+            "title": "Post- und E-Mail-Eingang mit KI automatisieren für Kanzleien in Genf",
+            "description": "Eine Genfer Kanzlei reduzierte die Sortierung von Post und Sammelmailboxen um 80 % mit Azure OpenAI und Microsoft 365.",
+            "content": "## Überblick\n\nWir haben in Genf Post-Scans und gemeinsame Postfächer mit Azure Document Intelligence, Azure OpenAI und Microsoft 365 automatisiert, damit vertrauliche Akten in der Schweiz bleiben. Jeder Scan und jede E-Mail wird klassifiziert, nach SharePoint verschoben und über Azure AI Search mit privatem Grounding durchsuchbar gemacht.\n\n## Ergebnisse\n\nDringende Fälle landen in wenigen Minuten beim richtigen Anwalt und das Team gewinnt fast einen Arbeitstag pro Woche zurück.",
+            "author": "houle Team",
+            "date": "2025-11-22",
+            "references": [
+                {
+                    "labelKey": "Azure Document Intelligence",
+                    "url": "https://azure.microsoft.com/en-us/products/ai-services/ai-document-intelligence"
+                },
+                {
+                    "labelKey": "Azure OpenAI Service",
+                    "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
+                }
+            ]
+        },
+        {
+            "slug": "detection-delais-spfx-calendriers",
+            "title": "Kritische Fristen mit SPFx und gemeinsamen Kalendern sichern",
+            "description": "Eine Genfer Notariatskanzlei verpasst keine Fristen mehr dank einer SharePoint-App, die Termine erkennt und in Teams-Kalender schreibt.",
+            "content": "## Überblick\n\nWir haben eine SharePoint Framework App gebaut, die Verträge mit Azure OpenAI analysiert, Schweizer Fristen herauszieht und sie in gemeinsame Outlook- und Teams-Kalender synchronisiert. Alles läuft in Microsoft 365, damit die Akten die Schweiz nicht verlassen.\n\n## Ergebnisse\n\nKeine Frist geht verloren und jedes Team in Genf sieht denselben aktuellen Kalender.",
+            "author": "houle Team",
+            "date": "2025-11-21",
+            "references": [
+                {
+                    "labelKey": "SharePoint Framework Overview",
+                    "url": "https://learn.microsoft.com/en-us/sharepoint/dev/spfx/sharepoint-framework-overview"
+                },
+                {
+                    "labelKey": "Microsoft Teams Integration",
+                    "url": "https://learn.microsoft.com/en-us/microsoftteams/platform/overview"
+                }
+            ]
+        },
+        {
+            "slug": "relance-factures-impayees-power-automate",
+            "title": "Smarter Forderungsrückstand mit Power Automate und KI",
+            "description": "Ein Genfer Finanzberatungsbüro senkte das Zahlungsziel um 40 % mit personalisierten Mahnungen.",
+            "content": "## Überblick\n\nMit Power Automate, AI Builder und Azure OpenAI personalisieren wir Mahnungen nach Kundensegment und Zahlungsverhalten, während Finanzdaten in der Schweiz bleiben. Nachrichten gehen direkt aus Outlook heraus, Protokolle liegen in SharePoint und Power BI zeigt die Entwicklung.",
+            "author": "houle Team",
+            "date": "2025-11-20",
+            "references": [
+                {
+                    "labelKey": "Power Automate AI Builder",
+                    "url": "https://learn.microsoft.com/en-us/ai-builder/overview"
+                },
+                {
+                    "labelKey": "Azure OpenAI Service",
+                    "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
+                }
+            ]
+        },
+        {
+            "slug": "resume-documents-juridiques-azure-ai",
+            "title": "Juristische Dokumente mit Azure AI zusammenfassen",
+            "description": "Ein Genfer Vermögensverwalter prüft zehnmal mehr Verträge mit KI-Zusammenfassungen in der Schweiz.",
+            "content": "## Überblick\n\nWir kombinieren Azure AI Search und Azure OpenAI, um lange juristische Dokumente zu verdichten und auf die private SharePoint-Bibliothek zu stützen. Analysen bleiben in Schweizer Rechenzentren, sodass sensible Mandanteninformationen geschützt sind.\n\n## Ergebnisse\n\nReviews laufen schneller, Rechtsabteilungen behalten die Kontrolle und Microsoft 365 bleibt der einzige Arbeitsplatz.",
+            "author": "houle Team",
+            "date": "2025-11-19",
+            "references": [
+                {
+                    "labelKey": "Azure AI Document Intelligence",
+                    "url": "https://azure.microsoft.com/en-us/products/ai-services/ai-document-intelligence"
+                },
+                {
+                    "labelKey": "Azure AI Search",
+                    "url": "https://azure.microsoft.com/en-us/products/ai-services/ai-search"
+                }
+            ]
+        },
+        {
+            "slug": "assistant-redaction-contrats-ia",
+            "title": "Vertragsassistent mit Word-Add-ins und KI",
+            "description": "Ein Genfer Handelsunternehmen verkürzte die Vertragsarbeit um zwei Drittel mit einem KI-Assistenten und einer Klauselbibliothek.",
+            "content": "## Überblick\n\nEin benutzerdefiniertes Word-Add-in zieht freigegebene Klauseln aus SharePoint, nutzt Azure AI Search und OpenAI für Formulierungen und hebt Änderungen für die Rechtsprüfung hervor. Alles bleibt in Microsoft 365, um Schweizer Vorgaben einzuhalten.\n\n## Ergebnisse\n\nVerträge gehen schneller raus, Risiken sinken und Juristen konzentrieren sich auf Sonderfälle statt auf Copy-Paste.",
+            "author": "houle Team",
+            "date": "2025-11-18",
+            "references": [
+                {
+                    "labelKey": "Office Add-ins Development",
+                    "url": "https://learn.microsoft.com/en-us/office/dev/add-ins/"
+                },
+                {
+                    "labelKey": "Azure AI Search",
+                    "url": "https://azure.microsoft.com/en-us/products/ai-services/ai-search"
+                }
+            ]
+        },
+        {
+            "slug": "allocation-taches-dynamique-teams-planner",
+            "title": "Dynamische Aufgabenverteilung mit Teams, Planner und Power Automate",
+            "description": "Eine Genfer Treuhand gleicht Buchhalter-Workloads mit KI-Zuweisungen nach Skills und Verfügbarkeit aus.",
+            "content": "## Überblick\n\nWir haben Microsoft Planner, Teams und Power Automate kombiniert, um Arbeiten nach Skills, Fälligkeiten und Kapazität automatisch zu verteilen. Alle sehen dieselbe Queue in Teams und Kunden in der Schweiz erhalten schnellere Antworten.\n\n## Ergebnisse\n\nÜberstunden sinken, SLAs werden besser eingehalten und Manager haben einen Live-Blick auf die Auslastung.",
+            "author": "houle Team",
+            "date": "2025-11-22",
+            "references": [
+                {
+                    "labelKey": "Microsoft Planner",
+                    "url": "https://www.microsoft.com/en-us/microsoft-365/business/task-management-software"
+                },
+                {
+                    "labelKey": "Power Automate Documentation",
+                    "url": "https://learn.microsoft.com/en-us/power-automate/"
+                }
+            ]
+        },
+        {
+            "slug": "validation-notes-frais-power-automate-approvals",
+            "title": "Intelligente Spesenfreigaben mit Power Automate und AI Builder",
+            "description": "Eine Managementberatung verkürzte den Spesenprozess um 75 % dank KI-Prüfungen.",
+            "content": "## Überblick\n\nBelege werden mit AI Builder gelesen, gegen Richtlinien geprüft und per Power Automate in Teams genehmigt. Azure OpenAI markiert auffällige Positionen, während Finanzdaten in der Schweiz verbleiben.\n\n## Ergebnisse\n\nMitarbeitende werden schneller erstattet und Finanzteams verbringen weniger Zeit mit Korrekturen.",
+            "author": "houle Team",
+            "date": "2025-11-21",
+            "references": [
+                {
+                    "labelKey": "AI Builder Receipt Processing",
+                    "url": "https://learn.microsoft.com/en-us/ai-builder/prebuilt-receipt-processing"
+                },
+                {
+                    "labelKey": "Power Automate Approvals",
+                    "url": "https://learn.microsoft.com/en-us/power-automate/get-started-approvals"
+                }
+            ]
+        },
+        {
+            "slug": "onboarding-clients-automatise-sharepoint-forms",
+            "title": "Automatisiertes Client-Onboarding mit SharePoint, Forms und Teams",
+            "description": "Eine Genfer Privatbank verkürzte die Kontoeröffnung um 60 % mit einem durchgängigen Onboarding.",
+            "content": "## Überblick\n\nEin Microsoft Forms Intake, ein SharePoint-Arbeitsbereich und ein Teams-Kanal steuern KYC-Schritte, Azure OpenAI-Checks und Freigaben. Daten bleiben auf Schweizer Tenants und alle Teams sehen denselben Status.\n\n## Ergebnisse\n\nKunden unterschreiben schneller, Compliance erhält saubere Nachweise und Banker haben mehr Zeit für Beziehungen.",
+            "author": "houle Team",
+            "date": "2025-11-20",
+            "references": [
+                {
+                    "labelKey": "SharePoint Site Templates",
+                    "url": "https://learn.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-design-overview"
+                },
+                {
+                    "labelKey": "Microsoft Forms",
+                    "url": "https://support.microsoft.com/en-us/forms"
+                }
+            ]
+        },
+        {
+            "slug": "tableau-bord-projets-power-bi-project",
+            "title": "Echtzeit-Projekt-Dashboards mit Power BI und Microsoft Project",
+            "description": "Ein Genfer Ingenieurbüro steuert 40 Projekte live mit Power BI aus Project und Teams.",
+            "content": "## Überblick\n\nMicrosoft Project for the web speist ein Power BI-Workspace mit Meilensteinen, Budgets und Risiken für Schweizer und EU-Projekte. Teams-Updates erscheinen automatisch, damit Baustellenleiter und PMO ein gemeinsames Bild haben.\n\n## Ergebnisse\n\nEntscheidungen sind schneller, Margenabweichungen werden früher erkannt und Kunden erhalten klarere Reports.",
+            "author": "houle Team",
+            "date": "2025-11-19",
+            "references": [
+                {
+                    "labelKey": "Power BI Documentation",
+                    "url": "https://learn.microsoft.com/en-us/power-bi/"
+                },
+                {
+                    "labelKey": "Microsoft Project for the web",
+                    "url": "https://www.microsoft.com/en-us/microsoft-365/project/project-management-software"
+                }
+            ]
+        },
+        {
+            "slug": "gestion-contrats-spfx-alertes-metadata",
+            "title": "Vertragsmanagement mit SPFx, smarten Metadaten und Fälligkeitshinweisen",
+            "description": "Ein Genfer Immobilienunternehmen sichert 800 Verträge mit automatischen Tags und Erinnerungen in SharePoint.",
+            "content": "## Überblick\n\nEine SharePoint Framework App schlägt Metadaten mit Azure OpenAI vor, erzwingt Vorlagen und sendet Fälligkeitswarnungen in Teams. Alle Verträge bleiben in Schweizer Rechenzentren und die Suche wird durch Azure AI Search beschleunigt.\n\n## Ergebnisse\n\nKeine Verlängerung wird verpasst, Teams finden Klauseln in Sekunden und Audit-Trails bleiben sauber.",
+            "author": "houle Team",
+            "date": "2025-11-17",
+            "references": [
+                {
+                    "labelKey": "SharePoint Framework",
+                    "url": "https://learn.microsoft.com/en-us/sharepoint/dev/spfx/sharepoint-framework-overview"
+                },
+                {
+                    "labelKey": "SharePoint Metadata",
+                    "url": "https://learn.microsoft.com/en-us/sharepoint/metadata-and-content-types"
+                }
+            ]
+        },
+        {
+            "slug": "analyse-predictive-ventes-azure-ml",
+            "title": "Prädiktive Verkäufe und Lagerplanung mit Azure Machine Learning",
+            "description": "Ein Genfer Pharmadistributor senkte Out-of-Stocks um 70 % mit Prognosemodellen.",
+            "content": "## Überblick\n\nAzure Machine Learning prognostiziert die Nachfrage pro Produkt und Kanton, speist Sicherheitsbestände ins ERP und Power BI. Modelle laufen in der Schweiz und nutzen Microsoft 365-Daten plus POS-Feeds.\n\n## Ergebnisse\n\nWeniger Notfallbestellungen, besserer Cashflow und zuverlässigere Belieferung von Schweizer Apotheken.",
+            "author": "houle Team",
+            "date": "2025-11-16",
+            "references": [
+                {
+                    "labelKey": "Azure Machine Learning",
+                    "url": "https://azure.microsoft.com/en-us/products/machine-learning"
+                },
+                {
+                    "labelKey": "Time Series Forecasting",
+                    "url": "https://learn.microsoft.com/en-us/azure/machine-learning/how-to-auto-train-forecast"
+                }
+            ]
+        },
+        {
+            "slug": "base-connaissances-recherche-semantique-ai",
+            "title": "Wissensdatenbank mit semantischer Suche und KI",
+            "description": "Ein Genfer Support-Center verkürzte die Lösungszeiten um 55 % mit Azure AI Search und generierten Antworten.",
+            "content": "## Überblick\n\nWir haben Artikel, SOPs und Tickets aus Microsoft 365 in Azure AI Search mit semantischer Bewertung indiziert und mit Azure OpenAI gekoppelt, um Antworten mit Quellen zu liefern. Daten bleiben in der Schweiz, Agents bekommen schnelle Vorschläge.\n\n## Ergebnisse\n\nDie Erstlösung verbessert sich und neue Agents lernen schneller dank grounded AI.",
+            "author": "houle Team",
+            "date": "2025-11-15",
+            "references": [
+                {
+                    "labelKey": "Azure AI Search",
+                    "url": "https://azure.microsoft.com/en-us/products/ai-services/ai-search"
+                },
+                {
+                    "labelKey": "Semantic Search",
+                    "url": "https://learn.microsoft.com/en-us/azure/search/semantic-search-overview"
+                }
+            ]
+        },
+        {
+            "slug": "transcription-reunions-extraction-actions",
+            "title": "Meeting-Transkription und Aktionsableitung mit KI",
+            "description": "Ein Genfer Audit-Büro spart zwölf Stunden pro Woche mit KI-gestützten Notizen.",
+            "content": "## Überblick\n\nTeams-Livetranskription plus Azure Speech und OpenAI fassen Kundengespräche in Zusammenfassungen, Risiken und Actions zusammen, gespeichert in SharePoint. Alles läuft auf Schweizer Tenants für Vertraulichkeit.\n\n## Ergebnisse\n\nBerater tippen weniger, Follow-ups sind klarer und Engagement Letters gehen schneller raus.",
+            "author": "houle Team",
+            "date": "2025-11-14",
+            "references": [
+                {
+                    "labelKey": "Microsoft Teams Transcription",
+                    "url": "https://support.microsoft.com/en-us/office/view-live-transcription-in-microsoft-teams-meetings-dc1a8f23-2e20-4684-885e-2152e06a4a8b"
+                },
+                {
+                    "labelKey": "Azure Speech Services",
+                    "url": "https://azure.microsoft.com/en-us/products/ai-services/speech-to-text"
+                }
+            ]
+        },
+        {
+            "slug": "controle-qualite-vision-ia-production",
+            "title": "Automatisierte Qualitätskontrolle mit Computer Vision in der Schweizer Produktion",
+            "description": "Ein Genfer Uhrenzulieferer senkte ausgelieferte Fehler um 98 % mit Azure Custom Vision am Edge.",
+            "content": "## Überblick\n\nEdge-Kameras mit Azure Custom Vision und IoT Edge prüfen jede Komponente in Werkstätten in Waadt und Genf in Echtzeit. Fehler lösen Teams-Alarme aus und Daten bleiben im Schweizer Tenant.\n\n## Ergebnisse\n\nNacharbeit sinkt deutlich, Kunden sehen stabilere Qualität und Mitarbeitende vertrauen den KI-Checks.",
+            "author": "houle Team",
+            "date": "2025-11-13",
+            "references": [
+                {
+                    "labelKey": "Azure Custom Vision",
+                    "url": "https://azure.microsoft.com/en-us/products/ai-services/custom-vision-service"
+                },
+                {
+                    "labelKey": "Azure IoT Edge",
+                    "url": "https://azure.microsoft.com/en-us/products/iot-edge"
+                }
+            ]
+        },
+        {
+            "slug": "analyse-sentiment-client-reseaux-sociaux",
+            "title": "Kundenstimmung über Bewertungen und soziale Netzwerke analysieren",
+            "description": "Eine Hotelgruppe rund um Genf verbessert das Gästeerlebnis mit KI-gestütztem Sentiment-Tracking.",
+            "content": "## Überblick\n\nWir sammeln Rezensionen und Posts in Französisch, Englisch, Deutsch und Spanisch, analysieren sie mit Azure AI Language und Azure OpenAI und schlagen Antworten vor. Power BI-Dashboards zeigen Trends für Teams in Genf und den Alpen.\n\n## Ergebnisse\n\nReaktionszeiten sinken, Rankings steigen und Marketing erhält frühzeitige Warnsignale.",
+            "author": "houle Team",
+            "date": "2025-11-12",
+            "references": [
+                {
+                    "labelKey": "Azure AI Language Sentiment Analysis",
+                    "url": "https://learn.microsoft.com/en-us/azure/ai-services/language-service/sentiment-opinion-mining/overview"
+                },
+                {
+                    "labelKey": "Social Listening",
+                    "url": "https://learn.microsoft.com/en-us/dynamics365/customer-insights/social-listening-overview"
+                }
+            ]
+        },
+        {
+            "slug": "workflows-approbation-multi-niveaux-adaptive-cards",
+            "title": "Mehrstufige Genehmigungen mit Teams Adaptive Cards und dynamischen Regeln",
+            "description": "Ein Schweizer Versicherer verkürzte Policengenehmigungen um 70 % mit automatisierten Workflows in Teams.",
+            "content": "## Überblick\n\nPower Automate steuert Genehmigungswege nach Prämie, Risiko und Region und liefert Adaptive Cards in Teams. Eskalationen berücksichtigen Abwesenheiten und jeder Schritt wird für FINMA-taugliche Audits protokolliert.\n\n## Ergebnisse\n\nMakler erhalten schneller Antworten, Governance ist stärker und Führungskräfte sehen Live-KPIs in Power BI.",
+            "author": "houle Team",
+            "date": "2025-11-11",
+            "references": [
+                {
+                    "labelKey": "Adaptive Cards for Microsoft Teams",
+                    "url": "https://learn.microsoft.com/en-us/microsoftteams/platform/task-modules-and-cards/cards/design-effective-cards"
+                },
+                {
+                    "labelKey": "Power Automate Approvals",
+                    "url": "https://learn.microsoft.com/en-us/power-automate/get-started-approvals"
+                }
+            ]
         }
     ],
     "FAQ": {
