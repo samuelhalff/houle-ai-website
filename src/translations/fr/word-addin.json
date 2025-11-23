@@ -8,11 +8,11 @@
     "Title": "Fonctionnalités IA puissantes",
     "Description": "Tout ce dont vous avez besoin pour écrire mieux, plus vite et plus intelligemment.",
     "Chat": {
-      "Title": "Assistant de Chat Intelligent",
+      "Title": "Assistant de chat intelligent",
       "Description": "Posez des questions, obtenez des suggestions et affinez votre contenu avec des conversations IA directement dans Word. Réponses contextuelles basées sur votre document."
     },
     "Templates": {
-      "Title": "Remplissage Intelligent de Modèles",
+      "Title": "Remplissage intelligent de modèles",
       "Description": "Remplissez automatiquement les modèles avec les données clients de votre CRM. Générez des contrats, propositions et rapports en quelques secondes avec extraction de données IA."
     },
     "Suggestions": {
@@ -20,7 +20,7 @@
       "Description": "Assistance à l'écriture en temps réel avec suggestions contextuelles pendant la frappe. Améliorez le ton, la clarté et le style sans quitter le flux de votre document."
     },
     "Actions": {
-      "Title": "Actions en Un Clic",
+      "Title": "Actions en un clic",
       "Description": "Résumez des documents, traduisez du contenu, ajustez le ton ou générez des plans avec des actions IA préconfigurées. Personnalisables pour votre flux de travail."
     }
   },
