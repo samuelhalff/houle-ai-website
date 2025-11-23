@@ -153,6 +153,17 @@ const MobileMenu = ({
                 </span>
               </div>
             </div>
+            <div>
+              <Link
+                href={`${localePrefix}/ressources`}
+                onClick={handleLinkClick}
+                prefetch={false}
+                locale={locale}
+                className="flex items-center gap-3 text-md px-2 py-2 rounded hover:bg-accent active:scale-[0.99] transition-all"
+              >
+                <span>{navData.labels.ressources}</span>
+              </Link>
+            </div>
           </nav>
         </div>
       </SheetContent>

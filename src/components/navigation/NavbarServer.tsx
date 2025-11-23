@@ -97,6 +97,23 @@ export default function NavbarServer({
                 </li>
                 <li>
                   <Link
+                    href={`${localePrefix}/ressources`}
+                    prefetch={false}
+                    locale={locale}
+                    aria-current={
+                      isSection(`${localePrefix}/ressources`) ? "page" : undefined
+                    }
+                    className={cn(
+                      linkBase,
+                      "min-w-[112px]",
+                      isSection(`${localePrefix}/ressources`) ? activeClasses : ""
+                    )}
+                  >
+                    {navData.labels.ressources}
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     href={`${localePrefix}/contact`}
                     prefetch={false}
                     locale={locale}

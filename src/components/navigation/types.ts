@@ -2,6 +2,7 @@ export type NavData = {
   labels: {
     home: string;
     products: string;
+    ressources: string;
     contact: string;
     mobileNavigation: string;
   };

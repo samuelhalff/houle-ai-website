@@ -37,6 +37,7 @@ export default async function LocaleLayout({
           labels: {
             home: "Accueil",
             products: "Produits",
+            ressources: "Ressources",
             contact: "Contact",
             mobileNavigation: "Menu",
           },
@@ -47,6 +48,7 @@ export default async function LocaleLayout({
           labels: {
             home: "Home",
             products: "Products",
+            ressources: "Resources",
             contact: "Contact",
             mobileNavigation: "Menu",
           },
