@@ -36,6 +36,72 @@
             "Title": "Technologien und Werkzeuge",
             "Text": "Wir arbeiten mit den leistungsstärksten KI-Plattformen auf dem Markt, darunter OpenAI, Microsoft Azure AI und andere spezialisierte Lösungen je nach Ihren Bedürfnissen. Unsere Expertise umfasst maschinelles Lernen, natürliche Sprachverarbeitung, Computer Vision und Datenanalyse. Wir wählen immer die Technologien aus, die am besten zu Ihrer Situation passen, wobei wir Zuverlässigkeit und Wartungsfreundlichkeit priorisieren."
         },
+        "AzureAI": {
+            "Title": "Azure AI: Infrastruktur und Datensouveränität",
+            "Intro": "Unsere Expertise basiert auf Microsoft Azure AI, einer umfassenden Plattform, die technische Leistung mit Vertraulichkeitsgarantien kombiniert, die für Schweizer Unternehmen unerlässlich sind.",
+            "Models": {
+                "Title": "Bereitstellung privater KI-Modelle",
+                "Text": "Wir implementieren hochmoderne künstliche Intelligenzmodelle (GPT-4, GPT-4o, Llama 3, Mistral) in Ihrer eigenen Azure-Umgebung. Dieser Ansatz gewährleistet, dass Ihre Daten vollständig unter Ihrer Kontrolle bleiben und niemals zum Trainieren von Drittmodellen verwendet werden. Sie wählen die Bereitstellungsregion, idealerweise Switzerland North oder West Europe, um den Schweizer Anforderungen an die Datenlokalisierung zu entsprechen. Im Gegensatz zu öffentlichen SaaS-Lösungen kontrollieren Sie Modellversionen, Moderationsrichtlinien und Aktualisierungszyklen."
+            },
+            "Indexing": {
+                "Title": "Dokumentenindizierung und semantische Suche",
+                "Text": "Azure AI Search indiziert alle Ihre Unternehmensdokumente, ob in SharePoint, OneDrive, Datenbanken oder Geschäftssystemen. Die semantische Suche versteht die Absicht hinter einer Anfrage, anstatt einfach nur Wörter abzugleichen. Ihre Mitarbeiter finden sofort relevante Informationen, auch wenn sie anders formuliert sind. Dokumente werden automatisch mit KI-extrahierten Metadaten angereichert, was Klassifizierung und regulatorische Compliance erleichtert."
+            },
+            "Agents": {
+                "Title": "Autonome KI-Agenten und Orchestrierung",
+                "Text": "Wir entwickeln KI-Agenten, die komplexe Aufgaben autonom mit Azure AI Agent Service und Microsoft Semantic Kernel ausführen können. Diese Agenten können Ihre internen APIs aufrufen, Ihre Datenbanken abfragen, Berichte generieren oder Workflows nach Bedarf auslösen. Die Multi-Agenten-Orchestrierung zerlegt komplexe Prozesse in spezialisierte Aufgaben, wobei jeder Agent sein spezifisches Fachwissen einbringt. Diese modulare Architektur erleichtert die Wartung und Weiterentwicklung Ihrer KI-Lösungen."
+            },
+            "Grounding": {
+                "Title": "Grounding mit Bing und Ihren Daten",
+                "Text": "Grounding verankert KI-Antworten in zuverlässigen Datenquellen. Wir verbinden Ihre Modelle über das RAG-Muster (Retrieval Augmented Generation) mit Ihren internen Wissensbasen und stellen sicher, dass die Antworten auf Ihren offiziellen Dokumenten basieren. Für Bedürfnisse, die aktuelle externe Informationen erfordern, reichert die Integration mit Bing Search die Antworten mit aktuellen öffentlichen Daten an und zitiert die Quellen. Dieser hybride Ansatz kombiniert das interne Fachwissen Ihres Unternehmens mit aktuellem Allgemeinwissen."
+            }
+        },
+        "UseCases": {
+            "Title": "Konkrete Anwendungsfälle",
+            "Intro": "Entdecken Sie, wie wir Genfer Unternehmen geholfen haben, ihre Abläufe mit künstlicher Intelligenz zu transformieren. Diese realen Projekte demonstrieren die messbaren Vorteile von KI, die auf konkrete geschäftliche Herausforderungen angewendet wird.",
+            "Cases": [
+                {
+                    "Title": "Post- und E-Mail-Automatisierung",
+                    "Slug": "automatisation-courrier-entrant-ia",
+                    "Summary": "Eine Genfer Anwaltskanzlei reduzierte die Bearbeitungszeit eingehender Post und E-Mails um 83% dank eines KI-Systems, das jedes Dokument und jede Nachricht automatisch nach Art klassifiziert. Das System extrahiert Schlüsselinformationen, leitet an die richtigen Akten weiter und warnt bei dringenden Fällen. Anwälte finden jede Kommunikation sofort über semantische Suche."
+                },
+                {
+                    "Title": "Automatische Fristenerkennung",
+                    "Slug": "detection-delais-spfx-calendriers",
+                    "Summary": "Ein Notariat verpasst keine Frist mehr dank einer SharePoint-Anwendung, die Dokumente automatisch analysiert, um alle rechtlichen und vertraglichen Fristen zu identifizieren. Das System erstellt Kalendereinträge in Teams mit progressiven Warnungen und eliminiert das Risiko von Versäumnissen, die schwerwiegende Folgen für die Berufshaftung haben könnten."
+                },
+                {
+                    "Title": "Intelligente Rechnungserinnerungen",
+                    "Slug": "relance-factures-impayees-power-automate",
+                    "Summary": "Ein Finanzberatungsunternehmen reduzierte seine durchschnittliche Zahlungszeit um 40% durch automatisierte und personalisierte, von KI generierte Mahnungen. Das System passt Ton und Inhalt basierend auf Verzugsdauer und Beziehungsverlauf an und generiert höfliche und effektive E-Mails. Die für Mahnungen aufgewendete Zeit sank um 85%."
+                },
+                {
+                    "Title": "Automatische Zusammenfassung juristischer Dokumente",
+                    "Slug": "resume-documents-juridiques-azure-ai",
+                    "Summary": "Ein Vermögensverwaltungsunternehmen verarbeitet jetzt zehnmal mehr Berichte und Verträge dank KI-Dokumentensynthese. Das System generiert zwei Ebenen strukturierter Zusammenfassungen, die es Managern ermöglichen, schnell zu entscheiden, ob eine eingehende Lektüre erforderlich ist. Die für Dokumentenprüfung aufgewendete Zeit sank um 70%."
+                },
+                {
+                    "Title": "Vertragsgestaltungsassistent",
+                    "Slug": "assistant-redaction-contrats-ia",
+                    "Summary": "Ein internationales Handelsunternehmen drittelte seine Zeit für die Erstellung von Handelsverträgen dank eines KI-gestützten Word-Add-Ins. Der Assistent wählt automatisch geeignete Klauseln aus einer validierten Basis aus, generiert den personalisierten Vertrag und prüft die Konsistenz. Juristen konzentrieren sich jetzt auf Anpassung und Verhandlung statt auf mechanisches Verfassen."
+                },
+                {
+                    "Title": "Prädiktive Verkaufs- und Bestandsanalyse",
+                    "Slug": "analyse-predictive-ventes-azure-ml",
+                    "Summary": "Ein Pharmagroßhändler reduzierte Lagerausfälle um 70% und Ablaufverluste um 65% durch KI-Prognosemodelle, die fünf Jahre Historie mit Kontextdaten analysieren. Prognosen antizipieren saisonale Spitzen genau und optimieren Bestellungen, wodurch 120.000 CHF Betriebskapital freigesetzt werden."
+                },
+                {
+                    "Title": "Wissensdatenbank mit semantischer Suche",
+                    "Slug": "base-connaissances-recherche-semantique-ai",
+                    "Summary": "Ein Softwarehersteller reduzierte die Lösungszeiten für Support-Tickets um 55% durch eine KI-erweiterte Wissensdatenbank. Die semantische Suche versteht die Absicht hinter Fragen, und ein GPT-4-Modell generiert synthetische Antworten unter Angabe von Quellen. Neue Techniker werden doppelt so schnell einsatzfähig."
+                },
+                {
+                    "Title": "Besprechungstranskription und Aktionsextraktion",
+                    "Slug": "transcription-reunions-extraction-actions",
+                    "Summary": "Ein Wirtschaftsprüfungsunternehmen hat die manuelle Protokollierung eliminiert und spart 12 Stunden pro Woche durch KI-Transkription von Kundenbesprechungen. Das System generiert automatisch strukturierte Protokolle, erstellt Planner-Aufgaben für jede vereinbarte Aktion und erkennt die Kundenstimmung. Protokolle werden innerhalb einer Stunde nach der Besprechung versendet."
+                }
+            ]
+        },
         "Benefits": {
             "Title": "Vorteile für Ihr Unternehmen",
             "Items": [

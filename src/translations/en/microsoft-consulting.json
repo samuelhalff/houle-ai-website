@@ -36,6 +36,66 @@
             "Title": "Training and support",
             "Text": "We do not just implement solutions, we also train your teams so they can maintain and evolve them. Our training sessions are adapted to everyone's level and include clear documentation. The goal is to make your company autonomous while knowing that we remain available for more complex needs."
         },
+        "IntegrationFlows": {
+            "Title": "Integration flows between Microsoft tools",
+            "Intro": "The real strength of the Microsoft ecosystem lies in the ability to connect different tools to create intelligent workflows. Here are some common integration patterns we deploy for our clients in Geneva:",
+            "SharePointPowerBI": {
+                "Title": "SharePoint → Power BI",
+                "Text": "Your SharePoint lists and libraries feed Power BI dashboards in real time. Perfect for tracking project status, inventory management, or analyzing customer data without manual exports. Filters and interactive visuals allow everyone to quickly find the information they need."
+            },
+            "PowerAutomateSPFx": {
+                "Title": "Power Automate → SPFx",
+                "Text": "A Power Automate workflow can be triggered directly from a custom button in SharePoint (via SPFx). For example: click on a document to launch an approval process, send a notification to Teams, or archive files in specific folders based on metadata. Everything happens without leaving the page."
+            },
+            "TeamsSharePoint": {
+                "Title": "Teams ↔ SharePoint",
+                "Text": "Each Teams channel can be connected to a SharePoint document library. We add custom tabs to display forms, dashboards, or lists directly in Teams. This allows project collaboration without switching between applications: everything is centralized in one interface."
+            },
+            "SPFxAzureFunctions": {
+                "Title": "SPFx → Azure Functions",
+                "Text": "Your custom SharePoint components can call Azure Functions to integrate external systems (ERP, CRM, payment APIs, etc.). This allows you to enrich SharePoint forms with data from other sources or trigger complex calculations without overloading SharePoint. Security is ensured via authentication tokens."
+            },
+            "PowerBIEmbedded": {
+                "Title": "Power BI Embedded",
+                "Text": "We integrate Power BI reports directly into SharePoint pages or custom applications (SPFx or external web apps). Users access contextualized analytics without leaving their working environment. Permissions are synchronized so each person only sees the data they are entitled to."
+            }
+        },
+        "RealCases": {
+            "Title": "Real use cases from our Geneva clients",
+            "Intro": "Here are concrete examples of Microsoft projects we have carried out for companies in Geneva. Each solution addresses a specific operational need:",
+            "Cases": [
+                {
+                    "Title": "Automatic task assignment between SharePoint and Teams",
+                    "Slug": "task-allocation-sharepoint-teams",
+                    "Summary": "A Geneva company needed to distribute tasks among multiple teams based on project urgency and type. We created a SharePoint list that automatically assigns tasks to the right Teams channels and notifies responsible persons. Each team tracks its assignments in a custom dashboard, and Power Automate updates statuses in real time."
+                },
+                {
+                    "Title": "Multi-level expense approval workflow",
+                    "Slug": "expense-approval-power-automate",
+                    "Summary": "Expense note management in a Geneva SME was done via email and Excel, causing delays and errors. We deployed a Power Automate workflow with multi-level conditional approvals, automatic notifications, and archiving in SharePoint. The approval time has dropped from 5 days to less than 24 hours."
+                },
+                {
+                    "Title": "Client onboarding portal in SharePoint",
+                    "Slug": "client-onboarding-sharepoint",
+                    "Summary": "A consulting firm wanted to digitize its client onboarding process. We created a secure SharePoint portal with custom forms (PowerApps), automated document management, and a Power BI dashboard for tracking progress. Clients fill out their information online, and the team receives instant notifications."
+                },
+                {
+                    "Title": "Real-time project dashboard in Power BI",
+                    "Slug": "realtime-project-dashboard-powerbi",
+                    "Summary": "A Geneva industrial company was tracking its projects via scattered Excel files. We centralized everything in SharePoint with a Power BI dashboard that displays priorities, delays, and budgets in real time. Department heads can filter by project, client, or manager to make quick decisions."
+                },
+                {
+                    "Title": "Contract management in SharePoint with SPFx",
+                    "Slug": "contract-management-sharepoint-spfx",
+                    "Summary": "A service company needed a central solution to manage its contracts (deadlines, renewals, signatures). We built a SharePoint application with custom interfaces (SPFx) for searches, automatic alerts before deadline expirations, and integration with DocuSign for electronic signatures. Everything is accessible from Teams."
+                },
+                {
+                    "Title": "Approval workflow with Adaptive Cards in Teams",
+                    "Slug": "approval-workflow-adaptive-cards-teams",
+                    "Summary": "A Geneva logistics company was validating its supply orders via email. We automated the entire process with Power Automate: when a request is created in SharePoint, an Adaptive Card is sent to Teams for validation. Approvers can accept or refuse directly from Teams, with comments and automatic notifications."
+                }
+            ]
+        },
         "UseCases": {
             "Title": "Common use cases",
             "Text": "We have helped companies automate their approval processes, create internal knowledge bases, develop customer portals in SharePoint, set up financial dashboards in Power BI, and much more. Each project starts with an analysis of your needs and ends with a solution that naturally integrates into your daily routine."

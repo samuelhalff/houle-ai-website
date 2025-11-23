@@ -36,6 +36,66 @@
       "Title": "Formación y acompañamiento",
       "Text": "No nos contentamos con implementar soluciones, también formamos a sus equipos para que puedan mantenerlas y hacerlas evolucionar. Nuestras sesiones de formación están adaptadas al nivel de cada uno e incluyen documentación clara. El objetivo es hacer su empresa autónoma sabiendo que permanecemos disponibles para las necesidades más complejas."
     },
+    "IntegrationFlows": {
+      "Title": "Flujos de integración entre herramientas Microsoft",
+      "Intro": "La verdadera fuerza del ecosistema Microsoft radica en la capacidad de conectar diferentes herramientas para crear flujos de trabajo inteligentes. Aquí hay algunos patrones de integración comunes que implementamos para nuestros clientes en Ginebra:",
+      "SharePointPowerBI": {
+        "Title": "SharePoint → Power BI",
+        "Text": "Sus listas y bibliotecas de SharePoint alimentan paneles de Power BI en tiempo real. Perfecto para seguir el estado de proyectos, gestión de inventarios o análisis de datos de clientes sin exportaciones manuales. Filtros y visuales interactivos permiten a todos encontrar rápidamente la información que necesitan."
+      },
+      "PowerAutomateSPFx": {
+        "Title": "Power Automate → SPFx",
+        "Text": "Un flujo de trabajo de Power Automate puede activarse directamente desde un botón personalizado en SharePoint (vía SPFx). Por ejemplo: clic en un documento para lanzar un proceso de aprobación, enviar una notificación a Teams o archivar archivos en carpetas específicas según metadatos. Todo sucede sin salir de la página."
+      },
+      "TeamsSharePoint": {
+        "Title": "Teams ↔ SharePoint",
+        "Text": "Cada canal de Teams puede conectarse a una biblioteca de documentos de SharePoint. Agregamos pestañas personalizadas para mostrar formularios, paneles o listas directamente en Teams. Esto permite colaboración en proyectos sin cambiar entre aplicaciones: todo está centralizado en una interfaz."
+      },
+      "SPFxAzureFunctions": {
+        "Title": "SPFx → Azure Functions",
+        "Text": "Sus componentes personalizados de SharePoint pueden llamar a Azure Functions para integrar sistemas externos (ERP, CRM, APIs de pago, etc.). Esto le permite enriquecer formularios de SharePoint con datos de otras fuentes o activar cálculos complejos sin sobrecargar SharePoint. La seguridad está garantizada mediante tokens de autenticación."
+      },
+      "PowerBIEmbedded": {
+        "Title": "Power BI Embedded",
+        "Text": "Integramos informes de Power BI directamente en páginas de SharePoint o aplicaciones personalizadas (SPFx o aplicaciones web externas). Los usuarios acceden a análisis contextualizados sin salir de su entorno de trabajo. Los permisos se sincronizan para que cada persona solo vea los datos a los que tiene derecho."
+      }
+    },
+    "RealCases": {
+      "Title": "Casos de uso reales de nuestros clientes en Ginebra",
+      "Intro": "Aquí hay ejemplos concretos de proyectos Microsoft que hemos realizado para empresas en Ginebra. Cada solución aborda una necesidad operativa específica:",
+      "Cases": [
+        {
+          "Title": "Asignación automática de tareas entre SharePoint y Teams",
+          "Slug": "task-allocation-sharepoint-teams",
+          "Summary": "Una empresa de Ginebra necesitaba distribuir tareas entre varios equipos según la urgencia y el tipo de proyecto. Creamos una lista de SharePoint que asigna automáticamente tareas a los canales correctos de Teams y notifica a las personas responsables. Cada equipo rastrea sus asignaciones en un panel personalizado, y Power Automate actualiza los estados en tiempo real."
+        },
+        {
+          "Title": "Flujo de aprobación multinivel de gastos",
+          "Slug": "expense-approval-power-automate",
+          "Summary": "La gestión de notas de gastos en una PYME de Ginebra se hacía por correo electrónico y Excel, causando retrasos y errores. Implementamos un flujo de trabajo de Power Automate con aprobaciones condicionales multinivel, notificaciones automáticas y archivo en SharePoint. El tiempo de aprobación ha caído de 5 días a menos de 24 horas."
+        },
+        {
+          "Title": "Portal de incorporación de clientes en SharePoint",
+          "Slug": "client-onboarding-sharepoint",
+          "Summary": "Una firma de consultoría quería digitalizar su proceso de incorporación de clientes. Creamos un portal seguro de SharePoint con formularios personalizados (PowerApps), gestión automatizada de documentos y un panel de Power BI para seguimiento del progreso. Los clientes completan su información en línea, y el equipo recibe notificaciones instantáneas."
+        },
+        {
+          "Title": "Panel de proyectos en tiempo real en Power BI",
+          "Slug": "realtime-project-dashboard-powerbi",
+          "Summary": "Una empresa industrial de Ginebra rastreaba sus proyectos mediante archivos Excel dispersos. Centralizamos todo en SharePoint con un panel de Power BI que muestra prioridades, retrasos y presupuestos en tiempo real. Los jefes de departamento pueden filtrar por proyecto, cliente o gerente para tomar decisiones rápidas."
+        },
+        {
+          "Title": "Gestión de contratos en SharePoint con SPFx",
+          "Slug": "contract-management-sharepoint-spfx",
+          "Summary": "Una empresa de servicios necesitaba una solución central para gestionar sus contratos (plazos, renovaciones, firmas). Construimos una aplicación de SharePoint con interfaces personalizadas (SPFx) para búsquedas, alertas automáticas antes de vencimientos de plazos e integración con DocuSign para firmas electrónicas. Todo es accesible desde Teams."
+        },
+        {
+          "Title": "Flujo de aprobación con Adaptive Cards en Teams",
+          "Slug": "approval-workflow-adaptive-cards-teams",
+          "Summary": "Una empresa de logística de Ginebra validaba sus pedidos de suministro por correo electrónico. Automatizamos todo el proceso con Power Automate: cuando se crea una solicitud en SharePoint, se envía una Adaptive Card a Teams para validación. Los aprobadores pueden aceptar o rechazar directamente desde Teams, con comentarios y notificaciones automáticas."
+        }
+      ]
+    },
     "UseCases": {
       "Title": "Casos de uso comunes",
       "Text": "Hemos ayudado a empresas a automatizar sus procesos de aprobación, crear bases de conocimiento internas, desarrollar portales de clientes en SharePoint, implementar paneles financieros en Power BI, y mucho más. Cada proyecto comienza con un análisis de sus necesidades y termina con una solución que se integra naturalmente en su día a día."

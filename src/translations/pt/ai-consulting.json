@@ -36,6 +36,72 @@
             "Title": "Tecnologias e ferramentas",
             "Text": "Trabalhamos com as plataformas de IA mais potentes do mercado, incluindo OpenAI, Microsoft Azure AI e outras soluções especializadas segundo suas necessidades. Nossa expertise cobre o aprendizado de máquina, o processamento de linguagem natural, a visão computacional e a análise de dados. Sempre selecionamos as tecnologias mais bem adaptadas à sua situação, privilegiando a confiabilidade e a facilidade de manutenção."
         },
+        "AzureAI": {
+            "Title": "Azure AI: infraestrutura e soberania de dados",
+            "Intro": "Nossa experiência baseia-se no Microsoft Azure AI, uma plataforma abrangente que combina poder técnico com garantias de confidencialidade essenciais para empresas suíças.",
+            "Models": {
+                "Title": "Implantação de modelos de IA privados",
+                "Text": "Implantamos modelos de inteligência artificial de ponta (GPT-4, GPT-4o, Llama 3, Mistral) em seu próprio ambiente Azure. Esta abordagem garante que seus dados permaneçam sob seu controle total e nunca sejam usados para treinar modelos de terceiros. Você escolhe a região de implantação, idealmente Switzerland North ou West Europe para atender aos requisitos suíços de localização de dados. Ao contrário de soluções SaaS públicas, você controla versões de modelos, políticas de moderação e ciclos de atualização."
+            },
+            "Indexing": {
+                "Title": "Indexação de documentos e busca semântica",
+                "Text": "O Azure AI Search indexa todos os seus documentos corporativos, sejam no SharePoint, OneDrive, bancos de dados ou sistemas empresariais. A busca semântica compreende a intenção por trás de uma consulta em vez de simplesmente corresponder palavras. Seus funcionários encontram instantaneamente informações relevantes mesmo se formuladas de forma diferente. Os documentos são enriquecidos automaticamente com metadados extraídos por IA, facilitando a classificação e conformidade regulatória."
+            },
+            "Agents": {
+                "Title": "Agentes de IA autônomos e orquestração",
+                "Text": "Desenvolvemos agentes de IA capazes de executar tarefas complexas de forma autônoma usando Azure AI Agent Service e Microsoft Semantic Kernel. Esses agentes podem chamar suas APIs internas, consultar seus bancos de dados, gerar relatórios ou acionar fluxos de trabalho conforme necessário. A orquestração multiagente decompõe processos complexos em tarefas especializadas, cada agente trazendo sua experiência específica. Esta arquitetura modular facilita a manutenção e evolução de suas soluções de IA."
+            },
+            "Grounding": {
+                "Title": "Grounding com Bing e seus dados",
+                "Text": "O grounding ancora as respostas de IA em fontes de dados confiáveis. Conectamos seus modelos às suas bases de conhecimento internas através do padrão RAG (Retrieval Augmented Generation), garantindo que as respostas sejam baseadas em seus documentos oficiais. Para necessidades que requerem informações externas atualizadas, a integração com Bing Search enriquece as respostas com dados públicos recentes citando as fontes. Esta abordagem híbrida combina a experiência interna de sua empresa com conhecimento geral atualizado."
+            }
+        },
+        "UseCases": {
+            "Title": "Casos de uso reais",
+            "Intro": "Descubra como ajudamos empresas genebrinas a transformar suas operações com inteligência artificial. Estes projetos reais demonstram os benefícios mensuráveis da IA aplicada a desafios empresariais concretos.",
+            "Cases": [
+                {
+                    "Title": "Automação de correio postal e eletrônico",
+                    "Slug": "automatisation-courrier-entrant-ia",
+                    "Summary": "Um escritório de advocacia genebrino reduziu o tempo de processamento de correspondência e e-mails em 83% graças a um sistema de IA que classifica automaticamente cada documento e mensagem por natureza. O sistema extrai informações-chave, roteia para os arquivos corretos e alerta sobre urgências. Os advogados encontram qualquer comunicação instantaneamente através de busca semântica."
+                },
+                {
+                    "Title": "Detecção automática de prazos",
+                    "Slug": "detection-delais-spfx-calendriers",
+                    "Summary": "Um cartório notarial nunca perde nenhum prazo graças a uma aplicação SharePoint que analisa automaticamente documentos para identificar todos os prazos legais e contratuais. O sistema cria eventos de calendário no Teams com alertas progressivos, eliminando completamente o risco de esquecimento que poderia ter consequências graves na responsabilidade profissional."
+                },
+                {
+                    "Title": "Lembretes inteligentes de faturas",
+                    "Slug": "relance-factures-impayees-power-automate",
+                    "Summary": "Uma empresa de consultoria financeira reduziu seu tempo médio de pagamento em 40% através de lembretes automatizados e personalizados gerados por IA. O sistema adapta o tom e o conteúdo com base na duração do atraso e histórico de relacionamento, gerando e-mails corteses e eficazes. O tempo dedicado a lembretes caiu 85%."
+                },
+                {
+                    "Title": "Resumo automático de documentos legais",
+                    "Slug": "resume-documents-juridiques-azure-ai",
+                    "Summary": "Uma empresa de gestão patrimonial agora processa 10 vezes mais relatórios e contratos graças à síntese de documentos por IA. O sistema gera dois níveis de resumos estruturados permitindo que gestores decidam rapidamente se a leitura aprofundada é necessária. O tempo dedicado à revisão de documentos diminuiu 70%."
+                },
+                {
+                    "Title": "Assistente de redação de contratos",
+                    "Slug": "assistant-redaction-contrats-ia",
+                    "Summary": "Uma empresa comercial internacional dividiu por três seu tempo de redação de contratos comerciais graças a um suplemento Word alimentado por IA. O assistente seleciona automaticamente cláusulas apropriadas de uma base validada, gera o contrato personalizado e verifica a consistência. Os profissionais jurídicos agora focam na personalização e negociação em vez da redação mecânica."
+                },
+                {
+                    "Title": "Análise preditiva de vendas e estoque",
+                    "Slug": "analyse-predictive-ventes-azure-ml",
+                    "Summary": "Um distribuidor farmacêutico reduziu rupturas de estoque em 70% e perdas por vencimento em 65% através de modelos preditivos de IA analisando cinco anos de histórico enriquecido com dados contextuais. As previsões antecipam com precisão os picos sazonais e otimizam pedidos, liberando 120.000 CHF de capital de giro."
+                },
+                {
+                    "Title": "Base de conhecimento com busca semântica",
+                    "Slug": "base-connaissances-recherche-semantique-ai",
+                    "Summary": "Um editor de software reduziu os tempos de resolução de tickets de suporte em 55% através de uma base de conhecimento aumentada por IA. A busca semântica compreende a intenção por trás das perguntas, e um modelo GPT-4 gera respostas sintéticas citando fontes. Novos técnicos tornam-se operacionais duas vezes mais rápido."
+                },
+                {
+                    "Title": "Transcrição de reuniões e extração de ações",
+                    "Slug": "transcription-reunions-extraction-actions",
+                    "Summary": "Uma firma de auditoria eliminou a tomada de notas manual e economiza 12 horas por semana através da transcrição por IA de reuniões com clientes. O sistema gera automaticamente atas estruturadas, cria tarefas no Planner para cada ação acordada e detecta o sentimento do cliente. As atas são enviadas dentro de uma hora após a reunião."
+                }
+            ]
+        },
         "Benefits": {
             "Title": "Vantagens para sua empresa",
             "Items": [

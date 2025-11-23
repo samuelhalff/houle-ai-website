@@ -36,6 +36,66 @@
             "Title": "Schulung und Unterstützung",
             "Text": "Wir implementieren nicht nur Lösungen, sondern schulen auch Ihre Teams, damit sie diese pflegen und weiterentwickeln können. Unsere Schulungen sind auf das Niveau jedes Einzelnen abgestimmt und beinhalten klare Dokumentation. Das Ziel ist es, Ihr Unternehmen autonom zu machen, während wir für komplexere Bedürfnisse verfügbar bleiben."
         },
+        "IntegrationFlows": {
+            "Title": "Integrationsflüsse zwischen Microsoft-Tools",
+            "Intro": "Die wahre Stärke des Microsoft-Ökosystems liegt in der Fähigkeit, verschiedene Werkzeuge zu verbinden, um intelligente Workflows zu erstellen. Hier sind einige gängige Integrationsmuster, die wir für unsere Genfer Kunden bereitstellen:",
+            "SharePointPowerBI": {
+                "Title": "SharePoint → Power BI",
+                "Text": "Ihre SharePoint-Listen und -Bibliotheken speisen Power BI-Dashboards in Echtzeit. Perfekt für die Verfolgung von Projektstatus, Bestandsverwaltung oder Analyse von Kundendaten ohne manuelle Exporte. Filter und interaktive Visualisierungen ermöglichen es jedem, schnell die benötigten Informationen zu finden."
+            },
+            "PowerAutomateSPFx": {
+                "Title": "Power Automate → SPFx",
+                "Text": "Ein Power Automate-Workflow kann direkt über eine benutzerdefinierte Schaltfläche in SharePoint (via SPFx) ausgelöst werden. Zum Beispiel: Klicken Sie auf ein Dokument, um einen Genehmigungsprozess zu starten, eine Benachrichtigung an Teams zu senden oder Dateien basierend auf Metadaten in bestimmten Ordnern zu archivieren. Alles geschieht ohne die Seite zu verlassen."
+            },
+            "TeamsSharePoint": {
+                "Title": "Teams ↔ SharePoint",
+                "Text": "Jeder Teams-Kanal kann mit einer SharePoint-Dokumentbibliothek verbunden werden. Wir fügen benutzerdefinierte Registerkarten hinzu, um Formulare, Dashboards oder Listen direkt in Teams anzuzeigen. Dies ermöglicht Projektzusammenarbeit ohne zwischen Anwendungen zu wechseln: Alles ist in einer Oberfläche zentralisiert."
+            },
+            "SPFxAzureFunctions": {
+                "Title": "SPFx → Azure Functions",
+                "Text": "Ihre benutzerdefinierten SharePoint-Komponenten können Azure Functions aufrufen, um externe Systeme (ERP, CRM, Zahlungs-APIs usw.) zu integrieren. Dies ermöglicht es Ihnen, SharePoint-Formulare mit Daten aus anderen Quellen anzureichern oder komplexe Berechnungen auszulösen, ohne SharePoint zu überlasten. Die Sicherheit wird durch Authentifizierungstoken gewährleistet."
+            },
+            "PowerBIEmbedded": {
+                "Title": "Power BI Embedded",
+                "Text": "Wir integrieren Power BI-Berichte direkt in SharePoint-Seiten oder benutzerdefinierte Anwendungen (SPFx oder externe Web-Apps). Benutzer greifen auf kontextualisierte Analysen zu, ohne ihre Arbeitsumgebung zu verlassen. Berechtigungen werden synchronisiert, sodass jede Person nur die Daten sieht, auf die sie Anspruch hat."
+            }
+        },
+        "RealCases": {
+            "Title": "Reale Anwendungsfälle von unseren Genfer Kunden",
+            "Intro": "Hier sind konkrete Beispiele von Microsoft-Projekten, die wir für Unternehmen in Genf durchgeführt haben. Jede Lösung adressiert einen spezifischen operativen Bedarf:",
+            "Cases": [
+                {
+                    "Title": "Automatische Aufgabenzuweisung zwischen SharePoint und Teams",
+                    "Slug": "task-allocation-sharepoint-teams",
+                    "Summary": "Ein Genfer Unternehmen musste Aufgaben basierend auf Projektdringlichkeit und -typ auf mehrere Teams verteilen. Wir haben eine SharePoint-Liste erstellt, die automatisch Aufgaben den richtigen Teams-Kanälen zuweist und verantwortliche Personen benachrichtigt. Jedes Team verfolgt seine Zuweisungen in einem benutzerdefinierten Dashboard, und Power Automate aktualisiert Status in Echtzeit."
+                },
+                {
+                    "Title": "Mehrstufiger Workflow zur Spesengenehmigung",
+                    "Slug": "expense-approval-power-automate",
+                    "Summary": "Die Verwaltung von Spesennotizen in einem Genfer KMU erfolgte per E-Mail und Excel, was zu Verzögerungen und Fehlern führte. Wir haben einen Power Automate-Workflow mit mehrstufigen bedingten Genehmigungen, automatischen Benachrichtigungen und Archivierung in SharePoint bereitgestellt. Die Genehmigungszeit ist von 5 Tagen auf weniger als 24 Stunden gesunken."
+                },
+                {
+                    "Title": "Kundenonboarding-Portal in SharePoint",
+                    "Slug": "client-onboarding-sharepoint",
+                    "Summary": "Eine Beratungsfirma wollte ihren Kundenonboarding-Prozess digitalisieren. Wir haben ein sicheres SharePoint-Portal mit benutzerdefinierten Formularen (PowerApps), automatisierter Dokumentenverwaltung und einem Power BI-Dashboard zur Fortschrittsverfolgung erstellt. Kunden füllen ihre Informationen online aus, und das Team erhält sofortige Benachrichtigungen."
+                },
+                {
+                    "Title": "Echtzeit-Projekt-Dashboard in Power BI",
+                    "Slug": "realtime-project-dashboard-powerbi",
+                    "Summary": "Ein Genfer Industrieunternehmen verfolgte seine Projekte über verstreute Excel-Dateien. Wir haben alles in SharePoint mit einem Power BI-Dashboard zentralisiert, das Prioritäten, Verzögerungen und Budgets in Echtzeit anzeigt. Abteilungsleiter können nach Projekt, Kunde oder Manager filtern, um schnelle Entscheidungen zu treffen."
+                },
+                {
+                    "Title": "Vertragsverwaltung in SharePoint mit SPFx",
+                    "Slug": "contract-management-sharepoint-spfx",
+                    "Summary": "Ein Dienstleistungsunternehmen benötigte eine zentrale Lösung zur Verwaltung seiner Verträge (Fristen, Verlängerungen, Unterschriften). Wir haben eine SharePoint-Anwendung mit benutzerdefinierten Oberflächen (SPFx) für Suchen, automatische Warnungen vor Fristablauf und Integration mit DocuSign für elektronische Unterschriften erstellt. Alles ist über Teams zugänglich."
+                },
+                {
+                    "Title": "Genehmigungsworkflow mit Adaptive Cards in Teams",
+                    "Slug": "approval-workflow-adaptive-cards-teams",
+                    "Summary": "Ein Genfer Logistikunternehmen validierte seine Lieferbestellungen per E-Mail. Wir haben den gesamten Prozess mit Power Automate automatisiert: Wenn eine Anfrage in SharePoint erstellt wird, wird eine Adaptive Card zur Validierung an Teams gesendet. Genehmiger können direkt aus Teams akzeptieren oder ablehnen, mit Kommentaren und automatischen Benachrichtigungen."
+                }
+            ]
+        },
         "UseCases": {
             "Title": "Häufige Anwendungsfälle",
             "Text": "Wir haben Unternehmen geholfen, ihre Genehmigungsprozesse zu automatisieren, interne Wissensdatenbanken zu erstellen, Kundenportale in SharePoint zu entwickeln, Finanz-Dashboards in Power BI einzurichten und vieles mehr. Jedes Projekt beginnt mit einer Analyse Ihrer Bedürfnisse und endet mit einer Lösung, die sich natürlich in Ihren Alltag integriert."
