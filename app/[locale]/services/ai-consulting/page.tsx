@@ -80,10 +80,22 @@ const AIConsultingPage = async ({ params }: { params: { locale: string } }) => {
       <StructuredData nonce={nonce} data={[breadcrumbJsonLd, serviceJsonLd]} />
 
       {/* Hero Section */}
-      <section className="relative w-full bg-gradient-to-br from-primary/5 via-background to-background pt-24 pb-16 md:pt-32 md:pb-24">
-        <div className="max-w-[1200px] mx-auto px-6">
+      <section className="relative w-full pt-24 pb-16 md:pt-32 md:pb-20">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-background" />
+        <div className="relative max-w-[1200px] mx-auto px-6">
           <div className="max-w-[800px]">
-            <h1 className="text-4xl xs:text-5xl md:text-6xl font-bold mb-6 leading-tight">
+            <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-primary/10 text-primary text-sm font-medium">
+              {params.locale === "fr"
+                ? "Services"
+                : params.locale === "de"
+                ? "Dienstleistungen"
+                : params.locale === "es"
+                ? "Servicios"
+                : params.locale === "pt"
+                ? "Serviços"
+                : "Services"}
+            </div>
+            <h1 className="text-4xl xs:text-5xl md:text-6xl font-bold mb-6 leading-tight tracking-tight">
               {(tService("Hero.Title") as string) || "AI consulting"}
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">

@@ -36,6 +36,66 @@
             "Title": "Formation et accompagnement",
             "Text": "Nous ne nous contentons pas de mettre en place des solutions, nous formons aussi vos équipes pour qu'elles puissent les maintenir et les faire évoluer. Nos sessions de formation sont adaptées au niveau de chacun et incluent de la documentation claire. L'objectif est de rendre votre entreprise autonome tout en sachant que nous restons disponibles pour les besoins plus complexes."
         },
+        "IntegrationFlows": {
+            "Title": "Flux d'intégration entre outils Microsoft",
+            "Intro": "La vraie puissance de l'écosystème Microsoft réside dans l'orchestration intelligente de ses composants. Nous concevons des architectures où les données circulent naturellement entre SharePoint, Power BI, SPFx, Power Automate et Teams.",
+            "SharePointPowerBI": {
+                "Title": "SharePoint → Power BI : visualisation des données métier",
+                "Text": "Vos listes SharePoint contiennent souvent des données opérationnelles précieuses : suivi de projets, inventaires, budgets, indicateurs qualité. Nous connectons Power BI directement à ces listes pour créer des dashboards temps réel qui se rafraîchissent automatiquement. Lorsqu'un collaborateur met à jour une information dans SharePoint, le tableau de bord Power BI reflète immédiatement le changement. Cette architecture élimine les exports manuels vers Excel et garantit que les décideurs travaillent toujours sur des données actuelles. Les permissions SharePoint sont respectées dans Power BI, assurant que chacun ne voit que les données auxquelles il a accès."
+            },
+            "PowerAutomateSPFx": {
+                "Title": "Power Automate → SPFx : déclenchement d'actions depuis les applications",
+                "Text": "Les applications SPFx que nous développons peuvent déclencher des workflows Power Automate sophistiqués en réponse aux actions utilisateur. Par exemple, lorsqu'un collaborateur clique sur un bouton dans une application SPFx de gestion de contrats, un flux Power Automate peut se déclencher pour envoyer le contrat en circuit d'approbation, créer des tâches Planner pour les parties prenantes, archiver une copie dans OneDrive, et notifier les responsables dans Teams. Cette orchestration transforme une simple interface utilisateur en système de gestion métier complet sans nécessiter de backend complexe."
+            },
+            "TeamsSharePointApprovals": {
+                "Title": "Teams ↔ SharePoint : collaboration et approbations fluides",
+                "Text": "Teams et SharePoint fonctionnent en symbiose. Chaque canal Teams dispose d'une bibliothèque SharePoint sous-jacente où sont stockés tous les fichiers partagés. Nous structurons cette architecture pour que la collaboration documentaire soit transparente. Les workflows d'approbation Power Automate peuvent être déclenchés depuis Teams via des cartes adaptatives interactives, les approbateurs répondant directement dans Teams sans jamais devoir ouvrir SharePoint. Les décisions sont enregistrées dans SharePoint pour traçabilité et conformité. Cette intégration native élimine les allers-retours par email et accélère drastiquement les processus de validation."
+            },
+            "SPFxAzureFunctions": {
+                "Title": "SPFx → Azure Functions → Systèmes externes",
+                "Text": "Pour connecter vos applications SPFx à des systèmes métier legacy ou des APIs externes, nous développons des Azure Functions qui servent de couche d'intégration sécurisée. L'application SPFx appelle ces fonctions Azure qui orchestrent les interactions avec vos systèmes de gestion, CRM, ERP ou bases de données. Cette architecture protège vos systèmes sensibles tout en offrant une expérience utilisateur moderne. Les authentifications sont gérées via Azure AD et les identités managées, éliminant le besoin de gérer des secrets."
+            },
+            "PowerBIEmbedded": {
+                "Title": "Power BI Embedded dans SharePoint et Teams",
+                "Text": "Les rapports Power BI peuvent être intégrés directement dans des pages SharePoint via des web parts ou dans Teams via des onglets. Cette intégration contextuelle permet aux utilisateurs d'accéder aux analyses pertinentes sans quitter leur environnement de travail. Par exemple, un site SharePoint de projet peut afficher en temps réel le tableau de bord financier et le suivi des jalons, les données provenant de différentes sources mais présentées de manière unifiée. Cette approche élimine les silos d'information et favorise la prise de décision basée sur les données."
+            }
+        },
+        "RealCases": {
+            "Title": "Réalisations concrètes",
+            "Intro": "Découvrez comment nous avons aidé des entreprises genevoises à optimiser leurs processus avec l'écosystème Microsoft. Ces projets réels illustrent les gains mesurables obtenus grâce à une utilisation intelligente des outils Microsoft 365.",
+            "Cases": [
+                {
+                    "Title": "Allocation dynamique des tâches",
+                    "Slug": "allocation-taches-dynamique-teams-planner",
+                    "Summary": "Une fiduciaire genevoise a optimisé la répartition de charge entre 25 comptables grâce à un système intelligent combinant Teams, Planner et Power Automate. L'algorithme d'allocation considère les compétences, la charge actuelle et les langues de travail pour proposer automatiquement les meilleurs candidats. Le temps d'allocation a chuté de 83% et l'équilibre de charge entre collaborateurs s'est amélioré de 65%."
+                },
+                {
+                    "Title": "Circuit d'approbation intelligent des notes de frais",
+                    "Slug": "validation-notes-frais-power-automate-approvals",
+                    "Summary": "Un cabinet de conseil a réduit de 75% le temps de traitement des notes de frais grâce à Power Apps mobile avec reconnaissance IA des reçus et workflows d'approbation automatisés. L'application pré-remplit les formulaires par analyse des photos, vérifie la conformité aux politiques, et route intelligemment selon le montant et le risque. Le délai de remboursement est passé de 38 à 8 jours."
+                },
+                {
+                    "Title": "Onboarding client automatisé",
+                    "Slug": "onboarding-clients-automatise-sharepoint-forms",
+                    "Summary": "Une banque privée genevoise a réduit de 60% le délai d'ouverture de compte grâce à l'automatisation du parcours client orchestrant SharePoint, Forms, Teams et Power Automate. Le système crée automatiquement le site d'équipe structuré, collecte les documents via Forms sécurisés, exécute les vérifications compliance en parallèle, et coordonne tous les départements. Le délai moyen est passé de 18 à 7 jours."
+                },
+                {
+                    "Title": "Tableau de bord projets temps réel",
+                    "Slug": "tableau-bord-projets-power-bi-project",
+                    "Summary": "Un bureau d'ingénieurs pilote 40 projets simultanés grâce à des dashboards Power BI alimentés automatiquement depuis Project et Teams. Les données de planning, budget, charge des ressources et activité conversationnelle sont consolidées en temps réel. Les séances de reporting ont été réduites de 3 heures à 1 heure hebdomadaire, le délai de détection des dérapages est passé de 2 semaines à 3 jours."
+                },
+                {
+                    "Title": "Gestion de contrats avec SPFx et alertes",
+                    "Slug": "gestion-contrats-spfx-alertes-metadata",
+                    "Summary": "Une société immobilière ne manque plus aucune échéance contractuelle grâce à une application SPFx gérant 800 contrats avec métadonnées automatiques et alertes intelligentes. Le système extrait les dates critiques par IA, calcule les fenêtres de résiliation, et génère des alertes progressives. Aucune échéance n'a été manquée depuis le déploiement, évitant plusieurs dizaines de milliers de francs de pénalités annuelles."
+                },
+                {
+                    "Title": "Workflows d'approbation multi-niveaux",
+                    "Slug": "workflows-approbation-multi-niveaux-adaptive-cards",
+                    "Summary": "Une compagnie d'assurances a réduit de 70% les délais d'approbation des polices grâce à des workflows intelligents avec cartes adaptatives Teams. Le système calcule dynamiquement les circuits d'approbation selon le risque, gère automatiquement les suppléants en cas d'absence, et escalade si nécessaire. Les approbateurs traitent les demandes depuis leur smartphone, et le délai moyen est passé de 8,5 à 2,6 jours."
+                }
+            ]
+        },
         "UseCases": {
             "Title": "Cas d'usage courants",
             "Text": "Nous avons aidé des entreprises à automatiser leurs processus d'approbation, créer des bases de connaissances internes, développer des portails clients dans SharePoint, mettre en place des tableaux de bord financiers dans Power BI, et bien plus encore. Chaque projet commence par une analyse de vos besoins et se termine par une solution qui s'intègre naturellement dans votre quotidien."

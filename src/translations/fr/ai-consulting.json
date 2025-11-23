@@ -36,6 +36,72 @@
             "Title": "Technologies et outils",
             "Text": "Nous travaillons avec les plateformes d'IA les plus performantes du marché, notamment OpenAI, Microsoft Azure AI, et d'autres solutions spécialisées selon vos besoins. Notre expertise couvre le machine learning, le traitement du langage naturel, la vision par ordinateur et l'analyse de données. Nous sélectionnons toujours les technologies les mieux adaptées à votre situation, en privilégiant la fiabilité et la facilité de maintenance."
         },
+        "AzureAI": {
+            "Title": "Azure AI : infrastructure et souveraineté des données",
+            "Intro": "Notre expertise s'appuie sur Microsoft Azure AI, une plateforme complète qui combine puissance technique et garanties de confidentialité essentielles pour les entreprises suisses.",
+            "Models": {
+                "Title": "Déploiement de modèles d'IA privés",
+                "Text": "Nous déployons des modèles d'intelligence artificielle de pointe (GPT-4, GPT-4o, Llama 3, Mistral) dans votre propre environnement Azure. Cette approche garantit que vos données restent sous votre contrôle total et ne sont jamais utilisées pour entraîner des modèles tiers. Vous choisissez la région de déploiement, idéalement Switzerland North ou West Europe pour respecter les exigences suisses de localisation des données. Contrairement aux solutions SaaS publiques, vous maîtrisez les versions de modèles, les politiques de modération, et les cycles de mise à jour."
+            },
+            "Indexing": {
+                "Title": "Indexation et recherche sémantique de vos documents",
+                "Text": "Azure AI Search permet d'indexer l'ensemble de vos documents d'entreprise, qu'ils soient dans SharePoint, OneDrive, des bases de données ou des systèmes métier. La recherche sémantique comprend l'intention derrière une requête plutôt que de simplement chercher des correspondances de mots. Vos collaborateurs retrouvent instantanément l'information pertinente même si elle est formulée différemment. Les documents sont enrichis automatiquement avec des métadonnées extraites par IA, facilitant la classification et la conformité réglementaire."
+            },
+            "Agents": {
+                "Title": "Agents IA autonomes et orchestration",
+                "Text": "Nous développons des agents IA capables d'exécuter des tâches complexes de manière autonome en utilisant Azure AI Agent Service et Microsoft Semantic Kernel. Ces agents peuvent appeler vos APIs internes, interroger vos bases de données, générer des rapports, ou déclencher des workflows selon les besoins. L'orchestration multi-agents permet de décomposer des processus complexes en tâches spécialisées, chaque agent apportant son expertise spécifique. Cette architecture modulaire facilite la maintenance et l'évolution de vos solutions d'IA."
+            },
+            "Grounding": {
+                "Title": "Grounding avec Bing et vos données",
+                "Text": "Le grounding consiste à ancrer les réponses de l'IA dans des sources de données fiables. Nous connectons vos modèles à vos bases de connaissances internes via le pattern RAG (Retrieval Augmented Generation), garantissant que les réponses sont basées sur vos documents officiels. Pour les besoins nécessitant des informations externes actualisées, l'intégration avec Bing Search permet d'enrichir les réponses avec des données publiques récentes tout en citant les sources. Cette approche hybride combine l'expertise interne de votre entreprise avec la connaissance générale à jour."
+            }
+        },
+        "UseCases": {
+            "Title": "Cas d'usage concrets",
+            "Intro": "Découvrez comment nous avons aidé des entreprises genevoises à transformer leurs opérations grâce à l'intelligence artificielle. Ces projets réels démontrent les bénéfices mesurables de l'IA appliquée à des problématiques métier concrètes.",
+            "Cases": [
+                {
+                    "Title": "Automatisation du courrier et des emails",
+                    "Slug": "automatisation-courrier-entrant-ia",
+                    "Summary": "Un cabinet juridique genevois a réduit de 83% son temps de traitement du courrier entrant et des emails grâce à un système d'IA classifiant automatiquement chaque document et message selon sa nature. Le système extrait les informations clés, route vers les bons dossiers, et alerte sur les urgences. Les avocats retrouvent instantanément toute communication par recherche sémantique."
+                },
+                {
+                    "Title": "Détection automatique des délais critiques",
+                    "Slug": "detection-delais-spfx-calendriers",
+                    "Summary": "Une étude notariale ne manque plus aucune échéance grâce à une application SharePoint analysant automatiquement les documents pour identifier tous les délais légaux et contractuels. Le système crée des événements calendrier dans Teams avec alertes progressives, éliminant complètement le risque d'oubli qui pouvait avoir des conséquences graves sur la responsabilité professionnelle."
+                },
+                {
+                    "Title": "Relance intelligente des factures impayées",
+                    "Slug": "relance-factures-impayees-power-automate",
+                    "Summary": "Un cabinet de conseil financier a réduit son délai moyen de paiement de 40% grâce à des relances automatisées et personnalisées générées par IA. Le système adapte le ton et le contenu selon la durée du retard et l'historique relationnel, générant des emails courtois et efficaces. Le temps consacré aux relances a chuté de 85%."
+                },
+                {
+                    "Title": "Résumé automatique de documents juridiques",
+                    "Slug": "resume-documents-juridiques-azure-ai",
+                    "Summary": "Une société de gestion patrimoniale traite désormais 10 fois plus de rapports et contrats grâce à l'IA de synthèse documentaire. Le système génère deux niveaux de résumés structurés permettant aux gestionnaires de décider rapidement si une lecture approfondie est nécessaire. Le temps consacré à la revue documentaire a diminué de 70%."
+                },
+                {
+                    "Title": "Assistant de rédaction de contrats",
+                    "Slug": "assistant-redaction-contrats-ia",
+                    "Summary": "Une société de négoce international a divisé par trois son temps de rédaction de contrats commerciaux grâce à un add-in Word alimenté par IA. L'assistant sélectionne automatiquement les clauses appropriées depuis une base validée, génère le contrat personnalisé, et vérifie la cohérence. Les juristes se concentrent désormais sur la personnalisation et la négociation plutôt que sur la rédaction mécanique."
+                },
+                {
+                    "Title": "Analyse prédictive des ventes et stocks",
+                    "Slug": "analyse-predictive-ventes-azure-ml",
+                    "Summary": "Un distributeur pharmaceutique a réduit ses ruptures de stock de 70% et ses pertes par péremption de 65% grâce à des modèles prédictifs d'IA analysant cinq ans d'historique enrichi de données contextuelles. Les prédictions anticipent avec précision les pics saisonniers et permettent d'optimiser les commandes, libérant 120'000 CHF de trésorerie."
+                },
+                {
+                    "Title": "Base de connaissances avec recherche sémantique",
+                    "Slug": "base-connaissances-recherche-semantique-ai",
+                    "Summary": "Un éditeur de logiciels a réduit de 55% les temps de résolution de tickets de support grâce à une base de connaissances augmentée par IA. La recherche sémantique comprend l'intention derrière les questions, et un modèle GPT-4 génère des réponses synthétiques en citant les sources. Les nouveaux techniciens deviennent opérationnels deux fois plus rapidement."
+                },
+                {
+                    "Title": "Transcription et extraction d'actions de réunions",
+                    "Slug": "transcription-reunions-extraction-actions",
+                    "Summary": "Un cabinet d'audit a éliminé la prise de notes manuelle et gagne 12 heures par semaine grâce à la transcription IA des réunions client. Le système génère automatiquement des comptes-rendus structurés, crée des tâches Planner pour chaque action convenue, et détecte le sentiment du client. Les comptes-rendus sont envoyés dans l'heure suivant la réunion."
+                }
+            ]
+        },
         "Benefits": {
             "Title": "Les avantages pour votre entreprise",
             "Items": [
