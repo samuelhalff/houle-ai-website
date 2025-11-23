@@ -142,10 +142,10 @@ const OutlookAddinPage = async ({ params }: { params: { locale: string } }) => {
           </div>
           <div className="p-6 border rounded-2xl bg-card hover:shadow-md transition-shadow">
             <h3 className="text-xl font-bold mb-3">
-              {t("Features.Suggestions.Title") as string}
+              {t("Features.Summaries.Title") as string}
             </h3>
             <p className="text-muted-foreground">
-              {t("Features.Suggestions.Description") as string}
+              {t("Features.Summaries.Description") as string}
             </p>
           </div>
           <div className="p-6 border rounded-2xl bg-card hover:shadow-md transition-shadow">
@@ -215,26 +215,26 @@ const OutlookAddinPage = async ({ params }: { params: { locale: string } }) => {
         <div className="grid md:grid-cols-3 gap-8">
           <div className="p-6 border rounded-2xl bg-card">
             <h3 className="text-xl font-bold mb-3">
-              {t("UseCases.Legal.Title") as string}
+              {t("UseCases.Sales.Title") as string}
             </h3>
             <p className="text-muted-foreground">
-              {t("UseCases.Legal.Description") as string}
+              {t("UseCases.Sales.Description") as string}
             </p>
           </div>
           <div className="p-6 border rounded-2xl bg-card">
             <h3 className="text-xl font-bold mb-3">
-              {t("UseCases.Consulting.Title") as string}
+              {t("UseCases.Support.Title") as string}
             </h3>
             <p className="text-muted-foreground">
-              {t("UseCases.Consulting.Description") as string}
+              {t("UseCases.Support.Description") as string}
             </p>
           </div>
           <div className="p-6 border rounded-2xl bg-card">
             <h3 className="text-xl font-bold mb-3">
-              {t("UseCases.Finance.Title") as string}
+              {t("UseCases.Management.Title") as string}
             </h3>
             <p className="text-muted-foreground">
-              {t("UseCases.Finance.Description") as string}
+              {t("UseCases.Management.Description") as string}
             </p>
           </div>
         </div>
