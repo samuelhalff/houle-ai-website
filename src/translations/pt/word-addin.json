@@ -16,7 +16,7 @@
             "Description": "Preencha automaticamente modelos com dados de clientes do seu CRM. Gere contratos, propostas e relatórios em segundos com extração de dados impulsionada por IA."
         },
         "Suggestions": {
-            "Title": "Sugestões em Linha",
+            "Title": "Sugestões em linha",
             "Description": "Assistência de escrita em tempo real com sugestões contextuais enquanto você digita. Melhore tom, clareza e estilo sem sair do seu fluxo de documento."
         },
         "Actions": {
@@ -25,7 +25,7 @@
         }
     },
     "Benefits": {
-        "Title": "Por Que Escolher Nosso Suplemento Word",
+        "Title": "Por que escolher nosso Suplemento Word",
         "Privacy": {
             "Title": "Arquitetura Focada em Privacidade",
             "Description": "Seus documentos permanecem no seu ambiente Microsoft 365. Todo processamento de IA respeita sua soberania de dados. Opções hospedadas na Suíça disponíveis."
@@ -35,7 +35,7 @@
             "Description": "Autenticação nativa com Microsoft Entra ID. Funciona com suas políticas Office 365 e controles de segurança existentes. Nenhum login separado necessário."
         },
         "Customization": {
-            "Title": "Adaptado ao Seu Negócio",
+            "Title": "Adaptado ao seu negócio",
             "Description": "Console de administração para configurar agentes IA, gerenciar prompts e controlar recursos por usuário ou equipe. Integre com seu CRM e sistemas internos."
         },
         "Compliance": {

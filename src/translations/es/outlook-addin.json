@@ -16,7 +16,7 @@
       "Description": "Rellena automáticamente plantillas con datos de clientes de tu CRM. Genera contratos, propuestas e informes en segundos con extracción de datos impulsada por IA."
     },
     "Suggestions": {
-      "Title": "Sugerencias en Línea",
+      "Title": "Sugerencias en línea",
       "Description": "Asistencia de escritura en tiempo real con sugerencias contextuales mientras escribes. Mejora tono, claridad y estilo sin abandonar tu flujo de documento."
     },
     "Actions": {
@@ -25,9 +25,9 @@
     }
   },
   "Benefits": {
-    "Title": "Por Qué Elegir Nuestro Complemento de Word",
+    "Title": "Por qué elegir nuestro Complemento de Word",
     "Privacy": {
-      "Title": "Arquitectura Centrada en Privacidad",
+      "Title": "Arquitectura centrada en privacidad",
       "Description": "Tus documentos permanecen en tu entorno Microsoft 365. Todo procesamiento de IA respeta tu soberanía de datos. Opciones alojadas en Suiza disponibles."
     },
     "Integration": {
@@ -35,7 +35,7 @@
       "Description": "Autenticación nativa con Microsoft Entra ID. Funciona con tus políticas Office 365 y controles de seguridad existentes. No se requiere inicio de sesión separado."
     },
     "Customization": {
-      "Title": "Adaptado a Tu Negocio",
+      "Title": "Adaptado a tu negocio",
       "Description": "Consola de administración para configurar agentes IA, gestionar prompts y controlar características por usuario o equipo. Integra con tu CRM y sistemas internos."
     },
     "Compliance": {
@@ -51,7 +51,7 @@
       "Description": "Genera documentos de clientes, contratos y correspondencia legal. Integra con sistemas de gestión de casos para llenado automático de plantillas."
     },
     "Consulting": {
-      "Title": "Firmas de Consultoría",
+      "Title": "Firmas de consultoría",
       "Description": "Crea propuestas, informes y entregables de clientes más rápido. Mantén marca y mensajes consistentes en todos los documentos."
     },
     "Finance": {
@@ -65,7 +65,7 @@
     "Contact": "Contáctanos para precios empresariales y opciones de implementación personalizadas."
   },
   "CTA": {
-    "Title": "¿Listo para Transformar Tu Flujo de Trabajo de Email?",
+    "Title": "¿Listo para transformar tu flujo de Trabajo de Email?",
     "Description": "Contáctanos para conocer cómo nuestro asistente de IA puede mejorar tu productividad de email.",
     "Demo": "Solicitar Demo",
     "Contact": "Empezar"

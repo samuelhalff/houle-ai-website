@@ -5,7 +5,7 @@
     "Description": "Transformez votre flux de travail Word avec une assistance IA. Conçu pour la confidentialité, intégré de manière transparente dans votre environnement Microsoft 365 existant."
   },
   "Features": {
-    "Title": "Fonctionnalités IA Puissantes",
+    "Title": "Fonctionnalités IA puissantes",
     "Description": "Tout ce dont vous avez besoin pour écrire mieux, plus vite et plus intelligemment.",
     "Chat": {
       "Title": "Assistant de Chat Intelligent",
@@ -25,17 +25,17 @@
     }
   },
   "Benefits": {
-    "Title": "Pourquoi Choisir Notre Add-in Word",
+    "Title": "Pourquoi choisir notre Add-in Word",
     "Privacy": {
-      "Title": "Architecture Axée sur la Confidentialité",
+      "Title": "Architecture axée sur la confidentialité",
       "Description": "Vos documents restent dans votre environnement Microsoft 365. Tout traitement IA respecte votre souveraineté des données. Options hébergées en Suisse disponibles."
     },
     "Integration": {
-      "Title": "Intégration Microsoft Transparente",
+      "Title": "Intégration Microsoft transparente",
       "Description": "Authentification native avec Microsoft Entra ID. Fonctionne avec vos politiques Office 365 et contrôles de sécurité existants. Aucune connexion séparée requise."
     },
     "Customization": {
-      "Title": "Adapté à Votre Entreprise",
+      "Title": "Adapté à votre entreprise",
       "Description": "Console d'administration pour configurer les agents IA, gérer les prompts et contrôler les fonctionnalités par utilisateur ou équipe. Intégrez avec votre CRM et systèmes internes."
     },
     "Compliance": {
@@ -44,7 +44,7 @@
     }
   },
   "UseCases": {
-    "Title": "Conçu pour les Prestataires de Services",
+    "Title": "Conçu pour les prestataires de services",
     "Description": "Pensé pour les cabinets de conseil, les pratiques juridiques et les services professionnels dans la région lémanique.",
     "Legal": {
       "Title": "Cabinets Juridiques",
@@ -65,7 +65,7 @@
     "Contact": "Contactez-nous pour les tarifs entreprise et les options de déploiement personnalisées."
   },
   "CTA": {
-    "Title": "Prêt à Transformer Votre Flux de Travail Word ?",
+    "Title": "Prêt à transformer votre flux de travail Word ?",
     "Description": "Contactez-nous pour découvrir comment notre assistant IA peut améliorer votre processus de création de documents.",
     "Demo": "Demander une Démo",
     "Contact": "Commencer"
