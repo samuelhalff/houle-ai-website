@@ -8,6 +8,7 @@ import type { NavData } from "@/src/components/navigation/types";
 import { buttonVariants } from "@/src/components/ui/button";
 import { cn } from "@/src/lib/utils";
 import ServicesDropdown from "@/src/components/navigation/ServicesDropdown";
+import ProductsDropdown from "@/src/components/navigation/ProductsDropdown";
 
 const HeaderControls = dynamic(
   () => import("@/src/components/navigation/HeaderControls"),
@@ -76,28 +77,14 @@ export default function NavbarServer({
                     {navData.labels.home}
                   </Link>
                 </li>
-                <li className={navData.hideProducts ? "hidden" : ""}>
-                  <Link
-                    href={`${localePrefix}/products`}
-                    prefetch={false}
+                {!navData.hideProducts && (
+                  <ProductsDropdown
                     locale={locale}
-                    aria-current={
-                      isSection(`${localePrefix}/products`) ? "page" : undefined
-                    }
-                    className={cn(
-                      linkBase,
-                      "min-w-[112px]",
-                      isSection(`${localePrefix}/products`)
-                        ? activeClasses
-                        : "",
-                      "opacity-70 pointer-events-none"
-                    )}
-                    aria-hidden
-                    tabIndex={-1}
-                  >
-                    {navData.labels.products}
-                  </Link>
-                </li>
+                    localePrefix={localePrefix}
+                    navData={navData}
+                    isActive={isSection(`${localePrefix}/products`)}
+                  />
+                )}
                 <ServicesDropdown
                   locale={locale}
                   localePrefix={localePrefix}

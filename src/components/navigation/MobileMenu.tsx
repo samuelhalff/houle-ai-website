@@ -142,17 +142,32 @@ const MobileMenu = ({
                 <span>{navData.labels.home}</span>
               </Link>
             </div>
-            <div className={navData.hideProducts ? "hidden" : ""}>
-              <div
-                className="flex items-center gap-3 text-md px-2 py-2 rounded text-muted-foreground"
-                aria-hidden
-              >
-                <span>{navData.labels.products}</span>
-                <span className="text-xs uppercase tracking-wide">
-                  coming soon
-                </span>
+            {!navData.hideProducts && (
+              <div>
+                <div className="px-2 py-2 text-xs font-semibold text-muted-foreground uppercase tracking-wide">
+                  {navData.labels.products}
+                </div>
+                {navData.products.map((product) => (
+                  <Link
+                    key={product.href}
+                    href={`${localePrefix}${product.href}`}
+                    onClick={handleLinkClick}
+                    prefetch={false}
+                    locale={locale}
+                    className="flex items-start gap-3 text-md px-4 py-2 rounded hover:bg-accent active:scale-[0.99] transition-all"
+                  >
+                    <div className="flex-1">
+                      <div className="font-medium">{product.title}</div>
+                      {product.description && (
+                        <div className="text-xs text-muted-foreground mt-0.5">
+                          {product.description}
+                        </div>
+                      )}
+                    </div>
+                  </Link>
+                ))}
               </div>
-            </div>
+            )}
             <div>
               <div className="px-2 py-2 text-xs font-semibold text-muted-foreground uppercase tracking-wide">
                 {navData.labels.services}
