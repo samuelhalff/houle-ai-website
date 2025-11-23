@@ -86,7 +86,9 @@ export default function NavbarServer({
                     className={cn(
                       linkBase,
                       "min-w-[112px]",
-                      isSection(`${localePrefix}/products`) ? activeClasses : "",
+                      isSection(`${localePrefix}/products`)
+                        ? activeClasses
+                        : "",
                       "opacity-70 pointer-events-none"
                     )}
                     aria-hidden
@@ -101,12 +103,16 @@ export default function NavbarServer({
                     prefetch={false}
                     locale={locale}
                     aria-current={
-                      isSection(`${localePrefix}/ressources`) ? "page" : undefined
+                      isSection(`${localePrefix}/ressources`)
+                        ? "page"
+                        : undefined
                     }
                     className={cn(
                       linkBase,
                       "min-w-[112px]",
-                      isSection(`${localePrefix}/ressources`) ? activeClasses : ""
+                      isSection(`${localePrefix}/ressources`)
+                        ? activeClasses
+                        : ""
                     )}
                   >
                     {navData.labels.ressources}
@@ -123,9 +129,7 @@ export default function NavbarServer({
                     className={cn(
                       linkBase,
                       "min-w-[96px]",
-                      isSection(`${localePrefix}/contact`)
-                        ? activeClasses
-                        : ""
+                      isSection(`${localePrefix}/contact`) ? activeClasses : ""
                     )}
                   >
                     {navData.labels.contact}
@@ -133,20 +137,6 @@ export default function NavbarServer({
                 </li>
                 <li className="ml-1">
                   <HeaderControls />
-                </li>
-                <li>
-                  <Link
-                    href={`${localePrefix}/contact`}
-                    prefetch={false}
-                    locale={locale}
-                    className={cn(
-                      buttonVariants({ size: "sm" }),
-                      "rounded-full bg-primary text-primary-foreground hover:shadow-lg hover:scale-[1.02]",
-                      "ml-2"
-                    )}
-                  >
-                    Book a call
-                  </Link>
                 </li>
               </ul>
             </nav>

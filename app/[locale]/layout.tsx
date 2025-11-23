@@ -26,10 +26,9 @@ export default async function LocaleLayout({
   const activeLocale: Locale = locale;
   const Navbar = (await import("@/src/components/navigation/NavbarServer"))
     .default;
-  const Footer = nextDynamic(
-    () => import("@/app/[locale]/shared/footer"),
-    { suspense: true }
-  );
+  const Footer = nextDynamic(() => import("@/app/[locale]/shared/footer"), {
+    suspense: true,
+  });
 
   const navData =
     activeLocale === "fr"
