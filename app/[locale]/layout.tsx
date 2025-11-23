@@ -46,12 +46,14 @@ export default async function LocaleLayout({
             {
               href: "/services/ai-consulting",
               title: "Conseil en IA",
-              description: "Solutions d'intelligence artificielle sur mesure",
+              description:
+                "Solutions d'intelligence artificielle sur mesure avec Azure AI",
             },
             {
               href: "/services/microsoft-consulting",
               title: "Conseil Microsoft",
-              description: "Power Automate, SharePoint, Power BI et SPFx",
+              description:
+                "Azure, Power Automate, SharePoint, Power BI et SPFx",
             },
           ],
           hideProducts: true,
@@ -70,12 +72,14 @@ export default async function LocaleLayout({
             {
               href: "/services/ai-consulting",
               title: "AI consulting",
-              description: "Custom artificial intelligence solutions",
+              description:
+                "Custom artificial intelligence solutions with Azure AI",
             },
             {
               href: "/services/microsoft-consulting",
               title: "Microsoft consulting",
-              description: "Power Automate, SharePoint, Power BI and SPFx",
+              description:
+                "Azure, Power Automate, SharePoint, Power BI and SPFx",
             },
           ],
           hideProducts: true,

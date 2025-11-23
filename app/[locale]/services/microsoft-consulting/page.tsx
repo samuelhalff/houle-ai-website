@@ -254,6 +254,133 @@ const MicrosoftConsultingPage = async ({
             </p>
           </section>
 
+          {/* Azure Section */}
+          {tService("Presentation.Azure.Title") && (
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold mb-6">
+                {tService("Presentation.Azure.Title") as string}
+              </h2>
+              <p className="text-lg leading-relaxed text-muted-foreground mb-8">
+                {tService("Presentation.Azure.Intro") as string}
+              </p>
+              <div className="space-y-8">
+                {[
+                  "Functions",
+                  "LogicApps",
+                  "Storage",
+                  "SQL",
+                  "Security",
+                  "DevOps",
+                ].map((key) => (
+                  <div key={key} className="pl-6 border-l-2 border-primary/30">
+                    <h3 className="text-xl font-semibold mb-3">
+                      {tService(`Presentation.Azure.${key}.Title`) as string}
+                    </h3>
+                    <p className="text-lg leading-relaxed text-muted-foreground">
+                      {tService(`Presentation.Azure.${key}.Text`) as string}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Integration Flows Section */}
+          {tService("Presentation.IntegrationFlows.Title") && (
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold mb-6">
+                {tService("Presentation.IntegrationFlows.Title") as string}
+              </h2>
+              <p className="text-lg leading-relaxed text-muted-foreground mb-8">
+                {tService("Presentation.IntegrationFlows.Intro") as string}
+              </p>
+              <div className="space-y-8">
+                {[
+                  "SharePointPowerBI",
+                  "PowerAutomateSPFx",
+                  "TeamsSharePoint",
+                  "SPFxAzureFunctions",
+                  "PowerBIEmbedded",
+                ].map((key) => (
+                  <div key={key} className="pl-6 border-l-2 border-blue-500/30">
+                    <h3 className="text-xl font-semibold mb-3">
+                      {
+                        tService(
+                          `Presentation.IntegrationFlows.${key}.Title`
+                        ) as string
+                      }
+                    </h3>
+                    <p className="text-lg leading-relaxed text-muted-foreground">
+                      {
+                        tService(
+                          `Presentation.IntegrationFlows.${key}.Text`
+                        ) as string
+                      }
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Real Cases Section */}
+          {tService("Presentation.RealCases.Title") && (
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold mb-6">
+                {tService("Presentation.RealCases.Title") as string}
+              </h2>
+              <p className="text-lg leading-relaxed text-muted-foreground mb-8">
+                {tService("Presentation.RealCases.Intro") as string}
+              </p>
+              <div className="grid gap-6">
+                {(() => {
+                  const cases = tService("Presentation.RealCases.Cases");
+                  if (Array.isArray(cases)) {
+                    return cases.map((item: any, index: number) => (
+                      <Link
+                        key={index}
+                        href={`${localePrefix}/ressources/articles/${item.Slug}`}
+                        className="block p-6 rounded-lg bg-blue-500/5 border border-blue-500/10 hover:border-blue-500/30 hover:shadow-lg transition-all group"
+                      >
+                        <h3 className="text-xl font-semibold mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                          {item.Title}
+                        </h3>
+                        <p className="text-muted-foreground leading-relaxed">
+                          {item.Summary}
+                        </p>
+                        <span className="inline-flex items-center mt-4 text-blue-600 dark:text-blue-400 text-sm font-medium">
+                          {params.locale === "fr"
+                            ? "Lire l'article"
+                            : params.locale === "de"
+                            ? "Artikel lesen"
+                            : params.locale === "es"
+                            ? "Leer el artículo"
+                            : params.locale === "pt"
+                            ? "Ler o artigo"
+                            : "Read article"}
+                          <svg
+                            className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M9 5l7 7-7 7"
+                            />
+                          </svg>
+                        </span>
+                      </Link>
+                    ));
+                  }
+                  return null;
+                })()}
+              </div>
+            </section>
+          )}
+
           {/* Use Cases */}
           <section className="mb-16">
             <h2 className="text-3xl font-bold mb-6">
@@ -361,7 +488,7 @@ const MicrosoftConsultingPage = async ({
                     return cases.map((item: any, index: number) => (
                       <Link
                         key={index}
-                        href={`${localePrefix}/ressources/${item.Slug}`}
+                        href={`${localePrefix}/ressources/articles/${item.Slug}`}
                         className="block p-6 rounded-lg bg-primary/5 border border-primary/10 hover:border-primary/30 hover:shadow-lg transition-all group"
                       >
                         <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">

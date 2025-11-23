@@ -36,6 +36,34 @@
             "Title": "Training and support",
             "Text": "We do not just implement solutions, we also train your teams so they can maintain and evolve them. Our training sessions are adapted to everyone's level and include clear documentation. The goal is to make your company autonomous while knowing that we remain available for more complex needs."
         },
+        "Azure": {
+            "Title": "Azure cloud infrastructure and services",
+            "Intro": "Beyond Microsoft 365 productivity tools, Azure offers robust cloud infrastructure that extends your business capabilities. We help Geneva companies leverage Azure for scalability, security, and advanced integration.",
+            "Functions": {
+                "Title": "Azure Functions and serverless computing",
+                "Text": "We develop serverless applications using Azure Functions that execute code in response to events without managing infrastructure. Perfect for processing data from SharePoint, responding to webhooks, integrating external APIs, or performing scheduled tasks. You only pay for actual execution time, making it cost-effective for intermittent workloads. Functions can be triggered by Power Automate, HTTP requests, timers, or Azure services."
+            },
+            "LogicApps": {
+                "Title": "Azure Logic Apps for enterprise integration",
+                "Text": "Logic Apps enable sophisticated workflow automation with hundreds of pre-built connectors for enterprise systems (SAP, Salesforce, Oracle, SQL Server). We design integration flows that connect your on-premises systems with cloud services, transform data between formats, and orchestrate complex business processes. Unlike Power Automate, Logic Apps offer enterprise-grade features like virtual network integration, managed identities, and ISO certifications."
+            },
+            "Storage": {
+                "Title": "Azure Storage and data management",
+                "Text": "We configure secure Azure Storage solutions for your business data: blob storage for documents and media, file shares for legacy applications, table storage for structured data, and queue storage for message processing. Data can be encrypted at rest and in transit, with access controlled via Azure AD. We set up backup policies, lifecycle management, and replication to Swiss data centers for compliance."
+            },
+            "SQL": {
+                "Title": "Azure SQL Database and data platforms",
+                "Text": "We migrate and manage business databases on Azure SQL Database with automatic backups, point-in-time restore, and high availability. For analytics workloads, we deploy Azure Synapse or Data Lake solutions that scale to petabytes. Integration with Power BI provides real-time dashboards from your cloud data. All with Swiss data residency options for regulatory compliance."
+            },
+            "Security": {
+                "Title": "Azure security and identity",
+                "Text": "We implement comprehensive security using Azure AD for identity management, Key Vault for secrets and encryption keys, and Security Center for threat detection. Conditional access policies enforce multi-factor authentication, device compliance, and location-based restrictions. We configure private endpoints to keep traffic within Azure's network backbone, and use Azure Policy to enforce governance standards across your subscriptions."
+            },
+            "DevOps": {
+                "Title": "Azure DevOps and automation",
+                "Text": "We establish CI/CD pipelines using Azure DevOps or GitHub Actions to automate deployment of your SPFx web parts, Power Automate flows, and custom applications. Code is versioned, tested automatically, and deployed through controlled stages (development, staging, production). This ensures reliability and allows quick rollback if issues occur. Teams collaborate efficiently with boards, repos, and test plans integrated in one platform."
+            }
+        },
         "IntegrationFlows": {
             "Title": "Integration flows between Microsoft tools",
             "Intro": "The real strength of the Microsoft ecosystem lies in the ability to connect different tools to create intelligent workflows. Here are some common integration patterns we deploy for our clients in Geneva:",
