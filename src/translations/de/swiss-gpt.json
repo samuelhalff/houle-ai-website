@@ -1,0 +1,96 @@
+{
+    "Hero": {
+        "Badge": "In der Schweiz gehostete KI-Plattform",
+        "Title": "Unternehmens-GPT für die Schweiz",
+        "Description": "Zugang zu den neuesten KI-Modellen mit vollständiger Datensouveränität. GPT-4.1, GPT-5, o3 und mehr—in Schweizer Rechenzentren bereitgestellt, verlässt nie Ihre Jurisdiktion."
+    },
+    "Features": {
+        "Title": "Unternehmens-KI ohne Kompromisse",
+        "Description": "Die fortschrittlichsten Sprachmodelle mit Schweizer Datenschutzgarantien.",
+        "Models": {
+            "Title": "Neueste KI-Modelle",
+            "Description": "Zugang zu GPT-5, GPT-4.1, o3, Claude, Llama und Mistral. Modelle auf Azure-Infrastruktur in Schweiz Nord bereitgestellt. Sofortiger Zugang zu neuen Versionen ohne Bedenken zur Datenresidenz."
+        },
+        "Privacy": {
+            "Title": "Schweizer Datensouveränität",
+            "Description": "Alle Gespräche und Dokumente bleiben in Schweizer Rechenzentren. Null-Aufbewahrungspolitik: Ihre Daten werden nie für Modelltraining verwendet. Volle Konformität mit Schweizer Datenschutzgesetz und DSGVO."
+        },
+        "Search": {
+            "Title": "Web-fundierte Antworten",
+            "Description": "Echtzeit-Websuche-Integration mit Bing, alle Anfragen bleiben in Schweizer Infrastruktur. Erhalten Sie aktuelle Informationen und zitierte Quellen zur Faktenprüfung. Pro Benutzer oder Team konfigurierbar."
+        },
+        "Enterprise": {
+            "Title": "Unternehmensplattform",
+            "Description": "Single Sign-On mit Microsoft Entra ID oder Ihrem bestehenden Identitätsanbieter. Admin-Kontrollen für Modellzugriff, Nutzungsquoten und Inhaltsfilter. Aktivitätsprotokollierung und Prüfpfade für Compliance."
+        }
+    },
+    "Benefits": {
+        "Title": "Entwickelt für regulierte Branchen",
+        "Legal": {
+            "Title": "Rechtsanwälte",
+            "Description": "Analysieren Sie Rechtsprechung, entwerfen Sie Verträge und recherchieren Sie Präzedenzfälle mit KI-Unterstützung. Mandantenvertraulichkeit garantiert mit Schweizer Hosting. Kein Risiko, dass sensible Informationen die Jurisdiktion verlassen."
+        },
+        "Finance": {
+            "Title": "Finanzdienstleistungen",
+            "Description": "Analyse regulatorischer Compliance, Berichtserstellung und Kundenkommunikation. Erfüllen Sie FINMA-Anforderungen mit Daten, die nie Grenzen überschreiten. Vollständige Prüfpfade für behördliche Überprüfung."
+        },
+        "Healthcare": {
+            "Title": "Gesundheitsdienstleister",
+            "Description": "Administrative Automatisierung und Dokumentationsunterstützung bei Wahrung der Patientenvertraulichkeit. Konform mit medizinischen Datenschutzvorschriften. Sichere Umgebung für sensible Gesundheitsdaten."
+        },
+        "Professional": {
+            "Title": "Professionelle Dienstleistungen",
+            "Description": "Berater, Buchhalter und Advisors, die vertrauliche Kundeninformationen verarbeiten. Wettbewerbsvorteil durch KI ohne Kompromisse beim Vertrauen. Schweizer Qualität und Diskretion."
+        }
+    },
+    "Technical": {
+        "Title": "Technische Infrastruktur",
+        "Location": {
+            "Title": "Schweizer Rechenzentrumsstandort",
+            "Description": "Gehostet in Azure Schweiz Nord (Zürich Region). Alle Verarbeitung, Speicherung und Backups bleiben innerhalb der Schweizer Grenzen. Netzwerkverkehr transitiert nie ausländische Jurisdiktionen."
+        },
+        "Security": {
+            "Title": "Unternehmenssicherheit",
+            "Description": "Verschlüsselung im Ruhezustand und während der Übertragung mit Schweiz-verwalteten Schlüsseln. Multi-Faktor-Authentifizierung erzwungen. Rollenbasierte Zugriffskontrollen und Session-Management. SOC 2 Type II zertifizierte Infrastruktur."
+        },
+        "Integration": {
+            "Title": "Nahtlose Integration",
+            "Description": "API-Zugang für benutzerdefinierte Integrationen mit Ihren internen Systemen. Verbindung zu SharePoint, OneDrive und Azure-Diensten. Webhook-Unterstützung für Workflow-Automatisierung."
+        },
+        "Support": {
+            "Title": "Lokaler Support",
+            "Description": "Genf-basiertes Support-Team verfügbar auf Französisch, Deutsch und Englisch. Dedizierte Account-Betreuung für Unternehmenskunden. SLA-Garantien mit Schweizer Geschäftszeiten-Abdeckung."
+        }
+    },
+    "Comparison": {
+        "Title": "Warum nicht Standard-ChatGPT?",
+        "Items": [
+            {
+                "Issue": "Daten verlassen die Schweiz",
+                "Solution": "Alle Verarbeitung in Schweizer Rechenzentren"
+            },
+            {
+                "Issue": "Für Modelltraining verwendet",
+                "Solution": "Null-Aufbewahrungspolitik garantiert"
+            },
+            {
+                "Issue": "Keine Compliance-Garantien",
+                "Solution": "Schweizer und EU-regulatorische Compliance"
+            },
+            {
+                "Issue": "Verbraucher-Plattform",
+                "Solution": "Unternehmenskontrollen und Audit-Logs"
+            },
+            {
+                "Issue": "Keine SSO-Integration",
+                "Solution": "Microsoft Entra ID und SAML-Unterstützung"
+            }
+        ]
+    },
+    "CTA": {
+        "Title": "Erleben Sie KI mit Schweizer Datenschutz",
+        "Description": "Kontaktieren Sie uns, um zu erfahren, wie Unternehmens-KI mit vollständiger Datensouveränität funktioniert.",
+        "Demo": "Demo Anfordern",
+        "Contact": "Loslegen"
+    }
+}

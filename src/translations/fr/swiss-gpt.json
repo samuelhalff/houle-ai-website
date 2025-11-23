@@ -1,0 +1,96 @@
+{
+    "Hero": {
+        "Badge": "Plateforme IA hébergée en Suisse",
+        "Title": "GPT d'entreprise pour la Suisse",
+        "Description": "Accédez aux derniers modèles d'IA avec une souveraineté complète des données. GPT-4.1, GPT-5, o3 et plus—déployés dans des centres de données suisses, sans jamais quitter votre juridiction."
+    },
+    "Features": {
+        "Title": "IA d'entreprise sans compromis",
+        "Description": "Les modèles de langage les plus avancés, avec les garanties de confidentialité suisses.",
+        "Models": {
+            "Title": "Derniers modèles d'IA",
+            "Description": "Accès à GPT-5, GPT-4.1, o3, Claude, Llama et Mistral. Modèles déployés sur l'infrastructure Azure en Suisse Nord. Accès immédiat aux nouvelles versions sans préoccupation de résidence des données."
+        },
+        "Privacy": {
+            "Title": "Souveraineté des données suisses",
+            "Description": "Toutes les conversations et documents restent dans les centres de données suisses. Politique de rétention zéro : vos données ne sont jamais utilisées pour l'entraînement des modèles. Conformité totale avec la LPD suisse et le RGPD."
+        },
+        "Search": {
+            "Title": "Réponses enrichies par le web",
+            "Description": "Intégration de recherche web en temps réel avec Bing, toutes les requêtes restant dans l'infrastructure suisse. Obtenez des informations actuelles et des sources citées pour la vérification. Configurable par utilisateur ou équipe."
+        },
+        "Enterprise": {
+            "Title": "Plateforme d'entreprise",
+            "Description": "Authentification unique avec Microsoft Entra ID ou votre fournisseur d'identité existant. Contrôles administrateurs pour l'accès aux modèles, quotas d'utilisation et filtres de contenu. Journalisation des activités et pistes d'audit pour la conformité."
+        }
+    },
+    "Benefits": {
+        "Title": "Conçu pour les industries réglementées",
+        "Legal": {
+            "Title": "Professionnels du droit",
+            "Description": "Analysez la jurisprudence, rédigez des contrats et recherchez des précédents avec l'assistance de l'IA. Confidentialité client garantie avec hébergement suisse. Aucun risque que les informations sensibles quittent la juridiction."
+        },
+        "Finance": {
+            "Title": "Services financiers",
+            "Description": "Analyse de conformité réglementaire, génération de rapports et communications clients. Répondez aux exigences de la FINMA avec des données qui ne franchissent jamais les frontières. Pistes d'audit complètes pour l'examen réglementaire."
+        },
+        "Healthcare": {
+            "Title": "Prestataires de santé",
+            "Description": "Automatisation administrative et assistance à la documentation tout en maintenant la confidentialité des patients. Conforme aux réglementations sur la vie privée médicale. Environnement sécurisé pour les données de santé sensibles."
+        },
+        "Professional": {
+            "Title": "Services professionnels",
+            "Description": "Consultants, comptables et conseillers traitant des informations confidentielles clients. Avantage concurrentiel grâce à l'IA sans compromettre la confiance. Qualité et discrétion suisses."
+        }
+    },
+    "Technical": {
+        "Title": "Infrastructure technique",
+        "Location": {
+            "Title": "Localisation du centre de données suisse",
+            "Description": "Hébergé dans Azure Suisse Nord (région de Zurich). Tout le traitement, le stockage et les sauvegardes restent à l'intérieur des frontières suisses. Le trafic réseau ne transite jamais par des juridictions étrangères."
+        },
+        "Security": {
+            "Title": "Sécurité d'entreprise",
+            "Description": "Chiffrement au repos et en transit avec des clés gérées en Suisse. Authentification multifacteur obligatoire. Contrôles d'accès basés sur les rôles et gestion des sessions. Infrastructure certifiée SOC 2 Type II."
+        },
+        "Integration": {
+            "Title": "Intégration transparente",
+            "Description": "Accès API pour des intégrations personnalisées avec vos systèmes internes. Connexion à SharePoint, OneDrive et services Azure. Support de webhooks pour l'automatisation des flux de travail."
+        },
+        "Support": {
+            "Title": "Support local",
+            "Description": "Équipe de support basée à Genève disponible en français, allemand et anglais. Gestion de compte dédiée pour les clients entreprise. Garanties SLA avec couverture des horaires commerciaux suisses."
+        }
+    },
+    "Comparison": {
+        "Title": "Pourquoi pas ChatGPT standard ?",
+        "Items": [
+            {
+                "Issue": "Les données quittent la Suisse",
+                "Solution": "Tout le traitement dans les centres de données suisses"
+            },
+            {
+                "Issue": "Utilisé pour l'entraînement du modèle",
+                "Solution": "Politique de rétention zéro garantie"
+            },
+            {
+                "Issue": "Pas de garanties de conformité",
+                "Solution": "Conformité réglementaire suisse et UE"
+            },
+            {
+                "Issue": "Plateforme grand public",
+                "Solution": "Contrôles d'entreprise et journaux d'audit"
+            },
+            {
+                "Issue": "Pas d'intégration SSO",
+                "Solution": "Support Microsoft Entra ID et SAML"
+            }
+        ]
+    },
+    "CTA": {
+        "Title": "Expérimentez l'IA avec la Confidentialité Suisse",
+        "Description": "Contactez-nous pour découvrir comment l'IA d'entreprise fonctionne avec une souveraineté complète des données.",
+        "Demo": "Demander une Démo",
+        "Contact": "Commencer"
+    }
+}

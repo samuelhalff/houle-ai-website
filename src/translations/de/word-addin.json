@@ -65,10 +65,9 @@
         "Contact": "Kontaktieren Sie uns für Unternehmenspreise und individuelle Bereitstellungsoptionen."
     },
     "CTA": {
-        "Title": "Bereit, Ihren Word-Workflow zu Transformieren?",
-        "Description": "Starten Sie mit einer kostenlosen Testversion oder vereinbaren Sie eine Demo, um zu sehen, wie KI Ihren Dokumenterstellungsprozess verbessern kann.",
-        "Demo": "Demo Vereinbaren",
-        "Trial": "Kostenlose Testversion Starten",
-        "Contact": "Vertrieb Kontaktieren"
+        "Title": "Bereit, Ihren Word-Workflow zu transformieren?",
+        "Description": "Kontaktieren Sie uns, um zu erfahren, wie unser KI-Assistent Ihren Dokumentenerstellungsprozess verbessern kann.",
+        "Demo": "Demo anfordern",
+        "Contact": "Loslegen"
     }
 }

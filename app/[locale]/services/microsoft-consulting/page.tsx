@@ -558,7 +558,15 @@ const MicrosoftConsultingPage = async ({
               href={`${localePrefix}/contact`}
               className="inline-flex items-center px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:shadow-lg hover:scale-105 transition-all"
             >
-              {(tNav("Contact") as string) || "Contact"}
+              {params.locale === "fr"
+                ? "Planifier une consultation"
+                : params.locale === "de"
+                ? "Beratung vereinbaren"
+                : params.locale === "es"
+                ? "Programar consulta"
+                : params.locale === "pt"
+                ? "Agendar consulta"
+                : "Schedule Consultation"}
             </Link>
           </section>
         </div>

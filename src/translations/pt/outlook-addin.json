@@ -65,10 +65,9 @@
         "Contact": "Entre em contato para preços empresariais e opções de implantação personalizadas."
     },
     "CTA": {
-        "Title": "Pronto para Transformar Seu Fluxo de Trabalho do Word?",
-        "Description": "Comece com uma avaliação gratuita ou agende uma demonstração para ver como a IA pode melhorar seu processo de criação de documentos.",
-        "Demo": "Agendar Demonstração",
-        "Trial": "Iniciar Avaliação Gratuita",
-        "Contact": "Contatar Vendas"
+        "Title": "Pronto para Transformar Seu Fluxo de Trabalho de Email?",
+        "Description": "Entre em contato para saber como nosso assistente de IA pode melhorar sua produtividade de email.",
+        "Demo": "Solicitar Demonstração",
+        "Contact": "Começar"
     }
 }

@@ -1,0 +1,96 @@
+{
+    "Hero": {
+        "Badge": "Swiss-Hosted AI Platform",
+        "Title": "Enterprise GPT for Switzerland",
+        "Description": "Access the latest AI models with complete data sovereignty. GPT-4.1, GPT-5, o3, and more—deployed in Swiss data centers, never leaving your jurisdiction."
+    },
+    "Features": {
+        "Title": "Enterprise AI Without Compromise",
+        "Description": "The most advanced language models, with Swiss privacy guarantees.",
+        "Models": {
+            "Title": "Latest AI Models",
+            "Description": "Access GPT-5, GPT-4.1, o3, Claude, Llama, and Mistral. Models deployed on Azure infrastructure in Switzerland North. Immediate access to new releases without data residency concerns."
+        },
+        "Privacy": {
+            "Title": "Swiss Data Sovereignty",
+            "Description": "All conversations and documents remain in Swiss data centers. Zero-retention policy: your data is never used for model training. Full compliance with Swiss Federal Data Protection Act and GDPR."
+        },
+        "Search": {
+            "Title": "Web-Grounded Responses",
+            "Description": "Real-time web search integration with Bing, keeping all queries within Swiss infrastructure. Get current information and cited sources for fact-checking. Configurable per user or team."
+        },
+        "Enterprise": {
+            "Title": "Enterprise-Grade Platform",
+            "Description": "Single sign-on with Microsoft Entra ID or your existing identity provider. Admin controls for model access, usage quotas, and content filters. Activity logging and audit trails for compliance."
+        }
+    },
+    "Benefits": {
+        "Title": "Built for Regulated Industries",
+        "Legal": {
+            "Title": "Legal Professionals",
+            "Description": "Analyze case law, draft contracts, and research precedents with AI assistance. Client confidentiality guaranteed with Swiss hosting. No risk of sensitive information leaving jurisdiction."
+        },
+        "Finance": {
+            "Title": "Financial Services",
+            "Description": "Regulatory compliance analysis, report generation, and client communications. Meet FINMA requirements with data that never crosses borders. Full audit trails for regulatory review."
+        },
+        "Healthcare": {
+            "Title": "Healthcare Providers",
+            "Description": "Administrative automation and documentation assistance while maintaining patient confidentiality. Compliant with medical privacy regulations. Secure environment for sensitive health data."
+        },
+        "Professional": {
+            "Title": "Professional Services",
+            "Description": "Consultants, accountants, and advisors handling confidential client information. Competitive advantage through AI without compromising trust. Swiss quality and discretion."
+        }
+    },
+    "Technical": {
+        "Title": "Technical Infrastructure",
+        "Location": {
+            "Title": "Swiss Data Center Location",
+            "Description": "Hosted in Azure Switzerland North (Zurich region). All processing, storage, and backups remain within Swiss borders. Network traffic never transits foreign jurisdictions."
+        },
+        "Security": {
+            "Title": "Enterprise Security",
+            "Description": "Encryption at rest and in transit with Swiss-managed keys. Multi-factor authentication enforced. Role-based access controls and session management. SOC 2 Type II certified infrastructure."
+        },
+        "Integration": {
+            "Title": "Seamless Integration",
+            "Description": "API access for custom integrations with your internal systems. Connect to SharePoint, OneDrive, and Azure services. Webhook support for workflow automation."
+        },
+        "Support": {
+            "Title": "Local Support",
+            "Description": "Geneva-based support team available in French, German, and English. Dedicated account management for enterprise clients. SLA guarantees with Swiss business hours coverage."
+        }
+    },
+    "Comparison": {
+        "Title": "Why Not Standard ChatGPT?",
+        "Items": [
+            {
+                "Issue": "Data leaves Switzerland",
+                "Solution": "All processing in Swiss data centers"
+            },
+            {
+                "Issue": "Used for model training",
+                "Solution": "Zero-retention policy guaranteed"
+            },
+            {
+                "Issue": "No compliance guarantees",
+                "Solution": "Swiss and EU regulatory compliance"
+            },
+            {
+                "Issue": "Consumer-grade platform",
+                "Solution": "Enterprise controls and audit logs"
+            },
+            {
+                "Issue": "No SSO integration",
+                "Solution": "Microsoft Entra ID and SAML support"
+            }
+        ]
+    },
+    "CTA": {
+        "Title": "Experimente IA con Privacidad Suiza",
+        "Description": "Contáctenos para descubrir cómo funciona la IA empresarial con soberanía completa de datos.",
+        "Demo": "Solicitar Demo",
+        "Contact": "Empezar"
+    }
+}

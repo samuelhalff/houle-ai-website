@@ -66,9 +66,8 @@
     },
     "CTA": {
         "Title": "Ready to Transform Your Email Workflow?",
-        "Description": "Get started with a free trial or schedule a demo to see how AI can enhance your email productivity.",
-        "Demo": "Schedule Demo",
-        "Trial": "Start Free Trial",
-        "Contact": "Contact Sales"
+        "Description": "Contact us to learn how our AI assistant can enhance your email productivity.",
+        "Demo": "Request Demo",
+        "Contact": "Get Started"
     }
 }

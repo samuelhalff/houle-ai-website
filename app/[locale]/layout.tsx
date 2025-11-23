@@ -41,7 +41,23 @@ export default async function LocaleLayout({
             contact: "Contact",
             mobileNavigation: "Menu",
           },
-          products: [],
+          products: [
+            {
+              href: "/products/word-addin",
+              title: "Word Add-in",
+              description: "Assistant IA pour Microsoft Word",
+            },
+            {
+              href: "/products/outlook-addin",
+              title: "Outlook Add-in",
+              description: "Assistant IA pour Outlook",
+            },
+            {
+              href: "/products/swiss-gpt",
+              title: "GPT Suisse",
+              description: "Plateforme GPT hébergée en Suisse",
+            },
+          ],
           services: [
             {
               href: "/services/ai-consulting",
@@ -56,7 +72,7 @@ export default async function LocaleLayout({
                 "Azure, Power Automate, SharePoint, Power BI et SPFx",
             },
           ],
-          hideProducts: true,
+          hideProducts: false,
         }
       : {
           labels: {
@@ -67,7 +83,23 @@ export default async function LocaleLayout({
             contact: "Contact",
             mobileNavigation: "Menu",
           },
-          products: [],
+          products: [
+            {
+              href: "/products/word-addin",
+              title: "Word Add-in",
+              description: "AI assistant for Microsoft Word",
+            },
+            {
+              href: "/products/outlook-addin",
+              title: "Outlook Add-in",
+              description: "AI assistant for Outlook",
+            },
+            {
+              href: "/products/swiss-gpt",
+              title: "Swiss GPT",
+              description: "Swiss-hosted GPT platform",
+            },
+          ],
           services: [
             {
               href: "/services/ai-consulting",
@@ -82,7 +114,7 @@ export default async function LocaleLayout({
                 "Azure, Power Automate, SharePoint, Power BI and SPFx",
             },
           ],
-          hideProducts: true,
+          hideProducts: false,
         };
 
   return (

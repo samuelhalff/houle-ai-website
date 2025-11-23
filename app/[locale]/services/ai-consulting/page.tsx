@@ -402,7 +402,15 @@ const AIConsultingPage = async ({ params }: { params: { locale: string } }) => {
               href={`${localePrefix}/contact`}
               className="inline-flex items-center px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:shadow-lg hover:scale-105 transition-all"
             >
-              {(tNav("Contact") as string) || "Contact"}
+              {params.locale === "fr"
+                ? "Discuter de votre projet IA"
+                : params.locale === "de"
+                ? "Ihr KI-Projekt besprechen"
+                : params.locale === "es"
+                ? "Hablar de su proyecto de IA"
+                : params.locale === "pt"
+                ? "Discutir seu projeto de IA"
+                : "Discuss Your AI Project"}
             </Link>
           </section>
         </div>
