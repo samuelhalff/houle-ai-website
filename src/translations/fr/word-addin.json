@@ -1,0 +1,74 @@
+{
+  "Hero": {
+    "Badge": "IA pour Microsoft Word",
+    "Title": "Assistant IA pour Word",
+    "Description": "Transformez votre flux de travail Word avec une assistance IA. Conçu pour la confidentialité, intégré de manière transparente dans votre environnement Microsoft 365 existant."
+  },
+  "Features": {
+    "Title": "Fonctionnalités IA Puissantes",
+    "Description": "Tout ce dont vous avez besoin pour écrire mieux, plus vite et plus intelligemment.",
+    "Chat": {
+      "Title": "Assistant de Chat Intelligent",
+      "Description": "Posez des questions, obtenez des suggestions et affinez votre contenu avec des conversations IA directement dans Word. Réponses contextuelles basées sur votre document."
+    },
+    "Templates": {
+      "Title": "Remplissage Intelligent de Modèles",
+      "Description": "Remplissez automatiquement les modèles avec les données clients de votre CRM. Générez des contrats, propositions et rapports en quelques secondes avec extraction de données IA."
+    },
+    "Suggestions": {
+      "Title": "Suggestions en Ligne",
+      "Description": "Assistance à l'écriture en temps réel avec suggestions contextuelles pendant la frappe. Améliorez le ton, la clarté et le style sans quitter le flux de votre document."
+    },
+    "Actions": {
+      "Title": "Actions en Un Clic",
+      "Description": "Résumez des documents, traduisez du contenu, ajustez le ton ou générez des plans avec des actions IA préconfigurées. Personnalisables pour votre flux de travail."
+    }
+  },
+  "Benefits": {
+    "Title": "Pourquoi Choisir Notre Add-in Word",
+    "Privacy": {
+      "Title": "Architecture Axée sur la Confidentialité",
+      "Description": "Vos documents restent dans votre environnement Microsoft 365. Tout traitement IA respecte votre souveraineté des données. Options hébergées en Suisse disponibles."
+    },
+    "Integration": {
+      "Title": "Intégration Microsoft Transparente",
+      "Description": "Authentification native avec Microsoft Entra ID. Fonctionne avec vos politiques Office 365 et contrôles de sécurité existants. Aucune connexion séparée requise."
+    },
+    "Customization": {
+      "Title": "Adapté à Votre Entreprise",
+      "Description": "Console d'administration pour configurer les agents IA, gérer les prompts et contrôler les fonctionnalités par utilisateur ou équipe. Intégrez avec votre CRM et systèmes internes."
+    },
+    "Compliance": {
+      "Title": "Conformité de Niveau Entreprise",
+      "Description": "Conçu pour les industries réglementées. Journalisation des activités, pistes d'audit et contrôles administratifs. Conforme aux normes suisses et européennes de protection des données."
+    }
+  },
+  "UseCases": {
+    "Title": "Conçu pour les Prestataires de Services",
+    "Description": "Pensé pour les cabinets de conseil, les pratiques juridiques et les services professionnels dans la région lémanique.",
+    "Legal": {
+      "Title": "Cabinets Juridiques",
+      "Description": "Générez des documents clients, contrats et correspondances juridiques. Intégrez avec les systèmes de gestion de dossiers pour le remplissage automatique de modèles."
+    },
+    "Consulting": {
+      "Title": "Cabinets de Conseil",
+      "Description": "Créez des propositions, rapports et livrables clients plus rapidement. Maintenez une image de marque et un message cohérents dans tous les documents."
+    },
+    "Finance": {
+      "Title": "Services Financiers",
+      "Description": "Produisez des rapports de conformité, communications clients et analyses financières. Assurez la précision avec la vérification des faits par IA."
+    }
+  },
+  "Pricing": {
+    "Title": "Tarification Simple et Transparente",
+    "Description": "Choisissez le plan qui correspond à la taille et aux besoins de votre équipe.",
+    "Contact": "Contactez-nous pour les tarifs entreprise et les options de déploiement personnalisées."
+  },
+  "CTA": {
+    "Title": "Prêt à Transformer Votre Flux de Travail Word ?",
+    "Description": "Commencez avec un essai gratuit ou planifiez une démo pour voir comment l'IA peut améliorer votre processus de création de documents.",
+    "Demo": "Planifier une Démo",
+    "Trial": "Commencer l'Essai Gratuit",
+    "Contact": "Contacter les Ventes"
+  }
+}

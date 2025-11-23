@@ -1,0 +1,74 @@
+{
+  "Hero": {
+    "Badge": "IA para Microsoft Word",
+    "Title": "Asistente IA para Word",
+    "Description": "Transforma tu flujo de trabajo de Word con asistencia impulsada por IA. Diseñado para privacidad, integrado perfectamente en tu entorno Microsoft 365 existente."
+  },
+  "Features": {
+    "Title": "Potentes Características de IA",
+    "Description": "Todo lo que necesitas para escribir mejor, más rápido y más inteligente.",
+    "Chat": {
+      "Title": "Asistente de Chat Inteligente",
+      "Description": "Haz preguntas, obtén sugerencias y refina tu contenido con conversaciones impulsadas por IA directamente en Word. Respuestas contextuales basadas en tu documento."
+    },
+    "Templates": {
+      "Title": "Llenado Inteligente de Plantillas",
+      "Description": "Rellena automáticamente plantillas con datos de clientes de tu CRM. Genera contratos, propuestas e informes en segundos con extracción de datos impulsada por IA."
+    },
+    "Suggestions": {
+      "Title": "Sugerencias en Línea",
+      "Description": "Asistencia de escritura en tiempo real con sugerencias contextuales mientras escribes. Mejora tono, claridad y estilo sin abandonar tu flujo de documento."
+    },
+    "Actions": {
+      "Title": "Acciones de Un Clic",
+      "Description": "Resume documentos, traduce contenido, ajusta tono o genera esquemas con acciones IA preconfiguradas. Personalizable para tu flujo de trabajo."
+    }
+  },
+  "Benefits": {
+    "Title": "Por Qué Elegir Nuestro Complemento de Word",
+    "Privacy": {
+      "Title": "Arquitectura Centrada en Privacidad",
+      "Description": "Tus documentos permanecen en tu entorno Microsoft 365. Todo procesamiento de IA respeta tu soberanía de datos. Opciones alojadas en Suiza disponibles."
+    },
+    "Integration": {
+      "Title": "Integración Microsoft Perfecta",
+      "Description": "Autenticación nativa con Microsoft Entra ID. Funciona con tus políticas Office 365 y controles de seguridad existentes. No se requiere inicio de sesión separado."
+    },
+    "Customization": {
+      "Title": "Adaptado a Tu Negocio",
+      "Description": "Consola de administración para configurar agentes IA, gestionar prompts y controlar características por usuario o equipo. Integra con tu CRM y sistemas internos."
+    },
+    "Compliance": {
+      "Title": "Cumplimiento de Nivel Empresarial",
+      "Description": "Diseñado para industrias reguladas. Registro de actividades, pistas de auditoría y controles administrativos. Cumple con estándares suizos y de la UE de protección de datos."
+    }
+  },
+  "UseCases": {
+    "Title": "Diseñado para Proveedores de Servicios",
+    "Description": "Concebido para firmas de consultoría, prácticas legales y servicios profesionales en la región del Lago Lemán.",
+    "Legal": {
+      "Title": "Prácticas Legales",
+      "Description": "Genera documentos de clientes, contratos y correspondencia legal. Integra con sistemas de gestión de casos para llenado automático de plantillas."
+    },
+    "Consulting": {
+      "Title": "Firmas de Consultoría",
+      "Description": "Crea propuestas, informes y entregables de clientes más rápido. Mantén marca y mensajes consistentes en todos los documentos."
+    },
+    "Finance": {
+      "Title": "Servicios Financieros",
+      "Description": "Produce informes de cumplimiento, comunicaciones con clientes y análisis financieros. Asegura precisión con verificación de hechos impulsada por IA."
+    }
+  },
+  "Pricing": {
+    "Title": "Precios Simples y Transparentes",
+    "Description": "Elige el plan que se ajuste al tamaño y necesidades de tu equipo.",
+    "Contact": "Contáctanos para precios empresariales y opciones de implementación personalizadas."
+  },
+  "CTA": {
+    "Title": "¿Listo para Transformar Tu Flujo de Trabajo de Word?",
+    "Description": "Comienza con una prueba gratuita o agenda una demo para ver cómo la IA puede mejorar tu proceso de creación de documentos.",
+    "Demo": "Agendar Demo",
+    "Trial": "Iniciar Prueba Gratuita",
+    "Contact": "Contactar Ventas"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "Hero": {
+    "Badge": "IA pour Microsoft Outlook",
+    "Title": "Assistant IA pour Outlook",
+    "Description": "Boostez votre flux de travail email avec une assistance IA. Rédigez des emails plus rapidement, gérez les communications plus intelligemment, le tout dans votre environnement Microsoft 365."
+  },
+  "Features": {
+    "Title": "Fonctionnalités Email Intelligentes",
+    "Description": "Tout ce dont vous avez besoin pour communiquer mieux et gérer les emails efficacement.",
+    "Chat": {
+      "Title": "Assistant de Rédaction d'Emails",
+      "Description": "Générez des brouillons d'emails professionnels avec l'IA. Obtenez des suggestions de ton, améliorez la clarité et rédigez des réponses parfaites en secondes basées sur le contexte de la conversation."
+    },
+    "Templates": {
+      "Title": "Modèles d'Emails Intelligents",
+      "Description": "Créez et remplissez des modèles d'emails avec les données clients de votre CRM. Automatisez les suivis, propositions et communications clients avec du contenu personnalisé généré par IA."
+    },
+    "Summaries": {
+      "Title": "Résumés de Fils d'Emails",
+      "Description": "Obtenez des résumés instantanés de longues chaînes d'emails. Extrayez automatiquement les actions à effectuer, décisions clés et dates importantes des conversations."
+    },
+    "Actions": {
+      "Title": "Actions Email Rapides",
+      "Description": "Traduisez des emails, ajustez le ton pour différents publics, générez des réponses ou planifiez des suivis avec des actions IA en un clic adaptées à votre flux de travail."
+    }
+  },
+  "Benefits": {
+    "Title": "Pourquoi Choisir Notre Add-in Outlook",
+    "Privacy": {
+      "Title": "Confidentialité des Emails Protégée",
+      "Description": "Vos emails et contacts restent dans votre environnement Microsoft 365. Le traitement IA respecte votre souveraineté des données. Options hébergées en Suisse pour une confidentialité maximale."
+    },
+    "Integration": {
+      "Title": "Intégration Native Outlook",
+      "Description": "Authentification transparente avec Microsoft Entra ID. Fonctionne dans l'interface d'Outlook avec vos politiques existantes. Aucune connexion ou synchronisation de données supplémentaire requise."
+    },
+    "Customization": {
+      "Title": "Flux de Travail Email Personnalisés",
+      "Description": "Configurez des agents IA pour différents scénarios d'email. Créez des modèles d'équipe, gérez les prompts de manière centralisée et intégrez avec votre CRM pour une personnalisation automatisée."
+    },
+    "Compliance": {
+      "Title": "Conformité Email Entreprise",
+      "Description": "Conçu pour les communications réglementées. Pistes d'audit complètes, journalisation des emails et contrôles administratifs. Conforme aux normes suisses et européennes de gestion des emails professionnels."
+    }
+  },
+  "UseCases": {
+    "Title": "Parfait pour les Communications Clients",
+    "Description": "Conçu pour les professionnels qui gèrent de gros volumes d'emails clients dans la région lémanique.",
+    "Sales": {
+      "Title": "Équipes Commerciales",
+      "Description": "Générez des emails de prospection personnalisés, séquences de suivi et communications de propositions. Suivez les conversations clients et automatisez les réponses routinières."
+    },
+    "Support": {
+      "Title": "Support Client",
+      "Description": "Répondez aux demandes clients plus rapidement avec des réponses suggérées par IA. Maintenez un ton et une qualité cohérents dans toutes les communications de support."
+    },
+    "Management": {
+      "Title": "Gestion Client",
+      "Description": "Résumez les fils d'emails pour un contexte rapide. Extrayez les actions à effectuer et les délais. Gardez les communications clients organisées et actionnables."
+    }
+  },
+  "Pricing": {
+    "Title": "Tarification Simple et Transparente",
+    "Description": "Choisissez le plan qui correspond au volume d'emails et aux besoins de votre équipe.",
+    "Contact": "Contactez-nous pour les tarifs entreprise et les options de déploiement personnalisées."
+  },
+  "CTA": {
+    "Title": "Prêt à Transformer Votre Flux de Travail Email ?",
+    "Description": "Commencez avec un essai gratuit ou planifiez une démo pour voir comment l'IA peut améliorer votre productivité email.",
+    "Demo": "Planifier une Démo",
+    "Trial": "Commencer l'Essai Gratuit",
+    "Contact": "Contacter les Ventes"
+  }
+}

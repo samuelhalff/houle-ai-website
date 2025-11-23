@@ -1,0 +1,74 @@
+{
+    "Hero": {
+        "Badge": "AI for Microsoft Word",
+        "Title": "AI Assistant for Word",
+        "Description": "Transform your Word workflow with AI-powered assistance. Built for privacy, seamlessly integrated into your existing Microsoft 365 environment."
+    },
+    "Features": {
+        "Title": "Powerful AI Features",
+        "Description": "Everything you need to write better, faster, and smarter.",
+        "Chat": {
+            "Title": "Intelligent Chat Assistant",
+            "Description": "Ask questions, get suggestions, and refine your content with AI-powered conversations directly in Word. Context-aware responses based on your document."
+        },
+        "Templates": {
+            "Title": "Smart Template Fill",
+            "Description": "Automatically populate templates with client data from your CRM. Generate contracts, proposals, and reports in seconds with AI-powered data extraction."
+        },
+        "Suggestions": {
+            "Title": "Inline Suggestions",
+            "Description": "Real-time writing assistance with contextual suggestions as you type. Improve tone, clarity, and style without leaving your document flow."
+        },
+        "Actions": {
+            "Title": "One-Click Actions",
+            "Description": "Summarize documents, translate content, adjust tone, or generate outlines with pre-configured AI actions. Customizable for your workflow."
+        }
+    },
+    "Benefits": {
+        "Title": "Why Choose Our Word Add-in",
+        "Privacy": {
+            "Title": "Privacy-First Architecture",
+            "Description": "Your documents stay in your Microsoft 365 environment. All AI processing respects your data sovereignty. Swiss-hosted options available."
+        },
+        "Integration": {
+            "Title": "Seamless Microsoft Integration",
+            "Description": "Native authentication with Microsoft Entra ID. Works with your existing Office 365 policies and security controls. No separate login required."
+        },
+        "Customization": {
+            "Title": "Tailored to Your Business",
+            "Description": "Admin console to configure AI agents, manage prompts, and control features per user or team. Integrate with your CRM and internal systems."
+        },
+        "Compliance": {
+            "Title": "Enterprise-Grade Compliance",
+            "Description": "Built for regulated industries. Activity logging, audit trails, and admin controls. Compliant with Swiss and EU data protection standards."
+        }
+    },
+    "UseCases": {
+        "Title": "Built for Service Providers",
+        "Description": "Designed for consulting firms, legal practices, and professional services in the Lake Geneva region.",
+        "Legal": {
+            "Title": "Legal Practices",
+            "Description": "Generate client documents, contracts, and legal correspondence. Integrate with case management systems for automatic template filling."
+        },
+        "Consulting": {
+            "Title": "Consulting Firms",
+            "Description": "Create proposals, reports, and client deliverables faster. Maintain consistent branding and messaging across all documents."
+        },
+        "Finance": {
+            "Title": "Financial Services",
+            "Description": "Produce compliance reports, client communications, and financial analyses. Ensure accuracy with AI-powered fact-checking."
+        }
+    },
+    "Pricing": {
+        "Title": "Simple, Transparent Pricing",
+        "Description": "Choose the plan that fits your team size and needs.",
+        "Contact": "Contact us for enterprise pricing and custom deployment options."
+    },
+    "CTA": {
+        "Title": "Ready to Transform Your Word Workflow?",
+        "Description": "Get started with a free trial or schedule a demo to see how AI can enhance your document creation process.",
+        "Demo": "Schedule Demo",
+        "Trial": "Start Free Trial",
+        "Contact": "Contact Sales"
+    }
+}

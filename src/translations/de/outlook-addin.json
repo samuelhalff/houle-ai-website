@@ -1,0 +1,74 @@
+{
+    "Hero": {
+        "Badge": "KI für Microsoft Word",
+        "Title": "KI-Assistent für Word",
+        "Description": "Transformieren Sie Ihren Word-Workflow mit KI-gestützter Unterstützung. Entwickelt für Datenschutz, nahtlos integriert in Ihre bestehende Microsoft 365-Umgebung."
+    },
+    "Features": {
+        "Title": "Leistungsstarke KI-Funktionen",
+        "Description": "Alles, was Sie brauchen, um besser, schneller und intelligenter zu schreiben.",
+        "Chat": {
+            "Title": "Intelligenter Chat-Assistent",
+            "Description": "Stellen Sie Fragen, erhalten Sie Vorschläge und verfeinern Sie Ihren Inhalt mit KI-gestützten Gesprächen direkt in Word. Kontextbezogene Antworten basierend auf Ihrem Dokument."
+        },
+        "Templates": {
+            "Title": "Intelligentes Vorlagenausfüllen",
+            "Description": "Füllen Sie Vorlagen automatisch mit Kundendaten aus Ihrem CRM. Generieren Sie Verträge, Angebote und Berichte in Sekunden mit KI-gestützter Datenextraktion."
+        },
+        "Suggestions": {
+            "Title": "Inline-Vorschläge",
+            "Description": "Echtzeit-Schreibhilfe mit kontextbezogenen Vorschlägen während Sie tippen. Verbessern Sie Ton, Klarheit und Stil, ohne Ihren Dokumentenfluss zu unterbrechen."
+        },
+        "Actions": {
+            "Title": "Ein-Klick-Aktionen",
+            "Description": "Fassen Sie Dokumente zusammen, übersetzen Sie Inhalte, passen Sie den Ton an oder generieren Sie Gliederungen mit vorkonfigurierten KI-Aktionen. Anpassbar für Ihren Workflow."
+        }
+    },
+    "Benefits": {
+        "Title": "Warum Unser Word Add-in Wählen",
+        "Privacy": {
+            "Title": "Datenschutzorientierte Architektur",
+            "Description": "Ihre Dokumente bleiben in Ihrer Microsoft 365-Umgebung. Alle KI-Verarbeitungen respektieren Ihre Datensouveränität. Schweizer Hosting-Optionen verfügbar."
+        },
+        "Integration": {
+            "Title": "Nahtlose Microsoft-Integration",
+            "Description": "Native Authentifizierung mit Microsoft Entra ID. Funktioniert mit Ihren bestehenden Office 365-Richtlinien und Sicherheitskontrollen. Keine separate Anmeldung erforderlich."
+        },
+        "Customization": {
+            "Title": "Auf Ihr Unternehmen Zugeschnitten",
+            "Description": "Admin-Konsole zum Konfigurieren von KI-Agenten, Verwalten von Prompts und Steuern von Funktionen pro Benutzer oder Team. Integration mit Ihrem CRM und internen Systemen."
+        },
+        "Compliance": {
+            "Title": "Unternehmensweite Compliance",
+            "Description": "Entwickelt für regulierte Branchen. Aktivitätsprotokollierung, Audit-Trails und Admin-Kontrollen. Konform mit Schweizer und EU-Datenschutzstandards."
+        }
+    },
+    "UseCases": {
+        "Title": "Entwickelt für Dienstleister",
+        "Description": "Konzipiert für Beratungsunternehmen, Anwaltskanzleien und professionelle Dienstleistungen in der Genferseeregion.",
+        "Legal": {
+            "Title": "Anwaltskanzleien",
+            "Description": "Generieren Sie Kundendokumente, Verträge und rechtliche Korrespondenz. Integration mit Fallverwaltungssystemen für automatisches Ausfüllen von Vorlagen."
+        },
+        "Consulting": {
+            "Title": "Beratungsunternehmen",
+            "Description": "Erstellen Sie Angebote, Berichte und Kundenlieferungen schneller. Pflegen Sie konsistentes Branding und Messaging in allen Dokumenten."
+        },
+        "Finance": {
+            "Title": "Finanzdienstleistungen",
+            "Description": "Erstellen Sie Compliance-Berichte, Kundenkommunikation und Finanzanalysen. Gewährleisten Sie Genauigkeit mit KI-gestützter Faktenprüfung."
+        }
+    },
+    "Pricing": {
+        "Title": "Einfache, Transparente Preisgestaltung",
+        "Description": "Wählen Sie den Plan, der zu Ihrer Teamgröße und Ihren Anforderungen passt.",
+        "Contact": "Kontaktieren Sie uns für Unternehmenspreise und individuelle Bereitstellungsoptionen."
+    },
+    "CTA": {
+        "Title": "Bereit, Ihren Word-Workflow zu Transformieren?",
+        "Description": "Starten Sie mit einer kostenlosen Testversion oder vereinbaren Sie eine Demo, um zu sehen, wie KI Ihren Dokumenterstellungsprozess verbessern kann.",
+        "Demo": "Demo Vereinbaren",
+        "Trial": "Kostenlose Testversion Starten",
+        "Contact": "Vertrieb Kontaktieren"
+    }
+}

@@ -1,0 +1,74 @@
+{
+    "Hero": {
+        "Badge": "IA para Microsoft Word",
+        "Title": "Assistente IA para Word",
+        "Description": "Transforme seu fluxo de trabalho do Word com assistência impulsionada por IA. Projetado para privacidade, integrado perfeitamente ao seu ambiente Microsoft 365 existente."
+    },
+    "Features": {
+        "Title": "Recursos IA Poderosos",
+        "Description": "Tudo que você precisa para escrever melhor, mais rápido e mais inteligente.",
+        "Chat": {
+            "Title": "Assistente de Chat Inteligente",
+            "Description": "Faça perguntas, obtenha sugestões e refine seu conteúdo com conversas impulsionadas por IA diretamente no Word. Respostas contextuais baseadas no seu documento."
+        },
+        "Templates": {
+            "Title": "Preenchimento Inteligente de Modelos",
+            "Description": "Preencha automaticamente modelos com dados de clientes do seu CRM. Gere contratos, propostas e relatórios em segundos com extração de dados impulsionada por IA."
+        },
+        "Suggestions": {
+            "Title": "Sugestões em Linha",
+            "Description": "Assistência de escrita em tempo real com sugestões contextuais enquanto você digita. Melhore tom, clareza e estilo sem sair do seu fluxo de documento."
+        },
+        "Actions": {
+            "Title": "Ações de Um Clique",
+            "Description": "Resuma documentos, traduza conteúdo, ajuste tom ou gere esboços com ações IA pré-configuradas. Personalizável para seu fluxo de trabalho."
+        }
+    },
+    "Benefits": {
+        "Title": "Por Que Escolher Nosso Suplemento Word",
+        "Privacy": {
+            "Title": "Arquitetura Focada em Privacidade",
+            "Description": "Seus documentos permanecem no seu ambiente Microsoft 365. Todo processamento de IA respeita sua soberania de dados. Opções hospedadas na Suíça disponíveis."
+        },
+        "Integration": {
+            "Title": "Integração Microsoft Perfeita",
+            "Description": "Autenticação nativa com Microsoft Entra ID. Funciona com suas políticas Office 365 e controles de segurança existentes. Nenhum login separado necessário."
+        },
+        "Customization": {
+            "Title": "Adaptado ao Seu Negócio",
+            "Description": "Console de administração para configurar agentes IA, gerenciar prompts e controlar recursos por usuário ou equipe. Integre com seu CRM e sistemas internos."
+        },
+        "Compliance": {
+            "Title": "Conformidade de Nível Empresarial",
+            "Description": "Projetado para indústrias regulamentadas. Registro de atividades, trilhas de auditoria e controles administrativos. Conforme com padrões suíços e da UE de proteção de dados."
+        }
+    },
+    "UseCases": {
+        "Title": "Desenvolvido para Provedores de Serviços",
+        "Description": "Projetado para empresas de consultoria, práticas jurídicas e serviços profissionais na região do Lago Lemano.",
+        "Legal": {
+            "Title": "Práticas Jurídicas",
+            "Description": "Gere documentos de clientes, contratos e correspondência jurídica. Integre com sistemas de gestão de casos para preenchimento automático de modelos."
+        },
+        "Consulting": {
+            "Title": "Empresas de Consultoria",
+            "Description": "Crie propostas, relatórios e entregas de clientes mais rápido. Mantenha marca e mensagens consistentes em todos os documentos."
+        },
+        "Finance": {
+            "Title": "Serviços Financeiros",
+            "Description": "Produza relatórios de conformidade, comunicações com clientes e análises financeiras. Garanta precisão com verificação de fatos impulsionada por IA."
+        }
+    },
+    "Pricing": {
+        "Title": "Preços Simples e Transparentes",
+        "Description": "Escolha o plano que se ajusta ao tamanho e necessidades da sua equipe.",
+        "Contact": "Entre em contato para preços empresariais e opções de implantação personalizadas."
+    },
+    "CTA": {
+        "Title": "Pronto para Transformar Seu Fluxo de Trabalho do Word?",
+        "Description": "Comece com uma avaliação gratuita ou agende uma demonstração para ver como a IA pode melhorar seu processo de criação de documentos.",
+        "Demo": "Agendar Demonstração",
+        "Trial": "Iniciar Avaliação Gratuita",
+        "Contact": "Contatar Vendas"
+    }
+}
