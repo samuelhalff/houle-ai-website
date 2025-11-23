@@ -7,19 +7,22 @@ export default function HomePage({
 
   const copy = {
     en: {
-      badge: "Swiss-built AI for Microsoft 365",
-      tagline: "houle — Private AI, right inside Microsoft 365",
-      headline: "AI that lives in your Microsoft tools and stays private.",
+      badge: "AI Products & Consulting for Microsoft 365",
+      tagline: "houle — AI Solutions for Modern Business",
+      headline: "Transform your business with AI products and expert consulting.",
       subtext:
-        "We are creating Office add-ins with AI for Microsoft 365 that feel native to Outlook and Word, plus a Swiss-hosted GPT you control. Based in the Lake Geneva region, we serve clients across Geneva, Lausanne, Bern, Zurich, and Valais. It works with your data, follows your rules, and keeps every conversation private.",
+        "Based in the Lake Geneva region, we offer Swiss-made Office add-ins with AI for Microsoft 365 and professional consulting services. From ready-to-use products to custom AI solutions, we help businesses across Geneva, Lausanne, Bern, Zurich, and Valais leverage AI while keeping data private and secure.",
       highlights: [
         "Office add-ins with AI for Microsoft 365",
-        "Swiss-hosted GPT built for privacy",
-        "Keeps your company data in your control",
+        "AI & Microsoft 365 consulting services",
+        "Swiss-hosted, privacy-first solutions",
       ],
-      productsTitle: "Made for Microsoft 365",
+      productsTitle: "AI Products for Microsoft 365",
       productsBody:
-        "Office add-ins with AI that blend into the tools your teams already open—Outlook and Word first. Pair them with a Swiss-hosted GPT that connects to your data, keeps it in your control, and keeps everyday work simple.",
+        "Office add-ins with AI that blend into Outlook and Word. Pair them with a Swiss-hosted GPT that connects to your data, keeps it in your control, and keeps everyday work simple. Ready to use, built for privacy.",
+      consultingTitle: "Expert AI & Microsoft Consulting",
+      consultingBody:
+        "Custom AI solutions, Microsoft 365 optimization, and strategic consulting. We help you implement AI, integrate systems, and transform workflows. From proof-of-concept to production deployment.",
       securityTitle: "Trusted by design",
       securityBody:
         "Built with data privacy first. Your content stays where it belongs, conversations are protected, and admins keep the switches for what is shared and what is not.",
@@ -43,55 +46,64 @@ export default function HomePage({
         "Conçu avec la confidentialité en premier. Vos contenus restent à leur place, les échanges sont protégés et les administrateurs gardent la main sur ce qui est partagé ou non.",
     },
     de: {
-      badge: "Schweizer KI für Microsoft 365",
-      tagline: "houle — Private KI, direkt in Microsoft 365",
-      headline: "KI, die in Ihren Microsoft-Tools lebt und privat bleibt.",
+      badge: "KI-Produkte & Beratung für Microsoft 365",
+      tagline: "houle — KI-Lösungen für Moderne Unternehmen",
+      headline: "Transformieren Sie Ihr Unternehmen mit KI-Produkten und Expertenberatung.",
       subtext:
-        "Wir entwickeln Office-Add-Ins mit KI für Microsoft 365, die sich nativ in Outlook und Word anfühlen, plus einen in der Schweiz gehosteten GPT, den Sie kontrollieren. Es funktioniert mit Ihren Daten, folgt Ihren Regeln und hält jede Konversation privat.",
+        "Mit Sitz in der Genferseeregion bieten wir in der Schweiz entwickelte Office-Add-Ins mit KI für Microsoft 365 und professionelle Beratungsdienstleistungen. Von gebrauchsfertigen Produkten bis zu massgeschneiderten KI-Lösungen helfen wir Unternehmen in Genf, Lausanne, Bern, Zürich und Wallis, KI zu nutzen und dabei Daten privat und sicher zu halten.",
       highlights: [
         "Office-Add-Ins mit KI für Microsoft 365",
-        "In der Schweiz gehosteter GPT für Datenschutz",
-        "Ihre Unternehmensdaten bleiben unter Ihrer Kontrolle",
+        "KI & Microsoft 365 Beratungsdienstleistungen",
+        "Schweizer Lösungen, Datenschutz zuerst",
       ],
-      productsTitle: "Für Microsoft 365 entwickelt",
+      productsTitle: "KI-Produkte für Microsoft 365",
       productsBody:
-        "Office-Add-Ins mit KI, die sich in die Tools integrieren, die Ihre Teams bereits nutzen—Outlook und Word zuerst. Kombinieren Sie sie mit einem in der Schweiz gehosteten GPT, der sich mit Ihren Daten verbindet, sie unter Kontrolle hält und die tägliche Arbeit vereinfacht.",
+        "Office-Add-Ins mit KI, die sich in Outlook und Word integrieren. Kombinieren Sie sie mit einem in der Schweiz gehosteten GPT, der sich mit Ihren Daten verbindet, sie unter Kontrolle hält und die tägliche Arbeit vereinfacht. Sofort einsatzbereit, für Datenschutz entwickelt.",
+      consultingTitle: "Experten KI & Microsoft Beratung",
+      consultingBody:
+        "Massgeschneiderte KI-Lösungen, Microsoft 365-Optimierung und strategische Beratung. Wir helfen Ihnen bei der Implementierung von KI, der Integration von Systemen und der Transformation von Workflows. Vom Proof-of-Concept bis zur Produktionsbereitstellung.",
       securityTitle: "Vertrauenswürdig nach Design",
       securityBody:
         "Entwickelt mit Datenschutz an erster Stelle. Ihre Inhalte bleiben, wo sie hingehören, Gespräche sind geschützt und Administratoren behalten die Kontrolle darüber, was geteilt wird und was nicht.",
     },
     es: {
-      badge: "IA suiza para Microsoft 365",
-      tagline: "houle — IA privada, directamente en Microsoft 365",
-      headline: "IA que vive en tus herramientas Microsoft y se mantiene privada.",
+      badge: "Productos IA & Consultoría para Microsoft 365",
+      tagline: "houle — Soluciones IA para Empresas Modernas",
+      headline: "Transforma tu empresa con productos IA y consultoría experta.",
       subtext:
-        "Estamos creando complementos de Office con IA para Microsoft 365 que se sienten nativos en Outlook y Word, además de un GPT alojado en Suiza que tú controlas. Funciona con tus datos, sigue tus reglas y mantiene cada conversación privada.",
+        "Con sede en la región del Lago Lemán, ofrecemos complementos de Office con IA para Microsoft 365 fabricados en Suiza y servicios de consultoría profesional. Desde productos listos para usar hasta soluciones IA personalizadas, ayudamos a empresas en Ginebra, Lausana, Berna, Zúrich y Valais a aprovechar la IA manteniendo los datos privados y seguros.",
       highlights: [
         "Complementos de Office con IA para Microsoft 365",
-        "GPT alojado en Suiza diseñado para privacidad",
-        "Mantén los datos de tu empresa bajo tu control",
+        "Servicios de consultoría en IA & Microsoft 365",
+        "Soluciones suizas, privacidad primero",
       ],
-      productsTitle: "Hecho para Microsoft 365",
+      productsTitle: "Productos IA para Microsoft 365",
       productsBody:
-        "Complementos de Office con IA que se integran en las herramientas que tus equipos ya usan—Outlook y Word primero. Combínalos con un GPT alojado en Suiza que se conecta a tus datos, los mantiene bajo tu control y simplifica el trabajo diario.",
+        "Complementos de Office con IA que se integran en Outlook y Word. Combínalos con un GPT alojado en Suiza que se conecta a tus datos, los mantiene bajo tu control y simplifica el trabajo diario. Listos para usar, diseñados para privacidad.",
+      consultingTitle: "Consultoría Experta en IA & Microsoft",
+      consultingBody:
+        "Soluciones IA personalizadas, optimización de Microsoft 365 y consultoría estratégica. Te ayudamos a implementar IA, integrar sistemas y transformar flujos de trabajo. Desde prueba de concepto hasta implementación en producción.",
       securityTitle: "Confiable por diseño",
       securityBody:
         "Desarrollado con la privacidad de datos primero. Tu contenido permanece donde debe estar, las conversaciones están protegidas y los administradores mantienen el control sobre qué se comparte y qué no.",
     },
     pt: {
-      badge: "IA suíça para Microsoft 365",
-      tagline: "houle — IA privada, direto no Microsoft 365",
-      headline: "IA que vive nas suas ferramentas Microsoft e permanece privada.",
+      badge: "Produtos IA & Consultoria para Microsoft 365",
+      tagline: "houle — Soluções IA para Empresas Modernas",
+      headline: "Transforme sua empresa com produtos IA e consultoria especializada.",
       subtext:
-        "Estamos criando suplementos do Office com IA para Microsoft 365 que parecem nativos no Outlook e Word, além de um GPT hospedado na Suíça que você controla. Funciona com seus dados, segue suas regras e mantém cada conversa privada.",
+        "Sediados na região do Lago Lemano, oferecemos suplementos do Office com IA para Microsoft 365 fabricados na Suíça e serviços de consultoria profissional. De produtos prontos para uso a soluções IA personalizadas, ajudamos empresas em Genebra, Lausanne, Berna, Zurique e Valais a aproveitar IA mantendo os dados privados e seguros.",
       highlights: [
         "Suplementos do Office com IA para Microsoft 365",
-        "GPT hospedado na Suíça focado em privacidade",
-        "Mantenha os dados da sua empresa sob seu controle",
+        "Serviços de consultoria em IA & Microsoft 365",
+        "Soluções suíças, privacidade primeiro",
       ],
-      productsTitle: "Feito para Microsoft 365",
+      productsTitle: "Produtos IA para Microsoft 365",
       productsBody:
-        "Suplementos do Office com IA que se integram às ferramentas que suas equipes já usam—Outlook e Word primeiro. Combine-os com um GPT hospedado na Suíça que se conecta aos seus dados, os mantém sob seu controle e simplifica o trabalho diário.",
+        "Suplementos do Office com IA que se integram ao Outlook e Word. Combine-os com um GPT hospedado na Suíça que se conecta aos seus dados, os mantém sob seu controle e simplifica o trabalho diário. Prontos para usar, projetados para privacidade.",
+      consultingTitle: "Consultoria Especializada em IA & Microsoft",
+      consultingBody:
+        "Soluções IA personalizadas, otimização do Microsoft 365 e consultoria estratégica. Ajudamos você a implementar IA, integrar sistemas e transformar fluxos de trabalho. Da prova de conceito à implantação em produção.",
       securityTitle: "Confiável por design",
       securityBody:
         "Desenvolvido com privacidade de dados em primeiro lugar. Seu conteúdo permanece onde deve estar, conversas são protegidas e administradores mantêm o controle sobre o que é compartilhado e o que não é.",
@@ -135,7 +147,7 @@ export default function HomePage({
         </div>
       </section>
 
-      <section className="grid gap-6 sm:grid-cols-2">
+      <section className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         <div className="group rounded-2xl border bg-gradient-to-br from-primary/[0.06] via-primary/[0.03] to-card p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/30">
           <p className="text-sm font-semibold text-primary uppercase tracking-[0.14em]">
             Products
@@ -145,7 +157,16 @@ export default function HomePage({
             {t.productsBody}
           </p>
         </div>
-        <div className="group rounded-2xl border bg-gradient-to-br from-accent/[0.08] via-accent/[0.04] to-card p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:border-accent/30">
+        <div className="group rounded-2xl border bg-gradient-to-br from-blue-500/[0.06] via-blue-500/[0.03] to-card p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:border-blue-500/30">
+          <p className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-[0.14em]">
+            Consulting
+          </p>
+          <h2 className="mt-2 text-xl font-bold">{t.consultingTitle}</h2>
+          <p className="mt-3 text-muted-foreground">
+            {t.consultingBody}
+          </p>
+        </div>
+        <div className="group rounded-2xl border bg-gradient-to-br from-accent/[0.08] via-accent/[0.04] to-card p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:border-accent/30 sm:col-span-2 lg:col-span-1">
           <p className="text-sm font-semibold text-primary uppercase tracking-[0.14em]">
             Security & Privacy
           </p>
