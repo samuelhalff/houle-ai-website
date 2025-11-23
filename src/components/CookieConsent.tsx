@@ -287,6 +287,7 @@ export default function CookieConsent({ nonce, locale = "fr", labels }: Props) {
                     href={legalCookiesHref}
                     className="underline"
                     prefetch={false}
+                    aria-label={`${labels.LearnMore} - ${labels.Title}`}
                   >
                     {labels.LearnMore}
                   </Link>
