@@ -36,6 +36,34 @@
       "Title": "Formación y acompañamiento",
       "Text": "No nos contentamos con implementar soluciones, también formamos a sus equipos para que puedan mantenerlas y hacerlas evolucionar. Nuestras sesiones de formación están adaptadas al nivel de cada uno e incluyen documentación clara. El objetivo es hacer su empresa autónoma sabiendo que permanecemos disponibles para las necesidades más complejas."
     },
+    "Azure": {
+      "Title": "Infraestructura y servicios en la nube Azure",
+      "Intro": "Más allá de las herramientas de productividad de Microsoft 365, Azure ofrece una plataforma en la nube completa para alojar sus aplicaciones, gestionar sus datos y automatizar sus procesos empresariales. Nuestras soluciones Azure están alojadas en centros de datos suizos (Switzerland North), garantizando el cumplimiento de la LPD suiza y el RGPD para empresas de Ginebra que requieren residencia de datos en Suiza.",
+      "Functions": {
+        "Title": "Azure Functions: informática sin servidor",
+        "Text": "Azure Functions permite ejecutar código basado en eventos sin gestionar infraestructura de servidor. Utilizamos este servicio para crear microservicios reactivos que se activan en respuesta a eventos: carga de archivos en SharePoint, mensajes en colas, solicitudes HTTP o activadores de Power Automate. Esta arquitectura sin servidor reduce los costos ya que solo paga por el tiempo de ejecución real, y escala automáticamente según la carga. Es ideal para procesamiento de datos, integraciones de API y flujos de trabajo de automatización empresarial."
+      },
+      "LogicApps": {
+        "Title": "Logic Apps: orquestación empresarial",
+        "Text": "Azure Logic Apps ofrece un diseñador visual para crear flujos de trabajo de integración complejos entre sistemas en la nube y locales. Con más de 400 conectores integrados (SAP, Salesforce, SQL Server, SharePoint, etc.), construimos puentes entre sus aplicaciones empresariales sin codificar integraciones personalizadas. Logic Apps gestiona automáticamente reintentos, monitorización y escalabilidad, permitiéndole concentrarse en la lógica empresarial en lugar de la infraestructura técnica."
+      },
+      "Storage": {
+        "Title": "Almacenamiento Azure: datos estructurados y no estructurados",
+        "Text": "Azure Storage proporciona cuatro tipos de almacenamiento en la nube: Blob (archivos y objetos), File (recursos compartidos SMB), Table (NoSQL clave-valor) y Queue (mensajes asíncronos). Diseñamos arquitecturas que aprovechan estos servicios para almacenar documentos, gestionar datos de aplicaciones, implementar colas de procesamiento y archivar con estrategias de ciclo de vida automáticas. Todo está cifrado en reposo y en tránsito, con opciones de replicación geográfica dentro de los centros de datos suizos."
+      },
+      "SQL": {
+        "Title": "Bases de datos Azure SQL y análisis",
+        "Text": "Azure ofrece una gama completa de servicios de datos: Azure SQL Database para bases de datos relacionales administradas, Azure Synapse Analytics para almacenamiento de datos y análisis a gran escala, y Azure Data Lake para almacenar volúmenes masivos de datos sin procesar. Implementamos estas soluciones para empresas de Ginebra que requieren rendimiento, alta disponibilidad y residencia de datos en Suiza. Las copias de seguridad automáticas, la replicación y la escalabilidad elástica son gestionadas por Azure."
+      },
+      "Security": {
+        "Title": "Seguridad e identidad Azure",
+        "Text": "Azure Active Directory (Azure AD) es la base de identidad para todos sus servicios en la nube y aplicaciones. Configuramos autenticación multifactor, acceso condicional basado en riesgos y gobernanza de identidades. Azure Key Vault protege sus secretos, certificados y claves de cifrado. Azure Security Center supervisa continuamente sus recursos para detectar amenazas y recomendar mejoras de seguridad. Estos servicios garantizan el cumplimiento de los requisitos regulatorios suizos."
+      },
+      "DevOps": {
+        "Title": "Azure DevOps y automatización",
+        "Text": "Azure DevOps proporciona un conjunto completo de herramientas para el desarrollo de software: repositorios Git, pipelines CI/CD, gestión de artefactos y tableros de seguimiento. Automatizamos el despliegue de sus aplicaciones con pipelines que prueban, validan e implementan su código a través de múltiples entornos. La integración con GitHub Actions también permite orquestar flujos de trabajo complejos. Esta automatización reduce errores humanos y acelera la puesta en producción."
+      }
+    },
     "IntegrationFlows": {
       "Title": "Flujos de integración entre herramientas Microsoft",
       "Intro": "La verdadera fuerza del ecosistema Microsoft radica en la capacidad de conectar diferentes herramientas para crear flujos de trabajo inteligentes. Aquí hay algunos patrones de integración comunes que implementamos para nuestros clientes en Ginebra:",

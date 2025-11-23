@@ -36,6 +36,34 @@
             "Title": "Schulung und Unterstützung",
             "Text": "Wir implementieren nicht nur Lösungen, sondern schulen auch Ihre Teams, damit sie diese pflegen und weiterentwickeln können. Unsere Schulungen sind auf das Niveau jedes Einzelnen abgestimmt und beinhalten klare Dokumentation. Das Ziel ist es, Ihr Unternehmen autonom zu machen, während wir für komplexere Bedürfnisse verfügbar bleiben."
         },
+        "Azure": {
+            "Title": "Azure Cloud-Infrastruktur und -Dienste",
+            "Intro": "Über die Microsoft 365-Produktivitätswerkzeuge hinaus bietet Azure eine vollständige Cloud-Plattform zum Hosten Ihrer Anwendungen, zur Verwaltung Ihrer Daten und zur Automatisierung Ihrer Geschäftsprozesse. Unsere Azure-Lösungen werden in Schweizer Rechenzentren (Switzerland North) gehostet und gewährleisten die Einhaltung des Schweizer DSG und der DSGVO für Genfer Unternehmen, die eine Datenresidenz in der Schweiz benötigen.",
+            "Functions": {
+                "Title": "Azure Functions: Serverless Computing",
+                "Text": "Azure Functions ermöglicht die Ausführung ereignisgesteuerter Code ohne Verwaltung von Serverinfrastruktur. Wir nutzen diesen Service, um reaktive Microservices zu erstellen, die auf Ereignisse reagieren: Datei-Uploads in SharePoint, Nachrichten in Warteschlangen, HTTP-Anfragen oder Power Automate-Trigger. Diese Serverless-Architektur reduziert die Kosten, da Sie nur für die tatsächliche Ausführungszeit zahlen, und sie skaliert automatisch je nach Last. Ideal für Datenverarbeitung, API-Integrationen und Business-Automatisierung."
+            },
+            "LogicApps": {
+                "Title": "Logic Apps: Unternehmensorchestrierung",
+                "Text": "Azure Logic Apps bietet einen visuellen Designer zum Erstellen komplexer Integrationsworkflows zwischen Cloud- und On-Premise-Systemen. Mit über 400 integrierten Konnektoren (SAP, Salesforce, SQL Server, SharePoint usw.) bauen wir Brücken zwischen Ihren Geschäftsanwendungen ohne Programmierung benutzerdefinierter Integrationen. Logic Apps verwalten automatisch Wiederholungsversuche, Überwachung und Skalierbarkeit, sodass Sie sich auf die Geschäftslogik statt auf die technische Infrastruktur konzentrieren können."
+            },
+            "Storage": {
+                "Title": "Azure Storage: Strukturierte und unstrukturierte Daten",
+                "Text": "Azure Storage bietet vier Arten von Cloud-Speicher: Blob (Dateien und Objekte), File (SMB-Freigaben), Table (NoSQL Schlüssel-Wert), und Queue (asynchrone Nachrichten). Wir entwerfen Architekturen, die diese Services nutzen, um Dokumente zu speichern, Anwendungsdaten zu verwalten, Verarbeitungswarteschlangen zu implementieren und mit automatischen Lebenszyklusstrategien zu archivieren. Alles ist im Ruhezustand und während der Übertragung verschlüsselt, mit Optionen für geografische Replikation innerhalb der Schweizer Rechenzentren."
+            },
+            "SQL": {
+                "Title": "Azure SQL-Datenbanken und Analytics",
+                "Text": "Azure bietet eine vollständige Palette von Datendiensten: Azure SQL Database für verwaltete relationale Datenbanken, Azure Synapse Analytics für Data Warehousing und umfangreiche Analysen, und Azure Data Lake zum Speichern massiver Mengen von Rohdaten. Wir implementieren diese Lösungen für Genfer Unternehmen, die Leistung, hohe Verfügbarkeit und Datenresidenz in der Schweiz benötigen. Automatische Backups, Replikation und elastische Skalierbarkeit werden von Azure verwaltet."
+            },
+            "Security": {
+                "Title": "Azure Sicherheit und Identität",
+                "Text": "Azure Active Directory (Azure AD) ist die Identitätsgrundlage für alle Ihre Cloud-Dienste und Anwendungen. Wir konfigurieren Multi-Faktor-Authentifizierung, risikobasierter bedingter Zugriff und Identitäts-Governance. Azure Key Vault schützt Ihre Geheimnisse, Zertifikate und Verschlüsselungsschlüssel. Azure Security Center überwacht kontinuierlich Ihre Ressourcen, um Bedrohungen zu erkennen und Sicherheitsverbesserungen zu empfehlen. Diese Dienste gewährleisten die Einhaltung der Schweizer Regulierungsanforderungen."
+            },
+            "DevOps": {
+                "Title": "Azure DevOps und Automatisierung",
+                "Text": "Azure DevOps bietet eine vollständige Suite von Tools für die Softwareentwicklung: Git-Repositories, CI/CD-Pipelines, Artefaktverwaltung und Tracking-Boards. Wir automatisieren die Bereitstellung Ihrer Anwendungen mit Pipelines, die Ihren Code über mehrere Umgebungen testen, validieren und bereitstellen. Die Integration mit GitHub Actions ermöglicht auch die Orchestrierung komplexer Workflows. Diese Automatisierung reduziert menschliche Fehler und beschleunigt die Produktion."
+            }
+        },
         "IntegrationFlows": {
             "Title": "Integrationsflüsse zwischen Microsoft-Tools",
             "Intro": "Die wahre Stärke des Microsoft-Ökosystems liegt in der Fähigkeit, verschiedene Werkzeuge zu verbinden, um intelligente Workflows zu erstellen. Hier sind einige gängige Integrationsmuster, die wir für unsere Genfer Kunden bereitstellen:",
