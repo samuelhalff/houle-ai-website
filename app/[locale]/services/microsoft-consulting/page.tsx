@@ -134,7 +134,7 @@ const MicrosoftConsultingPage = async ({
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
               <ResponsiveImage
-                src="/assets/hero/services/microsoft-consulting-hero.jpg"
+                src="/assets/hero/services/microsoft-consulting-hero.avif"
                 alt={
                   params.locale === "fr"
                     ? "Professionnel utilisant Microsoft 365 pour la productivité"
@@ -150,7 +150,7 @@ const MicrosoftConsultingPage = async ({
                 height={1200}
                 priority
                 className="object-cover w-full h-full"
-                srcSet="/assets/hero/services/microsoft-consulting-hero-mobile.jpg 800w, /assets/hero/services/microsoft-consulting-hero.jpg 1600w"
+                srcSet="/assets/hero/services/microsoft-consulting-hero-mobile.avif 800w, /assets/hero/services/microsoft-consulting-hero.avif 1600w"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
