@@ -283,13 +283,13 @@ const MicrosoftConsultingPage = async ({
           </section>
 
           {/* Integration Flows Section */}
-          {tService("IntegrationFlows.Title") && (
+          {tService("Presentation.IntegrationFlows.Title") && (
             <section className="mb-16">
               <h2 className="text-3xl font-bold mb-6">
-                {tService("IntegrationFlows.Title") as string}
+                {tService("Presentation.IntegrationFlows.Title") as string}
               </h2>
               <p className="text-lg leading-relaxed text-muted-foreground mb-8">
-                {tService("IntegrationFlows.Intro") as string}
+                {tService("Presentation.IntegrationFlows.Intro") as string}
               </p>
               <div className="space-y-8">
                 {[
@@ -301,10 +301,18 @@ const MicrosoftConsultingPage = async ({
                 ].map((key) => (
                   <div key={key} className="pl-6 border-l-2 border-primary/30">
                     <h3 className="text-xl font-semibold mb-3">
-                      {tService(`IntegrationFlows.${key}.Title`) as string}
+                      {
+                        tService(
+                          `Presentation.IntegrationFlows.${key}.Title`
+                        ) as string
+                      }
                     </h3>
                     <p className="text-lg leading-relaxed text-muted-foreground">
-                      {tService(`IntegrationFlows.${key}.Text`) as string}
+                      {
+                        tService(
+                          `Presentation.IntegrationFlows.${key}.Text`
+                        ) as string
+                      }
                     </p>
                   </div>
                 ))}
@@ -313,17 +321,17 @@ const MicrosoftConsultingPage = async ({
           )}
 
           {/* Real Cases Section */}
-          {tService("RealCases.Title") && (
+          {tService("Presentation.RealCases.Title") && (
             <section className="mb-16">
               <h2 className="text-3xl font-bold mb-6">
-                {tService("RealCases.Title") as string}
+                {tService("Presentation.RealCases.Title") as string}
               </h2>
               <p className="text-lg leading-relaxed text-muted-foreground mb-8">
-                {tService("RealCases.Intro") as string}
+                {tService("Presentation.RealCases.Intro") as string}
               </p>
               <div className="grid gap-6">
                 {(() => {
-                  const cases = tService("RealCases.Cases");
+                  const cases = tService("Presentation.RealCases.Cases");
                   if (Array.isArray(cases)) {
                     return cases.map((item: any, index: number) => (
                       <Link

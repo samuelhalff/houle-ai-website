@@ -268,22 +268,22 @@ const AIConsultingPage = async ({ params }: { params: { locale: string } }) => {
           </section>
 
           {/* Azure AI Section */}
-          {tService("AzureAI.Title") && (
+          {tService("Presentation.AzureAI.Title") && (
             <section className="mb-16">
               <h2 className="text-3xl font-bold mb-6">
-                {tService("AzureAI.Title") as string}
+                {tService("Presentation.AzureAI.Title") as string}
               </h2>
               <p className="text-lg leading-relaxed text-muted-foreground mb-8">
-                {tService("AzureAI.Intro") as string}
+                {tService("Presentation.AzureAI.Intro") as string}
               </p>
               <div className="space-y-8">
                 {["Models", "Indexing", "Agents", "Grounding"].map((key) => (
                   <div key={key} className="pl-6 border-l-2 border-primary/30">
                     <h3 className="text-xl font-semibold mb-3">
-                      {tService(`AzureAI.${key}.Title`) as string}
+                      {tService(`Presentation.AzureAI.${key}.Title`) as string}
                     </h3>
                     <p className="text-lg leading-relaxed text-muted-foreground">
-                      {tService(`AzureAI.${key}.Text`) as string}
+                      {tService(`Presentation.AzureAI.${key}.Text`) as string}
                     </p>
                   </div>
                 ))}
@@ -292,17 +292,17 @@ const AIConsultingPage = async ({ params }: { params: { locale: string } }) => {
           )}
 
           {/* Use Cases Section */}
-          {tService("UseCases.Title") && (
+          {tService("Presentation.UseCases.Title") && (
             <section className="mb-16">
               <h2 className="text-3xl font-bold mb-6">
-                {tService("UseCases.Title") as string}
+                {tService("Presentation.UseCases.Title") as string}
               </h2>
               <p className="text-lg leading-relaxed text-muted-foreground mb-8">
-                {tService("UseCases.Intro") as string}
+                {tService("Presentation.UseCases.Intro") as string}
               </p>
               <div className="grid gap-6">
                 {(() => {
-                  const cases = tService("UseCases.Cases");
+                  const cases = tService("Presentation.UseCases.Cases");
                   if (Array.isArray(cases)) {
                     return cases.map((item: any, index: number) => (
                       <Link
