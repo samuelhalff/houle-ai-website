@@ -44,12 +44,12 @@ export default async function LocaleLayout({
           products: [
             {
               href: "/products/word-addin",
-              title: "Word Add-in",
+              title: "Add-in Word",
               description: "Assistant IA pour Microsoft Word",
             },
             {
               href: "/products/outlook-addin",
-              title: "Outlook Add-in",
+              title: "Add-in Outlook",
               description: "Assistant IA pour Outlook",
             },
             {
@@ -92,7 +92,7 @@ export default async function LocaleLayout({
             {
               href: "/products/outlook-addin",
               title: "Outlook Add-in",
-              description: "AI assistant for Outlook",
+              description: "AI assistant for Microsoft Outlook",
             },
             {
               href: "/products/swiss-gpt",
