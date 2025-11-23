@@ -187,6 +187,7 @@ jobs:
           echo "[restart] Starting new process (refreshing symlink each restart)..."
           sshpass -p "$PASS" ssh -p "$PORT" -o StrictHostKeyChecking=no "$USER@$HOST" '
             set -e
+            # Supervisor loop: re-enter current symlink on every iteration so new releases apply
             nohup bash -lc "while true; do cd /srv/customer/sites/houle.ai/current && node server.js >> server.out 2>&1; echo \"Node crashed, restarting...\" >> server.out; sleep 1; done" &
           ' || echo "[restart] SSH command completed"
 
