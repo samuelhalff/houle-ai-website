@@ -66,32 +66,32 @@
             "Cases": [
                 {
                     "Title": "Automatische Aufgabenzuweisung zwischen SharePoint und Teams",
-                    "Slug": "task-allocation-sharepoint-teams",
+                    "Slug": "allocation-taches-dynamique-teams-planner",
                     "Summary": "Ein Genfer Unternehmen musste Aufgaben basierend auf Projektdringlichkeit und -typ auf mehrere Teams verteilen. Wir haben eine SharePoint-Liste erstellt, die automatisch Aufgaben den richtigen Teams-Kanälen zuweist und verantwortliche Personen benachrichtigt. Jedes Team verfolgt seine Zuweisungen in einem benutzerdefinierten Dashboard, und Power Automate aktualisiert Status in Echtzeit."
                 },
                 {
                     "Title": "Mehrstufiger Workflow zur Spesengenehmigung",
-                    "Slug": "expense-approval-power-automate",
+                    "Slug": "validation-notes-frais-power-automate-approvals",
                     "Summary": "Die Verwaltung von Spesennotizen in einem Genfer KMU erfolgte per E-Mail und Excel, was zu Verzögerungen und Fehlern führte. Wir haben einen Power Automate-Workflow mit mehrstufigen bedingten Genehmigungen, automatischen Benachrichtigungen und Archivierung in SharePoint bereitgestellt. Die Genehmigungszeit ist von 5 Tagen auf weniger als 24 Stunden gesunken."
                 },
                 {
                     "Title": "Kundenonboarding-Portal in SharePoint",
-                    "Slug": "client-onboarding-sharepoint",
+                    "Slug": "onboarding-clients-automatise-sharepoint-forms",
                     "Summary": "Eine Beratungsfirma wollte ihren Kundenonboarding-Prozess digitalisieren. Wir haben ein sicheres SharePoint-Portal mit benutzerdefinierten Formularen (PowerApps), automatisierter Dokumentenverwaltung und einem Power BI-Dashboard zur Fortschrittsverfolgung erstellt. Kunden füllen ihre Informationen online aus, und das Team erhält sofortige Benachrichtigungen."
                 },
                 {
                     "Title": "Echtzeit-Projekt-Dashboard in Power BI",
-                    "Slug": "realtime-project-dashboard-powerbi",
+                    "Slug": "tableau-bord-projets-power-bi-project",
                     "Summary": "Ein Genfer Industrieunternehmen verfolgte seine Projekte über verstreute Excel-Dateien. Wir haben alles in SharePoint mit einem Power BI-Dashboard zentralisiert, das Prioritäten, Verzögerungen und Budgets in Echtzeit anzeigt. Abteilungsleiter können nach Projekt, Kunde oder Manager filtern, um schnelle Entscheidungen zu treffen."
                 },
                 {
                     "Title": "Vertragsverwaltung in SharePoint mit SPFx",
-                    "Slug": "contract-management-sharepoint-spfx",
+                    "Slug": "gestion-contrats-spfx-alertes-metadata",
                     "Summary": "Ein Dienstleistungsunternehmen benötigte eine zentrale Lösung zur Verwaltung seiner Verträge (Fristen, Verlängerungen, Unterschriften). Wir haben eine SharePoint-Anwendung mit benutzerdefinierten Oberflächen (SPFx) für Suchen, automatische Warnungen vor Fristablauf und Integration mit DocuSign für elektronische Unterschriften erstellt. Alles ist über Teams zugänglich."
                 },
                 {
                     "Title": "Genehmigungsworkflow mit Adaptive Cards in Teams",
-                    "Slug": "approval-workflow-adaptive-cards-teams",
+                    "Slug": "workflows-approbation-multi-niveaux-adaptive-cards",
                     "Summary": "Ein Genfer Logistikunternehmen validierte seine Lieferbestellungen per E-Mail. Wir haben den gesamten Prozess mit Power Automate automatisiert: Wenn eine Anfrage in SharePoint erstellt wird, wird eine Adaptive Card zur Validierung an Teams gesendet. Genehmiger können direkt aus Teams akzeptieren oder ablehnen, mit Kommentaren und automatischen Benachrichtigungen."
                 }
             ]

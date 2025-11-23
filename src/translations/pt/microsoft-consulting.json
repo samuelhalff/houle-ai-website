@@ -66,32 +66,32 @@
       "Cases": [
         {
           "Title": "Atribuição automática de tarefas entre SharePoint e Teams",
-          "Slug": "task-allocation-sharepoint-teams",
+          "Slug": "allocation-taches-dynamique-teams-planner",
           "Summary": "Uma empresa de Genebra precisava distribuir tarefas entre várias equipes com base na urgência e tipo de projeto. Criamos uma lista do SharePoint que atribui automaticamente tarefas aos canais corretos do Teams e notifica as pessoas responsáveis. Cada equipe rastreia suas atribuições em um painel personalizado, e o Power Automate atualiza os status em tempo real."
         },
         {
           "Title": "Fluxo de aprovação multinível de despesas",
-          "Slug": "expense-approval-power-automate",
+          "Slug": "validation-notes-frais-power-automate-approvals",
           "Summary": "A gestão de notas de despesas em uma PME de Genebra era feita por e-mail e Excel, causando atrasos e erros. Implantamos um fluxo de trabalho do Power Automate com aprovações condicionais multiníveis, notificações automáticas e arquivamento no SharePoint. O tempo de aprovação caiu de 5 dias para menos de 24 horas."
         },
         {
           "Title": "Portal de integração de clientes no SharePoint",
-          "Slug": "client-onboarding-sharepoint",
+          "Slug": "onboarding-clients-automatise-sharepoint-forms",
           "Summary": "Uma firma de consultoria queria digitalizar seu processo de integração de clientes. Criamos um portal seguro do SharePoint com formulários personalizados (PowerApps), gestão automatizada de documentos e um painel do Power BI para acompanhamento do progresso. Os clientes preenchem suas informações online, e a equipe recebe notificações instantâneas."
         },
         {
           "Title": "Painel de projetos em tempo real no Power BI",
-          "Slug": "realtime-project-dashboard-powerbi",
+          "Slug": "tableau-bord-projets-power-bi-project",
           "Summary": "Uma empresa industrial de Genebra rastreava seus projetos através de arquivos Excel dispersos. Centralizamos tudo no SharePoint com um painel do Power BI que exibe prioridades, atrasos e orçamentos em tempo real. Os chefes de departamento podem filtrar por projeto, cliente ou gerente para tomar decisões rápidas."
         },
         {
           "Title": "Gestão de contratos no SharePoint com SPFx",
-          "Slug": "contract-management-sharepoint-spfx",
+          "Slug": "gestion-contrats-spfx-alertes-metadata",
           "Summary": "Uma empresa de serviços precisava de uma solução central para gerenciar seus contratos (prazos, renovações, assinaturas). Construímos um aplicativo do SharePoint com interfaces personalizadas (SPFx) para buscas, alertas automáticos antes de vencimentos de prazos e integração com DocuSign para assinaturas eletrônicas. Tudo é acessível a partir do Teams."
         },
         {
           "Title": "Fluxo de aprovação com Adaptive Cards no Teams",
-          "Slug": "approval-workflow-adaptive-cards-teams",
+          "Slug": "workflows-approbation-multi-niveaux-adaptive-cards",
           "Summary": "Uma empresa de logística de Genebra validava seus pedidos de suprimentos por e-mail. Automatizamos todo o processo com o Power Automate: quando uma solicitação é criada no SharePoint, um Adaptive Card é enviado ao Teams para validação. Os aprovadores podem aceitar ou recusar diretamente do Teams, com comentários e notificações automáticas."
         }
       ]
