@@ -356,5 +356,8 @@
         "Title": "¿Preguntas?",
         "Description": "Nuestros expertos están aquí para ayudarle a integrar la IA en su empresa.",
         "ButtonText": "Contáctenos"
-    }
+    },
+    "ReadingTime": "Tiempo de lectura",
+    "Minutes": " min",
+    "Words": " palabras"
 }

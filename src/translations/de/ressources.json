@@ -356,5 +356,8 @@
         "Title": "Fragen?",
         "Description": "Unsere Experten helfen Ihnen gerne bei der Integration von KI in Ihr Unternehmen.",
         "ButtonText": "Kontaktieren Sie uns"
-    }
+    },
+    "ReadingTime": "Lesezeit",
+    "Minutes": " Min",
+    "Words": " Wörter"
 }

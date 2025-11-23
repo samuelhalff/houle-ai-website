@@ -356,5 +356,8 @@
         "Title": "Questions?",
         "Description": "Our experts are here to help you integrate AI into your business.",
         "ButtonText": "Contact us"
-    }
+    },
+    "ReadingTime": "Reading time",
+    "Minutes": " min",
+    "Words": " words"
 }
