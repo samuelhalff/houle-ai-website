@@ -18,6 +18,7 @@ const servicePaths = [
 
 // Product routes
 const productPaths = [
+  "/products",
   "/products/word-addin",
   "/products/outlook-addin",
   "/products/swiss-gpt",
