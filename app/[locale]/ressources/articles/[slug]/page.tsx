@@ -276,8 +276,9 @@ export default async function ArticlePage({ params }: Params) {
         )}
         {reading && (
           <p>
-            {ressources.ReadingTime}: {reading.minutes} {ressources.Minutes} (
-            {reading.words} {ressources.Words})
+            {ressources.ReadingTime}: {reading.minutes}{" "}
+            {ressources.Minutes} ({reading.words}{" "}
+            {ressources.Words as string})
           </p>
         )}
       </div>
