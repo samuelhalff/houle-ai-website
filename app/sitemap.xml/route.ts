@@ -11,6 +11,7 @@ const staticPaths = ["/", "/contact"];
 
 // Service routes
 const servicePaths = [
+  "/services",
   "/services/ai-consulting",
   "/services/microsoft-consulting",
 ];
