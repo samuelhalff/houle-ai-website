@@ -259,6 +259,94 @@ const MicrosoftConsultingPage = async ({
             </div>
           </section>
 
+          {/* Integration Flows Section */}
+          {tService("IntegrationFlows.Title") && (
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold mb-6">
+                {tService("IntegrationFlows.Title") as string}
+              </h2>
+              <p className="text-lg leading-relaxed text-muted-foreground mb-8">
+                {tService("IntegrationFlows.Intro") as string}
+              </p>
+              <div className="space-y-8">
+                {[
+                  "SharePointPowerBI",
+                  "PowerAutomateSPFx",
+                  "TeamsSharePoint",
+                  "SPFxAzureFunctions",
+                  "PowerBIEmbedded",
+                ].map((key) => (
+                  <div key={key} className="pl-6 border-l-2 border-primary/30">
+                    <h3 className="text-xl font-semibold mb-3">
+                      {tService(`IntegrationFlows.${key}.Title`) as string}
+                    </h3>
+                    <p className="text-lg leading-relaxed text-muted-foreground">
+                      {tService(`IntegrationFlows.${key}.Text`) as string}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Real Cases Section */}
+          {tService("RealCases.Title") && (
+            <section className="mb-16">
+              <h2 className="text-3xl font-bold mb-6">
+                {tService("RealCases.Title") as string}
+              </h2>
+              <p className="text-lg leading-relaxed text-muted-foreground mb-8">
+                {tService("RealCases.Intro") as string}
+              </p>
+              <div className="grid gap-6">
+                {(() => {
+                  const cases = tService("RealCases.Cases");
+                  if (Array.isArray(cases)) {
+                    return cases.map((item: any, index: number) => (
+                      <Link
+                        key={index}
+                        href={`${localePrefix}/ressources/${item.Slug}`}
+                        className="block p-6 rounded-lg bg-primary/5 border border-primary/10 hover:border-primary/30 hover:shadow-lg transition-all group"
+                      >
+                        <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
+                          {item.Title}
+                        </h3>
+                        <p className="text-muted-foreground leading-relaxed">
+                          {item.Summary}
+                        </p>
+                        <span className="inline-flex items-center mt-4 text-primary text-sm font-medium">
+                          {params.locale === "fr"
+                            ? "Lire l'article"
+                            : params.locale === "de"
+                            ? "Artikel lesen"
+                            : params.locale === "es"
+                            ? "Leer el artículo"
+                            : params.locale === "pt"
+                            ? "Ler o artigo"
+                            : "Read article"}
+                          <svg
+                            className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                          >
+                            <path
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                              strokeWidth={2}
+                              d="M9 5l7 7-7 7"
+                            />
+                          </svg>
+                        </span>
+                      </Link>
+                    ));
+                  }
+                  return null;
+                })()}
+              </div>
+            </section>
+          )}
+
           {/* Contact CTA */}
           <section className="mt-16 p-8 rounded-lg bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20">
             <h2 className="text-2xl font-bold mb-4">
