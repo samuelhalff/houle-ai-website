@@ -129,22 +129,24 @@ const AIConsultingPage = async ({ params }: { params: { locale: string } }) => {
             </div>
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
               <ResponsiveImage
-                src="/assets/hero/services/samuel-ferrara-XQZRB1IU4Dc-unsplash.jpg"
+                src="/assets/hero/services/ai-consulting-hero.jpg"
                 alt={
                   params.locale === "fr"
-                    ? "Équipe travaillant sur des solutions d'intelligence artificielle"
+                    ? "Professionnel travaillant sur des solutions d'intelligence artificielle"
                     : params.locale === "de"
-                    ? "Team arbeitet an künstlichen Intelligenzlösungen"
+                    ? "Fachmann arbeitet an künstlichen Intelligenzlösungen"
                     : params.locale === "es"
-                    ? "Equipo trabajando en soluciones de inteligencia artificial"
+                    ? "Profesional trabajando en soluciones de inteligencia artificial"
                     : params.locale === "pt"
-                    ? "Equipe trabalhando em soluções de inteligência artificial"
-                    : "Team working on artificial intelligence solutions"
+                    ? "Profissional trabalhando em soluções de inteligência artificial"
+                    : "Professional working on artificial intelligence solutions"
                 }
-                width={800}
-                height={600}
+                width={1600}
+                height={1200}
                 priority
                 className="object-cover w-full h-full"
+                srcSet="/assets/hero/services/ai-consulting-hero-mobile.jpg 800w, /assets/hero/services/ai-consulting-hero.jpg 1600w"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </div>

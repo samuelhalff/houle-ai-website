@@ -11,6 +11,7 @@ import {
   buildProfessionalServiceSchema,
 } from "@/src/lib/structuredData";
 import { localizePath } from "@/src/lib/paths";
+import ResponsiveImage from "@/src/components/media/ResponsiveImage";
 
 export const runtime = "nodejs";
 export const revalidate = false;
@@ -110,25 +111,49 @@ const MicrosoftConsultingPage = async ({
       <section className="relative w-full pt-24 pb-16 md:pt-32 md:pb-20">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-background" />
         <div className="relative max-w-[1200px] mx-auto px-6">
-          <div className="max-w-[800px]">
-            <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-primary/10 text-primary text-sm font-medium">
-              {params.locale === "fr"
-                ? "Services"
-                : params.locale === "de"
-                ? "Dienstleistungen"
-                : params.locale === "es"
-                ? "Servicios"
-                : params.locale === "pt"
-                ? "Serviços"
-                : "Services"}
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="max-w-[600px]">
+              <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-primary/10 text-primary text-sm font-medium">
+                {params.locale === "fr"
+                  ? "Services"
+                  : params.locale === "de"
+                  ? "Dienstleistungen"
+                  : params.locale === "es"
+                  ? "Servicios"
+                  : params.locale === "pt"
+                  ? "Serviços"
+                  : "Services"}
+              </div>
+              <h1 className="text-4xl xs:text-5xl md:text-6xl font-bold mb-6 leading-tight tracking-tight">
+                {(tService("Hero.Title") as string) || "Microsoft consulting"}
+              </h1>
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                {(tService("Hero.Description") as string) ||
+                  "Optimize your productivity with the Microsoft ecosystem."}
+              </p>
             </div>
-            <h1 className="text-4xl xs:text-5xl md:text-6xl font-bold mb-6 leading-tight tracking-tight">
-              {(tService("Hero.Title") as string) || "Microsoft consulting"}
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              {(tService("Hero.Description") as string) ||
-                "Optimize your productivity with the Microsoft ecosystem."}
-            </p>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+              <ResponsiveImage
+                src="/assets/hero/services/microsoft-consulting-hero.jpg"
+                alt={
+                  params.locale === "fr"
+                    ? "Professionnel utilisant Microsoft 365 pour la productivité"
+                    : params.locale === "de"
+                    ? "Fachmann nutzt Microsoft 365 für Produktivität"
+                    : params.locale === "es"
+                    ? "Profesional usando Microsoft 365 para productividad"
+                    : params.locale === "pt"
+                    ? "Profissional usando Microsoft 365 para produtividade"
+                    : "Professional using Microsoft 365 for productivity"
+                }
+                width={1600}
+                height={1200}
+                priority
+                className="object-cover w-full h-full"
+                srcSet="/assets/hero/services/microsoft-consulting-hero-mobile.jpg 800w, /assets/hero/services/microsoft-consulting-hero.jpg 1600w"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
+            </div>
           </div>
         </div>
       </section>
