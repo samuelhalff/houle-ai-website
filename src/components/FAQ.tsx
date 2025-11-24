@@ -15,13 +15,12 @@ const PlusIcon = ({
     height="24"
     viewBox="0 0 24 24"
     fill="none"
-    stroke={stroke || "currentColor"}
-    strokeWidth="3"
+    strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
   >
-    <path d="M5 12h14" />
-    <path d="M12 5v14" />
+    <path d="M5 12h14" stroke={stroke || "#000000"} />
+    <path d="M12 5v14" stroke={stroke || "#000000"} />
   </svg>
 );
 
@@ -99,10 +98,7 @@ export default function FAQ({ title, subtitle, lastUpdated, items }: FAQProps) {
                     transform: isOpen ? "rotate(45deg)" : "rotate(0deg)",
                   }}
                 >
-                  <PlusIcon
-                    className="w-5 h-5"
-                    stroke="hsl(var(--background))"
-                  />
+                  <PlusIcon className="w-5 h-5" stroke="#000000" />
                 </span>
               </button>
               {isOpen && (
