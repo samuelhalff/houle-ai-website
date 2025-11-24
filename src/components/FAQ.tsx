@@ -2,14 +2,21 @@
 
 import { useState } from "react";
 
-const PlusIcon = ({ className }: { className?: string }) => (
+const PlusIcon = ({
+  className,
+  stroke,
+}: {
+  className?: string;
+  stroke?: string;
+}) => (
   <svg
     className={className}
     width="24"
     height="24"
     viewBox="0 0 24 24"
     fill="none"
-    strokeWidth="2"
+    stroke={stroke || "currentColor"}
+    strokeWidth="3"
     strokeLinecap="round"
     strokeLinejoin="round"
   >
@@ -92,11 +99,14 @@ export default function FAQ({ title, subtitle, lastUpdated, items }: FAQProps) {
                     transform: isOpen ? "rotate(45deg)" : "rotate(0deg)",
                   }}
                 >
-                  <PlusIcon className="w-5 h-5 stroke-[3] stroke-background" />
+                  <PlusIcon
+                    className="w-5 h-5"
+                    stroke="hsl(var(--background))"
+                  />
                 </span>
               </button>
               {isOpen && (
-                <div className="mt-2 pb-2 text-[15px] text-muted-foreground">
+                <div className="mt-2 pb-2 text-[15px] text-foreground/80">
                   {item.answer}
                 </div>
               )}
