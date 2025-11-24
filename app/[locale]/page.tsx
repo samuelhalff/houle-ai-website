@@ -1,6 +1,36 @@
 import Link from "next/link";
 import FAQ from "@/src/components/FAQ";
 import { getTranslations, type Locale } from "@/src/lib/i18n";
+import { Metadata } from "next";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { locale: "en" | "fr" | "de" | "es" | "pt" };
+}): Promise<Metadata> {
+  const locale = params?.locale || "en";
+
+  const titles: Record<string, string> = {
+    en: "houle | Private AI for Microsoft 365",
+    fr: "houle | IA Privée pour Microsoft 365",
+    de: "houle | Private KI für Microsoft 365",
+    es: "houle | IA Privada para Microsoft 365",
+    pt: "houle | IA Privada para Microsoft 365",
+  };
+
+  const descriptions: Record<string, string> = {
+    en: "houle brings private AI into Microsoft 365 with add-ins and GPT hosted in Switzerland.",
+    fr: "houle apporte l'IA privée dans Microsoft 365 avec des add-ins et un GPT hébergé en Suisse.",
+    de: "houle bringt private KI in Microsoft 365 mit Add-Ins und GPT gehostet in der Schweiz.",
+    es: "houle trae IA privada a Microsoft 365 con complementos y GPT alojado en Suiza.",
+    pt: "houle traz IA privada para o Microsoft 365 com complementos e GPT hospedado na Suíça.",
+  };
+
+  return {
+    title: titles[locale] || titles.en,
+    description: descriptions[locale] || descriptions.en,
+  };
+}
 
 export default async function HomePage({
   params,
@@ -12,7 +42,7 @@ export default async function HomePage({
 
   // Load FAQ data
   const faqT = await getTranslations(locale as Locale, "faq");
-  const faqItems = Array.from({ length: 20 })
+  const faqItems = Array.from({ length: 22 })
     .map((_, i) => i + 1)
     .filter((i) => {
       const q = faqT(`Question${i}`) as string;
@@ -59,7 +89,7 @@ export default async function HomePage({
       tagline: "houle — Une IA privée, directement dans Microsoft 365",
       headline: "Une IA intégrée à vos outils Microsoft, qui reste privée.",
       subtext:
-        "Nous créons des add-ins Office avec IA pour Microsoft 365 qui semblent natifs dans Outlook et Word, ainsi qu’un GPT hébergé en Suisse que vous contrôlez. Il fonctionne avec vos données, suit vos règles et garde chaque échange privé.",
+        "Nous créons des add-ins Office avec IA pour Microsoft 365, intégrés directement dans Outlook et Word, ainsi qu'un GPT hébergé en Suisse que vous contrôlez. Il fonctionne avec vos données, suit vos règles et protège chaque échange.",
       highlights: [
         "Add-ins Office avec IA pour les apps Microsoft 365 que vous utilisez déjà",
         "GPT hébergé en Suisse, pensé pour la confidentialité",
@@ -253,22 +283,6 @@ export default async function HomePage({
                   <p className="font-semibold text-foreground leading-relaxed">
                     {item}
                   </p>
-                </div>
-                <div className="h-5 w-5 flex-shrink-0 opacity-0 group-hover:opacity-100 transition-opacity">
-                  <svg
-                    className="h-5 w-5 text-primary"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M13 7l5 5m0 0l-5 5m5-5H6"
-                    />
-                  </svg>
                 </div>
               </div>
             ))}

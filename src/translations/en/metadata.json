@@ -1,0 +1,75 @@
+{
+    "default": {
+        "title": "houle | Private AI for Microsoft 365",
+        "description": "Swiss-hosted AI solutions for Microsoft 365. Office add-ins with AI for Outlook and Word, plus enterprise GPT platform. Data stays in Switzerland under your control.",
+        "keywords": "ai microsoft 365, swiss ai, private gpt switzerland, outlook ai, word ai, swiss data sovereignty, geneva ai solutions, microsoft 365 consulting",
+        "topics": [
+            "ai microsoft 365 switzerland",
+            "private gpt swiss",
+            "outlook ai assistant",
+            "word ai add-in",
+            "swiss ai consulting"
+        ],
+        "author": "houle",
+        "siteName": "houle"
+    },
+    "pages": {
+        "/": {
+            "title": "houle | Private AI for Microsoft 365 - Swiss-hosted Solutions",
+            "description": "Transform your Microsoft 365 with Swiss-hosted AI. Office add-ins for Outlook and Word, enterprise GPT platform, and expert AI consulting. Data sovereignty guaranteed.",
+            "keywords": "ai microsoft 365, swiss ai solutions, private gpt, outlook ai assistant, word ai, geneva ai consulting, microsoft 365 automation, swiss data protection"
+        },
+        "/contact": {
+            "title": "Contact houle | AI Solutions for Microsoft 365",
+            "description": "Get in touch with houle to discuss AI integration for your Microsoft 365 environment. Free consultation for Geneva, Lausanne, and Swiss businesses.",
+            "keywords": "contact ai consultant geneva, microsoft 365 ai inquiry, swiss ai solutions contact"
+        },
+        "/products": {
+            "title": "AI Products for Microsoft 365 | Word & Outlook Add-ins with Swiss GPT",
+            "description": "Ready-to-use AI products for Microsoft 365: Word add-in, Outlook add-in, and Swiss GPT platform. Seamless integration, Swiss data hosting, enterprise-grade security.",
+            "keywords": "word ai add-in, outlook ai assistant, swiss gpt, microsoft 365 ai products, office add-ins switzerland"
+        },
+        "/products/word-addin": {
+            "title": "Word Add-in with AI | houle - Swiss-hosted Assistant",
+            "description": "AI-powered Word add-in for drafting, editing, and summarizing documents. Integrates with your Swiss-hosted GPT for complete data control.",
+            "keywords": "word ai add-in, microsoft word ai assistant, document automation ai, swiss word plugin"
+        },
+        "/products/outlook-addin": {
+            "title": "Outlook Add-in with AI | houle - Email Assistant for Microsoft 365",
+            "description": "AI assistant for Outlook that drafts emails, summarizes threads, and manages responses. Swiss-hosted with zero data retention.",
+            "keywords": "outlook ai add-in, email ai assistant, microsoft outlook automation, swiss email ai"
+        },
+        "/products/swiss-gpt": {
+            "title": "Swiss GPT Platform | Enterprise AI Hosted in Switzerland",
+            "description": "Enterprise GPT platform hosted in Swiss data centers. Connect to your Microsoft 365 data with complete sovereignty. FINMA-compliant, LPD-certified infrastructure.",
+            "keywords": "swiss gpt, enterprise gpt switzerland, private gpt platform, finma compliant ai, swiss data sovereignty"
+        },
+        "/services": {
+            "title": "AI & Microsoft 365 Consulting Services | houle Geneva",
+            "description": "Expert consulting for AI integration and Microsoft 365 optimization. Custom solutions, Power Automate, SharePoint, Azure AI. Serving Geneva, Lausanne, and Switzerland.",
+            "keywords": "ai consulting geneva, microsoft 365 consulting, azure ai services, power automate switzerland, sharepoint consulting"
+        },
+        "/services/ai-consulting": {
+            "title": "AI Consulting Geneva | Custom Solutions with Azure AI",
+            "description": "Custom AI solutions for Swiss businesses. Azure AI integration, intelligent automation, conversational assistants. Data stays in Switzerland.",
+            "keywords": "ai consulting geneva, azure ai switzerland, custom ai development, intelligent automation geneva, ai integration microsoft 365"
+        },
+        "/services/microsoft-consulting": {
+            "title": "Microsoft 365 Consulting Geneva | Power Automate, SharePoint, Power BI",
+            "description": "Microsoft 365 expert consulting in Geneva. Power Automate workflows, SharePoint customization, Power BI dashboards, SPFx development. Swiss-based team.",
+            "keywords": "microsoft 365 consulting geneva, power automate switzerland, sharepoint consulting geneva, power bi consultant, spfx development"
+        },
+        "/ressources": {
+            "title": "AI & Microsoft 365 Resources | Case Studies from Geneva",
+            "description": "Real case studies and practical guides for AI and Microsoft 365 implementations in Geneva and Swiss businesses. Measurable results and actionable insights.",
+            "keywords": "ai case studies geneva, microsoft 365 implementation, swiss ai success stories, automation examples"
+        }
+    },
+    "dynamic": {
+        "articles": {
+            "titleTemplate": "{articleTitle} | houle - AI for Microsoft 365",
+            "descriptionTemplate": "{articleDescription} | Expert insights from Geneva with Swiss data sovereignty.",
+            "keywords": "ai microsoft 365, swiss ai solutions, geneva ai consulting, data sovereignty switzerland"
+        }
+    }
+}
