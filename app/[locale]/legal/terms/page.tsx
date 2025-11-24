@@ -1,5 +1,6 @@
 import { type Metadata } from "next";
 import { Separator } from "@/src/components/ui/separator";
+import { LEGAL_LAST_UPDATED } from "../constants";
 
 export const metadata: Metadata = {
   title: "Terms of Service - houle.ai",
@@ -31,7 +32,7 @@ export default function TermsPage({
         <h1 className="text-4xl font-bold mb-4">Terms of Service</h1>
         <p className="text-lg mb-2">Our terms of service</p>
         <p className="text-xs mb-2">
-          Last updated: {formatDate("2025-11-24", locale)}
+          Last updated: {formatDate(LEGAL_LAST_UPDATED, locale)}
         </p>
         <Separator className="mt-6" />
       </div>

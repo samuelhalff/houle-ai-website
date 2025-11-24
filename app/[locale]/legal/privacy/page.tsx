@@ -1,5 +1,6 @@
 import { type Metadata } from "next";
 import { Separator } from "@/src/components/ui/separator";
+import { LEGAL_LAST_UPDATED } from "../constants";
 
 export const metadata: Metadata = {
   title: "Privacy Policy - houle.ai",
@@ -33,7 +34,7 @@ export default function PrivacyPage({
           Data Protection and Privacy Notice
         </p>
         <p className="text-xs mb-2">
-          Last updated: {formatDate("2025-11-24", locale)}
+          Last updated: {formatDate(LEGAL_LAST_UPDATED, locale)}
         </p>
         <Separator className="mt-6" />
       </div>

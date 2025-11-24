@@ -1,5 +1,6 @@
 import { type Metadata } from "next";
 import { Separator } from "@/src/components/ui/separator";
+import { LEGAL_LAST_UPDATED } from "../constants";
 
 export const metadata: Metadata = {
   title: "Cookies Policy - houle.ai",
@@ -33,7 +34,7 @@ export default function CookiesPage({
           Information about our use of cookies and tracking technologies
         </p>
         <p className="text-xs">
-          Last updated: {formatDate("2025-11-24", locale)}
+          Last updated: {formatDate(LEGAL_LAST_UPDATED, locale)}
         </p>
         <Separator className="mt-6" />
       </div>
