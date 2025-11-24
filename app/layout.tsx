@@ -85,7 +85,7 @@ export default async function RootLayout({
   const cookieLabels = {
     Title: "Cookies",
     Text: "We use cookies for analytics and a smoother experience.",
-    LearnMore: "Learn more",
+    LearnMore: "Cookie settings",
     Accept: "Accept",
     Decline: "Decline",
     Manage: "Manage cookies",

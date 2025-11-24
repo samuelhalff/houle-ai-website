@@ -252,8 +252,8 @@ export default function HomePage({
           <h2 className="mt-2 text-xl font-bold">{t.consultingTitle}</h2>
           <p className="mt-3 text-muted-foreground">{t.consultingBody}</p>
         </div>
-        <div className="group rounded-2xl border bg-gradient-to-br from-accent/[0.08] via-accent/[0.04] to-card p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:border-accent/30 sm:col-span-2 lg:col-span-1">
-          <p className="text-sm font-semibold text-primary uppercase tracking-[0.14em]">
+        <div className="group rounded-2xl border bg-gradient-to-br from-emerald-500/[0.06] via-emerald-500/[0.03] to-card p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:border-emerald-500/30 sm:col-span-2 lg:col-span-1">
+          <p className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-[0.14em]">
             {t.securityLabel}
           </p>
           <h2 className="mt-2 text-xl font-bold">{t.securityTitle}</h2>
