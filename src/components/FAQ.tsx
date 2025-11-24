@@ -94,8 +94,8 @@ export default function FAQ({ title, subtitle, lastUpdated, items }: FAQProps) {
                   className="inline-flex h-7 w-7 items-center justify-center rounded-full transition-all flex-none"
                   style={{
                     backgroundColor: isOpen
-                      ? "hsl(var(--foreground) / 0.30)"
-                      : "hsl(var(--foreground) / 0.25)",
+                      ? "hsl(var(--foreground) / 0.65)"
+                      : "hsl(var(--foreground) / 0.55)",
                     transform: isOpen ? "rotate(45deg)" : "rotate(0deg)",
                   }}
                 >
