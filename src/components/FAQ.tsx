@@ -85,18 +85,16 @@ export default function FAQ({ title, subtitle, lastUpdated, items }: FAQProps) {
                   {item.question}
                 </h3>
                 <span
-                  className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-foreground/10 text-muted-foreground transition-all flex-none"
+                  className="inline-flex h-7 w-7 items-center justify-center rounded-full transition-all flex-none"
                   style={{
                     backgroundColor: isOpen
-                      ? "hsl(var(--foreground) / 0.15)"
-                      : "hsl(var(--foreground) / 0.1)",
-                    color: isOpen
-                      ? "hsl(var(--foreground) / 0.9)"
-                      : "hsl(var(--muted-foreground))",
+                      ? "hsl(var(--foreground) / 0.2)"
+                      : "hsl(var(--foreground) / 0.15)",
+                    color: "hsl(var(--foreground) / 0.85)",
                     transform: isOpen ? "rotate(45deg)" : "rotate(0deg)",
                   }}
                 >
-                  <PlusIcon className="w-4 h-4" />
+                  <PlusIcon className="w-4 h-4 stroke-[2.5]" />
                 </span>
               </button>
               {isOpen && (

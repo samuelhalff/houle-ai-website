@@ -21,8 +21,8 @@
     --secondary-foreground: 0.17 0.03 240;
     --muted: 0.95 0.02 220;
     --muted-foreground: 0.45 0.03 230;
-    --accent: 0.93 0.04 200;
-    --accent-foreground: 0.18 0.04 220;
+    --accent: 0.88 0.08 220;
+    --accent-foreground: 0.12 0.06 240;
     --destructive: 0.55 0.18 25;
     --border: 0.9 0.02 230;
     --input: 0.9 0.02 230;
@@ -51,8 +51,8 @@
     --secondary-foreground: 0.95 0.02 245;
     --muted: 0.22 0.04 220;
     --muted-foreground: 0.70 0.04 240;
-    --accent: 0.22 0.05 200;
-    --accent-foreground: 0.95 0.02 245;
+    --accent: 0.30 0.09 220;
+    --accent-foreground: 0.98 0.02 245;
     --destructive: 0.64 0.18 25;
     --border: 1 0 0 / 0.1;
     --input: 1 0 0 / 0.15;
