@@ -1,9 +1,28 @@
-export default function HomePage({
+import Link from "next/link";
+import FAQ from "@/src/components/FAQ";
+import { getTranslations, type Locale } from "@/src/lib/i18n";
+
+export default async function HomePage({
   params,
 }: {
   params: { locale: "en" | "fr" | "de" | "es" | "pt" };
 }) {
   const locale = params?.locale || "en";
+  const localePrefix = `/${locale}`;
+
+  // Load FAQ data
+  const faqT = await getTranslations(locale as Locale, "faq");
+  const faqItems = Array.from({ length: 20 })
+    .map((_, i) => i + 1)
+    .filter((i) => {
+      const q = faqT(`Question${i}`) as string;
+      const a = faqT(`Answer${i}`) as string;
+      return q && a && q !== `Question${i}` && a !== `Answer${i}`;
+    })
+    .map((i) => ({
+      question: faqT(`Question${i}`) as string,
+      answer: faqT(`Answer${i}`) as string,
+    }));
 
   const copy = {
     en: {
@@ -30,6 +49,10 @@ export default function HomePage({
       securityTitle: "Trusted by design",
       securityBody:
         "Built with data privacy first. Your content stays where it belongs, conversations are protected, and admins keep the switches for what is shared and what is not.",
+      ctaTitle: "Ready to transform your business with AI?",
+      ctaText:
+        "Let's discuss how our AI solutions can enhance your Microsoft 365 environment while keeping your data secure in Switzerland.",
+      ctaButton: "Get in touch",
     },
     fr: {
       badge: "IA suisse pour Microsoft 365",
@@ -54,6 +77,10 @@ export default function HomePage({
       securityTitle: "Fiable par conception",
       securityBody:
         "Conçu avec la confidentialité en premier. Vos contenus restent à leur place, les échanges sont protégés et les administrateurs gardent la main sur ce qui est partagé ou non.",
+      ctaTitle: "Prêt à transformer votre entreprise avec l'IA ?",
+      ctaText:
+        "Discutons de la manière dont nos solutions IA peuvent améliorer votre environnement Microsoft 365 tout en gardant vos données sécurisées en Suisse.",
+      ctaButton: "Nous contacter",
     },
     de: {
       badge: "KI-Produkte & Beratung für Microsoft 365",
@@ -79,6 +106,10 @@ export default function HomePage({
       securityTitle: "Vertrauenswürdig nach Design",
       securityBody:
         "Entwickelt mit Datenschutz an erster Stelle. Ihre Inhalte bleiben, wo sie hingehören, Gespräche sind geschützt und Administratoren behalten die Kontrolle darüber, was geteilt wird und was nicht.",
+      ctaTitle: "Bereit, Ihr Unternehmen mit KI zu transformieren?",
+      ctaText:
+        "Lassen Sie uns besprechen, wie unsere KI-Lösungen Ihre Microsoft 365-Umgebung verbessern können, während Ihre Daten sicher in der Schweiz bleiben.",
+      ctaButton: "Kontakt aufnehmen",
     },
     es: {
       badge: "Productos IA & Consultoría para Microsoft 365",
@@ -103,6 +134,10 @@ export default function HomePage({
       securityTitle: "Confiable por diseño",
       securityBody:
         "Desarrollado con la privacidad de datos primero. Tu contenido permanece donde debe estar, las conversaciones están protegidas y los administradores mantienen el control sobre qué se comparte y qué no.",
+      ctaTitle: "¿Listo para transformar tu empresa con IA?",
+      ctaText:
+        "Hablemos sobre cómo nuestras soluciones de IA pueden mejorar tu entorno Microsoft 365 manteniendo tus datos seguros en Suiza.",
+      ctaButton: "Ponerse en contacto",
     },
     pt: {
       badge: "Produtos IA & Consultoria para Microsoft 365",
@@ -128,6 +163,10 @@ export default function HomePage({
       securityTitle: "Confiável por design",
       securityBody:
         "Desenvolvido com privacidade de dados em primeiro lugar. Seu conteúdo permanece onde deve estar, conversas são protegidas e administradores mantêm o controle sobre o que é compartilhado e o que não é.",
+      ctaTitle: "Pronto para transformar sua empresa com IA?",
+      ctaText:
+        "Vamos discutir como nossas soluções de IA podem aprimorar seu ambiente Microsoft 365 mantendo seus dados seguros na Suíça.",
+      ctaButton: "Entre em contato",
     },
   } as const;
 
@@ -260,6 +299,43 @@ export default function HomePage({
           <p className="mt-3 text-muted-foreground">{t.securityBody}</p>
         </div>
       </section>
+
+      {/* CTA Section */}
+      <section className="mt-16 text-center py-12 px-6 rounded-2xl bg-gradient-to-br from-primary/5 via-primary/3 to-transparent border border-primary/20">
+        <h2 className="text-2xl md:text-3xl font-bold mb-4">{t.ctaTitle}</h2>
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
+          {t.ctaText}
+        </p>
+        <Link
+          href={`${localePrefix}/contact`}
+          className="inline-flex items-center px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:shadow-lg hover:scale-105 transition-all"
+        >
+          {t.ctaButton}
+          <svg
+            className="ml-2 w-5 h-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M17 8l4 4m0 0l-4 4m4-4H3"
+            />
+          </svg>
+        </Link>
+      </section>
+
+      {/* FAQ Section */}
+      {faqItems.length > 0 && (
+        <FAQ
+          title={faqT("Title") as string}
+          subtitle={faqT("Subtitle") as string}
+          lastUpdated={faqT("LastUpdated") as string}
+          items={faqItems}
+        />
+      )}
     </div>
   );
 }
