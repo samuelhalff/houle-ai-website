@@ -199,6 +199,11 @@
     "Description": "Our experts are here to help you integrate AI into your business.",
     "ButtonText": "Contact us"
   },
+  "banner": {
+    "questions_about_article": "Questions about this article?",
+    "banner_body": "Our experts are here to help you understand the details and implications for your business. Get personalized advice tailored to your situation.",
+    "contact_button": "Contact our team"
+  },
   "ReadingTime": "Reading time",
   "Minutes": " min",
   "Words": " words",
