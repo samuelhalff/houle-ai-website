@@ -199,6 +199,11 @@
     "Description": "Nos experts sont là pour vous aider à intégrer l'IA dans votre entreprise.",
     "ButtonText": "Contactez-nous"
   },
+  "banner": {
+    "questions_about_article": "Des questions sur cet article ?",
+    "banner_body": "Nos experts peuvent vous aider à comprendre les détails et les conséquences pour votre activité. Obtenez des conseils personnalisés adaptés à votre situation.",
+    "contact_button": "Contacter notre équipe"
+  },
   "ReadingTime": "Temps de lecture",
   "Minutes": " min",
   "Words": " mots",

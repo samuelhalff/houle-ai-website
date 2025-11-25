@@ -65,6 +65,11 @@ interface RessourcesDictionary {
   ReadingTime?: string;
   Minutes?: string;
   References?: string;
+  banner?: {
+    questions_about_article?: string;
+    banner_body?: string;
+    contact_button?: string;
+  };
   [key: string]: unknown;
 }
 
@@ -330,13 +335,13 @@ export default async function ArticlePage({ params }: Params) {
 
       {(() => {
         const title =
-          (ressources["Contact.Title"] as string) ||
+          ressources.banner?.questions_about_article ||
           "Questions about this article?";
         const description =
-          (ressources["Contact.Description"] as string) ||
+          ressources.banner?.banner_body ||
           "Our experts are here to help you understand the details and implications for your business. Get personalized advice tailored to your situation.";
         const buttonText =
-          (ressources["Contact.ButtonText"] as string) || "Contact Our Team";
+          ressources.banner?.contact_button || "Contact our team";
         return (
           <ContactSection
             locale={locale}

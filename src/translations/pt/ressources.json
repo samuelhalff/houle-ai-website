@@ -199,6 +199,11 @@
     "Description": "Nossos especialistas estão aqui para ajudá-lo a integrar a IA em sua empresa.",
     "ButtonText": "Contate-nos"
   },
+  "banner": {
+    "questions_about_article": "Dúvidas sobre este artigo?",
+    "banner_body": "Os nossos especialistas podem ajudá‑lo a compreender os detalhes e as implicações para o seu negócio. Receba aconselhamento personalizado adaptado à sua situação.",
+    "contact_button": "Contacte a nossa equipa"
+  },
   "ReadingTime": "Tempo de leitura",
   "Minutes": " min",
   "Words": " palavras",

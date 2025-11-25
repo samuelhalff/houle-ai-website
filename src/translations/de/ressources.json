@@ -199,6 +199,11 @@
     "Description": "Unsere Experten helfen Ihnen gerne bei der Integration von KI in Ihr Unternehmen.",
     "ButtonText": "Kontaktieren Sie uns"
   },
+  "banner": {
+    "questions_about_article": "Fragen zu diesem Artikel?",
+    "banner_body": "Unsere Experten helfen Ihnen, die Details und Auswirkungen auf Ihr Unternehmen zu verstehen. Erhalten Sie persönliche Beratung, die auf Ihre Situation zugeschnitten ist.",
+    "contact_button": "Kontaktieren Sie unser Team"
+  },
   "ReadingTime": "Lesezeit",
   "Minutes": " Min",
   "Words": " Wörter",
