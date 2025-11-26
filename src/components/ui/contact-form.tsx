@@ -52,7 +52,7 @@ const createFormSchema = (errors: {
     }),
   });
 
-const FORMSPARK_ACTION_URL = "https://submit-form.com/87gnJVqRJ";
+const FORMSPARK_ACTION_URL = "https://api.formspark.io/87gnJVqRJ";
 
 interface ContactFormProps {
   showTitle?: boolean;
