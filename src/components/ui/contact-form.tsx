@@ -54,9 +54,7 @@ const createFormSchema = (errors: {
     }),
   });
 
-const FORMSPARK_ACTION_URL =
-  process.env.NEXT_PUBLIC_FORMSPARK_ACTION_URL ||
-  "https://submit-form.com/87gnJVqRJ";
+const FORMSPARK_ACTION_URL = "https://submit-form.com/87gnJVqRJ";
 
 // Removed duplicate ContactForm declaration. The correct one is below with props.
 interface ContactFormProps {
