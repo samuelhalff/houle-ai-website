@@ -131,10 +131,6 @@ const ContactForm: FC<ContactFormProps> = ({
       form.reset(defaultValues);
       toast.success(strings.toasts.success, {
         duration: 5000,
-        action: {
-          label: "Close",
-          onClick: () => {},
-        },
       });
     } catch (error) {
       console.error("Contact form submission error:", error);
