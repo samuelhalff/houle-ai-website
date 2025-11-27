@@ -17,8 +17,7 @@ import { Input } from "@/src/components/ui/input";
 import { Button } from "@/src/components/ui/button";
 import { Checkbox } from "@/src/components/ui/checkbox";
 import { Textarea } from "@/src/components/ui/textarea";
-import { useRouter } from "next/navigation";
-import { toast } from "sonner";
+import { toast, Toaster } from "sonner";
 import React from "react";
 
 // We keep the types and defaults outside the component
@@ -90,17 +89,14 @@ interface ContactFormProps {
       error: string;
     };
   };
-  redirectPath?: string; // locale-aware redirect after success
 }
 
 const ContactForm: FC<ContactFormProps> = ({
   showTitle = true,
   showSubtitle = true,
   strings,
-  redirectPath = "/",
 }) => {
   const [sending, setSending] = React.useState(false);
-  const router = useRouter();
 
   // Memoize schema based on provided error strings
   const formSchema = useMemo(
@@ -132,9 +128,14 @@ const ContactForm: FC<ContactFormProps> = ({
         throw new Error("Form submission failed");
       }
 
-      toast.success(strings.toasts.success);
       form.reset(defaultValues);
-      router.push(redirectPath);
+      toast.success(strings.toasts.success, {
+        duration: 5000,
+        action: {
+          label: "Close",
+          onClick: () => {},
+        },
+      });
     } catch (error) {
       console.error("Contact form submission error:", error);
       toast.error(strings.toasts.error);
@@ -154,6 +155,7 @@ const ContactForm: FC<ContactFormProps> = ({
       <div className="flex items-center justify-center">
         <Card className="my-3 max-w-[1200px] min-w-[350px] w-full mb-15 animate-in slide-in-from-bottom-7 duration-500">
           <CardContent>
+            <Toaster position="top-center" />
             <Form {...form}>
               <form
                 className="flex flex-col gap-6"
@@ -178,6 +180,7 @@ const ContactForm: FC<ContactFormProps> = ({
                             placeholder={strings.placeholders.name}
                             disabled={sending}
                             className={"border-color-primary"}
+                            autoComplete="name"
                             required
                           />
                         </FormControl>
@@ -201,6 +204,7 @@ const ContactForm: FC<ContactFormProps> = ({
                           placeholder={strings.placeholders.companyName}
                           disabled={sending}
                           className={"border-color-primary"}
+                          autoComplete="organization"
                         />
                       </FormControl>
                       <FormMessage className="place-self-start text-primary-red m-1!" />
@@ -222,6 +226,7 @@ const ContactForm: FC<ContactFormProps> = ({
                           placeholder={strings.placeholders.phone}
                           disabled={sending}
                           className={"border-color-primary"}
+                          autoComplete="tel"
                         />
                       </FormControl>
                       <FormMessage className="place-self-start text-primary-red m-1!" />
@@ -245,6 +250,7 @@ const ContactForm: FC<ContactFormProps> = ({
                           placeholder={strings.placeholders.email}
                           disabled={sending}
                           className={"border-color-primary"}
+                          autoComplete="email"
                           required
                         />
                       </FormControl>
