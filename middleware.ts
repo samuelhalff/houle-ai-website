@@ -31,7 +31,7 @@ export function middleware(request: NextRequest) {
           // Allow inline styles for Tailwind and Next styles
           `style-src 'self' 'unsafe-inline'`,
           `font-src 'self' data:`,
-          `connect-src 'self' https: https://vitals.vercel-analytics.com`,
+          `connect-src 'self' https: https://vitals.vercel-analytics.com https://api.formspark.io`,
           // Allow embedding Google Maps iframe & required map tiles/images
           `frame-src 'self' https://www.google.com https://maps.google.com https://maps.gstatic.com`,
           // Some map assets & JS served from these
@@ -49,7 +49,7 @@ export function middleware(request: NextRequest) {
           `img-src 'self' data: blob: https: https://maps.gstatic.com https://maps.googleapis.com`,
           `font-src 'self' data:`,
           // Allow HMR/WebSocket in dev
-          `connect-src 'self' http: https: ws: wss: https://vitals.vercel-analytics.com`,
+          `connect-src 'self' http: https: ws: wss: https://vitals.vercel-analytics.com https://api.formspark.io`,
           `frame-src 'self' https://www.google.com https://maps.google.com https://maps.gstatic.com`,
           `frame-ancestors 'self'`,
           `base-uri 'self'`,
