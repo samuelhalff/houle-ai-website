@@ -205,7 +205,6 @@ export default function ContactPage({
 }) {
   const locale = params?.locale || "en";
   const strings = copy[locale] || copy.en;
-  const localePrefix = `/${locale}`;
 
   return (
     <div className="mx-auto w-full max-w-[var(--breakpoint-xl)] px-6 py-12 space-y-10">
@@ -253,7 +252,6 @@ export default function ContactPage({
         showTitle={false}
         showSubtitle={false}
         strings={strings}
-        redirectPath={`${localePrefix}/`}
       />
     </div>
   );
