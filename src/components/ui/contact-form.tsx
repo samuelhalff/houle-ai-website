@@ -135,7 +135,8 @@ const ContactForm: FC<ContactFormProps> = ({
       toast.success(strings.toasts.success);
       form.reset(defaultValues);
       router.push(redirectPath);
-    } catch {
+    } catch (error) {
+      console.error("Contact form submission error:", error);
       toast.error(strings.toasts.error);
     } finally {
       setSending(false);
