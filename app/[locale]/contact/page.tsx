@@ -7,6 +7,8 @@ const ContactForm = dynamic(() => import("@/src/components/ui/contact-form"), {
   loading: () => null,
 });
 
+const BOOKING_URL = "https://outlook.office.com/bookwithme/user/409097336fec47ef9ad61beeef96c884@houle.ai/meetingtype/L5kPsZfevE6i7S7hiOL8Cg2?anonymous&amp;ismsaljsauthenabled&amp;ep=mlink";
+
 export async function generateMetadata({
   params,
 }: {
@@ -231,6 +233,20 @@ export default function ContactPage({
             contact@houle.ai
           </a>
         </p>
+      </div>
+
+      <div className="text-center">
+        <p className="text-base text-muted-foreground mb-4">
+          {strings.orContactUs}
+        </p>
+        <a
+          href={BOOKING_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center justify-center rounded-full bg-blue-700 text-white px-6 py-3 text-base font-medium shadow hover:shadow-lg transition-all hover:scale-[1.03] focus-visible:scale-[1.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
+        >
+          {strings.bookingButton}
+        </a>
       </div>
 
       <ContactForm

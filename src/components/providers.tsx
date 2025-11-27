@@ -2,6 +2,7 @@
 "use client";
 
 import ThemeProvider from "@/src/components/ui/theme-provider";
+import { Toaster } from "@/src/components/ui/sonner";
 import React from "react";
 
 // Keep providers minimal to reduce baseline JS. Client i18n is initialized only
@@ -14,6 +15,9 @@ export function Providers({
   nonce?: string;
 }) {
   return (
-    <ThemeProvider nonce={nonce}>{children}</ThemeProvider>
+    <ThemeProvider nonce={nonce}>
+      {children}
+      <Toaster />
+    </ThemeProvider>
   );
 }
