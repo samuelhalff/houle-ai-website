@@ -17,6 +17,8 @@ import { Input } from "@/src/components/ui/input";
 import { Button } from "@/src/components/ui/button";
 import { Checkbox } from "@/src/components/ui/checkbox";
 import { Textarea } from "@/src/components/ui/textarea";
+import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 import React from "react";
 
 // We keep the types and defaults outside the component
@@ -98,7 +100,7 @@ const ContactForm: FC<ContactFormProps> = ({
   redirectPath = "/",
 }) => {
   const [sending, setSending] = React.useState(false);
-  const formRef = React.useRef<HTMLFormElement>(null);
+  const router = useRouter();
 
   // Memoize schema based on provided error strings
   const formSchema = useMemo(
@@ -112,25 +114,33 @@ const ContactForm: FC<ContactFormProps> = ({
     mode: "onTouched",
   });
 
-  // Handle form submission - validate first, then submit natively
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    // Trigger validation
-    const isValid = await form.trigger();
-    if (!isValid) return;
-    
+  // Handle form submission using async fetch API
+  const onSubmit = async (data: FormValues) => {
     setSending(true);
     
-    // Submit the form natively
-    if (formRef.current) {
-      formRef.current.submit();
+    try {
+      const response = await fetch(FORMSPARK_ACTION_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+
+      toast.success(strings.toasts.success);
+      form.reset(defaultValues);
+      router.push(redirectPath);
+    } catch {
+      toast.error(strings.toasts.error);
+    } finally {
+      setSending(false);
     }
   };
-
-  // Build redirect URL (must be absolute for Formspark)
-  const baseUrl = typeof window !== "undefined" ? window.location.origin : "https://houle.ai";
-  const redirectUrl = `${baseUrl}${redirectPath}?success=true`;
 
   return (
     <div className="p-1 xs:p-3 md:p-3 w-full max-w-[var(--breakpoint-xl)] mx-auto">
@@ -145,17 +155,11 @@ const ContactForm: FC<ContactFormProps> = ({
           <CardContent>
             <Form {...form}>
               <form
-                ref={formRef}
-                action={FORMSPARK_ACTION_URL}
-                method="POST"
                 className="flex flex-col gap-6"
                 id="contact-form"
-                onSubmit={handleSubmit}
+                onSubmit={form.handleSubmit(onSubmit)}
                 aria-busy={sending}
               >
-                {/* Hidden redirect field for Formspark */}
-                <input type="hidden" name="_redirect" value={redirectUrl} />
-                
                 <div className="flex flex-col md:flex-row justify-between gap-4">
                   <FormField
                     control={form.control}
