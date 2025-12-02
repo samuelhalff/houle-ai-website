@@ -31,12 +31,8 @@
     --breakpoint-xl: 1200px;
   }
 
-  /* Force GPU acceleration for animations to avoid layout thrashing */
-  [class*="animate-"],
-  [class*="transition-"] {
-    will-change: transform, opacity;
-    transform: translateZ(0);
-  }
+  /* GPU acceleration: apply selectively to heavy animations only */
+  /* Removed blanket will-change rule - it causes memory issues on mobile */
 
   .dark {
     --background: 0.14 0.05 240;
