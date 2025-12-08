@@ -50,14 +50,24 @@ function checkSitemapRoute() {
     const content = fs.readFileSync(sitemapPath, 'utf8');
     
     // Check if URLs are generated with trailing slashes
-    // Look for patterns like: const loc = `${BASE}/${locale}${localized}/`
-    if (content.includes('${localized}/') || content.includes("localized + '/'")) {
+    // Look for patterns where the loc variable is constructed
+    // We're looking for: `${BASE}/${locale}${localized}` and checking if it includes a trailing slash
+    
+    // Check for explicit trailing slash addition
+    if (content.match(/\$\{localized\}\/['"`]/) || content.match(/localized \+ ['"`]\/['"`]/)) {
       success('Sitemap route appears to generate URLs with trailing slashes');
-    } else if (content.includes('${localized}`') && !content.includes('${localized}/`')) {
-      warn('Sitemap route may not be generating URLs with trailing slashes');
-      warn('Expected pattern: `${BASE}/${locale}${localized}/` but found: `${BASE}/${locale}${localized}`');
+      return true;
     }
     
+    // Check if the pattern doesn't include trailing slash
+    if (content.match(/\$\{localized\}['"`]/) && !content.match(/\$\{localized\}\/['"`]/)) {
+      warn('Sitemap route may not be generating URLs with trailing slashes');
+      warn('Consider updating URL construction to: `${BASE}/${locale}${localized}/`');
+      return false;
+    }
+    
+    // If we can't determine, just note it
+    success('Sitemap route format checked (unable to confirm trailing slash pattern)');
     return true;
   } catch (e) {
     error('Could not read sitemap route: ' + e.message);
