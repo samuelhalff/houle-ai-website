@@ -52,6 +52,10 @@ jobs:
           NODE_OPTIONS: --max_old_space_size=4096
         run: npm run build
 
+      - name: Validate SEO configuration (non-blocking)
+        continue-on-error: true
+        run: node scripts/validate-seo.js
+
       - name: Prepare artifact
         run: bash scripts/prepare-artifact.sh
 
@@ -222,3 +226,15 @@ jobs:
           done
 
           echo "[deploy] Deployment completed successfully"
+
+      - name: Validate live sitemap (non-blocking)
+        continue-on-error: true
+        run: |
+          echo "Checking sitemap format..."
+          curl -s "https://houle.ai/sitemap.xml" | head -50
+          # Check if URLs have trailing slashes (look for any URL without trailing slash before </loc>)
+          if curl -s "https://houle.ai/sitemap.xml" | grep -q '<loc>https://houle.ai/[a-z][^/]*</loc>'; then
+            echo "⚠️ WARNING: Found sitemap URLs without trailing slashes"
+          else
+            echo "✅ Sitemap URLs appear to have trailing slashes"
+          fi
