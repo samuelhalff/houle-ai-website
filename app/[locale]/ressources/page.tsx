@@ -316,9 +316,31 @@ export default async function RessourcesPage({
 
 export async function generateMetadata({
   params: { locale },
+  searchParams,
 }: {
   params: { locale: string };
+  searchParams?: ArticlesSearchParams;
 }): Promise<Metadata> {
   const targetLocale = isValidLocale(locale) ? locale : "fr";
-  return await getPageMetadata(targetLocale, "/ressources");
+  const metadata = await getPageMetadata(targetLocale, "/ressources");
+  
+  // If there are query parameters (like ?articles=12), add noindex to prevent duplicate content
+  if (searchParams && Object.keys(searchParams).length > 0) {
+    return {
+      ...metadata,
+      robots: {
+        index: false,
+        follow: true,
+        googleBot: {
+          index: false,
+          follow: true,
+          "max-video-preview": -1,
+          "max-image-preview": "large",
+          "max-snippet": -1,
+        },
+      },
+    };
+  }
+  
+  return metadata;
 }

@@ -103,9 +103,9 @@ export async function getPageMetadata(
     );
   }
 
-  const canonicalPath = `/${locale}${path}`;
+  const canonicalPath = `/${locale}${path}/`;
   const alternateUrls = locales.reduce((acc, loc) => {
-    const locPath = `/${loc}${path}`;
+    const locPath = `/${loc}${path}/`;
     const key = hreflangFor(loc);
     acc[key] = `${siteUrl}${locPath}`;
     return acc;
@@ -192,7 +192,7 @@ export async function getPageMetadata(
     alternates: {
       canonical: `${siteUrl}${canonicalPath}`,
       languages: Object.assign(
-        { "x-default": `${siteUrl}/en${path}` },
+        { "x-default": `${siteUrl}/en${path}/` },
         alternateUrls
       ),
     },

@@ -38,128 +38,67 @@ const baseConfig = {
     reactRemoveProperties: true,
   },
   async redirects() {
-    // Redirect old FR English-slugged URLs to localized French slugs
+    // Redirect non-locale paths to locale-prefixed versions for SEO
     return [
+      // Services redirects
       {
-        source: "/fr/services/accounting",
-        destination: "/fr/services/comptabilite",
+        source: "/services",
+        destination: "/en/services/",
         permanent: true,
       },
       {
-        source: "/fr/services/accounting/",
-        destination: "/fr/services/comptabilite/",
+        source: "/services/ai-consulting",
+        destination: "/en/services/ai-consulting/",
         permanent: true,
       },
       {
-        source: "/fr/services/taxes",
-        destination: "/fr/services/fiscalite",
+        source: "/services/microsoft-consulting",
+        destination: "/en/services/microsoft-consulting/",
+        permanent: true,
+      },
+      // Products redirects
+      {
+        source: "/products",
+        destination: "/en/products/",
         permanent: true,
       },
       {
-        source: "/fr/services/taxes/",
-        destination: "/fr/services/fiscalite/",
+        source: "/products/word-addin",
+        destination: "/en/products/word-addin/",
         permanent: true,
       },
       {
-        source: "/fr/services/payroll",
-        destination: "/fr/services/paie",
+        source: "/products/outlook-addin",
+        destination: "/en/products/outlook-addin/",
         permanent: true,
       },
       {
-        source: "/fr/services/payroll/",
-        destination: "/fr/services/paie/",
+        source: "/products/swiss-gpt",
+        destination: "/en/products/swiss-gpt/",
+        permanent: true,
+      },
+      // Resources redirects
+      {
+        source: "/ressources",
+        destination: "/en/ressources/",
         permanent: true,
       },
       {
-        source: "/fr/services/outsourcing",
-        destination: "/fr/services/externalisation",
+        source: "/ressources/articles",
+        destination: "/en/ressources/articles/",
         permanent: true,
       },
+      // Contact redirect
       {
-        source: "/fr/services/outsourcing/",
-        destination: "/fr/services/externalisation/",
-        permanent: true,
-      },
-      {
-        source: "/fr/services/mergers-acquisitions",
-        destination: "/fr/services/fusions-acquisitions",
-        permanent: true,
-      },
-      {
-        source: "/fr/services/mergers-acquisitions/",
-        destination: "/fr/services/fusions-acquisitions/",
-        permanent: true,
-      },
-      {
-        source: "/fr/services/corporate",
-        destination: "/fr/services/services-corporatifs",
-        permanent: true,
-      },
-      {
-        source: "/fr/services/corporate/",
-        destination: "/fr/services/services-corporatifs/",
-        permanent: true,
-      },
-      {
-        source: "/fr/services/incorporation",
-        destination: "/fr/services/constitution-entreprise",
-        permanent: true,
-      },
-      {
-        source: "/fr/services/incorporation/",
-        destination: "/fr/services/constitution-entreprise/",
+        source: "/contact",
+        destination: "/en/contact/",
         permanent: true,
       },
     ];
   },
   async rewrites() {
-    // Map localized French slugs to existing English-slug routes for rendering
-    return [
-      {
-        source: "/fr/services/comptabilite",
-        destination: "/fr/services/accounting",
-      },
-      {
-        source: "/fr/services/comptabilite/",
-        destination: "/fr/services/accounting/",
-      },
-      { source: "/fr/services/fiscalite", destination: "/fr/services/taxes" },
-      { source: "/fr/services/fiscalite/", destination: "/fr/services/taxes/" },
-      { source: "/fr/services/paie", destination: "/fr/services/payroll" },
-      { source: "/fr/services/paie/", destination: "/fr/services/payroll/" },
-      {
-        source: "/fr/services/externalisation",
-        destination: "/fr/services/outsourcing",
-      },
-      {
-        source: "/fr/services/externalisation/",
-        destination: "/fr/services/outsourcing/",
-      },
-      {
-        source: "/fr/services/fusions-acquisitions",
-        destination: "/fr/services/mergers-acquisitions",
-      },
-      {
-        source: "/fr/services/fusions-acquisitions/",
-        destination: "/fr/services/mergers-acquisitions/",
-      },
-      {
-        source: "/fr/services/services-corporatifs",
-        destination: "/fr/services/corporate",
-      },
-      {
-        source: "/fr/services/services-corporatifs/",
-        destination: "/fr/services/corporate/",
-      },
-      {
-        source: "/fr/services/constitution-entreprise",
-        destination: "/fr/services/incorporation",
-      },
-      {
-        source: "/fr/services/constitution-entreprise/",
-        destination: "/fr/services/incorporation/",
-      },
-    ];
+    // No rewrites needed for houle.ai - all routes use their canonical paths
+    return [];
   },
   async headers() {
     return [
