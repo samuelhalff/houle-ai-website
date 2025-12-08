@@ -81,7 +81,8 @@ export async function GET() {
     return locales.map((locale) => {
       const basePath = p === "/" ? "" : p;
       const localized = basePath ? localizePath(basePath, locale) : "";
-      const loc = `${BASE}/${locale}${localized}`;
+      // Add trailing slash to match trailingSlash: true in next.config.js
+      const loc = `${BASE}/${locale}${localized}/`;
       const lastmod = pObj.date || defaultLastmod;
 
       // Derive changefreq/priority
@@ -114,7 +115,8 @@ export async function GET() {
           const altLocalized = altPathBase
             ? localizePath(altPathBase, alt)
             : "";
-          const href = `${BASE}/${alt}${altLocalized}`;
+          // Add trailing slash to match trailingSlash: true in next.config.js
+          const href = `${BASE}/${alt}${altLocalized}/`;
           return `    <xhtml:link rel="alternate" hreflang="${escapeXml(
             alt
           )}" href="${escapeXml(href)}"/>`;
@@ -125,7 +127,8 @@ export async function GET() {
           const altLocalized = altPathBase
             ? localizePath(altPathBase, "en")
             : "";
-          const href = `${BASE}/en${altLocalized}`;
+          // Add trailing slash to match trailingSlash: true in next.config.js
+          const href = `${BASE}/en${altLocalized}/`;
           return `    <xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(
             href
           )}"/>`;
