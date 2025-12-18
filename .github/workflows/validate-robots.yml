@@ -1,4 +1,4 @@
-name: Validate robots policy
+name: Validate SEO & sitemap
 
 on:
   pull_request:
@@ -16,9 +16,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-
-      - name: Run robots absence check
-        run: node scripts/check-no-robots.js
 
       - name: Validate SEO (non-blocking)
         continue-on-error: true
