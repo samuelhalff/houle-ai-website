@@ -27,6 +27,12 @@ jobs:
           node-version: "20"
           cache: npm
 
+      - name: Cache node_modules
+        uses: actions/cache@v4
+        with:
+          path: node_modules
+          key: node-modules-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
+
       - name: Install dependencies
         run: npm ci
 
@@ -74,6 +80,18 @@ jobs:
             sleep 30
             git push
           fi
+
+      - name: Ping sitemaps
+        run: |
+          node scripts/ping-sitemaps.js --url https://houle.ai --path /sitemap.xml
+
+      - name: Final verification (informational only)
+        continue-on-error: true
+        run: |
+          echo "✅ Running final verification..."
+          node scripts/check-ressources-links.js --all-locales || echo "::warning::Some references missing after cleanup"
+          node scripts/check-ressources-links.js --all-locales --remote || echo "::warning::Some URLs still unreachable after cleanup"
+          echo "✅ Verification complete. Proceeding with deployment..."
 
       # Note: No need to trigger deployment explicitly
       # The push above will automatically trigger build-and-deploy.yml via push event
