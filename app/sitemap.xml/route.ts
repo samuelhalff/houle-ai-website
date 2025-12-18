@@ -19,10 +19,23 @@ function getPlaceholderLocales(): Set<string> {
 }
 
 const placeholderLocales = getPlaceholderLocales();
-const sitemapLocales = locales.filter((locale) => !placeholderLocales.has(locale as any));
+const sitemapLocales = locales.filter(
+  (locale) => !placeholderLocales.has(locale as any)
+);
 
 // static routes
-const staticPaths = ["/", "/about", "/services", "/ressources", "/contact", "/team", "/partners", "/legal/terms", "/legal/privacy", "/legal/cookies"];
+const staticPaths = [
+  "/",
+  "/about",
+  "/services",
+  "/ressources",
+  "/contact",
+  "/team",
+  "/partners",
+  "/legal/terms",
+  "/legal/privacy",
+  "/legal/cookies",
+];
 // dynamic routes
 const servicePaths = [
   "/services",
@@ -35,11 +48,21 @@ const servicePaths = [
   "/services/outsourcing",
 ];
 
-function readRessourcesIndex(locale: string): Array<{ slug: string; date?: string }> {
-  const file = path.join(process.cwd(), "src", "translations", locale, "ressources.json");
+function readRessourcesIndex(
+  locale: string
+): Array<{ slug: string; date?: string }> {
+  const file = path.join(
+    process.cwd(),
+    "src",
+    "translations",
+    locale,
+    "ressources.json"
+  );
   try {
     if (!fs.existsSync(file)) return [];
-    const json = JSON.parse(fs.readFileSync(file, "utf8")) as { Articles?: Array<{ slug: string; date?: string }>; };
+    const json = JSON.parse(fs.readFileSync(file, "utf8")) as {
+      Articles?: Array<{ slug: string; date?: string }>;
+    };
     return Array.isArray(json.Articles) ? json.Articles : [];
   } catch (_) {
     return [];
@@ -56,12 +79,16 @@ const ressourcesArticles = (() => {
     }
 
     const canonical = readRessourcesIndex(canonicalLocale);
-    const canonicalArticles = canonical.length ? canonical : readRessourcesIndex("fr");
+    const canonicalArticles = canonical.length
+      ? canonical
+      : readRessourcesIndex("fr");
 
     return canonicalArticles.map((a) => ({
       path: `/ressources/articles/${a.slug}`,
       date: a.date,
-      locales: sitemapLocales.filter((locale) => slugsByLocale.get(locale)?.has(a.slug)),
+      locales: sitemapLocales.filter((locale) =>
+        slugsByLocale.get(locale)?.has(a.slug)
+      ),
     }));
   } catch (_) {
     // fall through
@@ -92,9 +119,9 @@ export async function GET() {
 
   const urlEntries = paths.flatMap((pObj) => {
     const p = pObj.path;
-    const pathLocales = (pObj.locales?.length ? pObj.locales : sitemapLocales).filter(
-      (locale) => sitemapLocales.includes(locale as any)
-    );
+    const pathLocales = (
+      pObj.locales?.length ? pObj.locales : sitemapLocales
+    ).filter((locale) => sitemapLocales.includes(locale as any));
 
     // Build per-locale entries (only for locales that actually have the path)
     return pathLocales.map((locale) => {
@@ -110,27 +137,50 @@ export async function GET() {
       const isResources = p.startsWith("/ressources") && !isArticle;
       const isService = p.startsWith("/services");
 
-      const changefreq = isHome || isArticle ? "weekly" : isService || isResources ? "monthly" : "monthly";
-      const priority = isHome ? "1.0" : isArticle ? "0.8" : isService ? "0.7" : isResources ? "0.6" : "0.5";
+      const changefreq =
+        isHome || isArticle
+          ? "weekly"
+          : isService || isResources
+          ? "monthly"
+          : "monthly";
+      const priority = isHome
+        ? "1.0"
+        : isArticle
+        ? "0.8"
+        : isService
+        ? "0.7"
+        : isResources
+        ? "0.6"
+        : "0.5";
 
       // Build alternates block using only locales that actually exist for this path
       const alternates = [
         ...pathLocales.map((alt) => {
           const altPathBase = p === "/" ? "" : p;
-          const altLocalized = altPathBase ? localizePath(altPathBase, alt as any) : "";
+          const altLocalized = altPathBase
+            ? localizePath(altPathBase, alt as any)
+            : "";
           // Add trailing slash to alternate hrefs
           const href = `${BASE}/${alt}${altLocalized}/`;
           const hreflang = hreflangFor(alt as Locale);
-          return `    <xhtml:link rel="alternate" hreflang="${escapeXml(hreflang)}" href="${escapeXml(href)}"/>`;
+          return `    <xhtml:link rel="alternate" hreflang="${escapeXml(
+            hreflang
+          )}" href="${escapeXml(href)}"/>`;
         }),
         // x-default points to canonical locale when available, otherwise the first available locale
         (() => {
-          const xDefaultLocale = pathLocales.includes(canonicalLocale) ? canonicalLocale : pathLocales[0];
+          const xDefaultLocale = pathLocales.includes(canonicalLocale)
+            ? canonicalLocale
+            : pathLocales[0];
           const altPathBase = p === "/" ? "" : p;
-          const altLocalized = altPathBase ? localizePath(altPathBase, xDefaultLocale as any) : "";
+          const altLocalized = altPathBase
+            ? localizePath(altPathBase, xDefaultLocale as any)
+            : "";
           // Add trailing slash to x-default href
           const href = `${BASE}/${xDefaultLocale}${altLocalized}/`;
-          return `    <xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(href)}"/>`;
+          return `    <xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(
+            href
+          )}"/>`;
         })(),
       ].join("\n");
 

@@ -89,8 +89,13 @@ export async function getPageMetadata(
   // indexing incomplete placeholder locales. When a locale is marked as a
   // placeholder we will set robots.index/follow to false.
   function getPlaceholderLocales(): Set<Locale> {
-    const raw = process.env.PLACEHOLDER_LOCALES || '';
-    return new Set(raw.split(',').map((s) => s.trim()).filter(Boolean) as Locale[]);
+    const raw = process.env.PLACEHOLDER_LOCALES || "";
+    return new Set(
+      raw
+        .split(",")
+        .map((s) => s.trim())
+        .filter(Boolean) as Locale[]
+    );
   }
   const placeholderLocales = getPlaceholderLocales();
 

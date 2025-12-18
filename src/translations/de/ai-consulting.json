@@ -67,7 +67,7 @@
                 },
                 {
                     "Title": "Automatische Fristenerkennung",
-                    "Slug": "detection-delais-spfx-calendriers",
+                    "Slug": "detection-delais-SPFx-calendriers",
                     "Summary": "Ein Notariat verpasst keine Frist mehr dank einer SharePoint-Anwendung, die Dokumente automatisch analysiert, um alle rechtlichen und vertraglichen Fristen zu identifizieren. Das System erstellt Kalendereinträge in Teams mit progressiven Warnungen und eliminiert das Risiko von Versäumnissen, die schwerwiegende Folgen für die Berufshaftung haben könnten."
                 },
                 {

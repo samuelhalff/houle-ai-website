@@ -67,7 +67,7 @@
                 },
                 {
                     "Title": "Detecção automática de prazos",
-                    "Slug": "detection-delais-spfx-calendriers",
+                    "Slug": "detection-delais-SPFx-calendriers",
                     "Summary": "Um cartório notarial nunca perde nenhum prazo graças a uma aplicação SharePoint que analisa automaticamente documentos para identificar todos os prazos legais e contratuais. O sistema cria eventos de calendário no Teams com alertas progressivos, eliminando completamente o risco de esquecimento que poderia ter consequências graves na responsabilidade profissional."
                 },
                 {
