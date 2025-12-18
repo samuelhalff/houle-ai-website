@@ -85,6 +85,15 @@ export async function getPageMetadata(
 ): Promise<Metadata> {
   const config = await loadMetadataConfig(locale);
 
+  // Respect placeholder locales (e.g., PLACEHOLDER_LOCALES="es,pt") to avoid
+  // indexing incomplete placeholder locales. When a locale is marked as a
+  // placeholder we will set robots.index/follow to false.
+  function getPlaceholderLocales(): Set<Locale> {
+    const raw = process.env.PLACEHOLDER_LOCALES || '';
+    return new Set(raw.split(',').map((s) => s.trim()).filter(Boolean) as Locale[]);
+  }
+  const placeholderLocales = getPlaceholderLocales();
+
   // Get page-specific metadata or fall back to default
   const pageData = config.pages[path] || config.default;
 
@@ -133,11 +142,11 @@ export async function getPageMetadata(
     creator: config.default.author,
     publisher: config.default.siteName,
     robots: {
-      index: true,
-      follow: true,
+      index: !placeholderLocales.has(locale),
+      follow: !placeholderLocales.has(locale),
       googleBot: {
-        index: true,
-        follow: true,
+        index: !placeholderLocales.has(locale),
+        follow: !placeholderLocales.has(locale),
         "max-video-preview": -1,
         "max-image-preview": "large",
         "max-snippet": -1,
