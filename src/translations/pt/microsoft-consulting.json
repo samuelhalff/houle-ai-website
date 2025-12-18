@@ -114,7 +114,7 @@
         },
         {
           "Title": "Gestão de contratos no SharePoint com SPFx",
-          "Slug": "gestion-contrats-spfx-alertes-metadata",
+          "Slug": "gestion-contrats-SPFx-alertes-metadata",
           "Summary": "Uma empresa de serviços precisava de uma solução central para gerenciar seus contratos (prazos, renovações, assinaturas). Construímos um aplicativo do SharePoint com interfaces personalizadas (SPFx) para buscas, alertas automáticos antes de vencimentos de prazos e integração com DocuSign para assinaturas eletrônicas. Tudo é acessível a partir do Teams."
         },
         {

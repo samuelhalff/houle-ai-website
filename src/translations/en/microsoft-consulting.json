@@ -114,7 +114,7 @@
                 },
                 {
                     "Title": "Contract management in SharePoint with SPFx",
-                    "Slug": "gestion-contrats-spfx-alertes-metadata",
+                    "Slug": "gestion-contrats-SPFx-alertes-metadata",
                     "Summary": "A service company needed a central solution to manage its contracts (deadlines, renewals, signatures). We built a SharePoint application with custom interfaces (SPFx) for searches, automatic alerts before deadline expirations, and integration with DocuSign for electronic signatures. Everything is accessible from Teams."
                 },
                 {

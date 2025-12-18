@@ -114,7 +114,7 @@
                 },
                 {
                     "Title": "Vertragsverwaltung in SharePoint mit SPFx",
-                    "Slug": "gestion-contrats-spfx-alertes-metadata",
+                    "Slug": "gestion-contrats-SPFx-alertes-metadata",
                     "Summary": "Ein Dienstleistungsunternehmen benötigte eine zentrale Lösung zur Verwaltung seiner Verträge (Fristen, Verlängerungen, Unterschriften). Wir haben eine SharePoint-Anwendung mit benutzerdefinierten Oberflächen (SPFx) für Suchen, automatische Warnungen vor Fristablauf und Integration mit DocuSign für elektronische Unterschriften erstellt. Alles ist über Teams zugänglich."
                 },
                 {
