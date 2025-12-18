@@ -67,7 +67,7 @@
                 },
                 {
                     "Title": "Détection automatique des délais critiques",
-                    "Slug": "detection-delais-spfx-calendriers",
+                    "Slug": "detection-delais-SPFx-calendriers",
                     "Summary": "Une étude notariale ne manque plus aucune échéance grâce à une application SharePoint analysant automatiquement les documents pour identifier tous les délais légaux et contractuels. Le système crée des événements calendrier dans Teams avec alertes progressives, éliminant complètement le risque d'oubli qui pouvait avoir des conséquences graves sur la responsabilité professionnelle."
                 },
                 {

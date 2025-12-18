@@ -114,7 +114,7 @@
                 },
                 {
                     "Title": "Gestion de contrats avec SPFx et alertes",
-                    "Slug": "gestion-contrats-spfx-alertes-metadata",
+                    "Slug": "gestion-contrats-SPFx-alertes-metadata",
                     "Summary": "Une société immobilière ne manque plus aucune échéance contractuelle grâce à une application SPFx gérant 800 contrats avec métadonnées automatiques et alertes intelligentes. Le système extrait les dates critiques par IA, calcule les fenêtres de résiliation, et génère des alertes progressives. Aucune échéance n'a été manquée depuis le déploiement, évitant plusieurs dizaines de milliers de francs de pénalités annuelles."
                 },
                 {
