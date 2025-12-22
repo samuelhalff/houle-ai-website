@@ -56,7 +56,7 @@ function checkSitemapRoute() {
     // Look for URL generation patterns - checking if the file contains loc assignment
     const hasLocAssignment = content.includes('const loc = ') || content.includes('let loc = ');
     // Check if trailing slashes are explicitly added (e.g., ${localized}/ or + '/')
-    const hasTrailingSlash = /\$\{localized\}\//.test(content) || content.includes("+ '/'") || content.includes("+ '\\"/\"");
+    const hasTrailingSlash = /\$\{localized\}\//.test(content) || content.includes("+ '/'");
     if (hasLocAssignment) {
       if (hasTrailingSlash) {
         success('Sitemap route explicitly adds trailing slashes to URLs');
