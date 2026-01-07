@@ -119,8 +119,6 @@ export default async function ArticlePage({ params }: Params) {
     ? article.references
     : [];
 
-  }
-
   const baseUrl = "https://houle.ai";
   const articleUrl = `${baseUrl}/${locale}/ressources/articles/${params.slug}`;
   const breadcrumbJsonLd = {
@@ -349,6 +347,7 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Params) {
   const locale: Locale = isValidLocale(params.locale) ? params.locale : "fr";
   const ressources = await loadRessources(locale);
+  const fr = locale === "fr" ? ressources : await loadRessources("fr");
 
   const localArticle = ressources.Articles.find(
     (article) => article.slug === params.slug
