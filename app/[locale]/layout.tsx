@@ -6,8 +6,6 @@ import { locales, type Locale } from "@/src/lib/i18n-locales";
 const isLocale = (value: string): value is Locale =>
   locales.includes(value as Locale);
 
-export const dynamic = "force-dynamic";
-
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
@@ -24,8 +22,10 @@ export default async function LocaleLayout({
   }
 
   const activeLocale: Locale = locale;
-  const Navbar = (await import("@/src/components/navigation/NavbarClient"))
-    .default;
+  const Navbar = nextDynamic(
+    () => import("@/src/components/navigation/NavbarClient"),
+    { ssr: true }
+  );
   const Footer = nextDynamic(() => import("@/app/[locale]/shared/footer"), {
     suspense: true,
   });
@@ -123,7 +123,7 @@ export default async function LocaleLayout({
       <main id="main-content" role="main">
         {children}
       </main>
-      <Suspense fallback={null}>
+      <Suspense fallback={<div className="h-64 bg-muted" aria-hidden="true" />}>
         <Footer locale={activeLocale} />
       </Suspense>
     </div>

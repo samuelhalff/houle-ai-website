@@ -11,6 +11,7 @@ import dynamicImport from "next/dynamic";
 import Defer from "@/src/components/Defer";
 
 // Force dynamic rendering to speed up build times
+export const dynamic = "force-dynamic";
 
 const ShareButtons = dynamicImport(
   () => import("@/src/components/ui/ShareButtons"),
@@ -90,28 +91,14 @@ export default async function ArticlePage({ params }: Params) {
   // Load the locale-specific translations on the server
   const ressources = await loadRessources(locale);
   const tNav = await getTranslations(locale, "navbar");
+
+  // Load canonical FR to compare and/or fallback
   const fr = locale === "fr" ? ressources : await loadRessources("fr");
 
   const localArticle = ressources.Articles.find(
     (article) => article.slug === params.slug
   );
   const frArticle = fr.Articles.find((article) => article.slug === params.slug);
-  // If slug doesn't exist at all in this locale, return 404
-  if (locale !== "fr" && !localArticle) return notFound();
-
-  // Check if this is a duplicate/untranslated article (content identical to FR)
-  // If so, return 404 to prevent soft 404 issues with Google
-  if (locale !== "fr" && localArticle && frArticle) {
-    const sameTitle = (localArticle.title || "") === (frArticle.title || "");
-    const sameDesc =
-      (localArticle.description || "") === (frArticle.description || "");
-    const sameContent =
-      (localArticle.content || "") === (frArticle.content || "");
-    if (sameTitle && sameDesc && sameContent) {
-      // This is duplicate content - return 404 to avoid soft 404 reports
-      return notFound();
-    }
-  }
   const article = localArticle ?? frArticle;
   if (!article) return notFound();
 
@@ -119,6 +106,20 @@ export default async function ArticlePage({ params }: Params) {
     ? article.references
     : [];
 
+  // Determine if we're effectively showing a fallback (either missing local
+  // or local content is identical to FR canonical). Used to show notice and noindex.
+  let isFallback = false;
+  if (locale !== "fr") {
+    if (!localArticle) {
+      isFallback = true;
+    } else if (frArticle) {
+      const sameTitle = (localArticle.title || "") === (frArticle.title || "");
+      const sameDesc =
+        (localArticle.description || "") === (frArticle.description || "");
+      const sameContent =
+        (localArticle.content || "") === (frArticle.content || "");
+      if (sameTitle && sameDesc && sameContent) isFallback = true;
+    }
   }
 
   const baseUrl = "https://houle.ai";
@@ -225,6 +226,20 @@ export default async function ArticlePage({ params }: Params) {
         nonce={nonce}
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
+      {isFallback && (
+        <div className="mb-4 rounded-md border bg-muted/40 text-muted-foreground px-3 py-2 text-sm">
+          {/* Localized fallback notice */}
+          {locale === "fr"
+            ? "Contenu affiché en anglais temporairement en attendant la traduction."
+            : locale === "de"
+            ? "Inhalt vorübergehend auf Englisch angezeigt, bis die Übersetzung verfügbar ist."
+            : locale === "es"
+            ? "Contenido mostrado temporalmente en inglés mientras se prepara la traducción."
+            : locale === "pt"
+            ? "Conteúdo exibido temporariamente em inglês enquanto a tradução é preparada."
+            : "Content temporarily shown in English until the translation is ready."}
+        </div>
+      )}
       <Defer rootMargin="200px" idle={150}>
         <Breadcrumbs
           className="mb-6"
@@ -349,30 +364,28 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: Params) {
   const locale: Locale = isValidLocale(params.locale) ? params.locale : "fr";
   const ressources = await loadRessources(locale);
+  const fr = locale === "fr" ? ressources : await loadRessources("fr");
 
   const localArticle = ressources.Articles.find(
     (article) => article.slug === params.slug
   );
   const frArticle = fr.Articles.find((article) => article.slug === params.slug);
-  // If slug doesn't exist at all in this locale, return 404
-  if (locale !== "fr" && !localArticle) return notFound();
-
-  // Check if this is a duplicate/untranslated article (content identical to FR)
-  // If so, return 404 to prevent soft 404 issues with Google
-  if (locale !== "fr" && localArticle && frArticle) {
-    const sameTitle = (localArticle.title || "") === (frArticle.title || "");
-    const sameDesc =
-      (localArticle.description || "") === (frArticle.description || "");
-    const sameContent =
-      (localArticle.content || "") === (frArticle.content || "");
-    if (sameTitle && sameDesc && sameContent) {
-      // This is duplicate content - return 404 to avoid soft 404 reports
-      return notFound();
-    }
-  }
   const article = localArticle ?? frArticle;
   if (!article) return {};
 
+  let isFallback = false;
+  if (locale !== "fr") {
+    if (!localArticle) {
+      isFallback = true;
+    } else if (frArticle) {
+      const sameTitle = (localArticle.title || "") === (frArticle.title || "");
+      const sameDesc =
+        (localArticle.description || "") === (frArticle.description || "");
+      const sameContent =
+        (localArticle.content || "") === (frArticle.content || "");
+      if (sameTitle && sameDesc && sameContent) isFallback = true;
+    }
+  }
   const reading = article.content ? estimateReadingTime(article.content) : null;
   const meta = await getPageMetadata(locale, "/ressources/articles");
 
@@ -381,12 +394,13 @@ export async function generateMetadata({ params }: Params) {
     title: article.title,
     description: article.description,
     robots: {
-      index: true,
+      index: isFallback ? false : true,
       follow: true,
     },
     other: {
       ...(meta.other || {}),
       estimatedReadingTime: reading ? reading.timeRequiredISO : undefined,
+      contentFallbackFrom: isFallback ? "fr" : undefined,
     },
   };
 }
