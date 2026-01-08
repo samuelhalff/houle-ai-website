@@ -2,6 +2,7 @@ import Link from "next/link";
 import FAQ from "@/src/components/FAQ";
 import { getTranslations, type Locale } from "@/src/lib/i18n";
 import { Metadata } from "next";
+import { headers } from "next/headers";
 
 export async function generateMetadata({
   params,
@@ -39,6 +40,7 @@ export default async function HomePage({
 }) {
   const locale = params?.locale || "en";
   const localePrefix = `/${locale}`;
+  const nonce = headers().get("x-nonce") || undefined;
 
   // Load FAQ data
   const faqT = await getTranslations(locale as Locale, "faq");
@@ -53,6 +55,20 @@ export default async function HomePage({
       question: faqT(`Question${i}`) as string,
       answer: faqT(`Answer${i}`) as string,
     }));
+
+  // Generate FAQ structured data for Google Search
+  const faqJsonLd = faqItems.length > 0 ? {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqItems.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
+  } : null;
 
   const copy = {
     en: {
@@ -204,6 +220,15 @@ export default async function HomePage({
 
   return (
     <div className="max-w-[1080px] mx-auto w-full px-6 pb-12 pt-10 space-y-14">
+      {/* FAQ Structured Data for Google Search */}
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          nonce={nonce}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
+      
       <section className="relative overflow-hidden rounded-3xl border bg-gradient-to-br from-primary/[0.08] via-accent/[0.03] to-background p-8 sm:p-12 shadow-[0_20px_70px_rgba(0,0,0,0.08)] dark:shadow-[0_20px_70px_rgba(0,0,0,0.3)]">
         <div className="absolute -left-16 -top-24 h-64 w-64 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 blur-3xl" />
         <div className="absolute -right-20 -bottom-28 h-72 w-72 rounded-full bg-gradient-to-tl from-accent/25 to-accent/5 blur-3xl" />
