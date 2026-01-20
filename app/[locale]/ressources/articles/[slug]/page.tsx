@@ -376,8 +376,9 @@ export async function generateMetadata({ params }: Params) {
   const { locales: allLocales } = await import("@/src/lib/i18n");
   const validLocales: Locale[] = [];
   
-  for (const loc of allLocales) {
-    try {
+  // Load all locale resources concurrently for better performance
+  const localeChecks = await Promise.allSettled(
+    allLocales.map(async (loc) => {
       const locRessources = await loadRessources(loc);
       const locArticle = locRessources.Articles.find(
         (a) => a.slug === params.slug
@@ -385,20 +386,24 @@ export async function generateMetadata({ params }: Params) {
       
       if (!locArticle) {
         // Article doesn't exist in this locale
-        continue;
+        return null;
       }
       
       // Check if it's a duplicate of French (same logic as in the page component)
       if (loc !== "fr" && isDuplicateArticle(locArticle, frArticle)) {
         // This is a duplicate - skip this locale
-        continue;
+        return null;
       }
       
       // Article exists and is not a duplicate
-      validLocales.push(loc);
-    } catch (error) {
-      // Locale might not have ressources.json - skip it
-      continue;
+      return loc;
+    })
+  );
+  
+  // Collect valid locales from successful checks
+  for (const result of localeChecks) {
+    if (result.status === "fulfilled" && result.value !== null) {
+      validLocales.push(result.value);
     }
   }
 

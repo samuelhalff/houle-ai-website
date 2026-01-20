@@ -122,6 +122,8 @@ export async function getPageMetadata(
   
   // Determine which locales to include in alternates
   // If validLocales is provided, use only those; otherwise use all locales
+  // This allows dynamic pages (like articles) to limit alternates to actual content
+  // while static pages continue to include all locales for backward compatibility
   const localesToInclude = customData?.validLocales ?? locales;
   
   const alternateUrls: Record<string, string> = {};
