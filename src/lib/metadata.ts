@@ -81,6 +81,7 @@ export async function getPageMetadata(
   customData?: {
     articleTitle?: string;
     articleDescription?: string;
+    validLocales?: Locale[];
   }
 ): Promise<Metadata> {
   const config = await loadMetadataConfig(locale);
@@ -118,12 +119,17 @@ export async function getPageMetadata(
   }
 
   const canonicalPath = `/${locale}${path}/`;
-  const alternateUrls = locales.reduce((acc, loc) => {
+  
+  // Determine which locales to include in alternates
+  // If validLocales is provided, use only those; otherwise use all locales
+  const localesToInclude = customData?.validLocales ?? locales;
+  
+  const alternateUrls: Record<string, string> = {};
+  for (const loc of localesToInclude) {
     const locPath = `/${loc}${path}/`;
     const key = hreflangFor(loc);
-    acc[key] = `${siteUrl}${locPath}`;
-    return acc;
-  }, {} as Record<string, string>);
+    alternateUrls[key] = `${siteUrl}${locPath}`;
+  }
 
   const ogLocale =
     locale === "fr"
@@ -206,7 +212,14 @@ export async function getPageMetadata(
     alternates: {
       canonical: `${siteUrl}${canonicalPath}`,
       languages: Object.assign(
-        { "x-default": `${siteUrl}/en${path}/` },
+        {
+          "x-default": (() => {
+            const defaultLocale = localesToInclude.includes("en" as Locale)
+              ? "en"
+              : localesToInclude[0];
+            return `${siteUrl}/${defaultLocale}${path}/`;
+          })(),
+        },
         alternateUrls
       ),
     },
@@ -240,7 +253,8 @@ export async function generateMetadataForArticle(
   localeOrSlug: Locale | string,
   slugOrTitle?: string,
   titleOrDescription?: string,
-  description?: string
+  description?: string,
+  validLocales?: Locale[]
 ): Promise<Metadata> {
   if (
     typeof localeOrSlug === "string" &&
@@ -255,16 +269,18 @@ export async function generateMetadataForArticle(
       {
         articleTitle: slugOrTitle,
         articleDescription: titleOrDescription,
+        validLocales,
       }
     );
   } else {
-    // New signature: generateMetadataForArticle(locale, slug, title, description)
+    // New signature: generateMetadataForArticle(locale, slug, title, description, validLocales)
     return await getPageMetadata(
       localeOrSlug as Locale,
       `/ressources/articles/${slugOrTitle}`,
       {
         articleTitle: titleOrDescription,
         articleDescription: description,
+        validLocales,
       }
     );
   }
