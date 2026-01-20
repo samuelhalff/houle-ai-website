@@ -84,6 +84,20 @@ async function loadRessources(locale: Locale): Promise<RessourcesDictionary> {
   };
 }
 
+// Helper function to check if two articles have identical content
+function isDuplicateArticle(
+  locArticle: ResourceArticle | undefined,
+  frArticle: ResourceArticle | undefined
+): boolean {
+  if (!locArticle || !frArticle) return false;
+  
+  const sameTitle = (locArticle.title || "") === (frArticle.title || "");
+  const sameDesc = (locArticle.description || "") === (frArticle.description || "");
+  const sameContent = (locArticle.content || "") === (frArticle.content || "");
+  
+  return sameTitle && sameDesc && sameContent;
+}
+
 export default async function ArticlePage({ params }: Params) {
   const nonce = headers().get("x-nonce") || undefined;
   const locale: Locale = isValidLocale(params.locale) ? params.locale : "fr";
@@ -101,16 +115,9 @@ export default async function ArticlePage({ params }: Params) {
 
   // Check if this is a duplicate/untranslated article (content identical to FR)
   // If so, return 404 to prevent soft 404 issues with Google
-  if (locale !== "fr" && localArticle && frArticle) {
-    const sameTitle = (localArticle.title || "") === (frArticle.title || "");
-    const sameDesc =
-      (localArticle.description || "") === (frArticle.description || "");
-    const sameContent =
-      (localArticle.content || "") === (frArticle.content || "");
-    if (sameTitle && sameDesc && sameContent) {
-      // This is duplicate content - return 404 to avoid soft 404 reports
-      return notFound();
-    }
+  if (locale !== "fr" && isDuplicateArticle(localArticle, frArticle)) {
+    // This is duplicate content - return 404 to avoid soft 404 reports
+    return notFound();
   }
   const article = localArticle ?? frArticle;
   if (!article) return notFound();
@@ -358,16 +365,9 @@ export async function generateMetadata({ params }: Params) {
 
   // Check if this is a duplicate/untranslated article (content identical to FR)
   // If so, return 404 to prevent soft 404 issues with Google
-  if (locale !== "fr" && localArticle && frArticle) {
-    const sameTitle = (localArticle.title || "") === (frArticle.title || "");
-    const sameDesc =
-      (localArticle.description || "") === (frArticle.description || "");
-    const sameContent =
-      (localArticle.content || "") === (frArticle.content || "");
-    if (sameTitle && sameDesc && sameContent) {
-      // This is duplicate content - return 404 to avoid soft 404 reports
-      return notFound();
-    }
+  if (locale !== "fr" && isDuplicateArticle(localArticle, frArticle)) {
+    // This is duplicate content - return 404 to avoid soft 404 reports
+    return notFound();
   }
   const article = localArticle ?? frArticle;
   if (!article) return {};
@@ -375,9 +375,6 @@ export async function generateMetadata({ params }: Params) {
   // Determine which locales have this article (and it's not a duplicate)
   const { locales: allLocales } = await import("@/src/lib/i18n");
   const validLocales: Locale[] = [];
-  
-  // Load French resources once for comparison
-  const frRessources = locale === "fr" ? ressources : await loadRessources("fr");
   
   for (const loc of allLocales) {
     try {
@@ -392,21 +389,9 @@ export async function generateMetadata({ params }: Params) {
       }
       
       // Check if it's a duplicate of French (same logic as in the page component)
-      if (loc !== "fr") {
-        const frArticle = frRessources.Articles.find(
-          (a) => a.slug === params.slug
-        );
-        
-        if (frArticle) {
-          const sameTitle = (locArticle.title || "") === (frArticle.title || "");
-          const sameDesc = (locArticle.description || "") === (frArticle.description || "");
-          const sameContent = (locArticle.content || "") === (frArticle.content || "");
-          
-          if (sameTitle && sameDesc && sameContent) {
-            // This is a duplicate - skip this locale
-            continue;
-          }
-        }
+      if (loc !== "fr" && isDuplicateArticle(locArticle, frArticle)) {
+        // This is a duplicate - skip this locale
+        continue;
       }
       
       // Article exists and is not a duplicate
