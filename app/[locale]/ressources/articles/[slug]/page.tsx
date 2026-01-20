@@ -84,6 +84,20 @@ async function loadRessources(locale: Locale): Promise<RessourcesDictionary> {
   };
 }
 
+// Helper function to check if two articles have identical content
+function isDuplicateArticle(
+  locArticle: ResourceArticle | undefined,
+  frArticle: ResourceArticle | undefined
+): boolean {
+  if (!locArticle || !frArticle) return false;
+  
+  const sameTitle = (locArticle.title || "") === (frArticle.title || "");
+  const sameDesc = (locArticle.description || "") === (frArticle.description || "");
+  const sameContent = (locArticle.content || "") === (frArticle.content || "");
+  
+  return sameTitle && sameDesc && sameContent;
+}
+
 export default async function ArticlePage({ params }: Params) {
   const nonce = headers().get("x-nonce") || undefined;
   const locale: Locale = isValidLocale(params.locale) ? params.locale : "fr";
@@ -101,16 +115,9 @@ export default async function ArticlePage({ params }: Params) {
 
   // Check if this is a duplicate/untranslated article (content identical to FR)
   // If so, return 404 to prevent soft 404 issues with Google
-  if (locale !== "fr" && localArticle && frArticle) {
-    const sameTitle = (localArticle.title || "") === (frArticle.title || "");
-    const sameDesc =
-      (localArticle.description || "") === (frArticle.description || "");
-    const sameContent =
-      (localArticle.content || "") === (frArticle.content || "");
-    if (sameTitle && sameDesc && sameContent) {
-      // This is duplicate content - return 404 to avoid soft 404 reports
-      return notFound();
-    }
+  if (locale !== "fr" && isDuplicateArticle(localArticle, frArticle)) {
+    // This is duplicate content - return 404 to avoid soft 404 reports
+    return notFound();
   }
   const article = localArticle ?? frArticle;
   if (!article) return notFound();
@@ -358,22 +365,58 @@ export async function generateMetadata({ params }: Params) {
 
   // Check if this is a duplicate/untranslated article (content identical to FR)
   // If so, return 404 to prevent soft 404 issues with Google
-  if (locale !== "fr" && localArticle && frArticle) {
-    const sameTitle = (localArticle.title || "") === (frArticle.title || "");
-    const sameDesc =
-      (localArticle.description || "") === (frArticle.description || "");
-    const sameContent =
-      (localArticle.content || "") === (frArticle.content || "");
-    if (sameTitle && sameDesc && sameContent) {
-      // This is duplicate content - return 404 to avoid soft 404 reports
-      return notFound();
-    }
+  if (locale !== "fr" && isDuplicateArticle(localArticle, frArticle)) {
+    // This is duplicate content - return 404 to avoid soft 404 reports
+    return notFound();
   }
   const article = localArticle ?? frArticle;
   if (!article) return {};
 
+  // Determine which locales have this article (and it's not a duplicate)
+  const { locales: allLocales } = await import("@/src/lib/i18n");
+  const validLocales: Locale[] = [];
+  
+  // Load all locale resources concurrently for better performance
+  const localeChecks = await Promise.allSettled(
+    allLocales.map(async (loc) => {
+      const locRessources = await loadRessources(loc);
+      const locArticle = locRessources.Articles.find(
+        (a) => a.slug === params.slug
+      );
+      
+      if (!locArticle) {
+        // Article doesn't exist in this locale
+        return null;
+      }
+      
+      // Check if it's a duplicate of French (same logic as in the page component)
+      if (loc !== "fr" && isDuplicateArticle(locArticle, frArticle)) {
+        // This is a duplicate - skip this locale
+        return null;
+      }
+      
+      // Article exists and is not a duplicate
+      return loc;
+    })
+  );
+  
+  // Collect valid locales from successful checks
+  for (const result of localeChecks) {
+    if (result.status === "fulfilled" && result.value !== null) {
+      validLocales.push(result.value);
+    }
+  }
+
   const reading = article.content ? estimateReadingTime(article.content) : null;
-  const meta = await getPageMetadata(locale, "/ressources/articles");
+  const meta = await getPageMetadata(
+    locale,
+    `/ressources/articles/${params.slug}`,
+    {
+      articleTitle: article.title,
+      articleDescription: article.description,
+      validLocales,
+    }
+  );
 
   return {
     ...meta,
