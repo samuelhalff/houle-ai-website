@@ -69,6 +69,7 @@ jobs:
           path: next-standalone.tar.gz
           compression-level: 0
           if-no-files-found: error
+          retention-days: 1
 
   deploy:
     runs-on: ubuntu-latest
