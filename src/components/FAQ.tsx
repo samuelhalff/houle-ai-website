@@ -18,6 +18,7 @@ const PlusIcon = ({
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
+    aria-hidden="true"
   >
     <path d="M5 12h14" stroke={stroke || "#000000"} />
     <path d="M12 5v14" stroke={stroke || "#000000"} />
