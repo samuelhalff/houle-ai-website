@@ -83,7 +83,7 @@ const SwissGPTPage = async ({ params }: { params: { locale: string } }) => {
                 "Access the latest AI models with complete data sovereignty"}
             </p>
             <Link
-              href={`${localePrefix}/contact`}
+              href={`${localePrefix}/contact/`}
               className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors"
             >
               {params.locale === "fr"
@@ -216,7 +216,7 @@ const SwissGPTPage = async ({ params }: { params: { locale: string } }) => {
               "Schedule a demo to see how enterprise AI works"}
           </p>
           <Link
-            href={`${localePrefix}/contact`}
+            href={`${localePrefix}/contact/`}
             className="inline-flex items-center justify-center px-8 py-4 rounded-lg bg-primary text-primary-foreground font-semibold text-lg hover:bg-primary/90 transition-colors shadow-lg hover:shadow-xl"
           >
             {params.locale === "fr"

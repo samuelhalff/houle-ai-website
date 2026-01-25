@@ -31,7 +31,7 @@ export default async function ProductsPage({
 
   const products = [
     {
-      href: `${localePrefix}/products/word-addin`,
+      href: `${localePrefix}/products/word-addin/`,
       title:
         locale === "fr"
           ? "Add-in Word"
@@ -54,7 +54,7 @@ export default async function ProductsPage({
           : "Intelligent AI assistant for Word that enhances your writing, generates content, and automates your word processing tasks.",
     },
     {
-      href: `${localePrefix}/products/outlook-addin`,
+      href: `${localePrefix}/products/outlook-addin/`,
       title:
         locale === "fr"
           ? "Add-in Outlook"
@@ -77,7 +77,7 @@ export default async function ProductsPage({
           : "Boost your email productivity with AI: automatic replies, message summaries, and intelligent inbox management.",
     },
     {
-      href: `${localePrefix}/products/swiss-gpt`,
+      href: `${localePrefix}/products/swiss-gpt/`,
       title:
         locale === "fr"
           ? "Swiss GPT"

@@ -31,7 +31,7 @@ export default async function ServicesPage({
 
   const services = [
     {
-      href: `${localePrefix}/services/ai-consulting`,
+      href: `${localePrefix}/services/ai-consulting/`,
       title:
         locale === "fr"
           ? "Conseil en IA"
@@ -54,7 +54,7 @@ export default async function ServicesPage({
           : "Custom artificial intelligence solutions to automate your processes and improve your decisions.",
     },
     {
-      href: `${localePrefix}/services/microsoft-consulting`,
+      href: `${localePrefix}/services/microsoft-consulting/`,
       title:
         locale === "fr"
           ? "Conseil Microsoft"

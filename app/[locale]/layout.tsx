@@ -43,30 +43,30 @@ export default async function LocaleLayout({
           },
           products: [
             {
-              href: "/products/word-addin",
+              href: "/products/word-addin/",
               title: "Add-in Word",
               description: "Assistant IA pour Microsoft Word",
             },
             {
-              href: "/products/outlook-addin",
+              href: "/products/outlook-addin/",
               title: "Add-in Outlook",
               description: "Assistant IA pour Outlook",
             },
             {
-              href: "/products/swiss-gpt",
+              href: "/products/swiss-gpt/",
               title: "GPT Suisse",
               description: "Plateforme GPT hébergée en Suisse",
             },
           ],
           services: [
             {
-              href: "/services/ai-consulting",
+              href: "/services/ai-consulting/",
               title: "Conseil en IA",
               description:
                 "Solutions d'intelligence artificielle sur mesure avec Azure AI",
             },
             {
-              href: "/services/microsoft-consulting",
+              href: "/services/microsoft-consulting/",
               title: "Conseil Microsoft",
               description:
                 "Azure, Power Automate, SharePoint, Power BI et SPFx",
@@ -85,30 +85,30 @@ export default async function LocaleLayout({
           },
           products: [
             {
-              href: "/products/word-addin",
+              href: "/products/word-addin/",
               title: "Word Add-in",
               description: "AI assistant for Microsoft Word",
             },
             {
-              href: "/products/outlook-addin",
+              href: "/products/outlook-addin/",
               title: "Outlook Add-in",
               description: "AI assistant for Microsoft Outlook",
             },
             {
-              href: "/products/swiss-gpt",
+              href: "/products/swiss-gpt/",
               title: "Swiss GPT",
               description: "Swiss-hosted GPT platform",
             },
           ],
           services: [
             {
-              href: "/services/ai-consulting",
+              href: "/services/ai-consulting/",
               title: "AI consulting",
               description:
                 "Custom artificial intelligence solutions with Azure AI",
             },
             {
-              href: "/services/microsoft-consulting",
+              href: "/services/microsoft-consulting/",
               title: "Microsoft consulting",
               description:
                 "Azure, Power Automate, SharePoint, Power BI and SPFx",

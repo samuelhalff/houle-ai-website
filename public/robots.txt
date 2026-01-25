@@ -6,5 +6,15 @@ Allow: /
 Disallow: /api/
 Disallow: /_next/
 
+# Block crawl-heavy query parameters to prevent index bloat
+Disallow: /*?*
+
+# Block non-canonical URL variations (without trailing slash)
+Disallow: /fr$
+Disallow: /en$
+Disallow: /de$
+Disallow: /es$
+Disallow: /pt$
+
 # Sitemap
 Sitemap: https://houle.ai/sitemap.xml

@@ -39,7 +39,7 @@ export default function ProductsDropdown({
       onBlur={handleBlur}
     >
       <Link
-        href={`${localePrefix}/products`}
+        href={`${localePrefix}/products/`}
         prefetch={false}
         locale={locale}
         aria-expanded={open}

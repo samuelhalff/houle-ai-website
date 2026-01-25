@@ -150,7 +150,7 @@ export default async function NotFoundPage() {
         </Link>
 
         <Link
-          href={`${localePrefix}/services`}
+          href={`${localePrefix}/services/`}
           className="group p-6 rounded-lg border border-border bg-card hover:border-primary hover:shadow-md transition-all"
         >
           <div className="text-2xl mb-2">🔧</div>
@@ -160,7 +160,7 @@ export default async function NotFoundPage() {
         </Link>
 
         <Link
-          href={`${localePrefix}/products`}
+          href={`${localePrefix}/products/`}
           className="group p-6 rounded-lg border border-border bg-card hover:border-primary hover:shadow-md transition-all"
         >
           <div className="text-2xl mb-2">📦</div>
@@ -170,7 +170,7 @@ export default async function NotFoundPage() {
         </Link>
 
         <Link
-          href={`${localePrefix}/contact`}
+          href={`${localePrefix}/contact/`}
           className="group p-6 rounded-lg border border-border bg-card hover:border-primary hover:shadow-md transition-all"
         >
           <div className="text-2xl mb-2">💬</div>

@@ -93,7 +93,7 @@ export default function NavbarClient({
                 />
                 <li>
                   <Link
-                    href={`${localePrefix}/ressources`}
+                    href={`${localePrefix}/ressources/`}
                     prefetch={false}
                     locale={locale}
                     aria-current={
@@ -114,7 +114,7 @@ export default function NavbarClient({
                 </li>
                 <li>
                   <Link
-                    href={`${localePrefix}/contact`}
+                    href={`${localePrefix}/contact/`}
                     prefetch={false}
                     locale={locale}
                     aria-current={

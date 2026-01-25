@@ -58,7 +58,7 @@ const MicrosoftConsultingPage = async ({
     {
       name: (tService("Hero.Title") as string) || "Microsoft consulting",
       item: `${baseUrl}/${params.locale}${localizePath(
-        "/services/microsoft-consulting",
+        "/services/microsoft-consulting/",
         params.locale as Locale
       )}/`,
     },
@@ -71,7 +71,7 @@ const MicrosoftConsultingPage = async ({
       "Optimize your productivity with the Microsoft ecosystem.",
     serviceType: "Consulting",
     url: `${baseUrl}/${params.locale}${localizePath(
-      "/services/microsoft-consulting",
+      "/services/microsoft-consulting/",
       params.locale as Locale
     )}/`,
     areaServed: ["Geneva", "Lausanne", "Zürich", "Switzerland"],
@@ -86,7 +86,7 @@ const MicrosoftConsultingPage = async ({
 
   const professionalServiceJsonLd = buildProfessionalServiceSchema(
     `${baseUrl}/${params.locale}${localizePath(
-      "/services/microsoft-consulting",
+      "/services/microsoft-consulting/",
       params.locale as Locale
     )}/`,
     (tService("Hero.Title") as string) || "Microsoft consulting",
@@ -555,7 +555,7 @@ const MicrosoftConsultingPage = async ({
                 : "Contact us to optimize your Microsoft 365 environment."}
             </p>
             <Link
-              href={`${localePrefix}/contact`}
+              href={`${localePrefix}/contact/`}
               className="inline-flex items-center px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:shadow-lg hover:scale-105 transition-all"
             >
               {params.locale === "fr"

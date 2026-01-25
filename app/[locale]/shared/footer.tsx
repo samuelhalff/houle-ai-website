@@ -143,21 +143,21 @@ export default function Footer({ locale }: { locale?: string }) {
             <p className="text-sm font-semibold">{t.products}</p>
             <nav className="flex flex-col gap-2">
               <a
-                href={`${localePrefix}/products/outlook-addin`}
+                href={`${localePrefix}/products/outlook-addin/`}
                 className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 aria-label={`Navigate to ${t.outlookAddin} product page`}
               >
                 {t.outlookAddin}
               </a>
               <a
-                href={`${localePrefix}/products/word-addin`}
+                href={`${localePrefix}/products/word-addin/`}
                 className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 aria-label={`Navigate to ${t.wordAddin} product page`}
               >
                 {t.wordAddin}
               </a>
               <a
-                href={`${localePrefix}/products/swiss-gpt`}
+                href={`${localePrefix}/products/swiss-gpt/`}
                 className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 aria-label={`Navigate to ${t.swissGpt} product page`}
               >
@@ -171,14 +171,14 @@ export default function Footer({ locale }: { locale?: string }) {
             <p className="text-sm font-semibold">{t.services}</p>
             <nav className="flex flex-col gap-2">
               <a
-                href={`${localePrefix}/services/ai-consulting`}
+                href={`${localePrefix}/services/ai-consulting/`}
                 className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 aria-label={`Navigate to ${t.aiConsulting} service page`}
               >
                 {t.aiConsulting}
               </a>
               <a
-                href={`${localePrefix}/services/microsoft-consulting`}
+                href={`${localePrefix}/services/microsoft-consulting/`}
                 className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 aria-label={`Navigate to ${t.microsoftConsulting} service page`}
               >
@@ -199,14 +199,14 @@ export default function Footer({ locale }: { locale?: string }) {
                 {t.home}
               </a>
               <a
-                href={`${localePrefix}/ressources`}
+                href={`${localePrefix}/ressources/`}
                 className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 aria-label={`Navigate to ${t.resources}`}
               >
                 {t.resources}
               </a>
               <a
-                href={`${localePrefix}/contact`}
+                href={`${localePrefix}/contact/`}
                 className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 aria-label={`Navigate to ${t.contact} page`}
               >
@@ -220,21 +220,21 @@ export default function Footer({ locale }: { locale?: string }) {
             <p className="text-sm font-semibold">{t.legal}</p>
             <nav className="flex flex-col gap-2">
               <a
-                href={`${localePrefix}/legal/privacy`}
+                href={`${localePrefix}/legal/privacy/`}
                 className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 aria-label={`Read our ${t.privacyPolicy}`}
               >
                 {t.privacyPolicy}
               </a>
               <a
-                href={`${localePrefix}/legal/terms`}
+                href={`${localePrefix}/legal/terms/`}
                 className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 aria-label={`Read our ${t.termsOfService}`}
               >
                 {t.termsOfService}
               </a>
               <a
-                href={`${localePrefix}/legal/cookies`}
+                href={`${localePrefix}/legal/cookies/`}
                 className="text-sm text-muted-foreground hover:text-primary transition-colors"
                 aria-label={`Read our ${t.cookiesPolicy}`}
               >

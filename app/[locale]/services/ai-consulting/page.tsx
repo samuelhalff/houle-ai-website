@@ -54,7 +54,7 @@ const AIConsultingPage = async ({ params }: { params: { locale: string } }) => {
     {
       name: (tService("Hero.Title") as string) || "AI consulting",
       item: `${baseUrl}/${params.locale}${localizePath(
-        "/services/ai-consulting",
+        "/services/ai-consulting/",
         params.locale as Locale
       )}/`,
     },
@@ -67,7 +67,7 @@ const AIConsultingPage = async ({ params }: { params: { locale: string } }) => {
       "Transform your business with AI solutions tailored to your needs.",
     serviceType: "Consulting",
     url: `${baseUrl}/${params.locale}${localizePath(
-      "/services/ai-consulting",
+      "/services/ai-consulting/",
       params.locale as Locale
     )}/`,
     areaServed: ["Geneva", "Lausanne", "Zürich", "Switzerland"],
@@ -82,7 +82,7 @@ const AIConsultingPage = async ({ params }: { params: { locale: string } }) => {
 
   const professionalServiceJsonLd = buildProfessionalServiceSchema(
     `${baseUrl}/${params.locale}${localizePath(
-      "/services/ai-consulting",
+      "/services/ai-consulting/",
       params.locale as Locale
     )}/`,
     (tService("Hero.Title") as string) || "AI consulting",
@@ -399,7 +399,7 @@ const AIConsultingPage = async ({ params }: { params: { locale: string } }) => {
                 : "Contact us to discover how AI can transform your business."}
             </p>
             <Link
-              href={`${localePrefix}/contact`}
+              href={`${localePrefix}/contact/`}
               className="inline-flex items-center px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:shadow-lg hover:scale-105 transition-all"
             >
               {params.locale === "fr"

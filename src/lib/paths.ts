@@ -47,3 +47,19 @@ export function delocalizePath(path: string, locale: Locale): string {
   }
   return key;
 }
+
+/**
+ * Ensures a URL path ends with a trailing slash.
+ */
+export function withTrailingSlash(path: string): string {
+  if (!path || path === "/") return "/";
+  return path.endsWith("/") ? path : `${path}/`;
+}
+
+/**
+ * Builds a normalized internal URL with locale prefix and trailing slash.
+ */
+export function buildInternalUrl(basePath: string, locale: Locale): string {
+  const localized = basePath === "/" ? "" : localizePath(basePath, locale);
+  return withTrailingSlash(`/${locale}${localized}`);
+}

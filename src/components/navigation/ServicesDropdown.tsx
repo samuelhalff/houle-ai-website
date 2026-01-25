@@ -39,7 +39,7 @@ export default function ServicesDropdown({
       onBlur={handleBlur}
     >
       <Link
-        href={`${localePrefix}/services`}
+        href={`${localePrefix}/services/`}
         prefetch={false}
         locale={locale}
         aria-expanded={open}

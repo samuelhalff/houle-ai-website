@@ -346,7 +346,7 @@ export default async function HomePage({
           {t.ctaText}
         </p>
         <Link
-          href={`${localePrefix}/contact`}
+          href={`${localePrefix}/contact/`}
           className="inline-flex items-center px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:shadow-lg hover:scale-105 transition-all"
         >
           {t.ctaButton}

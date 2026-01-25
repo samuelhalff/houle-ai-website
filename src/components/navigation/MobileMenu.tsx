@@ -120,7 +120,7 @@ const MobileMenu = ({
             </Suspense>
             <div className="mt-3 mb-3">
               <Link
-                href={`${localePrefix}/contact`}
+                href={`${localePrefix}/contact/`}
                 onClick={handleLinkClick}
                 prefetch={false}
                 locale={locale}
@@ -194,7 +194,7 @@ const MobileMenu = ({
             </div>
             <div>
               <Link
-                href={`${localePrefix}/ressources`}
+                href={`${localePrefix}/ressources/`}
                 onClick={handleLinkClick}
                 prefetch={false}
                 locale={locale}

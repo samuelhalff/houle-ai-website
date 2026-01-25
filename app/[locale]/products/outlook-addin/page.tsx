@@ -251,13 +251,13 @@ const OutlookAddinPage = async ({ params }: { params: { locale: string } }) => {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
-              href={`${localePrefix}/contact`}
+              href={`${localePrefix}/contact/`}
               className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors"
             >
               {t("CTA.Demo") as string}
             </Link>
             <Link
-              href={`${localePrefix}/contact`}
+              href={`${localePrefix}/contact/`}
               className="inline-flex items-center justify-center px-8 py-3 rounded-full border-2 border-primary text-primary font-semibold hover:bg-primary/10 transition-colors"
             >
               {t("CTA.Contact") as string}
