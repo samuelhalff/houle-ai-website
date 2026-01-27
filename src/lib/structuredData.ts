@@ -281,16 +281,26 @@ export function buildOrganizationSchema() {
     "@id": "https://houle.ai/#organization",
     name: "houle.ai",
     legalName: "West-Bay SA",
+    alternateName: "Houle",
     url: "https://houle.ai",
     logo: "https://houle.ai/assets/logo.svg",
+    image: "https://houle.ai/assets/logo.svg",
     email: "contact@houle.ai",
     description:
-      "AI and Microsoft 365 consulting in Geneva. Private AI solutions with Azure, automation with Power Platform, and custom development.",
+      "Swiss-hosted enterprise AI platform for Microsoft 365. Private GPT solutions with Azure Switzerland, Office add-ins with AI, and consulting services ensuring data sovereignty and nLPD compliance.",
+    foundingDate: "2024",
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Geneva",
+      streetAddress: "Chemin Pré-Roset",
+      addressLocality: "Genthod",
       addressRegion: "Geneva",
+      postalCode: "1294",
       addressCountry: "CH",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 46.2667,
+      longitude: 6.1569,
     },
     areaServed: [
       {
@@ -306,15 +316,25 @@ export function buildOrganizationSchema() {
         name: "Zürich",
       },
       {
+        "@type": "City",
+        name: "Bern",
+      },
+      {
         "@type": "Country",
         name: "Switzerland",
       },
     ],
-    sameAs: [],
+    sameAs: ["https://www.linkedin.com/company/houle-ai/"],
     knowsAbout: [
       "Artificial Intelligence",
       "Azure AI",
       "Microsoft 365",
+      "Swiss Azure Hosting",
+      "Data Sovereignty",
+      "nLPD Compliance",
+      "FADP Compliance",
+      "Enterprise GPT",
+      "Private AI Solutions",
       "Power Automate",
       "SharePoint",
       "Power BI",
@@ -322,6 +342,70 @@ export function buildOrganizationSchema() {
       "Machine Learning",
       "Business Automation",
     ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "AI Products and Services",
+      itemListElement: [
+        {
+          "@type": "OfferCatalog",
+          name: "AI Products",
+          itemListElement: [
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "SoftwareApplication",
+                name: "Swiss GPT",
+                description:
+                  "Enterprise GPT platform hosted in Switzerland with Azure",
+                applicationCategory: "BusinessApplication",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "SoftwareApplication",
+                name: "AI for Word",
+                description: "AI-powered add-in for Microsoft Word",
+                applicationCategory: "BusinessApplication",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "SoftwareApplication",
+                name: "AI for Outlook",
+                description: "AI-powered add-in for Microsoft Outlook",
+                applicationCategory: "BusinessApplication",
+              },
+            },
+          ],
+        },
+        {
+          "@type": "OfferCatalog",
+          name: "Consulting Services",
+          itemListElement: [
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "AI Consulting",
+                description:
+                  "Custom AI solutions and implementation consulting",
+              },
+            },
+            {
+              "@type": "Offer",
+              itemOffered: {
+                "@type": "Service",
+                name: "Microsoft 365 Consulting",
+                description:
+                  "Microsoft 365 optimization, Power Platform, and SharePoint consulting",
+              },
+            },
+          ],
+        },
+      ],
+    },
   } as const;
 }
 
