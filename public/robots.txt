@@ -1,6 +1,9 @@
 # https://www.robotstxt.org/robotstxt.html
+# Robots.txt for houle.ai - Swiss Enterprise AI Platform
 
-# Allow all major search engines
+# ============================================
+# Search Engine Crawlers (Allow Full Access)
+# ============================================
 User-agent: Googlebot
 Allow: /
 
@@ -19,9 +22,51 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
+User-agent: Yandex
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+# ============================================
+# AI Crawlers (Allow for Indexation Visibility)
+# ============================================
+# OpenAI's GPTBot - Allow for AI visibility
+User-agent: GPTBot
+Allow: /
+
+# Common Crawl - Allow for research/training datasets
+User-agent: CCBot
+Allow: /
+
+# Anthropic AI Crawler
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Google AI (Gemini/Bard training)
+User-agent: Google-Extended
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# ============================================
+# Default Rule
+# ============================================
 User-agent: *
 Allow: /
 
+# ============================================
+# Blocked Routes (Internal/Technical)
+# ============================================
 # Disallow internal/API routes
 Disallow: /api/
 Disallow: /_next/
@@ -40,5 +85,7 @@ Disallow: /pt$
 Disallow: /draft/
 Disallow: /preview/
 
-# Sitemap
+# ============================================
+# Sitemap Location
+# ============================================
 Sitemap: https://houle.ai/sitemap.xml

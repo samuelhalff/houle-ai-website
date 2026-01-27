@@ -302,11 +302,16 @@ export function generateOrganizationStructuredData() {
     "@id": `${siteUrl}/#organization`,
     name: brand,
     legalName: "West-Bay SA",
-    alternateName: "Houle",
+    alternateName: ["Houle", "houle"],
     description:
       "Swiss-hosted enterprise AI platform for Microsoft 365. Private GPT solutions with Azure Switzerland, Office add-ins with AI, and consulting services ensuring data sovereignty and nLPD compliance.",
     url: siteUrl,
-    logo: `${siteUrl}/assets/logo.svg`,
+    logo: {
+      "@type": "ImageObject",
+      url: `${siteUrl}/assets/logo.svg`,
+      width: "512",
+      height: "512",
+    },
     image: `${siteUrl}/assets/logo.svg`,
     contactPoint: {
       "@type": "ContactPoint",
@@ -328,6 +333,11 @@ export function generateOrganizationStructuredData() {
       postalCode: "1294",
       addressCountry: "CH",
     },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 46.2667,
+      longitude: 6.1569,
+    },
     areaServed: [
       { "@type": "City", name: "Geneva" },
       { "@type": "City", name: "Lausanne" },
@@ -344,12 +354,117 @@ export function generateOrganizationStructuredData() {
       "Data Sovereignty",
       "nLPD Compliance",
       "FADP Compliance",
+      "GDPR Compliance",
       "Outlook AI assistant",
       "Word AI add-in",
       "Microsoft 365 consulting",
       "Azure AI integration",
       "Power Automate Switzerland",
       "SharePoint consulting",
+      "Large Language Models",
+      "Human-in-the-loop AI",
+    ],
+    parentOrganization: {
+      "@type": "Corporation",
+      name: "West-Bay SA",
+      legalName: "West-Bay SA",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Genthod",
+        addressRegion: "Geneva",
+        postalCode: "1294",
+        addressCountry: "CH",
+      },
+    },
+  };
+}
+
+/**
+ * Generate Service structured data for Enterprise GPT Solutions
+ */
+export function generateEnterpriseGPTServiceStructuredData() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${siteUrl}/#enterprise-gpt-service`,
+    name: "Enterprise GPT Solutions",
+    description:
+      "Private GPT platform for enterprises, hosted exclusively on Microsoft Azure Switzerland. Features include document analysis, email automation, and custom AI workflows with complete data sovereignty.",
+    serviceType: [
+      "Enterprise AI Platform",
+      "Data Sovereignty",
+      "nLPD/GDPR Compliance",
+      "Swiss Azure Hosting",
+    ],
+    url: `${siteUrl}/en/products/swiss-gpt/`,
+    provider: {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: "houle.ai",
+      legalName: "West-Bay SA",
+    },
+    areaServed: {
+      "@type": "Country",
+      name: "Switzerland",
+    },
+    availableChannel: {
+      "@type": "ServiceChannel",
+      serviceUrl: `${siteUrl}/en/contact/`,
+      serviceType: "Consultation",
+    },
+    termsOfService: `${siteUrl}/en/legal/terms/`,
+    category: "Business Technology Services",
+    audience: {
+      "@type": "Audience",
+      audienceType: "Enterprise",
+    },
+  };
+}
+
+/**
+ * Generate Service structured data for Swiss AI Integration
+ */
+export function generateSwissAIIntegrationStructuredData() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": `${siteUrl}/#swiss-ai-integration`,
+    name: "Swiss-Hosted AI Integration",
+    description:
+      "End-to-end AI integration services for Microsoft 365, Power Platform, and custom enterprise applications. All processing occurs within Swiss borders, ensuring compliance with nLPD (Swiss Data Protection Act) and GDPR regulations.",
+    serviceType: [
+      "AI Integration Consulting",
+      "Data Sovereignty",
+      "nLPD/GDPR Compliance",
+      "Swiss Azure Hosting",
+      "Microsoft 365 Integration",
+    ],
+    url: `${siteUrl}/en/services/ai-consulting/`,
+    provider: {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: "houle.ai",
+      legalName: "West-Bay SA",
+    },
+    areaServed: [
+      { "@type": "Country", name: "Switzerland" },
+      { "@type": "City", name: "Geneva" },
+      { "@type": "City", name: "Lausanne" },
+      { "@type": "City", name: "Zürich" },
+      { "@type": "City", name: "Bern" },
+    ],
+    availableChannel: {
+      "@type": "ServiceChannel",
+      serviceUrl: `${siteUrl}/en/contact/`,
+      serviceType: "Consultation",
+    },
+    category: "Professional IT Services",
+    knowsAbout: [
+      "Microsoft Azure Switzerland",
+      "Large Language Models (LLM)",
+      "Human-in-the-loop AI",
+      "Operational Efficiency",
+      "Enterprise AI Governance",
     ],
   };
 }

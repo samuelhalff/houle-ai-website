@@ -103,6 +103,13 @@ export default async function HomePage({
       ctaText:
         "Let's discuss how our AI solutions can enhance your Microsoft 365 environment while keeping your data secure in Switzerland.",
       ctaButton: "Get in touch",
+      techExpertiseTitle: "Swiss-hosted AI technology",
+      techExpertiseP1:
+        "Our enterprise AI platform runs on Microsoft Azure Switzerland, giving you access to state-of-the-art large language models while meeting strict data residency requirements. Every document processed, every email analyzed, and every workflow automated stays within Swiss borders under your control.",
+      techExpertiseP2:
+        "We build AI solutions with a human-in-the-loop approach. This means your teams validate AI suggestions before they become final, ensuring accuracy and accountability. Our Office add-ins for Word and Outlook bring intelligent assistance directly into your daily tools without forcing a change in how you work.",
+      techExpertiseP3:
+        "By combining Azure AI services with Power Platform automation, we help organizations improve operational efficiency while staying compliant with nLPD (Swiss Data Protection Act) and GDPR. Whether you need a private GPT for internal knowledge, document analysis, or custom workflows, our consulting team guides you from initial concept through production deployment.",
     },
     fr: {
       badge: "IA suisse pour Microsoft 365",
@@ -131,6 +138,13 @@ export default async function HomePage({
       ctaText:
         "Discutons de la manière dont nos solutions IA peuvent améliorer votre environnement Microsoft 365 tout en gardant vos données sécurisées en Suisse.",
       ctaButton: "Nous contacter",
+      techExpertiseTitle: "Une technologie IA hébergée en Suisse",
+      techExpertiseP1:
+        "Notre plateforme IA d'entreprise fonctionne sur Microsoft Azure Suisse, vous donnant accès aux modèles de langage les plus avancés tout en respectant les exigences strictes de résidence des données. Chaque document traité, chaque e-mail analysé et chaque workflow automatisé reste sur le territoire suisse, sous votre contrôle.",
+      techExpertiseP2:
+        "Nous construisons des solutions IA avec une approche « human-in-the-loop ». Vos équipes valident les suggestions de l'IA avant qu'elles ne deviennent définitives, garantissant précision et responsabilité. Nos add-ins Office pour Word et Outlook apportent une assistance intelligente directement dans vos outils quotidiens, sans bouleverser votre façon de travailler.",
+      techExpertiseP3:
+        "En combinant les services Azure AI avec l'automatisation Power Platform, nous aidons les organisations à améliorer leur efficacité opérationnelle tout en restant conformes à la nLPD (loi suisse sur la protection des données) et au RGPD. Que vous ayez besoin d'un GPT privé pour vos connaissances internes, d'analyse documentaire ou de workflows personnalisés, notre équipe de conseil vous accompagne du concept initial jusqu'au déploiement en production.",
     },
     de: {
       badge: "KI-Produkte & Beratung für Microsoft 365",
@@ -160,6 +174,13 @@ export default async function HomePage({
       ctaText:
         "Lassen Sie uns besprechen, wie unsere KI-Lösungen Ihre Microsoft 365-Umgebung verbessern können, während Ihre Daten sicher in der Schweiz bleiben.",
       ctaButton: "Kontakt aufnehmen",
+      techExpertiseTitle: "In der Schweiz gehostete KI-Technologie",
+      techExpertiseP1:
+        "Unsere KI-Plattform für Unternehmen läuft auf Microsoft Azure Schweiz und bietet Ihnen Zugang zu modernsten Sprachmodellen bei gleichzeitiger Erfüllung strenger Anforderungen an die Datenresidenz. Jedes verarbeitete Dokument, jede analysierte E-Mail und jeder automatisierte Workflow bleibt innerhalb der Schweizer Grenzen unter Ihrer Kontrolle.",
+      techExpertiseP2:
+        "Wir entwickeln KI-Lösungen mit einem Human-in-the-Loop-Ansatz. Das bedeutet, dass Ihre Teams KI-Vorschläge validieren, bevor sie endgültig werden, was Genauigkeit und Verantwortlichkeit gewährleistet. Unsere Office-Add-Ins für Word und Outlook bringen intelligente Unterstützung direkt in Ihre täglichen Werkzeuge, ohne Ihre Arbeitsweise zu verändern.",
+      techExpertiseP3:
+        "Durch die Kombination von Azure AI-Diensten mit Power Platform-Automatisierung helfen wir Organisationen, ihre betriebliche Effizienz zu verbessern und gleichzeitig die Einhaltung von DSG (Schweizer Datenschutzgesetz) und DSGVO sicherzustellen. Ob Sie einen privaten GPT für internes Wissen, Dokumentenanalyse oder benutzerdefinierte Workflows benötigen – unser Beratungsteam begleitet Sie vom ersten Konzept bis zur Produktionsbereitstellung.",
     },
     es: {
       badge: "Productos IA & Consultoría para Microsoft 365",
@@ -188,6 +209,13 @@ export default async function HomePage({
       ctaText:
         "Hablemos sobre cómo nuestras soluciones de IA pueden mejorar tu entorno Microsoft 365 manteniendo tus datos seguros en Suiza.",
       ctaButton: "Ponerse en contacto",
+      techExpertiseTitle: "Tecnología IA alojada en Suiza",
+      techExpertiseP1:
+        "Nuestra plataforma de IA empresarial funciona en Microsoft Azure Suiza, dándote acceso a modelos de lenguaje de última generación mientras cumples con los estrictos requisitos de residencia de datos. Cada documento procesado, cada correo analizado y cada flujo de trabajo automatizado permanece dentro de las fronteras suizas bajo tu control.",
+      techExpertiseP2:
+        "Construimos soluciones de IA con un enfoque human-in-the-loop. Esto significa que tus equipos validan las sugerencias de la IA antes de que sean definitivas, garantizando precisión y responsabilidad. Nuestros complementos de Office para Word y Outlook llevan asistencia inteligente directamente a tus herramientas diarias sin cambiar tu forma de trabajar.",
+      techExpertiseP3:
+        "Al combinar los servicios de Azure AI con la automatización de Power Platform, ayudamos a las organizaciones a mejorar la eficiencia operativa mientras cumplen con la nLPD (Ley Suiza de Protección de Datos) y el RGPD. Ya sea que necesites un GPT privado para conocimiento interno, análisis de documentos o flujos de trabajo personalizados, nuestro equipo de consultoría te guía desde el concepto inicial hasta el despliegue en producción.",
     },
     pt: {
       badge: "Produtos IA & Consultoria para Microsoft 365",
@@ -217,6 +245,13 @@ export default async function HomePage({
       ctaText:
         "Vamos discutir como nossas soluções de IA podem aprimorar seu ambiente Microsoft 365 mantendo seus dados seguros na Suíça.",
       ctaButton: "Entre em contato",
+      techExpertiseTitle: "Tecnologia IA hospedada na Suíça",
+      techExpertiseP1:
+        "Nossa plataforma de IA empresarial funciona no Microsoft Azure Suíça, dando acesso a modelos de linguagem de última geração enquanto atende aos rigorosos requisitos de residência de dados. Cada documento processado, cada e-mail analisado e cada fluxo de trabalho automatizado permanece dentro das fronteiras suíças sob seu controle.",
+      techExpertiseP2:
+        "Construímos soluções de IA com uma abordagem human-in-the-loop. Isso significa que suas equipes validam as sugestões da IA antes de se tornarem definitivas, garantindo precisão e responsabilidade. Nossos suplementos do Office para Word e Outlook trazem assistência inteligente diretamente para suas ferramentas diárias sem mudar sua forma de trabalhar.",
+      techExpertiseP3:
+        "Ao combinar os serviços de Azure AI com a automação da Power Platform, ajudamos organizações a melhorar a eficiência operacional enquanto permanecem em conformidade com a nLPD (Lei Suíça de Proteção de Dados) e o RGPD. Seja você precisando de um GPT privado para conhecimento interno, análise de documentos ou fluxos de trabalho personalizados, nossa equipe de consultoria o guia do conceito inicial até a implantação em produção.",
     },
   } as const;
 
@@ -369,6 +404,16 @@ export default async function HomePage({
             />
           </svg>
         </Link>
+      </section>
+
+      {/* Swiss Technology Expertise Section - SEO Content Density */}
+      <section className="py-10 px-6 rounded-2xl border bg-card/50">
+        <h2 className="text-xl font-semibold mb-4">{t.techExpertiseTitle}</h2>
+        <div className="prose prose-sm dark:prose-invert max-w-none text-muted-foreground">
+          <p>{t.techExpertiseP1}</p>
+          <p className="mt-3">{t.techExpertiseP2}</p>
+          <p className="mt-3">{t.techExpertiseP3}</p>
+        </div>
       </section>
 
       {/* FAQ Section */}

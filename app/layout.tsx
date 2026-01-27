@@ -1,7 +1,11 @@
 // app/layout.tsx
 import { Providers } from "@/src/components/providers";
 import { Metadata, Viewport } from "next";
-import { generateOrganizationStructuredData } from "@/src/lib/metadata";
+import {
+  generateOrganizationStructuredData,
+  generateEnterpriseGPTServiceStructuredData,
+  generateSwissAIIntegrationStructuredData,
+} from "@/src/lib/metadata";
 import { inter } from "./fonts";
 import { headers } from "next/headers";
 import dynamic from "next/dynamic";
@@ -22,12 +26,12 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://houle.ai"),
   title: {
     template: "%s - houle",
-    default: "houle | Private AI for Microsoft 365",
+    default: "Houle | Swiss-Hosted Enterprise AI & Secure GPT Solutions",
   },
   description:
-    "houle brings private AI into Microsoft 365 with add-ins and GPT hosted in Switzerland.",
+    "Houle provides secure, Swiss-hosted Enterprise AI solutions. Specializing in Human-AI collaboration, nLPD compliance, and private Azure-based GPT platforms.",
   keywords:
-    "houle, ai, microsoft 365, outlook add-in, word add-in, private gpt, switzerland",
+    "houle, enterprise ai, microsoft 365, outlook add-in, word add-in, private gpt, switzerland, swiss ai, azure switzerland, nlpd, data sovereignty, llm",
   authors: [{ name: "houle" }],
   creator: "houle",
   publisher: "houle",
@@ -94,11 +98,21 @@ export default async function RootLayout({
   } as const;
 
   const orgJsonLd = generateOrganizationStructuredData();
+  const enterpriseGPTJsonLd = generateEnterpriseGPTServiceStructuredData();
+  const swissAIJsonLd = generateSwissAIIntegrationStructuredData();
   const webSiteJsonLd = {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": "https://houle.ai/#website",
     url: "https://houle.ai",
     name: "houle",
+    description:
+      "Swiss-hosted enterprise AI solutions for Microsoft 365. Private GPT, Office add-ins with AI, and consulting services.",
+    publisher: {
+      "@type": "Organization",
+      "@id": "https://houle.ai/#organization",
+    },
+    inLanguage: ["en", "fr", "de", "es", "pt"],
   } as const;
 
   return (
@@ -139,6 +153,16 @@ export default async function RootLayout({
           type="application/ld+json"
           nonce={nonce}
           dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          nonce={nonce}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(enterpriseGPTJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          nonce={nonce}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(swissAIJsonLd) }}
         />
 
         <Providers nonce={nonce}>
