@@ -247,7 +247,7 @@ export default function Footer({ locale }: { locale?: string }) {
 
       <div className="mx-auto max-w-[var(--breakpoint-xl)] border-t px-6 py-6">
         <p className="text-xs text-muted-foreground">
-          © 2025 Houle - A brand of West-Bay SA, Genthod (Genève). All rights reserved.
+          © {new Date().getFullYear()} Houle - A brand of West-Bay SA, Genthod (Genève). All rights reserved.
         </p>
       </div>
     </footer>

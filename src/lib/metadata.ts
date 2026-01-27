@@ -310,7 +310,7 @@ export function generateOrganizationStructuredData() {
     description:
       "Swiss-hosted enterprise AI platform for Microsoft 365. Private GPT solutions with Azure Switzerland, Office add-ins with AI, and consulting services ensuring data sovereignty and nLPD compliance.",
     url: siteUrl,
-    foundingDate: "2024",
+    foundingDate: "2024-01-01",
     slogan: "Private AI built into the Microsoft tools you already use",
     logo: {
       "@type": "ImageObject",
