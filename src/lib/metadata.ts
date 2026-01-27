@@ -223,6 +223,10 @@ export async function getPageMetadata(
       languages: Object.assign(
         {
           "x-default": (() => {
+            // x-default should point to the root domain for the homepage
+            if (path === "/") {
+              return siteUrl;
+            }
             const defaultLocale: Locale = localesToInclude.includes("en" as Locale)
               ? "en"
               : localesToInclude[0];
@@ -306,6 +310,8 @@ export function generateOrganizationStructuredData() {
     description:
       "Swiss-hosted enterprise AI platform for Microsoft 365. Private GPT solutions with Azure Switzerland, Office add-ins with AI, and consulting services ensuring data sovereignty and nLPD compliance.",
     url: siteUrl,
+    foundingDate: "2024-01-01",
+    slogan: "Private AI built into the Microsoft tools you already use",
     logo: {
       "@type": "ImageObject",
       url: `${siteUrl}/assets/logo.svg`,
@@ -324,6 +330,7 @@ export function generateOrganizationStructuredData() {
         "Spanish",
         "Portuguese",
       ],
+      areaServed: "CH",
     },
     address: {
       "@type": "PostalAddress",

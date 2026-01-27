@@ -224,8 +224,13 @@ export async function GET() {
             hreflang
           )}" href="${escapeXml(href)}"/>`;
         }),
-        // x-default points to FR per canonical policy
+        // x-default points to root domain for homepage, otherwise to canonical locale
         (() => {
+          // For homepage (path === "/"), x-default should point to root without locale
+          if (p === "/") {
+            return `    <xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(BASE)}"/>`;
+          }
+          // For other pages, point to canonical locale
           const xDefaultLocale = pathLocales.includes(canonicalLocale)
             ? canonicalLocale
             : pathLocales[0];
