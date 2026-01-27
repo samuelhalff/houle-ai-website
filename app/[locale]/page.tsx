@@ -1,6 +1,7 @@
 import Link from "next/link";
 import FAQ from "@/src/components/FAQ";
 import { getTranslations, type Locale } from "@/src/lib/i18n";
+import { getPageMetadata } from "@/src/lib/metadata";
 import { Metadata } from "next";
 import { headers } from "next/headers";
 
@@ -27,7 +28,10 @@ export async function generateMetadata({
     pt: "houle traz IA privada para o Microsoft 365 com complementos e GPT hospedado na Suíça.",
   };
 
+  const baseMetadata = await getPageMetadata(locale as Locale, "/");
+
   return {
+    ...baseMetadata,
     title: titles[locale] || titles.en,
     description: descriptions[locale] || descriptions.en,
   };

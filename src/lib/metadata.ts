@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { Locale, locales } from "./i18n";
 import fs from "fs";
 import { join as pathJoin } from "path";
+import { buildInternalUrl } from "./paths";
 
 const siteUrl = "https://houle.ai";
 const brand = "houle";
@@ -118,7 +119,7 @@ export async function getPageMetadata(
     );
   }
 
-  const canonicalPath = `/${locale}${path}/`;
+  const canonicalPath = buildInternalUrl(path, locale);
   
   // Determine which locales to include in alternates
   // If validLocales is provided, use only those; otherwise use all locales
@@ -128,9 +129,8 @@ export async function getPageMetadata(
   
   const alternateUrls: Record<string, string> = {};
   for (const loc of localesToInclude) {
-    const locPath = `/${loc}${path}/`;
     const key = hreflangFor(loc);
-    alternateUrls[key] = `${siteUrl}${locPath}`;
+    alternateUrls[key] = `${siteUrl}${buildInternalUrl(path, loc)}`;
   }
 
   const ogLocale =
@@ -216,10 +216,10 @@ export async function getPageMetadata(
       languages: Object.assign(
         {
           "x-default": (() => {
-            const defaultLocale = localesToInclude.includes("en" as Locale)
+            const defaultLocale: Locale = localesToInclude.includes("en" as Locale)
               ? "en"
               : localesToInclude[0];
-            return `${siteUrl}/${defaultLocale}${path}/`;
+            return `${siteUrl}${buildInternalUrl(path, defaultLocale)}`;
           })(),
         },
         alternateUrls

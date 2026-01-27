@@ -46,14 +46,14 @@ export default function NavbarClient({
 
   return (
     <div className="fixed top-0 left-0 right-0 z-50 w-full max-w-screen">
-      <nav className="backdrop-blur-[14px] bg-white/80 border-b dark:bg-black/70 h-16 flex items-center">
-        <div className="flex items-center justify-between gap-4 h-full mx-auto max-w-[1200px] px-4 w-full sm:px-6">
+      <nav className="site-header backdrop-blur-[14px] bg-white/80 border-b dark:bg-black/70 h-16 flex items-center">
+        <div className="site-header-inner flex items-center justify-between gap-4 h-full mx-auto max-w-[1200px] px-4 w-full sm:px-6">
           <Link
             href={`${localePrefix}/`}
             prefetch={false}
             locale={locale}
             aria-label={navData.labels.home}
-            className="font-semibold tracking-tight text-lg text-primary"
+            className="site-logo font-semibold tracking-tight text-lg text-primary"
           >
             houle<span className="text-foreground">.ai</span>
           </Link>
@@ -129,7 +129,7 @@ export default function NavbarClient({
                     {navData.labels.contact}
                   </Link>
                 </li>
-                <li className="ml-1">
+                <li className="site-header-controls ml-1">
                   <HeaderControls />
                 </li>
               </ul>
