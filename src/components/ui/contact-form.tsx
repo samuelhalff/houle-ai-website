@@ -143,9 +143,9 @@ const ContactForm: FC<ContactFormProps> = ({
   return (
     <div className="p-1 xs:p-3 md:p-3 w-full max-w-[var(--breakpoint-xl)] mx-auto">
       {showTitle && (
-        <h1 className="mb-3 text-center xs:mb-14 text-2xl/7 font-bold sm:text-3xl sm:tracking-tight mt-0 animate-in fade-in duration-700">
+        <h2 className="mb-3 text-center xs:mb-14 text-2xl/7 font-bold sm:text-3xl sm:tracking-tight mt-0 animate-in fade-in duration-700">
           {strings.title}
-        </h1>
+        </h2>
       )}
       {showSubtitle && <p className="w-full text-center">{strings.subtitle}</p>}
       <div className="flex items-center justify-center">

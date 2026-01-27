@@ -247,8 +247,7 @@ export default function Footer({ locale }: { locale?: string }) {
 
       <div className="mx-auto max-w-[var(--breakpoint-xl)] border-t px-6 py-6">
         <p className="text-xs text-muted-foreground">
-          houle.ai is a brand of West-Bay SA, 19 Pré-Roset, 1294 Genthod,
-          Switzerland.
+          © 2025 Houle - A brand of West-Bay SA, Genthod (Genève). All rights reserved.
         </p>
       </div>
     </footer>

@@ -223,6 +223,10 @@ export async function getPageMetadata(
       languages: Object.assign(
         {
           "x-default": (() => {
+            // x-default should point to the root domain for the homepage
+            if (path === "/") {
+              return siteUrl;
+            }
             const defaultLocale: Locale = localesToInclude.includes("en" as Locale)
               ? "en"
               : localesToInclude[0];
