@@ -874,6 +874,36 @@ function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+function getHeaderValue(headers, name) {
+  if (!headers) return null;
+  const lower = name.toLowerCase();
+  if (typeof headers.get === "function") {
+    return headers.get(name) || headers.get(lower) || null;
+  }
+  if (typeof headers === "object") {
+    return headers[name] || headers[lower] || null;
+  }
+  return null;
+}
+
+function getRetryAfterMsFromError(error) {
+  const headersCandidates = [
+    error?.headers,
+    error?.response?.headers,
+    error?.res?.headers,
+  ];
+  for (const headers of headersCandidates) {
+    const msRaw = getHeaderValue(headers, "x-ms-retry-after-ms");
+    const ms = msRaw ? parseInt(`${msRaw}`, 10) : NaN;
+    if (Number.isFinite(ms)) return Math.max(0, ms);
+
+    const secRaw = getHeaderValue(headers, "retry-after");
+    const sec = secRaw ? parseInt(`${secRaw}`, 10) : NaN;
+    if (Number.isFinite(sec)) return Math.max(0, sec) * 1000;
+  }
+  return null;
+}
+
 function buildAzureOpenAIChatUrl() {
   if (!AZURE_OPENAI_ENDPOINT) {
     throw new Error("Missing AZURE_OPENAI_ENDPOINT");
@@ -1305,12 +1335,14 @@ async function azureAgentResponsesApi(
           AZURE_AGENT_RESPONSES_BACKOFF_MAX_MS > 0
             ? Math.min(proposed, AZURE_AGENT_RESPONSES_BACKOFF_MAX_MS)
             : proposed;
+        const retryAfterMs = getRetryAfterMsFromError(error);
+        const effectiveBackoffMs = Math.max(backoffMs, retryAfterMs || 0);
         if (debugAgent) {
           console.log(
-            `[agent] Responses API ${status} received. Retrying in ${backoffMs}ms...`,
+            `[agent] Responses API ${status} received. Retrying in ${effectiveBackoffMs}ms...`,
           );
         }
-        await sleep(backoffMs);
+        await sleep(effectiveBackoffMs);
         continue;
       }
       throw error;
