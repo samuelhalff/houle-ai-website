@@ -45,15 +45,11 @@ const REQUIRE_TRANSLATIONS =
 const AI_TWO_STEP = process.env.AI_TWO_STEP === "1";
 
 const AZURE_AGENT_ENDPOINT = process.env.AZURE_AGENT_ENDPOINT;
-// Support both AZURE_AGENT_NAME (new) and AZURE_AGENT_ID (legacy)
-const AZURE_AGENT_NAME =
-  process.env.AZURE_AGENT_NAME || process.env.AZURE_AGENT_ID;
+const AZURE_AGENT_NAME = process.env.AZURE_AGENT_NAME;
 const AZURE_AGENT_RESEARCH_NAME =
   process.env.AZURE_AGENT_RESEARCH_NAME || AZURE_AGENT_NAME;
 const AZURE_AGENT_RESPONSES_API_VERSION =
   process.env.AZURE_AGENT_RESPONSES_API_VERSION || "2025-11-15-preview";
-const AZURE_AGENT_ALLOW_CLASSIC_FALLBACK =
-  process.env.AZURE_AGENT_ALLOW_CLASSIC_FALLBACK === "1";
 const AZURE_AGENT_FORCE_RESPONSES =
   process.env.AZURE_AGENT_FORCE_RESPONSES === "1";
 const AZURE_AGENT_RESPONSES_RETRIES = parseInt(
@@ -830,6 +826,150 @@ function buildAgentReference(agentName) {
   return agent;
 }
 
+async function listAgentsViaRest(credential) {
+  if (typeof fetch !== "function") {
+    throw new Error("Fetch API is not available in this runtime");
+  }
+
+  const token = await credential.getToken("https://ai.azure.com/.default");
+  if (!token?.token) {
+    throw new Error("Failed to obtain Azure token for ai.azure.com scope");
+  }
+
+  const baseUrl = AZURE_AGENT_ENDPOINT.replace(/\/+$/, "");
+  const url = `${baseUrl}/agents?api-version=${AZURE_AGENT_RESPONSES_API_VERSION}`;
+  const response = await fetch(url, {
+    headers: { Authorization: `Bearer ${token.token}` },
+  });
+
+  if (!response.ok) {
+    throw new Error(
+      `Foundry agents REST list failed: ${response.status} ${response.statusText}`,
+    );
+  }
+
+  const payload = await response.json();
+  const data = Array.isArray(payload?.data) ? payload.data : [];
+  return data.map((agent) => ({
+    id: agent.id,
+    name: (agent.name || agent.id || "").trim(),
+    version: agent.versions?.latest?.version,
+  }));
+}
+
+async function listAgentVersionsViaRest(credential, agentId) {
+  if (typeof fetch !== "function") {
+    throw new Error("Fetch API is not available in this runtime");
+  }
+
+  const token = await credential.getToken("https://ai.azure.com/.default");
+  if (!token?.token) {
+    throw new Error("Failed to obtain Azure token for ai.azure.com scope");
+  }
+
+  const baseUrl = AZURE_AGENT_ENDPOINT.replace(/\/+$/, "");
+  const encoded = encodeURIComponent(agentId);
+  const url = `${baseUrl}/agents/${encoded}/versions?api-version=${AZURE_AGENT_RESPONSES_API_VERSION}`;
+  const response = await fetch(url, {
+    headers: { Authorization: `Bearer ${token.token}` },
+  });
+
+  if (!response.ok) {
+    throw new Error(
+      `Foundry agent versions REST list failed: ${response.status} ${response.statusText}`,
+    );
+  }
+
+  const payload = await response.json();
+  const data = Array.isArray(payload?.data) ? payload.data : [];
+  return data.map((version) => ({
+    id: version.id,
+    name: (version.name || "").trim(),
+    version: version.version,
+  }));
+}
+
+async function resolveAgentReference(agentName, credential) {
+  if (typeof agentName !== "string" || !agentName.trim()) {
+    throw new Error("AZURE_AGENT_NAME must be a non-empty string");
+  }
+
+  const trimmed = agentName.trim();
+  const [namePart, versionPart] = trimmed.split(":", 2);
+  const candidates = await listAgentsViaRest(credential);
+  const idMatch = candidates.find(
+    (agent) => agent.id === trimmed || agent.id === namePart,
+  );
+  const nameMatches = candidates.filter(
+    (agent) =>
+      agent.name &&
+      (agent.name === namePart ||
+        agent.name.toLowerCase() === namePart.toLowerCase()),
+  );
+
+  let chosen = null;
+  if (versionPart) {
+    const target = nameMatches[0] || idMatch;
+    if (!target) {
+      const available =
+        candidates
+          .map((c) => `${c.name || "(unnamed)"} (${c.id})`)
+          .join(", ") || "(none)";
+      const err = new Error(
+        `Agent "${trimmed}" not found in project. Available agents: ${available}`,
+      );
+      err.code = "AGENT_NOT_FOUND";
+      throw err;
+    }
+    const versions = await listAgentVersionsViaRest(
+      credential,
+      target.id || target.name,
+    );
+    const versionMatch = versions.find(
+      (agent) => `${agent.version || ""}` === `${versionPart}`,
+    );
+    if (!versionMatch) {
+      const availableVersions = versions
+        .map((v) => v.version)
+        .filter(Boolean)
+        .map((v) => `${v}`);
+      const err = new Error(
+        `Agent "${namePart}" found, but version "${versionPart}" does not match available versions: ${
+          availableVersions.length ? availableVersions.join(", ") : "(unknown)"
+        }`,
+      );
+      err.code = "AGENT_VERSION_NOT_FOUND";
+      throw err;
+    }
+    chosen = { name: target.name, version: versionMatch.version };
+  }
+
+  if (!chosen) {
+    chosen = nameMatches[0] || idMatch;
+  }
+
+  if (!chosen) {
+    const available =
+      candidates
+        .map((c) => `${c.name || "(unnamed)"} (${c.id})`)
+        .join(", ") || "(none)";
+    const err = new Error(
+      `Agent "${trimmed}" not found in project. Available agents: ${available}`,
+    );
+    err.code = "AGENT_NOT_FOUND";
+    throw err;
+  }
+
+  const ref = { name: chosen.name, type: "agent_reference" };
+  if (versionPart) {
+    ref.version = versionPart;
+  } else if (chosen.version) {
+    ref.version = chosen.version;
+  }
+
+  return ref;
+}
+
 function extractResponseText(response) {
   if (!response || typeof response !== "object") return "";
   if (response.output_text) return response.output_text;
@@ -904,67 +1044,42 @@ function getRetryAfterMsFromError(error) {
   return null;
 }
 
-function buildAzureOpenAIChatUrl() {
-  if (!AZURE_OPENAI_ENDPOINT) {
-    throw new Error("Missing AZURE_OPENAI_ENDPOINT");
-  }
-  let url = AZURE_OPENAI_ENDPOINT.trim();
-  if (!url) {
-    throw new Error("Missing AZURE_OPENAI_ENDPOINT");
-  }
-
-  const hasChatCompletions = /\/chat\/completions(\?|$)/.test(url);
-  const hasDeploymentPath = /\/openai\/deployments\//.test(url);
-
-  if (!hasChatCompletions) {
-    if (hasDeploymentPath) {
-      url = `${url.replace(/\/+$/, "")}/chat/completions`;
-    } else {
-      url = `${url.replace(/\/+$/, "")}/openai/deployments/${AZURE_OPENAI_DEPLOYMENT}/chat/completions`;
-    }
-  }
-
-  if (!/api-version=/.test(url)) {
-    const sep = url.includes("?") ? "&" : "?";
-    url = `${url}${sep}api-version=${encodeURIComponent(
-      AZURE_OPENAI_API_VERSION,
-    )}`;
-  }
-
-  return url;
+function ensureHttpsUrl(input) {
+  const raw = String(input || "").trim();
+  if (!raw) return raw;
+  if (/^https?:\/\//i.test(raw)) return raw;
+  if (raw.startsWith("//")) return `https:${raw}`;
+  return `https://${raw}`;
 }
 
 function buildAzureOpenAIChatUrlFor({ endpoint, deployment, apiVersion }) {
   if (!endpoint) throw new Error("Missing Azure OpenAI endpoint");
-  let url = String(endpoint).trim();
+  let url = ensureHttpsUrl(String(endpoint).trim());
   if (!url) throw new Error("Missing Azure OpenAI endpoint");
+  if (!deployment) throw new Error("Missing Azure OpenAI deployment");
+  if (!apiVersion) throw new Error("Missing Azure OpenAI apiVersion");
 
-  const hasChatCompletions = /\/chat\/completions(\?|$)/.test(url);
-  const hasDeploymentPath = /\/openai\/deployments\//.test(url);
+  const u = new URL(url);
+  const hasDeploymentPath = /\/openai\/deployments\//.test(u.pathname);
+  const hasChatCompletions = /\/chat\/completions$/.test(u.pathname);
 
-  // If the endpoint already includes a deployment path, allow overriding the
-  // deployment name via the explicit `deployment` argument (used for drafting).
-  if (hasDeploymentPath && deployment) {
-    url = url.replace(
-      /(\/openai\/deployments\/)([^\/\?]+)/,
+  if (hasDeploymentPath) {
+    u.pathname = u.pathname.replace(
+      /(\/openai\/deployments\/)([^\/]+)/,
       `$1${deployment}`,
     );
-  }
-
-  if (!hasChatCompletions) {
-    if (hasDeploymentPath) {
-      url = `${url.replace(/\/+$/, "")}/chat/completions`;
-    } else {
-      url = `${url.replace(/\/+$/, "")}/openai/deployments/${deployment}/chat/completions`;
+    if (!hasChatCompletions) {
+      u.pathname = `${u.pathname.replace(/\/+$/, "")}/chat/completions`;
     }
+  } else {
+    u.pathname = `/openai/deployments/${deployment}/chat/completions`;
   }
 
-  if (!/api-version=/.test(url)) {
-    const sep = url.includes("?") ? "&" : "?";
-    url = `${url}${sep}api-version=${encodeURIComponent(apiVersion)}`;
+  if (!u.searchParams.has("api-version")) {
+    u.searchParams.set("api-version", apiVersion);
   }
 
-  return url;
+  return u.toString();
 }
 
 async function azureOpenAIJson(prompt, options = {}) {
@@ -1001,14 +1116,29 @@ async function azureOpenAIJson(prompt, options = {}) {
   let attempt = 0;
   while (true) {
     attempt += 1;
-    const res = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "api-key": AZURE_OPENAI_API_KEY,
-      },
-      body: JSON.stringify(body),
-    });
+    let res;
+    try {
+      res = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "api-key": AZURE_OPENAI_API_KEY,
+        },
+        body: JSON.stringify(body),
+      });
+    } catch (error) {
+      const cause = error?.cause;
+      const details = [];
+      if (cause?.code) details.push(`code=${cause.code}`);
+      if (cause?.errno) details.push(`errno=${cause.errno}`);
+      if (cause?.syscall) details.push(`syscall=${cause.syscall}`);
+      if (cause?.address) details.push(`address=${cause.address}`);
+      if (cause?.port) details.push(`port=${cause.port}`);
+      const detailSuffix = details.length ? ` (${details.join(", ")})` : "";
+      throw new Error(
+        `Azure OpenAI fetch failed: ${error?.message || "unknown error"}${detailSuffix}`,
+      );
+    }
     const text = await res.text().catch(() => "");
     if (res.ok) {
       const parsed = JSON.parse(text);
@@ -1241,7 +1371,7 @@ async function azureAgentResponsesApi(
     azureADTokenProvider,
     apiKey: null,
   });
-  const agentRef = buildAgentReference(agentName);
+  const agentRef = await resolveAgentReference(agentName, credential);
 
   if (debugAgent) {
     console.log(
@@ -1372,9 +1502,11 @@ async function azureAgentResponsesApi(
 async function requestAgentJson(prompt, { agentName = AZURE_AGENT_NAME } = {}) {
   if (!agentName) throw new Error("Missing AZURE_AGENT_NAME");
 
-  // Legacy assistant IDs (asst_*) always use the classic thread/run API.
+  // Legacy assistant IDs (asst_*) are not allowed.
   if (isLegacyAgentId(agentName)) {
-    return await azureAgentJson(prompt, { agentId: agentName });
+    throw new Error(
+      `Legacy agent IDs are not allowed. Update AZURE_AGENT_NAME to a Foundry agent name like "web-deep-search:4".`,
+    );
   }
 
   if (AZURE_AGENT_FORCE_RESPONSES) {
@@ -1386,18 +1518,11 @@ async function requestAgentJson(prompt, { agentName = AZURE_AGENT_NAME } = {}) {
   }
 
   // New Foundry agents use the Responses API by default.
-  try {
-    const result = await azureAgentResponsesApi(prompt, { agentName });
-    if (AZURE_AGENT_RESPONSES_COOLDOWN_MS > 0) {
-      await sleep(AZURE_AGENT_RESPONSES_COOLDOWN_MS);
-    }
-    return result;
-  } catch (error) {
-    if (AZURE_AGENT_ALLOW_CLASSIC_FALLBACK) {
-      return await azureAgentJson(prompt, { agentId: agentName });
-    }
-    throw error;
+  const result = await azureAgentResponsesApi(prompt, { agentName });
+  if (AZURE_AGENT_RESPONSES_COOLDOWN_MS > 0) {
+    await sleep(AZURE_AGENT_RESPONSES_COOLDOWN_MS);
   }
+  return result;
 }
 
 function ensureAzureEnv() {

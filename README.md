@@ -122,10 +122,10 @@ Environment (DefaultAzureCredential):
 ```
 # Required
 AZURE_AGENT_ENDPOINT=...
-AZURE_AGENT_ID=...
+AZURE_AGENT_NAME=...
+# Example: AZURE_AGENT_NAME=web-deep-search:4
 
 # Optional
-AZURE_TRANSLATE_AGENT_ID=...
 AZURE_AGENT_RUN_TIMEOUT_MS=180000
 ```
 
@@ -147,7 +147,8 @@ node scripts/ai-ressources-update.js --apply
 Notes:
 
 - The script expects JSON responses matching the specified schema. If the agent returns non-JSON content, adjust the agent instructions to produce `application/json` payloads.
-- GitHub workflow `.github/workflows/ai-ressources-every-2-days.yml` automates the run every two days using OIDC-based Azure login.
+- `AZURE_AGENT_NAME` must be a Foundry agent name (optionally pinned to a version like `web-deep-search:4`).
+- GitHub workflow `.github/workflows/ai-ressources-every-4-days.yml` automates the run every four days using OIDC-based Azure login.
 
 ## Ressources Link Integrity
 
