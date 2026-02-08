@@ -2,7 +2,7 @@ name: AI Resources Update (every 4 days)
 
 on:
   schedule:
-    - cron: "30 0 */4 * *" # every 4 days at 00:30 UTC (offset to reduce agent throttling)
+    - cron: "30 0 */3 * *" # every 4 days at 00:30 UTC (offset to reduce agent throttling)
   workflow_dispatch:
 
 concurrency:
