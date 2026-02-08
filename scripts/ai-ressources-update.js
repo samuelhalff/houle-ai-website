@@ -167,10 +167,10 @@ const SERVICES = [
   "ia privée et assistants internes (rag, anti-hallucinations, contrôle des sources)",
   "add-ins microsoft 365 (outlook, word, teams) et intégrations",
   "architecture azure openai / azure ai foundry (sécurité, réseau, identité, clés)",
-  "gouvernance, conformité et privacy (nlpd, rgpd, dpia, registre des traitements)",
-  "automatisation et productivité (power platform, graph, workflows)",
-  "évaluation qualité et monitoring (tests, scoring, régression, guardrails)",
-  "adoption entreprise (roi, cas d'usage, conduite du changement)",
+  "gouvernance ia, conformité et privacy (nlpd, rgpd, dpia, registre des traitements pour systèmes ia)",
+  "automatisation ia et productivité microsoft 365 (power platform, graph, workflows)",
+  "évaluation qualité ia et monitoring (tests, scoring, régression, guardrails)",
+  "adoption entreprise de solutions ia (roi, cas d'usage, conduite du changement)",
 ];
 
 const TOPIC_KEYWORDS = [
