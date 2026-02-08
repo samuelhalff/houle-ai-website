@@ -46,7 +46,7 @@ async function loadMetadataConfig(locale: Locale): Promise<MetadataConfig> {
         "src",
         "translations",
         loc,
-        "metadata.json"
+        "metadata.json",
       );
       if (!fs.existsSync(filePath)) return null;
       const fileContent = fs.readFileSync(filePath, "utf8");
@@ -90,9 +90,12 @@ export async function getPageMetadata(
     articleTitle?: string;
     articleDescription?: string;
     validLocales?: Locale[];
-  }
+  },
 ): Promise<Metadata> {
   const config = await loadMetadataConfig(locale);
+
+  // Normalize path for consistent lookup (remove trailing slash for lookup)
+  const normalizedPath = path === "/" ? "/" : path.replace(/\/+$/, "");
 
   // Respect placeholder locales (e.g., PLACEHOLDER_LOCALES="es,pt") to avoid
   // indexing incomplete placeholder locales. When a locale is marked as a
@@ -103,53 +106,56 @@ export async function getPageMetadata(
       raw
         .split(",")
         .map((s) => s.trim())
-        .filter(Boolean) as Locale[]
+        .filter(Boolean) as Locale[],
     );
   }
   const placeholderLocales = getPlaceholderLocales();
 
   // Get page-specific metadata or fall back to default
-  const pageData = config.pages[path] || config.default;
+  const pageData = config.pages[normalizedPath] || config.default;
 
   let title = pageData.title;
   let description = pageData.description;
 
   // Handle dynamic pages (like articles)
-  if (path.startsWith("/ressources/articles/") && customData?.articleTitle) {
+  if (
+    normalizedPath.startsWith("/ressources/articles/") &&
+    customData?.articleTitle
+  ) {
     title = config.dynamic.articles.titleTemplate.replace(
       "{articleTitle}",
-      customData.articleTitle
+      customData.articleTitle,
     );
     description = config.dynamic.articles.descriptionTemplate.replace(
       "{articleDescription}",
-      customData.articleDescription || ""
+      customData.articleDescription || "",
     );
   }
 
-  const canonicalPath = buildInternalUrl(path, locale);
-  
+  const canonicalPath = buildInternalUrl(normalizedPath, locale);
+
   // Determine which locales to include in alternates
   // If validLocales is provided, use only those; otherwise use all locales
   // This allows dynamic pages (like articles) to limit alternates to actual content
   // while static pages continue to include all locales for backward compatibility
   const localesToInclude = customData?.validLocales ?? locales;
-  
+
   const alternateUrls: Record<string, string> = {};
   for (const loc of localesToInclude) {
     const key = hreflangFor(loc);
-    alternateUrls[key] = `${siteUrl}${buildInternalUrl(path, loc)}`;
+    alternateUrls[key] = `${siteUrl}${buildInternalUrl(normalizedPath, loc)}`;
   }
 
   const ogLocale =
     locale === "fr"
       ? "fr_CH"
       : locale === "de"
-      ? "de_CH"
-      : locale === "es"
-      ? "es_ES"
-      : locale === "pt"
-      ? "pt_PT"
-      : "en_US";
+        ? "de_CH"
+        : locale === "es"
+          ? "es_ES"
+          : locale === "pt"
+            ? "pt_PT"
+            : "en_US";
 
   const ogImage = `/assets/og/og-${locale}.avif`;
 
@@ -223,17 +229,15 @@ export async function getPageMetadata(
       languages: Object.assign(
         {
           "x-default": (() => {
-            // x-default should point to the root domain for the homepage
-            if (path === "/") {
-              return siteUrl;
-            }
-            const defaultLocale: Locale = localesToInclude.includes("en" as Locale)
-              ? "en"
+            const defaultLocale: Locale = localesToInclude.includes(
+              "fr" as Locale,
+            )
+              ? "fr"
               : localesToInclude[0];
-            return `${siteUrl}${buildInternalUrl(path, defaultLocale)}`;
+            return `${siteUrl}${buildInternalUrl(normalizedPath, defaultLocale)}`;
           })(),
         },
-        alternateUrls
+        alternateUrls,
       ),
     },
     other: {
@@ -247,7 +251,7 @@ export async function getPageMetadata(
 // Helper function for static pages (backward compatibility)
 export async function generateMetadataForPage(
   localeOrPath: Locale | string,
-  path?: string
+  path?: string,
 ): Promise<Metadata> {
   if (typeof localeOrPath === "string" && !path) {
     // Old signature: generateMetadataForPage("/path") - default to English
@@ -267,7 +271,7 @@ export async function generateMetadataForArticle(
   slugOrTitle?: string,
   titleOrDescription?: string,
   description?: string,
-  validLocales?: Locale[]
+  validLocales?: Locale[],
 ): Promise<Metadata> {
   if (
     typeof localeOrSlug === "string" &&
@@ -283,7 +287,7 @@ export async function generateMetadataForArticle(
         articleTitle: slugOrTitle,
         articleDescription: titleOrDescription,
         validLocales,
-      }
+      },
     );
   } else {
     // New signature: generateMetadataForArticle(locale, slug, title, description, validLocales)
@@ -294,7 +298,7 @@ export async function generateMetadataForArticle(
         articleTitle: titleOrDescription,
         articleDescription: description,
         validLocales,
-      }
+      },
     );
   }
 }

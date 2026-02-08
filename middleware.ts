@@ -13,7 +13,7 @@ export function middleware(request: NextRequest) {
 
   // Normalize locale-prefixed requests for common root assets (e.g. /en/favicon.png -> /favicon.png)
   const staticRootAsset = pathname.match(
-    /^\/[a-z]{2}\/(favicon\.(?:png|ico|svg)|apple-touch-icon\.png|site\.webmanifest|manifest\.webmanifest)$/
+    /^\/[a-z]{2}\/(favicon\.(?:png|ico|svg)|apple-touch-icon\.png|site\.webmanifest|manifest\.webmanifest)$/,
   );
   if (staticRootAsset) {
     const target = "/" + staticRootAsset[1];
@@ -61,14 +61,118 @@ export function middleware(request: NextRequest) {
   const trustedTypesDirective = `trusted-types nextjs#bundler goog#html 'allow-duplicates'`;
   const csp = `${cspDirectives}; ${trustedTypesDirective}`;
 
+  // Guardrails for malformed URLs that have shown up in Google Search Console.
+  // These mostly come from broken markdown link syntax accidentally emitted in article content.
+  // Examples:
+  // - /[team](/team)
+  // - /legal/[privacy](/legal/privacy)
+  // - /$/
+  {
+    const localePrefixMatch = pathname.match(/^\/([a-z]{2})(\/.*)?$/);
+    const localeFromPath =
+      localePrefixMatch && locales.includes(localePrefixMatch[1] as any)
+        ? localePrefixMatch[1]
+        : null;
+
+    const effectiveLocale = localeFromPath || getLocale(request);
+    const localePrefix = `/${effectiveLocale}`;
+    const rest = localeFromPath ? pathname.slice(3) || "/" : pathname;
+    const restNoTrailingSlash =
+      rest.length > 1 && rest.endsWith("/") ? rest.slice(0, -1) : rest;
+
+    const hasFileExtension = /\.[a-zA-Z0-9]+$/.test(restNoTrailingSlash);
+    const isSpecialRoute =
+      restNoTrailingSlash.includes("/opengraph-image") ||
+      restNoTrailingSlash.includes("/twitter-image");
+
+    const redirectWithHeaders = (targetPath: string) => {
+      const redirectUrl = new URL(targetPath, request.url);
+      redirectUrl.search = request.nextUrl.search;
+      const response = NextResponse.redirect(redirectUrl, 308);
+      response.headers.set("x-nonce", nonce);
+      response.headers.set("x-pathname", pathname);
+      response.headers.set("Content-Security-Policy", csp);
+      response.headers.set("Referrer-Policy", "no-referrer-when-downgrade");
+      response.headers.set("X-Content-Type-Options", "nosniff");
+      response.headers.set("X-Frame-Options", "SAMEORIGIN");
+      response.headers.set("X-DNS-Prefetch-Control", "on");
+      response.headers.set("Cross-Origin-Opener-Policy", "same-origin");
+      response.headers.set(
+        "Permissions-Policy",
+        "geolocation=(), microphone=(), camera=()",
+      );
+      if (isProd) {
+        response.headers.set(
+          "Strict-Transport-Security",
+          "max-age=63072000; includeSubDomains; preload",
+        );
+      }
+      return response;
+    };
+
+    if (restNoTrailingSlash === "/$") {
+      return redirectWithHeaders(`${localePrefix}/`);
+    }
+
+    const mdPathMatch = restNoTrailingSlash.match(
+      /^\/(?:services\/)?\[[^\]]+\]\((\/[^)]+)\)$/,
+    );
+    if (mdPathMatch) {
+      let innerPath = mdPathMatch[1];
+      let target = `${localePrefix}${innerPath}`;
+      if (!target.endsWith("/") && !hasFileExtension && !isSpecialRoute) {
+        target += "/";
+      }
+      return redirectWithHeaders(target);
+    }
+  }
+
   // Check if the path already has a locale
   const pathnameHasLocale = locales.some(
-    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`
+    (locale) => pathname.startsWith(`/${locale}/`) || pathname === `/${locale}`,
   );
 
   if (pathnameHasLocale) {
     // Extract locale and set it in headers for the pages to use
     const locale = pathname.split("/")[1];
+
+    // Prevent redirect chains when trailingSlash: true is enabled.
+    // Without this, /<locale>/foo will first hit middleware (200) then Next.js redirects to /<locale>/foo/.
+    const hasFileExtension = /\.[a-zA-Z0-9]+$/.test(pathname);
+    const isSpecialRoute =
+      pathname.includes("/opengraph-image") ||
+      pathname.includes("/twitter-image");
+    const needsTrailingSlash =
+      pathname !== `/${locale}` &&
+      !pathname.endsWith("/") &&
+      !hasFileExtension &&
+      !isSpecialRoute;
+
+    if (needsTrailingSlash) {
+      const targetPath = `${pathname}/`;
+      const redirectUrl = new URL(targetPath, request.url);
+      redirectUrl.search = request.nextUrl.search;
+      const response = NextResponse.redirect(redirectUrl, 308);
+      response.headers.set("x-nonce", nonce);
+      response.headers.set("Content-Security-Policy", csp);
+      response.headers.set("Referrer-Policy", "no-referrer-when-downgrade");
+      response.headers.set("X-Content-Type-Options", "nosniff");
+      response.headers.set("X-Frame-Options", "SAMEORIGIN");
+      response.headers.set("X-DNS-Prefetch-Control", "on");
+      response.headers.set("Cross-Origin-Opener-Policy", "same-origin");
+      response.headers.set(
+        "Permissions-Policy",
+        "geolocation=(), microphone=(), camera=()",
+      );
+      if (isProd) {
+        response.headers.set(
+          "Strict-Transport-Security",
+          "max-age=63072000; includeSubDomains; preload",
+        );
+      }
+      return response;
+    }
+
     // Propagate request headers so Server Components can read them via headers()
     const requestHeaders = new Headers(request.headers);
     requestHeaders.set("x-locale", locale);
@@ -90,14 +194,14 @@ export function middleware(request: NextRequest) {
     response.headers.set("Cross-Origin-Opener-Policy", "same-origin");
     response.headers.set(
       "Permissions-Policy",
-      "geolocation=(), microphone=(), camera=()"
+      "geolocation=(), microphone=(), camera=()",
     );
     // Append Trusted Types enforcement
     response.headers.set("Content-Security-Policy", csp);
     if (isProd) {
       response.headers.set(
         "Strict-Transport-Security",
-        "max-age=63072000; includeSubDomains; preload"
+        "max-age=63072000; includeSubDomains; preload",
       );
     }
     return response;
@@ -124,13 +228,13 @@ export function middleware(request: NextRequest) {
   response.headers.set("Cross-Origin-Opener-Policy", "same-origin");
   response.headers.set(
     "Permissions-Policy",
-    "geolocation=(), microphone=(), camera=()"
+    "geolocation=(), microphone=(), camera=()",
   );
   // Removed report-only header
   if (isProd) {
     response.headers.set(
       "Strict-Transport-Security",
-      "max-age=63072000; includeSubDomains; preload"
+      "max-age=63072000; includeSubDomains; preload",
     );
   }
   return response;

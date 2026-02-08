@@ -14,38 +14,36 @@ function getPlaceholderLocales(): Set<string> {
     raw
       .split(",")
       .map((s) => s.trim())
-      .filter(Boolean)
+      .filter(Boolean),
   );
 }
 
 const placeholderLocales = getPlaceholderLocales();
 const sitemapLocales = locales.filter(
-  (locale) => !placeholderLocales.has(locale as any)
+  (locale) => !placeholderLocales.has(locale as any),
 );
 
 // static routes
 const staticPaths = [
   "/",
-  "/about",
   "/services",
+  "/products",
   "/ressources",
   "/contact",
-  "/team",
-  "/partners",
   "/legal/terms",
   "/legal/privacy",
   "/legal/cookies",
 ];
-// dynamic routes
+// dynamic routes (only include routes that actually exist in app/)
 const servicePaths = [
-  "/services",
   "/services/ai-consulting",
   "/services/microsoft-consulting",
-  "/services/accounting",
-  "/services/taxes",
-  "/services/payroll",
-  "/services/odoo",
-  "/services/outsourcing",
+];
+
+const productPaths = [
+  "/products/word-addin",
+  "/products/outlook-addin",
+  "/products/swiss-gpt",
 ];
 
 interface ArticleData {
@@ -62,7 +60,7 @@ function readRessourcesIndex(locale: string): ArticleData[] {
     "src",
     "translations",
     locale,
-    "ressources.json"
+    "ressources.json",
   );
   try {
     if (!fs.existsSync(file)) return [];
@@ -82,9 +80,9 @@ function readRessourcesIndex(locale: string): ArticleData[] {
  */
 function isGenuineTranslation(
   article: ArticleData,
-  canonicalArticle: ArticleData
+  canonicalArticle: ArticleData,
 ): boolean {
-  // If title, description, AND content are all identical to EN, it's not a genuine translation
+  // If title, description, AND content are all identical to the canonical locale, it's not a genuine translation
   const sameTitle = (article.title || "") === (canonicalArticle.title || "");
   const sameDesc =
     (article.description || "") === (canonicalArticle.description || "");
@@ -115,7 +113,7 @@ const ressourcesArticles = (() => {
 
     const canonicalArticles = articlesByLocale.get(canonicalLocale);
     if (!canonicalArticles || canonicalArticles.size === 0) {
-      // Fallback to FR if EN has no articles
+      // Fallback to FR if canonical locale has no articles
       const frArticles = articlesByLocale.get("fr");
       if (!frArticles) return [];
     }
@@ -157,6 +155,7 @@ const toPathEntry = (p: PathEntry) => (typeof p === "string" ? { path: p } : p);
 const paths = [
   ...staticPaths.map(toPathEntry),
   ...servicePaths.map(toPathEntry),
+  ...productPaths.map(toPathEntry),
   ...ressourcesArticles,
 ] as Array<{ path: string; date?: string; locales?: string[] }>;
 
@@ -194,21 +193,21 @@ export async function GET() {
         isHome || isArticle
           ? "weekly"
           : isService || isResources
-          ? "monthly"
-          : isLegal
-          ? "yearly"
-          : "monthly";
+            ? "monthly"
+            : isLegal
+              ? "yearly"
+              : "monthly";
       const priority = isHome
         ? "1.0"
         : isArticle
-        ? "0.8"
-        : isService
-        ? "0.7"
-        : isResources
-        ? "0.6"
-        : isLegal
-        ? "0.3"
-        : "0.5";
+          ? "0.8"
+          : isService
+            ? "0.7"
+            : isResources
+              ? "0.6"
+              : isLegal
+                ? "0.3"
+                : "0.5";
 
       // build alternates block
       const alternates = [
@@ -221,7 +220,7 @@ export async function GET() {
           const href = `${BASE}/${alt}${altLocalized}/`;
           const hreflang = hreflangFor(alt as Locale);
           return `    <xhtml:link rel="alternate" hreflang="${escapeXml(
-            hreflang
+            hreflang,
           )}" href="${escapeXml(href)}"/>`;
         }),
         // x-default points to root domain for homepage, otherwise to canonical locale
@@ -241,7 +240,7 @@ export async function GET() {
           // Add trailing slash to x-default href
           const href = `${BASE}/${xDefaultLocale}${altLocalized}/`;
           return `    <xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(
-            href
+            href,
           )}"/>`;
         })(),
       ].join("\n");

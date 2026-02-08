@@ -38,63 +38,9 @@ const baseConfig = {
     reactRemoveProperties: true,
   },
   async redirects() {
-    // Redirect non-locale paths to locale-prefixed versions for SEO
-    return [
-      // Services redirects
-      {
-        source: "/services",
-        destination: "/en/services/",
-        permanent: true,
-      },
-      {
-        source: "/services/ai-consulting",
-        destination: "/en/services/ai-consulting/",
-        permanent: true,
-      },
-      {
-        source: "/services/microsoft-consulting",
-        destination: "/en/services/microsoft-consulting/",
-        permanent: true,
-      },
-      // Products redirects
-      {
-        source: "/products",
-        destination: "/en/products/",
-        permanent: true,
-      },
-      {
-        source: "/products/word-addin",
-        destination: "/en/products/word-addin/",
-        permanent: true,
-      },
-      {
-        source: "/products/outlook-addin",
-        destination: "/en/products/outlook-addin/",
-        permanent: true,
-      },
-      {
-        source: "/products/swiss-gpt",
-        destination: "/en/products/swiss-gpt/",
-        permanent: true,
-      },
-      // Resources redirects
-      {
-        source: "/ressources",
-        destination: "/en/ressources/",
-        permanent: true,
-      },
-      {
-        source: "/ressources/articles",
-        destination: "/en/ressources/articles/",
-        permanent: true,
-      },
-      // Contact redirect
-      {
-        source: "/contact",
-        destination: "/en/contact/",
-        permanent: true,
-      },
-    ];
+    // Locale prefixing + trailing-slash normalization is handled in middleware.
+    // Keeping redirects empty here avoids conflicts and redirect chains.
+    return [];
   },
   async rewrites() {
     // No rewrites needed for houle.ai - all routes use their canonical paths

@@ -34,6 +34,8 @@ function isGenuineTranslation(localeArticle, frArticle) {
 }
 
 function main() {
+  const REQUIRE =
+    process.env.REQUIRE_TRANSLATIONS === "1" || process.env.CI === "true";
   const fr = loadRessources("fr");
   const frArticleMap = new Map(fr.Articles.map((a) => [a.slug, a]));
 
@@ -52,7 +54,7 @@ function main() {
 
     const localeData = loadRessources(locale);
     const localeArticleMap = new Map(
-      localeData.Articles.map((a) => [a.slug, a])
+      localeData.Articles.map((a) => [a.slug, a]),
     );
 
     const genuineTranslations = [];
@@ -110,7 +112,7 @@ function main() {
         stats.genuine
       } genuine (${coverage}% coverage), ${stats.duplicate} duplicates, ${
         stats.missing
-      } missing`
+      } missing`,
     );
   }
 
@@ -123,7 +125,7 @@ function main() {
   for (const [locale, stats] of Object.entries(summary.byLocale)) {
     totalUrls += stats.genuine;
     console.log(
-      `  ${locale.toUpperCase()}: ${stats.genuine} URLs will be in sitemap`
+      `  ${locale.toUpperCase()}: ${stats.genuine} URLs will be in sitemap`,
     );
   }
   console.log(`  FR: ${summary.total} URLs will be in sitemap`);
@@ -131,22 +133,32 @@ function main() {
 
   const duplicateUrlsRemoved = Object.values(summary.byLocale).reduce(
     (sum, stats) => sum + stats.duplicate,
-    0
+    0,
   );
   console.log(`  Duplicate URLs removed: ${duplicateUrlsRemoved}`);
   console.log();
 
   // Exit with error if there are issues to fix
   const hasDuplicates = Object.values(summary.byLocale).some(
-    (stats) => stats.duplicate > 0
+    (stats) => stats.duplicate > 0,
   );
   if (hasDuplicates) {
     console.log(
-      "⚠️  Warning: Some locales have duplicate content that will be excluded from sitemap."
+      "⚠️  Warning: Some locales have duplicate content that will be excluded from sitemap.",
     );
     console.log(
-      "   Consider translating these articles or keeping them excluded."
+      "   Consider translating these articles or keeping them excluded.",
     );
+  }
+
+  const hasMissing = Object.values(summary.byLocale).some(
+    (stats) => stats.missing > 0,
+  );
+  if (REQUIRE && (hasDuplicates || hasMissing)) {
+    console.error(
+      "\n[CI] Translation validation failed: missing and/or duplicate articles detected.",
+    );
+    process.exit(1);
   }
 }
 
