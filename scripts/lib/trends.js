@@ -355,8 +355,8 @@ function filterRelevantTrends(trends = []) {
     /\bgpt\b/i,
     /openai/i,
     /azure/i,
-    /rag/i,
-    /vector/i,
+    /\brag\b/i,
+    /\bvector\b/i,
     /prompt/i,
     /agent/i,
     /automation|automatisation/i,
@@ -372,7 +372,27 @@ function filterRelevantTrends(trends = []) {
 
   return trends.filter((trend) => {
     const searchText = `${trend.title || ""} ${(trend.relatedQueries || []).join(" ")}`.toLowerCase();
-    return relevantKeywords.some((rx) => rx.test(searchText));
+
+    // Avoid false positives on short tokens (e.g. "braga" contains "rag").
+    // Require at least one strong signal OR two weak signals.
+    const matches = relevantKeywords.filter((rx) => rx.test(searchText));
+    if (matches.length === 0) return false;
+
+    const strongSignals = [
+      /\bm365\b/i,
+      /microsoft 365/i,
+      /office 365/i,
+      /outlook/i,
+      /teams/i,
+      /\bgpt\b/i,
+      /\bllm\b/i,
+      /openai/i,
+      /azure/i,
+      /gdpr|rgpd/i,
+      /nlpd/i,
+    ];
+    const hasStrong = strongSignals.some((rx) => rx.test(searchText));
+    return hasStrong || matches.length >= 2;
   });
 }
 
@@ -382,7 +402,8 @@ function guessCategoryFromText(text) {
   if (/(outlook|word|excel|powerpoint|teams|office 365|microsoft 365|add-?in|compl[ée]ment)/i.test(s))
     return "microsoft-365";
   if (/(automation|automatisation|workflow|productivit)/i.test(s)) return "productivity";
-  if (/(rag|vector|embedding|fine-?tuning|eval|prompt|llm|gpt|openai|azure)/i.test(s)) return "technology";
+  if (/\brag\b/i.test(s)) return "technology";
+  if (/(vector|embedding|fine-?tuning|eval|prompt|\bllm\b|\bgpt\b|openai|azure)/i.test(s)) return "technology";
   if (/(enterprise|entreprise|roi|gouvernance|adoption|change)/i.test(s)) return "enterprise";
   return "general";
 }
@@ -568,4 +589,3 @@ module.exports = {
   buildSEOSuggestions,
   EVERGREEN_TOPICS,
 };
-
