@@ -3,10 +3,20 @@
 const fs = require("fs");
 const path = require("path");
 
+// Import trend and reference validation modules
+const { getTopicSuggestions, buildSEOSuggestions } = require("./lib/trends");
+const {
+  validateReferences,
+  deduplicateByDomain,
+  getFallbackReferences,
+  isTrustedDomain,
+} = require("./lib/referenceValidator");
+
 const rawArgs = process.argv.slice(2);
 const args = new Set(rawArgs);
 const APPLY = args.has("--apply");
 const DRY = args.has("--dry-run");
+const TRANSLATE_EXISTING = args.has("--translate-existing");
 let MOCK_PATH = null;
 
 for (const arg of rawArgs) {
@@ -23,96 +33,181 @@ function loadMockData(filePath) {
     return JSON.parse(fs.readFileSync(abs, "utf8"));
   } catch (error) {
     throw new Error(
-      `Failed to load mock data from ${filePath}: ${error.message}`
+      `Failed to load mock data from ${filePath}: ${error.message}`,
     );
   }
 }
 
 const MOCK_DATA = MOCK_PATH ? loadMockData(MOCK_PATH) : null;
 const OFFLINE_MODE = process.env.OFFLINE_MODE === "1";
+const REQUIRE_TRANSLATIONS =
+  process.env.REQUIRE_TRANSLATIONS === "1" || process.env.CI === "true";
+const AI_TWO_STEP = process.env.AI_TWO_STEP === "1";
 
 const AZURE_AGENT_ENDPOINT = process.env.AZURE_AGENT_ENDPOINT;
-const AZURE_AGENT_ID = process.env.AZURE_AGENT_ID;
-const AZURE_TRANSLATE_AGENT_ID =
-  process.env.AZURE_TRANSLATE_AGENT_ID || AZURE_AGENT_ID;
+// Support both AZURE_AGENT_NAME (new) and AZURE_AGENT_ID (legacy)
+const AZURE_AGENT_NAME =
+  process.env.AZURE_AGENT_NAME || process.env.AZURE_AGENT_ID;
+const AZURE_AGENT_RESEARCH_NAME =
+  process.env.AZURE_AGENT_RESEARCH_NAME || AZURE_AGENT_NAME;
+const AZURE_AGENT_RESPONSES_API_VERSION =
+  process.env.AZURE_AGENT_RESPONSES_API_VERSION || "2025-11-15-preview";
+const AZURE_AGENT_ALLOW_CLASSIC_FALLBACK =
+  process.env.AZURE_AGENT_ALLOW_CLASSIC_FALLBACK === "1";
+const AZURE_AGENT_FORCE_RESPONSES =
+  process.env.AZURE_AGENT_FORCE_RESPONSES === "1";
+const AZURE_AGENT_RESPONSES_RETRIES = parseInt(
+  process.env.AZURE_AGENT_RESPONSES_RETRIES || "4",
+  10,
+);
+const AZURE_AGENT_RESPONSES_BACKOFF_MS = parseInt(
+  process.env.AZURE_AGENT_RESPONSES_BACKOFF_MS || "15000",
+  10,
+);
+const AZURE_AGENT_RESPONSES_BACKOFF_MAX_MS = parseInt(
+  process.env.AZURE_AGENT_RESPONSES_BACKOFF_MAX_MS || "120000",
+  10,
+);
+const AZURE_AGENT_RESPONSES_BACKOFF_JITTER_MS = parseInt(
+  process.env.AZURE_AGENT_RESPONSES_BACKOFF_JITTER_MS || "2000",
+  10,
+);
+const AZURE_AGENT_RESPONSES_TIMEOUT_MS = parseInt(
+  process.env.AZURE_AGENT_RESPONSES_TIMEOUT_MS || "180000",
+  10,
+);
+const AZURE_AGENT_RESPONSES_COOLDOWN_MS = parseInt(
+  process.env.AZURE_AGENT_RESPONSES_COOLDOWN_MS || "8000",
+  10,
+);
+const AZURE_AGENT_RESPONSES_MAX_OUTPUT_TOKENS = parseInt(
+  process.env.AZURE_AGENT_RESPONSES_MAX_OUTPUT_TOKENS || "0",
+  10,
+);
+
+const REFERENCE_MIN_COUNT = parseInt(process.env.REFERENCE_MIN_COUNT || "3", 10);
+const REFERENCE_MAX_COUNT = parseInt(process.env.REFERENCE_MAX_COUNT || "6", 10);
+const REFERENCE_MIN_TRUSTED_DOMAINS = parseInt(
+  process.env.REFERENCE_MIN_TRUSTED_DOMAINS || "1",
+  10,
+);
+
+const AZURE_OPENAI_ENDPOINT = process.env.AZURE_OPENAI_ENDPOINT;
+const AZURE_OPENAI_API_KEY = process.env.AZURE_OPENAI_API_KEY;
+const AZURE_OPENAI_API_VERSION =
+  process.env.AZURE_OPENAI_API_VERSION || "2025-01-01-preview";
+const AZURE_OPENAI_DEPLOYMENT =
+  process.env.AZURE_OPENAI_DEPLOYMENT || "gpt-4.1";
+const AZURE_OPENAI_DRAFT_ENDPOINT =
+  process.env.AZURE_OPENAI_DRAFT_ENDPOINT || AZURE_OPENAI_ENDPOINT;
+const AZURE_OPENAI_DRAFT_API_VERSION =
+  process.env.AZURE_OPENAI_DRAFT_API_VERSION || AZURE_OPENAI_API_VERSION;
+const AZURE_OPENAI_DRAFT_DEPLOYMENT =
+  process.env.AZURE_OPENAI_DRAFT_DEPLOYMENT || AZURE_OPENAI_DEPLOYMENT;
+const AZURE_OPENAI_DRAFT_MAX_TOKENS = parseInt(
+  process.env.AZURE_OPENAI_DRAFT_MAX_TOKENS || "4096",
+  10,
+);
 
 const ROOT = process.cwd();
 const TRANSLATIONS_DIR = path.join(ROOT, "src", "translations");
 const FR_PATH = path.join(TRANSLATIONS_DIR, "fr", "ressources.json");
 const LOCALES = ["en", "de", "es", "pt"];
 
+const BRAND_NAME = "houle";
+const AUTHOR_NAME = "Houle Team";
+
 const SERVICES = [
-  "Private AI for Microsoft 365",
-  "Outlook Add-ins for productivity",
-  "Word Add-ins for document generation",
-  "Secure GPT hosting in Switzerland",
-  "Data privacy and compliance (nLPD, GDPR)",
-  "Azure OpenAI integration",
-  "Local LLM deployment",
-  "Enterprise AI adoption strategies",
+  "ia privée et assistants internes (rag, anti-hallucinations, contrôle des sources)",
+  "add-ins microsoft 365 (outlook, word, teams) et intégrations",
+  "architecture azure openai / azure ai foundry (sécurité, réseau, identité, clés)",
+  "gouvernance, conformité et privacy (nlpd, rgpd, dpia, registre des traitements)",
+  "automatisation et productivité (power platform, graph, workflows)",
+  "évaluation qualité et monitoring (tests, scoring, régression, guardrails)",
+  "adoption entreprise (roi, cas d'usage, conduite du changement)",
 ];
 
 const TOPIC_KEYWORDS = [
   {
     topic: "private-ai",
-    label: "Private AI & Privacy",
+    label: "IA privée, sécurité et conformité",
     patterns: [
-      /private ai/i,
-      /privacy/i,
+      /ia\s*priv[ée]e/i,
+      /donn[ée]es?\s*sensibles/i,
       /confidentialit[ée]/i,
-      /swiss hosting/i,
-      /nLPD/i,
-      /GDPR/i,
-      /RGPD/i,
+      /\bnlpd\b/i,
+      /\brgpd\b/i,
+      /protection\s+des\s+donn[ée]es/i,
+      /d(?:p|pi)a/i,
+      /registre\s+des\s+traitements/i,
+      /anonymis/i,
+      /pseudonymis/i,
     ],
   },
   {
     topic: "microsoft-365",
-    label: "Microsoft 365 & Add-ins",
+    label: "Microsoft 365 (add-ins et intégrations)",
     patterns: [
-      /microsoft 365/i,
-      /office 365/i,
-      /outlook/i,
-      /word/i,
-      /excel/i,
-      /powerpoint/i,
-      /add-in/i,
-      /complément/i,
+      /microsoft\s*365/i,
+      /\bm365\b/i,
+      /\boffice\b/i,
+      /\boutlook\b/i,
+      /\bword\b/i,
+      /\bteams\b/i,
+      /add-?in/i,
+      /office\.js/i,
+      /graph/i,
     ],
   },
   {
     topic: "productivity",
-    label: "Productivity & Automation",
+    label: "Productivité et automatisation",
     patterns: [
-      /productivit[ée]/i,
-      /automation/i,
-      /automatisation/i,
+      /automatis/i,
       /workflow/i,
-      /efficacit[ée]/i,
+      /power\s*automate/i,
+      /power\s*apps/i,
+      /power\s*bi/i,
+      /power\s*platform/i,
+      /process/i,
+      /productivit[ée]/i,
     ],
   },
   {
     topic: "technology",
-    label: "AI Technology (LLMs, GPT)",
+    label: "Architecture, RAG et qualité (anti-hallucinations)",
     patterns: [
-      /llm/i,
-      /gpt/i,
-      /azure openai/i,
-      /rag/i,
-      /generative ai/i,
-      /ia g[ée]n[ée]rative/i,
+      /\brag\b/i,
+      /retrieval/i,
+      /vector/i,
+      /embedding/i,
+      /fine-?tuning/i,
+      /prompt/i,
+      /guardrail/i,
+      /hallucin/i,
+      /evaluation/i,
+      /benchmark/i,
+      /monitoring/i,
     ],
   },
   {
     topic: "enterprise",
-    label: "Enterprise AI Strategy",
+    label: "Gouvernance, adoption et ROI",
     patterns: [
-      /enterprise/i,
-      /entreprise/i,
-      /strat[ée]gie/i,
+      /gouvernance/i,
       /adoption/i,
-      /roi/i,
+      /\broi\b/i,
+      /cas\s+d'usage/i,
+      /conduite\s+du\s+changement/i,
+      /politique/i,
+      /risque/i,
+      /compliance/i,
     ],
+  },
+  {
+    topic: "general",
+    label: "Général",
+    patterns: [/.*/],
   },
 ];
 
@@ -143,6 +238,19 @@ function hasUnnecessaryCaps(input) {
   return false;
 }
 
+/**
+ * Detects untranslated payloads by comparing title, description and content
+ * against the canonical article.
+ */
+function isDuplicateTranslation(localized, canonical) {
+  if (!localized || !canonical) return false;
+  const sameTitle = (localized.title || "") === (canonical.title || "");
+  const sameDesc =
+    (localized.description || "") === (canonical.description || "");
+  const sameContent = (localized.content || "") === (canonical.content || "");
+  return sameTitle && sameDesc && sameContent;
+}
+
 function detectTopic(article) {
   if (!article) return "general";
   const base = `${article.slug || ""} ${article.title || ""} ${
@@ -161,53 +269,211 @@ function describeTopic(topic) {
   return entry ? entry.label : "Thème général";
 }
 
+function normalizeBrandCaseInText(input) {
+  if (typeof input !== "string" || !input) return input;
+  // Keep brand usage consistent with site conventions: "houle" lowercase.
+  return input
+    .replace(/\bHoule\.ai\b/g, "houle.ai")
+    .replace(/\bHoule\b/g, BRAND_NAME);
+}
+
+function normalizeBrandCaseInArticle(article) {
+  if (!article || typeof article !== "object") return;
+  if (typeof article.title === "string") article.title = normalizeBrandCaseInText(article.title);
+  if (typeof article.description === "string")
+    article.description = normalizeBrandCaseInText(article.description);
+  if (typeof article.content === "string") article.content = normalizeBrandCaseInText(article.content);
+}
+
+function assertNoForbiddenTermsInText(text, where = "text") {
+  if (typeof text !== "string" || !text) return;
+  if (/copilot/i.test(text)) {
+    const err = new Error(`Terme interdit détecté (Copilot) dans ${where}`);
+    err.code = "FORBIDDEN_TERM";
+    err.term = "copilot";
+    throw err;
+  }
+}
+
+function assertNoForbiddenTermsInArticle(article, where = "article") {
+  if (!article || typeof article !== "object") return;
+  assertNoForbiddenTermsInText(article.title || "", `${where}.title`);
+  assertNoForbiddenTermsInText(article.description || "", `${where}.description`);
+  assertNoForbiddenTermsInText(article.content || "", `${where}.content`);
+}
+
 function getLastArticle(frData) {
   const articles = Array.isArray(frData?.Articles) ? frData.Articles : [];
   if (!articles.length) return null;
   const sorted = [...articles].sort((a, b) =>
-    (a.date || "").localeCompare(b.date || "")
+    (a.date || "").localeCompare(b.date || ""),
   );
   return sorted[sorted.length - 1];
 }
 
-function buildSystemPrompt(frJson) {
+/**
+ * Analyze recent topic distribution and suggest underrepresented topics.
+ * This ensures we don't keep writing about the same topics repeatedly.
+ */
+function analyzeRecentTopics(frData, recentCount = 15) {
+  const articles = Array.isArray(frData?.Articles) ? frData.Articles : [];
+  const sorted = [...articles].sort((a, b) =>
+    (b.date || "").localeCompare(a.date || ""),
+  );
+  const recent = sorted.slice(0, recentCount);
+
+  // Count topics in recent articles
+  const topicCounts = {};
+  for (const topic of TOPIC_KEYWORDS) {
+    topicCounts[topic.topic] = 0;
+  }
+  topicCounts["general"] = 0;
+
+  for (const article of recent) {
+    const topic = detectTopic(article);
+    topicCounts[topic] = (topicCounts[topic] || 0) + 1;
+  }
+
+  // Find overrepresented topics (more than 2 articles in last 15)
+  const overrepresented = [];
+  for (const [topic, count] of Object.entries(topicCounts)) {
+    if (count >= 2 && topic !== "general") {
+      overrepresented.push({ topic, count, label: describeTopic(topic) });
+    }
+  }
+
+  // Find underrepresented topics (0-1 articles in last 15)
+  const underrepresented = TOPIC_KEYWORDS.filter(
+    (t) => (topicCounts[t.topic] || 0) <= 1,
+  ).map((t) => t.label);
+
+  // Get last 5 topics to avoid immediate repetition
+  const lastFiveTopics = recent.slice(0, 5).map((a) => detectTopic(a));
+
+  return {
+    topicCounts,
+    overrepresented,
+    underrepresented,
+    lastFiveTopics,
+    avoidTopics: [...new Set(lastFiveTopics.filter((t) => t !== "general"))],
+  };
+}
+
+function buildSystemPrompt(frJson, trendData = null) {
   const today = isoDateToday();
-  const sixMonthsAgo = (() => {
+  const twelveMonthsAgo = (() => {
     const d = new Date();
-    d.setMonth(d.getMonth() - 6);
+    d.setMonth(d.getMonth() - 12);
     return d.toISOString().slice(0, 10);
   })();
   const lastArticle = getLastArticle(frJson);
   const lastTopic = detectTopic(lastArticle);
+  const minWords = parseInt(process.env.SEO_MIN_WORDS || "800", 10);
+  const maxWords = parseInt(process.env.SEO_MAX_WORDS || "3000", 10);
+  const lengthGuidance = process.env.SEO_MIN_WORDS
+    ? `- Longueur MINIMALE: ${minWords} mots (objectif ${Math.max(minWords, 1500)} à ${Math.max(Math.max(minWords, 1500), maxWords)}). Si tu es en dessous, ajoute des sections (checklist, FAQ, exemples chiffrés, cas cantonaux, cas pratiques).`
+    : "- Article format pratique (800 à 1500 mots), structuré avec sections claires, listes, exemples chiffrés.";
+  const longFormRequirements =
+    process.env.SEO_MIN_WORDS && minWords >= 1500
+      ? [
+          "- OBLIGATOIRE (pour atteindre la longueur): au moins 10 sections H2, plusieurs H3, 2 checklists, 2 tableaux, 1 cas pratique chiffré (CHF) et une FAQ de 6 questions.",
+          "- OBLIGATOIRE: inclure une section 'processus étape-par-étape' et une section 'erreurs fréquentes + corrections'.",
+        ]
+      : [];
   const recentSlugs = (Array.isArray(frJson.Articles) ? frJson.Articles : [])
     .slice(-12)
     .map((a) => a.slug)
     .filter(Boolean);
 
+  // Analyze topic distribution for better variety
+  const topicAnalysis = analyzeRecentTopics(frJson, 15);
+
+  // Build topic guidance based on analysis
+  const avoidTopicsLabels = topicAnalysis.avoidTopics.map(describeTopic);
+  const suggestedTopics = topicAnalysis.underrepresented.slice(0, 4);
+
   const topicNote = lastArticle
     ? `Dernier article publié le ${lastArticle.date}: "${
         lastArticle.title
       }". Thème identifié: ${describeTopic(
-        lastTopic
-      )}. Choisis un nouveau sujet clairement différent pour maintenir l'alternance éditoriale.`
-    : "Aucun article récent identifié. Choisis un sujet à forte valeur pour les entreprises utilisant Microsoft 365.";
+        lastTopic,
+      )}. Choisis un nouveau sujet CLAIREMENT DIFFÉRENT pour maintenir l'alternance éditoriale.`
+    : "Aucun article récent identifié. Choisis un sujet à forte valeur pour dirigeants PME genevois.";
+
+  // Build topic diversity guidance
+  const diversityGuidance = [];
+  if (avoidTopicsLabels.length > 0) {
+    diversityGuidance.push(
+      `⚠️ THÈMES À ÉVITER (traités récemment dans les 5 derniers articles): ${avoidTopicsLabels.join(", ")}.`,
+    );
+  }
+  if (suggestedTopics.length > 0) {
+    diversityGuidance.push(
+      `✅ THÈMES SUGGÉRÉS (peu couverts récemment, à privilégier): ${suggestedTopics.join(", ")}.`,
+    );
+  }
+  if (topicAnalysis.overrepresented.length > 0) {
+    const overLabels = topicAnalysis.overrepresented.map(
+      (t) => `${t.label} (${t.count} articles)`,
+    );
+    diversityGuidance.push(
+      `📊 Thèmes surreprésentés (éviter absolument): ${overLabels.join(", ")}.`,
+    );
+  }
+
+  // Build trend-based keyword guidance
+  const trendGuidance = [];
+  if (trendData && trendData.selectedTopic) {
+    const { suggestedTopic, keywords, outline, category } =
+      trendData.selectedTopic;
+    trendGuidance.push(
+      "",
+      "=== SIGNAUX TENDANCE SEO (à intégrer si pertinent) ===",
+      `📈 Sujet suggéré par tendance: "${suggestedTopic}"`,
+      `🔑 Mots-clés SEO cibles: ${keywords.join(", ")}`,
+    );
+    if (outline && outline.length > 0) {
+      trendGuidance.push(`📋 Plan suggéré: ${outline.join(" → ")}`);
+    }
+    if (category) {
+      trendGuidance.push(`📁 Catégorie thématique: ${category}`);
+    }
+    if (trendData.usedFallback) {
+      trendGuidance.push(
+        "ℹ️ (Sujet basé sur liste evergreen - tendances indisponibles)",
+      );
+    }
+    trendGuidance.push(
+      "",
+      "⚠️ IMPORTANT: Intègre ces mots-clés naturellement dans le titre, la description et le contenu pour optimiser le SEO.",
+      "⚠️ Le sujet suggéré est une indication, adapte-le selon nos services fiduciaires genevois.",
+    );
+  }
 
   return [
-    "Tu es un assistant éditorial SEO expert pour Houle (Genève, Suisse), spécialisé dans l'IA privée pour Microsoft 365.",
-    `Date actuelle: ${today}. N'intègre que des éléments publiés ou mis à jour entre ${sixMonthsAgo} et ${today}.`,
+    `Tu es un assistant éditorial SEO expert pour ${BRAND_NAME}.ai (Suisse).`,
+    `Date actuelle: ${today}. Privilégie des sources publiées ou mises à jour entre ${twelveMonthsAgo} et ${today}. Les sources officielles et techniques stables (fedlex.admin.ch, edoeb.admin.ch, ch.ch, nist.gov, learn.microsoft.com, azure.microsoft.com) peuvent être plus anciennes si elles restent valables.`,
     topicNote,
-    "Objectif: proposer EXACTEMENT 1 nouvel article (section « Articles ») en français, utile et concret pour les prospects de Houle.",
+    "",
+    "=== DIVERSITÉ THÉMATIQUE (CRITIQUE) ===",
+    ...diversityGuidance,
+    ...trendGuidance,
+    "",
+    "Objectif: proposer EXACTEMENT 1 nouvel article (section « Articles ») en français, utile pour des décideurs IT/produit, équipes conformité et dirigeants d'entreprises en Suisse.",
+    "",
     "Contraintes impératives:",
-    "- INTERDICTION FORMELLE de parler de 'Microsoft Copilot' ou 'M365 Copilot'. Nos produits sont concurrents (Add-ins gérés connectés à Foundry).",
-    "- Sujet cohérent avec nos services (liste ci-dessous) et différent du dernier article.",
+    "- FOCUS sur du concret: checklists, erreurs fréquentes + correctifs, étapes de mise en œuvre, matrices de décision, exemples de gouvernance.",
+    `- INTERDIT: mentionner Microsoft Copilot / M365 Copilot. N'écris pas le mot \"Copilot\".`,
+    `- La marque doit être en minuscules: écris toujours \"${BRAND_NAME}\" (jamais \"Houle\").`,
+    "- Sujet cohérent avec nos services (liste ci-dessous) et différent des articles récents.",
     "- Aucun doublon de slug, ni de sujet déjà traité récemment.",
-    "- Article long format (2000 à 2500 mots), structuré, concret, orienté solutions.",
-    "- Style professionnel, humain, sans capitales superflues (ex: pas de Majuscules à Chaque Mot).",
-    "- Éviter les listes à puces excessives et les tirets. Privilégier des paragraphes rédigés et fluides.",
-    "- Éviter le style robotique ou les structures répétitives typiques de l'IA.",
-    "- 'houle' doit toujours être écrit en minuscules, même en début de phrase.",
-    "- Inclure au moins deux références officielles ou sources fiables sur le sujet (Microsoft Learn, OpenAI, Admin.ch pour la LPD, etc.).",
-    "- Chaque domaine ne doit être représenté qu'une seule fois dans les références (pas de doublons de domaine).",
+    lengthGuidance,
+    ...longFormRequirements,
+    "- Style professionnel, humain, sans capitales superflues. Évite les tics d'écriture IA (\"Moreover\", \"Furthermore\", répétitions).",
+    "- Références: fournis 4 à 6 liens vérifiables (HTTP 200, pas de login), sans URL inventée.",
+    "- Références: inclure au moins 1 source officielle/réglementaire (fedlex.admin.ch, edoeb.admin.ch, admin.ch, nist.gov).",
+    "- Références: inclure au moins 1 source technique (learn.microsoft.com / github.com).",
+    "- STRICT: 1 domaine = 1 lien (pas de doublons de domaine).",
     `Slugs récents à éviter: ${recentSlugs.join(", ") || "aucun"}.`,
     `Services à promouvoir: ${SERVICES.join(", ")}.`,
     "",
@@ -218,7 +484,7 @@ function buildSystemPrompt(frJson) {
     '    "title": "<titre FR>",',
     '    "description": "<description FR>",',
     '    "content": "<contenu FR complet (Markdown autorisé)>",',
-    '    "author": "Houle Team",',
+    `    "author": ${JSON.stringify(AUTHOR_NAME)},`,
     '    "date": "YYYY-MM-DD",',
     '    "references": [ { "labelKey": "Libellé FR", "url": "https://..." }, ... ]',
     "  },",
@@ -232,8 +498,11 @@ function buildSystemPrompt(frJson) {
 function buildTranslatePrompt(newArticle, newLabels) {
   return [
     "Tu es traducteur professionnel. Traduis les champs ci-dessous en conservant les structures, slugs, URLs et clés.",
-    'Respecte les minuscules/majuscules d\'origine et garde "houle" en minuscules.',
+    `Garde ${JSON.stringify(AUTHOR_NAME)} tel quel.`,
+    `La marque doit être en minuscules: écris toujours "${BRAND_NAME}" (jamais "Houle").`,
+    `INTERDIT: mentionner Microsoft Copilot / M365 Copilot. N'écris pas le mot "Copilot".`,
     "Fourni uniquement le JSON demandé, sans commentaire.",
+    "IMPORTANT: Chaque locale (en, de, es, pt) doit être traduite. Ne retourne jamais le texte français pour une autre langue.",
     "",
     "Format attendu:",
     "{",
@@ -248,18 +517,264 @@ function buildTranslatePrompt(newArticle, newLabels) {
   ].join("\n");
 }
 
+function buildResearchPrompt(frJson, trendData, seoSuggestions) {
+  const today = isoDateToday();
+  const twelveMonthsAgo = (() => {
+    const d = new Date();
+    d.setMonth(d.getMonth() - 12);
+    return d.toISOString().slice(0, 10);
+  })();
+
+  const topicAnalysis = analyzeRecentTopics(frJson, 15);
+  const avoidTopicsLabels = topicAnalysis.avoidTopics.map(describeTopic);
+  const suggestedTopics = topicAnalysis.underrepresented.slice(0, 4);
+  const recentSlugs = (Array.isArray(frJson.Articles) ? frJson.Articles : [])
+    .slice(-12)
+    .map((a) => a.slug)
+    .filter(Boolean);
+
+  const minWords = parseInt(process.env.SEO_MIN_WORDS || "800", 10);
+  const maxWords = parseInt(process.env.SEO_MAX_WORDS || "3000", 10);
+
+  const trendGuidance = [];
+  if (trendData && trendData.selectedTopic) {
+    const { suggestedTopic, keywords, outline, category } =
+      trendData.selectedTopic;
+    trendGuidance.push(
+      "",
+      "=== SIGNAUX TENDANCE SEO (à intégrer si pertinent) ===",
+      `📈 Sujet suggéré par tendance: "${suggestedTopic}"`,
+      `🔑 Mots-clés SEO cibles: ${Array.isArray(keywords) ? keywords.join(", ") : ""}`,
+    );
+    if (outline && outline.length > 0) {
+      trendGuidance.push(`📋 Plan suggéré: ${outline.join(" → ")}`);
+    }
+    if (category) {
+      trendGuidance.push(`📁 Catégorie thématique: ${category}`);
+    }
+  }
+
+  return [
+    `Tu es un stratège SEO + chercheur web pour ${BRAND_NAME}.ai (Suisse).`,
+    `Date actuelle: ${today}. Privilégie des sources publiées ou mises à jour entre ${twelveMonthsAgo} et ${today}. Les sources stables (fedlex.admin.ch, edoeb.admin.ch, ch.ch, nist.gov, learn.microsoft.com, github.com) peuvent être plus anciennes si elles restent valables.`,
+    "",
+    "=== DIVERSITÉ THÉMATIQUE (CRITIQUE) ===",
+    avoidTopicsLabels.length
+      ? `⚠️ THÈMES À ÉVITER: ${avoidTopicsLabels.join(", ")}.`
+      : "",
+    suggestedTopics.length
+      ? `✅ THÈMES SUGGÉRÉS: ${suggestedTopics.join(", ")}.`
+      : "",
+    ...trendGuidance,
+    "",
+    "Objectif: proposer 1 sujet + plan + références vérifiables (PAS l'article complet).",
+    "",
+    "Contraintes:",
+    "- Sujet cohérent avec nos services (liste ci-dessous) et différent des articles récents.",
+    `- INTERDIT: mentionner Microsoft Copilot / M365 Copilot. N'écris pas le mot \"Copilot\".`,
+    `- La marque doit être en minuscules: écris toujours \"${BRAND_NAME}\" (jamais \"Houle\").`,
+    `- L'article final fera ${Math.max(minWords, 1500)} à ${Math.max(Math.max(minWords, 1500), maxWords)} mots.`,
+    "- Références: fournir 8 à 12 liens vérifiables (HTTP 200, pas de login), sans URL inventée.",
+    "- Références: inclure au moins 2 sources officielles/réglementaires (fedlex.admin.ch, edoeb.admin.ch, nist.gov, admin.ch).",
+    "- Références: inclure au moins 2 sources techniques (learn.microsoft.com, github.com, docs officiels).",
+    "- Références: compléter avec des sources institutionnelles (associations, standards, universités) et éventuellement médias économiques si accessible sans paywall.",
+    "- STRICT: chaque référence doit provenir d'un domaine différent (1 domaine = 1 lien). Si tu donnes 12 références, ce sont 12 domaines distincts, sinon la réponse est rejetée.",
+    `Slugs récents à éviter: ${recentSlugs.join(", ") || "aucun"}.`,
+    `Services à promouvoir: ${SERVICES.join(", ")}.`,
+    "",
+    seoSuggestions?.primaryKeyword
+      ? `Mot-clé principal à viser: ${seoSuggestions.primaryKeyword}`
+      : "",
+    "",
+    "Format de sortie STRICT (application/json):",
+    "{",
+    '  "research": {',
+    '    "slug": "<slug-unique-fr>",',
+    '    "title": "<titre FR>",',
+    '    "description": "<description FR>",',
+    '    "category": "<private-ai|microsoft-365|productivity|technology|enterprise|general>",',
+    '    "primaryKeyword": "<mot-clé principal>",',
+    '    "secondaryKeywords": ["..."],',
+    '    "outline": ["H2 ...", "H2 ...", "FAQ ..."],',
+    '    "references": [ { "labelKey": "Libellé FR", "url": "https://..." }, ... ]',
+    "  }",
+    "}",
+  ]
+    .filter(Boolean)
+    .join("\n");
+}
+
+function buildDraftPromptFromResearch(research, validatedReferences) {
+  const minWords = parseInt(process.env.SEO_MIN_WORDS || "1500", 10);
+  const maxWords = parseInt(process.env.SEO_MAX_WORDS || "3000", 10);
+  return [
+    `Tu es un rédacteur SEO senior pour ${BRAND_NAME}.ai (Suisse).`,
+    "Rédige un article long, utile et concret, sans blabla.",
+    "",
+    `CONTRAINTE DE LONGUEUR (STRICTE): entre ${Math.max(minWords, 1500)} et ${Math.max(maxWords, Math.max(minWords, 1500))} mots (viser ~2200).`,
+    "Si tu es en dessous du minimum, tu DOIS ajouter du contenu (plus de H2/H3, plus d'exemples). Ne termine pas tôt.",
+    "Structure obligatoire: 10+ sections H2, plusieurs H3, 2 tableaux, 2 checklists, 1 cas pratique chiffré (CHF), une section étape-par-étape, une section erreurs fréquentes + corrections, et une FAQ de 6 questions.",
+    "IMPORTANT:",
+    `- INTERDIT: mentionner Microsoft Copilot / M365 Copilot. N'écris pas le mot \"Copilot\".`,
+    `- La marque doit être en minuscules: écris toujours \"${BRAND_NAME}\" (jamais \"Houle\").`,
+    "- N'invente AUCUN lien ni URL.",
+    "- N'inclus AUCUNE URL dans le texte (pas de http/https).",
+    "- Quand tu cites une source, écris simplement (source: <labelKey>).",
+    "- Utilise exactement le slug, titre et description fournis.",
+    "",
+    "Plan à suivre:",
+    JSON.stringify(research.outline || [], null, 2),
+    "",
+    "Références disponibles (ne pas modifier, ne pas ajouter):",
+    JSON.stringify(validatedReferences, null, 2),
+    "",
+    "Format de sortie STRICT (application/json):",
+    "{",
+    '  "newArticle": {',
+    `    "slug": ${JSON.stringify(research.slug)},`,
+    `    "title": ${JSON.stringify(research.title)},`,
+    `    "description": ${JSON.stringify(research.description)},`,
+    '    "content": "<contenu FR complet en Markdown (sans URLs)>",',
+    `    "author": ${JSON.stringify(AUTHOR_NAME)},`,
+    '    "date": "YYYY-MM-DD",',
+    '    "references": [ { "labelKey": "Libellé FR", "url": "https://..." }, ... ]',
+    "  },",
+    '  "newLabels": {',
+    '    "Libellé FR": "Texte à afficher (FR)"',
+    "  }",
+    "}",
+  ].join("\n");
+}
+
+function buildDraftRepairPromptFromExistingArticle(article, { mode, minWords, maxWords }) {
+  const targetMin = Math.max(parseInt(minWords || "1500", 10) || 1500, 1500);
+  const targetMax = Math.max(parseInt(maxWords || "3000", 10) || 3000, targetMin);
+  const currentWords = countWords(article?.content || "");
+  const action =
+    mode === "expand"
+      ? `Allonge le contenu pour dépasser ${targetMin} mots (objectif ~2200).`
+      : `Raccourcis le contenu pour être sous ${targetMax} mots (objectif ~2200).`;
+
+  return [
+    `Tu es un rédacteur SEO senior pour ${BRAND_NAME}.ai (Suisse).`,
+    action,
+    "IMPORTANT:",
+    "- Ne change PAS le slug, le titre, la description, l'auteur, la date.",
+    "- Ne change PAS les références; garde exactement la même liste.",
+    "- N'inclus AUCUNE URL dans le texte (pas de http/https).",
+    `- INTERDIT: mentionner Microsoft Copilot / M365 Copilot. N'écris pas le mot \"Copilot\".`,
+    `- La marque doit être en minuscules: écris toujours \"${BRAND_NAME}\" (jamais \"Houle\").`,
+    " - Conserve la structure (H2/H3) et les éléments obligatoires (2 tableaux, 2 checklists, 1 cas pratique chiffré CHF, étape-par-étape, erreurs fréquentes + corrections, FAQ 6 questions).",
+    `- Longueur STRICTE: ${targetMin} à ${targetMax} mots. Le texte actuel fait ~${currentWords} mots.`,
+    "",
+    "Voici l'article actuel (JSON):",
+    JSON.stringify(
+      {
+        newArticle: {
+          slug: article?.slug,
+          title: article?.title,
+          description: article?.description,
+          content: article?.content,
+          author: article?.author,
+          date: article?.date,
+          references: Array.isArray(article?.references) ? article.references : [],
+        },
+      },
+      null,
+      2,
+    ),
+    "",
+    "Retourne STRICTEMENT un JSON de la forme:",
+    "{",
+    '  "newArticle": {',
+    '    "slug": "...",',
+    '    "title": "...",',
+    '    "description": "...",',
+    '    "content": "...",',
+    `    "author": ${JSON.stringify(AUTHOR_NAME)},`,
+    '    "date": "YYYY-MM-DD",',
+    '    "references": [ { "labelKey": "...", "url": "https://..." }, ... ]',
+    "  }",
+    "}",
+  ].join("\n");
+}
+
 function extractJsonFromText(raw) {
   if (!raw || typeof raw !== "string") {
     throw new Error("Empty Azure Agent response");
   }
+  const fixBadJsonEscapes = (input) =>
+    // Fix invalid escape sequences like "\_" or "\'" that frequently appear in
+    // markdown-ish content inside JSON strings.
+    input.replace(/\\(?!["\\/bfnrtu])/g, "\\\\");
+  const fixControlCharsInStrings = (input) => {
+    // JSON does not allow raw control characters inside strings (notably newlines).
+    // Some models emit JSON-like text with raw newlines within quoted strings.
+    let out = "";
+    let inString = false;
+    let escaped = false;
+    for (let i = 0; i < input.length; i++) {
+      const ch = input[i];
+      if (!inString) {
+        if (ch === "\"") inString = true;
+        out += ch;
+        continue;
+      }
+
+      if (escaped) {
+        escaped = false;
+        out += ch;
+        continue;
+      }
+      if (ch === "\\") {
+        escaped = true;
+        out += ch;
+        continue;
+      }
+      if (ch === "\"") {
+        inString = false;
+        out += ch;
+        continue;
+      }
+
+      const code = ch.charCodeAt(0);
+      if (code === 0x0a) {
+        out += "\\n";
+        continue;
+      }
+      if (code === 0x0d) {
+        out += "\\r";
+        continue;
+      }
+      if (code === 0x09) {
+        out += "\\t";
+        continue;
+      }
+      if (code < 0x20) {
+        out += `\\u${code.toString(16).padStart(4, "0")}`;
+        continue;
+      }
+      out += ch;
+    }
+    return out;
+  };
+  const fixLenientJson = (input) =>
+    fixControlCharsInStrings(fixBadJsonEscapes(input));
   try {
     return JSON.parse(raw);
   } catch (error) {
+    try {
+      return JSON.parse(fixLenientJson(raw));
+    } catch {}
     // Look for fenced code block
     const fence = raw.match(/```(?:json)?\n([\s\S]*?)```/i);
     if (fence) {
       const inner = fence[1].trim();
-      return JSON.parse(inner);
+      try {
+        return JSON.parse(inner);
+      } catch {
+        return JSON.parse(fixLenientJson(inner));
+      }
     }
     // Fallback to first JSON object
     const firstBrace = raw.indexOf("{");
@@ -272,7 +787,11 @@ function extractJsonFromText(raw) {
           depth--;
           if (depth === 0) {
             const candidate = raw.slice(firstBrace, i + 1);
-            return JSON.parse(candidate);
+            try {
+              return JSON.parse(candidate);
+            } catch {
+              return JSON.parse(fixLenientJson(candidate));
+            }
           }
         }
       }
@@ -281,48 +800,362 @@ function extractJsonFromText(raw) {
   }
 }
 
-async function azureAgentJson(prompt, { agentId = AZURE_AGENT_ID } = {}) {
+/**
+ * Legacy Azure agents use OpenAI-style IDs that start with "asst".
+ */
+function isLegacyAgentId(agentIdentifier) {
+  return (
+    typeof agentIdentifier === "string" && agentIdentifier.startsWith("asst")
+  );
+}
+
+/**
+ * Build a Responses API agent_reference payload from "name" or "name:version".
+ * @param {string} agentName
+ * @returns {{name: string, type: string, version?: string}}
+ */
+function buildAgentReference(agentName) {
+  if (typeof agentName !== "string" || !agentName.trim()) {
+    throw new Error("AZURE_AGENT_NAME must be a non-empty string");
+  }
+  const trimmedName = agentName.trim();
+  const [name, version] = trimmedName.split(":", 2);
+  if (!name) {
+    throw new Error("AZURE_AGENT_NAME must include a name");
+  }
+  const agent = { name, type: "agent_reference" };
+  if (version) {
+    agent.version = version;
+  }
+  return agent;
+}
+
+function extractResponseText(response) {
+  if (!response || typeof response !== "object") return "";
+  if (response.output_text) return response.output_text;
+  let outputText = "";
+  if (response.output) {
+    if (typeof response.output === "string") {
+      outputText = response.output;
+    } else if (Array.isArray(response.output)) {
+      for (const item of response.output) {
+        if (item.type === "text" && item.text) {
+          outputText =
+            typeof item.text === "string" ? item.text : item.text.value || "";
+        } else if (item.type === "message" && item.content) {
+          for (const c of item.content) {
+            if (c.type === "text" && c.text) {
+              outputText =
+                typeof c.text === "string" ? c.text : c.text.value || "";
+            } else if (c.type === "output_text" && c.text) {
+              outputText = c.text;
+            }
+          }
+        }
+      }
+    } else if (response.output.content) {
+      for (const c of response.output.content) {
+        if (c.type === "text" && c.text) {
+          outputText = typeof c.text === "string" ? c.text : c.text.value || "";
+        } else if (c.type === "output_text" && c.text) {
+          outputText = c.text;
+        }
+      }
+    }
+  }
+  if (!outputText && response.choices?.[0]?.message?.content) {
+    outputText = response.choices[0].message.content;
+  }
+  return outputText;
+}
+
+function sleep(ms) {
+  if (!ms || ms <= 0) return Promise.resolve();
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+function buildAzureOpenAIChatUrl() {
+  if (!AZURE_OPENAI_ENDPOINT) {
+    throw new Error("Missing AZURE_OPENAI_ENDPOINT");
+  }
+  let url = AZURE_OPENAI_ENDPOINT.trim();
+  if (!url) {
+    throw new Error("Missing AZURE_OPENAI_ENDPOINT");
+  }
+
+  const hasChatCompletions = /\/chat\/completions(\?|$)/.test(url);
+  const hasDeploymentPath = /\/openai\/deployments\//.test(url);
+
+  if (!hasChatCompletions) {
+    if (hasDeploymentPath) {
+      url = `${url.replace(/\/+$/, "")}/chat/completions`;
+    } else {
+      url = `${url.replace(/\/+$/, "")}/openai/deployments/${AZURE_OPENAI_DEPLOYMENT}/chat/completions`;
+    }
+  }
+
+  if (!/api-version=/.test(url)) {
+    const sep = url.includes("?") ? "&" : "?";
+    url = `${url}${sep}api-version=${encodeURIComponent(
+      AZURE_OPENAI_API_VERSION,
+    )}`;
+  }
+
+  return url;
+}
+
+function buildAzureOpenAIChatUrlFor({ endpoint, deployment, apiVersion }) {
+  if (!endpoint) throw new Error("Missing Azure OpenAI endpoint");
+  let url = String(endpoint).trim();
+  if (!url) throw new Error("Missing Azure OpenAI endpoint");
+
+  const hasChatCompletions = /\/chat\/completions(\?|$)/.test(url);
+  const hasDeploymentPath = /\/openai\/deployments\//.test(url);
+
+  // If the endpoint already includes a deployment path, allow overriding the
+  // deployment name via the explicit `deployment` argument (used for drafting).
+  if (hasDeploymentPath && deployment) {
+    url = url.replace(
+      /(\/openai\/deployments\/)([^\/\?]+)/,
+      `$1${deployment}`,
+    );
+  }
+
+  if (!hasChatCompletions) {
+    if (hasDeploymentPath) {
+      url = `${url.replace(/\/+$/, "")}/chat/completions`;
+    } else {
+      url = `${url.replace(/\/+$/, "")}/openai/deployments/${deployment}/chat/completions`;
+    }
+  }
+
+  if (!/api-version=/.test(url)) {
+    const sep = url.includes("?") ? "&" : "?";
+    url = `${url}${sep}api-version=${encodeURIComponent(apiVersion)}`;
+  }
+
+  return url;
+}
+
+async function azureOpenAIJson(prompt, options = {}) {
+  const {
+    endpoint = AZURE_OPENAI_ENDPOINT,
+    deployment = AZURE_OPENAI_DEPLOYMENT,
+    apiVersion = AZURE_OPENAI_API_VERSION,
+    temperature = 0.2,
+    topP = 0.9,
+    maxTokens = null,
+    system = "You are a professional assistant. Output ONLY a JSON object.",
+  } = options;
+
+  if (!AZURE_OPENAI_API_KEY) {
+    throw new Error("Missing AZURE_OPENAI_API_KEY");
+  }
+  const url = buildAzureOpenAIChatUrlFor({
+    endpoint,
+    deployment,
+    apiVersion,
+  });
+  const body = {
+    messages: [
+      { role: "system", content: system },
+      { role: "user", content: prompt },
+    ],
+    temperature,
+    top_p: topP,
+    response_format: { type: "json_object" },
+    ...(maxTokens ? { max_tokens: maxTokens } : {}),
+  };
+
+  const maxRetries = parseInt(process.env.AZURE_OPENAI_RETRIES || "6", 10);
+  let attempt = 0;
+  while (true) {
+    attempt += 1;
+    const res = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "api-key": AZURE_OPENAI_API_KEY,
+      },
+      body: JSON.stringify(body),
+    });
+    const text = await res.text().catch(() => "");
+    if (res.ok) {
+      const parsed = JSON.parse(text);
+      const content = parsed?.choices?.[0]?.message?.content;
+      if (!content) throw new Error("Azure OpenAI returned no content.");
+      return extractJsonFromText(content);
+    }
+    const retryable = [408, 429, 500, 502, 503, 504];
+    if (retryable.includes(res.status) && attempt <= maxRetries) {
+      const retryAfterHeader = res.headers.get("retry-after");
+      const retryAfterSeconds = retryAfterHeader
+        ? parseInt(retryAfterHeader, 10)
+        : NaN;
+      const retryAfterMsHeader = res.headers.get("x-ms-retry-after-ms");
+      const retryAfterMs = retryAfterMsHeader
+        ? parseInt(retryAfterMsHeader, 10)
+        : NaN;
+
+      const serverDelayMs = Number.isFinite(retryAfterMs)
+        ? Math.max(0, retryAfterMs)
+        : Number.isFinite(retryAfterSeconds)
+          ? Math.max(0, retryAfterSeconds) * 1000
+          : null;
+      const expBackoffMs = Math.min(30000, 2000 * Math.pow(2, attempt - 1));
+      const jitterMs = Math.floor(Math.random() * 400);
+      const delay = Math.max(serverDelayMs || 0, expBackoffMs + jitterMs);
+      console.warn(
+        `[WARN] Azure OpenAI HTTP ${res.status} (attempt ${attempt}/${maxRetries}) retrying in ${delay}ms`,
+      );
+      await sleep(delay);
+      continue;
+    }
+    throw new Error(`Azure OpenAI HTTP ${res.status}: ${text.slice(0, 400)}`);
+  }
+}
+
+async function azureOpenAITranslateJson(prompt) {
+  return await azureOpenAIJson(prompt, {
+    system: "You are a professional translator. Output ONLY a JSON object.",
+    temperature: 0.2,
+    topP: 0.9,
+  });
+}
+
+/**
+ * Resolve an agent name or ID to the internal assistant ID (asst_* format).
+ * If the identifier already looks like an assistant ID, returns it directly.
+ * Otherwise, lists all agents and finds the one matching by name.
+ * @param {import("@azure/ai-projects").AgentsOperations | any} agentsClient
+ * @param {string} agentNameOrId - Agent name or assistant ID
+ * @returns {Promise<string>} The resolved assistant ID (asst_* format)
+ */
+async function resolveAgentId(agentsClient, agentNameOrId) {
+  const debugAgent = !!process.env.DEBUG_AGENT;
+  if (typeof agentNameOrId !== "string" || !agentNameOrId.trim()) {
+    throw new Error("AZURE_AGENT_NAME must be a non-empty string");
+  }
+  const trimmed = agentNameOrId.trim();
+  const [nameCandidate] = trimmed.split(":", 1);
+  // If it already looks like an assistant ID, use it directly
+  if (trimmed.startsWith("asst_") || trimmed.startsWith("asst-")) {
+    if (debugAgent)
+      console.log(`[agent] Using direct assistant ID: ${trimmed}`);
+    return trimmed;
+  }
+
+  // List agents and find by name
+  if (debugAgent)
+    console.log(`[agent] Resolving agent name "${trimmed}" to assistant ID...`);
+  const listFn =
+    typeof agentsClient.list === "function"
+      ? agentsClient.list.bind(agentsClient)
+      : typeof agentsClient.listAgents === "function"
+        ? agentsClient.listAgents.bind(agentsClient)
+        : null;
+  if (!listFn) {
+    throw new Error("Azure agents client does not support list/listAgents");
+  }
+  const agentsIter = listFn();
+  const candidates = [];
+  for await (const agent of agentsIter) {
+    if (debugAgent)
+      console.log(`[agent]   found: id=${agent.id} name=${agent.name}`);
+    const agentName = (agent.name || "").trim();
+    if (
+      agentName === trimmed ||
+      agentName.toLowerCase() === trimmed.toLowerCase() ||
+      agentName === nameCandidate ||
+      agentName.toLowerCase() === nameCandidate.toLowerCase()
+    ) {
+      if (!isLegacyAgentId(agent.id)) {
+        const err = new Error(
+          `Agent "${trimmed}" resolved to non-legacy id "${agent.id}".`,
+        );
+        err.code = "AGENT_NOT_CLASSIC";
+        throw err;
+      }
+      if (debugAgent) {
+        console.log(`[agent] Resolved "${trimmed}" -> ${agent.id}`);
+      }
+      return agent.id;
+    }
+    candidates.push({ id: agent.id, name: agent.name });
+  }
+
+  const available =
+    candidates.map((c) => `"${c.name}" (${c.id})`).join(", ") || "(none)";
+  const err = new Error(
+    `Agent with name "${trimmed}" not found. Available agents: ${available}`,
+  );
+  err.code = "AGENT_NOT_FOUND";
+  throw err;
+}
+
+/**
+ * Call an Azure AI Foundry Agent using the standard thread/run API.
+ * Supports both agent names and legacy assistant IDs (asst_*).
+ * @param {string} prompt - The user prompt
+ * @param {Object} options - Options including agentId (agent name or ID)
+ * @returns {Promise<Object>} Parsed JSON response
+ */
+async function azureAgentJson(prompt, { agentId = AZURE_AGENT_NAME } = {}) {
   if (!AZURE_AGENT_ENDPOINT) throw new Error("Missing AZURE_AGENT_ENDPOINT");
-  if (!agentId) throw new Error("Missing AZURE_AGENT_ID");
+  if (!agentId) throw new Error("Missing AZURE_AGENT_NAME");
 
   const { AIProjectClient } = require("@azure/ai-projects");
   const { DefaultAzureCredential } = require("@azure/identity");
   const credential = new DefaultAzureCredential();
   const client = new AIProjectClient(AZURE_AGENT_ENDPOINT, credential);
   const debugAgent = !!process.env.DEBUG_AGENT;
+  const timeoutMs = parseInt(
+    process.env.AZURE_AGENT_RUN_TIMEOUT_MS || "180000",
+    10,
+  );
 
-  const agentMeta = await client.agents.getAgent(agentId);
+  // Resolve agent name to assistant ID if needed
+  const assistantId = await resolveAgentId(client.agents, agentId);
   if (debugAgent) {
     console.log(
-      `[agent] Using agentId=${agentId} name=${agentMeta.name || ""}`
+      `[agent] Using assistantId=${assistantId} (from input: ${agentId})`,
     );
   }
 
+  // Create thread and send user message
   const thread = await client.agents.threads.create();
   await client.agents.messages.create(thread.id, "user", prompt);
 
-  let run = await client.agents.runs.create(thread.id, agentId);
-  const timeoutMs = parseInt(
-    process.env.AZURE_AGENT_RUN_TIMEOUT_MS || "180000",
-    10
-  );
-  const started = Date.now();
-  while (["queued", "in_progress", "cancelling"].includes(run.status)) {
-    if (Date.now() - started > timeoutMs) {
-      throw new Error(
-        `Azure Agent run timeout after ${timeoutMs} ms (status=${run.status})`
-      );
-    }
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    run = await client.agents.runs.get(thread.id, run.id);
-  }
-  if (run.status === "failed") {
-    throw new Error(
-      "Azure Agent run failed: " +
-        (run.lastError?.message || JSON.stringify(run.lastError))
-    );
+  if (debugAgent) {
+    console.log(`[agent] Created thread ${thread.id}, starting run...`);
   }
 
+  // Create run and poll until complete, enforcing an overall timeout.
+  // The poller's requestOptions.timeout only covers individual HTTP calls,
+  // so we use AbortController to enforce the total wall-clock timeout.
+  const ac = new AbortController();
+  const timer = setTimeout(() => ac.abort(), timeoutMs);
+
+  let run;
+  try {
+    const poller = client.agents.runs.createAndPoll(thread.id, assistantId, {
+      pollingOptions: { intervalInMs: 2000 },
+    });
+    run = await poller.pollUntilDone({ abortSignal: ac.signal });
+  } catch (err) {
+    clearTimeout(timer);
+    if (ac.signal.aborted) {
+      throw new Error(`Azure Agent run timeout after ${timeoutMs} ms`);
+    }
+    throw err;
+  }
+  clearTimeout(timer);
+
+  if (debugAgent) {
+    console.log(`[agent] Run completed with status: ${run.status}`);
+  }
+
+  // Retrieve assistant messages
   const messages = await client.agents.messages.list(thread.id, {
     order: "asc",
   });
@@ -343,13 +1176,216 @@ async function azureAgentJson(prompt, { agentId = AZURE_AGENT_ID } = {}) {
   return extractJsonFromText(lastAssistantText);
 }
 
+/**
+ * Call Azure AI Foundry Agent using the OpenAI Responses API with agent reference.
+ * Uses direct fetch() because the OpenAI SDK's options.body replaces (not merges)
+ * the params body, which would drop the "input" field when injecting "agent".
+ * @param {string} prompt - The user prompt
+ * @param {Object} options - Options including agentName
+ * @returns {Promise<Object>} Parsed JSON response
+ */
+async function azureAgentResponsesApi(
+  prompt,
+  { agentName = AZURE_AGENT_NAME } = {},
+) {
+  if (!AZURE_AGENT_ENDPOINT) throw new Error("Missing AZURE_AGENT_ENDPOINT");
+  if (!agentName) throw new Error("Missing AZURE_AGENT_NAME");
+
+  const { DefaultAzureCredential } = require("@azure/identity");
+  const { AzureOpenAI } = require("openai");
+  const credential = new DefaultAzureCredential();
+  const debugAgent = !!process.env.DEBUG_AGENT;
+
+  const azureADTokenProvider = async () => {
+    const token = await credential.getToken("https://ai.azure.com/.default");
+    if (!token?.token) {
+      throw new Error("Failed to obtain Azure token for ai.azure.com scope");
+    }
+    return token.token;
+  };
+
+  const baseURL = `${AZURE_AGENT_ENDPOINT.replace(/\/+$/, "")}/openai`;
+  const openAIClient = new AzureOpenAI({
+    apiVersion: AZURE_AGENT_RESPONSES_API_VERSION,
+    baseURL,
+    azureADTokenProvider,
+    apiKey: null,
+  });
+  const agentRef = buildAgentReference(agentName);
+
+  if (debugAgent) {
+    console.log(
+      `[agent] Responses API (SDK) using agent=${agentRef.name}${
+        agentRef.version ? `:${agentRef.version}` : ""
+      }`,
+    );
+  }
+
+  let response;
+  let useMaxOutputTokens = AZURE_AGENT_RESPONSES_MAX_OUTPUT_TOKENS > 0;
+  for (let attempt = 0; attempt <= AZURE_AGENT_RESPONSES_RETRIES; attempt++) {
+    const controller = new AbortController();
+    const timeout = setTimeout(
+      () => controller.abort(),
+      AZURE_AGENT_RESPONSES_TIMEOUT_MS,
+    );
+    try {
+      const conversation = await openAIClient.conversations.create(
+        {
+          items: [{ type: "message", role: "user", content: prompt }],
+        },
+        { signal: controller.signal },
+      );
+
+      response = await openAIClient.responses.create(
+        {
+          conversation: conversation.id,
+          agent: agentRef,
+          ...(useMaxOutputTokens
+            ? { max_output_tokens: AZURE_AGENT_RESPONSES_MAX_OUTPUT_TOKENS }
+            : {}),
+        },
+        { signal: controller.signal },
+      );
+
+      if (
+        response.status === "incomplete" &&
+        response.incomplete_details?.reason === "max_output_tokens"
+      ) {
+        if (useMaxOutputTokens && attempt < AZURE_AGENT_RESPONSES_RETRIES) {
+          useMaxOutputTokens = false;
+          if (debugAgent) {
+            console.log(
+              "[agent] Responses API hit max_output_tokens. Retrying once without a cap...",
+            );
+          }
+          await sleep(AZURE_AGENT_RESPONSES_BACKOFF_MS);
+          response = null;
+          continue;
+        }
+        throw new Error(
+          "Responses API returned incomplete output because max_output_tokens was reached. Increase AZURE_AGENT_RESPONSES_MAX_OUTPUT_TOKENS.",
+        );
+      }
+      break;
+    } catch (error) {
+      if (controller.signal.aborted) {
+        if (attempt < AZURE_AGENT_RESPONSES_RETRIES) {
+          if (debugAgent) {
+            console.log(
+              `[agent] Responses API timeout after ${AZURE_AGENT_RESPONSES_TIMEOUT_MS}ms. Retrying...`,
+            );
+          }
+          continue;
+        }
+        throw new Error(
+          `Responses API timeout after ${AZURE_AGENT_RESPONSES_TIMEOUT_MS}ms`,
+        );
+      }
+
+      const status = error?.status || error?.statusCode;
+      if (
+        (status === 408 ||
+          status === 429 ||
+          status === 500 ||
+          status === 502 ||
+          status === 503 ||
+          status === 504) &&
+        attempt < AZURE_AGENT_RESPONSES_RETRIES
+      ) {
+        const baseBackoff = AZURE_AGENT_RESPONSES_BACKOFF_MS * (attempt + 1);
+        const jitter =
+          AZURE_AGENT_RESPONSES_BACKOFF_JITTER_MS > 0
+            ? Math.floor(
+                Math.random() * AZURE_AGENT_RESPONSES_BACKOFF_JITTER_MS,
+              )
+            : 0;
+        const proposed = baseBackoff + jitter;
+        const backoffMs =
+          AZURE_AGENT_RESPONSES_BACKOFF_MAX_MS > 0
+            ? Math.min(proposed, AZURE_AGENT_RESPONSES_BACKOFF_MAX_MS)
+            : proposed;
+        if (debugAgent) {
+          console.log(
+            `[agent] Responses API ${status} received. Retrying in ${backoffMs}ms...`,
+          );
+        }
+        await sleep(backoffMs);
+        continue;
+      }
+      throw error;
+    } finally {
+      clearTimeout(timeout);
+    }
+  }
+
+  if (!response) {
+    throw new Error("Responses API request failed without a response");
+  }
+
+  const outputText = extractResponseText(response);
+  if (!outputText) {
+    if (debugAgent) {
+      console.log(
+        "[agent] Responses API raw response:",
+        JSON.stringify(response, null, 2),
+      );
+    }
+    throw new Error("Responses API returned no output text");
+  }
+
+  return extractJsonFromText(outputText);
+}
+
+async function requestAgentJson(prompt, { agentName = AZURE_AGENT_NAME } = {}) {
+  if (!agentName) throw new Error("Missing AZURE_AGENT_NAME");
+
+  // Legacy assistant IDs (asst_*) always use the classic thread/run API.
+  if (isLegacyAgentId(agentName)) {
+    return await azureAgentJson(prompt, { agentId: agentName });
+  }
+
+  if (AZURE_AGENT_FORCE_RESPONSES) {
+    const result = await azureAgentResponsesApi(prompt, { agentName });
+    if (AZURE_AGENT_RESPONSES_COOLDOWN_MS > 0) {
+      await sleep(AZURE_AGENT_RESPONSES_COOLDOWN_MS);
+    }
+    return result;
+  }
+
+  // New Foundry agents use the Responses API by default.
+  try {
+    const result = await azureAgentResponsesApi(prompt, { agentName });
+    if (AZURE_AGENT_RESPONSES_COOLDOWN_MS > 0) {
+      await sleep(AZURE_AGENT_RESPONSES_COOLDOWN_MS);
+    }
+    return result;
+  } catch (error) {
+    if (AZURE_AGENT_ALLOW_CLASSIC_FALLBACK) {
+      return await azureAgentJson(prompt, { agentId: agentName });
+    }
+    throw error;
+  }
+}
+
 function ensureAzureEnv() {
   const missing = [];
   if (!AZURE_AGENT_ENDPOINT) missing.push("AZURE_AGENT_ENDPOINT");
-  if (!AZURE_AGENT_ID) missing.push("AZURE_AGENT_ID");
+  if (!AZURE_AGENT_NAME) missing.push("AZURE_AGENT_NAME (or AZURE_AGENT_ID)");
   if (missing.length) {
     throw new Error(
-      `Missing required Azure env vars: ${missing.join(", ")}. See README.`
+      `Missing required Azure env vars: ${missing.join(", ")}. See README.`,
+    );
+  }
+}
+
+function ensureOpenAIEnv() {
+  const missing = [];
+  if (!AZURE_OPENAI_ENDPOINT) missing.push("AZURE_OPENAI_ENDPOINT");
+  if (!AZURE_OPENAI_API_KEY) missing.push("AZURE_OPENAI_API_KEY");
+  if (missing.length) {
+    throw new Error(
+      `Missing required Azure OpenAI env vars: ${missing.join(", ")}. See README.`,
     );
   }
 }
@@ -385,7 +1421,7 @@ function validateNewArticle(frData, article) {
   const slugs = new Set(
     (Array.isArray(frData.Articles) ? frData.Articles : [])
       .map((a) => a.slug)
-      .filter(Boolean)
+      .filter(Boolean),
   );
   if (slugs.has(article.slug)) {
     const err = new Error(`Slug déjà existant: ${article.slug}`);
@@ -411,34 +1447,63 @@ function validateNewArticle(frData, article) {
       throw err;
     }
   }
+
+  const minWords = parseInt(process.env.SEO_MIN_WORDS || "0", 10);
+  if (minWords > 0) {
+    const words = countWords(article.content || "");
+    if (words < minWords) {
+      const err = new Error(`Article trop court: ${words} mots (min: ${minWords})`);
+      err.code = "TOO_SHORT";
+      err.words = words;
+      err.minWords = minWords;
+      throw err;
+    }
+  }
+  const maxWords = parseInt(process.env.SEO_MAX_WORDS || "0", 10);
+  if (maxWords > 0) {
+    const words = countWords(article.content || "");
+    if (words > maxWords) {
+      const err = new Error(`Article trop long: ${words} mots (max: ${maxWords})`);
+      err.code = "TOO_LONG";
+      err.words = words;
+      err.maxWords = maxWords;
+      throw err;
+    }
+  }
 }
 
 function enforceTopicRotation(frData, newArticle) {
-  const lastArticle = getLastArticle(frData);
-  if (!lastArticle) return;
-  const previousTopic = detectTopic(lastArticle);
+  const articles = Array.isArray(frData?.Articles) ? frData.Articles : [];
+  if (!articles.length) return;
+
+  // Get last 5 articles sorted by date
+  const sorted = [...articles].sort((a, b) =>
+    (b.date || "").localeCompare(a.date || ""),
+  );
+  const recentArticles = sorted.slice(0, 5);
+
   const nextTopic = detectTopic(newArticle);
-  if (
-    previousTopic &&
-    nextTopic &&
-    previousTopic === nextTopic &&
-    nextTopic !== "general"
-  ) {
-    const err = new Error(
-      `Le dernier article traitait déjà du thème ${describeTopic(nextTopic)}`
-    );
-    err.code = "TOPIC_DUPLICATE";
-    err.topic = nextTopic;
-    err.previousTitle = lastArticle.title;
-    throw err;
+  if (nextTopic === "general") return; // General topics are always allowed
+
+  // Check if this topic appears in any of the last 5 articles
+  for (const article of recentArticles) {
+    const articleTopic = detectTopic(article);
+    if (articleTopic === nextTopic) {
+      const err = new Error(
+        `Le thème "${describeTopic(nextTopic)}" a déjà été traité récemment (article: "${article.title}")`,
+      );
+      err.code = "TOPIC_DUPLICATE";
+      err.topic = nextTopic;
+      err.previousTitle = article.title;
+      throw err;
+    }
   }
 }
 
 function normalizeArticleDates(article) {
   const today = isoDateToday();
-  if (!/^\d{4}-\d{2}-\d{2}$/.test(article.date || "")) {
-    article.date = today;
-  }
+  // Always set publication date to "today" for newly generated content.
+  article.date = today;
 }
 
 function buildRetryPrompt(basePrompt, error, frData) {
@@ -457,7 +1522,19 @@ function buildRetryPrompt(basePrompt, error, frData) {
       `⚠️ Le dernier article (${
         error.previousTitle
       }) couvrait déjà ${describeTopic(error.topic)}.\n` +
-      "Choisis un autre axe stratégique (Private AI, Microsoft 365, Productivity, etc.).";
+      "Choisis un autre axe stratégique (ia privée, microsoft 365 add-ins, productivité/automatisation, architecture/rag, gouvernance/roi, etc.).";
+  } else if (error.code === "TOO_SHORT") {
+    hint = [
+      `⚠️ L'article est trop court (${error.words || "?"} mots).`,
+      `Vise une longueur nette de ${error.minWords || "800"}+ mots (objectif +25%).`,
+      "OBLIGATOIRE: ajoute 10+ sections H2, plusieurs H3, 2 checklists, 2 tableaux, 1 cas pratique chiffré (CHF), 1 section étape-par-étape et une FAQ de 6 questions.",
+    ].join(" ");
+  } else if (error.code === "TOO_LONG") {
+    hint = [
+      `⚠️ L'article est trop long (${error.words || "?"} mots).`,
+      `Réduis à ${error.maxWords || "3000"} mots max sans perdre en utilité.`,
+      "Supprime les répétitions, garde les tableaux/checklists/cas pratique et condense les sections redondantes.",
+    ].join(" ");
   } else if (error.code === "MISSING_FIELD" && error.field) {
     hint = `⚠️ Le champ ${error.field} est manquant. Fournis un article complet avec ce champ rempli.`;
   }
@@ -467,7 +1544,7 @@ function buildRetryPrompt(basePrompt, error, frData) {
 
 async function httpOk(
   url,
-  timeoutMs = parseInt(process.env.LINK_CHECK_TIMEOUT_MS || "10000", 10)
+  timeoutMs = parseInt(process.env.LINK_CHECK_TIMEOUT_MS || "10000", 10),
 ) {
   if (OFFLINE_MODE) return true;
   try {
@@ -495,98 +1572,299 @@ async function httpOk(
   }
 }
 
-async function unreachableReferences(refs) {
-  if (OFFLINE_MODE) return [];
-  const bad = [];
-  for (const ref of refs) {
-    if (!ref || !ref.url) continue;
-    const ok = await httpOk(ref.url);
-    if (!ok) {
-      bad.push(ref);
-    }
+/**
+ * Validate and repair article references using the referenceValidator module.
+ * Replaces invalid references with verified fallbacks if needed.
+ * @param {Object} article - Article with references array
+ * @param {string} category - Topic category for fallback selection
+ */
+async function repairReferences(article, category = "general") {
+  if (OFFLINE_MODE) {
+    console.log("[refs] Offline mode: skipping reference validation");
+    return;
   }
-  return bad;
-}
 
-async function repairReferences(article) {
-  if (OFFLINE_MODE) return;
-  let bad = await unreachableReferences(article.references);
+  const validateOpts = {
+    timeout: parseInt(process.env.LINK_CHECK_TIMEOUT_MS || "10000", 10),
+    minBytes: parseInt(process.env.LINK_CHECK_MIN_BYTES || "600", 10),
+  };
+
+  const minCount = Math.max(2, REFERENCE_MIN_COUNT || 3);
+  const maxCount = Math.max(minCount, REFERENCE_MAX_COUNT || 6);
+  const minTrusted = Math.max(0, REFERENCE_MIN_TRUSTED_DOMAINS || 0);
+  const trustedCount = (refs) =>
+    (Array.isArray(refs) ? refs : []).filter((r) =>
+      r?.url ? isTrustedDomain(r.url) : false,
+    ).length;
+
+  console.log(
+    `[refs] Validating ${article.references?.length || 0} references...`,
+  );
+
+  // First, deduplicate by domain
+  const dedupedRefs = deduplicateByDomain(article.references || []);
+  if (dedupedRefs.length < (article.references || []).length) {
+    console.log(
+      `[refs] Removed ${(article.references || []).length - dedupedRefs.length} duplicate domain references`,
+    );
+    article.references = dedupedRefs;
+  }
+
+  // Validate all references
+  const validationResult = await validateReferences(article.references, validateOpts);
+
+  console.log(
+    `[refs] Validation results: ${validationResult.stats.valid} valid, ${validationResult.stats.invalid} invalid`,
+  );
+
+  // Log rejected references
+  for (const ref of validationResult.invalid) {
+    const reason = ref._validation?.reason || "unknown";
+    const error = ref._validation?.error || "";
+    console.warn(`[refs] Rejected: ${ref.url} (${reason}: ${error})`);
+  }
+
+  // Keep only valid references (may be empty). This ensures invalid references
+  // don't block regeneration/fallback logic.
+  article.references = validationResult.valid.map((ref) => {
+    const { _validation, ...cleanRef } = ref;
+    return cleanRef;
+  });
+
+  // If we don't have enough valid references, try to regenerate
   const maxRetries = parseInt(process.env.AI_REF_RETRIES || "2", 10);
   let attempt = 0;
 
-  while (bad.length && attempt < maxRetries) {
+  while (
+    (article.references.length < minCount || trustedCount(article.references) < minTrusted) &&
+    attempt < maxRetries
+  ) {
     attempt++;
     console.warn(
-      `Références inaccessibles détectées (${bad
-        .map((r) => r.url)
-        .join(", ")}). Tentative de régénération ${attempt}/${maxRetries}...`
+      `[refs] Need more references (have ${article.references.length}/${minCount}, trusted ${trustedCount(article.references)}/${minTrusted}). Regeneration attempt ${attempt}/${maxRetries}...`,
     );
+
     const regenPrompt = [
-      "Certaines références générées sont inaccessibles.",
+      "Certaines références générées sont inaccessibles ou invalides.",
       'Fournis UNIQUEMENT un JSON de la forme {"references": [ {"labelKey": "...", "url": "https://..."}, ... ]}.',
-      "URLs acceptables: sources officielles (microsoft.com, openai.com, admin.ch, etc.).",
+      "URLs acceptables: sources officielles (admin.ch, ge.ch, vd.ch, fedlex.admin.ch, bsv.admin.ch, estv.admin.ch, seco.admin.ch, finma.ch, etc.), institutions (chambres de commerce, caisses de pension), associations professionnelles, médias économiques (si accessible sans paywall).",
+      `Contraintes: au moins ${minCount} références, dont au moins ${minTrusted} source(s) officielle(s).`,
       "Chaque domaine ne doit être représenté qu'une seule fois dans les références (pas de doublons de domaine).",
       `Thème de l'article: ${article.title} (slug: ${article.slug}).`,
-      "URLs à éviter absolument:",
-      ...bad.map((ref) => `- ${ref.url}`),
+      "Fournis au moins 5 références pour maximiser les chances après déduplication/validation.",
     ].join("\n");
 
     let regen;
     try {
-      regen =
-        MOCK_DATA?.regenReferences?.[attempt - 1] ||
-        (await azureAgentJson(regenPrompt, { agentId: AZURE_AGENT_ID }));
+      if (MOCK_DATA?.regenReferences?.[attempt - 1]) {
+        regen = MOCK_DATA.regenReferences[attempt - 1];
+      } else {
+        regen = await requestAgentJson(regenPrompt, {
+          agentName: AZURE_AGENT_NAME,
+        });
+      }
     } catch (error) {
-      console.warn(`Échec régénération références: ${error.message}`);
+      console.warn(`[refs] Regeneration failed: ${error.message}`);
       break;
     }
 
     if (regen && Array.isArray(regen.references) && regen.references.length) {
-      article.references = regen.references;
-      bad = await unreachableReferences(article.references);
+      // Validate the new references
+      const newValidation = await validateReferences(regen.references, validateOpts);
+      if (newValidation.valid.length > 0) {
+        // Merge with existing valid references
+        const existingUrls = new Set(article.references.map((r) => r.url));
+        for (const ref of newValidation.valid) {
+          if (!existingUrls.has(ref.url) && article.references.length < maxCount) {
+            const { _validation, ...cleanRef } = ref;
+            article.references.push(cleanRef);
+          }
+        }
+      }
     } else {
-      console.warn("La régénération n'a pas retourné de références valides.");
+      console.warn("[refs] Regeneration returned no valid references.");
       break;
     }
   }
 
-  if (bad.length) {
-    if (process.env.FAIL_ON_BAD_REFERENCE) {
-      throw new Error(
-        `Références inaccessibles: ${bad.map((r) => r.url).join(", ")}`
-      );
-    }
+  // If still not enough references, use verified fallbacks
+  if (article.references.length < minCount || trustedCount(article.references) < minTrusted) {
     console.warn(
-      `Suppression des références inaccessibles: ${bad
-        .map((r) => r.url)
-        .join(", ")}`
+      `[refs] Using verified fallback references for category: ${category}`,
     );
-    const badSet = new Set(bad.map((r) => r.url));
-    article.references = article.references.filter(
-      (ref) => !badSet.has(ref.url)
+    const fallbacks = getFallbackReferences(category);
+    const existingUrls = new Set(article.references.map((r) => r.url));
+
+    for (const fallback of fallbacks) {
+      if (!existingUrls.has(fallback.url) && article.references.length < maxCount) {
+        article.references.push({ ...fallback });
+        existingUrls.add(fallback.url);
+      }
+    }
+  }
+
+  // Final deduplication
+  article.references = deduplicateByDomain(article.references);
+
+  // Final validation pass (especially important when fallbacks were used)
+  const finalValidation = await validateReferences(article.references, validateOpts);
+  if (finalValidation.invalid.length) {
+    for (const ref of finalValidation.invalid) {
+      const reason = ref._validation?.reason || "unknown";
+      const error = ref._validation?.error || "";
+      console.warn(`[refs] Final rejected: ${ref.url} (${reason}: ${error})`);
+    }
+  }
+  article.references = finalValidation.valid.map((ref) => {
+    const { _validation, ...cleanRef } = ref;
+    return cleanRef;
+  });
+
+  // If strict validation removed too many refs, try to top-up with validated fallbacks.
+  if (article.references.length < minCount || trustedCount(article.references) < minTrusted) {
+    const fallbacks = getFallbackReferences(category);
+    const existingUrls = new Set(article.references.map((r) => r.url));
+    const candidates = fallbacks.filter((r) => r && r.url && !existingUrls.has(r.url));
+    const fallbackValidation = await validateReferences(candidates, validateOpts);
+    for (const ref of fallbackValidation.valid) {
+      if (article.references.length >= maxCount) break;
+      const { _validation, ...cleanRef } = ref;
+      article.references.push(cleanRef);
+    }
+    article.references = deduplicateByDomain(article.references);
+  }
+
+  console.log(
+    `[refs] Final reference count: ${article.references.length} (trusted: ${trustedCount(article.references)})`,
+  );
+
+  const enforceMinimums =
+    process.env.REFERENCE_ENFORCE_MINIMUMS === "1" || process.env.CI === "true";
+  if (
+    enforceMinimums &&
+    (article.references.length < minCount ||
+      trustedCount(article.references) < minTrusted)
+  ) {
+    throw new Error(
+      `[refs] Minimum references not met after repair: have ${article.references.length}/${minCount}, trusted ${trustedCount(article.references)}/${minTrusted}`,
     );
   }
 }
 
-async function generateArticleWithRetries(frData, attempts) {
-  const basePrompt = buildSystemPrompt(frData);
+function sanitizeContentExternalLinks(article) {
+  if (!article || typeof article !== "object") return;
+  if (typeof article.content !== "string" || !article.content) return;
+  const allowed = new Set(
+    (Array.isArray(article.references) ? article.references : [])
+      .map((r) => r && typeof r.url === "string" ? r.url : "")
+      .filter(Boolean),
+  );
+
+  // Remove markdown links that aren't in the validated references list.
+  // Keep the link text to preserve readability.
+  let content = article.content.replace(
+    /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g,
+    (match, text, url) => (allowed.has(url) ? match : text),
+  );
+
+  // Remove bare URLs that aren't validated references.
+  content = content.replace(/https?:\/\/[^\s)]+/g, (url) =>
+    allowed.has(url) ? url : "",
+  );
+
+  // Collapse accidental double spaces introduced by removals.
+  content = content.replace(/[ \t]{2,}/g, " ");
+
+  article.content = content;
+}
+
+function syncContentReferencesSection(article) {
+  if (!article || typeof article !== "object") return;
+  if (typeof article.content !== "string" || !article.content) return;
+  if (!Array.isArray(article.references) || article.references.length === 0) {
+    return;
+  }
+
+  const refs = article.references
+    .filter((r) => r && typeof r.url === "string" && typeof r.labelKey === "string")
+    .map((r) => ({ labelKey: r.labelKey.trim(), url: r.url.trim() }))
+    .filter((r) => r.labelKey && r.url);
+
+  if (refs.length === 0) return;
+
+  let content = article.content;
+  // Match headings like:
+  // - "### Références"
+  // - "### **Références**"
+  // - "## References utiles"
+  const headingRe =
+    /^#{2,3}\s*(?:\*\*)?(références?|references?)(?:\*\*)?(?:\s+.*)?$/gim;
+  const indices = [];
+  for (const m of content.matchAll(headingRe)) {
+    if (typeof m.index === "number") indices.push(m.index);
+  }
+  if (indices.length) {
+    // Remove any agent-generated references sections and replace with
+    // a deterministic one derived from validated `article.references`.
+    content = content.slice(0, indices[0]).trimEnd();
+  } else {
+    content = content.trimEnd();
+  }
+
+  const list = refs.map((r) => `- [${r.labelKey}](${r.url})`).join("\n");
+  article.content = `${content}\n\n---\n### Références\n${list}\n`;
+}
+
+function countWords(text) {
+  if (typeof text !== "string") return 0;
+  const trimmed = text.trim();
+  if (!trimmed) return 0;
+  return trimmed.split(/\s+/).filter(Boolean).length;
+}
+
+function logArticleMetrics(article, label = "article") {
+  if (!article) return;
+  const words = countWords(article.content || "");
+  const chars = typeof article.content === "string" ? article.content.length : 0;
+  const refCount = Array.isArray(article.references) ? article.references.length : 0;
+  console.log(`[seo] ${label} word count: ${words} (chars: ${chars})`);
+  console.log(`[refs] ${label} references: ${refCount}`);
+  if (refCount) {
+    for (const ref of article.references) {
+      if (ref?.url) console.log(`[refs]   - ${ref.url}`);
+    }
+  }
+}
+
+async function generateArticleWithRetries(frData, attempts, trendData = null) {
+  const basePrompt = buildSystemPrompt(frData, trendData);
   let prompt = basePrompt;
   let lastError = null;
 
   for (let attempt = 1; attempt <= attempts; attempt++) {
     console.log(
-      `Requesting Azure Agent for new FR article... (attempt ${attempt}/${attempts})`
+      `Requesting Azure Agent for new FR article... (attempt ${attempt}/${attempts})`,
     );
-    const draft =
-      MOCK_DATA?.draft ||
-      (await azureAgentJson(prompt, { agentId: AZURE_AGENT_ID }));
+
+    let draft;
+    if (MOCK_DATA?.draft) {
+      draft = MOCK_DATA.draft;
+    } else {
+      draft = await requestAgentJson(prompt, { agentName: AZURE_AGENT_NAME });
+    }
+
     try {
       const newArticle = draft.newArticle;
       const newLabels = draft.newLabels || {};
+      if (newArticle && typeof newArticle === "object") {
+        newArticle.author = AUTHOR_NAME;
+        normalizeBrandCaseInArticle(newArticle);
+        assertNoForbiddenTermsInArticle(newArticle, "fr");
+      }
       validateNewArticle(frData, newArticle);
       enforceTopicRotation(frData, newArticle);
       normalizeArticleDates(newArticle);
-      return { newArticle, newLabels };
+      return { newArticle, newLabels, trendData };
     } catch (error) {
       lastError = error;
       console.warn(`Draft invalid: ${error.message}`);
@@ -600,12 +1878,194 @@ async function generateArticleWithRetries(frData, attempts) {
   );
 }
 
+function validateResearchPayload(frData, payload) {
+  const research = payload?.research;
+  if (!research || typeof research !== "object") {
+    const err = new Error("Réponse agent invalide: research manquant");
+    err.code = "MISSING_RESEARCH";
+    throw err;
+  }
+  const required = [
+    "slug",
+    "title",
+    "description",
+    "category",
+    "primaryKeyword",
+    "outline",
+    "references",
+  ];
+  for (const key of required) {
+    if (
+      !research[key] ||
+      (Array.isArray(research[key]) && research[key].length === 0)
+    ) {
+      const err = new Error(`Champ research manquant ou vide: ${key}`);
+      err.code = "MISSING_FIELD";
+      err.field = key;
+      throw err;
+    }
+  }
+  if (!Array.isArray(research.outline)) {
+    const err = new Error("research.outline doit être un tableau");
+    err.code = "BAD_RESEARCH";
+    throw err;
+  }
+  if (!Array.isArray(research.references) || research.references.length === 0) {
+    const err = new Error("research.references doit être un tableau non vide");
+    err.code = "BAD_RESEARCH";
+    throw err;
+  }
+  for (const ref of research.references) {
+    if (
+      !ref ||
+      typeof ref !== "object" ||
+      typeof ref.labelKey !== "string" ||
+      typeof ref.url !== "string"
+    ) {
+      const err = new Error("Référence mal formée dans research.references");
+      err.code = "BAD_REFERENCE";
+      throw err;
+    }
+  }
+
+  const slugs = new Set(
+    (Array.isArray(frData.Articles) ? frData.Articles : [])
+      .map((a) => a.slug)
+      .filter(Boolean),
+  );
+  if (slugs.has(research.slug)) {
+    const err = new Error(`Slug déjà existant: ${research.slug}`);
+    err.code = "DUPLICATE_SLUG";
+    err.slug = research.slug;
+    throw err;
+  }
+
+  return research;
+}
+
+async function generateResearchWithRetries(frData, attempts, trendData, seoSuggestions) {
+  const basePrompt = buildResearchPrompt(frData, trendData, seoSuggestions);
+  let prompt = basePrompt;
+  let lastError = null;
+
+  for (let attempt = 1; attempt <= attempts; attempt++) {
+    console.log(
+      `Requesting Azure Agent for topic+references research... (attempt ${attempt}/${attempts})`,
+    );
+    try {
+      const payload = await requestAgentJson(prompt, {
+        agentName: AZURE_AGENT_RESEARCH_NAME,
+      });
+      const research = validateResearchPayload(frData, payload);
+      return { research, trendData };
+    } catch (error) {
+      lastError = error;
+      console.warn(`Research invalid: ${error.message}`);
+      prompt = `${basePrompt}\n\n⚠️ Correction requise: ${error.message}. Retourne STRICTEMENT le JSON demandé.`;
+    }
+  }
+
+  throw (
+    lastError ||
+    new Error("Échec génération research après plusieurs tentatives")
+  );
+}
+
+async function draftArticleFromResearch(frData, research, validatedReferences) {
+  const maxRetries = parseInt(process.env.AI_DRAFT_RETRIES || "2", 10);
+  let lastError = null;
+  const basePrompt = buildDraftPromptFromResearch(research, validatedReferences);
+  let draftArticle = null;
+  let accumulatedLabels = {};
+  for (let attempt = 1; attempt <= maxRetries + 1; attempt++) {
+    console.log(
+      `Requesting Azure OpenAI draft... (attempt ${attempt}/${maxRetries + 1})`,
+    );
+    try {
+      const prompt =
+        draftArticle && lastError && lastError.code === "TOO_SHORT"
+          ? buildDraftRepairPromptFromExistingArticle(draftArticle, {
+              mode: "expand",
+              minWords: lastError.minWords,
+              maxWords: process.env.SEO_MAX_WORDS || "3000",
+            })
+          : draftArticle && lastError && lastError.code === "TOO_LONG"
+            ? buildDraftRepairPromptFromExistingArticle(draftArticle, {
+                mode: "condense",
+                minWords: process.env.SEO_MIN_WORDS || "1500",
+                maxWords: lastError.maxWords,
+              })
+            : basePrompt;
+
+      const payload = await azureOpenAIJson(prompt, {
+        endpoint: AZURE_OPENAI_DRAFT_ENDPOINT,
+        deployment: AZURE_OPENAI_DRAFT_DEPLOYMENT,
+        apiVersion: AZURE_OPENAI_DRAFT_API_VERSION,
+        temperature:
+          draftArticle && lastError && (lastError.code === "TOO_SHORT" || lastError.code === "TOO_LONG")
+            ? 0.2
+            : 0.3,
+        topP: 0.9,
+        maxTokens: AZURE_OPENAI_DRAFT_MAX_TOKENS,
+        system: "You are an expert French SEO writer. Output ONLY a JSON object.",
+      });
+
+      const newArticle = payload?.newArticle;
+      const newLabels = payload?.newLabels || {};
+      if (!newArticle || typeof newArticle !== "object") {
+        throw new Error("Draft payload missing newArticle");
+      }
+
+      accumulatedLabels = { ...accumulatedLabels, ...newLabels };
+      draftArticle = newArticle;
+
+      // Lock references to the already validated list.
+      draftArticle.references = validatedReferences;
+      // Normalize expected author for this repo.
+      draftArticle.author = AUTHOR_NAME;
+      normalizeBrandCaseInArticle(draftArticle);
+      assertNoForbiddenTermsInArticle(draftArticle, "fr");
+      validateNewArticle(frData, draftArticle);
+      enforceTopicRotation(frData, draftArticle);
+      normalizeArticleDates(draftArticle);
+      return { newArticle: draftArticle, newLabels: accumulatedLabels };
+    } catch (error) {
+      lastError = error;
+      console.warn(`Draft invalid: ${error.message}`);
+    }
+  }
+
+  throw lastError || new Error("Échec génération draft Azure OpenAI");
+}
+
 function mergeLabels(target, labels) {
   if (!labels || typeof labels !== "object") return;
   for (const [key, value] of Object.entries(labels)) {
     if (value && typeof value === "string" && !(key in target)) {
       target[key] = value;
     }
+  }
+}
+
+function assertTranslationPayload(translations, locales) {
+  if (!translations || typeof translations !== "object") {
+    throw new Error(
+      `Translation payload missing or invalid. Received: ${typeof translations}`,
+    );
+  }
+  const missing = [];
+  for (const locale of locales) {
+    const payload = translations[locale];
+    if (!payload || !payload.Article) {
+      missing.push(`${locale}.Article`);
+      continue;
+    }
+    if (!payload.Article.title) missing.push(`${locale}.title`);
+    if (!payload.Article.description) missing.push(`${locale}.description`);
+    if (!payload.Article.content) missing.push(`${locale}.content`);
+  }
+  if (missing.length) {
+    throw new Error(`Translation payload incomplete: ${missing.join(", ")}`);
   }
 }
 
@@ -618,13 +2078,95 @@ async function main() {
   }
 
   const frData = loadJSON(FR_PATH);
-  const { newArticle, newLabels } = await generateArticleWithRetries(
-    frData,
-    parseInt(process.env.AI_ARTICLE_RETRIES || "3", 10)
-  );
 
-  await repairReferences(newArticle);
+  // Get existing slugs and topic analysis for trend selection
+  const existingSlugs = (Array.isArray(frData.Articles) ? frData.Articles : [])
+    .map((a) => a.slug)
+    .filter(Boolean);
+  const topicAnalysis = analyzeRecentTopics(frData, 15);
+
+  // Fetch trend-based topic suggestions
+  console.log("\n📊 Fetching trend signals for topic selection...");
+  const trendData = await getTopicSuggestions({
+    existingSlugs,
+    avoidTopics: topicAnalysis.avoidTopics,
+    recentTopicCategories: topicAnalysis.lastFiveTopics,
+    topicCounts: topicAnalysis.topicCounts,
+  });
+
+  // Log trend information (keywords only, not sensitive)
+  if (trendData.selectedTopic) {
+    console.log(`[trends] Provider: ${trendData.provider}`);
+    console.log(`[trends] Trends checked: ${trendData.trendsChecked}`);
+    console.log(`[trends] Used fallback: ${trendData.usedFallback}`);
+    console.log(
+      `[trends] Selected topic: "${trendData.selectedTopic.suggestedTopic}"`,
+    );
+    console.log(
+      `[trends] Target keywords: ${trendData.selectedTopic.keywords?.join(", ")}`,
+    );
+    if (trendData.error) {
+      console.warn(`[trends] API warning: ${trendData.error}`);
+    }
+  }
+
+  // Build SEO suggestions
+  const seoSuggestions = buildSEOSuggestions(trendData.selectedTopic);
+  if (seoSuggestions) {
+    console.log(`[seo] Primary keyword: "${seoSuggestions.primaryKeyword}"`);
+    console.log(`[seo] Category: ${seoSuggestions.category}`);
+  }
+
+  let newArticle;
+  let newLabels;
+
+  if (AI_TWO_STEP) {
+    if (!MOCK_DATA) {
+      ensureOpenAIEnv();
+    }
+    const { research } = await generateResearchWithRetries(
+      frData,
+      parseInt(process.env.AI_RESEARCH_RETRIES || "2", 10),
+      trendData,
+      seoSuggestions,
+    );
+
+    const refCarrier = {
+      title: research.title,
+      slug: research.slug,
+      content: "",
+      references: Array.isArray(research.references) ? research.references : [],
+    };
+    await repairReferences(refCarrier, research.category || "general");
+    const validatedReferences = Array.isArray(refCarrier.references)
+      ? refCarrier.references
+      : [];
+
+    const drafted = await draftArticleFromResearch(
+      frData,
+      research,
+      validatedReferences,
+    );
+    newArticle = drafted.newArticle;
+    newLabels = drafted.newLabels || {};
+  } else {
+    const drafted = await generateArticleWithRetries(
+      frData,
+      parseInt(process.env.AI_ARTICLE_RETRIES || "3", 10),
+      trendData,
+    );
+    newArticle = drafted.newArticle;
+    newLabels = drafted.newLabels || {};
+  }
+
+  // Detect the article category for reference fallback
+  const articleCategory =
+    seoSuggestions?.category || detectTopic(newArticle) || "general";
+  await repairReferences(newArticle, articleCategory);
+  syncContentReferencesSection(newArticle);
+  sanitizeContentExternalLinks(newArticle);
   normalizeArticleDates(newArticle);
+  logArticleMetrics(newArticle, "FR");
 
   if (DRY || !APPLY) {
     console.log("[dry-run] Would append article to FR:", {
@@ -642,12 +2184,19 @@ async function main() {
     console.log("FR updated with 1 Article.");
   }
 
-  console.log("Requesting Azure Agent for translations (EN/DE/ES/PT)...");
-  const translations =
-    MOCK_DATA?.translations ||
-    (await azureAgentJson(buildTranslatePrompt(newArticle, newLabels), {
-      agentId: AZURE_TRANSLATE_AGENT_ID,
-    }));
+  console.log("Requesting Azure OpenAI translations (EN/DE/ES/PT)...");
+  let translations;
+  if (MOCK_DATA?.translations) {
+    translations = MOCK_DATA.translations;
+  } else {
+    ensureOpenAIEnv();
+    translations = await azureOpenAITranslateJson(
+      buildTranslatePrompt(newArticle, newLabels),
+    );
+  }
+  if (REQUIRE_TRANSLATIONS) {
+    assertTranslationPayload(translations, LOCALES);
+  }
 
   for (const locale of LOCALES) {
     const targetPath = path.join(TRANSLATIONS_DIR, locale, "ressources.json");
@@ -661,22 +2210,35 @@ async function main() {
 
     const payload = translations[locale];
     if (!payload || !payload.Article) {
-      console.warn(
-        `[WARN] Missing translation payload for ${locale}; skipping.`
-      );
+      const message = `[WARN] Missing translation payload for ${locale}; skipping.`;
+      if (REQUIRE_TRANSLATIONS) {
+        throw new Error(message);
+      }
+      console.warn(message);
       continue;
     }
     const articleTr = payload.Article;
     const labelsTr = payload.labels || {};
     const localizedArticle = {
       slug: newArticle.slug,
-      title: articleTr.title || newArticle.title,
-      description: articleTr.description || newArticle.description,
-      content: articleTr.content || newArticle.content,
+      title: articleTr.title,
+      description: articleTr.description,
+      content: articleTr.content,
       author: newArticle.author,
       date: newArticle.date,
       references: newArticle.references,
     };
+    normalizeBrandCaseInArticle(localizedArticle);
+    assertNoForbiddenTermsInArticle(localizedArticle, locale);
+
+    if (
+      REQUIRE_TRANSLATIONS &&
+      isDuplicateTranslation(localizedArticle, newArticle)
+    ) {
+      throw new Error(
+        `[ERROR] ${locale} translation matches FR content for ${newArticle.slug}.`,
+      );
+    }
 
     if (
       hasUnnecessaryCaps(localizedArticle.title) ||
@@ -699,6 +2261,26 @@ async function main() {
     mergeLabels(data, labelsTr);
     saveJSON(targetPath, data);
     console.log(`${locale} updated.`);
+  }
+
+  if (TRANSLATE_EXISTING && APPLY && !DRY) {
+    const spawnSync = require("child_process").spawnSync;
+    console.log("Regenerating translations for existing articles...");
+    const result = spawnSync(
+      "node",
+      // Translate only missing/untranslated items. Forcing full retranslation
+      // every run is expensive and increases 429/timeout risk in CI.
+      ["scripts/translate-articles.js", "--apply"],
+      {
+        stdio: "inherit",
+        env: process.env,
+      },
+    );
+    if (result.status !== 0) {
+      throw new Error(
+        `translate-articles.js failed with exit code ${result.status}`,
+      );
+    }
   }
 
   console.log("Done.");

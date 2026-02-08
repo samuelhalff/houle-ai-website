@@ -36,18 +36,104 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Run AI update (FR + translations via Azure Agent)
+      - name: Preflight - Validate required environment variables
         env:
           AZURE_AGENT_ENDPOINT: ${{ secrets.AZURE_AGENT_ENDPOINT }}
-          AZURE_AGENT_ID: ${{ secrets.AZURE_AGENT_ID }}
+          AZURE_AGENT_NAME: ${{ secrets.AZURE_AGENT_NAME }}
+          AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT }}
+          AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
+          AZURE_OPENAI_API_VERSION: ${{ secrets.AZURE_OPENAI_API_VERSION }}
           AZURE_TENANT_ID: ${{ fromJson(secrets.AZURE_CREDENTIALS).tenantId }}
           AZURE_CLIENT_ID: ${{ fromJson(secrets.AZURE_CREDENTIALS).clientId }}
           AZURE_CLIENT_SECRET: ${{ fromJson(secrets.AZURE_CREDENTIALS).clientSecret }}
-          # Optional: a distinct agent for translation
-          AZURE_TRANSLATE_AGENT_ID: ${{ secrets.AZURE_TRANSLATE_AGENT_ID }}
+        run: |
+          echo "🔍 Validating required environment variables..."
+
+          if [ -n "$AZURE_AGENT_ENDPOINT" ]; then
+            echo "✅ AZURE_AGENT_ENDPOINT: set (length: ${#AZURE_AGENT_ENDPOINT})"
+          else
+            echo "❌ AZURE_AGENT_ENDPOINT: missing"
+            exit 1
+          fi
+
+          if [ -n "$AZURE_AGENT_NAME" ]; then
+            echo "✅ AZURE_AGENT_NAME: set (length: ${#AZURE_AGENT_NAME})"
+          else
+            echo "❌ AZURE_AGENT_NAME: missing"
+            exit 1
+          fi
+
+          if [ -n "$AZURE_OPENAI_ENDPOINT" ]; then
+            echo "✅ AZURE_OPENAI_ENDPOINT: set (length: ${#AZURE_OPENAI_ENDPOINT})"
+          else
+            echo "❌ AZURE_OPENAI_ENDPOINT: missing"
+            exit 1
+          fi
+
+          if [ -n "$AZURE_OPENAI_API_KEY" ]; then
+            echo "✅ AZURE_OPENAI_API_KEY: set (length: ${#AZURE_OPENAI_API_KEY})"
+          else
+            echo "❌ AZURE_OPENAI_API_KEY: missing"
+            exit 1
+          fi
+
+          if [ -n "$AZURE_OPENAI_API_VERSION" ]; then
+            echo "✅ AZURE_OPENAI_API_VERSION: set (length: ${#AZURE_OPENAI_API_VERSION})"
+          else
+            echo "❌ AZURE_OPENAI_API_VERSION: missing"
+            exit 1
+          fi
+
+          if [ -n "$AZURE_TENANT_ID" ]; then
+            echo "✅ AZURE_TENANT_ID: set (length: ${#AZURE_TENANT_ID})"
+          else
+            echo "❌ AZURE_TENANT_ID: missing"
+            exit 1
+          fi
+
+          if [ -n "$AZURE_CLIENT_ID" ]; then
+            echo "✅ AZURE_CLIENT_ID: set (length: ${#AZURE_CLIENT_ID})"
+          else
+            echo "❌ AZURE_CLIENT_ID: missing"
+            exit 1
+          fi
+
+          if [ -n "$AZURE_CLIENT_SECRET" ]; then
+            echo "✅ AZURE_CLIENT_SECRET: set (length: ${#AZURE_CLIENT_SECRET})"
+          else
+            echo "❌ AZURE_CLIENT_SECRET: missing"
+            exit 1
+          fi
+
+          echo "✅ All required environment variables validated"
+
+      - name: Run AI update (FR + translations via Azure OpenAI)
+        env:
+          AZURE_AGENT_ENDPOINT: ${{ secrets.AZURE_AGENT_ENDPOINT }}
+          AZURE_AGENT_NAME: ${{ secrets.AZURE_AGENT_NAME }}
+          AZURE_AGENT_FORCE_RESPONSES: "1"
+          AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT }}
+          AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
+          AZURE_OPENAI_API_VERSION: ${{ secrets.AZURE_OPENAI_API_VERSION }}
+          # Translations model (non-agent)
+          AZURE_OPENAI_DEPLOYMENT: "gpt-4.1"
+          # Draft model (long-form)
+          AZURE_OPENAI_DRAFT_DEPLOYMENT: "gpt-4o"
+          AZURE_OPENAI_DRAFT_MAX_TOKENS: "8192"
+          AZURE_TENANT_ID: ${{ fromJson(secrets.AZURE_CREDENTIALS).tenantId }}
+          AZURE_CLIENT_ID: ${{ fromJson(secrets.AZURE_CREDENTIALS).clientId }}
+          AZURE_CLIENT_SECRET: ${{ fromJson(secrets.AZURE_CREDENTIALS).clientSecret }}
           # Adjust if longer draft generations are needed
           AZURE_AGENT_RUN_TIMEOUT_MS: 180000
           REQUIRE_TRANSLATIONS: "1"
+          AI_TWO_STEP: "1"
+          SEO_MIN_WORDS: "1500"
+          SEO_MAX_WORDS: "3000"
+          # Reference quality guardrails
+          REFERENCE_REQUIRE_TRUSTED_DOMAINS: "0"
+          REFERENCE_MIN_TRUSTED_DOMAINS: "1"
+          REFERENCE_MIN_COUNT: "4"
+          REFERENCE_MAX_COUNT: "6"
         run: |
           node scripts/ai-ressources-update.js --apply
 
@@ -74,7 +160,7 @@ jobs:
           echo "✅ Verification complete. Proceeding with deployment..."
 
       - name: Validate article references (fail on 404/410)
-        run: npm run validate:article-refs  -- --no-fail
+        run: npm run validate:article-refs
 
       - name: Commit and push changes
         run: |
@@ -93,14 +179,6 @@ jobs:
       - name: Ping sitemaps
         run: |
           node scripts/ping-sitemaps.js --url https://houle.ai --path /sitemap.xml
-
-      - name: Final verification (informational only)
-        continue-on-error: true
-        run: |
-          echo "✅ Running final verification..."
-          node scripts/check-ressources-links.js --all-locales || echo "::warning::Some references missing after cleanup"
-          node scripts/check-ressources-links.js --all-locales --remote || echo "::warning::Some URLs still unreachable after cleanup"
-          echo "✅ Verification complete. Proceeding with deployment..."
 
       # Note: No need to trigger deployment explicitly
       # The push above will automatically trigger build-and-deploy.yml via push event
