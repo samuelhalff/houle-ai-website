@@ -78,8 +78,18 @@ function saveJSON(p, data) { fs.writeFileSync(p, JSON.stringify(data, null, 2) +
 
 function hasUnnecessaryCaps(str) {
   if (!str || typeof str !== "string") return false;
+  // Allowed acronyms: Keep AI/tech-related and essential business terms
+  // Note: TVA, AFC, AVS, LAA, LPP kept in case they appear in AI automation context
+  // (e.g., "automatiser la TVA avec IA"). If articles are purely about these topics
+  // without AI context, they should be caught by validation in ai-ressources-update.js
   const allowed = new Set([
-    "TVA","AFC","AVS","LAA","AC","LPP","SA","Sàrl","Odoo","CO","RPC","FER","PDF","ETIAS","UE","UEFA"
+    "TVA","AFC","AVS","LAA","AC","LPP", // Swiss business (allowed only in AI context)
+    "SA","Sàrl","CO","RPC",             // Swiss corporate structures
+    "PDF","FER",                        // Technical formats
+    "ETIAS","UE","UEFA",                // Geographic/regulatory
+    "RAG","LLM","GPT","API","SDK","CLI","JSON","XML","HTML","CSS", // AI/Tech acronyms
+    "RBAC","DPIA","GDPR","nLPD","RGPD", // Compliance/security
+    "M365","O365"                        // Microsoft 365
   ]);
   return str.split(/\s+/).some((w) => /[A-Z]{3,}/.test(w) && !allowed.has(w));
 }

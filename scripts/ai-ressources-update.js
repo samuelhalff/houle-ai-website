@@ -1,5 +1,55 @@
 "use strict";
 
+/**
+ * =============================================================================
+ * AI ARTICLE GENERATION SYSTEM - TOPIC SCOPE DOCUMENTATION
+ * =============================================================================
+ * 
+ * This script generates AI-powered articles for houle.ai, which is focused
+ * EXCLUSIVELY on AI solutions for Microsoft 365 and related technology.
+ * 
+ * ALLOWED TOPICS (AI, Technology, and Microsoft 365 Focus):
+ * ----------------------------------------------------------
+ * ✅ AI privée et assistants internes (RAG, anti-hallucinations, contrôle des sources)
+ * ✅ Add-ins Microsoft 365 (Outlook, Word, Teams) et intégrations
+ * ✅ Architecture Azure OpenAI / Azure AI Foundry (sécurité, réseau, identité, clés)
+ * ✅ Gouvernance IA, conformité et privacy (nLPD, RGPD, DPIA, registre des traitements)
+ * ✅ Automatisation et productivité avec IA (Power Platform, Graph, workflows)
+ * ✅ Évaluation qualité IA et monitoring (tests, scoring, régression, guardrails)
+ * ✅ Adoption entreprise d'outils IA (ROI, cas d'usage, conduite du changement)
+ * ✅ Technologies IA: LLM, GPT, fine-tuning, embeddings, vector databases
+ * ✅ Hébergement en Suisse pour solutions IA et souveraineté des données
+ * ✅ Sécurité et conformité SPÉCIFIQUES aux déploiements IA
+ * 
+ * FORBIDDEN TOPICS (Non-AI General Business Services):
+ * -----------------------------------------------------
+ * ❌ Comptabilité générale et tenue de livres (sauf si automatisée par IA)
+ * ❌ TVA / VAT compliance générale (sauf si processus TVA automatisé par IA)
+ * ❌ Services fiduciaires généraux non liés à l'IA
+ * ❌ Gestion de la paie (salaires, AVS, LAA, LPP) sans contexte IA
+ * ❌ Structure d'entreprise générique (SA, Sàrl, etc.) sans lien IA
+ * ❌ Conseils juridiques ou fiscaux généraux
+ * ❌ Réglementations commerciales suisses générales non liées à l'IA
+ * ❌ Services de domiciliation d'entreprise
+ * ❌ Audit financier traditionnel
+ * 
+ * WHY THIS RESTRICTION EXISTS:
+ * ----------------------------
+ * houle.ai provides AI and Microsoft 365 solutions, NOT general business services.
+ * General accounting, VAT, fiduciary, and payroll services are offered by
+ * ark-fid.ch (sister company). This separation ensures each brand maintains
+ * clear positioning and serves its specific audience effectively.
+ * 
+ * VALIDATION APPROACH:
+ * --------------------
+ * 1. AI prompts explicitly exclude non-AI business topics
+ * 2. Post-generation validation checks for off-topic keywords
+ * 3. Articles are rejected if they focus on forbidden topics without AI context
+ * 4. Better to reject an article than publish off-brand content
+ * 
+ * =============================================================================
+ */
+
 const fs = require("fs");
 const path = require("path");
 
@@ -117,10 +167,10 @@ const SERVICES = [
   "ia privée et assistants internes (rag, anti-hallucinations, contrôle des sources)",
   "add-ins microsoft 365 (outlook, word, teams) et intégrations",
   "architecture azure openai / azure ai foundry (sécurité, réseau, identité, clés)",
-  "gouvernance, conformité et privacy (nlpd, rgpd, dpia, registre des traitements)",
-  "automatisation et productivité (power platform, graph, workflows)",
-  "évaluation qualité et monitoring (tests, scoring, régression, guardrails)",
-  "adoption entreprise (roi, cas d'usage, conduite du changement)",
+  "gouvernance ia, conformité et privacy (nlpd, rgpd, dpia, registre des traitements pour systèmes ia)",
+  "automatisation ia et productivité microsoft 365 (power platform, graph, workflows)",
+  "évaluation qualité ia et monitoring (tests, scoring, régression, guardrails)",
+  "adoption entreprise de solutions ia (roi, cas d'usage, conduite du changement)",
 ];
 
 const TOPIC_KEYWORDS = [
@@ -298,6 +348,91 @@ function assertNoForbiddenTermsInArticle(article, where = "article") {
   assertNoForbiddenTermsInText(article.content || "", `${where}.content`);
 }
 
+/**
+ * Validates that an article is AI/technology-related and not about general
+ * business topics like accounting, VAT, or fiduciary services.
+ * 
+ * This validation ensures houle.ai content stays focused on AI and Microsoft 365
+ * solutions, not general business services (which are offered by ark-fid.ch).
+ * 
+ * @param {Object} article - The article to validate (must have slug, title, description)
+ * @param {string} where - Context string for error messages
+ * @throws {Error} If article appears to be about forbidden non-AI business topics
+ */
+function assertAIRelatedTopic(article, where = "article") {
+  if (!article || typeof article !== "object") return;
+
+  // Combine slug, title, and description for analysis
+  const textToCheck = `${article.slug || ""} ${article.title || ""} ${article.description || ""}`.toLowerCase();
+
+  // Define forbidden business terms (Swiss business topics unrelated to AI)
+  const forbiddenTerms = [
+    // Accounting & bookkeeping (without AI context)
+    { pattern: /\bcomptabilit[ée]\b/i, label: "comptabilité", aiContext: /(ia|ai|intelligence artificielle|automatiser|automatisation|gpt|llm|assistant)/i },
+    { pattern: /\btenue\s+de\s+livres?\b/i, label: "tenue de livres", aiContext: /(ia|ai|intelligence artificielle|automatiser|automatisation|gpt|llm)/i },
+    { pattern: /\bcomptable\b/i, label: "comptable", aiContext: /(ia|ai|intelligence artificielle|automatiser|automatisation|assistant|gpt|llm)/i },
+    
+    // VAT/TVA (without AI context)
+    { pattern: /\btva\b/i, label: "TVA", aiContext: /(ia|ai|intelligence artificielle|automatiser|automatisation|gpt|llm|assistant)/i },
+    { pattern: /\btaxe\s+sur\s+la\s+valeur\s+ajout[ée]e\b/i, label: "taxe sur la valeur ajoutée", aiContext: /(ia|ai|intelligence artificielle|automatiser)/i },
+    { pattern: /\bd[ée]claration\s+de\s+tva\b/i, label: "déclaration de TVA", aiContext: /(ia|ai|automatiser|automatisation)/i },
+    
+    // Fiduciary services (without AI context)
+    { pattern: /\bfiduciaire\b/i, label: "fiduciaire", aiContext: /(ia|ai|intelligence artificielle|microsoft\s*365|automatisation|add-in|assistant)/i },
+    { pattern: /\bservices\s+fiduciaires\b/i, label: "services fiduciaires", aiContext: /(ia|ai|automatisation)/i },
+    
+    // Payroll & social insurance (without AI context)
+    { pattern: /\bsalaires?\b/i, label: "salaire", aiContext: /(ia|ai|intelligence artificielle|automatiser|automatisation|gpt|llm)/i },
+    { pattern: /\bpaie\b/i, label: "paie", aiContext: /(ia|ai|intelligence artificielle|automatiser|automatisation|gpt|llm)/i },
+    { pattern: /\bavs\b/i, label: "AVS", aiContext: /(ia|ai|intelligence artificielle|automatiser|automatisation)/i },
+    { pattern: /\blaa\b/i, label: "LAA", aiContext: /(ia|ai|intelligence artificielle|automatiser|automatisation)/i },
+    { pattern: /\blpp\b/i, label: "LPP", aiContext: /(ia|ai|intelligence artificielle|automatiser|automatisation)/i },
+    { pattern: /\bassurances?\s+sociales?\b/i, label: "assurances sociales", aiContext: /(ia|ai|automatiser|automatisation)/i },
+    
+    // Corporate structure (without AI/tech context)
+    { pattern: /\bcr[ée]ation\s+d'entreprise\b/i, label: "création d'entreprise", aiContext: /(ia|ai|microsoft|saas|cloud|technologie)/i },
+    { pattern: /\bdomiciliation\b/i, label: "domiciliation", aiContext: /(cloud|azure|infrastructure)/i },
+    
+    // Generic legal/tax (without AI context)
+    { pattern: /\bconseils?\s+fiscaux?\b/i, label: "conseil fiscal", aiContext: /(ia|ai|automatisation|technologie)/i },
+    { pattern: /\bconseils?\s+juridiques?\b/i, label: "conseil juridique", aiContext: /(ia|ai|technologie|conformit[ée]\s+ia|nlpd|rgpd.*ia)/i },
+    { pattern: /\boptimisation\s+fiscale\b/i, label: "optimisation fiscale", aiContext: /(ia|ai|automatisation)/i },
+  ];
+
+  // Check each forbidden term
+  for (const term of forbiddenTerms) {
+    if (term.pattern.test(textToCheck)) {
+      // Term found - check if it's in an AI/tech context
+      if (!term.aiContext.test(textToCheck)) {
+        const err = new Error(
+          `Article hors sujet détecté dans ${where}: le terme "${term.label}" est présent sans contexte IA/technologie. ` +
+          `houle.ai est focalisé sur les solutions IA pour Microsoft 365, pas sur les services d'affaires généraux. ` +
+          `Si l'article concerne l'automatisation IA de processus ${term.label}, assurez-vous que le contexte IA est clair dans le slug, titre et description.`
+        );
+        err.code = "OFF_TOPIC_ARTICLE";
+        err.forbiddenTerm = term.label;
+        err.slug = article.slug;
+        err.title = article.title;
+        throw err;
+      }
+    }
+  }
+
+  // Additional check: ensure at least SOME AI/tech related terms are present
+  const aiTechTerms = /(ia|ai|intelligence artificielle|microsoft\s*365|m365|outlook|word|teams|add-in|gpt|llm|openai|azure|automatisation|assistant|rag|vector|embedding|prompt)/i;
+  if (!aiTechTerms.test(textToCheck)) {
+    const err = new Error(
+      `Article potentiellement hors sujet dans ${where}: aucun terme lié à l'IA ou Microsoft 365 détecté. ` +
+      `houle.ai doit se concentrer exclusivement sur l'IA et Microsoft 365. ` +
+      `Slug: "${article.slug}", Titre: "${article.title}"`
+    );
+    err.code = "MISSING_AI_CONTEXT";
+    err.slug = article.slug;
+    err.title = article.title;
+    throw err;
+  }
+}
+
 function getLastArticle(frData) {
   const articles = Array.isArray(frData?.Articles) ? frData.Articles : [];
   if (!articles.length) return null;
@@ -463,6 +598,23 @@ function buildSystemPrompt(frJson, trendData = null) {
     `- La marque doit être en minuscules: écris toujours \"${BRAND_NAME}\" (jamais \"Houle\").`,
     "- Sujet cohérent avec nos services (liste ci-dessous) et différent des articles récents.",
     "- Aucun doublon de slug, ni de sujet déjà traité récemment.",
+    "",
+    "=== SUJETS INTERDITS (CRITIQUE - NE JAMAIS ÉCRIRE SUR CES THÈMES) ===",
+    "❌ INTERDIT: Comptabilité générale, tenue de livres, services comptables (sauf si explicitement lié à l'automatisation IA de la comptabilité)",
+    "❌ INTERDIT: TVA / déclaration de TVA / compliance TVA (sauf si explicitement lié à l'automatisation IA des processus TVA)",
+    "❌ INTERDIT: Services fiduciaires généraux non liés à l'IA ou à Microsoft 365",
+    "❌ INTERDIT: Gestion de la paie, calcul des salaires (sauf si explicitement lié à l'automatisation IA)",
+    "❌ INTERDIT: AVS, LAA, LPP, assurances sociales suisses (sauf si explicitement dans un contexte d'automatisation IA)",
+    "❌ INTERDIT: Création d'entreprise (SA, Sàrl, etc.) et structure corporative générale",
+    "❌ INTERDIT: Conseils fiscaux généraux, optimisation fiscale sans lien avec l'IA",
+    "❌ INTERDIT: Conseils juridiques généraux sans rapport avec l'IA, la conformité IA, ou Microsoft 365",
+    "❌ INTERDIT: Domiciliation d'entreprise, audit financier traditionnel",
+    "❌ INTERDIT: Réglementations commerciales suisses générales non liées à l'IA ou à la protection des données",
+    "",
+    "⚠️ IMPORTANT: houle.ai est focalisé EXCLUSIVEMENT sur l'IA et Microsoft 365.",
+    "⚠️ Les services d'affaires généraux (comptabilité, TVA, fiduciaire) sont offerts par ark-fid.ch.",
+    "⚠️ Si un sujet semble proche d'un thème interdit, assure-toi qu'il est CLAIREMENT lié à l'IA, à Microsoft 365, ou à l'automatisation technologique.",
+    "",
     lengthGuidance,
     ...longFormRequirements,
     "- Style professionnel, humain, sans capitales superflues. Évite les tics d'écriture IA (\"Moreover\", \"Furthermore\", répétitions).",
@@ -569,6 +721,13 @@ function buildResearchPrompt(frJson, trendData, seoSuggestions) {
     "- Sujet cohérent avec nos services (liste ci-dessous) et différent des articles récents.",
     `- INTERDIT: mentionner Microsoft Copilot / M365 Copilot. N'écris pas le mot \"Copilot\".`,
     `- La marque doit être en minuscules: écris toujours \"${BRAND_NAME}\" (jamais \"Houle\").`,
+    "",
+    "=== SUJETS INTERDITS (CRITIQUE - TOUS LES ARTICLES DOIVENT ÊTRE LIÉS À L'IA / MICROSOFT 365) ===",
+    "❌ NE JAMAIS proposer de sujets sur: comptabilité générale, TVA/déclaration TVA, services fiduciaires, gestion de paie, AVS/LAA/LPP, création d'entreprise (SA/Sàrl), conseils fiscaux généraux, conseils juridiques généraux, domiciliation, audit financier traditionnel.",
+    "❌ Ces sujets sont hors du scope de houle.ai (qui est focalisé IA + Microsoft 365).",
+    "✅ TOUS les sujets proposés DOIVENT être clairement liés à: IA, Microsoft 365, automatisation avec IA, Azure OpenAI, add-ins Office, GPT, LLM, RAG, conformité IA (nLPD/RGPD), ou technologies IA.",
+    "✅ Si un processus métier (ex: comptabilité) est mentionné, il DOIT être dans le contexte de son automatisation par IA.",
+    "",
     `- L'article final fera ${Math.max(minWords, 1500)} à ${Math.max(Math.max(minWords, 1500), maxWords)} mots.`,
     "- Références: fournir 8 à 12 liens vérifiables (HTTP 200, pas de login), sans URL inventée.",
     "- Références: inclure au moins 2 sources officielles/réglementaires (fedlex.admin.ch, edoeb.admin.ch, nist.gov, admin.ch).",
@@ -610,6 +769,12 @@ function buildDraftPromptFromResearch(research, validatedReferences) {
     `CONTRAINTE DE LONGUEUR (STRICTE): entre ${Math.max(minWords, 1500)} et ${Math.max(maxWords, Math.max(minWords, 1500))} mots (viser ~2200).`,
     "Si tu es en dessous du minimum, tu DOIS ajouter du contenu (plus de H2/H3, plus d'exemples). Ne termine pas tôt.",
     "Structure obligatoire: 10+ sections H2, plusieurs H3, 2 tableaux, 2 checklists, 1 cas pratique chiffré (CHF), une section étape-par-étape, une section erreurs fréquentes + corrections, et une FAQ de 6 questions.",
+    "",
+    "=== FOCUS IA ET MICROSOFT 365 (OBLIGATOIRE) ===",
+    "⚠️ RAPPEL CRITIQUE: houle.ai est focalisé EXCLUSIVEMENT sur l'IA et Microsoft 365.",
+    "✅ L'article DOIT clairement concerner: IA, assistants IA, Microsoft 365, Azure OpenAI, automatisation IA, add-ins Office, GPT, LLM, RAG, ou technologies IA.",
+    "❌ NE PAS écrire sur: comptabilité générale, TVA, services fiduciaires, paie, conseils fiscaux/juridiques généraux sans lien clair avec l'IA.",
+    "",
     "IMPORTANT:",
     `- INTERDIT: mentionner Microsoft Copilot / M365 Copilot. N'écris pas le mot \"Copilot\".`,
     `- La marque doit être en minuscules: écris toujours \"${BRAND_NAME}\" (jamais \"Houle\").`,
@@ -2379,6 +2544,11 @@ async function main() {
     newArticle = drafted.newArticle;
     newLabels = drafted.newLabels || {};
   }
+
+  // Validate that the article is AI/Microsoft 365 related (not general business topics)
+  console.log("Validating article topic relevance...");
+  assertAIRelatedTopic(newArticle, "generated article");
+  console.log("✅ Article topic validation passed - AI/Microsoft 365 focus confirmed");
 
   // Detect the article category for reference fallback
   const articleCategory =
