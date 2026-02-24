@@ -1,91 +1,42 @@
 # https://www.robotstxt.org/robotstxt.html
-# Robots.txt for houle.ai - Swiss Enterprise AI Platform
-
-# ============================================
-# Search Engine Crawlers (Allow Full Access)
-# ============================================
-User-agent: Googlebot
-Allow: /
-
-User-agent: Googlebot-Image
-Allow: /
-
-User-agent: Bingbot
-Allow: /
-
-User-agent: Slurp
-Allow: /
-
-User-agent: DuckDuckBot
-Allow: /
-
-User-agent: Applebot
-Allow: /
-
-User-agent: Yandex
-Allow: /
-
-User-agent: Baiduspider
-Allow: /
-
-# ============================================
-# AI Crawlers (Allow for Indexation Visibility)
-# ============================================
-# OpenAI's GPTBot - Allow for AI visibility
-User-agent: GPTBot
-Allow: /
-
-# Common Crawl - Allow for research/training datasets
-User-agent: CCBot
-Allow: /
-
-# Anthropic AI Crawler
-User-agent: anthropic-ai
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-# Google AI (Gemini/Bard training)
-User-agent: Google-Extended
-Allow: /
-
-# Perplexity AI
-User-agent: PerplexityBot
-Allow: /
-
-# Cohere AI
-User-agent: cohere-ai
-Allow: /
-
-# ============================================
-# Default Rule
-# ============================================
 User-agent: *
 Allow: /
 
-# ============================================
-# Blocked Routes (Internal/Technical)
-# ============================================
 # Disallow internal/API routes
 Disallow: /api/
 Disallow: /_next/
+Disallow: /assets/
+Disallow: /_next/static/
+Disallow: /_next/image
 
-# Block crawl-heavy query parameters to prevent index bloat
+# Block query string variants to avoid duplicate indexing
 Disallow: /*?*
 
-# Block non-canonical URL variations (without trailing slash)
-Disallow: /fr$
-Disallow: /en$
-Disallow: /de$
-Disallow: /es$
-Disallow: /pt$
+# Block OpenGraph image routes (these are for social media crawlers, not search indexing)
+# Fixes "Crawled - currently not indexed" issues for opengraph-image paths
+Disallow: /*/opengraph-image
+Disallow: /*/opengraph-image/
+Disallow: /*/twitter-image
+Disallow: /*/twitter-image/
 
-# Block draft and preview routes if any
-Disallow: /draft/
-Disallow: /preview/
+# Block non-locale root paths that redirect to locale versions
+# The canonical URLs always have locale prefixes (e.g., /fr/, /en/)
+Disallow: /services
+Disallow: /services/
+Disallow: /products
+Disallow: /products/
+Disallow: /ressources
+Disallow: /ressources/
+Disallow: /contact
+Disallow: /contact/
+Disallow: /legal
+Disallow: /legal/
+Disallow: /legal/terms
+Disallow: /legal/terms/
+Disallow: /legal/privacy
+Disallow: /legal/privacy/
+Disallow: /legal/cookies
+Disallow: /legal/cookies/
 
-# ============================================
-# Sitemap Location
-# ============================================
+# Sitemap
 Sitemap: https://houle.ai/sitemap.xml
