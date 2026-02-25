@@ -40,6 +40,7 @@ jobs:
         env:
           AZURE_AGENT_ENDPOINT: ${{ secrets.AZURE_AGENT_ENDPOINT }}
           AZURE_AGENT_NAME: ${{ secrets.AZURE_AGENT_NAME }}
+          AZURE_AGENT_API_KEY: ${{ secrets.AZURE_AGENT_API_KEY }}
           # Azure OpenAI endpoint isn't sensitive; prefer a known-good default.
           AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT || 'https://pbmch8303697696.cognitiveservices.azure.com/' }}
           AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
@@ -55,6 +56,7 @@ jobs:
         run: |
           echo "🔍 Validating required environment variables..."
 
+          # Check required Azure vars
           if [ -n "$AZURE_AGENT_ENDPOINT" ]; then
             echo "✅ AZURE_AGENT_ENDPOINT: set (length: ${#AZURE_AGENT_ENDPOINT})"
           else
@@ -83,32 +85,35 @@ jobs:
             exit 1
           fi
 
-          if [ -n "$AZURE_OPENAI_API_VERSION" ]; then
-            echo "✅ AZURE_OPENAI_API_VERSION: set (length: ${#AZURE_OPENAI_API_VERSION})"
+          if [ -n "$AZURE_AGENT_API_KEY" ]; then
+            echo "✅ AZURE_AGENT_API_KEY: set (length: ${#AZURE_AGENT_API_KEY})"
           else
-            echo "❌ AZURE_OPENAI_API_VERSION: missing"
-            exit 1
+            echo "⚠️ AZURE_AGENT_API_KEY: missing (will use Entra ID if available)"
           fi
 
-          if [ -n "$AZURE_TENANT_ID" ]; then
-            echo "✅ AZURE_TENANT_ID: set (length: ${#AZURE_TENANT_ID})"
-          else
-            echo "❌ AZURE_TENANT_ID: missing"
-            exit 1
-          fi
+          if [ -z "$AZURE_AGENT_API_KEY" ]; then
+            if [ -n "$AZURE_TENANT_ID" ]; then
+              echo "✅ AZURE_TENANT_ID: set (length: ${#AZURE_TENANT_ID})"
+            else
+              echo "❌ AZURE_TENANT_ID: missing"
+              exit 1
+            fi
 
-          if [ -n "$AZURE_CLIENT_ID" ]; then
-            echo "✅ AZURE_CLIENT_ID: set (length: ${#AZURE_CLIENT_ID})"
-          else
-            echo "❌ AZURE_CLIENT_ID: missing"
-            exit 1
-          fi
+            if [ -n "$AZURE_CLIENT_ID" ]; then
+              echo "✅ AZURE_CLIENT_ID: set (length: ${#AZURE_CLIENT_ID})"
+            else
+              echo "❌ AZURE_CLIENT_ID: missing"
+              exit 1
+            fi
 
-          if [ -n "$AZURE_CLIENT_SECRET" ]; then
-            echo "✅ AZURE_CLIENT_SECRET: set (length: ${#AZURE_CLIENT_SECRET})"
+            if [ -n "$AZURE_CLIENT_SECRET" ]; then
+              echo "✅ AZURE_CLIENT_SECRET: set (length: ${#AZURE_CLIENT_SECRET})"
+            else
+              echo "❌ AZURE_CLIENT_SECRET: missing"
+              exit 1
+            fi
           else
-            echo "❌ AZURE_CLIENT_SECRET: missing"
-            exit 1
+            echo "ℹ️ AZURE_AGENT_API_KEY provided; skipping Entra ID requirement"
           fi
 
           # Check optional trend configuration (from vars, not secrets)
@@ -118,25 +123,33 @@ jobs:
           echo "  TRENDS_GEO: ${TRENDS_GEO:-'(not set, default: CH)'}"
           echo "  TRENDS_LANGUAGE: ${TRENDS_LANGUAGE:-'(not set, default: fr)'}"
           echo "  TRENDS_MAX_TOPICS: ${TRENDS_MAX_TOPICS:-'(not set, default: 10)'}"
-          echo ""
 
+          echo ""
           echo "✅ All required environment variables validated"
 
       - name: Run AI update (FR + translations via Azure OpenAI)
         env:
           AZURE_AGENT_ENDPOINT: ${{ secrets.AZURE_AGENT_ENDPOINT }}
           AZURE_AGENT_NAME: ${{ secrets.AZURE_AGENT_NAME }}
+          AZURE_AGENT_API_KEY: ${{ secrets.AZURE_AGENT_API_KEY }}
+          # Foundry agent name-only mode (prevents accidental fallback to classic assistants).
           AZURE_AGENT_FORCE_RESPONSES: "1"
           # Azure OpenAI endpoint isn't sensitive; prefer a known-good default.
           AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT || 'https://pbmch8303697696.cognitiveservices.azure.com/' }}
           AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
           # Use a known-good Azure OpenAI api-version (secret values have caused 404s).
           AZURE_OPENAI_API_VERSION: "2024-05-01-preview"
-          # Translations model (non-agent)
+          # Keep translations on GPT-4.1, even if endpoint secret includes another deployment path.
           AZURE_OPENAI_DEPLOYMENT: "gpt-4.1"
-          # Draft model (long-form)
+          # Use a faster/higher-quality writer model for long-form drafting.
           AZURE_OPENAI_DRAFT_DEPLOYMENT: "gpt-4o"
-          AZURE_OPENAI_DRAFT_MAX_TOKENS: "8192"
+          # Separate endpoint/model for research fallback (do not reuse draft endpoint).
+          AZURE_OPENAI_RESEARCH_ENDPOINT: ${{ secrets.AZURE_OPENAI_RESEARCH_ENDPOINT }}
+          AZURE_OPENAI_RESEARCH_API_KEY: ${{ secrets.AZURE_OPENAI_RESEARCH_API_KEY }}
+          AZURE_OPENAI_RESEARCH_API_VERSION: ${{ vars.AZURE_OPENAI_RESEARCH_API_VERSION || '2024-05-01-preview' }}
+          AZURE_OPENAI_RESEARCH_DEPLOYMENT: ${{ vars.AZURE_OPENAI_RESEARCH_DEPLOYMENT }}
+          # Allow enough output tokens for 1500–3000 word drafts.
+          AZURE_OPENAI_DRAFT_MAX_TOKENS: "6144"
           AZURE_TENANT_ID: ${{ fromJson(secrets.AZURE_CREDENTIALS).tenantId }}
           AZURE_CLIENT_ID: ${{ fromJson(secrets.AZURE_CREDENTIALS).clientId }}
           AZURE_CLIENT_SECRET: ${{ fromJson(secrets.AZURE_CREDENTIALS).clientSecret }}
@@ -151,23 +164,28 @@ jobs:
           AZURE_AGENT_RESPONSES_COOLDOWN_MS: "15000"
           # Leave uncapped to avoid incomplete JSON output
           AZURE_AGENT_RESPONSES_MAX_OUTPUT_TOKENS: "0"
+          # If Foundry agent RBAC fails, fall back to Azure OpenAI chat completions.
+          AZURE_AGENT_FALLBACK_TO_OPENAI: "1"
           REQUIRE_TRANSLATIONS: "1"
+          # Two-step workflow: agent does research+refs, model drafts the article.
           AI_TWO_STEP: "1"
           AI_RESEARCH_RETRIES: "3"
-          SEO_MIN_WORDS: "1500"
-          SEO_MAX_WORDS: "3000"
           # Trend provider configuration (from repository variables)
           TRENDS_PROVIDER: ${{ vars.TRENDS_PROVIDER || 'hybrid' }}
           TRENDS_GEO: ${{ vars.TRENDS_GEO }}
           TRENDS_LANGUAGE: ${{ vars.TRENDS_LANGUAGE }}
           TRENDS_MAX_TOPICS: ${{ vars.TRENDS_MAX_TOPICS }}
           # Reference quality guardrails
+          # Allow broader sources, but keep at least one official source
           REFERENCE_REQUIRE_TRUSTED_DOMAINS: "0"
           REFERENCE_MIN_TRUSTED_DOMAINS: "1"
           REFERENCE_MIN_COUNT: "4"
           REFERENCE_MAX_COUNT: "6"
+          # Enforce minimum article length (SEO)
+          SEO_MIN_WORDS: "1500"
+          SEO_MAX_WORDS: "3000"
         run: |
-          node scripts/ai-ressources-update.js --apply
+          node scripts/ai-ressources-update.js --apply --translate-existing
 
       - name: Fix malformed internal markdown links
         run: node scripts/fix-article-internal-links.js --apply
@@ -198,19 +216,22 @@ jobs:
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add src/translations/**/ressources.json || true
+          git add "src/translations/**/*.json" || true
           if git diff --cached --quiet; then
             echo "No changes to commit"
           else
             git commit -m "chore(ressources): every 4 days AI article update" --author="samuelhalff <660062+samuelhalff@users.noreply.github.com>"
             echo "⏳ Waiting 30 seconds before push to avoid deployment conflicts..."
             sleep 30
+            echo "🔄 Rebasing on latest origin/main to avoid non-fast-forward pushes..."
+            git fetch origin main
+            git rebase origin/main || { echo "Rebase failed"; git rebase --abort || true; exit 1; }
             git push
           fi
 
       - name: Ping sitemaps
         run: |
-          node scripts/ping-sitemaps.js --url https://houle.ai --path /sitemap.xml
+          node scripts/ping-sitemaps.js
 
       # Note: No need to trigger deployment explicitly
       # The push above will automatically trigger build-and-deploy.yml via push event

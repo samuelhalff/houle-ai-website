@@ -96,12 +96,15 @@ const AI_TWO_STEP = process.env.AI_TWO_STEP === "1";
 
 const AZURE_AGENT_ENDPOINT = process.env.AZURE_AGENT_ENDPOINT;
 const AZURE_AGENT_NAME = process.env.AZURE_AGENT_NAME;
+const AZURE_AGENT_API_KEY = process.env.AZURE_AGENT_API_KEY;
 const AZURE_AGENT_RESEARCH_NAME =
   process.env.AZURE_AGENT_RESEARCH_NAME || AZURE_AGENT_NAME;
 const AZURE_AGENT_RESPONSES_API_VERSION =
   process.env.AZURE_AGENT_RESPONSES_API_VERSION || "2025-11-15-preview";
 const AZURE_AGENT_FORCE_RESPONSES =
   process.env.AZURE_AGENT_FORCE_RESPONSES === "1";
+const AZURE_AGENT_FALLBACK_TO_OPENAI =
+  process.env.AZURE_AGENT_FALLBACK_TO_OPENAI === "1";
 const AZURE_AGENT_RESPONSES_RETRIES = parseInt(
   process.env.AZURE_AGENT_RESPONSES_RETRIES || "4",
   10,
@@ -154,6 +157,13 @@ const AZURE_OPENAI_DRAFT_MAX_TOKENS = parseInt(
   process.env.AZURE_OPENAI_DRAFT_MAX_TOKENS || "4096",
   10,
 );
+const AZURE_OPENAI_RESEARCH_ENDPOINT = process.env.AZURE_OPENAI_RESEARCH_ENDPOINT;
+const AZURE_OPENAI_RESEARCH_API_VERSION =
+  process.env.AZURE_OPENAI_RESEARCH_API_VERSION || AZURE_OPENAI_API_VERSION;
+const AZURE_OPENAI_RESEARCH_DEPLOYMENT =
+  process.env.AZURE_OPENAI_RESEARCH_DEPLOYMENT;
+const AZURE_OPENAI_RESEARCH_API_KEY =
+  process.env.AZURE_OPENAI_RESEARCH_API_KEY || AZURE_OPENAI_API_KEY;
 
 const ROOT = process.cwd();
 const TRANSLATIONS_DIR = path.join(ROOT, "src", "translations");
@@ -1034,7 +1044,7 @@ function buildAgentReference(agentName) {
 
 async function listAgentsViaRest(credential) {
   if (typeof fetch !== "function") {
-    throw new Error("Fetch API is not available in this runtime");
+    return [];
   }
 
   const token = await credential.getToken("https://ai.azure.com/.default");
@@ -1065,7 +1075,7 @@ async function listAgentsViaRest(credential) {
 
 async function listAgentVersionsViaRest(credential, agentId) {
   if (typeof fetch !== "function") {
-    throw new Error("Fetch API is not available in this runtime");
+    return [];
   }
 
   const token = await credential.getToken("https://ai.azure.com/.default");
@@ -1095,7 +1105,13 @@ async function listAgentVersionsViaRest(credential, agentId) {
   }));
 }
 
+const agentReferenceCache = new Map();
+
 async function resolveAgentReference(agentName, credential) {
+  if (agentReferenceCache.has(agentName)) {
+    return agentReferenceCache.get(agentName);
+  }
+
   if (typeof agentName !== "string" || !agentName.trim()) {
     throw new Error("AZURE_AGENT_NAME must be a non-empty string");
   }
@@ -1173,6 +1189,7 @@ async function resolveAgentReference(agentName, credential) {
     ref.version = chosen.version;
   }
 
+  agentReferenceCache.set(agentName, ref);
   return ref;
 }
 
@@ -1293,13 +1310,14 @@ async function azureOpenAIJson(prompt, options = {}) {
     endpoint = AZURE_OPENAI_ENDPOINT,
     deployment = AZURE_OPENAI_DEPLOYMENT,
     apiVersion = AZURE_OPENAI_API_VERSION,
+    apiKey = AZURE_OPENAI_API_KEY,
     temperature = 0.2,
     topP = 0.9,
     maxTokens = null,
     system = "You are a professional assistant. Output ONLY a JSON object.",
   } = options;
 
-  if (!AZURE_OPENAI_API_KEY) {
+  if (!apiKey) {
     throw new Error("Missing AZURE_OPENAI_API_KEY");
   }
   const url = buildAzureOpenAIChatUrlFor({
@@ -1328,7 +1346,7 @@ async function azureOpenAIJson(prompt, options = {}) {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
-          "api-key": AZURE_OPENAI_API_KEY,
+          "api-key": apiKey,
         },
         body: JSON.stringify(body),
       });
@@ -1557,27 +1575,36 @@ async function azureAgentResponsesApi(
   if (!AZURE_AGENT_ENDPOINT) throw new Error("Missing AZURE_AGENT_ENDPOINT");
   if (!agentName) throw new Error("Missing AZURE_AGENT_NAME");
 
-  const { DefaultAzureCredential } = require("@azure/identity");
   const { AzureOpenAI } = require("openai");
-  const credential = new DefaultAzureCredential();
+  const apiKey = (AZURE_AGENT_API_KEY || "").trim();
+  const useApiKey = !!apiKey;
+  const credential = useApiKey ? null : (() => {
+    const { DefaultAzureCredential } = require("@azure/identity");
+    return new DefaultAzureCredential();
+  })();
   const debugAgent = !!process.env.DEBUG_AGENT;
 
-  const azureADTokenProvider = async () => {
-    const token = await credential.getToken("https://ai.azure.com/.default");
-    if (!token?.token) {
-      throw new Error("Failed to obtain Azure token for ai.azure.com scope");
-    }
-    return token.token;
-  };
+  const azureADTokenProvider = useApiKey
+    ? null
+    : async () => {
+        const token = await credential.getToken("https://ai.azure.com/.default");
+        if (!token?.token) {
+          throw new Error("Failed to obtain Azure token for ai.azure.com scope");
+        }
+        return token.token;
+      };
 
   const baseURL = `${AZURE_AGENT_ENDPOINT.replace(/\/+$/, "")}/openai`;
   const openAIClient = new AzureOpenAI({
     apiVersion: AZURE_AGENT_RESPONSES_API_VERSION,
     baseURL,
-    azureADTokenProvider,
-    apiKey: null,
+    ...(useApiKey
+      ? { apiKey }
+      : { azureADTokenProvider, apiKey: null }),
   });
-  const agentRef = await resolveAgentReference(agentName, credential);
+  const agentRef = useApiKey
+    ? buildAgentReference(agentName)
+    : await resolveAgentReference(agentName, credential);
 
   if (debugAgent) {
     console.log(
@@ -1715,20 +1742,55 @@ async function requestAgentJson(prompt, { agentName = AZURE_AGENT_NAME } = {}) {
     );
   }
 
-  if (AZURE_AGENT_FORCE_RESPONSES) {
+  const isPermissionError = (error) => {
+    const status = error?.status || error?.statusCode;
+    if (status === 401 || status === 403) return true;
+    const message = `${error?.message || ""}`.toLowerCase();
+    return (
+      message.includes("rbac") ||
+      message.includes("access denied") ||
+      message.includes("not have permissions") ||
+      message.includes("permissions")
+    );
+  };
+
+  const tryAgent = async () => {
     const result = await azureAgentResponsesApi(prompt, { agentName });
     if (AZURE_AGENT_RESPONSES_COOLDOWN_MS > 0) {
       await sleep(AZURE_AGENT_RESPONSES_COOLDOWN_MS);
     }
     return result;
-  }
+  };
 
-  // New Foundry agents use the Responses API by default.
-  const result = await azureAgentResponsesApi(prompt, { agentName });
-  if (AZURE_AGENT_RESPONSES_COOLDOWN_MS > 0) {
-    await sleep(AZURE_AGENT_RESPONSES_COOLDOWN_MS);
+  try {
+    if (AZURE_AGENT_FORCE_RESPONSES) {
+      return await tryAgent();
+    }
+    // New Foundry agents use the Responses API by default.
+    return await tryAgent();
+  } catch (error) {
+    if (AZURE_AGENT_FALLBACK_TO_OPENAI && isPermissionError(error)) {
+      if (
+        !AZURE_OPENAI_RESEARCH_ENDPOINT ||
+        !AZURE_OPENAI_RESEARCH_DEPLOYMENT ||
+        !AZURE_OPENAI_RESEARCH_API_KEY
+      ) {
+        throw error;
+      }
+      console.warn(
+        `[agent] Permission denied (${error?.status || "unknown"}). Falling back to Azure OpenAI.`,
+      );
+      return await azureOpenAIJson(prompt, {
+        endpoint: AZURE_OPENAI_RESEARCH_ENDPOINT,
+        deployment: AZURE_OPENAI_RESEARCH_DEPLOYMENT,
+        apiVersion: AZURE_OPENAI_RESEARCH_API_VERSION,
+        maxTokens: Math.min(2048, AZURE_OPENAI_DRAFT_MAX_TOKENS),
+        system:
+          "You are an expert research assistant. Output ONLY a JSON object.",
+      });
+    }
+    throw error;
   }
-  return result;
 }
 
 function ensureAzureEnv() {
