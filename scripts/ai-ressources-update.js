@@ -2430,6 +2430,17 @@ async function draftArticleFromResearch(frData, research, validatedReferences) {
     };
     draftArticle.content = `${String(draftArticle.content || "").trim()}\n\n${appendContent.trim()}`;
   };
+  const finalizeDraftArticle = () => {
+    // Lock references to the already validated list.
+    draftArticle.references = validatedReferences;
+    // Normalize expected author for this repo.
+    draftArticle.author = AUTHOR_NAME;
+    normalizeBrandCaseInArticle(draftArticle);
+    assertNoForbiddenTermsInArticle(draftArticle, "fr");
+    validateNewArticle(frData, draftArticle);
+    enforceTopicRotation(frData, draftArticle);
+    normalizeArticleDates(draftArticle);
+  };
   for (let attempt = 1; attempt <= maxRetries + 1; attempt++) {
     console.log(
       `Requesting Azure OpenAI draft... (attempt ${attempt}/${maxRetries + 1})`,
@@ -2468,15 +2479,7 @@ async function draftArticleFromResearch(frData, research, validatedReferences) {
         draftArticle = newArticle;
       }
 
-      // Lock references to the already validated list.
-      draftArticle.references = validatedReferences;
-      // Normalize expected author for this repo.
-      draftArticle.author = AUTHOR_NAME;
-      normalizeBrandCaseInArticle(draftArticle);
-      assertNoForbiddenTermsInArticle(draftArticle, "fr");
-      validateNewArticle(frData, draftArticle);
-      enforceTopicRotation(frData, draftArticle);
-      normalizeArticleDates(draftArticle);
+      finalizeDraftArticle();
       return { newArticle: draftArticle, newLabels: accumulatedLabels };
     } catch (error) {
       lastError = error;
@@ -2490,15 +2493,7 @@ async function draftArticleFromResearch(frData, research, validatedReferences) {
     );
     try {
       await appendDraftContent(lastError.minWords);
-      // Lock references to the already validated list.
-      draftArticle.references = validatedReferences;
-      // Normalize expected author for this repo.
-      draftArticle.author = AUTHOR_NAME;
-      normalizeBrandCaseInArticle(draftArticle);
-      assertNoForbiddenTermsInArticle(draftArticle, "fr");
-      validateNewArticle(frData, draftArticle);
-      enforceTopicRotation(frData, draftArticle);
-      normalizeArticleDates(draftArticle);
+      finalizeDraftArticle();
       return { newArticle: draftArticle, newLabels: accumulatedLabels };
     } catch (error) {
       lastError = error;
