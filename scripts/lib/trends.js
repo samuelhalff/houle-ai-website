@@ -517,16 +517,16 @@ async function getTopicSuggestions(options = {}) {
   if (relevantTrends.length > 0) {
     for (const trend of relevantTrends) {
       const params = mapTrendToArticleParams(trend, existingSlugs);
-      if (params) {
-        selectedTopic = params;
-        selectedTopic.trendSignal = {
-          ...(selectedTopic.trendSignal || {}),
-          indicators: [
-            provider === "google_rss" ? "google_trends_rss" : "google_trends_api",
-          ],
-        };
-        break;
-      }
+      if (!params) continue;
+      if (avoidTopics.includes(params.category)) continue;
+      selectedTopic = params;
+      selectedTopic.trendSignal = {
+        ...(selectedTopic.trendSignal || {}),
+        indicators: [
+          provider === "google_rss" ? "google_trends_rss" : "google_trends_api",
+        ],
+      };
+      break;
     }
   }
 
