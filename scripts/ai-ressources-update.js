@@ -2402,40 +2402,41 @@ async function draftArticleFromResearch(frData, research, validatedReferences) {
   const basePrompt = buildDraftPromptFromResearch(research, validatedReferences);
   let draftArticle = null;
   let accumulatedLabels = {};
+  const appendDraftContent = async (minWords) => {
+    const appendPayload = await azureOpenAIJson(
+      buildDraftAppendPromptFromExistingArticle(draftArticle, { minWords }),
+      {
+        endpoint: AZURE_OPENAI_DRAFT_ENDPOINT,
+        deployment: AZURE_OPENAI_DRAFT_DEPLOYMENT,
+        apiVersion: AZURE_OPENAI_DRAFT_API_VERSION,
+        temperature: 0.2,
+        topP: 0.9,
+        maxTokens: Math.min(2048, AZURE_OPENAI_DRAFT_MAX_TOKENS),
+        system: "You are an expert French SEO writer. Output ONLY a JSON object.",
+      },
+    );
+    const appendContent = appendPayload?.appendContent;
+    if (!appendContent || typeof appendContent !== "string") {
+      throw new Error("Append payload missing appendContent");
+    }
+    if (/https?:\/\//i.test(appendContent)) {
+      const err = new Error("Append content contains URLs (forbidden)");
+      err.code = "APPEND_HAS_URLS";
+      throw err;
+    }
+    accumulatedLabels = {
+      ...accumulatedLabels,
+      ...(appendPayload?.newLabels || {}),
+    };
+    draftArticle.content = `${String(draftArticle.content || "").trim()}\n\n${appendContent.trim()}`;
+  };
   for (let attempt = 1; attempt <= maxRetries + 1; attempt++) {
     console.log(
       `Requesting Azure OpenAI draft... (attempt ${attempt}/${maxRetries + 1})`,
     );
     try {
       if (draftArticle && lastError && lastError.code === "TOO_SHORT") {
-        const appendPayload = await azureOpenAIJson(
-          buildDraftAppendPromptFromExistingArticle(draftArticle, {
-            minWords: lastError.minWords,
-          }),
-          {
-            endpoint: AZURE_OPENAI_DRAFT_ENDPOINT,
-            deployment: AZURE_OPENAI_DRAFT_DEPLOYMENT,
-            apiVersion: AZURE_OPENAI_DRAFT_API_VERSION,
-            temperature: 0.2,
-            topP: 0.9,
-            maxTokens: Math.min(2048, AZURE_OPENAI_DRAFT_MAX_TOKENS),
-            system: "You are an expert French SEO writer. Output ONLY a JSON object.",
-          },
-        );
-        const appendContent = appendPayload?.appendContent;
-        if (!appendContent || typeof appendContent !== "string") {
-          throw new Error("Append payload missing appendContent");
-        }
-        if (/https?:\/\//i.test(appendContent)) {
-          const err = new Error("Append content contains URLs (forbidden)");
-          err.code = "APPEND_HAS_URLS";
-          throw err;
-        }
-        accumulatedLabels = {
-          ...accumulatedLabels,
-          ...(appendPayload?.newLabels || {}),
-        };
-        draftArticle.content = `${String(draftArticle.content || "").trim()}\n\n${appendContent.trim()}`;
+        await appendDraftContent(lastError.minWords);
       } else {
         const prompt =
           draftArticle && lastError && lastError.code === "TOO_LONG"
@@ -2467,6 +2468,28 @@ async function draftArticleFromResearch(frData, research, validatedReferences) {
         draftArticle = newArticle;
       }
 
+      // Lock references to the already validated list.
+      draftArticle.references = validatedReferences;
+      // Normalize expected author for this repo.
+      draftArticle.author = AUTHOR_NAME;
+      normalizeBrandCaseInArticle(draftArticle);
+      assertNoForbiddenTermsInArticle(draftArticle, "fr");
+      validateNewArticle(frData, draftArticle);
+      enforceTopicRotation(frData, draftArticle);
+      normalizeArticleDates(draftArticle);
+      return { newArticle: draftArticle, newLabels: accumulatedLabels };
+    } catch (error) {
+      lastError = error;
+      console.warn(`Draft invalid: ${error.message}`);
+    }
+  }
+
+  if (draftArticle && lastError && lastError.code === "TOO_SHORT") {
+    console.warn(
+      "Draft still too short after retries, requesting a final expansion...",
+    );
+    try {
+      await appendDraftContent(lastError.minWords);
       // Lock references to the already validated list.
       draftArticle.references = validatedReferences;
       // Normalize expected author for this repo.
