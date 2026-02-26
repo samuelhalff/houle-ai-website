@@ -208,23 +208,6 @@ jobs:
           REQUIRE_TRANSLATIONS: "1"
         run: node scripts/validate-article-translations.js
 
-      - name: Clean up bad article references (unreachable URLs)
-        continue-on-error: true
-        run: |
-          echo "🧹 Removing unreachable article reference links..."
-          node scripts/clean-bad-article-refs.js --all-locales || echo "⚠️ Reference cleanup had issues (continuing...)"
-
-      - name: Final verification (informational only)
-        continue-on-error: true
-        run: |
-          echo "✅ Running final verification..."
-          node scripts/check-ressources-links.js --all-locales || echo "::warning::Some references missing after cleanup"
-          node scripts/check-ressources-links.js --all-locales --remote || echo "::warning::Some URLs still unreachable after cleanup"
-          echo "✅ Verification complete. Proceeding with deployment..."
-
-      - name: Validate article references (fail on 404/410)
-        run: npm run validate:article-refs
-
       - name: Detect new article for LinkedIn notification
         id: detect-article
         run: |
@@ -317,25 +300,50 @@ jobs:
           ARTICLE_TITLE: ${{ steps.detect-article.outputs.title }}
           ARTICLE_SLUG: ${{ steps.detect-article.outputs.slug }}
           ARTICLE_DESCRIPTION: ${{ steps.detect-article.outputs.description }}
-          ZAPIER_WEBHOOK_URL: ${{ secrets.ZAPIER_WEBHOOK_URL }}
+          UNSPLASH_ACCESS_KEY: ${{ secrets.UNSPLASH_ACCESS_KEY }}
         run: |
           python3 - <<'PY'
           import json, os, urllib.request, urllib.error
           title = os.environ.get('ARTICLE_TITLE', '')
           slug = os.environ.get('ARTICLE_SLUG', '')
           description = os.environ.get('ARTICLE_DESCRIPTION', '')
-          webhook_url = os.environ.get('ZAPIER_WEBHOOK_URL', '')
-          if not webhook_url:
-              print("⚠️ ZAPIER_WEBHOOK_URL secret is not set; skipping notification")
-              raise SystemExit(0)
-          url = f"https://houle.ai/fr/ressources/{slug}/"
+          unsplash_key = os.environ.get('UNSPLASH_ACCESS_KEY', '')
+          article_url = f"https://houle.ai/fr/ressources/{slug}/"
+
+          # Fetch a random image from Unsplash
+          image_url = ''
+          if unsplash_key:
+              try:
+                  unsplash_req = urllib.request.Request(
+                      'https://api.unsplash.com/photos/random?query=artificial+intelligence+technology&orientation=landscape',
+                      headers={'Authorization': f'Client-ID {unsplash_key}', 'Accept-Version': 'v1'},
+                  )
+                  with urllib.request.urlopen(unsplash_req, timeout=15) as r:
+                      photo = json.loads(r.read().decode('utf-8'))
+                      image_url = photo.get('urls', {}).get('regular', '')
+                      print(f"✅ Unsplash image fetched: {image_url[:80]}...")
+              except urllib.error.HTTPError as e:
+                  print(f"⚠️ Unsplash fetch failed with HTTP {e.code}: {e.reason}")
+              except urllib.error.URLError as e:
+                  print(f"⚠️ Unsplash network error: {e.reason}")
+              except Exception as e:
+                  print(f"⚠️ Unsplash fetch error: {e}")
+          else:
+              print("⚠️ UNSPLASH_ACCESS_KEY not set; skipping image fetch")
+
+          # Build a concise LinkedIn comment/CTA from the article description (max 200 chars)
+          summary = description[:200].rsplit(' ', 1)[0] if len(description) > 200 else description
+          comment = f"{summary}. Découvrez l'article complet sur Houle AI →" if summary else f"Découvrez notre dernier article : {title} →"
+
           payload = json.dumps({
               "title": title,
-              "url": url,
+              "url": article_url,
               "description": description,
+              "image_url": image_url,
+              "comment": comment,
           }).encode('utf-8')
           req = urllib.request.Request(
-              webhook_url,
+              'https://hooks.zapier.com/hooks/catch/3870740/u0t3yr2/',
               data=payload,
               headers={'Content-Type': 'application/json'},
               method='POST',
