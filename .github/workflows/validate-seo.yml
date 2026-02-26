@@ -3,7 +3,12 @@ name: Validate SEO & sitemap
 on:
   pull_request:
     paths:
-      - '**/*'
+      - "app/**"
+      - "src/**"
+      - "public/**"
+      - "scripts/validate-seo.js"
+      - "scripts/ping-sitemaps.js"
+      - "next.config.js"
 
 jobs:
   check:

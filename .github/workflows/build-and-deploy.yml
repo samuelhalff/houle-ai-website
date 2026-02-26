@@ -45,12 +45,14 @@ jobs:
           cache: "npm"
 
       - name: Cache node_modules
+        id: cache-node-modules
         uses: actions/cache@v4
         with:
           path: node_modules
           key: node-modules-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
 
       - name: Install dependencies
+        if: steps.cache-node-modules.outputs.cache-hit != 'true'
         run: npm ci --prefer-offline --no-audit --no-fund
 
       - name: TypeScript type check
@@ -112,12 +114,14 @@ jobs:
           name: next-standalone
           path: ./artifact
 
+      - name: Install deploy tools
+        run: sudo apt-get update && sudo apt-get install -y sshpass curl
+
       - name: Prepare partial artifact
         run: cp artifact/next-standalone.tar.gz artifact/next-standalone.tar.gz.part
 
       - name: Upload release to server (rsync)
         run: |
-          sudo apt-get update && sudo apt-get install -y sshpass
           HOST="${{ secrets.DEPLOY_SSH_HOST }}"
           USER="${{ secrets.DEPLOY_SSH_USER }}"
           PASS="${{ secrets.DEPLOY_SSH_PASSWORD }}"
@@ -130,7 +134,6 @@ jobs:
 
       - name: Extract, symlink and cleanup releases
         run: |
-          sudo apt-get install -y sshpass
           HOST="${{ secrets.DEPLOY_SSH_HOST }}"
           USER="${{ secrets.DEPLOY_SSH_USER }}"
           PASS="${{ secrets.DEPLOY_SSH_PASSWORD }}"
@@ -201,7 +204,6 @@ jobs:
 
       - name: Restart Node.js server
         run: |
-          sudo apt-get install -y sshpass curl
           HOST="${{ secrets.DEPLOY_SSH_HOST }}"
           USER="${{ secrets.DEPLOY_SSH_USER }}"
           PASS="${{ secrets.DEPLOY_SSH_PASSWORD }}"
