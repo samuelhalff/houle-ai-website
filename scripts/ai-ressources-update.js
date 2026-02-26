@@ -2382,6 +2382,7 @@ async function generateResearchWithRetries(frData, attempts, trendData, seoSugge
         agentName: AZURE_AGENT_RESEARCH_NAME,
       });
       const research = validateResearchPayload(frData, payload);
+      enforceTopicRotation(frData, research);
       return { research, trendData };
     } catch (error) {
       lastError = error;

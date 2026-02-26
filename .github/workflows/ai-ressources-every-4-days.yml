@@ -182,8 +182,8 @@ jobs:
           REFERENCE_MIN_COUNT: "4"
           REFERENCE_MAX_COUNT: "6"
           # Enforce minimum article length (SEO)
-          SEO_MIN_WORDS: "1500"
-          SEO_MAX_WORDS: "3000"
+          SEO_MIN_WORDS: "2500"
+          SEO_MAX_WORDS: "3500"
         run: |
           node scripts/ai-ressources-update.js --apply --translate-existing
 
