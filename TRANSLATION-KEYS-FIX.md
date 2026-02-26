@@ -74,3 +74,70 @@ Keys for the bottom banner on article pages in the Resources section.
 ### Usage
 
 These keys are used in the article page component (`app/[locale]/ressources/articles/[slug]/page.tsx`) to display a localized contact banner at the bottom of each article.
+
+---
+
+## Namespace: contact (contact.json)
+
+Keys for the contact page and contact form.
+
+| Key | Description |
+|-----|-------------|
+| `Title` | Page heading |
+| `Contact.CompanyName` | Company name |
+| `Contact.Email` | Contact email address |
+| `Contact.Phone` | Contact phone number |
+| `Contact.Address` | Company address |
+| `Form.Name` | Name field label |
+| `Form.Email` | Email field label |
+| `Form.Message` | Message field label |
+
+---
+
+## Namespace: cookie (cookie.json)
+
+Keys for the cookie consent banner.
+
+| Key | Description |
+|-----|-------------|
+| `Title` | Banner title |
+| `Text` | Banner body text |
+| `LearnMore` | Link text for cookie settings page |
+| `Accept` | Accept button label |
+| `Decline` | Decline button label |
+| `Manage` | Manage cookies button label |
+
+---
+
+## Namespace: navbar (navbar.json)
+
+Keys for the navigation bar.
+
+| Key | Description |
+|-----|-------------|
+| `Home` | Home link label |
+| `Services` | Services link label |
+| `About` | About link label |
+| `Contact` | Contact link label |
+
+---
+
+## Namespace: footer (footer.json)
+
+Keys for the site footer.
+
+| Key | Description |
+|-----|-------------|
+| `Copyright` | Copyright notice text |
+
+---
+
+## Namespace: home (home.json)
+
+Keys for the home page.
+
+| Key | Description |
+|-----|-------------|
+| `Hero.Title` | Hero section headline |
+| `Hero.Description` | Hero section description |
+| `Services.Title` | Services section heading |
