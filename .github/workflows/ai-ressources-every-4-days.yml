@@ -310,7 +310,7 @@ jobs:
           slug = os.environ.get('ARTICLE_SLUG', '')
           description = os.environ.get('ARTICLE_DESCRIPTION', '')
           unsplash_key = os.environ.get('UNSPLASH_ACCESS_KEY', '')
-          article_url = f"https://houle.ai/fr/ressources/{slug}/"
+          article_url = f"https://houle.ai/fr/ressources/articles/{slug}/"
 
           # Fetch a random image from Unsplash
           image_url = ''
