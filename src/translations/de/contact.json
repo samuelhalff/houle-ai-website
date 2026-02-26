@@ -1,0 +1,14 @@
+{
+  "Title": "Kontakt aufnehmen",
+  "Contact": {
+    "CompanyName": "houle.ai",
+    "Email": "contact@houle.ai",
+    "Phone": "+41 22 000 0000",
+    "Address": "19 Pré-Roset, 1294 Genthod, Schweiz"
+  },
+  "Form": {
+    "Name": "Name",
+    "Email": "E-Mail",
+    "Message": "Wie können wir helfen?"
+  }
+}
