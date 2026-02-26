@@ -6,7 +6,7 @@
  * - Prints a concise report; exits non-zero when failures found unless --no-fail.
  *
  * Usage:
- *   node scripts/validate-article-refs.js [--no-fail] [--min-bytes 600]
+ *   node scripts/validate-article-refs.js [--no-fail] [--min-bytes 600] [--slug <slug>]
  */
 const fs = require('fs');
 const path = require('path');
@@ -21,6 +21,12 @@ const minBytesArg = (() => {
   if (i !== -1 && process.argv[i + 1]) return parseInt(process.argv[i + 1], 10) || 600;
   return 600;
 })();
+const slugFilter = (() => {
+  const i = process.argv.indexOf('--slug');
+  if (i !== -1 && process.argv[i + 1]) return process.argv[i + 1];
+  return null;
+})();
+const TRANSIENT_ERROR_REASONS = new Set(['server-error', 'timeout', 'network-error', 'http-error']);
 
 async function checkRef(url) {
   // Use the shared validator
@@ -51,6 +57,7 @@ async function main() {
     let json; try { json = JSON.parse(fs.readFileSync(p, 'utf8')); } catch { continue; }
     const arts = Array.isArray(json.Articles) ? json.Articles : [];
     for (const a of arts) {
+      if (slugFilter && a.slug !== slugFilter) continue;
       const refs = Array.isArray(a.references) ? a.references : [];
       for (const ref of refs) {
         tasks.push(async () => {
@@ -76,20 +83,26 @@ async function main() {
   });
   await Promise.all(runners);
   const bad = results.filter((r) => !r.ok);
-  const fatals = bad.filter((r) => r.reason === 'invalid-url' || r.reason === 'not-found' || r.status === 404 || r.status === 410);
-  const warnings = bad.filter((r) => !fatals.includes(r));
+  const warnings = bad.filter((r) => TRANSIENT_ERROR_REASONS.has(r.reason));
+  const fatals = bad.filter((r) => !TRANSIENT_ERROR_REASONS.has(r.reason));
   const summary = {
     checked: results.length,
     failures: fatals.length,
     warnings: warnings.length,
   };
-  if (bad.length) {
+  if (fatals.length) {
     console.log('✗ Invalid/weak references found (status/body too small/invalid URL):');
-    for (const r of bad) {
+    for (const r of fatals) {
       console.log(`- [${r.locale}] ${r.slug} :: ${r.labelKey || ''} -> ${r.url} (status: ${r.status || 'n/a'}, size: ${r.bodySize || 0}, reason: ${r.reason || r.error || 'weak-content'})`);
     }
   } else {
     console.log('✓ All references look valid and have content.');
+  }
+  if (warnings.length) {
+    console.log('⚠️ References with transient errors (not failing CI):');
+    for (const r of warnings) {
+      console.log(`- [${r.locale}] ${r.slug} :: ${r.labelKey || ''} -> ${r.url} (status: ${r.status || 'n/a'}, size: ${r.bodySize || 0}, reason: ${r.reason || r.error || 'transient-error'})`);
+    }
   }
   console.log(`Ref check summary: ${JSON.stringify(summary)}`);
   if (!NO_FAIL && fatals.length) process.exit(1);
