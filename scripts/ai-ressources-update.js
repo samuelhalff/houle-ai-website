@@ -1905,16 +1905,33 @@ function enforceTopicRotation(frData, newArticle, { relaxed = false } = {}) {
 
   // Get last 5 articles sorted by date (or 3 when relaxed on final retry)
   // relaxed=true is used on the last retry attempt to widen the topic space
-  const windowSize = relaxed ? 3 : 5;
+  let windowSize = relaxed ? 3 : 5;
   const sorted = [...articles].sort((a, b) =>
     (b.date || "").localeCompare(a.date || ""),
   );
-  const recentArticles = sorted.slice(0, windowSize);
 
   const nextTopic = detectTopic(newArticle);
   if (nextTopic === "general") return; // General topics are always allowed
 
-  // Check if this topic appears in any of the last 5 articles
+  // Auto-relax: when all non-general categories appear in the last 5 articles
+  // (complete topic cycle), shrink the window to 3 so the oldest category can
+  // be reused. Without this, every possible topic would be blocked forever once
+  // a full cycle completes.
+  if (!relaxed) {
+    const nonGeneralTopics = TOPIC_KEYWORDS
+      .filter((t) => t.topic !== "general")
+      .map((t) => t.topic);
+    const topicsInFive = new Set(
+      sorted.slice(0, 5).map((a) => detectTopic(a)).filter((t) => t !== "general"),
+    );
+    if (nonGeneralTopics.every((t) => topicsInFive.has(t))) {
+      windowSize = 3;
+    }
+  }
+
+  const recentArticles = sorted.slice(0, windowSize);
+
+  // Check if this topic appears in any of the recent articles
   for (const article of recentArticles) {
     const articleTopic = detectTopic(article);
     if (articleTopic === nextTopic) {
