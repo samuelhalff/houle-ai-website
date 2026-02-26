@@ -11,30 +11,7 @@ export async function generateMetadata({
   params: { locale: "en" | "fr" | "de" | "es" | "pt" };
 }): Promise<Metadata> {
   const locale = params?.locale || "en";
-
-  const titles: Record<string, string> = {
-    en: "houle | Private AI for Microsoft 365",
-    fr: "houle | IA Privée pour Microsoft 365",
-    de: "houle | Private KI für Microsoft 365",
-    es: "houle | IA Privada para Microsoft 365",
-    pt: "houle | IA Privada para Microsoft 365",
-  };
-
-  const descriptions: Record<string, string> = {
-    en: "houle brings private AI into Microsoft 365 with add-ins and GPT hosted in Switzerland.",
-    fr: "houle apporte l'IA privée dans Microsoft 365 avec des add-ins et un GPT hébergé en Suisse.",
-    de: "houle bringt private KI in Microsoft 365 mit Add-Ins und GPT gehostet in der Schweiz.",
-    es: "houle trae IA privada a Microsoft 365 con complementos y GPT alojado en Suiza.",
-    pt: "houle traz IA privada para o Microsoft 365 com complementos e GPT hospedado na Suíça.",
-  };
-
-  const baseMetadata = await getPageMetadata(locale as Locale, "/");
-
-  return {
-    ...baseMetadata,
-    title: titles[locale] || titles.en,
-    description: descriptions[locale] || descriptions.en,
-  };
+  return await getPageMetadata(locale as Locale, "/");
 }
 
 export default async function HomePage({
