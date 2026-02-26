@@ -541,7 +541,26 @@ async function getTopicSuggestions(options = {}) {
         score: scoreEvergreenTopic(t, { avoidTopics, recentTopicCategories, topicCounts }),
       }))
       .sort((a, b) => b.score - a.score);
-    const best = (candidates[0] && candidates[0].t) || EVERGREEN_TOPICS[0];
+    // When all categories are in avoidTopics (complete cycle), relax the constraint
+    // and pick the topic from the least-frequently-used category instead of
+    // hard-coding EVERGREEN_TOPICS[0] which is always the same "private-ai" topic.
+    let best;
+    if (candidates.length > 0) {
+      best = candidates[0].t;
+    } else {
+      const relaxedCandidates = EVERGREEN_TOPICS
+        .filter((t) => !existingSlugs.includes(t.topic))
+        .map((t) => ({
+          t,
+          count: (topicCounts && typeof topicCounts === "object")
+            ? (Number(topicCounts[t.category]) || 0)
+            : 0,
+        }))
+        .sort((a, b) => a.count - b.count);
+      best = (relaxedCandidates[0] && relaxedCandidates[0].t) || EVERGREEN_TOPICS[0];
+      const bestCount = (topicCounts && typeof topicCounts === "object") ? (Number(topicCounts[best.category]) || 0) : "?";
+      console.log(`[trends] All categories in avoidTopics; relaxed selection: "${best.category}" (count: ${bestCount})`);
+    }
     selectedTopic = {
       suggestedTopic: best.title,
       keywords: best.keywords,
