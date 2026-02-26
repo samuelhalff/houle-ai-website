@@ -3,11 +3,10 @@ import { locales } from '@/src/lib/i18n';
 import { submitToIndexNow } from '@/src/lib/indexnow';
 
 export async function POST(req: NextRequest) {
-  // Simple auth: check for secret header (hardcoded, not sensitive)
+  // Auth: check for secret header matching INDEXNOW_SECRET env variable
   const provided = req.headers.get('x-indexnow-secret');
-  const expected = 'houle-preview';
-  
-  if (provided !== expected) {
+  const expected = process.env.INDEXNOW_SECRET || '';
+  if (!expected || provided !== expected) {
     return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
   }
 
