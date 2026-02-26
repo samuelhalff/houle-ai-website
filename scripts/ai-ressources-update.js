@@ -530,7 +530,8 @@ function buildSystemPrompt(frJson, trendData = null) {
   const topicAnalysis = analyzeRecentTopics(frJson, 15);
 
   // Build topic guidance based on analysis
-  const avoidTopicsLabels = topicAnalysis.avoidTopics.map(describeTopic);
+  const blockedCategories = Array.isArray(trendData?.blockedCategories) ? trendData.blockedCategories : [];
+  const avoidTopicsLabels = [...new Set([...topicAnalysis.avoidTopics, ...blockedCategories])].map(describeTopic);
   const suggestedTopics = topicAnalysis.underrepresented.slice(0, 4);
 
   const topicNote = lastArticle
@@ -684,7 +685,8 @@ function buildResearchPrompt(frJson, trendData, seoSuggestions) {
   })();
 
   const topicAnalysis = analyzeRecentTopics(frJson, 15);
-  const avoidTopicsLabels = topicAnalysis.avoidTopics.map(describeTopic);
+  const blockedCategories = Array.isArray(trendData?.blockedCategories) ? trendData.blockedCategories : [];
+  const avoidTopicsLabels = [...new Set([...topicAnalysis.avoidTopics, ...blockedCategories])].map(describeTopic);
   const suggestedTopics = topicAnalysis.underrepresented.slice(0, 4);
   const recentSlugs = (Array.isArray(frJson.Articles) ? frJson.Articles : [])
     .slice(-12)
@@ -1897,15 +1899,17 @@ function validateNewArticle(frData, article) {
   }
 }
 
-function enforceTopicRotation(frData, newArticle) {
+function enforceTopicRotation(frData, newArticle, { relaxed = false } = {}) {
   const articles = Array.isArray(frData?.Articles) ? frData.Articles : [];
   if (!articles.length) return;
 
-  // Get last 5 articles sorted by date
+  // Get last 5 articles sorted by date (or 3 when relaxed on final retry)
+  // relaxed=true is used on the last retry attempt to widen the topic space
+  const windowSize = relaxed ? 3 : 5;
   const sorted = [...articles].sort((a, b) =>
     (b.date || "").localeCompare(a.date || ""),
   );
-  const recentArticles = sorted.slice(0, 5);
+  const recentArticles = sorted.slice(0, windowSize);
 
   const nextTopic = detectTopic(newArticle);
   if (nextTopic === "general") return; // General topics are always allowed
@@ -2262,7 +2266,8 @@ function logArticleMetrics(article, label = "article") {
 }
 
 async function generateArticleWithRetries(frData, attempts, trendData = null) {
-  const basePrompt = buildSystemPrompt(frData, trendData);
+  let currentTrendData = trendData;
+  let basePrompt = buildSystemPrompt(frData, currentTrendData);
   let prompt = basePrompt;
   let lastError = null;
 
@@ -2287,12 +2292,20 @@ async function generateArticleWithRetries(frData, attempts, trendData = null) {
         assertNoForbiddenTermsInArticle(newArticle, "fr");
       }
       validateNewArticle(frData, newArticle);
-      enforceTopicRotation(frData, newArticle);
+      enforceTopicRotation(frData, newArticle, { relaxed: attempt === attempts });
       normalizeArticleDates(newArticle);
-      return { newArticle, newLabels, trendData };
+      return { newArticle, newLabels, trendData: currentTrendData };
     } catch (error) {
       lastError = error;
       console.warn(`Draft invalid: ${error.message}`);
+      if (error.code === "TOPIC_DUPLICATE" && error.topic) {
+        currentTrendData = {
+          ...currentTrendData,
+          selectedTopic: null,
+          blockedCategories: [...(currentTrendData?.blockedCategories || []), error.topic],
+        };
+        basePrompt = buildSystemPrompt(frData, currentTrendData);
+      }
       prompt = buildRetryPrompt(basePrompt, error, frData);
     }
   }
@@ -2369,7 +2382,8 @@ function validateResearchPayload(frData, payload) {
 }
 
 async function generateResearchWithRetries(frData, attempts, trendData, seoSuggestions) {
-  const basePrompt = buildResearchPrompt(frData, trendData, seoSuggestions);
+  let currentTrendData = trendData;
+  let basePrompt = buildResearchPrompt(frData, currentTrendData, seoSuggestions);
   let prompt = basePrompt;
   let lastError = null;
 
@@ -2382,11 +2396,19 @@ async function generateResearchWithRetries(frData, attempts, trendData, seoSugge
         agentName: AZURE_AGENT_RESEARCH_NAME,
       });
       const research = validateResearchPayload(frData, payload);
-      enforceTopicRotation(frData, research);
-      return { research, trendData };
+      enforceTopicRotation(frData, research, { relaxed: attempt === attempts });
+      return { research, trendData: currentTrendData };
     } catch (error) {
       lastError = error;
       console.warn(`Research invalid: ${error.message}`);
+      if (error.code === "TOPIC_DUPLICATE" && error.topic) {
+        currentTrendData = {
+          ...currentTrendData,
+          selectedTopic: null,
+          blockedCategories: [...(currentTrendData?.blockedCategories || []), error.topic],
+        };
+        basePrompt = buildResearchPrompt(frData, currentTrendData, seoSuggestions);
+      }
       prompt = `${basePrompt}\n\n⚠️ Correction requise: ${error.message}. Retourne STRICTEMENT le JSON demandé.`;
     }
   }
