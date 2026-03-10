@@ -160,11 +160,11 @@ const EVERGREEN_TOPICS = [
     outline: ["Pourquoi tester", "Jeux de tests", "Métriques", "CI et régression", "Bonnes pratiques"],
   },
   {
-    topic: "outils-productivite-m365-automatisations",
-    title: "Automatisations Microsoft 365: 10 gains rapides sans compromis sur la sécurité",
-    keywords: ["automatisation", "Microsoft 365", "productivité", "Outlook", "Word", "process"],
+    topic: "automatisation-ia-workflows-gains-rapides",
+    title: "Automatisation des workflows avec l'IA: 10 gains de productivité pour équipes IT",
+    keywords: ["automatisation", "workflow", "Power Automate", "productivité", "IA", "processus"],
     category: "productivity",
-    outline: ["Prioriser", "Exemples concrets", "Contrôles et audit", "Déploiement", "Erreurs fréquentes"],
+    outline: ["Prioriser les processus", "Exemples concrets", "Contrôles et audit", "Déploiement", "Erreurs fréquentes"],
   },
   {
     topic: "ia-on-prem-ou-cloud-choisir",
@@ -172,6 +172,27 @@ const EVERGREEN_TOPICS = [
     keywords: ["on-prem", "cloud", "données sensibles", "latence", "coûts", "sécurité"],
     category: "private-ai",
     outline: ["Critères", "Modèles de menace", "Coûts", "Gouvernance", "Checklist"],
+  },
+  {
+    topic: "mesurer-roi-ia-entreprise-kpis-pilotage",
+    title: "Mesurer le ROI de l'IA en entreprise: KPIs, tableaux de bord et pilotage décisionnel",
+    keywords: ["ROI IA", "KPIs", "tableau de bord", "pilotage", "valeur ajoutée", "dirigeants"],
+    category: "enterprise",
+    outline: ["Définir le ROI IA", "KPIs métier", "Tableau de bord", "Feuille de route", "Erreurs fréquentes"],
+  },
+  {
+    topic: "power-automate-ia-processus-rh-finance",
+    title: "Power Automate + IA: automatiser les processus RH et finance sans compromis sur la conformité",
+    keywords: ["Power Automate", "automatisation", "RH", "finance", "conformité", "IA"],
+    category: "productivity",
+    outline: ["Cas d'usage RH", "Cas d'usage finance", "Contrôles de conformité", "Déploiement", "Checklist"],
+  },
+  {
+    topic: "politique-usage-ia-entreprise-rediger",
+    title: "Rédiger une politique d'usage de l'IA en entreprise: modèle, clauses obligatoires et gouvernance",
+    keywords: ["politique IA", "gouvernance", "usage acceptable", "conformité", "charte", "employés"],
+    category: "enterprise",
+    outline: ["Pourquoi une politique", "Clauses obligatoires", "Gouvernance", "Communication", "Révision"],
   },
 ];
 

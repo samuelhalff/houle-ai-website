@@ -500,6 +500,33 @@ function analyzeRecentTopics(frData, recentCount = 15) {
   };
 }
 
+/**
+ * Compute suggested topic labels for the AI prompt, always returning at least
+ * one positive suggestion even when all categories are saturated.
+ *
+ * @param {string[]} underrepresented - Labels of underrepresented topics from analyzeRecentTopics
+ * @param {string[]} avoidTopics - Topic keys to soft-avoid (e.g. last-5 topics)
+ * @param {string[]} blockedCategories - Topic keys strictly blocked for this retry
+ * @returns {string[]} List of topic labels to include as positive suggestions
+ */
+function computeSuggestedTopics(underrepresented, avoidTopics, blockedCategories) {
+  if (underrepresented.length > 0) return underrepresented.slice(0, 4);
+
+  // All topics are saturated – provide fallback suggestions so the AI always has
+  // a concrete positive target rather than only "avoid everything" guidance.
+  const allBlocked = new Set([...avoidTopics, ...blockedCategories]);
+  const fallback = TOPIC_KEYWORDS
+    .filter((t) => t.topic !== "general" && !allBlocked.has(t.topic))
+    .map((t) => t.label);
+  if (fallback.length > 0) return fallback.slice(0, 4);
+
+  // Last resort: suggest categories not in the strict per-retry block list
+  return TOPIC_KEYWORDS
+    .filter((t) => t.topic !== "general" && !blockedCategories.includes(t.topic))
+    .map((t) => t.label)
+    .slice(0, 3);
+}
+
 function buildSystemPrompt(frJson, trendData = null) {
   const today = isoDateToday();
   const twelveMonthsAgo = (() => {
@@ -532,7 +559,11 @@ function buildSystemPrompt(frJson, trendData = null) {
   // Build topic guidance based on analysis
   const blockedCategories = Array.isArray(trendData?.blockedCategories) ? trendData.blockedCategories : [];
   const avoidTopicsLabels = [...new Set([...topicAnalysis.avoidTopics, ...blockedCategories])].map(describeTopic);
-  const suggestedTopics = topicAnalysis.underrepresented.slice(0, 4);
+  const suggestedTopics = computeSuggestedTopics(
+    topicAnalysis.underrepresented,
+    topicAnalysis.avoidTopics,
+    blockedCategories,
+  );
 
   const topicNote = lastArticle
     ? `Dernier article publié le ${lastArticle.date}: "${
@@ -687,7 +718,12 @@ function buildResearchPrompt(frJson, trendData, seoSuggestions) {
   const topicAnalysis = analyzeRecentTopics(frJson, 15);
   const blockedCategories = Array.isArray(trendData?.blockedCategories) ? trendData.blockedCategories : [];
   const avoidTopicsLabels = [...new Set([...topicAnalysis.avoidTopics, ...blockedCategories])].map(describeTopic);
-  const suggestedTopics = topicAnalysis.underrepresented.slice(0, 4);
+  const suggestedTopics = computeSuggestedTopics(
+    topicAnalysis.underrepresented,
+    topicAnalysis.avoidTopics,
+    blockedCategories,
+  );
+
   const recentSlugs = (Array.isArray(frJson.Articles) ? frJson.Articles : [])
     .slice(-12)
     .map((a) => a.slug)
@@ -2419,10 +2455,24 @@ async function generateResearchWithRetries(frData, attempts, trendData, seoSugge
       lastError = error;
       console.warn(`Research invalid: ${error.message}`);
       if (error.code === "TOPIC_DUPLICATE" && error.topic) {
+        const updatedBlockedCategories = [...(currentTrendData?.blockedCategories || []), error.topic];
+        // Re-fetch trend suggestions with the newly blocked category so the AI gets
+        // a concrete alternative target rather than just an "avoid everything" list.
+        console.log(`[trends] Re-fetching topic after TOPIC_DUPLICATE (blocked: ${updatedBlockedCategories.join(", ")})`);
+        const topicAnalysis = analyzeRecentTopics(frData, 15);
+        const updatedAvoidTopics = [...new Set([...topicAnalysis.avoidTopics, ...updatedBlockedCategories])];
+        const freshTrendData = await getTopicSuggestions({
+          existingSlugs: (Array.isArray(frData.Articles) ? frData.Articles : []).map((a) => a.slug).filter(Boolean),
+          avoidTopics: updatedAvoidTopics,
+          recentTopicCategories: topicAnalysis.lastFiveTopics,
+          topicCounts: topicAnalysis.topicCounts,
+        });
+        if (freshTrendData.selectedTopic) {
+          console.log(`[trends] Fresh topic for retry: "${freshTrendData.selectedTopic.suggestedTopic}" (${freshTrendData.selectedTopic.category})`);
+        }
         currentTrendData = {
-          ...currentTrendData,
-          selectedTopic: null,
-          blockedCategories: [...(currentTrendData?.blockedCategories || []), error.topic],
+          ...freshTrendData,
+          blockedCategories: updatedBlockedCategories,
         };
         basePrompt = buildResearchPrompt(frData, currentTrendData, seoSuggestions);
       }
