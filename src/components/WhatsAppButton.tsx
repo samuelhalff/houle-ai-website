@@ -8,6 +8,8 @@ import type { Locale } from "@/src/lib/i18n-locales";
 
 const STORED_CONSENT_VALUES = new Set(["accepted", "minimal", "declined"]);
 const ENTRANCE_ANIMATION_DELAY = 180;
+const BASE_OFFSET = 16;
+const COOKIE_GAP = 12;
 
 function hasStoredConsent() {
   if (typeof window === "undefined") return false;
@@ -29,30 +31,72 @@ function hasStoredConsent() {
 
 export default function WhatsAppButton({ locale }: { locale: Locale }) {
   const [isReady, setIsReady] = useState(false);
-  const [hasConsent, setHasConsent] = useState(false);
+  const [bottomOffset, setBottomOffset] = useState(BASE_OFFSET);
+  const [cookieBannerVisible, setCookieBannerVisible] = useState(false);
 
   useEffect(() => {
-    setHasConsent(hasStoredConsent());
+    const updateOffset = () => {
+      const cookieBanner = document.querySelector<HTMLElement>(
+        "[data-cookie-banner='true']"
+      );
+      const cookieManage = document.querySelector<HTMLElement>(
+        "[data-cookie-manage='true']"
+      );
+
+      if (cookieBanner) {
+        const rect = cookieBanner.getBoundingClientRect();
+        setCookieBannerVisible(true);
+        setBottomOffset(Math.max(BASE_OFFSET, window.innerHeight - rect.top + COOKIE_GAP));
+        return;
+      }
+
+      setCookieBannerVisible(false);
+
+      if (cookieManage) {
+        const rect = cookieManage.getBoundingClientRect();
+        setBottomOffset(
+          Math.max(BASE_OFFSET, window.innerHeight - rect.top + COOKIE_GAP)
+        );
+        return;
+      }
+
+      setBottomOffset(BASE_OFFSET);
+    };
 
     const timer = window.setTimeout(
       () => setIsReady(true),
       ENTRANCE_ANIMATION_DELAY
     );
-    const onConsentChange = () => setHasConsent(true);
+    const onConsentChange = () => window.requestAnimationFrame(updateOffset);
+    const mutationObserver = new MutationObserver(() =>
+      window.requestAnimationFrame(updateOffset)
+    );
+    const resizeObserver = new ResizeObserver(() => updateOffset());
+
+    updateOffset();
+    if (document.body) {
+      resizeObserver.observe(document.body);
+      mutationObserver.observe(document.body, {
+        childList: true,
+        subtree: true,
+        attributes: true,
+      });
+    }
 
     window.addEventListener("cookie-consent-changed", onConsentChange);
+    window.addEventListener("resize", updateOffset);
 
     return () => {
       window.clearTimeout(timer);
       window.removeEventListener("cookie-consent-changed", onConsentChange);
+      window.removeEventListener("resize", updateOffset);
+      resizeObserver.disconnect();
+      mutationObserver.disconnect();
     };
   }, []);
 
   const copy = getWhatsAppContent(locale);
   const href = getWhatsAppLink(locale);
-  const bottomOffset = hasConsent
-    ? "calc(env(safe-area-inset-bottom, 0px) + 5rem)"
-    : "calc(env(safe-area-inset-bottom, 0px) + 9rem)";
 
   return (
     <a
@@ -61,32 +105,31 @@ export default function WhatsAppButton({ locale }: { locale: Locale }) {
       rel="noopener noreferrer"
       aria-label={copy.floatingAriaLabel}
       className={[
-        "group fixed right-4 z-40 inline-flex items-center gap-3 rounded-full px-4 py-3 text-white shadow-[0_20px_45px_-20px_rgba(37,211,102,0.9)] ring-1 ring-white/20 transition-all duration-500",
-        "bg-[linear-gradient(135deg,#25D366_0%,#1FA855_100%)] hover:-translate-y-1 hover:shadow-[0_24px_55px_-22px_rgba(37,211,102,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#25D366]",
+        "group fixed right-4 z-40 inline-flex size-12 items-center justify-center rounded-full border border-white/70 text-white shadow-[0_12px_30px_-16px_rgba(37,211,102,0.95)] transition-all duration-300",
+        "bg-[linear-gradient(180deg,#2CD96B_0%,#25D366_100%)] hover:-translate-y-0.5 hover:shadow-[0_16px_35px_-18px_rgba(37,211,102,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#25D366]",
         "motion-reduce:transition-none motion-reduce:transform-none",
-        isReady
+        isReady && !cookieBannerVisible
           ? "translate-y-0 scale-100 opacity-100"
           : "pointer-events-none translate-y-6 scale-95 opacity-0",
       ].join(" ")}
-      style={{ bottom: bottomOffset }}
+      style={{ bottom: `calc(env(safe-area-inset-bottom, 0px) + ${bottomOffset}px)` }}
     >
       <span
-        className="absolute inset-0 rounded-full bg-[#25D366]/30 blur-xl transition-opacity duration-500 group-hover:opacity-90"
+        className="absolute inset-0 rounded-full bg-[#25D366]/20 blur-lg transition-opacity duration-300 group-hover:opacity-80"
         aria-hidden="true"
       />
       <span
-        className="absolute -inset-1 rounded-full border border-white/20 opacity-70"
+        className="absolute inset-0 rounded-full bg-white/12"
         aria-hidden="true"
       />
-      <span className="relative flex size-11 items-center justify-center rounded-full bg-white/15 backdrop-blur-sm">
-        <span
-          className="absolute inset-0 rounded-full bg-white/20 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-          aria-hidden="true"
-        />
-        <WhatsAppIcon className="relative size-6 text-white" />
-      </span>
-      <span className="relative hidden text-sm font-semibold tracking-tight sm:inline">
+      <span
+        className="pointer-events-none absolute right-[calc(100%+0.75rem)] top-1/2 hidden -translate-y-1/2 rounded-full border bg-background/95 px-3 py-1.5 text-xs font-medium text-foreground opacity-0 shadow-sm transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100 group-focus-visible:translate-x-0 group-focus-visible:opacity-100 sm:block"
+        aria-hidden="true"
+      >
         {copy.floatingLabel}
+      </span>
+      <span className="relative flex size-12 items-center justify-center">
+        <WhatsAppIcon className="size-5 text-white" />
       </span>
     </a>
   );

@@ -1,8 +1,11 @@
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
 import { generateMetadataForPage } from "@/src/lib/metadata";
+import { Button } from "@/src/components/ui/button";
+import { Card, CardContent } from "@/src/components/ui/card";
+import { EnvelopeIcon } from "@/src/components/icons/EnvelopeIcon";
+import { PhoneIcon } from "@/src/components/icons/PhoneIcon";
 import { WhatsAppIcon } from "@/src/components/icons/WhatsAppIcon";
-import { Badge } from "@/src/components/ui/badge";
 import { getWhatsAppContent, getWhatsAppLink } from "@/src/lib/whatsapp";
 
 const ContactForm = dynamic(() => import("@/src/components/ui/contact-form"), {
@@ -28,9 +31,16 @@ const copy = {
     title: "Get in touch",
     subtitle:
       "We are onboarding a small number of teams for early pilots on Microsoft 365.",
-    emailLabel: "Email us at",
-    orContactUs: "Prefer email or a call?",
-    bookingButton: "Schedule a call",
+    callLabel: "Call",
+    callTitle: "Book a short call",
+    callDescription:
+      "The fastest way to discuss your Microsoft 365 setup, priorities, and next steps.",
+    bookingButton: "Book a call",
+    writeLabel: "Or write to us",
+    emailLabel: "Email",
+    emailDescription: "Best if you already know what you need.",
+    whatsappDescription: "Quick questions, short updates, and easy follow-up.",
+    formIntro: "Or send a message",
     labels: {
       name: "Name",
       companyName: "Company (optional)",
@@ -63,9 +73,17 @@ const copy = {
     title: "Contactez-nous",
     subtitle:
       "Nous accueillons quelques équipes pour des pilotes sur Microsoft 365.",
-    emailLabel: "Écrivez-nous à",
-    orContactUs: "Préférez un e-mail ou un appel ?",
-    bookingButton: "Planifier un appel",
+    callLabel: "Appel",
+    callTitle: "Réservez un court appel",
+    callDescription:
+      "Le moyen le plus simple pour parler de votre environnement Microsoft 365 et des prochaines étapes.",
+    bookingButton: "Réserver un appel",
+    writeLabel: "Ou écrivez-nous",
+    emailLabel: "E-mail",
+    emailDescription: "Idéal si vous savez déjà ce dont vous avez besoin.",
+    whatsappDescription:
+      "Pour une question rapide, un suivi simple ou un premier échange.",
+    formIntro: "Ou envoyez-nous un message",
     labels: {
       name: "Nom",
       companyName: "Entreprise (optionnel)",
@@ -98,9 +116,18 @@ const copy = {
     title: "Kontakt aufnehmen",
     subtitle:
       "Wir nehmen eine kleine Anzahl von Teams für frühe Pilotprojekte auf Microsoft 365 auf.",
-    emailLabel: "Schreiben Sie an",
-    orContactUs: "Lieber E-Mail oder Anruf?",
-    bookingButton: "Termin vereinbaren",
+    callLabel: "Anruf",
+    callTitle: "Kurzen Anruf buchen",
+    callDescription:
+      "Der schnellste Weg, um Ihre Microsoft-365-Situation, Prioritäten und nächsten Schritte zu besprechen.",
+    bookingButton: "Anruf buchen",
+    writeLabel: "Oder schreiben Sie uns",
+    emailLabel: "E-Mail",
+    emailDescription:
+      "Ideal, wenn Sie bereits wissen, wobei wir Ihnen helfen sollen.",
+    whatsappDescription:
+      "Für kurze Fragen, einfache Updates und einen lockeren Erstkontakt.",
+    formIntro: "Oder senden Sie uns eine Nachricht",
     labels: {
       name: "Name",
       companyName: "Firma (optional)",
@@ -133,9 +160,18 @@ const copy = {
     title: "Contactar",
     subtitle:
       "Estamos incorporando un pequeño número de equipos para pilotos iniciales en Microsoft 365.",
-    emailLabel: "Escríbenos a",
-    orContactUs: "¿Prefieres correo electrónico o llamada?",
-    bookingButton: "Programar una llamada",
+    callLabel: "Llamada",
+    callTitle: "Reserva una llamada breve",
+    callDescription:
+      "La forma más rápida de hablar sobre tu entorno Microsoft 365, prioridades y próximos pasos.",
+    bookingButton: "Reservar una llamada",
+    writeLabel: "O escríbenos",
+    emailLabel: "Correo",
+    emailDescription:
+      "Ideal si ya sabes qué necesitas y quieres compartir algo de contexto.",
+    whatsappDescription:
+      "Para preguntas rápidas, seguimiento simple y una primera conversación.",
+    formIntro: "O envíanos un mensaje",
     labels: {
       name: "Nombre",
       companyName: "Empresa (opcional)",
@@ -168,9 +204,18 @@ const copy = {
     title: "Entre em contato",
     subtitle:
       "Estamos integrando um pequeno número de equipes para pilotos iniciais no Microsoft 365.",
-    emailLabel: "Envie um e-mail para",
-    orContactUs: "Prefere e-mail ou ligação?",
+    callLabel: "Ligação",
+    callTitle: "Agende uma ligação curta",
+    callDescription:
+      "A forma mais rápida de conversar sobre o seu ambiente Microsoft 365, prioridades e próximos passos.",
     bookingButton: "Agendar uma ligação",
+    writeLabel: "Ou fale conosco por escrito",
+    emailLabel: "E-mail",
+    emailDescription:
+      "Ideal se você já sabe do que precisa e quer enviar mais contexto.",
+    whatsappDescription:
+      "Para perguntas rápidas, acompanhamento simples e um primeiro contato.",
+    formIntro: "Ou envie uma mensagem",
     labels: {
       name: "Nome",
       companyName: "Empresa (opcional)",
@@ -212,8 +257,8 @@ export default function ContactPage({
   const whatsappLink = getWhatsAppLink(locale);
 
   return (
-    <div className="mx-auto w-full max-w-[var(--breakpoint-xl)] px-6 py-12 space-y-10">
-      <div className="text-center space-y-3">
+    <div className="mx-auto w-full max-w-[var(--breakpoint-xl)] px-6 py-12 space-y-12">
+      <div className="mx-auto max-w-3xl text-center space-y-3">
         <p className="text-sm uppercase tracking-[0.18em] text-muted-foreground">
           {locale === "fr"
             ? "Contact"
@@ -231,46 +276,93 @@ export default function ContactPage({
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
           {strings.subtitle}
         </p>
-        <p className="text-base text-muted-foreground">
-          {strings.emailLabel}{" "}
-          <a className="text-primary underline" href="mailto:contact@houle.ai">
-            contact@houle.ai
-          </a>
-        </p>
       </div>
 
-      <div className="text-center">
-        <p className="text-base text-muted-foreground mb-4">
-          {strings.orContactUs}
-        </p>
-        <a
-          href={BOOKING_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center justify-center rounded-full bg-blue-700 text-white px-6 py-3 text-base font-medium shadow hover:shadow-lg transition-all hover:scale-[1.03] focus-visible:scale-[1.03] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-primary"
-        >
-          {strings.bookingButton}
-        </a>
-        <div className="mt-4">
-          <Badge asChild className="bg-[#25D366] px-3 py-1.5 text-sm text-white hover:bg-[#20bd5a]">
+      <Card className="mx-auto max-w-5xl border-border/70 bg-card/80 shadow-none hover:translate-y-0 hover:shadow-none">
+        <CardContent className="grid gap-6 px-6 py-6 md:grid-cols-[minmax(0,1.25fr)_minmax(0,0.95fr)] md:px-8 md:py-8">
+          <div className="space-y-5">
+            <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+              <PhoneIcon className="size-3.5" />
+              {strings.callLabel}
+            </div>
+            <div className="space-y-2">
+              <h2 className="text-2xl font-semibold tracking-tight">
+                {strings.callTitle}
+              </h2>
+              <p className="max-w-2xl text-sm leading-6 text-muted-foreground sm:text-base">
+                {strings.callDescription}
+              </p>
+            </div>
+            <Button asChild size="lg" className="rounded-full px-5">
+              <a
+                href={BOOKING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {strings.bookingButton}
+              </a>
+            </Button>
+          </div>
+
+          <div className="space-y-3 rounded-2xl border border-border/70 bg-background/70 p-4 sm:p-5">
+            <p className="text-sm font-medium text-foreground">
+              {strings.writeLabel}
+            </p>
             <a
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
               aria-label={whatsapp.floatingAriaLabel}
+              className="flex items-start gap-3 rounded-xl border border-border/70 px-4 py-3 transition-colors hover:bg-accent/40"
             >
-              <WhatsAppIcon className="size-4" />
-              {whatsapp.contactBadge}
+              <span className="mt-0.5 inline-flex size-9 items-center justify-center rounded-full bg-[#25D366]/12 text-[#1e9e53]">
+                <WhatsAppIcon className="size-4.5" />
+              </span>
+              <span className="space-y-0.5">
+                <span className="block text-sm font-medium text-foreground">
+                  {whatsapp.contactLabel}
+                </span>
+                <span className="block text-sm text-muted-foreground">
+                  {strings.whatsappDescription}
+                </span>
+              </span>
             </a>
-          </Badge>
-        </div>
-      </div>
+            <a
+              href="mailto:contact@houle.ai"
+              className="flex items-start gap-3 rounded-xl border border-border/70 px-4 py-3 transition-colors hover:bg-accent/40"
+              aria-label="Email contact@houle.ai"
+            >
+              <span className="mt-0.5 inline-flex size-9 items-center justify-center rounded-full bg-primary/10 text-primary">
+                <EnvelopeIcon className="size-4.5" />
+              </span>
+              <span className="space-y-0.5">
+                <span className="block text-sm font-medium text-foreground">
+                  {strings.emailLabel}
+                </span>
+                <span className="block text-sm text-muted-foreground">
+                  {strings.emailDescription}
+                </span>
+                <span className="block text-sm text-primary">
+                  contact@houle.ai
+                </span>
+              </span>
+            </a>
+          </div>
+        </CardContent>
+      </Card>
 
-      <ContactForm
-        showTitle={false}
-        showSubtitle={false}
-        strings={strings}
-      />
+      <div className="mx-auto max-w-4xl space-y-4">
+        <div className="text-center">
+          <p className="text-sm font-medium text-muted-foreground">
+            {strings.formIntro}
+          </p>
+        </div>
+        <ContactForm
+          showTitle={false}
+          showSubtitle={false}
+          strings={strings}
+        />
+      </div>
     </div>
   );
 }

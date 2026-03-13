@@ -1,3 +1,6 @@
+import { WhatsAppIcon } from "@/src/components/icons/WhatsAppIcon";
+import { getWhatsAppContent, getWhatsAppLink } from "@/src/lib/whatsapp";
+
 export default function Footer({ locale }: { locale?: string }) {
   const localePrefix = locale ? `/${locale}` : "/en";
 
@@ -99,6 +102,12 @@ export default function Footer({ locale }: { locale?: string }) {
   };
 
   const t = labels[locale as keyof typeof labels] || labels.en;
+  const whatsapp = getWhatsAppContent(
+    (locale as "en" | "fr" | "de" | "es" | "pt") || "en"
+  );
+  const whatsappLink = getWhatsAppLink(
+    (locale as "en" | "fr" | "de" | "es" | "pt") || "en"
+  );
 
   return (
     <footer className="mt-16 border-t bg-background text-foreground">
@@ -117,6 +126,16 @@ export default function Footer({ locale }: { locale?: string }) {
                 aria-label="Email contact@houle.ai"
               >
                 contact@houle.ai
+              </a>
+              <a
+                href={whatsappLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
+                aria-label={whatsapp.floatingAriaLabel}
+              >
+                <WhatsAppIcon className="size-4" />
+                {whatsapp.footerLabel}
               </a>
               <a
                 href="https://www.linkedin.com/company/houle-ai/"
