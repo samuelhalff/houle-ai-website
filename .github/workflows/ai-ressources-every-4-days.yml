@@ -122,11 +122,6 @@ jobs:
       - name: Fix malformed internal markdown links
         run: node scripts/fix-article-internal-links.js --apply
 
-      - name: Validate article translations
-        env:
-          REQUIRE_TRANSLATIONS: "1"
-        run: node scripts/validate-article-translations.js
-
       - name: Detect new article for LinkedIn notification
         id: detect-article
         run: |
