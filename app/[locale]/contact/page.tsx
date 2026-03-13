@@ -1,6 +1,9 @@
 import { Metadata } from "next";
 import dynamic from "next/dynamic";
 import { generateMetadataForPage } from "@/src/lib/metadata";
+import { WhatsAppIcon } from "@/src/components/icons/WhatsAppIcon";
+import { Badge } from "@/src/components/ui/badge";
+import { getWhatsAppContent, getWhatsAppLink } from "@/src/lib/whatsapp";
 
 const ContactForm = dynamic(() => import("@/src/components/ui/contact-form"), {
   ssr: false,
@@ -205,6 +208,8 @@ export default function ContactPage({
 }) {
   const locale = params?.locale || "en";
   const strings = copy[locale] || copy.en;
+  const whatsapp = getWhatsAppContent(locale);
+  const whatsappLink = getWhatsAppLink(locale);
 
   return (
     <div className="mx-auto w-full max-w-[var(--breakpoint-xl)] px-6 py-12 space-y-10">
@@ -246,6 +251,19 @@ export default function ContactPage({
         >
           {strings.bookingButton}
         </a>
+        <div className="mt-4">
+          <Badge asChild className="bg-[#25D366] px-3 py-1.5 text-sm text-white hover:bg-[#20bd5a]">
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={whatsapp.floatingAriaLabel}
+            >
+              <WhatsAppIcon className="size-4" />
+              {whatsapp.contactBadge}
+            </a>
+          </Badge>
+        </div>
       </div>
 
       <ContactForm

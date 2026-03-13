@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import { Suspense, type ReactNode } from "react";
 import nextDynamic from "next/dynamic";
 
+import WhatsAppButton from "@/src/components/WhatsAppButton";
 import { locales, type Locale } from "@/src/lib/i18n-locales";
 const isLocale = (value: string): value is Locale =>
   locales.includes(value as Locale);
@@ -123,6 +124,7 @@ export default async function LocaleLayout({
       <main id="main-content" role="main">
         {children}
       </main>
+      <WhatsAppButton locale={activeLocale} />
       <Suspense fallback={<div className="h-64 bg-muted" aria-hidden="true" />}>
         <Footer locale={activeLocale} />
       </Suspense>
