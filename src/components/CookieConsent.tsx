@@ -185,6 +185,18 @@ export default function CookieConsent({ nonce, locale = "fr", labels }: Props) {
     }
   }, [consent, applyGtagConsent]);
 
+  useEffect(() => {
+    try {
+      window.dispatchEvent(
+        new CustomEvent("cookie-consent-visibility", {
+          detail: consent === null ? "banner" : "manage",
+        })
+      );
+    } catch {
+      // Ignore event dispatch failures in restricted browsing contexts.
+    }
+  }, [consent]);
+
   const accept = () => {
     setConsent("accepted");
     setConsentState("accepted");

@@ -3,9 +3,7 @@ import { Suspense, type ReactNode } from "react";
 import nextDynamic from "next/dynamic";
 
 import WhatsAppButton from "@/src/components/WhatsAppButton";
-import { locales, type Locale } from "@/src/lib/i18n-locales";
-const isLocale = (value: string): value is Locale =>
-  locales.includes(value as Locale);
+import { locales, isLocale, type Locale } from "@/src/lib/i18n-locales";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));

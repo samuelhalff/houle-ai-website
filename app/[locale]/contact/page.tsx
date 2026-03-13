@@ -2,7 +2,6 @@ import { Metadata } from "next";
 import dynamic from "next/dynamic";
 import { generateMetadataForPage } from "@/src/lib/metadata";
 import { Button } from "@/src/components/ui/button";
-import { Card, CardContent } from "@/src/components/ui/card";
 import { EnvelopeIcon } from "@/src/components/icons/EnvelopeIcon";
 import { PhoneIcon } from "@/src/components/icons/PhoneIcon";
 import { WhatsAppIcon } from "@/src/components/icons/WhatsAppIcon";
@@ -82,7 +81,7 @@ const copy = {
     emailLabel: "E-mail",
     emailDescription: "Idéal si vous savez déjà ce dont vous avez besoin.",
     whatsappDescription:
-      "Pour une question rapide, un suivi simple ou un premier échange.",
+      "Pour des questions rapides, un suivi simple ou un premier échange.",
     formIntro: "Ou envoyez-nous un message",
     labels: {
       name: "Nom",
@@ -126,7 +125,7 @@ const copy = {
     emailDescription:
       "Ideal, wenn Sie bereits wissen, wobei wir Ihnen helfen sollen.",
     whatsappDescription:
-      "Für kurze Fragen, einfache Updates und einen lockeren Erstkontakt.",
+      "Für kurze Fragen, schnelle Rückfragen und einfache Updates.",
     formIntro: "Oder senden Sie uns eine Nachricht",
     labels: {
       name: "Name",
@@ -257,7 +256,7 @@ export default function ContactPage({
   const whatsappLink = getWhatsAppLink(locale);
 
   return (
-    <div className="mx-auto w-full max-w-[var(--breakpoint-xl)] px-6 py-12 space-y-12">
+    <div className="mx-auto w-full max-w-6xl px-6 py-12 space-y-12">
       <div className="mx-auto max-w-3xl text-center space-y-3">
         <p className="text-sm uppercase tracking-[0.18em] text-muted-foreground">
           {locale === "fr"
@@ -278,8 +277,7 @@ export default function ContactPage({
         </p>
       </div>
 
-      <Card className="mx-auto max-w-5xl border-border/70 bg-card/80 shadow-none hover:translate-y-0 hover:shadow-none">
-        <CardContent className="grid gap-6 px-6 py-6 md:grid-cols-[minmax(0,1.25fr)_minmax(0,0.95fr)] md:px-8 md:py-8">
+      <div className="mx-auto grid max-w-5xl gap-6 rounded-2xl border border-border/70 bg-card/80 px-6 py-6 md:grid-cols-2 md:px-8 md:py-8">
           <div className="space-y-5">
             <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
               <PhoneIcon className="size-3.5" />
@@ -316,7 +314,7 @@ export default function ContactPage({
               className="flex items-start gap-3 rounded-xl border border-border/70 px-4 py-3 transition-colors hover:bg-accent/40"
             >
               <span className="mt-0.5 inline-flex size-9 items-center justify-center rounded-full bg-[#25D366]/12 text-[#1e9e53]">
-                <WhatsAppIcon className="size-4.5" />
+                <WhatsAppIcon className="size-5" />
               </span>
               <span className="space-y-0.5">
                 <span className="block text-sm font-medium text-foreground">
@@ -333,7 +331,7 @@ export default function ContactPage({
               aria-label="Email contact@houle.ai"
             >
               <span className="mt-0.5 inline-flex size-9 items-center justify-center rounded-full bg-primary/10 text-primary">
-                <EnvelopeIcon className="size-4.5" />
+                <EnvelopeIcon className="size-5" />
               </span>
               <span className="space-y-0.5">
                 <span className="block text-sm font-medium text-foreground">
@@ -348,8 +346,7 @@ export default function ContactPage({
               </span>
             </a>
           </div>
-        </CardContent>
-      </Card>
+      </div>
 
       <div className="mx-auto max-w-4xl space-y-4">
         <div className="text-center">

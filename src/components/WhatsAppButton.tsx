@@ -5,34 +5,20 @@ import { useEffect, useState } from "react";
 import { WhatsAppIcon } from "@/src/components/icons/WhatsAppIcon";
 import { getWhatsAppContent, getWhatsAppLink } from "@/src/lib/whatsapp";
 import type { Locale } from "@/src/lib/i18n-locales";
+import { cn } from "@/src/lib/utils";
 
-const STORED_CONSENT_VALUES = new Set(["accepted", "minimal", "declined"]);
 const ENTRANCE_ANIMATION_DELAY = 180;
 const BASE_OFFSET = 16;
 const COOKIE_GAP = 12;
 
-function hasStoredConsent() {
-  if (typeof window === "undefined") return false;
-
-  try {
-    const stored = localStorage.getItem("cookieConsent");
-    return stored !== null && STORED_CONSENT_VALUES.has(stored);
-  } catch {
-    // localStorage may be unavailable in private browsing or strict privacy modes.
-  }
-
-  try {
-    return /(?:^|;\s*)cookieConsent=/.test(document.cookie);
-  } catch {
-    // Access to document.cookie can be blocked in hardened browsing contexts.
-    return false;
-  }
+function getCookieOffset(rectTop: number) {
+  return Math.max(BASE_OFFSET, window.innerHeight - rectTop + COOKIE_GAP);
 }
 
 export default function WhatsAppButton({ locale }: { locale: Locale }) {
   const [isReady, setIsReady] = useState(false);
   const [bottomOffset, setBottomOffset] = useState(BASE_OFFSET);
-  const [cookieBannerVisible, setCookieBannerVisible] = useState(false);
+  const [cookieUiVisible, setCookieUiVisible] = useState(false);
 
   useEffect(() => {
     const updateOffset = () => {
@@ -45,21 +31,19 @@ export default function WhatsAppButton({ locale }: { locale: Locale }) {
 
       if (cookieBanner) {
         const rect = cookieBanner.getBoundingClientRect();
-        setCookieBannerVisible(true);
-        setBottomOffset(Math.max(BASE_OFFSET, window.innerHeight - rect.top + COOKIE_GAP));
+        setCookieUiVisible(true);
+        setBottomOffset(getCookieOffset(rect.top));
         return;
       }
-
-      setCookieBannerVisible(false);
 
       if (cookieManage) {
         const rect = cookieManage.getBoundingClientRect();
-        setBottomOffset(
-          Math.max(BASE_OFFSET, window.innerHeight - rect.top + COOKIE_GAP)
-        );
+        setCookieUiVisible(true);
+        setBottomOffset(getCookieOffset(rect.top));
         return;
       }
 
+      setCookieUiVisible(false);
       setBottomOffset(BASE_OFFSET);
     };
 
@@ -67,31 +51,27 @@ export default function WhatsAppButton({ locale }: { locale: Locale }) {
       () => setIsReady(true),
       ENTRANCE_ANIMATION_DELAY
     );
-    const onConsentChange = () => window.requestAnimationFrame(updateOffset);
-    const mutationObserver = new MutationObserver(() =>
-      window.requestAnimationFrame(updateOffset)
-    );
-    const resizeObserver = new ResizeObserver(() => updateOffset());
+    const scheduleOffsetUpdate = () => window.requestAnimationFrame(updateOffset);
+    const resizeObserver = new ResizeObserver(updateOffset);
 
     updateOffset();
     if (document.body) {
       resizeObserver.observe(document.body);
-      mutationObserver.observe(document.body, {
-        childList: true,
-        subtree: true,
-        attributes: true,
-      });
     }
 
-    window.addEventListener("cookie-consent-changed", onConsentChange);
+    window.addEventListener("cookie-consent-changed", scheduleOffsetUpdate);
+    window.addEventListener("cookie-consent-visibility", scheduleOffsetUpdate);
     window.addEventListener("resize", updateOffset);
 
     return () => {
       window.clearTimeout(timer);
-      window.removeEventListener("cookie-consent-changed", onConsentChange);
+      window.removeEventListener("cookie-consent-changed", scheduleOffsetUpdate);
+      window.removeEventListener(
+        "cookie-consent-visibility",
+        scheduleOffsetUpdate
+      );
       window.removeEventListener("resize", updateOffset);
       resizeObserver.disconnect();
-      mutationObserver.disconnect();
     };
   }, []);
 
@@ -104,14 +84,18 @@ export default function WhatsAppButton({ locale }: { locale: Locale }) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={copy.floatingAriaLabel}
-      className={[
-        "group fixed right-4 z-40 inline-flex size-12 items-center justify-center rounded-full border border-white/70 text-white shadow-[0_12px_30px_-16px_rgba(37,211,102,0.95)] transition-all duration-300",
-        "bg-[linear-gradient(180deg,#2CD96B_0%,#25D366_100%)] hover:-translate-y-0.5 hover:shadow-[0_16px_35px_-18px_rgba(37,211,102,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-[#25D366]",
-        "motion-reduce:transition-none motion-reduce:transform-none",
-        isReady && !cookieBannerVisible
+      aria-hidden={cookieUiVisible}
+      tabIndex={cookieUiVisible ? -1 : 0}
+      className={cn(
+        "group fixed right-4 z-40 inline-flex size-12 items-center justify-center rounded-full border border-white/70 text-white transition-all duration-300",
+        "bg-[linear-gradient(180deg,#2CD96B_0%,#25D366_100%)] shadow-[0_12px_30px_-16px_rgba(37,211,102,0.95)]",
+        "hover:-translate-y-0.5 hover:shadow-[0_16px_35px_-18px_rgba(37,211,102,1)]",
+        "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2",
+        "motion-reduce:transform-none motion-reduce:transition-none",
+        isReady && !cookieUiVisible
           ? "translate-y-0 scale-100 opacity-100"
-          : "pointer-events-none translate-y-6 scale-95 opacity-0",
-      ].join(" ")}
+          : "pointer-events-none translate-y-6 scale-95 opacity-0"
+      )}
       style={{ bottom: `calc(env(safe-area-inset-bottom, 0px) + ${bottomOffset}px)` }}
     >
       <span
@@ -128,9 +112,7 @@ export default function WhatsAppButton({ locale }: { locale: Locale }) {
       >
         {copy.floatingLabel}
       </span>
-      <span className="relative flex size-12 items-center justify-center">
-        <WhatsAppIcon className="size-5 text-white" />
-      </span>
+      <WhatsAppIcon className="relative size-5 text-white" />
     </a>
   );
 }

@@ -1,8 +1,10 @@
 import { WhatsAppIcon } from "@/src/components/icons/WhatsAppIcon";
 import { getWhatsAppContent, getWhatsAppLink } from "@/src/lib/whatsapp";
+import { isLocale, type Locale } from "@/src/lib/i18n-locales";
 
 export default function Footer({ locale }: { locale?: string }) {
   const localePrefix = locale ? `/${locale}` : "/en";
+  const activeLocale: Locale = locale && isLocale(locale) ? locale : "en";
 
   const labels = {
     en: {
@@ -102,12 +104,8 @@ export default function Footer({ locale }: { locale?: string }) {
   };
 
   const t = labels[locale as keyof typeof labels] || labels.en;
-  const whatsapp = getWhatsAppContent(
-    (locale as "en" | "fr" | "de" | "es" | "pt") || "en"
-  );
-  const whatsappLink = getWhatsAppLink(
-    (locale as "en" | "fr" | "de" | "es" | "pt") || "en"
-  );
+  const whatsapp = getWhatsAppContent(activeLocale);
+  const whatsappLink = getWhatsAppLink(activeLocale);
 
   return (
     <footer className="mt-16 border-t bg-background text-foreground">

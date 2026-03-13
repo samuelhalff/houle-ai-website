@@ -1,5 +1,7 @@
 import type { Locale } from "@/src/lib/i18n-locales";
 
+// WhatsApp deep links require the international number format without "+"
+// because the wa.me API expects digits only in the phone segment.
 const WHATSAPP_PHONE = "41225125050";
 
 const whatsappCopy = {
