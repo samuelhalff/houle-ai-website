@@ -185,6 +185,18 @@ export default function CookieConsent({ nonce, locale = "fr", labels }: Props) {
     }
   }, [consent, applyGtagConsent]);
 
+  useEffect(() => {
+    try {
+      window.dispatchEvent(
+        new CustomEvent("cookie-consent-visibility", {
+          detail: consent === null ? "banner" : "manage",
+        })
+      );
+    } catch {
+      // Ignore event dispatch failures in restricted browsing contexts.
+    }
+  }, [consent]);
+
   const accept = () => {
     setConsent("accepted");
     setConsentState("accepted");
@@ -227,6 +239,7 @@ export default function CookieConsent({ nonce, locale = "fr", labels }: Props) {
             } catch {}
           }}
           className="fixed right-4 bottom-4 z-40 rounded-full border border-input bg-background/95 px-4 py-2 text-xs shadow-sm hover:bg-muted"
+          data-cookie-manage="true"
           aria-label={labels.Manage}
         >
           {labels.Manage}
@@ -268,6 +281,7 @@ export default function CookieConsent({ nonce, locale = "fr", labels }: Props) {
       {consent === null && (
         <div
           className="fixed inset-x-0 bottom-0 z-50"
+          data-cookie-banner="true"
           role="dialog"
           aria-modal="true"
           aria-labelledby="cookie-consent-title"

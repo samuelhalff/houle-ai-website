@@ -2,9 +2,8 @@ import { notFound } from "next/navigation";
 import { Suspense, type ReactNode } from "react";
 import nextDynamic from "next/dynamic";
 
-import { locales, type Locale } from "@/src/lib/i18n-locales";
-const isLocale = (value: string): value is Locale =>
-  locales.includes(value as Locale);
+import WhatsAppButton from "@/src/components/WhatsAppButton";
+import { locales, isLocale, type Locale } from "@/src/lib/i18n-locales";
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -123,6 +122,7 @@ export default async function LocaleLayout({
       <main id="main-content" role="main">
         {children}
       </main>
+      <WhatsAppButton locale={activeLocale} />
       <Suspense fallback={<div className="h-64 bg-muted" aria-hidden="true" />}>
         <Footer locale={activeLocale} />
       </Suspense>
