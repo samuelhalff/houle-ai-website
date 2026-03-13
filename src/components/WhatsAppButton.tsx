@@ -6,17 +6,23 @@ import { WhatsAppIcon } from "@/src/components/icons/WhatsAppIcon";
 import { getWhatsAppContent, getWhatsAppLink } from "@/src/lib/whatsapp";
 import type { Locale } from "@/src/lib/i18n-locales";
 
+const STORED_CONSENT_VALUES = new Set(["accepted", "minimal", "declined"]);
+const ENTRANCE_ANIMATION_DELAY = 180;
+
 function hasStoredConsent() {
   if (typeof window === "undefined") return false;
 
   try {
     const stored = localStorage.getItem("cookieConsent");
-    return stored === "accepted" || stored === "minimal" || stored === "declined";
-  } catch {}
+    return stored !== null && STORED_CONSENT_VALUES.has(stored);
+  } catch {
+    // localStorage may be unavailable in private browsing or strict privacy modes.
+  }
 
   try {
     return /(?:^|;\s*)cookieConsent=/.test(document.cookie);
   } catch {
+    // Access to document.cookie can be blocked in hardened browsing contexts.
     return false;
   }
 }
@@ -28,7 +34,10 @@ export default function WhatsAppButton({ locale }: { locale: Locale }) {
   useEffect(() => {
     setHasConsent(hasStoredConsent());
 
-    const timer = window.setTimeout(() => setIsReady(true), 180);
+    const timer = window.setTimeout(
+      () => setIsReady(true),
+      ENTRANCE_ANIMATION_DELAY
+    );
     const onConsentChange = () => setHasConsent(true);
 
     window.addEventListener("cookie-consent-changed", onConsentChange);

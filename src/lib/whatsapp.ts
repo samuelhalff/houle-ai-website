@@ -11,7 +11,7 @@ const whatsappCopy = {
   },
   fr: {
     floatingLabel: "Discuter sur WhatsApp",
-    floatingAriaLabel: "Ouvrir WhatsApp pour écrire à houle",
+    floatingAriaLabel: "Ouvrir le chat WhatsApp avec houle",
     contactBadge: "WhatsApp business",
     message:
       "Bonjour houle, j’aimerais en savoir plus sur vos services d’IA.",
