@@ -1375,21 +1375,49 @@ async function azureOpenAIJson(prompt, options = {}) {
   };
 
   const maxRetries = parseInt(process.env.AZURE_OPENAI_RETRIES || "6", 10);
+  const fetchTimeoutMs = parseInt(
+    process.env.AZURE_OPENAI_FETCH_TIMEOUT_MS || "600000",
+    10,
+  ); // default 10 min — translations of long articles can exceed undici's 5 min headersTimeout
   let attempt = 0;
   while (true) {
     attempt += 1;
     let res;
     try {
-      res = await fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "api-key": apiKey,
-        },
-        body: JSON.stringify(body),
-      });
+      const ac = new AbortController();
+      const timer = setTimeout(() => ac.abort(), fetchTimeoutMs);
+      try {
+        res = await fetch(url, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "api-key": apiKey,
+          },
+          body: JSON.stringify(body),
+          signal: ac.signal,
+        });
+      } finally {
+        clearTimeout(timer);
+      }
     } catch (error) {
       const cause = error?.cause;
+      const code = cause?.code || "";
+      const isNetworkError =
+        error?.name === "AbortError" ||
+        code === "UND_ERR_HEADERS_TIMEOUT" ||
+        code === "UND_ERR_CONNECT_TIMEOUT" ||
+        code === "ECONNRESET" ||
+        code === "ETIMEDOUT" ||
+        code === "ENOTFOUND" ||
+        /fetch failed|network|socket/i.test(error?.message || "");
+      if (isNetworkError && attempt <= maxRetries) {
+        const delay = Math.min(30000, 2000 * Math.pow(2, attempt - 1)) + Math.floor(Math.random() * 400);
+        console.warn(
+          `[WARN] Azure OpenAI network error (attempt ${attempt}/${maxRetries}): ${error?.message || "unknown"}. Retrying in ${delay}ms...`,
+        );
+        await sleep(delay);
+        continue;
+      }
       const details = [];
       if (cause?.code) details.push(`code=${cause.code}`);
       if (cause?.errno) details.push(`errno=${cause.errno}`);

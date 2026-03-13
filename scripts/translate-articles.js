@@ -144,13 +144,46 @@ async function azureChatJson(prompt) {
     response_format: { type: "json_object" },
   };
   let attempt = 0;
+  const fetchTimeoutMs = parseInt(
+    process.env.AZURE_OPENAI_FETCH_TIMEOUT_MS || "600000",
+    10,
+  );
   while (true) {
     attempt++;
-    const res = await fetch(url, {
-      method: "POST",
-      headers: { "Content-Type": "application/json", "api-key": AZURE.apiKey },
-      body: JSON.stringify(body),
-    });
+    let res;
+    try {
+      const ac = new AbortController();
+      const timer = setTimeout(() => ac.abort(), fetchTimeoutMs);
+      try {
+        res = await fetch(url, {
+          method: "POST",
+          headers: { "Content-Type": "application/json", "api-key": AZURE.apiKey },
+          body: JSON.stringify(body),
+          signal: ac.signal,
+        });
+      } finally {
+        clearTimeout(timer);
+      }
+    } catch (error) {
+      const cause = error?.cause;
+      const code = cause?.code || "";
+      const isNetworkError =
+        error?.name === "AbortError" ||
+        code === "UND_ERR_HEADERS_TIMEOUT" ||
+        code === "UND_ERR_CONNECT_TIMEOUT" ||
+        code === "ECONNRESET" ||
+        code === "ETIMEDOUT" ||
+        /fetch failed|network|socket/i.test(error?.message || "");
+      if (isNetworkError && attempt < maxAttempts) {
+        const delay = Math.min(30000, 2000 * Math.pow(2, attempt - 1)) + Math.floor(Math.random() * 400);
+        console.warn(
+          `[WARN] Azure network error (attempt ${attempt}/${maxAttempts}): ${error?.message || "unknown"}. Retrying in ${delay}ms...`,
+        );
+        await sleep(delay);
+        continue;
+      }
+      throw new Error(`Azure OpenAI fetch failed: ${error?.message || "unknown error"}`);
+    }
     const text = await res.text().catch(() => "");
     if (res.ok) {
       try {
