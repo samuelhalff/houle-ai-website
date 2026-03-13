@@ -18,7 +18,7 @@ function getCookieOffset(rectTop: number) {
 export default function WhatsAppButton({ locale }: { locale: Locale }) {
   const [isReady, setIsReady] = useState(false);
   const [bottomOffset, setBottomOffset] = useState(BASE_OFFSET);
-  const [cookieUiVisible, setCookieUiVisible] = useState(false);
+  const [bannerVisible, setBannerVisible] = useState(false);
 
   useEffect(() => {
     const updateOffset = () => {
@@ -31,19 +31,19 @@ export default function WhatsAppButton({ locale }: { locale: Locale }) {
 
       if (cookieBanner) {
         const rect = cookieBanner.getBoundingClientRect();
-        setCookieUiVisible(true);
+        setBannerVisible(true);
         setBottomOffset(getCookieOffset(rect.top));
         return;
       }
 
       if (cookieManage) {
         const rect = cookieManage.getBoundingClientRect();
-        setCookieUiVisible(true);
+        setBannerVisible(false);
         setBottomOffset(getCookieOffset(rect.top));
         return;
       }
 
-      setCookieUiVisible(false);
+      setBannerVisible(false);
       setBottomOffset(BASE_OFFSET);
     };
 
@@ -84,15 +84,15 @@ export default function WhatsAppButton({ locale }: { locale: Locale }) {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={copy.floatingAriaLabel}
-      aria-hidden={cookieUiVisible}
-      tabIndex={cookieUiVisible ? -1 : 0}
+      aria-hidden={bannerVisible}
+      tabIndex={bannerVisible ? -1 : 0}
       className={cn(
         "group fixed right-4 z-40 inline-flex size-12 items-center justify-center rounded-full border border-white/70 text-white transition-all duration-300",
         "bg-[linear-gradient(180deg,#2CD96B_0%,#25D366_100%)] shadow-[0_12px_30px_-16px_rgba(37,211,102,0.95)]",
         "hover:-translate-y-0.5 hover:shadow-[0_16px_35px_-18px_rgba(37,211,102,1)]",
         "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2",
         "motion-reduce:transform-none motion-reduce:transition-none",
-        isReady && !cookieUiVisible
+        isReady && !bannerVisible
           ? "translate-y-0 scale-100 opacity-100"
           : "pointer-events-none translate-y-6 scale-95 opacity-0"
       )}
