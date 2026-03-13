@@ -186,7 +186,7 @@ const SERVICES = [
 const TOPIC_KEYWORDS = [
   {
     topic: "private-ai",
-    label: "IA privée, sécurité et conformité",
+    label: "IA privée et protection des données",
     patterns: [
       /ia\s*priv[ée]e/i,
       /donn[ée]es?\s*sensibles/i,
@@ -198,66 +198,182 @@ const TOPIC_KEYWORDS = [
       /registre\s+des\s+traitements/i,
       /anonymis/i,
       /pseudonymis/i,
+      /on-?prem/i,
+      /souverainet[ée]\s+num[ée]rique/i,
     ],
   },
   {
     topic: "microsoft-365",
-    label: "Microsoft 365 (add-ins et intégrations)",
+    label: "Microsoft 365 et add-ins",
     patterns: [
       /microsoft\s*365/i,
       /\bm365\b/i,
-      /\boffice\b/i,
       /\boutlook\b/i,
-      /\bword\b/i,
       /\bteams\b/i,
       /add-?in/i,
       /office\.js/i,
-      /graph/i,
+      /copilot\s+(pour|for)\s+(microsoft|m365|office|word|excel)/i,
+      /sharepoint\s+(ia|ai|search|index)/i,
     ],
   },
   {
-    topic: "productivity",
-    label: "Productivité et automatisation",
+    topic: "automation",
+    label: "Automatisation et workflows IA",
     patterns: [
-      /automatis/i,
-      /workflow/i,
       /power\s*automate/i,
       /power\s*apps/i,
-      /power\s*bi/i,
       /power\s*platform/i,
-      /process/i,
-      /productivit[ée]/i,
+      /workflow.*ia/i,
+      /ia.*workflow/i,
+      /automatis.*workflow/i,
+      /workflow.*automatis/i,
+      /\brpa\b/i,
+      /no-?code.*ia/i,
+      /low-?code.*ia/i,
     ],
   },
   {
-    topic: "technology",
-    label: "Architecture, RAG et qualité (anti-hallucinations)",
+    topic: "rag-architecture",
+    label: "RAG, embeddings et architecture IA",
     patterns: [
       /\brag\b/i,
       /retrieval/i,
       /vector/i,
       /embedding/i,
       /fine-?tuning/i,
-      /prompt/i,
       /guardrail/i,
       /hallucin/i,
-      /evaluation/i,
-      /benchmark/i,
-      /monitoring/i,
+      /chunking/i,
+      /re-?rank/i,
+      /index.*s[ée]mantique/i,
     ],
   },
   {
-    topic: "enterprise",
-    label: "Gouvernance, adoption et ROI",
+    topic: "prompt-engineering",
+    label: "Prompt engineering et qualité LLM",
     patterns: [
-      /gouvernance/i,
-      /adoption/i,
-      /\broi\b/i,
-      /cas\s+d'usage/i,
+      /prompt\s*engineering/i,
+      /system\s*prompt/i,
+      /chain[- ]of[- ]thought/i,
+      /few[- ]shot/i,
+      /zero[- ]shot/i,
+      /\bllm\b.*qualit/i,
+      /qualit.*\bllm\b/i,
+      /\bllm\b.*[ée]valua/i,
+      /[ée]valua.*\bllm\b/i,
+      /jeux?\s+de\s+tests?\s+(?:ia|llm|prompt)/i,
+      /scoring.*(?:ia|llm)/i,
+    ],
+  },
+  {
+    topic: "cloud-infra",
+    label: "Infrastructure cloud et Azure AI",
+    patterns: [
+      /azure\s*open\s*ai/i,
+      /azure\s*ai/i,
+      /azure\s*cognitive/i,
+      /\brbac\b/i,
+      /infrastructure.*(?:ia|ai|cloud)/i,
+      /(?:ia|ai|cloud).*infrastructure/i,
+      /\baks\b/i,
+      /conteneur.*(?:ia|ai)/i,
+      /(?:ia|ai).*conteneur/i,
+      /api\s*management/i,
+      /\bgpu\b/i,
+    ],
+  },
+  {
+    topic: "governance",
+    label: "Gouvernance et politique IA",
+    patterns: [
+      /gouvernance\s*(?:ia|ai|donn)/i,
+      /politique\s*(?:ia|ai|usage)/i,
+      /charte\s*(?:ia|ai)/i,
+      /comit[ée]\s*(?:ia|ai|[ée]thique)/i,
+      /[ée]thique\s*(?:ia|ai)/i,
+      /regulat.*(?:ia|ai)/i,
+      /(?:ia|ai).*regulat/i,
+      /ai\s*act/i,
+      /usage\s*responsable/i,
+    ],
+  },
+  {
+    topic: "adoption-roi",
+    label: "Adoption IA et ROI",
+    patterns: [
+      /adoption\s*(?:ia|ai)/i,
+      /(?:ia|ai)\s*adoption/i,
+      /\broi\b.*(?:ia|ai)/i,
+      /(?:ia|ai).*\broi\b/i,
       /conduite\s+du\s+changement/i,
-      /politique/i,
-      /risque/i,
-      /compliance/i,
+      /change\s*management/i,
+      /transformation\s*(?:num[ée]rique|digitale)/i,
+      /feuille\s+de\s+route\s+(?:ia|ai)/i,
+      /strat[ée]gie\s+(?:ia|ai)/i,
+    ],
+  },
+  {
+    topic: "copilot",
+    label: "Copilot, assistants et agents IA",
+    patterns: [
+      /\bcopilot\b/i,
+      /assistant\s*(?:ia|ai|virtuel|intelligent)/i,
+      /(?:ia|ai)\s*assistant/i,
+      /agent\s*(?:ia|ai|intelligent|autonome)/i,
+      /(?:ia|ai)\s*agent/i,
+      /chatbot/i,
+      /multi[- ]agent/i,
+      /\bagentic\b/i,
+    ],
+  },
+  {
+    topic: "data-analytics",
+    label: "IA pour l'analyse de données et BI",
+    patterns: [
+      /power\s*bi/i,
+      /tableau\s+de\s+bord/i,
+      /business\s*intelligence/i,
+      /\bbi\b.*(?:ia|ai)/i,
+      /(?:ia|ai).*\bbi\b/i,
+      /analyse\s+(?:donn[ée]es|pr[ée]dictive)/i,
+      /pr[ée]di[ct].*(?:ia|ai|analytics)/i,
+      /data\s*(?:lake|warehouse|pipeline)/i,
+      /machine\s*learning/i,
+      /\bml\b.*(?:mod[eè]l|pipeline|deploy)/i,
+    ],
+  },
+  {
+    topic: "cybersecurity-ai",
+    label: "Cybersécurité et IA",
+    patterns: [
+      /cybers[ée]cu/i,
+      /s[ée]curit[ée]\s*(?:ia|ai|informatique)/i,
+      /(?:ia|ai).*s[ée]curit[ée]/i,
+      /d[ée]tection\s*(?:menace|intrusion|anomalie)/i,
+      /menace.*(?:ia|ai)/i,
+      /soc\b.*(?:ia|ai)/i,
+      /zero\s*trust/i,
+      /phishing.*(?:ia|ai)/i,
+      /(?:ia|ai).*phishing/i,
+    ],
+  },
+  {
+    topic: "sector-use-cases",
+    label: "Cas d'usage sectoriels (santé, finance, industrie, RH)",
+    patterns: [
+      /cas\s+d['']usage/i,
+      /sant[ée].*(?:ia|ai)/i,
+      /(?:ia|ai).*sant[ée]/i,
+      /finance.*(?:ia|ai)/i,
+      /(?:ia|ai).*finance/i,
+      /industri.*(?:ia|ai|4\.0)/i,
+      /(?:ia|ai).*industri/i,
+      /\brh\b.*(?:ia|ai)/i,
+      /(?:ia|ai).*\brh\b/i,
+      /logistique.*(?:ia|ai)/i,
+      /(?:ia|ai).*logistique/i,
+      /juridique.*(?:ia|ai)/i,
+      /(?:ia|ai).*juridique/i,
     ],
   },
   {
@@ -342,13 +458,8 @@ function normalizeBrandCaseInArticle(article) {
 }
 
 function assertNoForbiddenTermsInText(text, where = "text") {
-  if (typeof text !== "string" || !text) return;
-  if (/copilot/i.test(text)) {
-    const err = new Error(`Terme interdit détecté (Copilot) dans ${where}`);
-    err.code = "FORBIDDEN_TERM";
-    err.term = "copilot";
-    throw err;
-  }
+  // No-op: brand-specific term blocking was removed.
+  // Content validation is handled by the forbidden business topics checker below.
 }
 
 function assertNoForbiddenTermsInArticle(article, where = "article") {
@@ -488,15 +599,15 @@ function analyzeRecentTopics(frData, recentCount = 15) {
     (t) => (topicCounts[t.topic] || 0) <= 1,
   ).map((t) => t.label);
 
-  // Get last 5 topics to avoid immediate repetition
-  const lastFiveTopics = recent.slice(0, 5).map((a) => detectTopic(a));
+  // Get last 3 topics to avoid immediate repetition (with 12 categories, 3 is sufficient)
+  const lastThreeTopics = recent.slice(0, 3).map((a) => detectTopic(a));
 
   return {
     topicCounts,
     overrepresented,
     underrepresented,
-    lastFiveTopics,
-    avoidTopics: [...new Set(lastFiveTopics.filter((t) => t !== "general"))],
+    lastFiveTopics: lastThreeTopics,
+    avoidTopics: [...new Set(lastThreeTopics.filter((t) => t !== "general"))],
   };
 }
 
@@ -619,7 +730,7 @@ function buildSystemPrompt(frJson, trendData = null) {
     trendGuidance.push(
       "",
       "⚠️ IMPORTANT: Intègre ces mots-clés naturellement dans le titre, la description et le contenu pour optimiser le SEO.",
-      "⚠️ Le sujet suggéré est une indication, adapte-le selon nos services fiduciaires genevois.",
+      "⚠️ Le sujet suggéré est une indication, adapte-le selon nos services IA et Microsoft 365.",
     );
   }
 
@@ -795,7 +906,7 @@ function buildResearchPrompt(frJson, trendData, seoSuggestions) {
     '    "slug": "<slug-unique-fr>",',
     '    "title": "<titre FR>",',
     '    "description": "<description FR>",',
-    '    "category": "<private-ai|microsoft-365|productivity|technology|enterprise|general>",',
+    '    "category": "<private-ai|microsoft-365|automation|rag-architecture|prompt-engineering|cloud-infra|governance|adoption-roi|copilot|data-analytics|cybersecurity-ai|sector-use-cases|general>",',
     '    "primaryKeyword": "<mot-clé principal>",',
     '    "secondaryKeywords": ["..."],',
     '    "outline": ["H2 ...", "H2 ...", "FAQ ..."],',
@@ -1967,9 +2078,9 @@ function enforceTopicRotation(frData, newArticle, { relaxed = false } = {}) {
   const articles = Array.isArray(frData?.Articles) ? frData.Articles : [];
   if (!articles.length) return;
 
-  // Get last 5 articles sorted by date (or 3 when relaxed on final retry)
+  // Get last 3 articles sorted by date (or 2 when relaxed on final retry)
   // relaxed=true is used on the last retry attempt to widen the topic space
-  let windowSize = relaxed ? 3 : 5;
+  let windowSize = relaxed ? 2 : 3;
   const sorted = [...articles].sort((a, b) =>
     (b.date || "").localeCompare(a.date || ""),
   );
@@ -1977,19 +2088,17 @@ function enforceTopicRotation(frData, newArticle, { relaxed = false } = {}) {
   const nextTopic = detectTopic(newArticle);
   if (nextTopic === "general") return; // General topics are always allowed
 
-  // Auto-relax: when all non-general categories appear in the last 5 articles
-  // (complete topic cycle), shrink the window to 3 so the oldest category can
-  // be reused. Without this, every possible topic would be blocked forever once
-  // a full cycle completes.
+  // Auto-relax: when all non-general categories appear in the last 3 articles
+  // (unlikely with 12 categories), shrink the window to 2.
   if (!relaxed) {
     const nonGeneralTopics = TOPIC_KEYWORDS
       .filter((t) => t.topic !== "general")
       .map((t) => t.topic);
-    const topicsInFive = new Set(
-      sorted.slice(0, 5).map((a) => detectTopic(a)).filter((t) => t !== "general"),
+    const topicsInThree = new Set(
+      sorted.slice(0, 3).map((a) => detectTopic(a)).filter((t) => t !== "general"),
     );
-    if (nonGeneralTopics.every((t) => topicsInFive.has(t))) {
-      windowSize = 3;
+    if (nonGeneralTopics.every((t) => topicsInThree.has(t))) {
+      windowSize = 2;
     }
   }
 

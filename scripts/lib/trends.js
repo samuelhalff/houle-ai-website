@@ -21,150 +21,20 @@
  */
 
 const EVERGREEN_TOPICS = [
+  // --- private-ai ---
   {
     topic: "ia-privee-microsoft-365-suisse",
-    title:
-      "IA privée pour Microsoft 365: architecture, hébergement en Suisse et bonnes pratiques",
-    keywords: [
-      "IA privée",
-      "Microsoft 365",
-      "hébergement en Suisse",
-      "confidentialité",
-      "sécurité",
-      "conformité",
-    ],
+    title: "IA privée pour Microsoft 365: architecture, hébergement en Suisse et bonnes pratiques",
+    keywords: ["IA privée", "Microsoft 365", "hébergement en Suisse", "confidentialité", "sécurité", "conformité"],
     category: "private-ai",
-    outline: [
-      "Pourquoi l'IA privée",
-      "Architecture cible",
-      "Hébergement et isolation",
-      "Gouvernance et contrôles",
-      "Checklist de déploiement",
-    ],
+    outline: ["Pourquoi l'IA privée", "Architecture cible", "Hébergement et isolation", "Gouvernance et contrôles", "Checklist de déploiement"],
   },
   {
     topic: "nlpd-rgpd-assistant-ia-entreprise",
-    title:
-      "nLPD et RGPD pour un assistant IA en entreprise: ce qu'il faut documenter",
-    keywords: [
-      "nLPD",
-      "RGPD",
-      "protection des données",
-      "assistant IA",
-      "registre des traitements",
-      "DPIA",
-    ],
+    title: "nLPD et RGPD pour un assistant IA en entreprise: ce qu'il faut documenter",
+    keywords: ["nLPD", "RGPD", "protection des données", "assistant IA", "registre des traitements", "DPIA"],
     category: "private-ai",
-    outline: [
-      "Cadre légal",
-      "Données et finalités",
-      "Mesures techniques et organisationnelles",
-      "Sous-traitants",
-      "Checklist conformité",
-    ],
-  },
-  {
-    topic: "outlook-add-in-tri-reponses-automatiques",
-    title:
-      "Outlook add-in: automatiser tri, réponses et suivi sans exposer vos emails",
-    keywords: [
-      "Outlook add-in",
-      "automatisation",
-      "emails",
-      "productivité",
-      "sécurité",
-      "Microsoft 365",
-    ],
-    category: "microsoft-365",
-    outline: [
-      "Cas d'usage",
-      "Architecture et permissions",
-      "Sécurité et logs",
-      "Déploiement IT",
-      "Erreurs fréquentes",
-    ],
-  },
-  {
-    topic: "word-add-in-generation-documents-ia",
-    title:
-      "Word add-in: générer des documents fiables (contrats, PV, rapports) avec IA et sources internes",
-    keywords: [
-      "Word add-in",
-      "génération de documents",
-      "RAG",
-      "modèles",
-      "validation",
-      "Microsoft 365",
-    ],
-    category: "microsoft-365",
-    outline: [
-      "Cas d'usage",
-      "Règles de qualité",
-      "Sources et citations",
-      "Process de validation",
-      "Checklist",
-    ],
-  },
-  {
-    topic: "rag-ou-finetuning-choisir",
-    title:
-      "RAG ou fine-tuning: comment choisir pour des documents internes (et éviter les hallucinations)",
-    keywords: [
-      "RAG",
-      "fine-tuning",
-      "hallucinations",
-      "documents internes",
-      "évaluation",
-      "qualité",
-    ],
-    category: "technology",
-    outline: [
-      "Définitions",
-      "Quand RAG est meilleur",
-      "Quand fine-tuning aide",
-      "Évaluation et métriques",
-      "Plan de mise en œuvre",
-    ],
-  },
-  {
-    topic: "azure-openai-entreprise-checklist-securite",
-    title: "Azure OpenAI en entreprise: checklist sécurité, réseau, clés et monitoring",
-    keywords: ["Azure OpenAI", "sécurité", "réseau", "monitoring", "clés", "RBAC"],
-    category: "technology",
-    outline: [
-      "Architecture réseau",
-      "Gestion des identités",
-      "Secrets et clés",
-      "Observabilité",
-      "Checklist déploiement",
-    ],
-  },
-  {
-    topic: "strategie-adoption-ia-roi-gouvernance",
-    title: "Adoption IA: cadrer le ROI, la gouvernance et les risques avant de déployer",
-    keywords: ["adoption IA", "ROI", "gouvernance", "risques", "pilotage", "change management"],
-    category: "enterprise",
-    outline: [
-      "Choisir les bons cas d'usage",
-      "Modèle de gouvernance",
-      "KPIs et ROI",
-      "Gestion des risques",
-      "Feuille de route 90 jours",
-    ],
-  },
-  {
-    topic: "evaluation-qualite-prompts-llm",
-    title: "Évaluer la qualité d'un assistant IA: jeux de tests, scoring et régression",
-    keywords: ["évaluation", "prompt", "LLM", "tests", "régression", "qualité"],
-    category: "technology",
-    outline: ["Pourquoi tester", "Jeux de tests", "Métriques", "CI et régression", "Bonnes pratiques"],
-  },
-  {
-    topic: "automatisation-ia-workflows-gains-rapides",
-    title: "Automatisation des workflows avec l'IA: 10 gains de productivité pour équipes IT",
-    keywords: ["automatisation", "workflow", "Power Automate", "productivité", "IA", "processus"],
-    category: "productivity",
-    outline: ["Prioriser les processus", "Exemples concrets", "Contrôles et audit", "Déploiement", "Erreurs fréquentes"],
+    outline: ["Cadre légal", "Données et finalités", "Mesures techniques et organisationnelles", "Sous-traitants", "Checklist conformité"],
   },
   {
     topic: "ia-on-prem-ou-cloud-choisir",
@@ -173,26 +43,170 @@ const EVERGREEN_TOPICS = [
     category: "private-ai",
     outline: ["Critères", "Modèles de menace", "Coûts", "Gouvernance", "Checklist"],
   },
+  // --- microsoft-365 ---
   {
-    topic: "mesurer-roi-ia-entreprise-kpis-pilotage",
-    title: "Mesurer le ROI de l'IA en entreprise: KPIs, tableaux de bord et pilotage décisionnel",
-    keywords: ["ROI IA", "KPIs", "tableau de bord", "pilotage", "valeur ajoutée", "dirigeants"],
-    category: "enterprise",
-    outline: ["Définir le ROI IA", "KPIs métier", "Tableau de bord", "Feuille de route", "Erreurs fréquentes"],
+    topic: "outlook-add-in-tri-reponses-automatiques",
+    title: "Outlook add-in: automatiser tri, réponses et suivi sans exposer vos emails",
+    keywords: ["Outlook add-in", "automatisation", "emails", "productivité", "sécurité", "Microsoft 365"],
+    category: "microsoft-365",
+    outline: ["Cas d'usage", "Architecture et permissions", "Sécurité et logs", "Déploiement IT", "Erreurs fréquentes"],
+  },
+  {
+    topic: "word-add-in-generation-documents-ia",
+    title: "Word add-in: générer des documents fiables (contrats, PV, rapports) avec IA et sources internes",
+    keywords: ["Word add-in", "génération de documents", "RAG", "modèles", "validation", "Microsoft 365"],
+    category: "microsoft-365",
+    outline: ["Cas d'usage", "Règles de qualité", "Sources et citations", "Process de validation", "Checklist"],
+  },
+  // --- automation ---
+  {
+    topic: "automatisation-ia-workflows-gains-rapides",
+    title: "Automatiser les workflows avec l'IA: 10 gains de productivité pour équipes IT",
+    keywords: ["automatisation", "workflow", "Power Automate", "productivité", "IA", "processus"],
+    category: "automation",
+    outline: ["Prioriser les processus", "Exemples concrets", "Contrôles et audit", "Déploiement", "Erreurs fréquentes"],
   },
   {
     topic: "power-automate-ia-processus-rh-finance",
-    title: "Power Automate + IA: automatiser les processus RH et finance sans compromis sur la conformité",
+    title: "Power Automate et IA: automatiser les processus RH et finance conformément",
     keywords: ["Power Automate", "automatisation", "RH", "finance", "conformité", "IA"],
-    category: "productivity",
+    category: "automation",
     outline: ["Cas d'usage RH", "Cas d'usage finance", "Contrôles de conformité", "Déploiement", "Checklist"],
   },
+  // --- rag-architecture ---
+  {
+    topic: "rag-ou-finetuning-choisir",
+    title: "RAG ou fine-tuning: comment choisir pour des documents internes (et éviter les hallucinations)",
+    keywords: ["RAG", "fine-tuning", "hallucinations", "documents internes", "évaluation", "qualité"],
+    category: "rag-architecture",
+    outline: ["Définitions", "Quand RAG est meilleur", "Quand fine-tuning aide", "Évaluation et métriques", "Plan de mise en œuvre"],
+  },
+  {
+    topic: "chunking-strategies-rag-performance",
+    title: "Stratégies de chunking pour un RAG performant: taille, overlap et re-ranking",
+    keywords: ["chunking", "RAG", "re-ranking", "embeddings", "overlap", "performance"],
+    category: "rag-architecture",
+    outline: ["Pourquoi le chunking compte", "Taille et overlap", "Re-ranking", "Métriques", "Exemples"],
+  },
+  // --- prompt-engineering ---
+  {
+    topic: "evaluation-qualite-prompts-llm",
+    title: "Évaluer la qualité d'un assistant IA: jeux de tests, scoring et régression",
+    keywords: ["évaluation", "prompt", "LLM", "tests", "régression", "qualité"],
+    category: "prompt-engineering",
+    outline: ["Pourquoi tester", "Jeux de tests", "Métriques", "CI et régression", "Bonnes pratiques"],
+  },
+  {
+    topic: "prompt-engineering-techniques-avancees",
+    title: "Prompt engineering avancé: chain-of-thought, few-shot et system prompts efficaces",
+    keywords: ["prompt engineering", "chain-of-thought", "few-shot", "system prompt", "LLM", "qualité"],
+    category: "prompt-engineering",
+    outline: ["Fondamentaux", "Chain-of-thought", "Few-shot learning", "System prompts", "Erreurs courantes"],
+  },
+  // --- cloud-infra ---
+  {
+    topic: "azure-openai-entreprise-checklist-securite",
+    title: "Azure OpenAI en entreprise: checklist sécurité, réseau, clés et monitoring",
+    keywords: ["Azure OpenAI", "sécurité", "réseau", "monitoring", "clés", "RBAC"],
+    category: "cloud-infra",
+    outline: ["Architecture réseau", "Gestion des identités", "Secrets et clés", "Observabilité", "Checklist déploiement"],
+  },
+  {
+    topic: "gpu-serverless-vs-dedicated-ia",
+    title: "GPU serverless ou dédié pour l'IA: coûts, latence et architecture sur Azure",
+    keywords: ["GPU", "serverless", "Azure", "latence", "coûts", "infrastructure IA"],
+    category: "cloud-infra",
+    outline: ["Serverless vs dédié", "Cas d'usage", "Coûts", "Architecture", "Checklist"],
+  },
+  // --- governance ---
   {
     topic: "politique-usage-ia-entreprise-rediger",
-    title: "Rédiger une politique d'usage de l'IA en entreprise: modèle, clauses obligatoires et gouvernance",
+    title: "Rédiger une politique d'usage de l'IA en entreprise: modèle et clauses",
     keywords: ["politique IA", "gouvernance", "usage acceptable", "conformité", "charte", "employés"],
-    category: "enterprise",
+    category: "governance",
     outline: ["Pourquoi une politique", "Clauses obligatoires", "Gouvernance", "Communication", "Révision"],
+  },
+  {
+    topic: "comite-ethique-ia-entreprise-mise-en-place",
+    title: "Mettre en place un comité éthique IA: rôles, processus et critères d'évaluation",
+    keywords: ["comité éthique", "IA", "gouvernance", "évaluation", "risques", "processus"],
+    category: "governance",
+    outline: ["Pourquoi un comité", "Composition", "Critères d'évaluation", "Processus de décision", "Suivi"],
+  },
+  // --- adoption-roi ---
+  {
+    topic: "strategie-adoption-ia-roi-gouvernance",
+    title: "Adoption IA: cadrer le ROI, la gouvernance et les risques avant de déployer",
+    keywords: ["adoption IA", "ROI", "gouvernance", "risques", "pilotage", "change management"],
+    category: "adoption-roi",
+    outline: ["Choisir les cas d'usage", "Modèle de gouvernance", "KPIs et ROI", "Gestion des risques", "Feuille de route 90 jours"],
+  },
+  {
+    topic: "mesurer-roi-ia-entreprise-kpis-pilotage",
+    title: "Mesurer le ROI de l'IA en entreprise: KPIs, tableaux de bord et pilotage",
+    keywords: ["ROI IA", "KPIs", "tableau de bord", "pilotage", "valeur ajoutée", "dirigeants"],
+    category: "adoption-roi",
+    outline: ["Définir le ROI IA", "KPIs métier", "Tableau de bord", "Feuille de route", "Erreurs fréquentes"],
+  },
+  // --- copilot ---
+  {
+    topic: "copilot-microsoft-365-deploiement-guide",
+    title: "Copilot pour Microsoft 365: guide de déploiement, licences et bonnes pratiques",
+    keywords: ["Copilot", "Microsoft 365", "déploiement", "licences", "productivité", "IA"],
+    category: "copilot",
+    outline: ["Qu'est-ce que Copilot", "Licences et prérequis", "Déploiement", "Formation", "Mesurer l'impact"],
+  },
+  {
+    topic: "agents-ia-autonomes-multi-agents-entreprise",
+    title: "Agents IA autonomes et multi-agents: architecturer des workflows intelligents en entreprise",
+    keywords: ["agents IA", "multi-agent", "agentic", "workflow", "autonome", "orchestration"],
+    category: "copilot",
+    outline: ["Agents vs assistants", "Architecture multi-agent", "Cas d'usage", "Risques", "Mise en œuvre"],
+  },
+  // --- data-analytics ---
+  {
+    topic: "power-bi-ia-tableaux-bord-predictifs",
+    title: "Power BI et IA: créer des tableaux de bord prédictifs pour dirigeants",
+    keywords: ["Power BI", "IA", "prédictif", "tableau de bord", "analyse", "dirigeants"],
+    category: "data-analytics",
+    outline: ["Pourquoi le prédictif", "Intégration IA", "Exemples", "Gouvernance données", "Bonnes pratiques"],
+  },
+  {
+    topic: "machine-learning-donnees-entreprise-pipeline",
+    title: "Pipeline ML sur données d'entreprise: de la collecte au déploiement du modèle",
+    keywords: ["machine learning", "pipeline", "données", "modèle", "déploiement", "MLOps"],
+    category: "data-analytics",
+    outline: ["Collecte et nettoyage", "Feature engineering", "Entraînement", "Déploiement", "Monitoring"],
+  },
+  // --- cybersecurity-ai ---
+  {
+    topic: "cybersecurite-ia-detection-menaces",
+    title: "IA et cybersécurité: détecter les menaces plus vite avec le machine learning",
+    keywords: ["cybersécurité", "IA", "détection menaces", "machine learning", "SOC", "anomalies"],
+    category: "cybersecurity-ai",
+    outline: ["Paysage des menaces", "IA pour la détection", "Intégration SOC", "Faux positifs", "Bonnes pratiques"],
+  },
+  {
+    topic: "zero-trust-ia-identite-acces",
+    title: "Zero trust et IA: renforcer la gestion des identités et des accès",
+    keywords: ["zero trust", "IA", "identité", "accès", "RBAC", "sécurité"],
+    category: "cybersecurity-ai",
+    outline: ["Principes zero trust", "IA pour l'authentification", "Détection anomalies", "Architecture", "Mise en œuvre"],
+  },
+  // --- sector-use-cases ---
+  {
+    topic: "ia-sante-cas-usage-suisse",
+    title: "IA dans la santé en Suisse: cas d'usage, réglementation et perspectives",
+    keywords: ["IA santé", "Suisse", "cas d'usage", "réglementation", "données patients", "éthique"],
+    category: "sector-use-cases",
+    outline: ["Cas d'usage cliniques", "Réglementation suisse", "Protection des données", "Exemples concrets", "Perspectives"],
+  },
+  {
+    topic: "ia-rh-recrutement-gestion-talents",
+    title: "IA pour les RH: automatiser le recrutement et la gestion des talents",
+    keywords: ["IA RH", "recrutement", "gestion des talents", "automatisation", "biais", "éthique"],
+    category: "sector-use-cases",
+    outline: ["Screening CV", "Chatbots RH", "Gestion des talents", "Biais algorithmiques", "Bonnes pratiques"],
   },
 ];
 
@@ -419,13 +433,30 @@ function filterRelevantTrends(trends = []) {
 
 function guessCategoryFromText(text) {
   const s = String(text || "").toLowerCase();
-  if (/(rgpd|gdpr|nlpd|privacy|confidentialit|protection des donn)/i.test(s)) return "private-ai";
-  if (/(outlook|word|excel|powerpoint|teams|office 365|microsoft 365|add-?in|compl[ée]ment)/i.test(s))
+  // Order matters: more specific patterns first
+  if (/(rgpd|gdpr|nlpd|privacy|confidentialit|protection des donn|on-?prem|souverainet)/i.test(s)) return "private-ai";
+  if (/(outlook|word|excel|powerpoint|teams|office 365|microsoft 365|add-?in|compl[ée]ment|sharepoint)/i.test(s))
     return "microsoft-365";
-  if (/(automation|automatisation|workflow|productivit)/i.test(s)) return "productivity";
-  if (/\brag\b/i.test(s)) return "technology";
-  if (/(vector|embedding|fine-?tuning|eval|prompt|\bllm\b|\bgpt\b|openai|azure)/i.test(s)) return "technology";
-  if (/(enterprise|entreprise|roi|gouvernance|adoption|change)/i.test(s)) return "enterprise";
+  if (/(copilot|assistant\s*(?:ia|ai|virtuel)|agent\s*(?:ia|ai|intelligent|autonome)|chatbot|multi[- ]agent|agentic)/i.test(s))
+    return "copilot";
+  if (/(cybers[ée]cu|d[ée]tection\s*(?:menace|intrusion)|zero\s*trust|phishing.*ia|soc\b.*ia)/i.test(s))
+    return "cybersecurity-ai";
+  if (/(\brag\b|retrieval|vector|embedding|fine-?tuning|guardrail|hallucin|chunking|re-?rank)/i.test(s))
+    return "rag-architecture";
+  if (/(prompt\s*engineering|system\s*prompt|chain[- ]of[- ]thought|few[- ]shot|zero[- ]shot|scoring.*llm|jeux?\s+de\s+tests?)/i.test(s))
+    return "prompt-engineering";
+  if (/(azure\s*(?:open\s*ai|ai|cognitive)|\brbac\b|infrastructure.*(?:ia|cloud)|\baks\b|\bgpu\b|api\s*management)/i.test(s))
+    return "cloud-infra";
+  if (/(power\s*(?:automate|apps|platform)|\brpa\b|no-?code.*ia|low-?code.*ia|workflow.*(?:ia|automatis)|automatis.*workflow)/i.test(s))
+    return "automation";
+  if (/(gouvernance\s*(?:ia|ai)|politique\s*(?:ia|ai)|charte\s*(?:ia|ai)|[ée]thique\s*(?:ia|ai)|ai\s*act|usage\s*responsable)/i.test(s))
+    return "governance";
+  if (/(adoption\s*(?:ia|ai)|\broi\b.*(?:ia|ai)|conduite\s+du\s+changement|transformation\s*(?:num|digit)|feuille\s+de\s+route|strat[ée]gie\s+(?:ia|ai))/i.test(s))
+    return "adoption-roi";
+  if (/(power\s*bi|business\s*intelligence|analyse\s+(?:donn|pr[ée]dict)|machine\s*learning|data\s*(?:lake|warehouse|pipeline)|\bml\b.*(?:mod|pipeline))/i.test(s))
+    return "data-analytics";
+  if (/(cas\s+d[''']usage|sant[ée].*ia|ia.*sant[ée]|finance.*ia|ia.*finance|industri.*(?:ia|4\.0)|\brh\b.*ia|ia.*\brh\b|logistique.*ia|juridique.*ia)/i.test(s))
+    return "sector-use-cases";
   return "general";
 }
 
