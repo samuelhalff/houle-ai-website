@@ -38,18 +38,15 @@ jobs:
         run: npm ci --prefer-offline --no-audit --no-fund
 
       - name: Validate article translations
-        continue-on-error: true
         env:
           REQUIRE_TRANSLATIONS: "1"
         run: node scripts/validate-article-translations.js
 
       - name: Clean up bad article references
-        continue-on-error: true
-        run: node scripts/clean-bad-article-refs.js --all-locales || echo "⚠️ Reference cleanup had issues"
+        run: node scripts/clean-bad-article-refs.js --all-locales
 
       - name: Check resource links
-        continue-on-error: true
-        run: node scripts/check-ressources-links.js --all-locales || echo "⚠️ Some references missing"
+        run: node scripts/check-ressources-links.js --all-locales --remote
 
       - name: Commit fixes (if any)
         run: |

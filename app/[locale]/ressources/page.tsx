@@ -2,13 +2,9 @@ import React from "react";
 import { type Metadata } from "next";
 import { headers } from "next/headers";
 import { Suspense } from "react";
-import Link from "next/link";
-import nextDynamic from "next/dynamic";
-const ResourceGrid = nextDynamic(() => import("./components/ResourceGrid"), {
-  suspense: true,
-});
 import FAQSection from "./components/FAQSection";
 import ContactSection from "./articles/components/ContactSection";
+import ProgressiveResourceGrid from "./components/ProgressiveResourceGrid";
 import { notFound } from "next/navigation";
 import { getPageMetadata } from "@/src/lib/metadata";
 import { getTranslations, isValidLocale, type Locale } from "@/src/lib/i18n";
@@ -117,28 +113,12 @@ async function loadRessources(locale: Locale): Promise<RessourcesData> {
   }
 }
 
-function parseLimit(
-  value: string | string[] | undefined,
-  total: number,
-  step: number
-) {
-  if (!value) return step;
-  const resolved = Array.isArray(value) ? value[0] : value;
-  if (resolved === "all") return total;
-  const numeric = Number.parseInt(resolved, 10);
-  if (Number.isNaN(numeric) || numeric <= 0) return step;
-  return Math.min(numeric, total);
-}
-
-// Force dynamic rendering to ensure JSON imports are always fresh
 export const dynamic = "force-dynamic";
 
 export default async function RessourcesPage({
   params,
-  searchParams,
 }: {
   params: { locale: string };
-  searchParams?: ArticlesSearchParams;
 }) {
   const nonce = headers().get("x-nonce") || undefined;
   const requestedLocale = params?.locale;
@@ -160,36 +140,6 @@ export default async function RessourcesPage({
   const articlesCanonical = [...articlesFr]
     .sort((a, b) => (b.date || "").localeCompare(a.date || ""))
     .map((article) => articlesMap.get(article.slug) ?? article);
-
-  const step = 12;
-  const articlesLimit = parseLimit(
-    searchParams?.articles,
-    articlesCanonical.length,
-    step
-  );
-  const visibleArticles = articlesCanonical.slice(0, articlesLimit);
-  const showMoreArticles = articlesLimit < articlesCanonical.length;
-  const nextArticles = Math.min(articlesLimit + step, articlesCanonical.length);
-
-  const buildHref = (next: { articles?: number | "all" }, hash?: string) => {
-    const params = new URLSearchParams();
-    const current = searchParams ?? {};
-    const resolveValue = (
-      key: keyof ArticlesSearchParams,
-      fallback?: number | "all"
-    ) => {
-      const candidate = fallback ?? current[key];
-      if (!candidate) return undefined;
-      const value = Array.isArray(candidate) ? candidate[0] : candidate;
-      return value;
-    };
-    const articlesParam = resolveValue("articles", next.articles);
-    if (articlesParam) params.set("articles", String(articlesParam));
-    const query = params.toString();
-    return `/${locale}/ressources${query ? `?${query}` : ""}${
-      hash ? `#${hash}` : ""
-    }`;
-  };
 
   const labels = {
     ReadArticle: ressources.ReadArticle || "Read Article",
@@ -242,7 +192,6 @@ export default async function RessourcesPage({
         </ol>
       </nav>
       <section className="mb-16 relative py-8 px-6 md:px-8">
-        {/* Decorative gradient background */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/5 dark:from-primary/10 dark:to-primary/10 rounded-3xl -z-10" />
 
         <h1 className="text-3xl xs:text-4xl md:text-5xl font-bold mb-5 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">
@@ -269,30 +218,15 @@ export default async function RessourcesPage({
             </div>
           }
         >
-          <ResourceGrid
-            articles={visibleArticles}
+          <ProgressiveResourceGrid
+            articles={articlesCanonical}
             locale={locale}
             labels={labels}
+            step={12}
+            loadMoreLabel={ressources.LoadMoreArticles || "Load more articles"}
+            showAllLabel={ressources.ShowAllArticles || "Show all"}
           />
         </Suspense>
-        {showMoreArticles && (
-          <div className="flex items-center gap-3 justify-center mt-6">
-            <Link
-              className="px-4 py-2 border rounded-md text-sm hover:bg-muted"
-              href={buildHref({ articles: nextArticles }, "articles")}
-              scroll={false}
-            >
-              {ressources.LoadMoreArticles || "Load more articles"}
-            </Link>
-            <Link
-              className="px-3 py-2 text-xs text-muted-foreground hover:underline"
-              href={buildHref({ articles: "all" }, "articles")}
-              scroll={false}
-            >
-              {ressources.ShowAllArticles || "Show all"}
-            </Link>
-          </div>
-        )}
       </section>
       <FAQSection faq={ressources.FAQ || {}} locale={locale} nonce={nonce} />
 
@@ -323,8 +257,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const targetLocale = isValidLocale(locale) ? locale : "fr";
   const metadata = await getPageMetadata(targetLocale, "/ressources");
-  
-  // If there are query parameters (like ?articles=12), add noindex to prevent duplicate content
+
   if (searchParams && Object.keys(searchParams).length > 0) {
     return {
       ...metadata,
@@ -341,6 +274,6 @@ export async function generateMetadata({
       },
     };
   }
-  
+
   return metadata;
 }

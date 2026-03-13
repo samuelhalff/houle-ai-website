@@ -94,11 +94,6 @@ export function middleware(request: NextRequest) {
     const restNoTrailingSlash =
       rest.length > 1 && rest.endsWith("/") ? rest.slice(0, -1) : rest;
 
-    const hasFileExtension = /\.[a-zA-Z0-9]+$/.test(restNoTrailingSlash);
-    const isSpecialRoute =
-      restNoTrailingSlash.includes("/opengraph-image") ||
-      restNoTrailingSlash.includes("/twitter-image");
-
     const redirectWithHeaders = (targetPath: string) => {
       const redirectUrl = new URL(targetPath, request.url);
       redirectUrl.search = request.nextUrl.search;
@@ -131,6 +126,31 @@ export function middleware(request: NextRequest) {
       return response;
     };
 
+    const goneWithHeaders = () => {
+      const response = new NextResponse("Gone", { status: 410 });
+      response.headers.set("x-nonce", nonce);
+      response.headers.set("x-pathname", pathname);
+      response.headers.set("Content-Security-Policy", csp);
+      response.headers.set("Referrer-Policy", "no-referrer-when-downgrade");
+      response.headers.set("X-Content-Type-Options", "nosniff");
+      response.headers.set("X-Frame-Options", "SAMEORIGIN");
+      response.headers.set("X-DNS-Prefetch-Control", "on");
+      response.headers.set("Cross-Origin-Opener-Policy", "same-origin");
+      response.headers.set(
+        "Permissions-Policy",
+        "geolocation=(), microphone=(), camera=()",
+      );
+      if (isProd) {
+        response.headers.set(
+          "Strict-Transport-Security",
+          "max-age=63072000; includeSubDomains; preload",
+        );
+      }
+      response.headers.set("Cache-Control", "public, max-age=0, must-revalidate");
+      response.headers.set("X-Robots-Tag", "noindex, nofollow");
+      return response;
+    };
+
     if (restNoTrailingSlash === "/$") {
       return redirectWithHeaders(`${localePrefix}/`);
     }
@@ -139,12 +159,7 @@ export function middleware(request: NextRequest) {
       /^\/(?:services\/)?\[[^\]]+\]\((\/[^)]+)\)$/,
     );
     if (mdPathMatch) {
-      let innerPath = mdPathMatch[1];
-      let target = `${localePrefix}${innerPath}`;
-      if (!target.endsWith("/") && !hasFileExtension && !isSpecialRoute) {
-        target += "/";
-      }
-      return redirectWithHeaders(target);
+      return goneWithHeaders();
     }
   }
 
