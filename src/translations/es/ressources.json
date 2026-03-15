@@ -20,6 +20,10 @@
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
     },
@@ -34,6 +38,10 @@
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
     },
@@ -99,6 +107,10 @@
       "author": "houle Team",
       "date": "2025-12-09",
       "references": [
+        {
+          "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/"
+        },
         {
           "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
@@ -173,6 +185,10 @@
       "references": [
         {
           "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/"
+        },
+        {
+          "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
         },
         {
@@ -210,6 +226,10 @@
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
     },
@@ -346,6 +366,10 @@
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
     },
@@ -500,6 +524,10 @@
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
     },
@@ -511,6 +539,10 @@
       "author": "houle Team",
       "date": "2025-11-17",
       "references": [
+        {
+          "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/"
+        },
         {
           "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
@@ -604,6 +636,10 @@
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
     },
@@ -633,6 +669,10 @@
       "author": "houle Team",
       "date": "2025-11-13",
       "references": [
+        {
+          "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/"
+        },
         {
           "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
@@ -672,6 +712,10 @@
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
     },
@@ -686,6 +730,10 @@
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
     },
@@ -700,6 +748,10 @@
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
     },
@@ -782,6 +834,10 @@
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
     },
@@ -806,6 +862,10 @@
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
     },
@@ -996,6 +1056,10 @@
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
     },
@@ -1010,6 +1074,10 @@
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
     },
@@ -1042,6 +1110,10 @@
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
     },
@@ -1074,6 +1146,10 @@
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
     },
@@ -1088,6 +1164,10 @@
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
     },
@@ -1117,6 +1197,10 @@
       "author": "houle Team",
       "date": "2025-09-17",
       "references": [
+        {
+          "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/"
+        },
         {
           "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
@@ -1197,6 +1281,10 @@
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
     },
@@ -1211,6 +1299,10 @@
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
     },
@@ -1289,6 +1381,10 @@
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
     },
@@ -1375,6 +1471,10 @@
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
     },
@@ -1425,6 +1525,10 @@
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
     },
@@ -1439,6 +1543,10 @@
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
     },
@@ -1710,7 +1818,7 @@
         },
         {
           "labelKey": "ISO/IEC 42001 : Une gouvernance responsable de l'IA",
-          "url": "https://www.digicomp.ch/blognews/2025/06/24/iso-iec-42001-une-gouvernance-responsable-de-lia"
+          "url": "https://digicomp.ch/blognews/2025/06/24/iso-iec-42001-une-gouvernance-responsable-de-lia"
         },
         {
           "labelKey": "Analyser les risques ESG et de réputation avec l’IA",
@@ -1748,7 +1856,7 @@
         },
         {
           "labelKey": "IA et automatisation des workflows IT pour la productivité",
-          "url": "https://www.studiodahu.ch/blog/ia-automatisation-2026-pieges-a-eviter"
+          "url": "https://www.studiodahu.ch/fr/blog/ia-automatisation-2026-pieges-a-eviter"
         },
         {
           "labelKey": "L’automatisation des process grâce à l’IA",
@@ -1768,7 +1876,7 @@
         },
         {
           "labelKey": "Cadres légaux et pratiques de l’IA en Suisse",
-          "url": "https://fedlex.admin.ch/"
+          "url": "https://www.fedlex.admin.ch/"
         },
         {
           "labelKey": "Les erreurs d'adoption de l’IA et de l’automatisation",
