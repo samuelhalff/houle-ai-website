@@ -384,6 +384,10 @@
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
     },
@@ -784,6 +788,10 @@
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
     },
@@ -898,6 +906,10 @@
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
     },
@@ -915,12 +927,12 @@
           "url": "https://www.odoo.com/documentation/18.0/applications/finance/accounting.html"
         },
         {
-          "labelKey": "Documentación Odoo 18 - Nómina",
-          "url": "https://www.odoo.com/documentation/18.0/applications/hr/payroll.html"
+          "labelKey": "Swissdec",
+          "url": "https://www.swissdec.ch/fr"
         },
         {
-          "labelKey": "Swissdec",
-          "url": "https://www.swissdec.ch/fr/"
+          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
     },
@@ -973,14 +985,6 @@
           "url": "https://learn.microsoft.com/en-us/graph/api/resources/teams-api-overview?view=graph-rest-1.0"
         },
         {
-          "labelKey": "Microsoft Graph - Teams messaging overview",
-          "url": "https://learn.microsoft.com/en-us/graph/teams-messaging-overview"
-        },
-        {
-          "labelKey": "Microsoft Graph - Enviar un mensaje de chat",
-          "url": "https://learn.microsoft.com/en-us/graph/api/chatmessage-post?view=graph-rest-1.0"
-        },
-        {
           "labelKey": "Resumen de Microsoft Foundry Agent Service",
           "url": "https://learn.microsoft.com/en-us/azure/foundry/agents/overview"
         },
@@ -989,12 +993,8 @@
           "url": "https://www.odoo.com/documentation/18.0/developer/reference/external_api.html"
         },
         {
-          "labelKey": "Odoo 18 - Web Services",
-          "url": "https://www.odoo.com/documentation/18.0/developer/howtos/web_services.html"
-        },
-        {
           "labelKey": "Ark Fiduciaire",
-          "url": "https://ark-fid.ch/"
+          "url": "https://ark-fid.ch/fr/"
         }
       ]
     },
@@ -1346,6 +1346,10 @@
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
     },
@@ -1396,6 +1400,10 @@
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
     },
@@ -1884,10 +1892,6 @@
           "url": "https://edana.ch/2026/01/09/pourquoi-les-agents-ia-vont-transformer-le-support-it-et-toutes-les-fonctions-internes/"
         },
         {
-          "labelKey": "IA et automatisation des workflows IT pour la productivité",
-          "url": "https://www.studiodahu.ch/fr/blog/ia-automatisation-2026-pieges-a-eviter"
-        },
-        {
           "labelKey": "L’automatisation des process grâce à l’IA",
           "url": "https://schenkerconsulting.ch/ia-automatisation-des-process/"
         },
@@ -2125,7 +2129,7 @@
         },
         {
           "labelKey": "Loi sur la protection des données (nLPD) - Admin.ch",
-          "url": "https://www.admin.ch/gov/fr/accueil/documentation/communiques.msg-id-94666.html"
+          "url": "https://www.news.admin.ch/fr/nsb?id=94666"
         },
         {
           "labelKey": "Loi sur l’IA européenne - AFNOR",
@@ -2147,7 +2151,7 @@
         },
         {
           "labelKey": "NIST AI Framework pour gouvernance des intelligences artificielles",
-          "url": "https://www.nist.gov/artificial-intelligence#framework"
+          "url": "https://www.nist.gov/artificial-intelligence"
         },
         {
           "labelKey": "Définir et rédiger une politique d’IA générative – modele de Randstad",
@@ -2209,7 +2213,7 @@
         },
         {
           "labelKey": "Convention du Conseil de l'Europe sur l'IA",
-          "url": "https://www.admin.ch/opc/fr/classified-compilation/19650261/index.html"
+          "url": "https://www.fedlex.admin.ch/eli/cc/1965/1307_1318_1307/fr"
         }
       ]
     }
