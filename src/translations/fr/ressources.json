@@ -870,6 +870,10 @@
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
     },
@@ -1131,6 +1135,10 @@
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
     },
@@ -1239,6 +1247,10 @@
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
     },
@@ -1831,7 +1843,7 @@
         },
         {
           "labelKey": "Gouvernance et intelligence artificielle : repenser les responsabilités",
-          "url": "https://ifmd.ch/gouvernance-intelligence-artificielle-conseils-administration/"
+          "url": "https://ifmd.ch/gouvernance/"
         },
         {
           "labelKey": "ISO/IEC 42001 : Une gouvernance responsable de l'IA",
@@ -2067,7 +2079,7 @@
       "references": [
         {
           "labelKey": "Guide de gouvernance IA: Microsoft Azure",
-          "url": "https://learn.microsoft.com/fr-fr/azure/cloud-adoption-framework/scenarios/ai/govern"
+          "url": "https://learn.microsoft.com/fr-fr/azure/cloud-adoption-framework/ai/govern"
         },
         {
           "labelKey": "Collège des administrateurs | Article sur IA et gouvernance",
@@ -2231,7 +2243,7 @@
         },
         {
           "labelKey": "Le RGPD et son impact sur les systèmes d’IA - Législation suisse sur la protection des données",
-          "url": "https://fedlex.admin.ch/eli/cc/2022/491/fr"
+          "url": "https://www.fedlex.admin.ch/eli/cc/2022/491/fr"
         },
         {
           "labelKey": "La gouvernance mondiale de l'IA - Ifri",
@@ -2253,7 +2265,7 @@
         },
         {
           "labelKey": "Stratégie IA dans le Cloud – Microsoft",
-          "url": "https://learn.microsoft.com/fr-fr/azure/cloud-adoption-framework/scenarios/ai/strategy"
+          "url": "https://learn.microsoft.com/fr-fr/azure/cloud-adoption-framework/ai/strategy"
         },
         {
           "labelKey": "NIST AI Risk Management Framework Playbook",
@@ -2275,7 +2287,7 @@
       "references": [
         {
           "labelKey": "Gouverner l’IA - Cloud Adoption Framework",
-          "url": "https://learn.microsoft.com/fr-fr/azure/cloud-adoption-framework/scenarios/ai/govern"
+          "url": "https://learn.microsoft.com/fr-fr/azure/cloud-adoption-framework/ai/govern"
         },
         {
           "labelKey": "AI Act - Obligations liées à l'entraînement d'un modèle d’IA",
@@ -2333,7 +2345,7 @@
         },
         {
           "labelKey": "Surveillance des données dans Azure",
-          "url": "https://docs.microsoft.com/en-us/azure/azure-monitor/"
+          "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/"
         },
         {
           "labelKey": "Conformité RGPD pour Microsoft Cloud",
@@ -2341,7 +2353,7 @@
         },
         {
           "labelKey": "Domaine IA - Publications et normes",
-          "url": "https://standards.ieee.org/initiatives/artificial-intelligence-systems/"
+          "url": "https://standards.ieee.org/initiatives/autonomous-intelligence-systems/"
         }
       ]
     }
