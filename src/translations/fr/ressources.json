@@ -1713,7 +1713,7 @@
       "references": [
         {
           "labelKey": "Privacy for Microsoft 365 - Microsoft 365 Enterprise",
-          "url": "https://learn.microsoft.com/en-us/microsoft-365/enterprise/essentials-privacy?view=o365-worldwide"
+          "url": "https://www.microsoft.com/licensing/docs/view/Microsoft-Products-and-Services-Data-Protection-Addendum-DPA"
         },
         {
           "labelKey": "Configurer Microsoft Purview pour Confiance nulle : Protéger les données",
@@ -2344,10 +2344,6 @@
           "url": "https://learn.microsoft.com/en-us/power-automate/"
         },
         {
-          "labelKey": "Surveillance des données dans Azure",
-          "url": "https://learn.microsoft.com/en-us/azure/azure-monitor/"
-        },
-        {
           "labelKey": "Conformité RGPD pour Microsoft Cloud",
           "url": "https://www.microsoft.com/en-us/trust-center/privacy/gdpr-overview"
         },
@@ -2367,11 +2363,11 @@
       "references": [
         {
           "labelKey": "Gestion des identités via Azure AD",
-          "url": "https://docs.microsoft.com/en-us/azure/active-directory/"
+          "url": "https://learn.microsoft.com/en-us/entra/identity/"
         },
         {
           "labelKey": "Azure OpenAI - Documentation officielle",
-          "url": "https://learn.microsoft.com/azure/cognitive-services/openai/"
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/"
         },
         {
           "labelKey": "Lancement de la campagne nationale de cybersécurité",
@@ -2458,10 +2454,6 @@
           "url": "https://learn.microsoft.com/fr-fr/azure/architecture/ai-ml/guide/rag/rag-llm-evaluation-phase"
         },
         {
-          "labelKey": "Indicateurs de qualité - COQEM",
-          "url": "https://www.ekqmb.admin.ch/ekqmb/fr/home/empfehlungen/empfehlungen/indikatoren.html"
-        },
-        {
           "labelKey": "Management de la qualité - Portail PME SECO",
           "url": "https://www.kmu.admin.ch/kmu/fr/home/savoir-pratique/gestion-pme/certification-normalisation/normalisation/management-qualite.html"
         },
@@ -2505,7 +2497,7 @@
         },
         {
           "labelKey": "Conformité LPD suisse: edoeb.admin.ch",
-          "url": "https://www.edoeb.admin.ch/edoeb/en/home.html"
+          "url": "https://www.edoeb.admin.ch/en"
         }
       ]
     },
