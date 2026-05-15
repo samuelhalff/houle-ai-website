@@ -906,6 +906,10 @@
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
     },
@@ -2404,10 +2408,6 @@
       "date": "2026-04-19",
       "references": [
         {
-          "labelKey": "L’impact de l’IA sur les opérations des entreprises",
-          "url": "https://globaljournals.org/GJMBR_Volume24/1-The-Impact-of-Artificial-Intelligence.pdf"
-        },
-        {
           "labelKey": "Key Performance Indicator (KPI) visuals - Power BI | Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/power-bi/visuals/power-bi-visualization-kpi"
         },
@@ -2687,7 +2687,7 @@
         },
         {
           "labelKey": "Règlement général sur la gouvernance des données",
-          "url": "https://www.edoeb.admin.ch/edoeb/fr/home.html"
+          "url": "https://www.edoeb.admin.ch/fr"
         }
       ]
     }
