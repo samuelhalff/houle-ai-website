@@ -117,12 +117,11 @@ async function loadRessources(locale: Locale): Promise<RessourcesData> {
 
 export const dynamic = "force-dynamic";
 
-export default async function RessourcesPage({
-  params,
-}: {
-  params: { locale: string };
-}) {
-  const nonce = headers().get("x-nonce") || undefined;
+export default async function RessourcesPage(
+  props: { params: Promise<{ locale: string }> }
+) {
+  const params = await props.params;
+  const nonce = (await headers()).get("x-nonce") || undefined;
   const requestedLocale = params?.locale;
   const locale: Locale = isValidLocale(requestedLocale)
     ? requestedLocale
@@ -243,13 +242,12 @@ export default async function RessourcesPage({
   );
 }
 
-export async function generateMetadata({
-  params: { locale },
-  searchParams,
-}: {
-  params: { locale: string };
-  searchParams?: ArticlesSearchParams;
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>;
+  searchParams?: Promise<ArticlesSearchParams>;
 }): Promise<Metadata> {
+  const { locale } = await props.params;
+  const searchParams = props.searchParams ? await props.searchParams : undefined;
   const targetLocale = isValidLocale(locale) ? locale : "fr";
   const metadata = await getPageMetadata(targetLocale, "/ressources");
 

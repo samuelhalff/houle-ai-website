@@ -9,31 +9,14 @@ import { getTranslations, isValidLocale, type Locale } from "@/src/lib/i18n";
 import RelatedArticles from "../components/RelatedArticles";
 import Breadcrumbs from "@/src/components/navigation/Breadcrumbs";
 import { estimateReadingTime } from "@/src/lib/readingTime";
-import dynamicImport from "next/dynamic";
 import Defer from "@/src/components/Defer";
+import {
+  ShareButtons,
+  ReadingProgress,
+  BackToTop,
+} from "../components/ArticleClientWidgets";
 
-// Force dynamic rendering to speed up build times
-
-const ShareButtons = dynamicImport(
-  () => import("@/src/components/ui/ShareButtons"),
-  {
-    ssr: false,
-    loading: () => null,
-  }
-);
-const ReadingProgress = dynamicImport(
-  () => import("@/src/components/ui/reading-progress"),
-  { ssr: false, loading: () => null }
-);
-const BackToTop = dynamicImport(
-  () => import("@/src/components/ui/back-to-top"),
-  {
-    ssr: false,
-    loading: () => null,
-  }
-);
-
-type Params = { params: { slug: string; locale: string } };
+type Params = { params: Promise<{ slug: string; locale: string }> };
 
 type ArticleReference = {
   labelKey: string;
@@ -110,8 +93,9 @@ function isDuplicateArticle(
   return sameTitle && sameDesc && sameContent;
 }
 
-export default async function ArticlePage({ params }: Params) {
-  const nonce = headers().get("x-nonce") || undefined;
+export default async function ArticlePage(props: Params) {
+  const params = await props.params;
+  const nonce = (await headers()).get("x-nonce") || undefined;
   const locale: Locale = isValidLocale(params.locale) ? params.locale : "fr";
   // Load the locale-specific translations on the server
   const ressources = await loadRessources(locale);
@@ -365,7 +349,8 @@ export async function generateStaticParams() {
   return ressources.Articles.map((article) => ({ slug: article.slug }));
 }
 
-export async function generateMetadata({ params }: Params) {
+export async function generateMetadata(props: Params) {
+  const params = await props.params;
   const locale: Locale = isValidLocale(params.locale) ? params.locale : "fr";
   const ressources = await loadRessources(locale);
   const fr = locale === "fr" ? ressources : await loadRessources("fr");

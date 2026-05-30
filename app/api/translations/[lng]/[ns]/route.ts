@@ -6,9 +6,9 @@ const localeSet = new Set<Locale>(locales as readonly Locale[]);
 
 export async function GET(
   _request: Request,
-  { params }: { params: { lng: string; ns: string } }
+  { params }: { params: Promise<{ lng: string; ns: string }> }
 ) {
-  const { lng, ns } = params;
+  const { lng, ns } = await params;
 
   if (!localeSet.has(lng as Locale)) {
     return NextResponse.json({ error: "Not found" }, { status: 404 });
