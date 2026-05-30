@@ -15,14 +15,14 @@
     },
     "pages": {
         "/": {
-            "title": "houle | Private AI for Microsoft 365 - Swiss-hosted Solutions",
-            "description": "Transform your Microsoft 365 with Swiss-hosted AI. Office add-ins for Outlook and Word, enterprise GPT platform, and expert AI consulting. Data sovereignty guaranteed.",
-            "keywords": "ai microsoft 365, swiss ai solutions, private gpt, outlook ai assistant, word ai, geneva ai consulting, microsoft 365 automation, swiss data protection"
+            "title": "houle | AI Consulting Geneva & Lausanne — Microsoft 365 AI Solutions",
+            "description": "AI consulting firm in Geneva. Swiss-hosted GPT, Outlook & Word AI add-ins, and custom Azure AI solutions. nLPD-compliant. Book a free strategy session.",
+            "keywords": "ai consulting geneva, ai consulting lausanne, swiss ai solutions, private gpt switzerland, outlook ai, word ai, swiss data sovereignty, microsoft 365 ai, azure ai switzerland"
         },
         "/contact": {
-            "title": "Contact houle | AI Solutions for Microsoft 365",
-            "description": "Get in touch with houle to discuss AI integration for your Microsoft 365 environment. Free consultation for Geneva, Lausanne, and Swiss businesses.",
-            "keywords": "contact ai consultant geneva, microsoft 365 ai inquiry, swiss ai solutions contact"
+            "title": "Book a Free AI Consultation | houle Geneva & Lausanne",
+            "description": "Book a free AI strategy session with houle's consultants in Geneva. Microsoft 365 AI integration, Swiss-hosted GPT, and custom automation for your business.",
+            "keywords": "ai consultant geneva contact, free ai consultation switzerland, microsoft 365 ai inquiry, book ai strategy session"
         },
         "/products": {
             "title": "AI Products for Microsoft 365 | Word & Outlook Add-ins with Swiss GPT",
@@ -45,18 +45,18 @@
             "keywords": "swiss gpt, enterprise gpt switzerland, private gpt platform, finma compliant ai, swiss data sovereignty"
         },
         "/services": {
-            "title": "AI & Microsoft 365 Consulting Services | houle Geneva",
-            "description": "Expert consulting for AI integration and Microsoft 365 optimization. Custom solutions, Power Automate, SharePoint, Azure AI. Serving Geneva, Lausanne, and Switzerland.",
-            "keywords": "ai consulting geneva, microsoft 365 consulting, azure ai services, power automate switzerland, sharepoint consulting"
+            "title": "AI & Microsoft 365 Consulting | houle — Geneva & Lausanne",
+            "description": "AI consulting and Microsoft 365 optimization for Swiss enterprises. Azure AI, Power Automate, SharePoint. Based in Geneva, serving Lausanne and all Switzerland. Free initial call.",
+            "keywords": "ai consulting geneva, ai consulting lausanne, microsoft 365 consulting switzerland, azure ai services, power automate switzerland, sharepoint consulting"
         },
         "/services/ai-consulting": {
-            "title": "AI Consulting Geneva | Custom Solutions with Azure AI",
-            "description": "Custom AI solutions for Swiss businesses. Azure AI integration, intelligent automation, conversational assistants. Data stays in Switzerland.",
-            "keywords": "ai consulting geneva, azure ai switzerland, custom ai development, intelligent automation geneva, ai integration microsoft 365"
+            "title": "AI Consulting Geneva & Lausanne | Azure AI, Custom GPT, nLPD-Compliant",
+            "description": "AI consulting for Swiss enterprises. Custom Azure AI solutions, RAG pipelines, AI agents, and Microsoft 365 automation. Data stays in Switzerland. Book a free call.",
+            "keywords": "ai consulting geneva, ai consulting lausanne, azure ai switzerland, rag pipeline consulting, ai agents microsoft 365, nLPD compliant ai, custom ai development switzerland"
         },
         "/services/microsoft-consulting": {
             "title": "Microsoft 365 Consulting Geneva | Power Automate, SharePoint, Power BI",
-            "description": "Microsoft 365 expert consulting in Geneva. Power Automate workflows, SharePoint customization, Power BI dashboards, SPFx development. Swiss-based team.",
+            "description": "Deep Microsoft 365 expertise in Geneva. Power Automate workflows, SharePoint development, Power BI dashboards, SPFx. Swiss team, rapid delivery. Contact us today.",
             "keywords": "microsoft 365 consulting geneva, power automate switzerland, sharepoint consulting geneva, power bi consultant, SPFx development"
         },
         "/ressources": {

@@ -5,9 +5,12 @@ Allow: /
 # Disallow internal/API routes
 Disallow: /api/
 Disallow: /_next/
-Disallow: /assets/
 Disallow: /_next/static/
 Disallow: /_next/image
+# Allow OG images (needed for Google Discover and social previews)
+Allow: /assets/og/
+# Block all other assets from crawl budget
+Disallow: /assets/
 
 # Block query string variants to avoid duplicate indexing
 Disallow: /*?*

@@ -113,6 +113,91 @@ export default async function RootLayout({
       "@id": "https://houle.ai/#organization",
     },
     inLanguage: ["en", "fr", "de", "es", "pt"],
+    speakable: {
+      "@type": "SpeakableSpecification",
+      cssSelector: ["h1", ".site-hero-description", "article p:first-of-type"],
+    },
+  } as const;
+
+  const localBusinessJsonLd = {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "ProfessionalService"],
+    "@id": "https://houle.ai/#localbusiness",
+    name: "houle.ai",
+    alternateName: "houle",
+    description:
+      "AI consulting firm in Geneva offering Microsoft 365 AI solutions, Swiss-hosted GPT platforms, and enterprise AI integration. nLPD and GDPR compliant. Serving Geneva, Lausanne, and Switzerland.",
+    url: "https://houle.ai",
+    logo: "https://houle.ai/assets/logo.svg",
+    image: "https://houle.ai/assets/og/og-en.webp",
+    email: "contact@houle.ai",
+    address: {
+      "@type": "PostalAddress",
+      streetAddress: "Chemin Pré-Roset",
+      addressLocality: "Genthod",
+      addressRegion: "Geneva",
+      postalCode: "1294",
+      addressCountry: "CH",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: 46.2667,
+      longitude: 6.1569,
+    },
+    openingHoursSpecification: {
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      opens: "09:00",
+      closes: "18:00",
+    },
+    areaServed: [
+      { "@type": "City", name: "Geneva" },
+      { "@type": "City", name: "Lausanne" },
+      { "@type": "City", name: "Zürich" },
+      { "@type": "Country", name: "Switzerland" },
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "AI Consulting & Microsoft 365 Services",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "AI Consulting Geneva",
+            description: "Custom AI solutions and Azure AI integration for Swiss businesses",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Microsoft 365 Consulting",
+            description: "Power Automate, SharePoint, Power BI, and SPFx expertise",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "SoftwareApplication",
+            name: "Swiss GPT",
+            description: "Enterprise GPT platform hosted on Microsoft Azure Switzerland",
+          },
+        },
+      ],
+    },
+    sameAs: ["https://www.linkedin.com/company/houle-ai/"],
+    parentOrganization: {
+      "@type": "Corporation",
+      name: "West-Bay SA",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Genthod",
+        addressRegion: "Geneva",
+        postalCode: "1294",
+        addressCountry: "CH",
+      },
+    },
   } as const;
 
   return (
@@ -153,6 +238,11 @@ export default async function RootLayout({
           type="application/ld+json"
           nonce={nonce}
           dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          nonce={nonce}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessJsonLd) }}
         />
         <script
           type="application/ld+json"
