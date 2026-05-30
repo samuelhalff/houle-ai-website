@@ -20,16 +20,16 @@ import { Button } from "@/src/components/ui/button";
 export const runtime = "nodejs";
 export const revalidate = false;
 
-export async function generateMetadata({
-  params: { locale },
-}: {
-  params: { locale: string };
-}): Promise<Metadata> {
+export async function generateMetadata(
+  props: { params: Promise<{ locale: string }> }
+): Promise<Metadata> {
+  const { locale } = await props.params;
   return await generateMetadataForPage(locale as Locale, "/services/ai-consulting");
 }
 
-const AIConsultingPage = async ({ params }: { params: { locale: string } }) => {
-  const nonce = headers().get("x-nonce") || undefined;
+const AIConsultingPage = async (props: { params: Promise<{ locale: string }> }) => {
+  const params = await props.params;
+  const nonce = (await headers()).get("x-nonce") || undefined;
   const baseUrl = "https://houle.ai";
   const localePrefix = `/${params.locale}`;
   const tService = await getTranslations(params.locale as Locale, "ai-consulting");

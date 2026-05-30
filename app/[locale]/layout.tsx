@@ -11,11 +11,12 @@ export function generateStaticParams() {
 
 export default async function LocaleLayout({
   children,
-  params: { locale },
+  params: paramsPromise,
 }: {
   children: ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }) {
+  const { locale } = await paramsPromise;
   if (!isLocale(locale)) {
     notFound();
   }
@@ -26,7 +27,7 @@ export default async function LocaleLayout({
     { ssr: true }
   );
   const Footer = nextDynamic(() => import("@/app/[locale]/shared/footer"), {
-    suspense: true,
+    ssr: true,
   });
 
   const navData =

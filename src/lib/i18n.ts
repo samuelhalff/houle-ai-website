@@ -15,10 +15,14 @@ export function isValidLocale(locale: string): locale is Locale {
   return locales.includes(locale as Locale);
 }
 
-export function getCurrentLocale(): Locale {
-  const headersList = headers();
-  const locale = headersList.get("x-locale") || "en";
-  return isValidLocale(locale) ? locale : "en";
+export async function getCurrentLocale(): Promise<Locale> {
+  try {
+    const hdrs = await headers();
+    const locale = hdrs.get("x-locale") || "en";
+    return isValidLocale(locale) ? locale : "en";
+  } catch {
+    return "en";
+  }
 }
 
 function resolveTranslationsDir() {

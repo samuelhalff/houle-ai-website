@@ -31,7 +31,7 @@ async function getRecentArticles(locale: Locale): Promise<Article[]> {
 }
 
 export default async function NotFoundPage() {
-  const headersList = headers();
+  const headersList = await headers();
   const pathname = headersList.get("x-pathname") || "";
   const localeMatch = pathname.match(/^\/([a-z]{2})\//);
   const locale = (localeMatch?.[1] || "en") as Locale;

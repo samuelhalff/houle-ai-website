@@ -8,23 +8,20 @@ import { Button } from "@/src/components/ui/button";
 import SectionHeading from "@/src/components/site/section-heading";
 import Reveal from "@/src/components/motion/reveal";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: "en" | "fr" | "de" | "es" | "pt" };
-}): Promise<Metadata> {
-  const locale = params?.locale || "en";
-  return await getPageMetadata(locale as Locale, "/");
+export async function generateMetadata(
+  props: { params: Promise<{ locale: "en" | "fr" | "de" | "es" | "pt" }> }
+): Promise<Metadata> {
+  const { locale } = await props.params;
+  return await getPageMetadata((locale || "en") as Locale, "/");
 }
 
-export default async function HomePage({
-  params,
-}: {
-  params: { locale: "en" | "fr" | "de" | "es" | "pt" };
-}) {
-  const locale = params?.locale || "en";
+export default async function HomePage(
+  props: { params: Promise<{ locale: "en" | "fr" | "de" | "es" | "pt" }> }
+) {
+  const { locale: rawLocale } = await props.params;
+  const locale = rawLocale || "en";
   const localePrefix = `/${locale}`;
-  const nonce = headers().get("x-nonce") || undefined;
+  const nonce = (await headers()).get("x-nonce") || undefined;
 
   const faqT = await getTranslations(locale as Locale, "faq");
   const faqItems = Array.from({ length: 22 })

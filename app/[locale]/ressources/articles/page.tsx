@@ -60,12 +60,11 @@ async function loadRessources(locale: Locale): Promise<RessourcesContent> {
   }
 }
 
-export default async function ArticlesIndex({
-  params,
-}: {
-  params: { locale: string };
-}) {
-  const nonce = headers().get("x-nonce") || undefined;
+export default async function ArticlesIndex(
+  props: { params: Promise<{ locale: string }> }
+) {
+  const params = await props.params;
+  const nonce = (await headers()).get("x-nonce") || undefined;
   const requestedLocale = params.locale;
   const locale: Locale = isValidLocale(requestedLocale)
     ? requestedLocale

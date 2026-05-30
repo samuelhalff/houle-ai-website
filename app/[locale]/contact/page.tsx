@@ -1,26 +1,20 @@
 import { Metadata } from "next";
-import dynamic from "next/dynamic";
 import { generateMetadataForPage } from "@/src/lib/metadata";
 import { Button } from "@/src/components/ui/button";
 import { EnvelopeIcon } from "@/src/components/icons/EnvelopeIcon";
 import { PhoneIcon } from "@/src/components/icons/PhoneIcon";
 import { WhatsAppIcon } from "@/src/components/icons/WhatsAppIcon";
 import { getWhatsAppContent, getWhatsAppLink } from "@/src/lib/whatsapp";
-
-const ContactForm = dynamic(() => import("@/src/components/ui/contact-form"), {
-  ssr: false,
-  loading: () => null,
-});
+import { ContactForm } from "@/src/components/ui/contact-form-client";
 
 const BOOKING_URL = "https://outlook.office.com/bookwithme/user/409097336fec47ef9ad61beeef96c884@houle.ai/meetingtype/L5kPsZfevE6i7S7hiOL8Cg2?anonymous&amp;ismsaljsauthenabled&amp;ep=mlink";
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { locale: string };
-}): Promise<Metadata> {
+export async function generateMetadata(
+  props: { params: Promise<{ locale: string }> }
+): Promise<Metadata> {
+  const { locale } = await props.params;
   return await generateMetadataForPage(
-    params.locale as "en" | "fr" | "de" | "es" | "pt",
+    locale as "en" | "fr" | "de" | "es" | "pt",
     "/contact"
   );
 }
@@ -245,12 +239,11 @@ const copy = {
   },
 } as const;
 
-export default function ContactPage({
-  params,
-}: {
-  params: { locale: "en" | "fr" | "de" | "es" | "pt" };
-}) {
-  const locale = params?.locale || "en";
+export default async function ContactPage(
+  props: { params: Promise<{ locale: "en" | "fr" | "de" | "es" | "pt" }> }
+) {
+  const { locale: rawLocale } = await props.params;
+  const locale = rawLocale || "en";
   const strings = copy[locale] || copy.en;
   const whatsapp = getWhatsAppContent(locale);
   const whatsappLink = getWhatsAppLink(locale);

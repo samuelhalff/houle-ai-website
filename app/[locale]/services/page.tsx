@@ -11,21 +11,16 @@ import Reveal from "@/src/components/motion/reveal";
 
 export const revalidate = false;
 
-export async function generateMetadata({
-  params: { locale },
-}: {
-  params: { locale: string };
-}): Promise<Metadata> {
+export async function generateMetadata(
+  props: { params: Promise<{ locale: string }> }
+): Promise<Metadata> {
+  const { locale } = await props.params;
   return await generateMetadataForPage(locale as Locale, "/services");
 }
 
-export default async function ServicesPage({
-  params,
-}: {
-  params: { locale: string };
-}) {
-  const nonce = headers().get("x-nonce") || undefined;
-  const locale = params.locale as Locale;
+export default async function ServicesPage(props: { params: Promise<{ locale: string }> }) {
+  const { locale } = await props.params;
+  const nonce = (await headers()).get("x-nonce") || undefined;
   const baseUrl = "https://houle.ai";
   const localePrefix = `/${locale}`;
 

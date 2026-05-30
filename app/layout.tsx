@@ -8,19 +8,10 @@ import {
 } from "@/src/lib/metadata";
 import { inter } from "./fonts";
 import { headers } from "next/headers";
-import dynamic from "next/dynamic";
-import Defer from "@/src/components/Defer";
 import ErrorBoundary from "@/src/components/ErrorBoundary";
-import "./globals.css";
-const CookieConsent = dynamic(() => import("@/src/components/CookieConsent"), {
-  ssr: false,
-  loading: () => null,
-});
-const ConsentAnalytics = dynamic(
-  () => import("@/src/components/ConsentAnalytics"),
-  { ssr: false, loading: () => null }
-);
+import ClientOnlyProviders from "@/src/components/ClientOnlyProviders";
 import { getCurrentLocale } from "@/src/lib/i18n";
+import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://houle.ai"),
@@ -78,15 +69,16 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   // ✅ read nonce and UA headers from the middleware
-  const nonce = headers().get("x-nonce") || undefined;
-  const userAgent = headers().get("user-agent") || "";
+  const hdrs = await headers();
+  const nonce = hdrs.get("x-nonce") || undefined;
+  const userAgent = hdrs.get("user-agent") || "";
   const isIOS = /iPad|iPhone|iPod/.test(userAgent);
   const isAndroid = /Android/.test(userAgent);
   const gaId =
     process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ||
     process.env.NEXT_PUBLIC_GA_ID ||
     "G-H6EBEK7685";
-  const currentLocale = getCurrentLocale();
+  const currentLocale = await getCurrentLocale();
 
   const cookieLabels = {
     Title: "Cookies",
@@ -260,19 +252,13 @@ export default async function RootLayout({
             <div className="pt-6 text-foreground bg-gradient-to-b from-background via-background to-background/60 min-h-screen">
               {children}
 
-              <CookieConsent
+              <ClientOnlyProviders
                 nonce={nonce}
                 locale={currentLocale}
-                labels={cookieLabels}
+                gaId={gaId}
+                gtmId="GTM-P6QT792D"
+                cookieLabels={cookieLabels}
               />
-
-              <Defer rootMargin="0px" idle={200} placeholder={null}>
-                <ConsentAnalytics
-                  gaId={gaId}
-                  gtmId="GTM-P6QT792D"
-                  nonce={nonce}
-                />
-              </Defer>
             </div>
           </ErrorBoundary>
         </Providers>

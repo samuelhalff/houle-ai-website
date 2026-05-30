@@ -19,12 +19,10 @@ function formatDate(date: string, locale: string) {
   }
 }
 
-export default function CookiesPage({
-  params,
-}: {
-  params: { locale: string };
-}) {
-  const locale = params.locale;
+export default async function CookiesPage(
+  props: { params: Promise<{ locale: string }> }
+) {
+  const { locale } = await props.params;
 
   return (
     <div className="container mx-auto px-4 py-16 max-w-[var(--breakpoint-xl)]">
