@@ -256,30 +256,27 @@ export default function ContactPage({
   const whatsappLink = getWhatsAppLink(locale);
 
   return (
-    <div className="mx-auto w-full max-w-6xl px-6 py-12 space-y-12">
-      <div className="mx-auto max-w-3xl text-center space-y-3">
-        <p className="text-sm uppercase tracking-[0.18em] text-muted-foreground">
-          {locale === "fr"
-            ? "Contact"
-            : locale === "de"
-            ? "Kontakt"
-            : locale === "es"
-            ? "Contacto"
-            : locale === "pt"
-            ? "Contato"
-            : "Contact"}
+    <div className="mx-auto w-full max-w-[1200px] px-5 py-12 sm:px-8 space-y-12">
+      {/* Page title */}
+      <div className="abstract-background mx-auto max-w-3xl text-center space-y-3 pb-4">
+        <p className="text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-brand-hover dark:text-brand">
+          {locale === "fr" ? "Contact"
+          : locale === "de" ? "Kontakt"
+          : locale === "es" ? "Contacto"
+          : locale === "pt" ? "Contato"
+          : "Contact"}
         </p>
-        <h1 className="text-3xl xs:text-4xl sm:text-5xl font-bold tracking-tight">
+        <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
           {strings.title}
         </h1>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        <p className="text-base text-muted-foreground sm:text-lg max-w-2xl mx-auto leading-8">
           {strings.subtitle}
         </p>
       </div>
 
-      <div className="mx-auto grid max-w-5xl gap-6 rounded-2xl border border-border/70 bg-card/80 px-6 py-6 md:grid-cols-2 md:px-8 md:py-8">
+      <div className="mx-auto grid max-w-5xl gap-5 rounded-2xl border bg-surface-tint/40 px-6 py-6 md:grid-cols-2 md:px-8 md:py-8">
           <div className="space-y-5">
-            <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">
+            <div className="inline-flex items-center gap-2 rounded-full bg-brand-soft px-3 py-1 text-xs font-medium text-brand-hover dark:text-brand">
               <PhoneIcon className="size-3.5" />
               {strings.callLabel}
             </div>
@@ -291,18 +288,14 @@ export default function ContactPage({
                 {strings.callDescription}
               </p>
             </div>
-            <Button asChild size="lg" className="rounded-full px-5">
-              <a
-                href={BOOKING_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {strings.bookingButton}
+            <Button asChild size="lg" className="btn-main-cta rounded-full bg-foreground px-6 text-background">
+              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+                <span>{strings.bookingButton}</span>
               </a>
             </Button>
           </div>
 
-          <div className="space-y-3 rounded-2xl border border-border/70 bg-background/70 p-4 sm:p-5">
+          <div className="space-y-3 rounded-2xl border bg-background p-4 sm:p-5">
             <p className="text-sm font-medium text-foreground">
               {strings.writeLabel}
             </p>
@@ -330,7 +323,7 @@ export default function ContactPage({
               className="flex items-start gap-3 rounded-xl border border-border/70 px-4 py-3 transition-colors hover:bg-accent/40"
               aria-label="Email contact@houle.ai"
             >
-              <span className="mt-0.5 inline-flex size-9 items-center justify-center rounded-full bg-primary/10 text-primary">
+              <span className="mt-0.5 inline-flex size-9 items-center justify-center rounded-full bg-brand-soft text-brand">
                 <EnvelopeIcon className="size-5" />
               </span>
               <span className="space-y-0.5">
@@ -340,7 +333,7 @@ export default function ContactPage({
                 <span className="block text-sm text-muted-foreground">
                   {strings.emailDescription}
                 </span>
-                <span className="block text-sm text-primary">
+                <span className="block text-sm text-brand">
                   contact@houle.ai
                 </span>
               </span>

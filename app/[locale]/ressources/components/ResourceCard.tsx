@@ -61,19 +61,14 @@ const ResourceCard: React.FC<ResourceCardProps> = ({
   return (
     <a
       href={href}
-      className="group relative flex flex-col h-full rounded-2xl p-6 bg-white dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 transition-all duration-300 hover:border-slate-200 dark:hover:border-slate-700 hover:shadow-md hover:shadow-slate-200/50 dark:hover:shadow-slate-900/50"
+      className="group flex flex-col h-full rounded-2xl border bg-card p-6 shadow-sm transition-all duration-300 hover:border-brand/30 hover:shadow-md"
     >
-      {/* Subtle top accent line on hover */}
-      <div
-        className={`absolute top-0 left-6 right-6 h-0.5 ${colors.accent} rounded-full opacity-0 group-hover:opacity-60 transition-opacity duration-300`}
-      />
-
-      {/* Date badge with color */}
+      {/* Date badge */}
       {date && (
         <div className="mb-4">
           <time
             dateTime={new Date(date).toISOString()}
-            className={`inline-flex items-center px-2.5 py-1 text-xs font-medium rounded-md ${colors.badge}`}
+            className="inline-flex items-center px-2.5 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.16em] rounded-md bg-brand-soft text-brand-hover dark:text-brand"
           >
             {formatDateDeterministic(date)}
           </time>
@@ -81,7 +76,7 @@ const ResourceCard: React.FC<ResourceCardProps> = ({
       )}
 
       {/* Title */}
-      <h3 className="text-lg font-semibold leading-snug tracking-tight text-foreground group-hover:text-primary transition-colors duration-200 mb-3">
+      <h3 className="text-base font-semibold leading-snug tracking-tight text-foreground group-hover:text-brand transition-colors duration-200 mb-2">
         {title}
       </h3>
 
@@ -90,27 +85,15 @@ const ResourceCard: React.FC<ResourceCardProps> = ({
         {description}
       </p>
 
-      {/* Footer with author and read more */}
-      <div className="flex items-center justify-between pt-4 border-t border-slate-100 dark:border-slate-800">
+      {/* Footer */}
+      <div className="flex items-center justify-between pt-4 border-t border-border">
         {author && (
-          <p className="text-xs text-muted-foreground">
-            <span className="text-foreground/70 font-medium">{author}</span>
-          </p>
+          <p className="text-xs text-muted-foreground font-medium">{author}</p>
         )}
-        <span className="inline-flex items-center gap-1.5 text-sm font-medium text-primary group-hover:gap-2.5 transition-all duration-200">
+        <span className="inline-flex items-center gap-1.5 text-sm font-medium text-brand group-hover:gap-2.5 transition-all duration-200">
           {(labels && labels.ReadArticle) || "Read"}
-          <svg
-            className="w-4 h-4"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M13 7l5 5m0 0l-5 5m5-5H6"
-            />
+          <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+            <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </span>
       </div>

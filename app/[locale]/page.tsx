@@ -4,6 +4,9 @@ import { getTranslations, type Locale } from "@/src/lib/i18n";
 import { getPageMetadata } from "@/src/lib/metadata";
 import { Metadata } from "next";
 import { headers } from "next/headers";
+import { Button } from "@/src/components/ui/button";
+import SectionHeading from "@/src/components/site/section-heading";
+import Reveal from "@/src/components/motion/reveal";
 
 export async function generateMetadata({
   params,
@@ -23,7 +26,6 @@ export default async function HomePage({
   const localePrefix = `/${locale}`;
   const nonce = headers().get("x-nonce") || undefined;
 
-  // Load FAQ data
   const faqT = await getTranslations(locale as Locale, "faq");
   const faqItems = Array.from({ length: 22 })
     .map((_, i) => i + 1)
@@ -37,206 +39,246 @@ export default async function HomePage({
       answer: faqT(`Answer${i}`) as string,
     }));
 
-  // Generate FAQ structured data for Google Search
-  const faqJsonLd = faqItems.length > 0 ? {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqItems.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer,
-      },
-    })),
-  } : null;
+  const faqJsonLd =
+    faqItems.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          mainEntity: faqItems.map((item) => ({
+            "@type": "Question",
+            name: item.question,
+            acceptedAnswer: { "@type": "Answer", text: item.answer },
+          })),
+        }
+      : null;
 
   const copy = {
     en: {
-      badge: "AI Products & Consulting for Microsoft 365",
-      tagline: "houle — AI Solutions for Modern Business",
-      headline:
-        "Transform your business with AI products and expert consulting.",
+      eyebrow: "AI Products & Consulting",
+      headline: "Private AI built into Microsoft 365.",
       subtext:
-        "Based in the Lake Geneva region, we offer Swiss-made Office add-ins with AI for Microsoft 365 and professional consulting services. From ready-to-use products to custom AI solutions, we help businesses across Geneva, Lausanne, Bern, Zurich, and Valais leverage AI while keeping data private and secure.",
-      highlights: [
-        "Office add-ins with AI for Microsoft 365",
-        "AI & Microsoft 365 consulting services",
-        "Swiss-hosted, privacy-first solutions",
-      ],
-      productsLabel: "Products",
-      productsTitle: "AI Products for Microsoft 365",
-      productsBody:
-        "Office add-ins with AI that blend into Outlook and Word. Pair them with a Swiss-hosted GPT that connects to your data, keeps it in your control, and keeps everyday work simple. Ready to use, built for privacy.",
-      consultingLabel: "Consulting",
-      consultingTitle: "Expert AI & Microsoft Consulting",
-      consultingBody:
-        "Custom AI solutions, Microsoft 365 optimization, and strategic consulting. We help you implement AI, integrate systems, and transform workflows. From proof-of-concept to production deployment.",
-      securityLabel: "Security & Privacy",
-      securityTitle: "Trusted by design",
-      securityBody:
-        "Built with data privacy first. Your content stays where it belongs, conversations are protected, and admins keep the switches for what is shared and what is not.",
-      ctaTitle: "Ready to transform your business with AI?",
-      ctaText:
-        "Let's discuss how our AI solutions can enhance your Microsoft 365 environment while keeping your data secure in Switzerland.",
-      ctaButton: "Get in touch",
-      techExpertiseTitle: "Swiss-hosted AI technology",
-      techExpertiseP1:
+        "Swiss-made Office add-ins with AI for Outlook and Word — plus a private GPT that stays in your control. From Geneva to Zurich, we help teams use AI without compromising their data.",
+      ctaPrimary: "Get in touch",
+      ctaSecondary: "See our products",
+      productsEyebrow: "Products",
+      productsTitle: "AI that lives inside Microsoft 365",
+      productsDesc:
+        "Add-ins for the tools your team already has. No new apps, no data leaving Switzerland.",
+      card1Label: "AI for Outlook",
+      card1Title: "Smarter email, instantly",
+      card1Body:
+        "Summarize threads, draft replies, and flag action items — directly inside Outlook, with your data staying private.",
+      card2Label: "AI for Word",
+      card2Title: "Write faster, say more",
+      card2Body:
+        "Generate, improve, and review documents with AI built directly into Word. No copy-paste, no context switching.",
+      card3Label: "Swiss GPT",
+      card3Title: "Your private knowledge layer",
+      card3Body:
+        "A GPT platform hosted in Switzerland, connected to your data, controlled by your team. Build internal assistants your way.",
+      servicesEyebrow: "Consulting",
+      servicesTitle: "Expert guidance from strategy to production",
+      servicesDesc:
+        "We help you navigate AI adoption, integrate systems, and deploy solutions that actually work in your Microsoft environment.",
+      s1Label: "AI Consulting",
+      s1Title: "Custom AI solutions",
+      s1Body:
+        "From proof-of-concept to full deployment: we design, build, and maintain AI workflows tailored to your operations.",
+      s2Label: "Microsoft Consulting",
+      s2Title: "Full Microsoft 365 expertise",
+      s2Body:
+        "Azure, Power Automate, SharePoint, Power BI, SPFx — deep implementation experience across the Microsoft stack.",
+      whyEyebrow: "Why houle",
+      whyTitle: "Swiss-hosted AI technology",
+      whyP1:
         "Our enterprise AI platform runs on Microsoft Azure Switzerland, giving you access to state-of-the-art large language models while meeting strict data residency requirements. Every document processed, every email analyzed, and every workflow automated stays within Swiss borders under your control.",
-      techExpertiseP2:
-        "We build AI solutions with a human-in-the-loop approach. This means your teams validate AI suggestions before they become final, ensuring accuracy and accountability. Our Office add-ins for Word and Outlook bring intelligent assistance directly into your daily tools without forcing a change in how you work.",
-      techExpertiseP3:
-        "By combining Azure AI services with Power Platform automation, we help organizations improve operational efficiency while staying compliant with nLPD (Swiss Data Protection Act) and GDPR. Whether you need a private GPT for internal knowledge, document analysis, or custom workflows, our consulting team guides you from initial concept through production deployment.",
+      whyP2:
+        "We build AI solutions with a human-in-the-loop approach — your teams validate AI suggestions before they become final, ensuring accuracy and accountability. Our Office add-ins for Word and Outlook bring intelligent assistance directly into your daily tools without forcing a change in how you work.",
+      whyP3:
+        "By combining Azure AI services with Power Platform automation, we help organizations stay compliant with nLPD (Swiss Data Protection Act) and GDPR while improving operational efficiency. Our consulting team guides you from initial concept through production deployment.",
     },
     fr: {
-      badge: "IA suisse pour Microsoft 365",
-      tagline: "houle — Une IA privée, directement dans Microsoft 365",
-      headline: "Une IA intégrée à vos outils Microsoft, qui reste privée.",
+      eyebrow: "Produits IA & Conseil",
+      headline: "Une IA privée, directement dans Microsoft 365.",
       subtext:
-        "Nous créons des add-ins Office avec IA pour Microsoft 365, intégrés directement dans Outlook et Word, ainsi qu'un GPT hébergé en Suisse que vous contrôlez. Il fonctionne avec vos données, suit vos règles et protège chaque échange.",
-      highlights: [
-        "Add-ins Office avec IA pour les apps Microsoft 365 que vous utilisez déjà",
-        "GPT hébergé en Suisse, pensé pour la confidentialité",
-        "Vos données d’entreprise restent sous votre contrôle",
-      ],
-      productsLabel: "Produits",
-      productsTitle: "Conçu pour Microsoft 365",
-      productsBody:
-        "Des add-ins Office avec IA qui s'intègrent aux outils que vos équipes ouvrent déjà—Outlook et Word d'abord. À associer à un GPT hébergé en Suisse qui se connecte à vos données, les garde sous contrôle et simplifie le quotidien.",
-      consultingLabel: "Conseil",
-      consultingTitle: "Conseil Expert en IA & Microsoft",
-      consultingBody:
-        "Solutions IA personnalisées, optimisation Microsoft 365 et conseil stratégique. Nous vous aidons à implémenter l'IA, intégrer les systèmes et transformer les flux de travail. Du proof-of-concept au déploiement en production.",
-      securityLabel: "Sécurité & Confidentialité",
-      securityTitle: "Fiable par conception",
-      securityBody:
-        "Conçu avec la confidentialité en premier. Vos contenus restent à leur place, les échanges sont protégés et les administrateurs gardent la main sur ce qui est partagé ou non.",
-      ctaTitle: "Prêt à transformer votre entreprise avec l'IA ?",
-      ctaText:
-        "Discutons de la manière dont nos solutions IA peuvent améliorer votre environnement Microsoft 365 tout en gardant vos données sécurisées en Suisse.",
-      ctaButton: "Nous contacter",
-      techExpertiseTitle: "Une technologie IA hébergée en Suisse",
-      techExpertiseP1:
+        "Des add-ins Office avec IA pour Outlook et Word — et un GPT privé hébergé en Suisse que vous contrôlez. Nous aidons les équipes à utiliser l'IA sans compromettre leurs données.",
+      ctaPrimary: "Nous contacter",
+      ctaSecondary: "Voir nos produits",
+      productsEyebrow: "Produits",
+      productsTitle: "Une IA intégrée à Microsoft 365",
+      productsDesc:
+        "Des add-ins pour les outils que vos équipes utilisent déjà. Pas de nouvelles apps, pas de données qui quittent la Suisse.",
+      card1Label: "IA pour Outlook",
+      card1Title: "Des emails plus intelligents",
+      card1Body:
+        "Résumez les fils de discussion, rédigez des réponses et identifiez les actions — directement dans Outlook, vos données restent privées.",
+      card2Label: "IA pour Word",
+      card2Title: "Rédigez plus vite, dites plus",
+      card2Body:
+        "Générez, améliorez et relisez des documents avec une IA intégrée directement dans Word. Sans copier-coller, sans changer d'outil.",
+      card3Label: "Swiss GPT",
+      card3Title: "Votre couche de connaissance privée",
+      card3Body:
+        "Une plateforme GPT hébergée en Suisse, connectée à vos données, contrôlée par votre équipe. Créez vos assistants internes à votre façon.",
+      servicesEyebrow: "Conseil",
+      servicesTitle: "Un accompagnement expert de la stratégie à la production",
+      servicesDesc:
+        "Nous vous aidons à adopter l'IA, intégrer vos systèmes et déployer des solutions qui fonctionnent vraiment dans votre environnement Microsoft.",
+      s1Label: "Conseil IA",
+      s1Title: "Solutions IA sur mesure",
+      s1Body:
+        "Du proof-of-concept au déploiement complet : nous concevons, construisons et maintenons des workflows IA adaptés à vos opérations.",
+      s2Label: "Conseil Microsoft",
+      s2Title: "Expertise Microsoft 365",
+      s2Body:
+        "Azure, Power Automate, SharePoint, Power BI, SPFx — une expérience approfondie sur toute la stack Microsoft.",
+      whyEyebrow: "Pourquoi houle",
+      whyTitle: "Technologie IA hébergée en Suisse",
+      whyP1:
         "Notre plateforme IA d'entreprise fonctionne sur Microsoft Azure Suisse, vous donnant accès aux modèles de langage les plus avancés tout en respectant les exigences strictes de résidence des données. Chaque document traité, chaque e-mail analysé et chaque workflow automatisé reste sur le territoire suisse, sous votre contrôle.",
-      techExpertiseP2:
-        "Nous construisons des solutions IA avec une approche « human-in-the-loop ». Vos équipes valident les suggestions de l'IA avant qu'elles ne deviennent définitives, garantissant précision et responsabilité. Nos add-ins Office pour Word et Outlook apportent une assistance intelligente directement dans vos outils quotidiens, sans bouleverser votre façon de travailler.",
-      techExpertiseP3:
-        "En combinant les services Azure AI avec l'automatisation Power Platform, nous aidons les organisations à améliorer leur efficacité opérationnelle tout en restant conformes à la nLPD (loi suisse sur la protection des données) et au RGPD. Que vous ayez besoin d'un GPT privé pour vos connaissances internes, d'analyse documentaire ou de workflows personnalisés, notre équipe de conseil vous accompagne du concept initial jusqu'au déploiement en production.",
+      whyP2:
+        "Nous construisons des solutions IA avec une approche human-in-the-loop. Vos équipes valident les suggestions de l'IA avant qu'elles ne deviennent définitives, garantissant précision et responsabilité. Nos add-ins Office pour Word et Outlook apportent une assistance intelligente directement dans vos outils quotidiens, sans bouleverser votre façon de travailler.",
+      whyP3:
+        "En combinant les services Azure AI avec l'automatisation Power Platform, nous aidons les organisations à rester conformes à la nLPD et au RGPD tout en améliorant leur efficacité opérationnelle. Notre équipe de conseil vous accompagne du concept initial jusqu'au déploiement en production.",
     },
     de: {
-      badge: "KI-Produkte & Beratung für Microsoft 365",
-      tagline: "houle — KI-Lösungen für Moderne Unternehmen",
-      headline:
-        "Transformieren Sie Ihr Unternehmen mit KI-Produkten und Expertenberatung.",
+      eyebrow: "KI-Produkte & Beratung",
+      headline: "Private KI direkt in Microsoft 365.",
       subtext:
-        "Mit Sitz in der Genferseeregion bieten wir in der Schweiz entwickelte Office-Add-Ins mit KI für Microsoft 365 und professionelle Beratungsdienstleistungen. Von gebrauchsfertigen Produkten bis zu massgeschneiderten KI-Lösungen helfen wir Unternehmen in Genf, Lausanne, Bern, Zürich und Wallis, KI zu nutzen und dabei Daten privat und sicher zu halten.",
-      highlights: [
-        "Office-Add-Ins mit KI für Microsoft 365",
-        "KI & Microsoft 365 Beratungsdienstleistungen",
-        "Schweizer Lösungen, Datenschutz zuerst",
-      ],
-      productsLabel: "Produkte",
-      productsTitle: "KI-Produkte für Microsoft 365",
-      productsBody:
-        "Office-Add-Ins mit KI, die sich in Outlook und Word integrieren. Kombinieren Sie sie mit einem in der Schweiz gehosteten GPT, der sich mit Ihren Daten verbindet, sie unter Kontrolle hält und die tägliche Arbeit vereinfacht. Sofort einsatzbereit, für Datenschutz entwickelt.",
-      consultingLabel: "Beratung",
-      consultingTitle: "Experten KI & Microsoft Beratung",
-      consultingBody:
-        "Massgeschneiderte KI-Lösungen, Microsoft 365-Optimierung und strategische Beratung. Wir helfen Ihnen bei der Implementierung von KI, der Integration von Systemen und der Transformation von Workflows. Vom Proof-of-Concept bis zur Produktionsbereitstellung.",
-      securityLabel: "Sicherheit & Datenschutz",
-      securityTitle: "Vertrauenswürdig nach Design",
-      securityBody:
-        "Entwickelt mit Datenschutz an erster Stelle. Ihre Inhalte bleiben, wo sie hingehören, Gespräche sind geschützt und Administratoren behalten die Kontrolle darüber, was geteilt wird und was nicht.",
-      ctaTitle: "Bereit, Ihr Unternehmen mit KI zu transformieren?",
-      ctaText:
-        "Lassen Sie uns besprechen, wie unsere KI-Lösungen Ihre Microsoft 365-Umgebung verbessern können, während Ihre Daten sicher in der Schweiz bleiben.",
-      ctaButton: "Kontakt aufnehmen",
-      techExpertiseTitle: "In der Schweiz gehostete KI-Technologie",
-      techExpertiseP1:
-        "Unsere KI-Plattform für Unternehmen läuft auf Microsoft Azure Schweiz und bietet Ihnen Zugang zu modernsten Sprachmodellen bei gleichzeitiger Erfüllung strenger Anforderungen an die Datenresidenz. Jedes verarbeitete Dokument, jede analysierte E-Mail und jeder automatisierte Workflow bleibt innerhalb der Schweizer Grenzen unter Ihrer Kontrolle.",
-      techExpertiseP2:
-        "Wir entwickeln KI-Lösungen mit einem Human-in-the-Loop-Ansatz. Das bedeutet, dass Ihre Teams KI-Vorschläge validieren, bevor sie endgültig werden, was Genauigkeit und Verantwortlichkeit gewährleistet. Unsere Office-Add-Ins für Word und Outlook bringen intelligente Unterstützung direkt in Ihre täglichen Werkzeuge, ohne Ihre Arbeitsweise zu verändern.",
-      techExpertiseP3:
-        "Durch die Kombination von Azure AI-Diensten mit Power Platform-Automatisierung helfen wir Organisationen, ihre betriebliche Effizienz zu verbessern und gleichzeitig die Einhaltung von DSG (Schweizer Datenschutzgesetz) und DSGVO sicherzustellen. Ob Sie einen privaten GPT für internes Wissen, Dokumentenanalyse oder benutzerdefinierte Workflows benötigen – unser Beratungsteam begleitet Sie vom ersten Konzept bis zur Produktionsbereitstellung.",
+        "Schweizer Office-Add-ins mit KI für Outlook und Word — sowie ein privates GPT, das unter Ihrer Kontrolle bleibt. Wir helfen Teams, KI zu nutzen, ohne ihre Daten zu gefährden.",
+      ctaPrimary: "Kontakt aufnehmen",
+      ctaSecondary: "Unsere Produkte",
+      productsEyebrow: "Produkte",
+      productsTitle: "KI direkt in Microsoft 365",
+      productsDesc:
+        "Add-ins für die Tools, die Ihre Teams bereits nutzen. Keine neuen Apps, keine Daten außerhalb der Schweiz.",
+      card1Label: "KI für Outlook",
+      card1Title: "Intelligentere E-Mails sofort",
+      card1Body:
+        "Fassen Sie Threads zusammen, verfassen Sie Antworten und markieren Sie Aktionspunkte — direkt in Outlook, Ihre Daten bleiben privat.",
+      card2Label: "KI für Word",
+      card2Title: "Schneller schreiben, mehr sagen",
+      card2Body:
+        "Generieren, verbessern und überprüfen Sie Dokumente mit KI direkt in Word. Kein Kopieren, kein Kontextwechsel.",
+      card3Label: "Swiss GPT",
+      card3Title: "Ihre private Wissensebene",
+      card3Body:
+        "Eine in der Schweiz gehostete GPT-Plattform, mit Ihren Daten verbunden, von Ihrem Team kontrolliert.",
+      servicesEyebrow: "Beratung",
+      servicesTitle: "Expertenbegleitung von der Strategie bis zur Produktion",
+      servicesDesc:
+        "Wir helfen Ihnen bei der KI-Einführung, Systemintegration und dem Einsatz von Lösungen in Ihrer Microsoft-Umgebung.",
+      s1Label: "KI-Beratung",
+      s1Title: "Maßgeschneiderte KI-Lösungen",
+      s1Body:
+        "Vom Proof-of-Concept bis zur vollständigen Bereitstellung: Wir entwickeln KI-Workflows für Ihre Prozesse.",
+      s2Label: "Microsoft-Beratung",
+      s2Title: "Vollständige Microsoft 365-Expertise",
+      s2Body:
+        "Azure, Power Automate, SharePoint, Power BI, SPFx — tiefgehende Implementierungserfahrung im gesamten Microsoft-Stack.",
+      whyEyebrow: "Warum houle",
+      whyTitle: "In der Schweiz gehostete KI-Technologie",
+      whyP1:
+        "Unsere KI-Plattform läuft auf Microsoft Azure Schweiz und bietet Zugang zu modernsten Sprachmodellen bei gleichzeitiger Erfüllung strenger Anforderungen an die Datenresidenz. Jedes Dokument, jede E-Mail und jeder Workflow bleibt innerhalb der Schweizer Grenzen.",
+      whyP2:
+        "Wir entwickeln KI-Lösungen mit Human-in-the-Loop: Ihre Teams validieren KI-Vorschläge vor der Finalisierung. Unsere Add-ins bringen intelligente Unterstützung direkt in Ihre täglichen Tools.",
+      whyP3:
+        "Durch Azure AI und Power Platform helfen wir Ihnen, DSG und DSGVO einzuhalten und gleichzeitig die Effizienz zu steigern. Unser Beratungsteam begleitet Sie vom Konzept bis zum Produktionseinsatz.",
     },
     es: {
-      badge: "Productos IA & Consultoría para Microsoft 365",
-      tagline: "houle — Soluciones IA para Empresas Modernas",
-      headline: "Transforma tu empresa con productos IA y consultoría experta.",
+      eyebrow: "Productos IA & Consultoría",
+      headline: "IA privada integrada en Microsoft 365.",
       subtext:
-        "Con sede en la región del Lago Lemán, ofrecemos complementos de Office con IA para Microsoft 365 fabricados en Suiza y servicios de consultoría profesional. Desde productos listos para usar hasta soluciones IA personalizadas, ayudamos a empresas en Ginebra, Lausana, Berna, Zúrich y Valais a aprovechar la IA manteniendo los datos privados y seguros.",
-      highlights: [
-        "Complementos de Office con IA para Microsoft 365",
-        "Servicios de consultoría en IA & Microsoft 365",
-        "Soluciones suizas, privacidad primero",
-      ],
-      productsLabel: "Productos",
-      productsTitle: "Productos IA para Microsoft 365",
-      productsBody:
-        "Complementos de Office con IA que se integran en Outlook y Word. Combínalos con un GPT alojado en Suiza que se conecta a tus datos, los mantiene bajo tu control y simplifica el trabajo diario. Listos para usar, diseñados para privacidad.",
-      consultingLabel: "Consultoría",
-      consultingTitle: "Consultoría Experta en IA & Microsoft",
-      consultingBody:
-        "Soluciones IA personalizadas, optimización de Microsoft 365 y consultoría estratégica. Te ayudamos a implementar IA, integrar sistemas y transformar flujos de trabajo. Desde prueba de concepto hasta implementación en producción.",
-      securityLabel: "Seguridad & Privacidad",
-      securityTitle: "Confiable por diseño",
-      securityBody:
-        "Desarrollado con la privacidad de datos primero. Tu contenido permanece donde debe estar, las conversaciones están protegidas y los administradores mantienen el control sobre qué se comparte y qué no.",
-      ctaTitle: "¿Listo para transformar tu empresa con IA?",
-      ctaText:
-        "Hablemos sobre cómo nuestras soluciones de IA pueden mejorar tu entorno Microsoft 365 manteniendo tus datos seguros en Suiza.",
-      ctaButton: "Ponerse en contacto",
-      techExpertiseTitle: "Tecnología IA alojada en Suiza",
-      techExpertiseP1:
-        "Nuestra plataforma de IA empresarial funciona en Microsoft Azure Suiza, dándote acceso a modelos de lenguaje de última generación mientras cumples con los estrictos requisitos de residencia de datos. Cada documento procesado, cada correo analizado y cada flujo de trabajo automatizado permanece dentro de las fronteras suizas bajo tu control.",
-      techExpertiseP2:
-        "Construimos soluciones de IA con un enfoque human-in-the-loop. Esto significa que tus equipos validan las sugerencias de la IA antes de que sean definitivas, garantizando precisión y responsabilidad. Nuestros complementos de Office para Word y Outlook llevan asistencia inteligente directamente a tus herramientas diarias sin cambiar tu forma de trabajar.",
-      techExpertiseP3:
-        "Al combinar los servicios de Azure AI con la automatización de Power Platform, ayudamos a las organizaciones a mejorar la eficiencia operativa mientras cumplen con la nLPD (Ley Suiza de Protección de Datos) y el RGPD. Ya sea que necesites un GPT privado para conocimiento interno, análisis de documentos o flujos de trabajo personalizados, nuestro equipo de consultoría te guía desde el concepto inicial hasta el despliegue en producción.",
+        "Complementos de Office con IA para Outlook y Word — más un GPT privado alojado en Suiza bajo tu control. Ayudamos a los equipos a usar IA sin comprometer sus datos.",
+      ctaPrimary: "Contactarnos",
+      ctaSecondary: "Ver productos",
+      productsEyebrow: "Productos",
+      productsTitle: "IA que vive dentro de Microsoft 365",
+      productsDesc:
+        "Complementos para las herramientas que tu equipo ya usa. Sin nuevas apps, sin datos saliendo de Suiza.",
+      card1Label: "IA para Outlook",
+      card1Title: "Emails más inteligentes",
+      card1Body:
+        "Resume hilos, redacta respuestas e identifica acciones — directamente en Outlook, con tus datos privados.",
+      card2Label: "IA para Word",
+      card2Title: "Escribe más rápido",
+      card2Body:
+        "Genera, mejora y revisa documentos con IA dentro de Word. Sin copiar y pegar, sin cambiar de herramienta.",
+      card3Label: "Swiss GPT",
+      card3Title: "Tu capa de conocimiento privado",
+      card3Body:
+        "Una plataforma GPT alojada en Suiza, conectada a tus datos, controlada por tu equipo.",
+      servicesEyebrow: "Consultoría",
+      servicesTitle: "Acompañamiento experto de la estrategia a la producción",
+      servicesDesc:
+        "Te ayudamos a adoptar IA, integrar sistemas y desplegar soluciones en tu entorno Microsoft.",
+      s1Label: "Consultoría IA",
+      s1Title: "Soluciones IA personalizadas",
+      s1Body:
+        "De la prueba de concepto al despliegue completo: diseñamos, construimos y mantenemos workflows de IA.",
+      s2Label: "Consultoría Microsoft",
+      s2Title: "Experiencia Microsoft 365",
+      s2Body:
+        "Azure, Power Automate, SharePoint, Power BI, SPFx — experiencia profunda en todo el stack de Microsoft.",
+      whyEyebrow: "Por qué houle",
+      whyTitle: "Tecnología IA alojada en Suiza",
+      whyP1:
+        "Nuestra plataforma de IA empresarial funciona en Microsoft Azure Suiza, dándote acceso a LLMs de última generación cumpliendo con los requisitos de residencia de datos. Todo permanece dentro de las fronteras suizas bajo tu control.",
+      whyP2:
+        "Construimos soluciones IA con human-in-the-loop — tus equipos validan sugerencias antes de que sean definitivas. Nuestros add-ins para Word y Outlook llevan asistencia inteligente a tus herramientas diarias.",
+      whyP3:
+        "Combinando Azure AI con Power Platform, ayudamos a cumplir con nLPD y RGPD mientras mejoramos la eficiencia. Nuestro equipo te guía del concepto al despliegue en producción.",
     },
     pt: {
-      badge: "Produtos IA & Consultoria para Microsoft 365",
-      tagline: "houle — Soluções IA para Empresas Modernas",
-      headline:
-        "Transforme sua empresa com produtos IA e consultoria especializada.",
+      eyebrow: "Produtos IA & Consultoria",
+      headline: "IA privada integrada no Microsoft 365.",
       subtext:
-        "Sediados na região do Lago Lemano, oferecemos suplementos do Office com IA para Microsoft 365 fabricados na Suíça e serviços de consultoria profissional. De produtos prontos para uso a soluções IA personalizadas, ajudamos empresas em Genebra, Lausanne, Berna, Zurique e Valais a aproveitar IA mantendo os dados privados e seguros.",
-      highlights: [
-        "Suplementos do Office com IA para Microsoft 365",
-        "Serviços de consultoria em IA & Microsoft 365",
-        "Soluções suíças, privacidade primeiro",
-      ],
-      productsLabel: "Produtos",
-      productsTitle: "Produtos IA para Microsoft 365",
-      productsBody:
-        "Suplementos do Office com IA que se integram ao Outlook e Word. Combine-os com um GPT hospedado na Suíça que se conecta aos seus dados, os mantém sob seu controle e simplifica o trabalho diário. Prontos para usar, projetados para privacidade.",
-      consultingLabel: "Consultoria",
-      consultingTitle: "Consultoria Especializada em IA & Microsoft",
-      consultingBody:
-        "Soluções IA personalizadas, otimização do Microsoft 365 e consultoria estratégica. Ajudamos você a implementar IA, integrar sistemas e transformar fluxos de trabalho. Da prova de conceito à implantação em produção.",
-      securityLabel: "Segurança & Privacidade",
-      securityTitle: "Confiável por design",
-      securityBody:
-        "Desenvolvido com privacidade de dados em primeiro lugar. Seu conteúdo permanece onde deve estar, conversas são protegidas e administradores mantêm o controle sobre o que é compartilhado e o que não é.",
-      ctaTitle: "Pronto para transformar sua empresa com IA?",
-      ctaText:
-        "Vamos discutir como nossas soluções de IA podem aprimorar seu ambiente Microsoft 365 mantendo seus dados seguros na Suíça.",
-      ctaButton: "Entre em contato",
-      techExpertiseTitle: "Tecnologia IA hospedada na Suíça",
-      techExpertiseP1:
-        "Nossa plataforma de IA empresarial funciona no Microsoft Azure Suíça, dando acesso a modelos de linguagem de última geração enquanto atende aos rigorosos requisitos de residência de dados. Cada documento processado, cada e-mail analisado e cada fluxo de trabalho automatizado permanece dentro das fronteiras suíças sob seu controle.",
-      techExpertiseP2:
-        "Construímos soluções de IA com uma abordagem human-in-the-loop. Isso significa que suas equipes validam as sugestões da IA antes de se tornarem definitivas, garantindo precisão e responsabilidade. Nossos suplementos do Office para Word e Outlook trazem assistência inteligente diretamente para suas ferramentas diárias sem mudar sua forma de trabalhar.",
-      techExpertiseP3:
-        "Ao combinar os serviços de Azure AI com a automação da Power Platform, ajudamos organizações a melhorar a eficiência operacional enquanto permanecem em conformidade com a nLPD (Lei Suíça de Proteção de Dados) e o RGPD. Seja você precisando de um GPT privado para conhecimento interno, análise de documentos ou fluxos de trabalho personalizados, nossa equipe de consultoria o guia do conceito inicial até a implantação em produção.",
+        "Suplementos do Office com IA para Outlook e Word — mais um GPT privado hospedado na Suíça sob seu controle. Ajudamos equipes a usar IA sem comprometer seus dados.",
+      ctaPrimary: "Entre em contato",
+      ctaSecondary: "Ver produtos",
+      productsEyebrow: "Produtos",
+      productsTitle: "IA que vive dentro do Microsoft 365",
+      productsDesc:
+        "Suplementos para as ferramentas que sua equipe já usa. Sem novos apps, sem dados saindo da Suíça.",
+      card1Label: "IA para Outlook",
+      card1Title: "Emails mais inteligentes",
+      card1Body:
+        "Resuma threads, redija respostas e identifique ações — diretamente no Outlook, com seus dados privados.",
+      card2Label: "IA para Word",
+      card2Title: "Escreva mais rápido",
+      card2Body:
+        "Gere, melhore e revise documentos com IA dentro do Word. Sem copiar e colar, sem trocar de ferramenta.",
+      card3Label: "Swiss GPT",
+      card3Title: "Sua camada de conhecimento privado",
+      card3Body:
+        "Uma plataforma GPT hospedada na Suíça, conectada aos seus dados, controlada pela sua equipe.",
+      servicesEyebrow: "Consultoria",
+      servicesTitle: "Acompanhamento especializado da estratégia à produção",
+      servicesDesc:
+        "Ajudamos você a adotar IA, integrar sistemas e implantar soluções no seu ambiente Microsoft.",
+      s1Label: "Consultoria IA",
+      s1Title: "Soluções IA personalizadas",
+      s1Body:
+        "Da prova de conceito à implantação completa: projetamos, construímos e mantemos workflows de IA.",
+      s2Label: "Consultoria Microsoft",
+      s2Title: "Especialização Microsoft 365",
+      s2Body:
+        "Azure, Power Automate, SharePoint, Power BI, SPFx — experiência profunda em todo o stack Microsoft.",
+      whyEyebrow: "Por que houle",
+      whyTitle: "Tecnologia IA hospedada na Suíça",
+      whyP1:
+        "Nossa plataforma de IA empresarial funciona no Microsoft Azure Suíça, com acesso a LLMs de última geração e requisitos rígidos de residência de dados. Tudo permanece dentro das fronteiras suíças sob seu controle.",
+      whyP2:
+        "Construímos soluções de IA com human-in-the-loop — suas equipes validam sugestões antes de serem definitivas. Nossos suplementos para Word e Outlook trazem assistência inteligente para suas ferramentas diárias.",
+      whyP3:
+        "Combinando Azure AI com Power Platform, ajudamos a cumprir nLPD e LGPD enquanto melhoramos a eficiência operacional. Nossa equipe o guia do conceito ao deployment.",
     },
   } as const;
 
   const t = copy[locale] || copy.en;
 
   return (
-    <div className="max-w-[1080px] mx-auto w-full px-6 pb-12 pt-10 space-y-14">
-      {/* FAQ Structured Data for Google Search */}
+    <div className="w-full">
       {faqJsonLd && (
         <script
           type="application/ld+json"
@@ -244,163 +286,238 @@ export default async function HomePage({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
         />
       )}
-      
-      <section className="relative overflow-hidden rounded-3xl border bg-gradient-to-br from-primary/[0.08] via-accent/[0.03] to-background p-8 sm:p-12 shadow-[0_20px_70px_rgba(0,0,0,0.08)] dark:shadow-[0_20px_70px_rgba(0,0,0,0.3)]">
-        <div className="absolute -left-16 -top-24 h-64 w-64 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 blur-3xl" />
-        <div className="absolute -right-20 -bottom-28 h-72 w-72 rounded-full bg-gradient-to-tl from-accent/25 to-accent/5 blur-3xl" />
-        <div className="relative space-y-6 sm:space-y-8">
-          <div className="inline-flex items-center gap-2 rounded-full bg-primary/15 px-4 py-2 text-sm font-medium text-primary">
-            <span className="inline-block h-2 w-2 rounded-full bg-primary" />
-            {t.badge}
-          </div>
-          <div className="space-y-3">
-            <p className="text-sm uppercase tracking-[0.18em] text-muted-foreground">
-              {t.tagline}
+
+      {/* ── Hero ─────────────────────────────────────────────────────── */}
+      <section className="abstract-background relative w-full bg-background px-5 pb-16 pt-14 sm:px-8 sm:pb-20 sm:pt-18 lg:pt-24">
+        <div className="mx-auto w-full max-w-[1200px]">
+          <Reveal from="bottom">
+            <p className="text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-brand-hover dark:text-brand">
+              {t.eyebrow}
             </p>
-            <h1 className="text-3xl sm:text-4xl lg:text-[2.7rem] font-bold leading-tight tracking-tight">
+            <h1 className="mt-4 max-w-[16ch] text-balance text-5xl font-semibold leading-[0.98] tracking-tight text-foreground sm:text-6xl md:text-7xl lg:text-8xl">
               {t.headline}
             </h1>
-            <p className="max-w-2xl text-lg text-muted-foreground">
+            <p className="mt-8 max-w-[52ch] text-lg leading-8 text-muted-foreground sm:text-xl">
               {t.subtext}
             </p>
-          </div>
-          <div className="grid gap-4 mt-2">
-            {t.highlights.map((item, index) => (
-              <div
-                key={item}
-                className="group relative flex items-start gap-4 rounded-xl border border-primary/20 bg-gradient-to-r from-primary/5 to-transparent p-4 transition-all hover:border-primary/40 hover:shadow-sm"
-              >
-                <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
-                  {index === 0 && (
-                    <svg
-                      className="h-5 w-5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      aria-hidden="true"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
-                      />
-                    </svg>
-                  )}
-                  {index === 1 && (
-                    <svg
-                      className="h-5 w-5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      aria-hidden="true"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"
-                      />
-                    </svg>
-                  )}
-                  {index === 2 && (
-                    <svg
-                      className="h-5 w-5"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                      strokeWidth={2}
-                      aria-hidden="true"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"
-                      />
-                    </svg>
-                  )}
-                </div>
-                <div className="flex-1 min-w-0">
-                  <p className="font-semibold text-foreground leading-relaxed">
-                    {item}
+            <div className="mt-10 flex w-full flex-col items-stretch gap-3 sm:w-auto sm:flex-row sm:items-center">
+              <Link href={`${localePrefix}/contact/`} className="w-full sm:w-auto" prefetch={false}>
+                <Button
+                  size="lg"
+                  className="btn-main-cta w-full rounded-full bg-foreground px-6 text-base text-background sm:w-auto"
+                >
+                  <span>{t.ctaPrimary}</span>
+                </Button>
+              </Link>
+              <Link href={`${localePrefix}/products/`} className="w-full sm:w-auto" prefetch={false}>
+                <Button
+                  size="lg"
+                  variant="secondary"
+                  className="btn-secondary-cta w-full rounded-full px-6 text-base sm:w-auto"
+                >
+                  <span>{t.ctaSecondary}</span>
+                </Button>
+              </Link>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ── Products ─────────────────────────────────────────────────── */}
+      <section className="px-5 py-16 sm:px-8 sm:py-20">
+        <div className="mx-auto w-full max-w-[1200px] space-y-12">
+          <Reveal>
+            <SectionHeading
+              eyebrow={t.productsEyebrow}
+              title={t.productsTitle}
+              description={t.productsDesc}
+              align="center"
+              titleClassName="max-w-[26ch]"
+            />
+          </Reveal>
+
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {[
+              {
+                label: t.card1Label,
+                title: t.card1Title,
+                body: t.card1Body,
+                href: `${localePrefix}/products/outlook-addin/`,
+              },
+              {
+                label: t.card2Label,
+                title: t.card2Title,
+                body: t.card2Body,
+                href: `${localePrefix}/products/word-addin/`,
+              },
+              {
+                label: t.card3Label,
+                title: t.card3Title,
+                body: t.card3Body,
+                href: `${localePrefix}/products/swiss-gpt/`,
+              },
+            ].map((card, i) => (
+              <Reveal key={card.href} delay={i * 0.08}>
+                <Link
+                  href={card.href}
+                  prefetch={false}
+                  className="group flex h-full flex-col rounded-2xl border bg-card p-6 shadow-sm transition-all duration-300 hover:border-brand/30 hover:shadow-md"
+                >
+                  <p className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-brand-hover dark:text-brand">
+                    {card.label}
                   </p>
-                </div>
-              </div>
+                  <h2 className="mt-2 text-xl font-semibold tracking-tight text-foreground">
+                    {card.title}
+                  </h2>
+                  <p className="mt-3 flex-1 text-sm leading-7 text-muted-foreground">
+                    {card.body}
+                  </p>
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-brand transition-gap group-hover:gap-2.5">
+                    Learn more
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                      <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                </Link>
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        <div className="group rounded-2xl border bg-gradient-to-br from-primary/[0.06] via-primary/[0.03] to-card p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary/30">
-          <p className="text-sm font-semibold text-primary uppercase tracking-[0.14em]">
-            {t.productsLabel}
-          </p>
-          <h2 className="mt-2 text-xl font-bold">{t.productsTitle}</h2>
-          <p className="mt-3 text-muted-foreground">{t.productsBody}</p>
-        </div>
-        <div className="group rounded-2xl border bg-gradient-to-br from-blue-500/[0.06] via-blue-500/[0.03] to-card p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:border-blue-500/30">
-          <p className="text-sm font-semibold text-blue-600 dark:text-blue-400 uppercase tracking-[0.14em]">
-            {t.consultingLabel}
-          </p>
-          <h2 className="mt-2 text-xl font-bold">{t.consultingTitle}</h2>
-          <p className="mt-3 text-muted-foreground">{t.consultingBody}</p>
-        </div>
-        <div className="group rounded-2xl border bg-gradient-to-br from-emerald-500/[0.06] via-emerald-500/[0.03] to-card p-6 shadow-sm hover:shadow-md transition-all duration-300 hover:border-emerald-500/30 sm:col-span-2 lg:col-span-1">
-          <p className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 uppercase tracking-[0.14em]">
-            {t.securityLabel}
-          </p>
-          <h2 className="mt-2 text-xl font-bold">{t.securityTitle}</h2>
-          <p className="mt-3 text-muted-foreground">{t.securityBody}</p>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="mt-16 text-center py-12 px-6 rounded-2xl bg-gradient-to-br from-primary/5 via-primary/3 to-transparent border border-primary/20">
-        <h2 className="text-2xl md:text-3xl font-bold mb-4">{t.ctaTitle}</h2>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-6">
-          {t.ctaText}
-        </p>
-        <Link
-          href={`${localePrefix}/contact/`}
-          className="inline-flex items-center px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:shadow-lg hover:scale-105 transition-all"
-        >
-          {t.ctaButton}
-          <svg
-            className="ml-2 w-5 h-5"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-            aria-hidden="true"
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M17 8l4 4m0 0l-4 4m4-4H3"
+      {/* ── Services ─────────────────────────────────────────────────── */}
+      <section className="bg-surface-tint/40 px-5 py-16 sm:px-8 sm:py-20">
+        <div className="mx-auto w-full max-w-[1200px] space-y-12">
+          <Reveal>
+            <SectionHeading
+              eyebrow={t.servicesEyebrow}
+              title={t.servicesTitle}
+              description={t.servicesDesc}
+              align="center"
+              titleClassName="max-w-[30ch]"
             />
-          </svg>
-        </Link>
-      </section>
+          </Reveal>
 
-      {/* Swiss Technology Expertise Section - SEO Content Density */}
-      <section className="py-10 px-6 rounded-2xl border bg-card/50">
-        <h2 className="text-xl font-semibold mb-4">{t.techExpertiseTitle}</h2>
-        <div className="prose prose-sm dark:prose-invert max-w-none text-muted-foreground">
-          <p>{t.techExpertiseP1}</p>
-          <p className="mt-3">{t.techExpertiseP2}</p>
-          <p className="mt-3">{t.techExpertiseP3}</p>
+          <div className="grid gap-5 sm:grid-cols-2">
+            {[
+              {
+                label: t.s1Label,
+                title: t.s1Title,
+                body: t.s1Body,
+                href: `${localePrefix}/services/ai-consulting/`,
+              },
+              {
+                label: t.s2Label,
+                title: t.s2Title,
+                body: t.s2Body,
+                href: `${localePrefix}/services/microsoft-consulting/`,
+              },
+            ].map((card, i) => (
+              <Reveal key={card.href} delay={i * 0.1}>
+                <Link
+                  href={card.href}
+                  prefetch={false}
+                  className="group flex h-full flex-col rounded-2xl border bg-background p-6 shadow-sm transition-all duration-300 hover:border-brand/30 hover:shadow-md"
+                >
+                  <p className="text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-brand-hover dark:text-brand">
+                    {card.label}
+                  </p>
+                  <h2 className="mt-2 text-xl font-semibold tracking-tight text-foreground">
+                    {card.title}
+                  </h2>
+                  <p className="mt-3 flex-1 text-sm leading-7 text-muted-foreground">
+                    {card.body}
+                  </p>
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-brand transition-gap group-hover:gap-2.5">
+                    Learn more
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                      <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* FAQ Section */}
+      {/* ── Why houle / SEO depth ─────────────────────────────────────── */}
+      <section className="px-5 py-16 sm:px-8 sm:py-20">
+        <div className="mx-auto w-full max-w-[1200px]">
+          <Reveal>
+            <div className="grid gap-x-14 gap-y-8 lg:grid-cols-[1fr_1.6fr]">
+              <div>
+                <SectionHeading
+                  eyebrow={t.whyEyebrow}
+                  title={t.whyTitle}
+                  align="left"
+                  titleClassName="text-3xl sm:text-4xl"
+                />
+              </div>
+              <div className="space-y-5 rounded-[24px] bg-surface-tint/45 p-6 shadow-sm">
+                <p className="text-sm leading-7 text-foreground/80">{t.whyP1}</p>
+                <p className="text-sm leading-7 text-foreground/80">{t.whyP2}</p>
+                <p className="text-sm leading-7 text-foreground/80">{t.whyP3}</p>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ── CTA banner ───────────────────────────────────────────────── */}
+      <section className="px-5 pb-16 sm:px-8 sm:pb-20">
+        <div className="mx-auto w-full max-w-[1200px]">
+          <Reveal>
+            <div className="rounded-2xl border border-brand/15 bg-brand-soft px-8 py-12 text-center sm:px-12">
+              <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
+                {locale === "fr"
+                  ? "Prêt à intégrer l'IA dans vos outils Microsoft ?"
+                  : locale === "de"
+                    ? "Bereit, KI in Ihre Microsoft-Tools zu integrieren?"
+                    : locale === "es"
+                      ? "¿Listo para integrar IA en tus herramientas Microsoft?"
+                      : locale === "pt"
+                        ? "Pronto para integrar IA nas suas ferramentas Microsoft?"
+                        : "Ready to integrate AI into your Microsoft tools?"}
+              </h2>
+              <p className="mx-auto mt-4 max-w-[48ch] text-base text-foreground/70">
+                {locale === "fr"
+                  ? "Discutons de votre situation et voyons comment nos solutions peuvent vous aider."
+                  : locale === "de"
+                    ? "Lassen Sie uns über Ihre Situation sprechen und wie unsere Lösungen helfen können."
+                    : locale === "es"
+                      ? "Hablemos de tu situación y cómo nuestras soluciones pueden ayudarte."
+                      : locale === "pt"
+                        ? "Vamos conversar sobre sua situação e como nossas soluções podem ajudar."
+                        : "Let's discuss your setup and how our solutions can help."}
+              </p>
+              <div className="mt-8 flex justify-center">
+                <Link href={`${localePrefix}/contact/`} prefetch={false}>
+                  <Button
+                    size="lg"
+                    className="btn-main-cta rounded-full bg-foreground px-8 text-base text-background"
+                  >
+                    <span>{t.ctaPrimary}</span>
+                  </Button>
+                </Link>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ── FAQ ──────────────────────────────────────────────────────── */}
       {faqItems.length > 0 && (
-        <FAQ
-          title={faqT("Title") as string}
-          subtitle={faqT("Subtitle") as string}
-          lastUpdated={faqT("LastUpdated") as string}
-          items={faqItems}
-        />
+        <section className="px-5 pb-20 sm:px-8">
+          <div className="mx-auto w-full max-w-[1200px]">
+            <FAQ
+              title={faqT("Title") as string}
+              subtitle={faqT("Subtitle") as string}
+              lastUpdated={faqT("LastUpdated") as string}
+              items={faqItems}
+            />
+          </div>
+        </section>
       )}
     </div>
   );

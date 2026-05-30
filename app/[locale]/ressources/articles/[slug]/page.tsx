@@ -225,7 +225,7 @@ export default async function ArticlePage({ params }: Params) {
   } as const;
 
   return (
-    <main className="max-w-3xl mx-auto px-4 py-12 mt-8">
+    <main className="max-w-3xl mx-auto px-5 py-12 sm:px-6 mt-8">
       <Defer rootMargin="300px" idle={200}>
         <ReadingProgress targetSelector="#article-content" />
       </Defer>
@@ -262,15 +262,15 @@ export default async function ArticlePage({ params }: Params) {
           hideRootWhenDuplicate={false}
         />
       </Defer>
-      <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-center">
+      <h1 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl mb-4 text-balance">
         {article.title}
       </h1>
       {/* Feature image intentionally not displayed to keep layout compact */}
-      <p className="text-lg mb-8 text-center">{article.description}</p>
+      <p className="text-lg mb-8 leading-8 text-foreground/75">{article.description}</p>
 
-      <div className="text-center text-sm mb-6 space-y-1">
+      <div className="text-sm mb-6 space-y-1 text-muted-foreground border-b border-border pb-6">
         <p>
-          {ressources.By} {article.author}
+          {ressources.By} <span className="font-medium text-foreground">{article.author}</span>
         </p>
         <p>
           {ressources.Published} {formatDateDeterministic(article.date, locale)}
@@ -289,7 +289,7 @@ export default async function ArticlePage({ params }: Params) {
         )}
       </div>
 
-      <div className="flex justify-center mb-10 min-h-[40px]">
+      <div className="flex mb-10 min-h-[40px]">
         <Defer
           rootMargin="200px"
           idle={250}
@@ -324,7 +324,7 @@ export default async function ArticlePage({ params }: Params) {
                     href={ref.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-blue-600 underline"
+                    className="text-brand underline decoration-brand/40 underline-offset-4 hover:decoration-brand"
                   >
                     {resolvedLabel}
                   </a>

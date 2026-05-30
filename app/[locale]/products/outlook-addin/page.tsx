@@ -4,25 +4,18 @@ import Link from "next/link";
 import { getTranslations, type Locale } from "@/src/lib/i18n";
 import { generateMetadataForPage } from "@/src/lib/metadata";
 import StructuredData from "@/src/components/seo/StructuredData";
-import {
-  buildBreadcrumbList,
-  buildProductSchema,
-  buildOrganizationSchema,
-} from "@/src/lib/structuredData";
+import { buildBreadcrumbList, buildProductSchema, buildOrganizationSchema } from "@/src/lib/structuredData";
 import { localizePath } from "@/src/lib/paths";
+import PageHero from "@/src/components/site/page-hero";
+import SectionHeading from "@/src/components/site/section-heading";
+import Reveal from "@/src/components/motion/reveal";
+import { Button } from "@/src/components/ui/button";
 
 export const runtime = "nodejs";
 export const revalidate = false;
 
-export async function generateMetadata({
-  params: { locale },
-}: {
-  params: { locale: string };
-}): Promise<Metadata> {
-  return await generateMetadataForPage(
-    locale as Locale,
-    "/products/outlook-addin"
-  );
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }): Promise<Metadata> {
+  return await generateMetadataForPage(locale as Locale, "/products/outlook-addin");
 }
 
 const OutlookAddinPage = async ({ params }: { params: { locale: string } }) => {
@@ -32,238 +25,144 @@ const OutlookAddinPage = async ({ params }: { params: { locale: string } }) => {
   const tNav = await getTranslations(params.locale as Locale, "navbar");
   const t = await getTranslations(params.locale as Locale, "outlook-addin");
 
+  const productsLabel =
+    params.locale === "fr" ? "Produits"
+    : params.locale === "de" ? "Produkte"
+    : params.locale === "es" ? "Productos"
+    : params.locale === "pt" ? "Produtos"
+    : "Products";
+
   const breadcrumbJsonLd = buildBreadcrumbList([
-    {
-      name:
-        params.locale === "fr"
-          ? "Produits"
-          : params.locale === "de"
-          ? "Produkte"
-          : params.locale === "es"
-          ? "Productos"
-          : params.locale === "pt"
-          ? "Produtos"
-          : "Products",
-      item: `${baseUrl}${localePrefix}/products/`,
-    },
+    { name: productsLabel, item: `${baseUrl}${localePrefix}/products/` },
     {
       name: (t("Hero.Title") as string) || "AI Assistant for Outlook",
-      item: `${baseUrl}/${params.locale}${localizePath(
-        "/products/outlook-addin",
-        params.locale as Locale
-      )}/`,
+      item: `${baseUrl}/${params.locale}${localizePath("/products/outlook-addin", params.locale as Locale)}/`,
     },
   ]);
 
-  const productJsonLd = buildProductSchema({
-    name: (t("Hero.Title") as string) || "AI Assistant for Outlook",
-    description:
-      (t("Hero.Description") as string) ||
-      "AI-powered add-in for Microsoft Outlook",
-    url: `${baseUrl}/${params.locale}${localizePath(
-      "/products/outlook-addin",
-      params.locale as Locale
-    )}/`,
-  });
-
-  const organizationJsonLd = buildOrganizationSchema();
-
   return (
-    <div className="min-h-screen">
+    <div>
       <StructuredData
         nonce={nonce}
-        data={[breadcrumbJsonLd, productJsonLd, organizationJsonLd]}
+        data={[breadcrumbJsonLd,
+          buildProductSchema({
+            name: (t("Hero.Title") as string) || "AI Assistant for Outlook",
+            description: (t("Hero.Description") as string) || "AI-powered add-in for Microsoft Outlook",
+            url: `${baseUrl}/${params.locale}${localizePath("/products/outlook-addin", params.locale as Locale)}/`,
+          }),
+          buildOrganizationSchema(),
+        ]}
       />
 
-      {/* Hero Section */}
-      <section className="relative w-full pt-24 pb-16 md:pt-32 md:pb-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-background" />
-        <div className="relative max-w-[1200px] mx-auto px-6">
-          <div className="max-w-[800px]">
-            <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-primary/10 text-primary text-sm font-medium">
-              {t("Hero.Badge") as string}
+      {/* Hero */}
+      <div className="abstract-background">
+        <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
+          <PageHero
+            eyebrow={productsLabel}
+            title={(t("Hero.Title") as string) || "AI Assistant for Outlook"}
+            description={(t("Hero.Description") as string) || ""}
+          />
+        </div>
+      </div>
+
+      {/* Features */}
+      <section className="mx-auto max-w-[1200px] px-5 py-16 sm:px-8">
+        <Reveal>
+          <SectionHeading
+            eyebrow="Outlook"
+            title={(t("Features.Title") as string) || "Features"}
+            description={(t("Features.Description") as string) || ""}
+            align="center"
+            className="mb-12"
+          />
+          <div className="grid gap-5 sm:grid-cols-2">
+            {["Chat", "Templates", "Summaries", "Actions"].map((key) => (
+              <div key={key} className="rounded-2xl border bg-card p-6 shadow-sm">
+                <h3 className="font-semibold text-foreground">
+                  {t(`Features.${key}.Title`) as string}
+                </h3>
+                <p className="mt-2 text-sm leading-7 text-muted-foreground">
+                  {t(`Features.${key}.Description`) as string}
+                </p>
+              </div>
+            ))}
+          </div>
+        </Reveal>
+      </section>
+
+      {/* Benefits */}
+      <section className="bg-surface-tint/40 px-5 py-16 sm:px-8">
+        <div className="mx-auto max-w-[1200px]">
+          <Reveal>
+            <SectionHeading
+              title={(t("Benefits.Title") as string) || "Benefits"}
+              align="center"
+              className="mb-12"
+            />
+            <div className="grid gap-5 sm:grid-cols-2">
+              {["Privacy", "Integration", "Customization", "Compliance"].map((key) => (
+                <div key={key} className="rounded-2xl border bg-background p-6 shadow-sm">
+                  <h3 className="font-semibold text-foreground">
+                    {t(`Benefits.${key}.Title`) as string}
+                  </h3>
+                  <p className="mt-2 text-sm leading-7 text-muted-foreground">
+                    {t(`Benefits.${key}.Description`) as string}
+                  </p>
+                </div>
+              ))}
             </div>
-            <h1 className="text-4xl xs:text-5xl md:text-6xl font-bold mb-6 leading-tight tracking-tight">
-              {t("Hero.Title") as string}
-            </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              {t("Hero.Description") as string}
-            </p>
-          </div>
+          </Reveal>
         </div>
       </section>
 
-      {/* Breadcrumb */}
-      <nav
-        aria-label="Breadcrumb"
-        className="w-full max-w-[1200px] mx-auto mt-4 mb-6 px-6"
-      >
-        <ol className="flex items-center gap-1 text-sm text-muted-foreground">
-          <li>
-            <Link href={`${localePrefix}/`} className="hover:underline">
-              {(tNav("Home") as string) || "Home"}
-            </Link>
-          </li>
-          <li className="flex items-center gap-1">
-            <span className="text-muted-foreground/60">/</span>
-            <span className="text-foreground font-medium">
-              {t("Hero.Title") as string}
-            </span>
-          </li>
-        </ol>
-      </nav>
-
-      {/* Features Section */}
-      <section className="w-full max-w-[1200px] mx-auto px-6 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            {t("Features.Title") as string}
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            {t("Features.Description") as string}
-          </p>
-        </div>
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="p-6 border rounded-2xl bg-card hover:shadow-md transition-shadow">
-            <h3 className="text-xl font-bold mb-3">
-              {t("Features.Chat.Title") as string}
-            </h3>
-            <p className="text-muted-foreground">
-              {t("Features.Chat.Description") as string}
-            </p>
+      {/* Use Cases */}
+      <section className="mx-auto max-w-[1200px] px-5 py-16 sm:px-8">
+        <Reveal>
+          <SectionHeading
+            title={(t("UseCases.Title") as string) || "Use Cases"}
+            description={(t("UseCases.Description") as string) || ""}
+            align="center"
+            className="mb-12"
+          />
+          <div className="grid gap-5 sm:grid-cols-3">
+            {["Sales", "Support", "Management"].map((key) => (
+              <div key={key} className="rounded-2xl border bg-card p-6 shadow-sm">
+                <h3 className="font-semibold text-foreground">
+                  {t(`UseCases.${key}.Title`) as string}
+                </h3>
+                <p className="mt-2 text-sm leading-7 text-muted-foreground">
+                  {t(`UseCases.${key}.Description`) as string}
+                </p>
+              </div>
+            ))}
           </div>
-          <div className="p-6 border rounded-2xl bg-card hover:shadow-md transition-shadow">
-            <h3 className="text-xl font-bold mb-3">
-              {t("Features.Templates.Title") as string}
-            </h3>
-            <p className="text-muted-foreground">
-              {t("Features.Templates.Description") as string}
-            </p>
-          </div>
-          <div className="p-6 border rounded-2xl bg-card hover:shadow-md transition-shadow">
-            <h3 className="text-xl font-bold mb-3">
-              {t("Features.Summaries.Title") as string}
-            </h3>
-            <p className="text-muted-foreground">
-              {t("Features.Summaries.Description") as string}
-            </p>
-          </div>
-          <div className="p-6 border rounded-2xl bg-card hover:shadow-md transition-shadow">
-            <h3 className="text-xl font-bold mb-3">
-              {t("Features.Actions.Title") as string}
-            </h3>
-            <p className="text-muted-foreground">
-              {t("Features.Actions.Description") as string}
-            </p>
-          </div>
-        </div>
+        </Reveal>
       </section>
 
-      {/* Benefits Section */}
-      <section className="w-full max-w-[1200px] mx-auto px-6 py-16 bg-muted/30 rounded-3xl my-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            {t("Benefits.Title") as string}
-          </h2>
-        </div>
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="p-6">
-            <h3 className="text-xl font-bold mb-3">
-              {t("Benefits.Privacy.Title") as string}
-            </h3>
-            <p className="text-muted-foreground">
-              {t("Benefits.Privacy.Description") as string}
+      {/* CTA */}
+      <section className="mx-auto max-w-[1200px] px-5 pb-20 sm:px-8">
+        <Reveal>
+          <div className="rounded-2xl border border-brand/15 bg-brand-soft px-8 py-12 text-center sm:px-12">
+            <h2 className="text-2xl font-semibold tracking-tight text-foreground">
+              {(t("CTA.Title") as string) || "Get started"}
+            </h2>
+            <p className="mx-auto mt-4 max-w-[48ch] text-base text-foreground/70">
+              {(t("CTA.Description") as string) || ""}
             </p>
+            <div className="mt-8 flex flex-wrap justify-center gap-3">
+              <Link href={`${localePrefix}/contact/`} prefetch={false}>
+                <Button size="lg" className="btn-main-cta rounded-full bg-foreground px-8 text-base text-background">
+                  <span>{(t("CTA.Demo") as string) || "Book a demo"}</span>
+                </Button>
+              </Link>
+              <Link href={`${localePrefix}/contact/`} prefetch={false}>
+                <Button size="lg" variant="secondary" className="btn-secondary-cta rounded-full px-8 text-base">
+                  <span>{(t("CTA.Contact") as string) || "Contact us"}</span>
+                </Button>
+              </Link>
+            </div>
           </div>
-          <div className="p-6">
-            <h3 className="text-xl font-bold mb-3">
-              {t("Benefits.Integration.Title") as string}
-            </h3>
-            <p className="text-muted-foreground">
-              {t("Benefits.Integration.Description") as string}
-            </p>
-          </div>
-          <div className="p-6">
-            <h3 className="text-xl font-bold mb-3">
-              {t("Benefits.Customization.Title") as string}
-            </h3>
-            <p className="text-muted-foreground">
-              {t("Benefits.Customization.Description") as string}
-            </p>
-          </div>
-          <div className="p-6">
-            <h3 className="text-xl font-bold mb-3">
-              {t("Benefits.Compliance.Title") as string}
-            </h3>
-            <p className="text-muted-foreground">
-              {t("Benefits.Compliance.Description") as string}
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Use Cases Section */}
-      <section className="w-full max-w-[1200px] mx-auto px-6 py-16">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            {t("UseCases.Title") as string}
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            {t("UseCases.Description") as string}
-          </p>
-        </div>
-        <div className="grid md:grid-cols-3 gap-8">
-          <div className="p-6 border rounded-2xl bg-card">
-            <h3 className="text-xl font-bold mb-3">
-              {t("UseCases.Sales.Title") as string}
-            </h3>
-            <p className="text-muted-foreground">
-              {t("UseCases.Sales.Description") as string}
-            </p>
-          </div>
-          <div className="p-6 border rounded-2xl bg-card">
-            <h3 className="text-xl font-bold mb-3">
-              {t("UseCases.Support.Title") as string}
-            </h3>
-            <p className="text-muted-foreground">
-              {t("UseCases.Support.Description") as string}
-            </p>
-          </div>
-          <div className="p-6 border rounded-2xl bg-card">
-            <h3 className="text-xl font-bold mb-3">
-              {t("UseCases.Management.Title") as string}
-            </h3>
-            <p className="text-muted-foreground">
-              {t("UseCases.Management.Description") as string}
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="w-full max-w-[1200px] mx-auto px-6 py-16 mb-16">
-        <div className="bg-gradient-to-br from-primary/10 via-primary/5 to-background p-12 rounded-3xl text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            {t("CTA.Title") as string}
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-            {t("CTA.Description") as string}
-          </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Link
-              href={`${localePrefix}/contact/`}
-              className="inline-flex items-center justify-center px-8 py-3 rounded-full bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors"
-            >
-              {t("CTA.Demo") as string}
-            </Link>
-            <Link
-              href={`${localePrefix}/contact/`}
-              className="inline-flex items-center justify-center px-8 py-3 rounded-full border-2 border-primary text-primary font-semibold hover:bg-primary/10 transition-colors"
-            >
-              {t("CTA.Contact") as string}
-            </Link>
-          </div>
-        </div>
+        </Reveal>
       </section>
     </div>
   );

@@ -43,14 +43,14 @@ const ContactSection = ({
   const localePrefix = locale ? `/${locale}` : "/fr";
 
   return (
-    <section className="bg-muted/50 rounded-xl p-8 text-center mt-12">
+    <section className="rounded-2xl border border-brand/15 bg-brand-soft px-8 py-10 text-center mt-12">
       <div className="max-w-2xl mx-auto">
-        <MessageCircleIcon className="w-12 h-12 text-primary mx-auto mb-4" />
-        <h3 className="text-xl font-semibold mb-4">{title}</h3>
-        <p className="mb-6">{description}</p>
+        <MessageCircleIcon className="w-10 h-10 text-brand mx-auto mb-5" />
+        <h3 className="text-xl font-semibold tracking-tight text-foreground mb-3">{title}</h3>
+        <p className="mb-7 text-sm leading-7 text-foreground/70">{description}</p>
         <Link href={`${localePrefix}/contact/`} locale={locale} prefetch={false}>
-          <Button size="lg" className="rounded-full">
-            {buttonText}
+          <Button size="lg" className="btn-main-cta rounded-full bg-foreground px-8 text-background">
+            <span>{buttonText}</span>
           </Button>
         </Link>
       </div>

@@ -148,7 +148,7 @@ export default async function RessourcesPage({
   };
 
   return (
-    <main className="max-w-[1200px] mx-auto px-4 md:px-6 py-10">
+    <main className="max-w-[1200px] mx-auto px-5 sm:px-8 py-10">
       <script
         type="application/ld+json"
         nonce={nonce}
@@ -173,38 +173,27 @@ export default async function RessourcesPage({
           }),
         }}
       />
-      <nav aria-label="Breadcrumb" className="mt-8 mb-8">
-        <ol className="flex flex-wrap items-center gap-1 text-sm text-muted-foreground">
-          <li>
-            <a
-              href={`/${locale}/`}
-              className="hover:underline focus:outline-none focus:ring-2 focus:ring-primary rounded-sm"
-            >
-              {(tNav("Home") as string) || "Home"}
-            </a>
-          </li>
-          <li className="flex items-center gap-1">
-            <span className="text-muted-foreground/60">/</span>
-            <span aria-current="page" className="font-medium text-foreground">
-              Ressources
-            </span>
-          </li>
-        </ol>
-      </nav>
-      <section className="mb-16 relative py-8 px-6 md:px-8">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/5 dark:from-primary/10 dark:to-primary/10 rounded-3xl -z-10" />
 
-        <h1 className="text-3xl xs:text-4xl md:text-5xl font-bold mb-5 bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text">
+      {/* Hero */}
+      <section className="abstract-background relative mb-16 pb-8 pt-6">
+        <p className="text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-brand-hover dark:text-brand mb-4">
+          {locale === "fr" ? "Ressources"
+          : locale === "de" ? "Ressourcen"
+          : locale === "es" ? "Recursos"
+          : locale === "pt" ? "Recursos"
+          : "Resources"}
+        </p>
+        <h1 className="max-w-[18ch] text-4xl font-semibold leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl mb-5">
           {ressources.IntroTitle || "Resources"}
         </h1>
-        <p className="text-lg text-muted-foreground">
+        <p className="max-w-[58ch] text-base leading-8 text-foreground/75 sm:text-lg">
           {ressources.IntroText || "Helpful resources and documents"}
         </p>
       </section>
 
       <section id="articles" className="mb-20">
         <div className="flex items-center gap-4 mb-8">
-          <h2 className="text-2xl font-semibold">
+          <h2 className="text-2xl font-semibold tracking-tight text-foreground">
             {ressources.ArticlesTitle || "Articles"}
           </h2>
           <div className="flex-1 h-px bg-gradient-to-r from-border to-transparent" />

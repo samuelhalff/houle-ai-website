@@ -12,6 +12,10 @@ import {
 } from "@/src/lib/structuredData";
 import { localizePath } from "@/src/lib/paths";
 import ResponsiveImage from "@/src/components/media/ResponsiveImage";
+import PageHero from "@/src/components/site/page-hero";
+import SectionHeading from "@/src/components/site/section-heading";
+import Reveal from "@/src/components/motion/reveal";
+import { Button } from "@/src/components/ui/button";
 
 export const runtime = "nodejs";
 export const revalidate = false;
@@ -21,10 +25,7 @@ export async function generateMetadata({
 }: {
   params: { locale: string };
 }): Promise<Metadata> {
-  return await generateMetadataForPage(
-    locale as Locale,
-    "/services/ai-consulting"
-  );
+  return await generateMetadataForPage(locale as Locale, "/services/ai-consulting");
 }
 
 const AIConsultingPage = async ({ params }: { params: { locale: string } }) => {
@@ -32,389 +33,271 @@ const AIConsultingPage = async ({ params }: { params: { locale: string } }) => {
   const baseUrl = "https://houle.ai";
   const localePrefix = `/${params.locale}`;
   const tNav = await getTranslations(params.locale as Locale, "navbar");
-  const tService = await getTranslations(
-    params.locale as Locale,
-    "ai-consulting"
-  );
+  const tService = await getTranslations(params.locale as Locale, "ai-consulting");
+
+  const servicesLabel =
+    params.locale === "fr" ? "Services"
+    : params.locale === "de" ? "Dienstleistungen"
+    : params.locale === "es" ? "Servicios"
+    : params.locale === "pt" ? "Serviços"
+    : "Services";
+
+  const ctaTitle =
+    params.locale === "fr" ? "Discutons de votre projet"
+    : params.locale === "de" ? "Lassen Sie uns über Ihr Projekt sprechen"
+    : params.locale === "es" ? "Hablemos de su proyecto"
+    : params.locale === "pt" ? "Vamos falar sobre seu projeto"
+    : "Let's discuss your project";
+
+  const ctaBody =
+    params.locale === "fr" ? "Contactez-nous pour découvrir comment l'IA peut transformer votre entreprise."
+    : params.locale === "de" ? "Kontaktieren Sie uns, um zu erfahren, wie KI Ihr Unternehmen transformieren kann."
+    : params.locale === "es" ? "Contáctenos para descubrir cómo la IA puede transformar su empresa."
+    : params.locale === "pt" ? "Entre em contato para descobrir como a IA pode transformar sua empresa."
+    : "Contact us to discover how AI can transform your business.";
+
+  const ctaBtn =
+    params.locale === "fr" ? "Discuter de votre projet IA"
+    : params.locale === "de" ? "Ihr KI-Projekt besprechen"
+    : params.locale === "es" ? "Hablar de su proyecto de IA"
+    : params.locale === "pt" ? "Discutir seu projeto de IA"
+    : "Discuss Your AI Project";
+
+  const readArticle =
+    params.locale === "fr" ? "Lire l'article"
+    : params.locale === "de" ? "Artikel lesen"
+    : params.locale === "es" ? "Leer el artículo"
+    : params.locale === "pt" ? "Ler o artigo"
+    : "Read article";
 
   const breadcrumbJsonLd = buildBreadcrumbList([
-    {
-      name:
-        params.locale === "fr"
-          ? "Services"
-          : params.locale === "de"
-          ? "Dienstleistungen"
-          : params.locale === "es"
-          ? "Servicios"
-          : params.locale === "pt"
-          ? "Serviços"
-          : "Services",
-      item: `${baseUrl}${localePrefix}/services/`,
-    },
+    { name: servicesLabel, item: `${baseUrl}${localePrefix}/services/` },
     {
       name: (tService("Hero.Title") as string) || "AI consulting",
-      item: `${baseUrl}/${params.locale}${localizePath(
-        "/services/ai-consulting/",
-        params.locale as Locale
-      )}/`,
+      item: `${baseUrl}/${params.locale}${localizePath("/services/ai-consulting/", params.locale as Locale)}/`,
     },
   ]);
 
   const serviceJsonLd = buildServiceSchema({
     name: (tService("Hero.Title") as string) || "AI consulting",
-    description:
-      (tService("Hero.Description") as string) ||
-      "Transform your business with AI solutions tailored to your needs.",
+    description: (tService("Hero.Description") as string) || "Transform your business with AI solutions.",
     serviceType: "Consulting",
-    url: `${baseUrl}/${params.locale}${localizePath(
-      "/services/ai-consulting/",
-      params.locale as Locale
-    )}/`,
+    url: `${baseUrl}/${params.locale}${localizePath("/services/ai-consulting/", params.locale as Locale)}/`,
     areaServed: ["Geneva", "Lausanne", "Zürich", "Switzerland"],
-    provider: {
-      name: "houle.ai",
-      url: baseUrl,
-      logo: `${baseUrl}/assets/logo.svg`,
-    },
+    provider: { name: "houle.ai", url: baseUrl, logo: `${baseUrl}/assets/logo.svg` },
   });
 
-  const organizationJsonLd = buildOrganizationSchema();
-
-  const professionalServiceJsonLd = buildProfessionalServiceSchema(
-    `${baseUrl}/${params.locale}${localizePath(
-      "/services/ai-consulting/",
-      params.locale as Locale
-    )}/`,
-    (tService("Hero.Title") as string) || "AI consulting",
-    (tService("Hero.Description") as string) ||
-      "Transform your business with AI solutions tailored to your needs."
-  );
-
   return (
-    <div className="min-h-screen">
+    <div>
       <StructuredData
         nonce={nonce}
-        data={[
-          breadcrumbJsonLd,
-          serviceJsonLd,
-          organizationJsonLd,
-          professionalServiceJsonLd,
+        data={[breadcrumbJsonLd, serviceJsonLd, buildOrganizationSchema(),
+          buildProfessionalServiceSchema(
+            `${baseUrl}/${params.locale}${localizePath("/services/ai-consulting/", params.locale as Locale)}/`,
+            (tService("Hero.Title") as string) || "AI consulting",
+            (tService("Hero.Description") as string) || "Transform your business with AI solutions."
+          ),
         ]}
       />
 
-      {/* Hero Section */}
-      <section className="relative w-full pt-24 pb-16 md:pt-32 md:pb-20">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-background" />
-        <div className="relative max-w-[1200px] mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12 items-start md:items-center">
-            <div className="max-w-[600px]">
-              <div className="inline-block px-4 py-1.5 mb-6 rounded-full bg-primary/10 text-primary text-sm font-medium">
-                {params.locale === "fr"
-                  ? "Services"
-                  : params.locale === "de"
-                  ? "Dienstleistungen"
-                  : params.locale === "es"
-                  ? "Servicios"
-                  : params.locale === "pt"
-                  ? "Serviços"
-                  : "Services"}
-              </div>
-              <h1 className="text-4xl xs:text-5xl md:text-6xl font-bold mb-6 leading-tight tracking-tight">
-                {(tService("Hero.Title") as string) || "AI consulting"}
-              </h1>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                {(tService("Hero.Description") as string) ||
-                  "Transform your business with AI solutions tailored to your needs."}
-              </p>
-            </div>
-            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl md:mt-0">
+      {/* Hero */}
+      <div className="abstract-background">
+        <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
+          <PageHero
+            eyebrow={servicesLabel}
+            title={(tService("Hero.Title") as string) || "AI consulting"}
+            description={(tService("Hero.Description") as string) || ""}
+          >
+            <div className="relative aspect-[16/7] max-w-4xl overflow-hidden rounded-2xl shadow-xl">
               <ResponsiveImage
                 mobileSrc="/assets/hero/services/ai-consulting-hero-mobile.avif"
                 desktopSrc="/assets/hero/services/ai-consulting-hero.avif"
-                alt={
-                  params.locale === "fr"
-                    ? "Professionnel travaillant sur des solutions d'intelligence artificielle"
-                    : params.locale === "de"
-                    ? "Fachmann arbeitet an künstlichen Intelligenzlösungen"
-                    : params.locale === "es"
-                    ? "Profesional trabajando en soluciones de inteligencia artificial"
-                    : params.locale === "pt"
-                    ? "Profissional trabalhando em soluções de inteligência artificial"
-                    : "Professional working on artificial intelligence solutions"
-                }
+                alt={(tService("Hero.Title") as string) || "AI consulting"}
                 width={1600}
-                height={1200}
+                height={700}
                 priority
                 className="object-cover w-full h-full"
-                sizes="(max-width: 768px) 100vw, 50vw"
+                sizes="(max-width: 768px) 100vw, 800px"
               />
             </div>
-          </div>
+          </PageHero>
         </div>
-      </section>
+      </div>
 
-      {/* Breadcrumb */}
-      <nav
-        aria-label="Breadcrumb"
-        className="w-full max-w-[1200px] mx-auto mt-4 mb-6 px-6"
-      >
-        <ol className="flex items-center gap-1 text-sm text-muted-foreground">
-          <li>
-            <Link href={`${localePrefix}/`} className="hover:underline">
-              {(tNav("Home") as string) || "Home"}
-            </Link>
-          </li>
-          <li className="flex items-center gap-1">
-            <span className="text-muted-foreground/60">/</span>
-            <Link
-              href={`${localePrefix}/services/`}
-              className="hover:underline"
-            >
-              {params.locale === "fr"
-                ? "Services"
-                : params.locale === "de"
-                ? "Dienstleistungen"
-                : params.locale === "es"
-                ? "Servicios"
-                : params.locale === "pt"
-                ? "Serviços"
-                : "Services"}
-            </Link>
-          </li>
-          <li className="flex items-center gap-1">
-            <span className="text-muted-foreground/60">/</span>
-            <span aria-current="page" className="font-medium text-foreground">
-              {(tService("Hero.Title") as string) || "AI consulting"}
-            </span>
-          </li>
-        </ol>
-      </nav>
+      {/* Content */}
+      <div className="mx-auto max-w-[1200px] px-5 pb-20 sm:px-8">
 
-      {/* Main Content */}
-      <main className="max-w-[1200px] mx-auto px-6 pb-20">
-        <div className="max-w-[800px]">
-          {/* Introduction */}
-          <section className="mb-16">
-            <p className="text-lg leading-relaxed text-muted-foreground">
+        {/* Introduction */}
+        <Reveal>
+          <section className="mb-16 max-w-4xl">
+            <p className="text-lg leading-8 text-foreground/80">
               {tService("Presentation.Intro") as string}
             </p>
           </section>
+        </Reveal>
 
-          {/* Why Section */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-6">
-              {tService("Presentation.Why.Title") as string}
-            </h2>
-            <p className="text-lg leading-relaxed text-muted-foreground">
-              {tService("Presentation.Why.Text") as string}
-            </p>
-          </section>
-
-          {/* Services */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8">
-              {tService("Presentation.Services.Title") as string}
-            </h2>
-            <div className="space-y-10">
+        {/* Why + Services two-column */}
+        <Reveal>
+          <section className="mb-16 grid gap-x-14 gap-y-8 lg:grid-cols-2">
+            <div>
+              <h2 className="text-2xl font-semibold tracking-tight text-foreground mb-1">
+                {tService("Presentation.Why.Title") as string}
+              </h2>
+              <p className="mt-3 text-sm leading-7 text-foreground/75">
+                {tService("Presentation.Why.Text") as string}
+              </p>
+            </div>
+            <div className="space-y-6">
               {["Automation", "Analytics", "Chatbots", "Custom"].map((key) => (
-                <div key={key}>
-                  <h3 className="text-xl font-semibold mb-3">
+                <div key={key} className="border-l-2 border-brand/30 pl-5">
+                  <h3 className="font-semibold text-foreground">
                     {tService(`Presentation.Services.${key}.Title`) as string}
                   </h3>
-                  <p className="text-lg leading-relaxed text-muted-foreground">
+                  <p className="mt-1 text-sm leading-6 text-muted-foreground">
                     {tService(`Presentation.Services.${key}.Text`) as string}
                   </p>
                 </div>
               ))}
             </div>
           </section>
+        </Reveal>
 
-          {/* Approach */}
+        {/* Approach */}
+        <Reveal>
           <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-6">
+            <h2 className="text-2xl font-semibold tracking-tight text-foreground mb-4">
               {tService("Presentation.Approach.Title") as string}
             </h2>
-            <p className="text-lg leading-relaxed text-muted-foreground">
+            <p className="max-w-3xl text-sm leading-7 text-foreground/75">
               {tService("Presentation.Approach.Text") as string}
             </p>
           </section>
+        </Reveal>
 
-          {/* Technologies */}
+        {/* Technologies */}
+        <Reveal>
           <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-6">
+            <h2 className="text-2xl font-semibold tracking-tight text-foreground mb-4">
               {tService("Presentation.Technologies.Title") as string}
             </h2>
-            <p className="text-lg leading-relaxed text-muted-foreground">
+            <p className="max-w-3xl text-sm leading-7 text-foreground/75">
               {tService("Presentation.Technologies.Text") as string}
             </p>
           </section>
+        </Reveal>
 
-          {/* Benefits */}
-          <section className="mb-16">
-            <h2 className="text-3xl font-bold mb-8">
-              {tService("Presentation.Benefits.Title") as string}
-            </h2>
-            <div className="space-y-6">
-              {(() => {
-                const items = tService("Presentation.Benefits.Items");
-                if (Array.isArray(items)) {
-                  return items.map((item: any, index: number) => (
+        {/* Benefits */}
+        {(() => {
+          const items = tService("Presentation.Benefits.Items");
+          if (!Array.isArray(items) || items.length === 0) return null;
+          return (
+            <Reveal>
+              <section className="mb-16">
+                <h2 className="mb-8 text-2xl font-semibold tracking-tight text-foreground">
+                  {tService("Presentation.Benefits.Title") as string}
+                </h2>
+                <div className="grid gap-4 sm:grid-cols-2">
+                  {items.map((item: any, index: number) => (
                     <div
                       key={index}
-                      className="flex items-start gap-4 p-6 rounded-lg bg-primary/5"
+                      className="flex items-start gap-4 rounded-2xl border bg-card p-5 shadow-sm"
                     >
-                      <svg
-                        className="w-6 h-6 text-primary mt-1 flex-shrink-0"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={2}
-                          d="M5 13l4 4L19 7"
-                        />
-                      </svg>
+                      <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-brand-soft">
+                        <svg className="h-3.5 w-3.5 text-brand" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" />
+                        </svg>
+                      </span>
                       <div>
-                        <h4 className="font-semibold text-lg mb-2">
-                          {item.Title}
-                        </h4>
-                        <p className="text-muted-foreground leading-relaxed">
-                          {item.Desc}
-                        </p>
+                        <h4 className="font-semibold text-foreground">{item.Title}</h4>
+                        <p className="mt-1 text-sm leading-6 text-muted-foreground">{item.Desc}</p>
                       </div>
                     </div>
-                  ));
-                }
-                return null;
-              })()}
-            </div>
-          </section>
+                  ))}
+                </div>
+              </section>
+            </Reveal>
+          );
+        })()}
 
-          {/* Azure AI Section */}
-          {tService("Presentation.AzureAI.Title") && (
+        {/* Azure AI */}
+        {tService("Presentation.AzureAI.Title") ? (
+          <Reveal>
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6">
+              <h2 className="mb-4 text-2xl font-semibold tracking-tight text-foreground">
                 {tService("Presentation.AzureAI.Title") as string}
               </h2>
-              <p className="text-lg leading-relaxed text-muted-foreground mb-8">
+              <p className="mb-8 max-w-3xl text-sm leading-7 text-foreground/75">
                 {tService("Presentation.AzureAI.Intro") as string}
               </p>
-              <div className="space-y-8">
+              <div className="space-y-6">
                 {["Models", "Indexing", "Agents", "Grounding"].map((key) => (
-                  <div key={key} className="pl-6 border-l-2 border-primary/30">
-                    <h3 className="text-xl font-semibold mb-3">
+                  <div key={key} className="border-l-2 border-brand/30 pl-5">
+                    <h3 className="font-semibold text-foreground">
                       {tService(`Presentation.AzureAI.${key}.Title`) as string}
                     </h3>
-                    <p className="text-lg leading-relaxed text-muted-foreground">
+                    <p className="mt-1 text-sm leading-6 text-muted-foreground">
                       {tService(`Presentation.AzureAI.${key}.Text`) as string}
                     </p>
                   </div>
                 ))}
               </div>
             </section>
-          )}
+          </Reveal>
+        ) : null}
 
-          {/* Use Cases Section */}
-          {tService("Presentation.UseCases.Title") && (
+        {/* Use Cases */}
+        {tService("Presentation.UseCases.Title") ? (
+          <Reveal>
             <section className="mb-16">
-              <h2 className="text-3xl font-bold mb-6">
+              <h2 className="mb-4 text-2xl font-semibold tracking-tight text-foreground">
                 {tService("Presentation.UseCases.Title") as string}
               </h2>
-              <p className="text-lg leading-relaxed text-muted-foreground mb-8">
+              <p className="mb-8 max-w-3xl text-sm leading-7 text-foreground/75">
                 {tService("Presentation.UseCases.Intro") as string}
               </p>
-              <div className="grid gap-6">
+              <div className="grid gap-4 sm:grid-cols-2">
                 {(() => {
                   const cases = tService("Presentation.UseCases.Cases");
-                  if (Array.isArray(cases)) {
-                    return cases.map((item: any, index: number) => (
-                      <Link
-                        key={index}
-                        href={`${localePrefix}/ressources/articles/${item.Slug}`}
-                        className="block p-6 rounded-lg bg-primary/5 border border-primary/10 hover:border-primary/30 hover:shadow-lg transition-all group"
-                      >
-                        <h3 className="text-xl font-semibold mb-3 group-hover:text-primary transition-colors">
-                          {item.Title}
-                        </h3>
-                        <p className="text-muted-foreground leading-relaxed">
-                          {item.Summary}
-                        </p>
-                        <span className="inline-flex items-center mt-4 text-primary text-sm font-medium">
-                          {params.locale === "fr"
-                            ? "Lire l'article"
-                            : params.locale === "de"
-                            ? "Artikel lesen"
-                            : params.locale === "es"
-                            ? "Leer el artículo"
-                            : params.locale === "pt"
-                            ? "Ler o artigo"
-                            : "Read article"}
-                          <svg
-                            className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M9 5l7 7-7 7"
-                            />
-                          </svg>
-                        </span>
-                      </Link>
-                    ));
-                  }
-                  return null;
+                  if (!Array.isArray(cases)) return null;
+                  return cases.map((item: any, index: number) => (
+                    <Link
+                      key={index}
+                      href={`${localePrefix}/ressources/articles/${item.Slug}`}
+                      className="group flex flex-col rounded-2xl border bg-card p-5 shadow-sm transition-all duration-300 hover:border-brand/30 hover:shadow-md"
+                    >
+                      <h3 className="font-semibold text-foreground group-hover:text-brand transition-colors">
+                        {item.Title}
+                      </h3>
+                      <p className="mt-2 flex-1 text-sm leading-6 text-muted-foreground">{item.Summary}</p>
+                      <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-brand">
+                        {readArticle}
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                          <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </span>
+                    </Link>
+                  ));
                 })()}
               </div>
             </section>
-          )}
+          </Reveal>
+        ) : null}
 
-          {/* Contact CTA */}
-          <section className="mt-16 p-8 rounded-lg bg-gradient-to-br from-primary/10 to-primary/5 border border-primary/20">
-            <h2 className="text-2xl font-bold mb-4">
-              {params.locale === "fr"
-                ? "Discutons de votre projet"
-                : params.locale === "de"
-                ? "Lassen Sie uns über Ihr Projekt sprechen"
-                : params.locale === "es"
-                ? "Hablemos de su proyecto"
-                : params.locale === "pt"
-                ? "Vamos falar sobre seu projeto"
-                : "Let's discuss your project"}
-            </h2>
-            <p className="text-muted-foreground mb-6">
-              {params.locale === "fr"
-                ? "Contactez-nous pour découvrir comment l'IA peut transformer votre entreprise."
-                : params.locale === "de"
-                ? "Kontaktieren Sie uns, um zu erfahren, wie KI Ihr Unternehmen transformieren kann."
-                : params.locale === "es"
-                ? "Contáctenos para descubrir cómo la IA puede transformar su empresa."
-                : params.locale === "pt"
-                ? "Entre em contato para descobrir como a IA pode transformar sua empresa."
-                : "Contact us to discover how AI can transform your business."}
-            </p>
-            <Link
-              href={`${localePrefix}/contact/`}
-              className="inline-flex items-center px-6 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:shadow-lg hover:scale-105 transition-all"
-            >
-              {params.locale === "fr"
-                ? "Discuter de votre projet IA"
-                : params.locale === "de"
-                ? "Ihr KI-Projekt besprechen"
-                : params.locale === "es"
-                ? "Hablar de su proyecto de IA"
-                : params.locale === "pt"
-                ? "Discutir seu projeto de IA"
-                : "Discuss Your AI Project"}
-            </Link>
-          </section>
-        </div>
-      </main>
+        {/* CTA */}
+        <Reveal>
+          <div className="rounded-2xl border border-brand/15 bg-brand-soft px-8 py-10 text-center sm:px-12">
+            <h2 className="text-2xl font-semibold tracking-tight text-foreground">{ctaTitle}</h2>
+            <p className="mx-auto mt-3 max-w-[48ch] text-sm leading-7 text-foreground/70">{ctaBody}</p>
+            <div className="mt-8 flex justify-center">
+              <Link href={`${localePrefix}/contact/`} prefetch={false}>
+                <Button size="lg" className="btn-main-cta rounded-full bg-foreground px-8 text-base text-background">
+                  <span>{ctaBtn}</span>
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </Reveal>
+      </div>
     </div>
   );
 };
