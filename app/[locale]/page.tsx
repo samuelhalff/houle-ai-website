@@ -57,7 +57,7 @@ export default async function HomePage({
       eyebrow: "AI Products & Consulting",
       headline: "Private AI built into Microsoft 365.",
       subtext:
-        "Swiss-made Office add-ins with AI for Outlook and Word — plus a private GPT that stays in your control. From Geneva to Zurich, we help teams use AI without compromising their data.",
+        "AI consulting and Swiss-made Office add-ins with AI for Outlook and Word — plus a private GPT that stays in your control. Based in Geneva and Lausanne, we help teams use AI without compromising their data.",
       ctaPrimary: "Get in touch",
       ctaSecondary: "See our products",
       learnMore: "Learn more",
@@ -102,7 +102,7 @@ export default async function HomePage({
       eyebrow: "Produits IA & Conseil",
       headline: "Une IA privée, directement dans Microsoft 365.",
       subtext:
-        "Des add-ins Office avec IA pour Outlook et Word — et un GPT privé hébergé en Suisse que vous contrôlez. Nous aidons les équipes à utiliser l'IA sans compromettre leurs données.",
+        "Conseil IA et add-ins Office avec IA pour Outlook et Word — plus un GPT privé hébergé en Suisse que vous contrôlez. Basés à Genève et Lausanne, nous aidons les équipes à utiliser l'IA sans compromettre leurs données.",
       ctaPrimary: "Nous contacter",
       ctaSecondary: "Voir nos produits",
       learnMore: "En savoir plus",
@@ -302,7 +302,7 @@ export default async function HomePage({
             <h1 className="mt-4 max-w-[16ch] text-balance text-5xl font-semibold leading-[0.98] tracking-tight text-foreground sm:text-6xl md:text-7xl lg:text-8xl">
               {t.headline}
             </h1>
-            <p className="mt-8 max-w-[52ch] text-lg leading-8 text-muted-foreground sm:text-xl">
+            <p className="site-hero-description mt-8 max-w-[52ch] text-lg leading-8 text-muted-foreground sm:text-xl">
               {t.subtext}
             </p>
             <div className="mt-10 flex w-full flex-col items-stretch gap-3 sm:w-auto sm:flex-row sm:items-center">

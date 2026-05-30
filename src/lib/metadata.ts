@@ -157,7 +157,9 @@ export async function getPageMetadata(
             ? "pt_PT"
             : "en_US";
 
-  const ogImage = `/assets/og/og-${locale}.avif`;
+  const ogImageWebp = `/assets/og/og-${locale}.webp`;
+  const ogImageAvif = `/assets/og/og-${locale}.avif`;
+  const ogAlt = `houle.ai — AI consulting Geneva & Lausanne | Microsoft 365 AI solutions`;
 
   const metadata: Metadata = {
     metadataBase: new URL(siteUrl),
@@ -187,10 +189,18 @@ export async function getPageMetadata(
       siteName: config.default.siteName,
       images: [
         {
-          url: ogImage,
+          url: ogImageWebp,
           width: 1200,
           height: 630,
-          alt: brand,
+          alt: ogAlt,
+          type: "image/webp",
+        },
+        {
+          url: ogImageAvif,
+          width: 1200,
+          height: 630,
+          alt: ogAlt,
+          type: "image/avif",
         },
       ],
     },
@@ -198,7 +208,7 @@ export async function getPageMetadata(
       card: "summary_large_image",
       title,
       description,
-      images: [ogImage],
+      images: [ogImageWebp],
     },
     icons: {
       icon: [
