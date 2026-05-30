@@ -8,6 +8,8 @@ import ProgressiveResourceGrid from "./components/ProgressiveResourceGrid";
 import { notFound } from "next/navigation";
 import { getPageMetadata } from "@/src/lib/metadata";
 import { getTranslations, isValidLocale, type Locale } from "@/src/lib/i18n";
+import PageHero from "@/src/components/site/page-hero";
+import Reveal from "@/src/components/motion/reveal";
 
 type ArticlesSearchParams = Record<string, string | string[] | undefined>;
 
@@ -147,8 +149,15 @@ export default async function RessourcesPage({
     Published: ressources.Published || "Published on",
   };
 
+  const eyebrow =
+    locale === "fr" ? "Ressources"
+    : locale === "de" ? "Ressourcen"
+    : locale === "es" ? "Recursos"
+    : locale === "pt" ? "Recursos"
+    : "Resources";
+
   return (
-    <main className="max-w-[1200px] mx-auto px-5 sm:px-8 py-10">
+    <div>
       <script
         type="application/ld+json"
         nonce={nonce}
@@ -166,7 +175,7 @@ export default async function RessourcesPage({
               {
                 "@type": "ListItem",
                 position: 2,
-                name: "Ressources",
+                name: eyebrow,
                 item: `https://houle.ai/${locale}/ressources/`,
               },
             ],
@@ -175,23 +184,19 @@ export default async function RessourcesPage({
       />
 
       {/* Hero */}
-      <section className="abstract-background relative mb-16 pb-8 pt-6">
-        <p className="text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-brand-hover dark:text-brand mb-4">
-          {locale === "fr" ? "Ressources"
-          : locale === "de" ? "Ressourcen"
-          : locale === "es" ? "Recursos"
-          : locale === "pt" ? "Recursos"
-          : "Resources"}
-        </p>
-        <h1 className="max-w-[18ch] text-4xl font-semibold leading-[1.05] tracking-tight text-foreground sm:text-5xl lg:text-6xl mb-5">
-          {ressources.IntroTitle || "Resources"}
-        </h1>
-        <p className="max-w-[58ch] text-base leading-8 text-foreground/75 sm:text-lg">
-          {ressources.IntroText || "Helpful resources and documents"}
-        </p>
-      </section>
+      <div className="abstract-background">
+        <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
+          <PageHero
+            eyebrow={eyebrow}
+            title={ressources.IntroTitle || "Resources"}
+            description={ressources.IntroText || ""}
+          />
+        </div>
+      </div>
 
-      <section id="articles" className="mb-20">
+      <main className="mx-auto max-w-[1200px] px-5 sm:px-8 pb-10">
+
+      <section id="articles" className="mb-20 mt-16">
         <div className="flex items-center gap-4 mb-8">
           <h2 className="text-2xl font-semibold tracking-tight text-foreground">
             {ressources.ArticlesTitle || "Articles"}
@@ -233,7 +238,8 @@ export default async function RessourcesPage({
           (tRessources("Contact.ButtonText") as string) || "Contact Our Team"
         }
       />
-    </main>
+      </main>
+    </div>
   );
 }
 

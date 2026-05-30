@@ -32,7 +32,6 @@ const AIConsultingPage = async ({ params }: { params: { locale: string } }) => {
   const nonce = headers().get("x-nonce") || undefined;
   const baseUrl = "https://houle.ai";
   const localePrefix = `/${params.locale}`;
-  const tNav = await getTranslations(params.locale as Locale, "navbar");
   const tService = await getTranslations(params.locale as Locale, "ai-consulting");
 
   const servicesLabel =

@@ -31,7 +31,6 @@ const MicrosoftConsultingPage = async ({ params }: { params: { locale: string } 
   const nonce = headers().get("x-nonce") || undefined;
   const baseUrl = "https://houle.ai";
   const localePrefix = `/${params.locale}`;
-  const tNav = await getTranslations(params.locale as Locale, "navbar");
   const tService = await getTranslations(params.locale as Locale, "microsoft-consulting");
 
   const servicesLabel =
@@ -197,7 +196,7 @@ const MicrosoftConsultingPage = async ({ params }: { params: { locale: string } 
               </p>
               <div className="grid gap-4 sm:grid-cols-2">
                 {["Functions", "LogicApps", "Storage", "SQL", "Security", "DevOps"].map((key) => (
-                  <div key={key} className="rounded-xl border bg-card p-4 shadow-sm">
+                  <div key={key} className="rounded-2xl border bg-card p-5 shadow-sm">
                     <h3 className="font-semibold text-foreground">
                       {tService(`Presentation.Azure.${key}.Title`) as string}
                     </h3>

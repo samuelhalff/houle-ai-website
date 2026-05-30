@@ -124,13 +124,17 @@ export default async function ProductsPage({ params }: { params: { locale: strin
     <div>
       <StructuredData nonce={nonce} data={[breadcrumbJsonLd]} />
 
-      <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
-        <PageHero
-          eyebrow={pageEyebrow}
-          title={pageTitle}
-          description={pageIntro}
-        />
+      <div className="abstract-background">
+        <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
+          <PageHero
+            eyebrow={pageEyebrow}
+            title={pageTitle}
+            description={pageIntro}
+          />
+        </div>
+      </div>
 
+      <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
         <Reveal>
           <div className="grid gap-5 pb-20 sm:grid-cols-2 lg:grid-cols-3">
             {products.map((product, i) => (
@@ -149,7 +153,7 @@ export default async function ProductsPage({ params }: { params: { locale: strin
                 <p className="mt-3 flex-1 text-sm leading-7 text-muted-foreground">
                   {product.description}
                 </p>
-                <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-brand transition-gap group-hover:gap-2.5">
+                <span className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-brand transition-[gap] duration-200 group-hover:gap-2.5">
                   {learnMore}
                   <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                     <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />

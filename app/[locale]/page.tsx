@@ -60,6 +60,7 @@ export default async function HomePage({
         "Swiss-made Office add-ins with AI for Outlook and Word — plus a private GPT that stays in your control. From Geneva to Zurich, we help teams use AI without compromising their data.",
       ctaPrimary: "Get in touch",
       ctaSecondary: "See our products",
+      learnMore: "Learn more",
       productsEyebrow: "Products",
       productsTitle: "AI that lives inside Microsoft 365",
       productsDesc:
@@ -104,6 +105,7 @@ export default async function HomePage({
         "Des add-ins Office avec IA pour Outlook et Word — et un GPT privé hébergé en Suisse que vous contrôlez. Nous aidons les équipes à utiliser l'IA sans compromettre leurs données.",
       ctaPrimary: "Nous contacter",
       ctaSecondary: "Voir nos produits",
+      learnMore: "En savoir plus",
       productsEyebrow: "Produits",
       productsTitle: "Une IA intégrée à Microsoft 365",
       productsDesc:
@@ -148,6 +150,7 @@ export default async function HomePage({
         "Schweizer Office-Add-ins mit KI für Outlook und Word — sowie ein privates GPT, das unter Ihrer Kontrolle bleibt. Wir helfen Teams, KI zu nutzen, ohne ihre Daten zu gefährden.",
       ctaPrimary: "Kontakt aufnehmen",
       ctaSecondary: "Unsere Produkte",
+      learnMore: "Mehr erfahren",
       productsEyebrow: "Produkte",
       productsTitle: "KI direkt in Microsoft 365",
       productsDesc:
@@ -192,6 +195,7 @@ export default async function HomePage({
         "Complementos de Office con IA para Outlook y Word — más un GPT privado alojado en Suiza bajo tu control. Ayudamos a los equipos a usar IA sin comprometer sus datos.",
       ctaPrimary: "Contactarnos",
       ctaSecondary: "Ver productos",
+      learnMore: "Saber más",
       productsEyebrow: "Productos",
       productsTitle: "IA que vive dentro de Microsoft 365",
       productsDesc:
@@ -236,6 +240,7 @@ export default async function HomePage({
         "Suplementos do Office com IA para Outlook e Word — mais um GPT privado hospedado na Suíça sob seu controle. Ajudamos equipes a usar IA sem comprometer seus dados.",
       ctaPrimary: "Entre em contato",
       ctaSecondary: "Ver produtos",
+      learnMore: "Saiba mais",
       productsEyebrow: "Produtos",
       productsTitle: "IA que vive dentro do Microsoft 365",
       productsDesc:
@@ -372,8 +377,8 @@ export default async function HomePage({
                   <p className="mt-3 flex-1 text-sm leading-7 text-muted-foreground">
                     {card.body}
                   </p>
-                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-brand transition-gap group-hover:gap-2.5">
-                    Learn more
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-brand transition-[gap] duration-200 group-hover:gap-2.5">
+                    {t.learnMore}
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                       <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
@@ -428,8 +433,8 @@ export default async function HomePage({
                   <p className="mt-3 flex-1 text-sm leading-7 text-muted-foreground">
                     {card.body}
                   </p>
-                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-brand transition-gap group-hover:gap-2.5">
-                    Learn more
+                  <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-medium text-brand transition-[gap] duration-200 group-hover:gap-2.5">
+                    {t.learnMore}
                     <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
                       <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>

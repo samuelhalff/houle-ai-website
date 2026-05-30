@@ -123,83 +123,108 @@ export default async function NotFoundPage() {
         : "Read article",
   };
 
+  const navLinks = [
+    {
+      href: localePrefix,
+      label: content.home,
+      icon: (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+          <polyline points="9 22 9 12 15 12 15 22" />
+        </svg>
+      ),
+    },
+    {
+      href: `${localePrefix}/services/`,
+      label: content.services,
+      icon: (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="3" />
+          <path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14" />
+        </svg>
+      ),
+    },
+    {
+      href: `${localePrefix}/products/`,
+      label: content.products,
+      icon: (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+          <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
+        </svg>
+      ),
+    },
+    {
+      href: `${localePrefix}/contact/`,
+      label: content.contact,
+      icon: (
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+        </svg>
+      ),
+    },
+  ];
+
   return (
     <main
       id="main-content"
-      className="max-w-[1200px] mx-auto px-6 py-16 md:py-24"
+      className="mx-auto max-w-[1200px] px-5 py-16 sm:px-8 md:py-24"
     >
-      <div className="text-center mb-12">
-        <p className="text-8xl md:text-9xl font-black tracking-tight text-muted-foreground/20 mb-4">
+      <div className="mb-14 text-center">
+        <p className="mb-4 text-8xl font-black tracking-tight text-muted-foreground/15 md:text-9xl select-none">
           404
         </p>
-        <h1 className="text-3xl md:text-4xl font-bold mb-4">{content.title}</h1>
-        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        <h1 className="mb-4 text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+          {content.title}
+        </h1>
+        <p className="mx-auto max-w-2xl text-base leading-7 text-muted-foreground sm:text-lg">
           {content.description}
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
-        <Link
-          href={localePrefix}
-          className="group p-6 rounded-lg border border-border bg-card hover:border-primary hover:shadow-md transition-all"
-        >
-          <div className="text-2xl mb-2">🏠</div>
-          <h2 className="font-semibold mb-1 group-hover:text-primary transition-colors">
-            {content.home}
-          </h2>
-        </Link>
-
-        <Link
-          href={`${localePrefix}/services/`}
-          className="group p-6 rounded-lg border border-border bg-card hover:border-primary hover:shadow-md transition-all"
-        >
-          <div className="text-2xl mb-2">🔧</div>
-          <h2 className="font-semibold mb-1 group-hover:text-primary transition-colors">
-            {content.services}
-          </h2>
-        </Link>
-
-        <Link
-          href={`${localePrefix}/products/`}
-          className="group p-6 rounded-lg border border-border bg-card hover:border-primary hover:shadow-md transition-all"
-        >
-          <div className="text-2xl mb-2">📦</div>
-          <h2 className="font-semibold mb-1 group-hover:text-primary transition-colors">
-            {content.products}
-          </h2>
-        </Link>
-
-        <Link
-          href={`${localePrefix}/contact/`}
-          className="group p-6 rounded-lg border border-border bg-card hover:border-primary hover:shadow-md transition-all"
-        >
-          <div className="text-2xl mb-2">💬</div>
-          <h2 className="font-semibold mb-1 group-hover:text-primary transition-colors">
-            {content.contact}
-          </h2>
-        </Link>
+      <div className="mb-14 grid grid-cols-2 gap-4 lg:grid-cols-4">
+        {navLinks.map((link) => (
+          <Link
+            key={link.href}
+            href={link.href}
+            className="group flex flex-col rounded-2xl border bg-card p-6 shadow-sm transition-all duration-300 hover:border-brand/30 hover:shadow-md"
+          >
+            <span className="mb-3 inline-flex h-9 w-9 items-center justify-center rounded-full bg-brand-soft text-brand">
+              {link.icon}
+            </span>
+            <span className="font-semibold text-foreground transition-colors group-hover:text-brand">
+              {link.label}
+            </span>
+          </Link>
+        ))}
       </div>
 
       {articles.length > 0 && (
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl font-bold mb-6 text-center">
-            {content.articlesTitle}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="mx-auto max-w-4xl">
+          <div className="mb-8 flex items-center gap-4">
+            <h2 className="text-2xl font-semibold tracking-tight text-foreground">
+              {content.articlesTitle}
+            </h2>
+            <div className="h-px flex-1 bg-gradient-to-r from-border to-transparent" />
+          </div>
+          <div className="grid gap-5 md:grid-cols-3">
             {articles.map((article) => (
               <Link
                 key={article.slug}
                 href={`${localePrefix}/ressources/articles/${article.slug}`}
-                className="group block p-6 rounded-lg border border-border bg-card hover:border-primary hover:shadow-md transition-all"
+                className="group flex flex-col rounded-2xl border bg-card p-6 shadow-sm transition-all duration-300 hover:border-brand/30 hover:shadow-md"
               >
-                <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors line-clamp-2">
+                <h3 className="mb-2 font-semibold text-foreground transition-colors group-hover:text-brand line-clamp-2">
                   {article.title}
                 </h3>
-                <p className="text-sm text-muted-foreground mb-3 line-clamp-2">
+                <p className="mb-4 flex-1 text-sm leading-6 text-muted-foreground line-clamp-3">
                   {article.description}
                 </p>
-                <span className="text-sm text-primary font-medium">
-                  {content.readMore} →
+                <span className="inline-flex items-center gap-1.5 text-sm font-medium text-brand">
+                  {content.readMore}
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                    <path d="M2 7h10M8 3l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
                 </span>
               </Link>
             ))}
