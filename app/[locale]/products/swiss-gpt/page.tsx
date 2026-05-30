@@ -177,7 +177,7 @@ const SwissGPTPage = async ({ params }: { params: { locale: string } }) => {
                         <span className="text-sm text-muted-foreground">{item.Issue}</span>
                       </div>
                       <div className="flex items-start gap-2">
-                        <span className="mt-0.5 text-[#22c55e]" aria-hidden="true">✓</span>
+                        <span className="mt-0.5 text-green-500" aria-hidden="true">✓</span>
                         <span className="text-sm font-medium text-foreground">{item.Solution}</span>
                       </div>
                     </div>

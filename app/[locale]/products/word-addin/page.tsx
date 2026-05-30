@@ -22,7 +22,6 @@ const WordAddinPage = async ({ params }: { params: { locale: string } }) => {
   const nonce = headers().get("x-nonce") || undefined;
   const baseUrl = "https://houle.ai";
   const localePrefix = `/${params.locale}`;
-  const tNav = await getTranslations(params.locale as Locale, "navbar");
   const t = await getTranslations(params.locale as Locale, "word-addin");
 
   const productsLabel =
