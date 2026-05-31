@@ -3,7 +3,7 @@ import FAQ from "@/src/components/FAQ";
 import { getTranslations, type Locale } from "@/src/lib/i18n";
 import { getPageMetadata } from "@/src/lib/metadata";
 import { Metadata } from "next";
-import { headers } from "next/headers";
+import { getCspNonce } from "@/src/lib/csp";
 import { Button } from "@/src/components/ui/button";
 import SectionHeading from "@/src/components/site/section-heading";
 import Reveal from "@/src/components/motion/reveal";
@@ -21,7 +21,7 @@ export default async function HomePage(
   const { locale: rawLocale } = await props.params;
   const locale = rawLocale || "en";
   const localePrefix = `/${locale}`;
-  const nonce = (await headers()).get("x-nonce") || undefined;
+  const nonce = await getCspNonce();
 
   const faqT = await getTranslations(locale as Locale, "faq");
   const faqItems = Array.from({ length: 22 })
@@ -35,6 +35,12 @@ export default async function HomePage(
       question: faqT(`Question${i}`) as string,
       answer: faqT(`Answer${i}`) as string,
     }));
+  const faqLastUpdatedDate = new Intl.DateTimeFormat(locale, {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(new Date());
 
   const faqJsonLd =
     faqItems.length > 0
@@ -516,6 +522,7 @@ export default async function HomePage(
               title={faqT("Title") as string}
               subtitle={faqT("Subtitle") as string}
               lastUpdated={faqT("LastUpdated") as string}
+              lastUpdatedDate={faqLastUpdatedDate}
               items={faqItems}
             />
           </div>

@@ -138,7 +138,7 @@ export default function Footer({ locale }: { locale?: string }) {
               href={whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+              className="flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
               aria-label={whatsapp.floatingAriaLabel}
             >
               <WhatsAppIcon className="size-4 text-[#25d366]" />
@@ -148,7 +148,7 @@ export default function Footer({ locale }: { locale?: string }) {
               href="https://www.linkedin.com/company/houle-ai/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+              className="flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
               aria-label="Follow houle on LinkedIn"
             >
               <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -164,17 +164,17 @@ export default function Footer({ locale }: { locale?: string }) {
           <p className={sectionHeadingClass}>{t.products}</p>
           <ul className="mt-5 space-y-3">
             <li>
-              <Link href={`${localePrefix}/products/outlook-addin/`} className={linkClass} prefetch={false} locale={locale}>
+              <Link href={`${localePrefix}/products/outlook-addin/`} className={linkClass} prefetch={false}>
                 {t.outlookAddin}
               </Link>
             </li>
             <li>
-              <Link href={`${localePrefix}/products/word-addin/`} className={linkClass} prefetch={false} locale={locale}>
+              <Link href={`${localePrefix}/products/word-addin/`} className={linkClass} prefetch={false}>
                 {t.wordAddin}
               </Link>
             </li>
             <li>
-              <Link href={`${localePrefix}/products/swiss-gpt/`} className={linkClass} prefetch={false} locale={locale}>
+              <Link href={`${localePrefix}/products/swiss-gpt/`} className={linkClass} prefetch={false}>
                 {t.swissGpt}
               </Link>
             </li>
@@ -186,12 +186,12 @@ export default function Footer({ locale }: { locale?: string }) {
           <p className={sectionHeadingClass}>{t.services}</p>
           <ul className="mt-5 space-y-3">
             <li>
-              <Link href={`${localePrefix}/services/ai-consulting/`} className={linkClass} prefetch={false} locale={locale}>
+              <Link href={`${localePrefix}/services/ai-consulting/`} className={linkClass} prefetch={false}>
                 {t.aiConsulting}
               </Link>
             </li>
             <li>
-              <Link href={`${localePrefix}/services/microsoft-consulting/`} className={linkClass} prefetch={false} locale={locale}>
+              <Link href={`${localePrefix}/services/microsoft-consulting/`} className={linkClass} prefetch={false}>
                 {t.microsoftConsulting}
               </Link>
             </li>
@@ -203,17 +203,17 @@ export default function Footer({ locale }: { locale?: string }) {
           <p className={sectionHeadingClass}>{t.company}</p>
           <ul className="mt-5 space-y-3">
             <li>
-              <Link href={`${localePrefix}/`} className={linkClass} prefetch={false} locale={locale}>
+              <Link href={`${localePrefix}/`} className={linkClass} prefetch={false}>
                 {t.home}
               </Link>
             </li>
             <li>
-              <Link href={`${localePrefix}/ressources/`} className={linkClass} prefetch={false} locale={locale}>
+              <Link href={`${localePrefix}/ressources/`} className={linkClass} prefetch={false}>
                 {t.resources}
               </Link>
             </li>
             <li>
-              <Link href={`${localePrefix}/contact/`} className={linkClass} prefetch={false} locale={locale}>
+              <Link href={`${localePrefix}/contact/`} className={linkClass} prefetch={false}>
                 {t.contact}
               </Link>
             </li>
@@ -225,17 +225,17 @@ export default function Footer({ locale }: { locale?: string }) {
           <p className={sectionHeadingClass}>{t.legal}</p>
           <ul className="mt-5 space-y-3">
             <li>
-              <Link href={`${localePrefix}/legal/privacy/`} className={linkClass} prefetch={false} locale={locale}>
+              <Link href={`${localePrefix}/legal/privacy/`} className={linkClass} prefetch={false}>
                 {t.privacyPolicy}
               </Link>
             </li>
             <li>
-              <Link href={`${localePrefix}/legal/terms/`} className={linkClass} prefetch={false} locale={locale}>
+              <Link href={`${localePrefix}/legal/terms/`} className={linkClass} prefetch={false}>
                 {t.termsOfService}
               </Link>
             </li>
             <li>
-              <Link href={`${localePrefix}/legal/cookies/`} className={linkClass} prefetch={false} locale={locale}>
+              <Link href={`${localePrefix}/legal/cookies/`} className={linkClass} prefetch={false}>
                 {t.cookiesPolicy}
               </Link>
             </li>

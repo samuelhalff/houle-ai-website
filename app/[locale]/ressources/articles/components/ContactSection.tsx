@@ -48,7 +48,7 @@ const ContactSection = ({
         <MessageCircleIcon className="w-10 h-10 text-brand mx-auto mb-5" />
         <h3 className="text-xl font-semibold tracking-tight text-foreground mb-3">{title}</h3>
         <p className="mb-7 text-sm leading-7 text-foreground/70">{description}</p>
-        <Link href={`${localePrefix}/contact/`} locale={locale} prefetch={false}>
+        <Link href={`${localePrefix}/contact/`} prefetch={false}>
           <Button size="lg" className="btn-main-cta rounded-full bg-foreground px-8 text-background">
             <span>{buttonText}</span>
           </Button>

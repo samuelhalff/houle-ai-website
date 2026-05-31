@@ -123,7 +123,6 @@ const MobileMenu = ({
                 href={`${localePrefix}/contact/`}
                 onClick={handleLinkClick}
                 prefetch={false}
-                locale={locale}
                 className="flex items-center justify-center gap-2 w-full text-center font-semibold text-lg py-3 rounded-xl border border-accent bg-transparent hover:bg-accent/30 active:scale-[0.99] transition-all"
                 style={{ letterSpacing: 0.5 }}
               >
@@ -136,7 +135,6 @@ const MobileMenu = ({
                 href={`${localePrefix}/`}
                 onClick={handleLinkClick}
                 prefetch={false}
-                locale={locale}
                 className="flex items-center gap-3 text-md px-2 py-2 rounded hover:bg-accent active:scale-[0.99] transition-all font-bold"
               >
                 <span>{navData.labels.home}</span>
@@ -153,7 +151,6 @@ const MobileMenu = ({
                     href={`${localePrefix}${product.href}`}
                     onClick={handleLinkClick}
                     prefetch={false}
-                    locale={locale}
                     className="flex items-start gap-3 text-md px-4 py-2 rounded hover:bg-accent active:scale-[0.99] transition-all"
                   >
                     <div className="flex-1">
@@ -178,7 +175,6 @@ const MobileMenu = ({
                   href={`${localePrefix}${service.href}`}
                   onClick={handleLinkClick}
                   prefetch={false}
-                  locale={locale}
                   className="flex items-start gap-3 text-md px-4 py-2 rounded hover:bg-accent active:scale-[0.99] transition-all"
                 >
                   <div className="flex-1">
@@ -197,7 +193,6 @@ const MobileMenu = ({
                 href={`${localePrefix}/ressources/`}
                 onClick={handleLinkClick}
                 prefetch={false}
-                locale={locale}
                 className="flex items-center gap-3 text-md px-2 py-2 rounded hover:bg-accent active:scale-[0.99] transition-all"
               >
                 <span>{navData.labels.ressources}</span>

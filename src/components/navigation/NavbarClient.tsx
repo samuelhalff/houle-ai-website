@@ -1,22 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import dynamic from "next/dynamic";
-import Defer from "@/src/components/Defer";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import type { NavData } from "@/src/components/navigation/types";
 import ServicesDropdown from "@/src/components/navigation/ServicesDropdown";
 import ProductsDropdown from "@/src/components/navigation/ProductsDropdown";
-
-const HeaderControls = dynamic(
-  () => import("@/src/components/navigation/HeaderControls"),
-  { ssr: false, loading: () => null }
-);
-const MobileMenuIsland = dynamic(
-  () => import("@/src/components/navigation/MobileMenuIsland"),
-  { ssr: false, loading: () => null }
-);
+import HeaderControls from "@/src/components/navigation/HeaderControls";
+import MobileMenu from "@/src/components/navigation/MobileMenu";
 
 export default function NavbarClient({
   locale,
@@ -27,9 +18,11 @@ export default function NavbarClient({
 }) {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const localePrefix = locale ? `/${locale}` : "/en";
 
   useEffect(() => {
+    setMounted(true);
     const update = () => setScrolled(window.scrollY > 4);
     update();
     window.addEventListener("scroll", update, { passive: true });
@@ -47,7 +40,6 @@ export default function NavbarClient({
     return cur === base || cur.startsWith(base + "/");
   };
 
-  /* Pill nav links with brand underline indicator — matches ark-fid style */
   const linkBase =
     "relative inline-flex items-center justify-center whitespace-nowrap rounded-full px-3 py-2 text-sm font-medium text-center transition-colors duration-160 ease-in-out hover:bg-surface-tint hover:text-foreground cursor-pointer after:absolute after:inset-x-3 after:-bottom-1 after:h-[2px] after:origin-center after:scale-x-0 after:rounded-full after:bg-brand after:transition-transform after:duration-200";
   const activeClasses =
@@ -66,7 +58,6 @@ export default function NavbarClient({
           <Link
             href={`${localePrefix}/`}
             prefetch={false}
-            locale={locale}
             aria-label={navData.labels.home}
             className="site-logo font-semibold tracking-tight text-lg"
           >
@@ -82,7 +73,6 @@ export default function NavbarClient({
                   <Link
                     href={`${localePrefix}/`}
                     prefetch={false}
-                    locale={locale}
                     aria-current={isActive(`${localePrefix}`) ? "page" : undefined}
                     className={`${linkBase} ${isActive(`${localePrefix}`) ? activeClasses : ""}`}
                   >
@@ -107,7 +97,6 @@ export default function NavbarClient({
                   <Link
                     href={`${localePrefix}/ressources/`}
                     prefetch={false}
-                    locale={locale}
                     aria-current={
                       isSection(`${localePrefix}/ressources`) ? "page" : undefined
                     }
@@ -122,7 +111,6 @@ export default function NavbarClient({
                   <Link
                     href={`${localePrefix}/contact/`}
                     prefetch={false}
-                    locale={locale}
                     aria-current={
                       isSection(`${localePrefix}/contact`) ? "page" : undefined
                     }
@@ -133,18 +121,17 @@ export default function NavbarClient({
                     {navData.labels.contact}
                   </Link>
                 </li>
-                <li className="site-header-controls ml-1">
-                  <HeaderControls />
+                {/* HeaderControls (theme + lang) only on client — avoids theme/searchParams hydration mismatch */}
+                <li className="site-header-controls ml-1" suppressHydrationWarning>
+                  {mounted && <HeaderControls />}
                 </li>
               </ul>
             </nav>
           </div>
 
-          {/* Mobile menu */}
-          <div className="flex md:hidden">
-            <Defer rootMargin="100px" idle={150} maxDelay={1800} placeholder={null}>
-              <MobileMenuIsland locale={locale} navData={navData} />
-            </Defer>
+          {/* Mobile menu — only on client, same mounted guard avoids BailoutToCSR hydration issues */}
+          <div className="flex md:hidden" suppressHydrationWarning>
+            {mounted && <MobileMenu locale={locale} navData={navData} />}
           </div>
         </div>
       </nav>

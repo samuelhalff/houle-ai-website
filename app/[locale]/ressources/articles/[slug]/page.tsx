@@ -4,8 +4,8 @@ import type { Components } from "react-markdown";
 import remarkGfm from "remark-gfm";
 import ContactSection from "../components/ContactSection";
 import { getPageMetadata } from "@/src/lib/metadata";
-import { headers } from "next/headers";
 import { getTranslations, isValidLocale, type Locale } from "@/src/lib/i18n";
+import { getCspNonce } from "@/src/lib/csp";
 import RelatedArticles from "../components/RelatedArticles";
 import Breadcrumbs from "@/src/components/navigation/Breadcrumbs";
 import { estimateReadingTime } from "@/src/lib/readingTime";
@@ -95,7 +95,7 @@ function isDuplicateArticle(
 
 export default async function ArticlePage(props: Params) {
   const params = await props.params;
-  const nonce = (await headers()).get("x-nonce") || undefined;
+  const nonce = await getCspNonce();
   const locale: Locale = isValidLocale(params.locale) ? params.locale : "fr";
   // Load the locale-specific translations on the server
   const ressources = await loadRessources(locale);
@@ -246,7 +246,7 @@ export default async function ArticlePage(props: Params) {
           hideRootWhenDuplicate={false}
         />
       </Defer>
-      <h1 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl mb-4 text-balance">
+      <h1 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl mt-8 mb-4 text-balance">
         {article.title}
       </h1>
       {/* Feature image intentionally not displayed to keep layout compact */}

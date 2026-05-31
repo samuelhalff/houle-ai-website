@@ -34,10 +34,17 @@ interface FAQProps {
   title: string;
   subtitle?: string;
   lastUpdated: string;
+  lastUpdatedDate: string;
   items: FAQItem[];
 }
 
-export default function FAQ({ title, subtitle, lastUpdated, items }: FAQProps) {
+export default function FAQ({
+  title,
+  subtitle,
+  lastUpdated,
+  lastUpdatedDate,
+  items,
+}: FAQProps) {
   const [openItems, setOpenItems] = useState<Set<number>>(new Set());
 
   const toggleItem = (index: number) => {
@@ -63,12 +70,7 @@ export default function FAQ({ title, subtitle, lastUpdated, items }: FAQProps) {
         </p>
       )}
       <p className="mt-2 text-center text-sm text-muted-foreground">
-        {lastUpdated}{" "}
-        {new Intl.DateTimeFormat(undefined, {
-          day: "2-digit",
-          month: "2-digit",
-          year: "numeric",
-        }).format(new Date())}
+        {lastUpdated} {lastUpdatedDate}
       </p>
 
       <div className="mt-8 columns-1 md:columns-2 gap-4">

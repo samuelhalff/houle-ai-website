@@ -1,8 +1,8 @@
 import React from "react";
-import { headers } from "next/headers";
 import { Metadata } from "next";
 import Link from "next/link";
 import { type Locale } from "@/src/lib/i18n";
+import { getCspNonce } from "@/src/lib/csp";
 import { generateMetadataForPage } from "@/src/lib/metadata";
 import StructuredData from "@/src/components/seo/StructuredData";
 import { buildBreadcrumbList } from "@/src/lib/structuredData";
@@ -20,7 +20,7 @@ export async function generateMetadata(
 
 export default async function ServicesPage(props: { params: Promise<{ locale: string }> }) {
   const { locale } = await props.params;
-  const nonce = (await headers()).get("x-nonce") || undefined;
+  const nonce = await getCspNonce();
   const baseUrl = "https://houle.ai";
   const localePrefix = `/${locale}`;
 
@@ -153,4 +153,3 @@ export default async function ServicesPage(props: { params: Promise<{ locale: st
     </div>
   );
 }
-

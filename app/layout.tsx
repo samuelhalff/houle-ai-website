@@ -70,7 +70,10 @@ export default async function RootLayout({
 }) {
   // ✅ read nonce and UA headers from the middleware
   const hdrs = await headers();
-  const nonce = hdrs.get("x-nonce") || undefined;
+  const nonce =
+    process.env.NODE_ENV === "production"
+      ? hdrs.get("x-nonce") || undefined
+      : undefined;
   const userAgent = hdrs.get("user-agent") || "";
   const isIOS = /iPad|iPhone|iPod/.test(userAgent);
   const isAndroid = /Android/.test(userAgent);
@@ -198,8 +201,7 @@ export default async function RootLayout({
       lang={currentLocale}
       className={inter.variable}
     >
-      {/* ✅ add nonce to <head> so Next’s internal scripts use it */}
-      <head nonce={nonce}>
+      <head>
         {nonce ? <meta name="csp-nonce" content={nonce} /> : null}
         <meta httpEquiv="Accept-CH" content="Sec-CH-Prefers-Color-Scheme" />
       </head>

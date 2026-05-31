@@ -8,7 +8,6 @@ type Props = {
   children: React.ReactNode;
   baseClass: string;
   mode?: "exact" | "section";
-  locale?: string;
 };
 
 const normalize = (p: string) => {
@@ -16,15 +15,14 @@ const normalize = (p: string) => {
   return p.length > 1 && p.endsWith("/") ? p.slice(0, -1) : p;
 };
 
-export default function ActiveLink({ href, children, baseClass, mode = "section", locale }: Props) {
+export default function ActiveLink({ href, children, baseClass, mode = "section" }: Props) {
   const pathname = normalize(usePathname() || "/");
   const target = normalize(href);
   const active = mode === "exact" ? pathname === target : pathname === target || pathname.startsWith(target + "/");
   const cls = `${baseClass} ${active ? "bg-accent" : "hover:bg-accent"}`.trim();
   return (
-    <Link href={href} prefetch={false} locale={locale} className={cls}>
+    <Link href={href} prefetch={false} className={cls}>
       {children}
     </Link>
   );
 }
-

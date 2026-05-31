@@ -263,8 +263,10 @@ export function middleware(request: NextRequest) {
   const redirectUrl = new URL(targetPath, request.url);
   // Preserve query parameters (e.g. ?utm_source=..., ?articles=43)
   redirectUrl.search = request.nextUrl.search;
-  // Use 308 permanent redirect for SEO - tells search engines not to index non-locale URLs
-  const response = NextResponse.redirect(redirectUrl, 308);
+  // Use 307 (temporary) for language-negotiated redirects: the detected locale
+  // depends on Accept-Language which can differ per browser/device. A 308 would
+  // be cached permanently by Chrome and cause stale "file download" behavior.
+  const response = NextResponse.redirect(redirectUrl, 307);
   response.headers.set("x-nonce", nonce);
   response.headers.set("x-pathname", pathname);
   response.headers.set("Content-Security-Policy", csp);
