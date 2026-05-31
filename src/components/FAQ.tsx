@@ -88,16 +88,11 @@ export default function FAQ({
                   {item.question}
                 </h3>
                 <span
-                  className="inline-flex h-7 w-7 items-center justify-center rounded-full transition-all flex-none"
-                  style={{
-                    backgroundColor: isOpen
-                      ? "hsl(var(--foreground) / 0.75)"
-                      : "hsl(var(--foreground) / 0.6)",
-                    color: "hsl(var(--background))",
-                    transform: isOpen ? "rotate(45deg)" : "rotate(0deg)",
-                  }}
+                  className={`inline-flex h-7 w-7 items-center justify-center rounded-full transition-all flex-none text-background ${
+                    isOpen ? "bg-foreground/75 rotate-45" : "bg-foreground/60"
+                  }`}
                 >
-                  <PlusIcon className="w-5 h-5" />
+                  <PlusIcon className="w-4 h-4" />
                 </span>
               </button>
               {isOpen && (
