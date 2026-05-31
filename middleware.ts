@@ -263,10 +263,10 @@ export function middleware(request: NextRequest) {
   const redirectUrl = new URL(targetPath, request.url);
   // Preserve query parameters (e.g. ?utm_source=..., ?articles=43)
   redirectUrl.search = request.nextUrl.search;
-  // Use 307 (temporary) for language-negotiated redirects: the detected locale
-  // depends on Accept-Language which can differ per browser/device. A 308 would
-  // be cached permanently by Chrome and cause stale "file download" behavior.
-  const response = NextResponse.redirect(redirectUrl, 307);
+  // Use 308 permanent redirect so search engines treat non-locale URLs as
+  // permanently moved (matching ark-fid pattern). The redirect always targets
+  // a trailing-slash URL so browsers cache the correct canonical destination.
+  const response = NextResponse.redirect(redirectUrl, 308);
   response.headers.set("x-nonce", nonce);
   response.headers.set("x-pathname", pathname);
   response.headers.set("Content-Security-Policy", csp);
@@ -321,6 +321,6 @@ export const config = {
   // Skip only internal/static paths that should not be internationalized
   // Allow `ressources` and other content routes to be redirected to /<locale>/...
   matcher: [
-    "/((?!_next|api|assets|favicon.ico|favicon.png|favicon.svg|apple-touch-icon.png|site.webmanifest|manifest.webmanifest|robots.txt|sitemap|sitemap.xml|sitemap_index.xml|browserconfig.xml|BingSiteAuth.xml|.*.txt).*)",
+    "/((?!_next|api|assets|\\.well-known|favicon.ico|favicon.png|favicon.svg|apple-touch-icon.png|site.webmanifest|manifest.webmanifest|robots.txt|sitemap|sitemap.xml|sitemap_index.xml|browserconfig.xml|BingSiteAuth.xml|.*.txt).*)",
   ],
 };

@@ -14,12 +14,13 @@ const baseConfig = {
   experimental: {
     optimizePackageImports: ["lucide-react", "react-hook-form", "sonner"],
     optimizeCss: true,
+    nextScriptWorkers: true,
   },
   // Ensure runtime access to JSON translation files in standalone/serverless outputs
   outputFileTracingIncludes: {
     "/**/*": ["src/translations/**/*"],
   },
-  output: "standalone",
+  ...(process.env.NODE_ENV === "production" ? { output: "standalone" } : {}),
   images: {
     unoptimized: false,
     formats: ["image/avif", "image/webp"],
