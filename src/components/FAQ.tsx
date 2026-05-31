@@ -2,26 +2,21 @@
 
 import { useState } from "react";
 
-const PlusIcon = ({
-  className,
-  stroke,
-}: {
-  className?: string;
-  stroke?: string;
-}) => (
+const PlusIcon = ({ className }: { className?: string }) => (
   <svg
     className={className}
     width="24"
     height="24"
     viewBox="0 0 24 24"
     fill="none"
+    stroke="currentColor"
     strokeWidth="2"
     strokeLinecap="round"
     strokeLinejoin="round"
     aria-hidden="true"
   >
-    <path d="M5 12h14" stroke={stroke || "#000000"} />
-    <path d="M12 5v14" stroke={stroke || "#000000"} />
+    <path d="M5 12h14" />
+    <path d="M12 5v14" />
   </svg>
 );
 
@@ -96,12 +91,13 @@ export default function FAQ({
                   className="inline-flex h-7 w-7 items-center justify-center rounded-full transition-all flex-none"
                   style={{
                     backgroundColor: isOpen
-                      ? "hsl(var(--foreground) / 0.65)"
-                      : "hsl(var(--foreground) / 0.55)",
+                      ? "hsl(var(--foreground) / 0.75)"
+                      : "hsl(var(--foreground) / 0.6)",
+                    color: "hsl(var(--background))",
                     transform: isOpen ? "rotate(45deg)" : "rotate(0deg)",
                   }}
                 >
-                  <PlusIcon className="w-5 h-5" stroke="#000000" />
+                  <PlusIcon className="w-5 h-5" />
                 </span>
               </button>
               {isOpen && (
