@@ -27,12 +27,12 @@ export default async function TermsPage(
   return (
     <div className="container mx-auto px-4 py-16 max-w-[var(--breakpoint-xl)]">
       <div className="mb-12">
-        <h1 className="text-4xl font-bold mb-4">Terms of Service</h1>
-        <p className="text-lg mb-2">Our terms of service</p>
-        <p className="text-xs mb-2">
+        <h1 className="text-4xl font-semibold tracking-tight mb-3">Terms of Service</h1>
+        <p className="text-base text-muted-foreground mb-2">Our terms of service</p>
+        <p className="text-xs text-muted-foreground/70">
           Last updated: {formatDate(LEGAL_LAST_UPDATED, locale)}
         </p>
-        <Separator className="mt-6" />
+        <Separator className="mt-8" />
       </div>
 
       <div className="prose prose-gray dark:prose-invert max-w-none">

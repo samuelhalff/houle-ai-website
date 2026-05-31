@@ -1,16 +1,8 @@
 "use client";
 
-import dynamic from "next/dynamic";
-
-const CookieConsent = dynamic(() => import("@/src/components/CookieConsent"), {
-  ssr: false,
-  loading: () => null,
-});
-
-const ConsentAnalytics = dynamic(
-  () => import("@/src/components/ConsentAnalytics"),
-  { ssr: false, loading: () => null }
-);
+import { useEffect, useState } from "react";
+import CookieConsent from "@/src/components/CookieConsent";
+import ConsentAnalytics from "@/src/components/ConsentAnalytics";
 
 type CookieLabels = {
   Title: string;
@@ -34,6 +26,11 @@ export default function ClientOnlyProviders({
   gtmId: string;
   cookieLabels: CookieLabels;
 }) {
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+
+  if (!mounted) return null;
+
   return (
     <>
       <CookieConsent nonce={nonce} locale={locale} labels={cookieLabels} />

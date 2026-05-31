@@ -1,7 +1,7 @@
 import { Metadata } from "next";
-import { headers } from "next/headers";
 import Link from "next/link";
 import { getTranslations, type Locale } from "@/src/lib/i18n";
+import { getCspNonce } from "@/src/lib/csp";
 import { generateMetadataForPage } from "@/src/lib/metadata";
 import StructuredData from "@/src/components/seo/StructuredData";
 import {
@@ -28,7 +28,7 @@ export async function generateMetadata(
 
 const MicrosoftConsultingPage = async (props: { params: Promise<{ locale: string }> }) => {
   const params = await props.params;
-  const nonce = (await headers()).get("x-nonce") || undefined;
+  const nonce = await getCspNonce();
   const baseUrl = "https://houle.ai";
   const localePrefix = `/${params.locale}`;
   const tService = await getTranslations(params.locale as Locale, "microsoft-consulting");

@@ -1,9 +1,9 @@
-import { headers } from "next/headers";
 import { getPageMetadata } from "@/src/lib/metadata";
 import type { Metadata } from "next";
 import { buildBreadcrumbList } from "@/src/lib/structuredData";
 import ProgressiveArticlesList from "./components/ProgressiveArticlesList";
 import { getTranslations, isValidLocale, type Locale } from "@/src/lib/i18n";
+import { getCspNonce } from "@/src/lib/csp";
 
 type ArticlesSearchParams = Record<string, string | string[] | undefined>;
 
@@ -64,7 +64,7 @@ export default async function ArticlesIndex(
   props: { params: Promise<{ locale: string }> }
 ) {
   const params = await props.params;
-  const nonce = (await headers()).get("x-nonce") || undefined;
+  const nonce = await getCspNonce();
   const requestedLocale = params.locale;
   const locale: Locale = isValidLocale(requestedLocale)
     ? requestedLocale
@@ -138,7 +138,7 @@ export default async function ArticlesIndex(
         </nav>
       </div>
 
-      <h1 className="text-3xl font-bold mb-6">
+      <h1 className="text-3xl font-semibold tracking-tight mt-8 mb-6">
         {ressources.ArticlesTitle || "Articles"}
       </h1>
       <ProgressiveArticlesList
@@ -152,13 +152,12 @@ export default async function ArticlesIndex(
   );
 }
 
-export async function generateMetadata({
-  params: { locale },
-  searchParams,
-}: {
-  params: { locale: string };
-  searchParams?: ArticlesSearchParams;
+export async function generateMetadata(props: {
+  params: Promise<{ locale: string }>;
+  searchParams?: Promise<ArticlesSearchParams>;
 }): Promise<Metadata> {
+  const { locale } = await props.params;
+  const searchParams = props.searchParams ? await props.searchParams : undefined;
   const targetLocale = isValidLocale(locale) ? locale : "fr";
   const metadata = await getPageMetadata(targetLocale, "/ressources/articles");
 

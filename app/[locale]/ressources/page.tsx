@@ -1,12 +1,12 @@
 import React from "react";
 import { type Metadata } from "next";
-import { headers } from "next/headers";
 import { Suspense } from "react";
 import FAQSection from "./components/FAQSection";
 import ContactSection from "./articles/components/ContactSection";
 import ProgressiveResourceGrid from "./components/ProgressiveResourceGrid";
 import { notFound } from "next/navigation";
 import { getPageMetadata } from "@/src/lib/metadata";
+import { getCspNonce } from "@/src/lib/csp";
 import { getTranslations, isValidLocale, type Locale } from "@/src/lib/i18n";
 import PageHero from "@/src/components/site/page-hero";
 import Reveal from "@/src/components/motion/reveal";
@@ -121,7 +121,7 @@ export default async function RessourcesPage(
   props: { params: Promise<{ locale: string }> }
 ) {
   const params = await props.params;
-  const nonce = (await headers()).get("x-nonce") || undefined;
+  const nonce = await getCspNonce();
   const requestedLocale = params?.locale;
   const locale: Locale = isValidLocale(requestedLocale)
     ? requestedLocale

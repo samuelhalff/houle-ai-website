@@ -41,7 +41,6 @@ export default function ProductsDropdown({
       <Link
         href={`${localePrefix}/products/`}
         prefetch={false}
-        locale={locale}
         aria-expanded={open}
         className={`px-3 py-2 rounded-lg font-medium text-[0.95rem] text-center min-w-[92px] inline-flex items-center gap-1 transition-colors duration-160 ease-in-out hover:bg-accent hover:text-accent-foreground ${
           isActive ? "bg-accent text-accent-foreground" : ""
@@ -76,7 +75,6 @@ export default function ProductsDropdown({
                 <Link
                   href={`${localePrefix}${item.href}`}
                   prefetch={false}
-                  locale={locale}
                   className="block rounded-md p-3 hover:bg-accent focus:bg-accent focus:outline-none focus:ring-2 focus:ring-primary"
                   onClick={close}
                 >

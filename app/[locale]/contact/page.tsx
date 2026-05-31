@@ -251,7 +251,7 @@ export default async function ContactPage(
   return (
     <div className="mx-auto w-full max-w-[1200px] px-5 py-12 sm:px-8 space-y-12">
       {/* Page title */}
-      <div className="abstract-background mx-auto max-w-3xl text-center space-y-3 pb-4">
+      <div className="abstract-background mx-auto max-w-3xl text-center space-y-4 py-8 sm:py-10 lg:py-14">
         <p className="text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-brand-hover dark:text-brand">
           {locale === "fr" ? "Contact"
           : locale === "de" ? "Kontakt"
