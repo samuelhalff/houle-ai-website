@@ -2569,7 +2569,7 @@
         },
         {
           "labelKey": "Meilleures pratiques avec Azure OpenAI pour les entreprises",
-          "url": "https://www.microsoft.com/en-us/americas-partner-blog/2024/05/22/learnings-from-a-microsoft-customers-azure-openai-implementation/"
+          "url": "https://www.microsoft.com/en-us"
         },
         {
           "labelKey": "Rapport OpenAI sur l'état de l'IA en entreprise",
@@ -2731,7 +2731,7 @@
         },
         {
           "labelKey": "Fedlex - Official Swiss Legislation Platform",
-          "url": "https://www.fedlex.admin.ch"
+          "url": "https://www.fedlex.admin.ch/"
         },
         {
           "labelKey": "The DDPS – Security for Switzerland",
@@ -2781,7 +2781,7 @@
         },
         {
           "labelKey": "Taxonomy of Prompt Engineering Techniques (Springer)",
-          "url": "https://link.springer.com/article/10.1007/s11704-025-50058-z"
+          "url": "https://link.springer.com/article/10.1007/s11704-025-50058-z?error=cookies_not_supported&code=fd5f7024-9654-4493-9739-1e3e6dd210c6"
         }
       ]
     },
@@ -2841,7 +2841,7 @@
         },
         {
           "labelKey": "Normes et ressources Azure concernant les intégrations IA - learn.microsoft.com",
-          "url": "https://learn.microsoft.com/en-us/azure/machine-learning/"
+          "url": "https://learn.microsoft.com/en-us/azure/machine-learning/?view=azureml-api-2"
         },
         {
           "labelKey": "Explorer les futurs assistants de productivité IA - joineta",
@@ -2941,7 +2941,7 @@
         },
         {
           "labelKey": "Législation suisse sur les données - Edöb Admin",
-          "url": "https://www.edoeb.admin.ch/edoeb/fr/home.html"
+          "url": "https://www.edoeb.admin.ch/fr"
         },
         {
           "labelKey": "Charte IA au travail - Juriup.ch",
