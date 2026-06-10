@@ -9,7 +9,8 @@ import { getPageMetadata } from "@/src/lib/metadata";
 import { getCspNonce } from "@/src/lib/csp";
 import { getTranslations, isValidLocale, type Locale } from "@/src/lib/i18n";
 import PageHero from "@/src/components/site/page-hero";
-import Reveal from "@/src/components/motion/reveal";
+import { buildInternalUrl } from "@/src/lib/paths";
+import { buildResourceCategories } from "@/src/lib/resourceCategories";
 
 type ArticlesSearchParams = Record<string, string | string[] | undefined>;
 
@@ -19,6 +20,8 @@ interface RessourceArticle {
   description: string;
   author?: string;
   date?: string;
+  category?: string;
+  tags?: string[];
 }
 
 interface FAQEntry {
@@ -141,6 +144,7 @@ export default async function RessourcesPage(
   const articlesCanonical = [...articlesFr]
     .sort((a, b) => (b.date || "").localeCompare(a.date || ""))
     .map((article) => articlesMap.get(article.slug) ?? article);
+  const articleGroups = buildResourceCategories(articlesCanonical);
 
   const labels = {
     ReadArticle: ressources.ReadArticle || "Read Article",
@@ -220,6 +224,38 @@ export default async function RessourcesPage(
             showAllLabel={ressources.ShowAllArticles || "Show all"}
           />
         </Suspense>
+        <nav
+          aria-label={`${ressources.ArticlesTitle || "Articles"} - all links`}
+          className="mt-10"
+        >
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {articleGroups.map((group) => (
+              <section key={group.id} aria-labelledby={`resource-category-${group.id}`}>
+                <h3
+                  id={`resource-category-${group.id}`}
+                  className="mb-3 text-sm font-semibold uppercase tracking-[0.14em] text-muted-foreground"
+                >
+                  {group.label}
+                </h3>
+                <ul className="space-y-2">
+                  {group.articles.map((article) => (
+                    <li key={article.slug}>
+                      <a
+                        href={buildInternalUrl(
+                          `/ressources/articles/${article.slug}`,
+                          locale,
+                        )}
+                        className="text-sm leading-6 text-foreground underline decoration-border underline-offset-4 hover:text-brand hover:decoration-brand"
+                      >
+                        {article.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ))}
+          </div>
+        </nav>
       </section>
       <FAQSection faq={ressources.FAQ || {}} locale={locale} nonce={nonce} />
 

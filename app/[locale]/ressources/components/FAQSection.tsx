@@ -1,4 +1,5 @@
 import React from "react";
+import { buildFAQPage } from "@/src/lib/structuredData";
 
 interface FAQItem {
   q: string;
@@ -16,18 +17,9 @@ export default function FAQSection({
 }) {
   if (!faq?.Items || !faq.Items.length) return null;
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faq.Items.map((item) => ({
-      "@type": "Question",
-      name: item.q,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.a,
-      },
-    })),
-  };
+  const jsonLd = buildFAQPage(
+    faq.Items.map((item) => ({ question: item.q, answer: item.a })),
+  );
 
   return (
     <section className="mt-20 mb-24" aria-labelledby="faq-heading">

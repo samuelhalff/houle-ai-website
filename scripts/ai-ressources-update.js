@@ -61,6 +61,7 @@ const {
   getFallbackReferences,
   isTrustedDomain,
 } = require("./lib/referenceValidator");
+const { applyArticleTaxonomy } = require("./lib/article-taxonomy");
 
 const rawArgs = process.argv.slice(2);
 const args = new Set(rawArgs);
@@ -2862,6 +2863,7 @@ async function main() {
   // Detect the article category for reference fallback
   const articleCategory =
     seoSuggestions?.category || detectTopic(newArticle) || "general";
+  applyArticleTaxonomy(newArticle);
   await repairReferences(newArticle, articleCategory);
   syncContentReferencesSection(newArticle);
   sanitizeContentExternalLinks(newArticle);
@@ -2926,6 +2928,9 @@ async function main() {
       content: articleTr.content,
       author: newArticle.author,
       date: newArticle.date,
+      updated: newArticle.updated,
+      category: newArticle.category,
+      tags: newArticle.tags,
       references: newArticle.references,
     };
     normalizeBrandCaseInArticle(localizedArticle);

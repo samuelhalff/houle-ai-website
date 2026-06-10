@@ -152,6 +152,9 @@ jobs:
           print(f"Detected new article: {a.get('title','')[:80]}")
           PY
 
+      - name: Validate latest article length
+        run: npm run validate:latest-article
+
       - name: Commit and push changes
         run: |
           git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"

@@ -2,11 +2,11 @@ import { NextResponse } from "next/server";
 import { locales, type Locale } from "@/src/lib/i18n-locales";
 import { localizePath } from "@/src/lib/paths";
 import { hreflangFor } from "@/src/lib/hreflang";
-import fs from "fs";
-import path from "path";
+import { getArticles, getValidLocalesForSlug } from "@/src/lib/articles";
 
 const BASE = "https://houle.ai";
 const canonicalLocale: Locale = "fr";
+const STATIC_LASTMOD = "2026-06-10";
 
 function getPlaceholderLocales(): Set<string> {
   const raw = process.env.PLACEHOLDER_LOCALES || "";
@@ -18,12 +18,11 @@ function getPlaceholderLocales(): Set<string> {
   );
 }
 
-const placeholderLocales = getPlaceholderLocales();
-const sitemapLocales = locales.filter(
-  (locale) => !placeholderLocales.has(locale as any),
-);
+function getSitemapLocales() {
+  const placeholderLocales = getPlaceholderLocales();
+  return locales.filter((locale) => !placeholderLocales.has(locale));
+}
 
-// static routes
 const staticPaths = [
   "/",
   "/services",
@@ -34,7 +33,7 @@ const staticPaths = [
   "/legal/privacy",
   "/legal/cookies",
 ];
-// dynamic routes (only include routes that actually exist in app/)
+
 const servicePaths = [
   "/services/ai-consulting",
   "/services/microsoft-consulting",
@@ -46,118 +45,12 @@ const productPaths = [
   "/products/swiss-gpt",
 ];
 
-interface ArticleData {
-  slug: string;
-  title?: string;
-  description?: string;
-  content?: string;
+type PathEntry = {
+  path: string;
   date?: string;
-}
-
-function readRessourcesIndex(locale: string): ArticleData[] {
-  const file = path.join(
-    process.cwd(),
-    "src",
-    "translations",
-    locale,
-    "ressources.json",
-  );
-  try {
-    if (!fs.existsSync(file)) return [];
-    const json = JSON.parse(fs.readFileSync(file, "utf8")) as {
-      Articles?: ArticleData[];
-    };
-    return Array.isArray(json.Articles) ? json.Articles : [];
-  } catch (_) {
-    return [];
-  }
-}
-
-/**
- * Check if an article in a non-canonical locale is a genuine translation
- * (not just a copy of the canonical FR content).
- * Returns true if the article has meaningfully different content.
- */
-function isGenuineTranslation(
-  article: ArticleData,
-  canonicalArticle: ArticleData,
-): boolean {
-  // If title, description, AND content are all identical to the canonical locale, it's not a genuine translation
-  const sameTitle = (article.title || "") === (canonicalArticle.title || "");
-  const sameDesc =
-    (article.description || "") === (canonicalArticle.description || "");
-  const sameContent =
-    (article.content || "") === (canonicalArticle.content || "");
-
-  // If all three are identical, it's a duplicate/fallback, not a translation
-  if (sameTitle && sameDesc && sameContent) return false;
-
-  return true;
-}
-
-// Enumerate articles from the canonical locale translations JSON.
-// Only include locales where genuine translations exist (not duplicates of FR).
-// Shape: { Articles: [{ slug, date, ... }] }
-const ressourcesArticles = (() => {
-  try {
-    // Load all articles by locale
-    const articlesByLocale = new Map<string, Map<string, ArticleData>>();
-    for (const locale of sitemapLocales) {
-      const items = readRessourcesIndex(locale);
-      const bySlug = new Map<string, ArticleData>();
-      for (const item of items) {
-        bySlug.set(item.slug, item);
-      }
-      articlesByLocale.set(locale, bySlug);
-    }
-
-    const canonicalArticles = articlesByLocale.get(canonicalLocale);
-    if (!canonicalArticles || canonicalArticles.size === 0) {
-      // Fallback to FR if canonical locale has no articles
-      const frArticles = articlesByLocale.get("fr");
-      if (!frArticles) return [];
-    }
-
-    const canonical = readRessourcesIndex(canonicalLocale);
-    const articles = canonical.length ? canonical : readRessourcesIndex("fr");
-
-    return articles.map((canonicalArticle) => {
-      // Determine which locales have genuine translations for this article
-      const validLocales = sitemapLocales.filter((locale) => {
-        const localeArticles = articlesByLocale.get(locale);
-        if (!localeArticles) return false;
-
-        const article = localeArticles.get(canonicalArticle.slug);
-        if (!article) return false;
-
-        // Canonical locale is always valid
-        if (locale === canonicalLocale) return true;
-
-        // For other locales, check if it's a genuine translation
-        return isGenuineTranslation(article, canonicalArticle);
-      });
-
-      return {
-        path: `/ressources/articles/${canonicalArticle.slug}`,
-        date: canonicalArticle.date,
-        locales: validLocales,
-      };
-    });
-  } catch (_) {
-    // fall through
-  }
-  return [] as Array<{ path: string; date?: string; locales?: string[] }>;
-})();
-
-type PathEntry = { path: string; date?: string; locales?: string[] } | string;
-const toPathEntry = (p: PathEntry) => (typeof p === "string" ? { path: p } : p);
-
-const paths = [
-  ...staticPaths.map(toPathEntry),
-  ...servicePaths.map(toPathEntry),
-  ...productPaths.map(toPathEntry),
-  ...ressourcesArticles,
-] as Array<{ path: string; date?: string; locales?: string[] }>;
+  updated?: string;
+  locales?: Locale[];
+};
 
 function escapeXml(s: string) {
   return s
@@ -168,22 +61,47 @@ function escapeXml(s: string) {
     .replace(/'/g, "&apos;");
 }
 
+async function buildArticleEntries(sitemapLocales: Locale[]): Promise<PathEntry[]> {
+  const canonicalArticles = await getArticles(canonicalLocale);
+  const entries: PathEntry[] = [];
+
+  for (const article of canonicalArticles) {
+    const validLocales = (await getValidLocalesForSlug(article.slug)).filter((locale) =>
+      sitemapLocales.includes(locale),
+    );
+    entries.push({
+      path: `/ressources/articles/${article.slug}`,
+      date: article.date,
+      updated: article.updated,
+      locales: validLocales,
+    });
+  }
+
+  return entries;
+}
+
 export async function GET() {
-  const defaultLastmod = new Date().toISOString().slice(0, 10);
+  const sitemapLocales = getSitemapLocales();
+  const articleEntries = await buildArticleEntries(sitemapLocales);
+  const paths: PathEntry[] = [
+    ...staticPaths.map((path) => ({ path })),
+    ...servicePaths.map((path) => ({ path })),
+    ...productPaths.map((path) => ({ path })),
+    ...articleEntries,
+  ];
 
   const urlEntries = paths.flatMap((pObj) => {
     const p = pObj.path;
-    const pathLocales = (
-      pObj.locales?.length ? pObj.locales : sitemapLocales
-    ).filter((locale) => sitemapLocales.includes(locale as any));
-    // build per-locale entries and optionally a non-prefixed default locale entry
+    const pathLocales = (pObj.locales?.length ? pObj.locales : sitemapLocales).filter(
+      (locale) => sitemapLocales.includes(locale),
+    );
     return pathLocales.map((locale) => {
       const basePath = p === "/" ? "" : p;
-      const localized = basePath ? localizePath(basePath, locale as any) : "";
-      // Add trailing slash to match trailingSlash: true in next.config.js
+      const localized = basePath ? localizePath(basePath, locale) : "";
       const loc = `${BASE}/${locale}${localized}/`;
-      const lastmod = pObj.date || defaultLastmod;
-      // derive changefreq/priority
+      const lastmod = p.startsWith("/ressources/articles/")
+        ? pObj.updated || pObj.date || STATIC_LASTMOD
+        : STATIC_LASTMOD;
       const isHome = p === "/";
       const isArticle = p.startsWith("/ressources/articles/");
       const isResources = p.startsWith("/ressources") && !isArticle;
@@ -209,41 +127,34 @@ export async function GET() {
                 ? "0.3"
                 : "0.5";
 
-      // build alternates block
       const alternates = [
         ...pathLocales.map((alt) => {
           const altPathBase = p === "/" ? "" : p;
-          const altLocalized = altPathBase
-            ? localizePath(altPathBase, alt as any)
-            : "";
-          // Add trailing slash to alternate hrefs
+          const altLocalized = altPathBase ? localizePath(altPathBase, alt) : "";
           const href = `${BASE}/${alt}${altLocalized}/`;
-          const hreflang = hreflangFor(alt as Locale);
+          const hreflang = hreflangFor(alt);
           return `    <xhtml:link rel="alternate" hreflang="${escapeXml(
             hreflang,
           )}" href="${escapeXml(href)}"/>`;
         }),
-        // x-default points to root domain for homepage, otherwise to canonical locale
         (() => {
-          // For homepage (path === "/"), x-default should point to root without locale
           if (p === "/") {
             return `    <xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(BASE)}"/>`;
           }
-          // For other pages, point to canonical locale
           const xDefaultLocale = pathLocales.includes(canonicalLocale)
             ? canonicalLocale
             : pathLocales[0];
           const altPathBase = p === "/" ? "" : p;
           const altLocalized = altPathBase
-            ? localizePath(altPathBase, xDefaultLocale as any)
+            ? localizePath(altPathBase, xDefaultLocale)
             : "";
-          // Add trailing slash to x-default href
           const href = `${BASE}/${xDefaultLocale}${altLocalized}/`;
           return `    <xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(
             href,
           )}"/>`;
         })(),
       ].join("\n");
+
       return `  <url>
     <loc>${escapeXml(loc)}</loc>
     <lastmod>${lastmod}</lastmod>

@@ -10,6 +10,7 @@ interface ArticleResource {
   description: string;
   author?: string;
   date?: string;
+  category?: string;
 }
 
 interface ProgressiveResourceGridProps {

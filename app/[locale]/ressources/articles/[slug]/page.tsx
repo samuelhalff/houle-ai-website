@@ -6,10 +6,21 @@ import ContactSection from "../components/ContactSection";
 import { getPageMetadata } from "@/src/lib/metadata";
 import { getTranslations, isValidLocale, type Locale } from "@/src/lib/i18n";
 import { getCspNonce } from "@/src/lib/csp";
+import {
+  getArticle,
+  getArticles,
+  getRessources,
+  getValidLocalesForSlug,
+  isGenuineTranslation,
+  type ResourceArticle,
+  type RessourcesDictionary,
+  type ArticleReference,
+} from "@/src/lib/articles";
 import RelatedArticles from "../components/RelatedArticles";
 import Breadcrumbs from "@/src/components/navigation/Breadcrumbs";
 import { estimateReadingTime } from "@/src/lib/readingTime";
 import Defer from "@/src/components/Defer";
+import { getResourceCategoryLabel } from "@/src/lib/resourceCategories";
 import {
   ShareButtons,
   ReadingProgress,
@@ -17,45 +28,6 @@ import {
 } from "../components/ArticleClientWidgets";
 
 type Params = { params: Promise<{ slug: string; locale: string }> };
-
-type ArticleReference = {
-  labelKey: string;
-  url: string;
-};
-
-type ResourceArticle = {
-  slug: string;
-  title: string;
-  description?: string;
-  content?: string;
-  date?: string;
-  updated?: string;
-  author?: string;
-  authorUrl?: string;
-  image?: string;
-  references?: ArticleReference[];
-};
-
-interface RessourcesDictionary {
-  Articles: ResourceArticle[];
-  IntroTitle?: string;
-  IntroShort?: string;
-  ArticlesTitle?: string;
-  ArticlesShort?: string;
-  ImageAltPrefix?: string;
-  By?: string;
-  Published?: string;
-  LastUpdated?: string;
-  ReadingTime?: string;
-  Minutes?: string;
-  References?: string;
-  banner?: {
-    questions_about_article?: string;
-    banner_body?: string;
-    contact_button?: string;
-  };
-  [key: string]: unknown;
-}
 
 const markdownComponents: Components = {
   table({ node: _node, className, ...props }) {
@@ -67,51 +39,22 @@ const markdownComponents: Components = {
   },
 };
 
-async function loadRessources(locale: Locale): Promise<RessourcesDictionary> {
-  const ressourcesModule = await import(
-    `@/src/translations/${locale}/ressources.json`
-  );
-  const data = ressourcesModule.default as Partial<RessourcesDictionary>;
-  const { Articles, ...rest } = data;
-  return {
-    Articles: Array.isArray(Articles) ? Articles : [],
-    ...rest,
-  };
-}
-
-// Helper function to check if two articles have identical content
-function isDuplicateArticle(
-  locArticle: ResourceArticle | undefined,
-  frArticle: ResourceArticle | undefined
-): boolean {
-  if (!locArticle || !frArticle) return false;
-  
-  const sameTitle = (locArticle.title || "") === (frArticle.title || "");
-  const sameDesc = (locArticle.description || "") === (frArticle.description || "");
-  const sameContent = (locArticle.content || "") === (frArticle.content || "");
-  
-  return sameTitle && sameDesc && sameContent;
-}
-
 export default async function ArticlePage(props: Params) {
   const params = await props.params;
   const nonce = await getCspNonce();
   const locale: Locale = isValidLocale(params.locale) ? params.locale : "fr";
   // Load the locale-specific translations on the server
-  const ressources = await loadRessources(locale);
+  const ressources = await getRessources(locale);
   const tNav = await getTranslations(locale, "navbar");
-  const fr = locale === "fr" ? ressources : await loadRessources("fr");
+  const frArticle = await getArticle("fr", params.slug);
 
-  const localArticle = ressources.Articles.find(
-    (article) => article.slug === params.slug
-  );
-  const frArticle = fr.Articles.find((article) => article.slug === params.slug);
+  const localArticle = await getArticle(locale, params.slug);
   // If slug doesn't exist at all in this locale, return 404
   if (locale !== "fr" && !localArticle) return notFound();
 
   // Check if this is a duplicate/untranslated article (content identical to FR)
   // If so, return 404 to prevent soft 404 issues with Google
-  if (locale !== "fr" && isDuplicateArticle(localArticle, frArticle)) {
+  if (locale !== "fr" && !isGenuineTranslation(localArticle, frArticle)) {
     // This is duplicate content - return 404 to avoid soft 404 reports
     return notFound();
   }
@@ -123,7 +66,7 @@ export default async function ArticlePage(props: Params) {
     : [];
 
   const baseUrl = "https://houle.ai";
-  const articleUrl = `${baseUrl}/${locale}/ressources/articles/${params.slug}`;
+  const articleUrl = `${baseUrl}/${locale}/ressources/articles/${params.slug}/`;
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -154,9 +97,12 @@ export default async function ArticlePage(props: Params) {
       },
     ],
   } as const;
-  // Use relative path for local public assets to avoid Next/Image remote domain restrictions
-  const imageUrl = article.image ? `/assets/${article.image}` : undefined; // used for JSON-LD only; image hidden in UI
+  const imageUrl = article.image
+    ? `${baseUrl}/assets/${article.image.replace(/^\/?assets\//, "")}`
+    : `${baseUrl}/assets/og/og-${locale}.webp`;
   const reading = estimateReadingTime(article.content || "");
+  const categoryLabel = getResourceCategoryLabel(article.category);
+  const tags = Array.isArray(article.tags) ? article.tags : [];
 
   const articleJsonLd = {
     "@context": "https://schema.org",
@@ -188,23 +134,18 @@ export default async function ArticlePage(props: Params) {
     },
     ...(article.updated ? { dateModified: article.updated } : {}),
     ...(reading ? { timeRequired: reading.timeRequiredISO } : {}),
-    ...(imageUrl
-      ? {
-          image: {
-            "@type": "ImageObject",
-            url: imageUrl,
-          },
-        }
-      : {}),
+    articleSection: categoryLabel,
+    ...(tags.length ? { keywords: tags.join(", ") } : {}),
+    image: {
+      "@type": "ImageObject",
+      url: imageUrl,
+    },
     about: [
       {
         "@type": "Thing",
-        name: "Microsoft 365",
+        name: categoryLabel,
       },
-      {
-        "@type": "Thing",
-        name: "Artificial Intelligence",
-      },
+      ...tags.map((tag) => ({ "@type": "Thing", name: tag })),
     ],
   } as const;
 
@@ -226,26 +167,24 @@ export default async function ArticlePage(props: Params) {
         nonce={nonce}
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
-      <Defer rootMargin="200px" idle={150}>
-        <Breadcrumbs
-          className="mb-6"
-          baseLabel={ressources.IntroShort || "Resources"}
-          rootLabel={(tNav("Home") as string) || "Home"}
-          segments={[
-            {
-              segment: "ressources",
-              label: ressources.IntroShort || "Resources",
-            },
-            {
-              segment: "articles",
-              label: ressources.ArticlesShort || "Articles",
-            },
-            { segment: params.slug, label: article.title },
-          ]}
-          maxLabelChars={56}
-          hideRootWhenDuplicate={false}
-        />
-      </Defer>
+      <Breadcrumbs
+        className="mb-6"
+        baseLabel={ressources.IntroShort || "Resources"}
+        rootLabel={(tNav("Home") as string) || "Home"}
+        segments={[
+          {
+            segment: "ressources",
+            label: ressources.IntroShort || "Resources",
+          },
+          {
+            segment: "articles",
+            label: ressources.ArticlesShort || "Articles",
+          },
+          { segment: params.slug, label: article.title },
+        ]}
+        maxLabelChars={56}
+        hideRootWhenDuplicate={false}
+      />
       <h1 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl mt-8 mb-4 text-balance">
         {article.title}
       </h1>
@@ -345,66 +284,29 @@ export default async function ArticlePage(props: Params) {
 
 // Enumerate slugs from the canonical French source at build-time (FR is canonical across tooling).
 export async function generateStaticParams() {
-  const ressources = await loadRessources("fr");
-  return ressources.Articles.map((article) => ({ slug: article.slug }));
+  const articles = await getArticles("fr");
+  return articles.map((article) => ({ slug: article.slug }));
 }
 
 export async function generateMetadata(props: Params) {
   const params = await props.params;
   const locale: Locale = isValidLocale(params.locale) ? params.locale : "fr";
-  const ressources = await loadRessources(locale);
-  const fr = locale === "fr" ? ressources : await loadRessources("fr");
+  const frArticle = await getArticle("fr", params.slug);
 
-  const localArticle = ressources.Articles.find(
-    (article) => article.slug === params.slug
-  );
-  const frArticle = fr.Articles.find((article) => article.slug === params.slug);
+  const localArticle = await getArticle(locale, params.slug);
   // If slug doesn't exist at all in this locale, return 404
   if (locale !== "fr" && !localArticle) return notFound();
 
   // Check if this is a duplicate/untranslated article (content identical to FR)
   // If so, return 404 to prevent soft 404 issues with Google
-  if (locale !== "fr" && isDuplicateArticle(localArticle, frArticle)) {
+  if (locale !== "fr" && !isGenuineTranslation(localArticle, frArticle)) {
     // This is duplicate content - return 404 to avoid soft 404 reports
     return notFound();
   }
   const article = localArticle ?? frArticle;
   if (!article) return {};
 
-  // Determine which locales have this article (and it's not a duplicate)
-  const { locales: allLocales } = await import("@/src/lib/i18n");
-  const validLocales: Locale[] = [];
-  
-  // Load all locale resources concurrently for better performance
-  const localeChecks = await Promise.allSettled(
-    allLocales.map(async (loc) => {
-      const locRessources = await loadRessources(loc);
-      const locArticle = locRessources.Articles.find(
-        (a) => a.slug === params.slug
-      );
-      
-      if (!locArticle) {
-        // Article doesn't exist in this locale
-        return null;
-      }
-      
-      // Check if it's a duplicate of French (same logic as in the page component)
-      if (loc !== "fr" && isDuplicateArticle(locArticle, frArticle)) {
-        // This is a duplicate - skip this locale
-        return null;
-      }
-      
-      // Article exists and is not a duplicate
-      return loc;
-    })
-  );
-  
-  // Collect valid locales from successful checks
-  for (const result of localeChecks) {
-    if (result.status === "fulfilled" && result.value !== null) {
-      validLocales.push(result.value);
-    }
-  }
+  const validLocales = await getValidLocalesForSlug(params.slug);
 
   const reading = article.content ? estimateReadingTime(article.content) : null;
   const meta = await getPageMetadata(

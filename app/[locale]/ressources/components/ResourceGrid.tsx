@@ -7,6 +7,7 @@ interface ArticleResource {
   description: string;
   author?: string;
   date?: string;
+  category?: string;
 }
 
 interface ResourceGridProps {
@@ -44,6 +45,7 @@ const ResourceGrid: React.FC<ResourceGridProps> = ({
               date={article.date}
               labels={labels}
               colorIndex={index}
+              categoryId={article.category}
             />
           </div>
         ))}

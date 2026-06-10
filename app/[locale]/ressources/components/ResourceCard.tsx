@@ -1,4 +1,5 @@
 import React from "react";
+import type { ResourceCategoryId } from "@/src/lib/resourceCategories";
 
 interface Labels {
   ReadArticle?: string;
@@ -6,8 +7,12 @@ interface Labels {
   Published?: string;
 }
 
-// Color palette for visual variety
-const cardColors = [
+type CardColor = {
+  badge: string;
+  accent: string;
+};
+
+const cardColors: CardColor[] = [
   {
     badge: "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-300",
     accent: "bg-blue-500",
@@ -37,6 +42,19 @@ const cardColors = [
   },
 ];
 
+const categoryColors: Partial<Record<ResourceCategoryId, CardColor>> = {
+  "ai-strategy-adoption": cardColors[0],
+  "microsoft-365-copilot": cardColors[1],
+  "private-llm-rag": cardColors[2],
+  "document-email-automation": cardColors[3],
+  "security-compliance": cardColors[4],
+  "data-integration-analytics": cardColors[5],
+  "workflow-automation": cardColors[0],
+  "quality-governance": cardColors[2],
+  "case-studies": cardColors[1],
+  "business-operations": cardColors[3],
+};
+
 interface ResourceCardProps {
   title: string;
   description: string;
@@ -45,6 +63,7 @@ interface ResourceCardProps {
   author?: string;
   labels?: Labels;
   colorIndex?: number;
+  categoryId?: string;
 }
 
 const ResourceCard: React.FC<ResourceCardProps> = ({
@@ -55,8 +74,11 @@ const ResourceCard: React.FC<ResourceCardProps> = ({
   author,
   labels,
   colorIndex = 0,
+  categoryId,
 }) => {
-  const colors = cardColors[colorIndex % cardColors.length];
+  const colors =
+    categoryColors[categoryId as ResourceCategoryId] ||
+    cardColors[colorIndex % cardColors.length];
 
   return (
     <a

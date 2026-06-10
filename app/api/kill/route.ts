@@ -18,25 +18,17 @@ export const revalidate = 0;
  */
 export async function POST(request: NextRequest) {
   try {
-    console.log('[KILL] POST request received');
-    console.log('[KILL] Headers:', Object.fromEntries(request.headers.entries()));
-    console.log('[KILL] NODE_ENV:', process.env.NODE_ENV);
-    console.log('[KILL] RESTART_ALLOW_IN_DEV:', process.env.RESTART_ALLOW_IN_DEV);
-    
     // Get the authorization header
     const authHeader = request.headers.get('authorization');
-    console.log('[KILL] Auth header present:', !!authHeader);
     
     const token = (() => {
       if (!authHeader) return null;
       const match = authHeader.match(/^Bearer\s+(.+)$/i);
       return match ? match[1].trim() : null;
     })();
-    console.log('[KILL] Token extracted:', !!token);
 
     // Get the secret from environment
     const restartSecret = process.env.RESTART_SECRET_TOKEN;
-    console.log('[KILL] Secret configured:', !!restartSecret);
 
     // Validate secret token
     if (!restartSecret) {
@@ -50,25 +42,18 @@ export async function POST(request: NextRequest) {
     // Optional safety: disable in non-production unless explicitly allowed
     if (process.env.NODE_ENV !== 'production' && process.env.RESTART_ALLOW_IN_DEV !== 'true') {
       console.warn('[KILL] Kill blocked in non-production environment');
-      console.warn('[KILL] NODE_ENV:', process.env.NODE_ENV);
-      console.warn('[KILL] RESTART_ALLOW_IN_DEV:', process.env.RESTART_ALLOW_IN_DEV);
       return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
     }
-
-    console.log('[KILL] Environment check passed');
 
     // Constant-time compare using SHA-256 digests
     const valid = (() => {
       if (!token) {
-        console.log('[KILL] No token provided');
         return false;
       }
       try {
         const a = crypto.createHash('sha256').update(token).digest();
         const b = crypto.createHash('sha256').update(restartSecret).digest();
-        const result = crypto.timingSafeEqual(a, b);
-        console.log('[KILL] Token validation result:', result);
-        return result;
+        return crypto.timingSafeEqual(a, b);
       } catch (err) {
         console.error('[KILL] Token validation error:', err);
         return false;
@@ -85,7 +70,6 @@ export async function POST(request: NextRequest) {
 
     // Log the kill
     console.log('[KILL] Authorized kill requested. Terminating process and supervisor loop if present...');
-    console.log('[KILL] Deployment script will start new process with updated code.');
 
     // Send response before exiting
     const response = NextResponse.json({

@@ -249,6 +249,9 @@ export async function getPageMetadata(
         },
         alternateUrls,
       ),
+      types: {
+        "application/rss+xml": `${siteUrl}/${locale}/feed.xml/`,
+      },
     },
     other: {
       "msvalidate.01": "C5C559E7A2F5598C1884F1DB1EBB8AA6",

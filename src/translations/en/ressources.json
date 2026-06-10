@@ -25,6 +25,15 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "ai-strategy-adoption",
+      "tags": [
+        "adoption ia",
+        "roi",
+        "transformation digitale",
+        "gouvernance",
+        "microsoft 365",
+        "conformité"
       ]
     },
     {
@@ -43,6 +52,14 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève",
+        "conformité"
       ]
     },
     {
@@ -61,6 +78,13 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "security-compliance",
+      "tags": [
+        "sécurité",
+        "conformité",
+        "nLPD",
+        "rgpd"
       ]
     },
     {
@@ -79,6 +103,15 @@
           "labelKey": "Azure OpenAI Service - Azure Product Page",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
+      ],
+      "category": "data-integration-analytics",
+      "tags": [
+        "données",
+        "intégration",
+        "power bi",
+        "analytics",
+        "conformité",
+        "odoo"
       ]
     },
     {
@@ -97,6 +130,14 @@
           "labelKey": "Azure OpenAI Service - Azure Product Page",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
+      ],
+      "category": "security-compliance",
+      "tags": [
+        "sécurité",
+        "conformité",
+        "nLPD",
+        "rgpd",
+        "microsoft 365"
       ]
     },
     {
@@ -119,6 +160,13 @@
           "labelKey": "Azure OpenAI - Use your data (RAG) - Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève"
       ]
     },
     {
@@ -137,6 +185,14 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "security-compliance",
+      "tags": [
+        "sécurité",
+        "conformité",
+        "nLPD",
+        "rgpd",
+        "outlook"
       ]
     },
     {
@@ -155,6 +211,13 @@
           "labelKey": "Azure OpenAI Service - Azure Product Page",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève"
       ]
     },
     {
@@ -173,6 +236,14 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "document-email-automation",
+      "tags": [
+        "automatisation documentaire",
+        "outlook",
+        "word",
+        "add-in",
+        "conformité"
       ]
     },
     {
@@ -191,6 +262,13 @@
           "labelKey": "Microsoft Graph - Overview - Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/graph/overview"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève"
       ]
     },
     {
@@ -209,6 +287,15 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "security-compliance",
+      "tags": [
+        "sécurité",
+        "conformité",
+        "nLPD",
+        "rgpd",
+        "azure",
+        "azure openai"
       ]
     },
     {
@@ -227,6 +314,15 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "ai-strategy-adoption",
+      "tags": [
+        "adoption ia",
+        "roi",
+        "transformation digitale",
+        "gouvernance",
+        "pme",
+        "genève"
       ]
     },
     {
@@ -245,6 +341,13 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "document-email-automation",
+      "tags": [
+        "automatisation documentaire",
+        "outlook",
+        "word",
+        "add-in"
       ]
     },
     {
@@ -263,6 +366,15 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "ai-strategy-adoption",
+      "tags": [
+        "adoption ia",
+        "roi",
+        "transformation digitale",
+        "gouvernance",
+        "microsoft 365",
+        "conformité"
       ]
     },
     {
@@ -281,6 +393,13 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève"
       ]
     },
     {
@@ -299,6 +418,13 @@
           "labelKey": "Azure OpenAI Service - Azure Product Page",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève"
       ]
     },
     {
@@ -317,6 +443,14 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "case-studies",
+      "tags": [
+        "cas client",
+        "retour d'expérience",
+        "pme suisse",
+        "résultats",
+        "pme"
       ]
     },
     {
@@ -335,6 +469,14 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "workflow-automation",
+      "tags": [
+        "automatisation",
+        "power automate",
+        "workflow",
+        "productivité",
+        "teams"
       ]
     },
     {
@@ -353,6 +495,14 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "document-email-automation",
+      "tags": [
+        "automatisation documentaire",
+        "outlook",
+        "word",
+        "add-in",
+        "sharepoint"
       ]
     },
     {
@@ -371,6 +521,13 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "workflow-automation",
+      "tags": [
+        "automatisation",
+        "power automate",
+        "workflow",
+        "productivité"
       ]
     },
     {
@@ -389,6 +546,15 @@
           "labelKey": "Azure OpenAI Service - Azure Product Page",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
+      ],
+      "category": "security-compliance",
+      "tags": [
+        "sécurité",
+        "conformité",
+        "nLPD",
+        "rgpd",
+        "pme",
+        "genève"
       ]
     },
     {
@@ -407,6 +573,14 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "document-email-automation",
+      "tags": [
+        "automatisation documentaire",
+        "outlook",
+        "word",
+        "add-in",
+        "azure"
       ]
     },
     {
@@ -425,6 +599,13 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "workflow-automation",
+      "tags": [
+        "automatisation",
+        "power automate",
+        "workflow",
+        "productivité"
       ]
     },
     {
@@ -443,6 +624,15 @@
           "labelKey": "Azure OpenAI Service - Azure Product Page",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
+      ],
+      "category": "workflow-automation",
+      "tags": [
+        "automatisation",
+        "power automate",
+        "workflow",
+        "productivité",
+        "teams",
+        "sharepoint"
       ]
     },
     {
@@ -461,6 +651,13 @@
           "labelKey": "Microsoft Graph - Overview - Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/graph/overview"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève"
       ]
     },
     {
@@ -479,6 +676,14 @@
           "labelKey": "Azure OpenAI Service - Azure Product Page",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
+      ],
+      "category": "document-email-automation",
+      "tags": [
+        "automatisation documentaire",
+        "outlook",
+        "word",
+        "add-in",
+        "azure"
       ]
     },
     {
@@ -497,6 +702,14 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "data-integration-analytics",
+      "tags": [
+        "données",
+        "intégration",
+        "power bi",
+        "analytics",
+        "teams"
       ]
     },
     {
@@ -515,6 +728,13 @@
           "labelKey": "Microsoft Graph - Overview - Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/graph/overview"
         }
+      ],
+      "category": "document-email-automation",
+      "tags": [
+        "automatisation documentaire",
+        "outlook",
+        "word",
+        "add-in"
       ]
     },
     {
@@ -533,6 +753,13 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "document-email-automation",
+      "tags": [
+        "automatisation documentaire",
+        "outlook",
+        "word",
+        "add-in"
       ]
     },
     {
@@ -555,6 +782,14 @@
           "labelKey": "Azure OpenAI - Use your data (RAG) - Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data"
         }
+      ],
+      "category": "document-email-automation",
+      "tags": [
+        "automatisation documentaire",
+        "outlook",
+        "word",
+        "add-in",
+        "sharepoint"
       ]
     },
     {
@@ -573,6 +808,15 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "ai-strategy-adoption",
+      "tags": [
+        "adoption ia",
+        "roi",
+        "transformation digitale",
+        "gouvernance",
+        "pme",
+        "genève"
       ]
     },
     {
@@ -591,6 +835,14 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "data-integration-analytics",
+      "tags": [
+        "données",
+        "intégration",
+        "power bi",
+        "analytics",
+        "azure"
       ]
     },
     {
@@ -609,6 +861,13 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "workflow-automation",
+      "tags": [
+        "automatisation",
+        "power automate",
+        "workflow",
+        "productivité"
       ]
     },
     {
@@ -627,6 +886,14 @@
           "labelKey": "Azure OpenAI Service - Azure Product Page",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
+      ],
+      "category": "private-llm-rag",
+      "tags": [
+        "llm",
+        "rag",
+        "gpt privé",
+        "azure openai",
+        "azure"
       ]
     },
     {
@@ -645,6 +912,14 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "case-studies",
+      "tags": [
+        "cas client",
+        "retour d'expérience",
+        "pme suisse",
+        "résultats",
+        "pme"
       ]
     },
     {
@@ -663,6 +938,13 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "quality-governance",
+      "tags": [
+        "gouvernance ia",
+        "qualité",
+        "politique ia",
+        "monitoring"
       ]
     },
     {
@@ -685,6 +967,14 @@
           "labelKey": "Azure OpenAI - Use your data (RAG) - Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève",
+        "conformité"
       ]
     },
     {
@@ -703,6 +993,13 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "data-integration-analytics",
+      "tags": [
+        "données",
+        "intégration",
+        "power bi",
+        "analytics"
       ]
     },
     {
@@ -721,6 +1018,14 @@
           "labelKey": "Azure OpenAI Service - Azure Product Page",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
+      ],
+      "category": "workflow-automation",
+      "tags": [
+        "automatisation",
+        "power automate",
+        "workflow",
+        "productivité",
+        "teams"
       ]
     },
     {
@@ -739,6 +1044,14 @@
           "labelKey": "Azure OpenAI Service - Azure Product Page",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève",
+        "conformité"
       ]
     },
     {
@@ -757,6 +1070,13 @@
           "labelKey": "Azure OpenAI Service - Azure Product Page",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève"
       ]
     },
     {
@@ -775,6 +1095,13 @@
           "labelKey": "Azure OpenAI Service - Azure Product Page",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève"
       ]
     },
     {
@@ -793,6 +1120,14 @@
           "labelKey": "Azure OpenAI Service - Azure Product Page",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève",
+        "conformité"
       ]
     },
     {
@@ -811,6 +1146,13 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève"
       ]
     },
     {
@@ -829,6 +1171,13 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève"
       ]
     },
     {
@@ -847,6 +1196,14 @@
           "labelKey": "Azure OpenAI Service - Azure Product Page",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
+      ],
+      "category": "document-email-automation",
+      "tags": [
+        "automatisation documentaire",
+        "outlook",
+        "word",
+        "add-in",
+        "pme"
       ]
     },
     {
@@ -856,7 +1213,14 @@
       "author": "houle Team",
       "image": "abstract-background-dark.avif",
       "date": "2025-10-22",
-      "content": "Company [domiciliation](/services/domiciliation) in Geneva provides a **registered office address** without renting a full‑time office. It’s popular with freelancers, startups and SMEs for flexibility. This concise guide covers the essentials — **company domiciliation Geneva**, **registered office Geneva**, **business address Geneva**, **virtual office Geneva** — so you can select a compliant, right‑sized setup.\n\n## What domiciliation includes\n\n- **Registered office address** in Geneva (for Commercial Register, invoices, website).\n- **Mail handling**: receipt, scanning and/or forwarding.\n- **Domiciliation attestation** (often requested by bank/registry).\n- **Signage/mailbox** depending on plan.\n- Common add‑ons: **meeting room** booking, **fixed phone number**, visitor reception.\n\n## Who it’s for\n\n- **Freelancers and micro‑businesses** needing a professional address at low cost.\n- **Startups/SMEs** in launch or expansion phase.\n- **Subsidiaries/branches** testing the Romandy market.\n- **Mobile executives** preferring a **virtual office** with mail processing.\n\n## Compliance and good practice\n\n- Keep **registry data** consistent (name, purpose, signatories).\n- Maintain a valid **domiciliation agreement** and identification docs (KYC/AML).\n- Organise **mail workflows** (SLA, confidentiality, mandates).\n- Domiciliation ≠ leased office: for frequent [team](/team)/client presence, add **meeting options** or a **flex desk**.\n\n## Domiciliation vs coworking vs office\n\n- **Domiciliation**: address + admin services, lower cost.\n- **Coworking**: shared space by day/month, more on‑site presence.\n- **Dedicated office**: [privacy](/legal/legal/privacy)/storage, higher cost.\n\n## How to subscribe\n\n1) Define needs (address only, scan, forwarding, rooms).\n2) Provide documents (ID, registry extract/project, company info).\n3) Sign the **domiciliation contract** and activate service.\n4) Update **registry**, bank, suppliers, legal mentions.\n\n## Typical timelines\n\nFast activation: **24–72h** once the file is complete.\n\n## Indicative costs (Geneva)\n\n- **Registered office**: **from CHF 90–180 excl. VAT / month**.\n- **Scan/forwarding**: +CHF **40–60** depending on volume.\n- **Meeting rooms**: hourly/daily (subject to availability).\n\n> Figures are **indicative** and vary by options, location and service level. A **clear quote** is issued before kickoff.\n\n### Ark Fiduciaire services\n\nWe provide **company domiciliation** in Geneva with mail handling, attestations and **virtual office** options. Can be combined with **bookkeeping**, **VAT**, **[payroll](/services/payroll)** and admin support. Contact us for a tailored setup.\n\n### Related Services\n\n- [Domiciliation Services](/services/domiciliation)\n- [Contact Us](/contact)"
+      "content": "Company [domiciliation](/services/domiciliation) in Geneva provides a **registered office address** without renting a full‑time office. It’s popular with freelancers, startups and SMEs for flexibility. This concise guide covers the essentials — **company domiciliation Geneva**, **registered office Geneva**, **business address Geneva**, **virtual office Geneva** — so you can select a compliant, right‑sized setup.\n\n## What domiciliation includes\n\n- **Registered office address** in Geneva (for Commercial Register, invoices, website).\n- **Mail handling**: receipt, scanning and/or forwarding.\n- **Domiciliation attestation** (often requested by bank/registry).\n- **Signage/mailbox** depending on plan.\n- Common add‑ons: **meeting room** booking, **fixed phone number**, visitor reception.\n\n## Who it’s for\n\n- **Freelancers and micro‑businesses** needing a professional address at low cost.\n- **Startups/SMEs** in launch or expansion phase.\n- **Subsidiaries/branches** testing the Romandy market.\n- **Mobile executives** preferring a **virtual office** with mail processing.\n\n## Compliance and good practice\n\n- Keep **registry data** consistent (name, purpose, signatories).\n- Maintain a valid **domiciliation agreement** and identification docs (KYC/AML).\n- Organise **mail workflows** (SLA, confidentiality, mandates).\n- Domiciliation ≠ leased office: for frequent [team](/team)/client presence, add **meeting options** or a **flex desk**.\n\n## Domiciliation vs coworking vs office\n\n- **Domiciliation**: address + admin services, lower cost.\n- **Coworking**: shared space by day/month, more on‑site presence.\n- **Dedicated office**: [privacy](/legal/legal/privacy)/storage, higher cost.\n\n## How to subscribe\n\n1) Define needs (address only, scan, forwarding, rooms).\n2) Provide documents (ID, registry extract/project, company info).\n3) Sign the **domiciliation contract** and activate service.\n4) Update **registry**, bank, suppliers, legal mentions.\n\n## Typical timelines\n\nFast activation: **24–72h** once the file is complete.\n\n## Indicative costs (Geneva)\n\n- **Registered office**: **from CHF 90–180 excl. VAT / month**.\n- **Scan/forwarding**: +CHF **40–60** depending on volume.\n- **Meeting rooms**: hourly/daily (subject to availability).\n\n> Figures are **indicative** and vary by options, location and service level. A **clear quote** is issued before kickoff.\n\n### Ark Fiduciaire services\n\nWe provide **company domiciliation** in Geneva with mail handling, attestations and **virtual office** options. Can be combined with **bookkeeping**, **VAT**, **[payroll](/services/payroll)** and admin support. Contact us for a tailored setup.\n\n### Related Services\n\n- [Domiciliation Services](/services/domiciliation)\n- [Contact Us](/contact)",
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève"
+      ]
     },
     {
       "slug": "creer-entreprise-suisse",
@@ -875,6 +1239,13 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "ai-strategy-adoption",
+      "tags": [
+        "adoption ia",
+        "roi",
+        "transformation digitale",
+        "gouvernance"
       ]
     },
     {
@@ -893,6 +1264,13 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève"
       ]
     },
     {
@@ -915,6 +1293,14 @@
           "labelKey": "Azure OpenAI - Use your data (RAG) - Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève",
+        "sécurité"
       ]
     },
     {
@@ -938,6 +1324,14 @@
           "labelKey": "Azure OpenAI Service - Azure Product Page",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève",
+        "odoo"
       ]
     },
     {
@@ -956,6 +1350,15 @@
           "labelKey": "Azure OpenAI Service - Azure Product Page",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
+      ],
+      "category": "ai-strategy-adoption",
+      "tags": [
+        "adoption ia",
+        "roi",
+        "transformation digitale",
+        "gouvernance",
+        "pme",
+        "genève"
       ]
     },
     {
@@ -974,6 +1377,13 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève"
       ]
     },
     {
@@ -1000,6 +1410,15 @@
           "labelKey": "Ark Fiduciaire",
           "url": "https://ark-fid.ch/fr/"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève",
+        "teams",
+        "odoo"
       ]
     },
     {
@@ -1022,6 +1441,13 @@
           "labelKey": "Azure OpenAI Service - Azure Product Page",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève"
       ]
     },
     {
@@ -1040,6 +1466,13 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève"
       ]
     },
     {
@@ -1058,6 +1491,14 @@
           "labelKey": "Azure OpenAI Service - Azure Product Page",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève",
+        "odoo"
       ]
     },
     {
@@ -1076,6 +1517,13 @@
           "labelKey": "Microsoft Graph - Overview - Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/graph/overview"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève"
       ]
     },
     {
@@ -1094,6 +1542,14 @@
           "labelKey": "Azure OpenAI Service - Azure Product Page",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève",
+        "odoo"
       ]
     },
     {
@@ -1112,6 +1568,13 @@
           "labelKey": "Azure OpenAI Service - Azure Product Page",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève"
       ]
     },
     {
@@ -1130,6 +1593,13 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève"
       ]
     },
     {
@@ -1148,6 +1618,13 @@
           "labelKey": "Azure OpenAI Service - Azure Product Page",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève"
       ]
     },
     {
@@ -1166,6 +1643,13 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève"
       ]
     },
     {
@@ -1184,6 +1668,13 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève"
       ]
     },
     {
@@ -1202,6 +1693,15 @@
           "labelKey": "Azure OpenAI Service - Azure Product Page",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève",
+        "sécurité",
+        "conformité"
       ]
     },
     {
@@ -1220,6 +1720,15 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "ai-strategy-adoption",
+      "tags": [
+        "adoption ia",
+        "roi",
+        "transformation digitale",
+        "gouvernance",
+        "pme",
+        "genève"
       ]
     },
     {
@@ -1242,6 +1751,13 @@
           "labelKey": "Azure OpenAI - Use your data (RAG) - Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève"
       ]
     },
     {
@@ -1264,6 +1780,15 @@
           "labelKey": "Microsoft Graph - Overview - Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/graph/overview"
         }
+      ],
+      "category": "security-compliance",
+      "tags": [
+        "sécurité",
+        "conformité",
+        "nLPD",
+        "rgpd",
+        "pme",
+        "genève"
       ]
     },
     {
@@ -1282,6 +1807,13 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève"
       ]
     },
     {
@@ -1300,6 +1832,13 @@
           "labelKey": "Azure OpenAI Service - Azure Product Page",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève"
       ]
     },
     {
@@ -1319,6 +1858,13 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "ai-strategy-adoption",
+      "tags": [
+        "adoption ia",
+        "roi",
+        "transformation digitale",
+        "gouvernance"
       ]
     },
     {
@@ -1337,6 +1883,13 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève"
       ]
     },
     {
@@ -1355,6 +1908,13 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "business-operations",
+      "tags": [
+        "pme",
+        "opérations",
+        "fiduciaire",
+        "genève"
       ]
     },
     {
@@ -1373,6 +1933,15 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "security-compliance",
+      "tags": [
+        "sécurité",
+        "conformité",
+        "nLPD",
+        "rgpd",
+        "microsoft 365",
+        "pme"
       ]
     },
     {
@@ -1391,6 +1960,15 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "microsoft-365-copilot",
+      "tags": [
+        "microsoft 365",
+        "copilot",
+        "teams",
+        "sharepoint",
+        "outlook",
+        "word"
       ]
     },
     {
@@ -1409,6 +1987,15 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "security-compliance",
+      "tags": [
+        "sécurité",
+        "conformité",
+        "nLPD",
+        "rgpd",
+        "microsoft 365",
+        "gpt privé"
       ]
     },
     {
@@ -1427,6 +2014,15 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "data-integration-analytics",
+      "tags": [
+        "données",
+        "intégration",
+        "power bi",
+        "analytics",
+        "azure",
+        "azure openai"
       ]
     },
     {
@@ -1445,6 +2041,15 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "data-integration-analytics",
+      "tags": [
+        "données",
+        "intégration",
+        "power bi",
+        "analytics",
+        "microsoft 365",
+        "llm"
       ]
     },
     {
@@ -1463,6 +2068,15 @@
           "labelKey": "Microsoft Graph - Overview - Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/graph/overview"
         }
+      ],
+      "category": "security-compliance",
+      "tags": [
+        "sécurité",
+        "conformité",
+        "nLPD",
+        "rgpd",
+        "microsoft 365",
+        "genève"
       ]
     },
     {
@@ -1481,6 +2095,15 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "security-compliance",
+      "tags": [
+        "sécurité",
+        "conformité",
+        "nLPD",
+        "rgpd",
+        "microsoft 365",
+        "genève"
       ]
     },
     {
@@ -1499,6 +2122,15 @@
           "labelKey": "Azure OpenAI Service - Azure Product Page",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
+      ],
+      "category": "ai-strategy-adoption",
+      "tags": [
+        "adoption ia",
+        "roi",
+        "transformation digitale",
+        "gouvernance",
+        "microsoft 365",
+        "rag"
       ]
     },
     {
@@ -1517,6 +2149,14 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "security-compliance",
+      "tags": [
+        "sécurité",
+        "conformité",
+        "nLPD",
+        "rgpd",
+        "gpt privé"
       ]
     },
     {
@@ -1535,6 +2175,15 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "ai-strategy-adoption",
+      "tags": [
+        "adoption ia",
+        "roi",
+        "transformation digitale",
+        "gouvernance",
+        "microsoft 365",
+        "word"
       ]
     },
     {
@@ -1553,6 +2202,14 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "security-compliance",
+      "tags": [
+        "sécurité",
+        "conformité",
+        "nLPD",
+        "rgpd",
+        "outlook"
       ]
     },
     {
@@ -1571,6 +2228,15 @@
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
+      ],
+      "category": "security-compliance",
+      "tags": [
+        "sécurité",
+        "conformité",
+        "nLPD",
+        "rgpd",
+        "microsoft 365",
+        "rag"
       ]
     },
     {
@@ -1589,6 +2255,15 @@
           "labelKey": "Azure OpenAI Service - Azure Product Page",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
+      ],
+      "category": "ai-strategy-adoption",
+      "tags": [
+        "adoption ia",
+        "roi",
+        "transformation digitale",
+        "gouvernance",
+        "azure",
+        "azure openai"
       ]
     },
     {
@@ -1607,6 +2282,14 @@
           "labelKey": "Azure OpenAI Service - Azure Product Page",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
+      ],
+      "category": "workflow-automation",
+      "tags": [
+        "automatisation",
+        "power automate",
+        "workflow",
+        "productivité",
+        "power platform"
       ]
     },
     {
@@ -1653,6 +2336,13 @@
           "labelKey": "ISO/IEC 42001 : Une gouvernance responsable de l’IA",
           "url": "https://digicomp.ch/blognews/2025/06/24/iso-iec-42001-une-gouvernance-responsable-de-lia"
         }
+      ],
+      "category": "ai-strategy-adoption",
+      "tags": [
+        "adoption ia",
+        "roi",
+        "transformation digitale",
+        "gouvernance"
       ]
     },
     {
@@ -1679,6 +2369,14 @@
           "labelKey": "Configurer les politiques de filtrage de spams - Microsoft Defender for Office 365",
           "url": "https://learn.microsoft.com/fr-fr/defender-office-365/anti-spam-policies-configure"
         }
+      ],
+      "category": "document-email-automation",
+      "tags": [
+        "automatisation documentaire",
+        "outlook",
+        "word",
+        "add-in",
+        "sécurité"
       ]
     },
     {
@@ -1713,6 +2411,14 @@
           "labelKey": "Gestion des documents internes et pratiques organisationnelles (FINMA)",
           "url": "https://www.finma.ch/fr/finma/organisation/corporate-governance/contr%C3%B4les-internes/"
         }
+      ],
+      "category": "document-email-automation",
+      "tags": [
+        "automatisation documentaire",
+        "outlook",
+        "word",
+        "add-in",
+        "rag"
       ]
     },
     {
@@ -1747,6 +2453,14 @@
           "labelKey": "IA et protection des données - edoeb.admin.ch",
           "url": "https://www.edoeb.admin.ch/fr/ia-et-protection-des-donnees"
         }
+      ],
+      "category": "security-compliance",
+      "tags": [
+        "sécurité",
+        "conformité",
+        "nLPD",
+        "rgpd",
+        "microsoft 365"
       ]
     },
     {
@@ -1793,6 +2507,15 @@
           "labelKey": "Formation nationale à l’IA avec AI-Fitness",
           "url": "https://www.ai-fitness.ch/home"
         }
+      ],
+      "category": "data-integration-analytics",
+      "tags": [
+        "données",
+        "intégration",
+        "power bi",
+        "analytics",
+        "azure",
+        "microsoft 365"
       ]
     },
     {
@@ -1819,6 +2542,15 @@
           "labelKey": "Base de référence de sécurité Azure pour Azure OpenAI",
           "url": "https://learn.microsoft.com/fr-fr/security/benchmark/azure/baselines/azure-openai-security-baseline"
         }
+      ],
+      "category": "security-compliance",
+      "tags": [
+        "sécurité",
+        "conformité",
+        "nLPD",
+        "rgpd",
+        "azure",
+        "azure openai"
       ]
     },
     {
@@ -1865,6 +2597,13 @@
           "labelKey": "Analyser les risques ESG et de réputation avec l’IA",
           "url": "https://www.swisscom.ch/fr/b2bmag/data-driven-technologies/esg-risques-ia-reprisk/"
         }
+      ],
+      "category": "ai-strategy-adoption",
+      "tags": [
+        "adoption ia",
+        "roi",
+        "transformation digitale",
+        "gouvernance"
       ]
     },
     {
@@ -1919,6 +2658,13 @@
           "labelKey": "Les erreurs d'adoption de l’IA et de l’automatisation",
           "url": "https://amdigital.ch/blog/limpact-des-nouvelles-ia-dans-lautomatisation-des-taches/"
         }
+      ],
+      "category": "workflow-automation",
+      "tags": [
+        "automatisation",
+        "power automate",
+        "workflow",
+        "productivité"
       ]
     },
     {
@@ -1949,6 +2695,13 @@
           "labelKey": "Choosing the Correct Statistical Test | UCLA",
           "url": "https://stats.oarc.ucla.edu/other/mult-pkg/whatstat/"
         }
+      ],
+      "category": "quality-governance",
+      "tags": [
+        "gouvernance ia",
+        "qualité",
+        "politique ia",
+        "monitoring"
       ]
     },
     {
@@ -2003,6 +2756,14 @@
           "labelKey": "Union européenne : obligations du règlement IA",
           "url": "https://www.watson.ch/fr/suisse/union-europeenne/912668702-des-entreprises-suisses-signent-le-pacte-europeen-sur-l-ia"
         }
+      ],
+      "category": "quality-governance",
+      "tags": [
+        "gouvernance ia",
+        "qualité",
+        "politique ia",
+        "monitoring",
+        "conformité"
       ]
     },
     {
@@ -2045,6 +2806,14 @@
           "labelKey": "Promesses artificielles ou régulation réelle ? - IFRI",
           "url": "https://www.ifri.org/fr/etudes/promesses-artificielles-ou-regulation-reelle-inventer-la-gouvernance-mondiale-de-lia"
         }
+      ],
+      "category": "ai-strategy-adoption",
+      "tags": [
+        "adoption ia",
+        "roi",
+        "transformation digitale",
+        "gouvernance",
+        "conformité"
       ]
     },
     {
@@ -2079,6 +2848,13 @@
           "labelKey": "IA et protection des données - edoeb.admin.ch",
           "url": "https://www.edoeb.admin.ch/fr/ia-et-protection-des-donnees"
         }
+      ],
+      "category": "security-compliance",
+      "tags": [
+        "sécurité",
+        "conformité",
+        "nLPD",
+        "rgpd"
       ]
     },
     {
@@ -2109,6 +2885,13 @@
           "labelKey": "Gouvernance et risques liés à l'IA (finma.ch)",
           "url": "https://www.finma.ch/fr/~/media/finma/dokumente/dokumentencenter/myfinma/4dokumentation/finma-aufsichtsmitteilungen/20241218-finma-aufsichtsmitteilung-08-2024.pdf?sc_lang=fr&hash=13E1E8A0EBF3AE250A1EB6E26BD3428D"
         }
+      ],
+      "category": "security-compliance",
+      "tags": [
+        "sécurité",
+        "conformité",
+        "nLPD",
+        "rgpd"
       ]
     },
     {
@@ -2139,6 +2922,13 @@
           "labelKey": "Loi sur l’IA européenne - AFNOR",
           "url": "https://competences.afnor.org/actualites/tout-savoir-sur-lia-act"
         }
+      ],
+      "category": "quality-governance",
+      "tags": [
+        "gouvernance ia",
+        "qualité",
+        "politique ia",
+        "monitoring"
       ]
     },
     {
@@ -2185,6 +2975,15 @@
           "labelKey": "Conformité IA générative sous le Code de Pratique de l’UE AI Act",
           "url": "https://www.gillieronavocat.ch/2025/02/28/ai-governance-and-compliance-how-the-eu-ai-acts-code-of-practice-shapes-the-future/"
         }
+      ],
+      "category": "quality-governance",
+      "tags": [
+        "gouvernance ia",
+        "qualité",
+        "politique ia",
+        "monitoring",
+        "nLPD",
+        "rgpd"
       ]
     },
     {
@@ -2219,6 +3018,13 @@
           "labelKey": "Convention du Conseil de l'Europe sur l'IA",
           "url": "https://www.fedlex.admin.ch/eli/cc/1965/1307_1318_1307/fr"
         }
+      ],
+      "category": "security-compliance",
+      "tags": [
+        "sécurité",
+        "conformité",
+        "nLPD",
+        "rgpd"
       ]
     },
     {
@@ -2261,6 +3067,13 @@
           "labelKey": "La gouvernance mondiale de l'IA - Ifri",
           "url": "https://www.ifri.org/fr/etudes/promesses-artificielles-ou-regulation-reelle-inventer-la-gouvernance-mondiale-de-lia"
         }
+      ],
+      "category": "quality-governance",
+      "tags": [
+        "gouvernance ia",
+        "qualité",
+        "politique ia",
+        "monitoring"
       ]
     },
     {
@@ -2287,6 +3100,14 @@
           "labelKey": "Directives de la LPD sur l’IA en Suisse",
           "url": "https://www.edoeb.admin.ch/fr/ia-et-protection-des-donnees"
         }
+      ],
+      "category": "quality-governance",
+      "tags": [
+        "gouvernance ia",
+        "qualité",
+        "politique ia",
+        "monitoring",
+        "conformité"
       ]
     },
     {
@@ -2329,6 +3150,13 @@
           "labelKey": "Tout savoir sur l'IA Act | AFNOR",
           "url": "https://competences.afnor.org/actualites/tout-savoir-sur-lia-act"
         }
+      ],
+      "category": "security-compliance",
+      "tags": [
+        "sécurité",
+        "conformité",
+        "nLPD",
+        "rgpd"
       ]
     },
     {
@@ -2363,6 +3191,15 @@
           "labelKey": "Domaine IA - Publications et normes",
           "url": "https://standards.ieee.org/initiatives/autonomous-intelligence-systems/"
         }
+      ],
+      "category": "workflow-automation",
+      "tags": [
+        "automatisation",
+        "power automate",
+        "workflow",
+        "productivité",
+        "microsoft 365",
+        "conformité"
       ]
     },
     {
@@ -2397,6 +3234,15 @@
           "labelKey": "Phases de déploiement - HERMES Online",
           "url": "https://www.hermes.admin.ch/fr/gestion-de-projet/phases/deploiement.html"
         }
+      ],
+      "category": "ai-strategy-adoption",
+      "tags": [
+        "adoption ia",
+        "roi",
+        "transformation digitale",
+        "gouvernance",
+        "azure",
+        "azure openai"
       ]
     },
     {
@@ -2439,6 +3285,13 @@
           "labelKey": "Rapport sur l’intelligence artificielle - CNUCED",
           "url": "https://unctad.org/fr/publication/rapport-sur-la-technologie-et-linnovation-2025"
         }
+      ],
+      "category": "ai-strategy-adoption",
+      "tags": [
+        "adoption ia",
+        "roi",
+        "transformation digitale",
+        "gouvernance"
       ]
     },
     {
@@ -2469,6 +3322,14 @@
           "labelKey": "HERMES Online - Aperçu de la méthode",
           "url": "https://www.hermes.admin.ch/fr/gestion-de-projet/apercu-de-la-methode.html"
         }
+      ],
+      "category": "quality-governance",
+      "tags": [
+        "gouvernance ia",
+        "qualité",
+        "politique ia",
+        "monitoring",
+        "llm"
       ]
     },
     {
@@ -2507,6 +3368,14 @@
           "labelKey": "Conformité LPD suisse: edoeb.admin.ch",
           "url": "https://www.edoeb.admin.ch/en"
         }
+      ],
+      "category": "workflow-automation",
+      "tags": [
+        "automatisation",
+        "power automate",
+        "workflow",
+        "productivité",
+        "conformité"
       ]
     },
     {
@@ -2549,6 +3418,14 @@
           "labelKey": "Sensibilisation à l'IA et au RGPD",
           "url": "https://actecil.eu/reglement-europeen-ia-complementarite-ou-remplacement-du-rgpd/"
         }
+      ],
+      "category": "security-compliance",
+      "tags": [
+        "sécurité",
+        "conformité",
+        "nLPD",
+        "rgpd",
+        "microsoft 365"
       ]
     },
     {
@@ -2583,6 +3460,15 @@
           "labelKey": "10 façons dont Azure OpenAI peut augmenter la valeur commerciale",
           "url": "https://azure.microsoft.com/en-us/blog/instant-impact-unleashing-business-velocity-through-azure-openai-service/"
         }
+      ],
+      "category": "ai-strategy-adoption",
+      "tags": [
+        "adoption ia",
+        "roi",
+        "transformation digitale",
+        "gouvernance",
+        "azure",
+        "azure openai"
       ]
     },
     {
@@ -2617,6 +3503,14 @@
           "labelKey": "Concepts de déploiement dans la gestion de projet",
           "url": "https://www.hermes.admin.ch/fr/gestion-de-projet/aufgaben/elaborer-le-concept-de-deploiement.html"
         }
+      ],
+      "category": "ai-strategy-adoption",
+      "tags": [
+        "adoption ia",
+        "roi",
+        "transformation digitale",
+        "gouvernance",
+        "microsoft 365"
       ]
     },
     {
@@ -2663,6 +3557,13 @@
           "labelKey": "IA-Connect dynamic code for RPA workflows",
           "url": "https://learn.microsoft.com/en-us/connectors/iaconnectdynamiccode/"
         }
+      ],
+      "category": "workflow-automation",
+      "tags": [
+        "automatisation",
+        "power automate",
+        "workflow",
+        "productivité"
       ]
     },
     {
@@ -2689,6 +3590,15 @@
           "labelKey": "Règlement général sur la gouvernance des données",
           "url": "https://www.edoeb.admin.ch/fr"
         }
+      ],
+      "category": "data-integration-analytics",
+      "tags": [
+        "données",
+        "intégration",
+        "power bi",
+        "analytics",
+        "rag",
+        "llm"
       ]
     },
     {
@@ -2715,6 +3625,15 @@
           "labelKey": "Règlementation suisse sur le traitement des données",
           "url": "https://fedlex.data.admin.ch/"
         }
+      ],
+      "category": "ai-strategy-adoption",
+      "tags": [
+        "adoption ia",
+        "roi",
+        "transformation digitale",
+        "gouvernance",
+        "microsoft 365",
+        "rgpd"
       ]
     },
     {
@@ -2745,6 +3664,14 @@
           "labelKey": "Intégration IA et gouvernance avec Microsoft Purview",
           "url": "https://www.kmu.admin.ch/kmu/fr/home/actuel/theme-du-mois/2025/conseils-integration-ia-entreprise.html"
         }
+      ],
+      "category": "ai-strategy-adoption",
+      "tags": [
+        "adoption ia",
+        "roi",
+        "transformation digitale",
+        "gouvernance",
+        "microsoft 365"
       ]
     },
     {
@@ -2787,6 +3714,15 @@
           "labelKey": "Taxonomy of Prompt Engineering Techniques (Springer)",
           "url": "https://link.springer.com/article/10.1007/s11704-025-50058-z?error=cookies_not_supported&code=a935af4e-902f-4e39-adab-a2cd7dfd7776"
         }
+      ],
+      "category": "quality-governance",
+      "tags": [
+        "gouvernance ia",
+        "qualité",
+        "politique ia",
+        "monitoring",
+        "rag",
+        "gpt privé"
       ]
     },
     {
@@ -2821,6 +3757,15 @@
           "labelKey": "Adoption de l'IA et défis organisationnels en Suisse",
           "url": "https://www.ictjournal.ch/etudes/2025-09-09/plus-de-la-moitie-des-entreprises-suisses-adoptent-lia-mais-la-strategie-reste-a"
         }
+      ],
+      "category": "ai-strategy-adoption",
+      "tags": [
+        "adoption ia",
+        "roi",
+        "transformation digitale",
+        "gouvernance",
+        "rag",
+        "conformité"
       ]
     },
     {
@@ -2855,6 +3800,13 @@
           "labelKey": "10 meilleures alternatives à Microsoft Copilot en 2026 - vellum.ai",
           "url": "https://www.vellum.ai/blog/best-microsoft-copilot-alternatives"
         }
+      ],
+      "category": "microsoft-365-copilot",
+      "tags": [
+        "microsoft 365",
+        "copilot",
+        "teams",
+        "sharepoint"
       ]
     },
     {
@@ -2901,6 +3853,13 @@
           "labelKey": "L’intelligence artificielle au cœur des entreprises - Swisscom",
           "url": "https://www.swisscom.ch/fr/b2bmag/data-driven-technologies/ia-usage-professionelle-suisse/"
         }
+      ],
+      "category": "quality-governance",
+      "tags": [
+        "gouvernance ia",
+        "qualité",
+        "politique ia",
+        "monitoring"
       ]
     },
     {
@@ -2951,6 +3910,13 @@
           "labelKey": "Charte IA au travail - Juriup.ch",
           "url": "https://juriup.ch/employeur-demande-signer-clause-ia-interdit-utilisation/"
         }
+      ],
+      "category": "quality-governance",
+      "tags": [
+        "gouvernance ia",
+        "qualité",
+        "politique ia",
+        "monitoring"
       ]
     },
     {
@@ -2981,6 +3947,13 @@
           "labelKey": "Régulation de l'IA par le PFPDT",
           "url": "https://www.edoeb.admin.ch/fr/ia-et-protection-des-donnees"
         }
+      ],
+      "category": "security-compliance",
+      "tags": [
+        "sécurité",
+        "conformité",
+        "nLPD",
+        "rgpd"
       ]
     },
     {
@@ -3011,6 +3984,15 @@
           "labelKey": "Réglementation de l’intelligence artificielle en Suisse",
           "url": "https://www.bk.admin.ch/fr/intelligence-artificielle"
         }
+      ],
+      "category": "quality-governance",
+      "tags": [
+        "gouvernance ia",
+        "qualité",
+        "politique ia",
+        "monitoring",
+        "nLPD",
+        "rgpd"
       ]
     }
   ],
