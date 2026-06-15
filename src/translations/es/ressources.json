@@ -2583,7 +2583,7 @@
         },
         {
           "labelKey": "Point sur les Risques de l’Intelligence Artificielle",
-          "url": "https://www.oprisko.ch/?p=750"
+          "url": "https://www.oprisko.ch/point-sur-les-risques-de-lintelligence-artificielle/"
         },
         {
           "labelKey": "Gouvernance et intelligence artificielle : repenser les responsabilités",
@@ -3712,7 +3712,7 @@
         },
         {
           "labelKey": "Taxonomy of Prompt Engineering Techniques (Springer)",
-          "url": "https://link.springer.com/article/10.1007/s11704-025-50058-z?error=cookies_not_supported&code=70e559ba-5e67-4c9f-969a-fa68490fdcb0"
+          "url": "https://link.springer.com/article/10.1007/s11704-025-50058-z?error=cookies_not_supported&code=d8345b6d-1fb2-4381-aebe-e31f15ce26c4"
         }
       ],
       "category": "quality-governance",
@@ -3747,7 +3747,7 @@
         },
         {
           "labelKey": "Développement IA générative basée sur RAG avec Azure",
-          "url": "https://learn.microsoft.com/fr-fr/training/modules/build-copilot-ai-studio/"
+          "url": "https://learn.microsoft.com/fr-fr/training/paths/develop-generative-ai-apps/"
         },
         {
           "labelKey": "Loi suisse actuelle sur la protection des données en IA",

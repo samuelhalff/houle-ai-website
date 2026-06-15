@@ -1426,10 +1426,6 @@
       "date": "2025-10-05",
       "references": [
         {
-          "labelKey": "Directives lpp 2025",
-          "url": "https://www.oak-bv.admin.ch/inhalte/Regulierung/Weisungen/fr/Directives_D_01_2025_CHS_PP.pdf"
-        },
-        {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
@@ -2583,7 +2579,7 @@
         },
         {
           "labelKey": "Point sur les Risques de l’Intelligence Artificielle",
-          "url": "https://www.oprisko.ch/?p=750"
+          "url": "https://www.oprisko.ch/point-sur-les-risques-de-lintelligence-artificielle/"
         },
         {
           "labelKey": "Gouvernance et intelligence artificielle : repenser les responsabilités",
@@ -3712,7 +3708,7 @@
         },
         {
           "labelKey": "Taxonomy of Prompt Engineering Techniques (Springer)",
-          "url": "https://link.springer.com/article/10.1007/s11704-025-50058-z?error=cookies_not_supported&code=7a29d497-4ce5-4e6d-a1fe-fbe3a3634d42"
+          "url": "https://link.springer.com/article/10.1007/s11704-025-50058-z?error=cookies_not_supported&code=3daeea5d-469b-4733-8d44-afbb95d43847"
         }
       ],
       "category": "quality-governance",
@@ -3747,7 +3743,7 @@
         },
         {
           "labelKey": "Développement IA générative basée sur RAG avec Azure",
-          "url": "https://learn.microsoft.com/fr-fr/training/modules/build-copilot-ai-studio/"
+          "url": "https://learn.microsoft.com/fr-fr/training/paths/develop-generative-ai-apps/"
         },
         {
           "labelKey": "Loi suisse actuelle sur la protection des données en IA",
