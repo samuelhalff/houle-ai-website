@@ -1431,7 +1431,7 @@
       "references": [
         {
           "labelKey": "Directives lpp 2025",
-          "url": "https://www.oak-bv.admin.ch/inhalte/Regulierung/Weisungen/fr/Directives_D_01_2025_CHS_PP.pdf"
+          "url": "https://www.oak-bv.admin.ch/fr/directives-d-01-2025"
         },
         {
           "labelKey": "Azure OpenAI Service - Azure Product Page",
@@ -2833,10 +2833,6 @@
           "url": "https://learn.microsoft.com/en-us/entra/identity/conditional-access/concept-conditional-access-conditions"
         },
         {
-          "labelKey": "Réglementation de l'intelligence artificielle en Suisse",
-          "url": "https://www.sem.admin.ch/bj/fr/home/staat/gesetzgebung/kuenstliche-intelligenz.html"
-        },
-        {
           "labelKey": "Position de la Suisse sur la réglementation internationale de l'intelligence artificielle",
           "url": "https://www.news.admin.ch/fr/nsb?id=98791"
         },
@@ -3442,7 +3438,7 @@
         },
         {
           "labelKey": "AI Adoption Guide - Cloud Adoption Framework",
-          "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/"
+          "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/strategy"
         },
         {
           "labelKey": "Phase actuelle du partenariat Microsoft-OpenAI",
@@ -3551,7 +3547,7 @@
         },
         {
           "labelKey": "Automate workflows in a SharePoint document library",
-          "url": "https://learn.microsoft.com/en-us/sharepoint/ai-in-sharepoint-automate-workflows"
+          "url": "https://learn.microsoft.com/en-us/SharePoint/copilot-in-sharepoint-automate-workflows"
         },
         {
           "labelKey": "IA-Connect dynamic code for RPA workflows",
@@ -3611,7 +3607,7 @@
       "references": [
         {
           "labelKey": "Déploiement d’intelligence artificielle en entreprise via Microsoft",
-          "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/"
+          "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/ai/strategy"
         },
         {
           "labelKey": "Droits liés aux données en Suisse - Ch.ch",
@@ -3712,7 +3708,7 @@
         },
         {
           "labelKey": "Taxonomy of Prompt Engineering Techniques (Springer)",
-          "url": "https://link.springer.com/article/10.1007/s11704-025-50058-z?error=cookies_not_supported&code=d8345b6d-1fb2-4381-aebe-e31f15ce26c4"
+          "url": "https://link.springer.com/article/10.1007/s11704-025-50058-z?error=cookies_not_supported&code=baba13fa-e7a1-4f92-97f7-c7c18459ab55"
         }
       ],
       "category": "quality-governance",
@@ -3836,10 +3832,6 @@
         {
           "labelKey": "Cas IA appliquée en entreprise - HE-Arc",
           "url": "https://www.he-arc.ch/gestion/formation-continue/cas-ia/"
-        },
-        {
-          "labelKey": "Regulation IA en Suisse - SEM",
-          "url": "https://www.sem.admin.ch/bj/fr/home/staat/gesetzgebung/kuenstliche-intelligenz.html"
         },
         {
           "labelKey": "Charte IA et contenus éditoriaux - HUG",
@@ -4069,15 +4061,15 @@
       "references": [
         {
           "labelKey": "Bonnes pratiques de gouvernance pour l'IA",
-          "url": "https://governing.com"
+          "url": "https://www.governing.com/"
         },
         {
           "labelKey": "Guide sur la rédaction de politiques d'entreprise, UQAM",
-          "url": "https://www.uqam.ca/"
+          "url": "https://uqam.ca/"
         },
         {
           "labelKey": "Guide de conformité RGPD et IA",
-          "url": "https://learn.microsoft.com/"
+          "url": "https://learn.microsoft.com/en-us/"
         },
         {
           "labelKey": "Stratégie Suisse numérique 2026",
@@ -4210,7 +4202,7 @@
         },
         {
           "labelKey": "Communication métier sur l'IA Suisse",
-          "url": "https://www.bsv.admin.ch/"
+          "url": "https://www.bsv.admin.ch/de"
         }
       ]
     },
@@ -4257,7 +4249,7 @@
         },
         {
           "labelKey": "Loi fédérale sur la protection des données (nLPD)",
-          "url": "https://fedlex.admin.ch/eli/cc/2023/100/fr"
+          "url": "https://www.fedlex.admin.ch/eli/cc/2023/100/fr"
         }
       ]
     }
