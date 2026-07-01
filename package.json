@@ -14,8 +14,8 @@
     "prestart": "npm run standalone:prepare",
     "start": "PORT=${PORT:-5000} node .next/standalone/server.js",
     "prod": "npm run build && npm run standalone:prepare && PORT=${PORT:-5000} node .next/standalone/server.js",
-    "lint": "next lint",
-    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "lint": "eslint .",
+    "typecheck": "tsc -p tsconfig.json --noEmit --incremental false",
     "lint:translations": "node scripts/lint-translations.js",
     "validate:translations": "node scripts/validate-translations.js",
     "validate:article-refs": "node scripts/validate-article-refs.js",
@@ -68,21 +68,21 @@
     "zod": "^3.23.8"
   },
   "devDependencies": {
-    "@builder.io/partytown": "^0.10.3",
-    "@next/bundle-analyzer": "14.2.10",
+    "@eslint/eslintrc": "^3.3.5",
+    "@next/bundle-analyzer": "^15.5.19",
     "@types/node": "^20.14.12",
     "@types/react": "^18.2.0",
     "@types/react-dom": "^18.2.0",
     "autoprefixer": "^10.4.21",
     "critters": "^0.0.23",
-    "eslint": "^8.57.0",
-    "eslint-config-next": "14.2.10",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^15.5.19",
     "postcss": "^8.5.6",
-    "purgecss": "^6.0.0",
+    "purgecss": "^8.0.0",
     "tailwindcss": "3.4.17",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.3.3",
-    "typescript-eslint": "^7.18.0"
+    "typescript-eslint": "^8.62.1"
   },
   "browserslist": {
     "production": [
@@ -97,5 +97,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "overrides": {
+    "glob": "13.0.6"
   }
 }

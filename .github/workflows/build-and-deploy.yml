@@ -31,28 +31,25 @@ concurrency:
   group: production-deploy
   cancel-in-progress: false
 
+env:
+  GIT_CONFIG_COUNT: "1"
+  GIT_CONFIG_KEY_0: init.defaultBranch
+  GIT_CONFIG_VALUE_0: main
+
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup Node.js 20
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
           node-version: "20.x"
           cache: "npm"
 
-      - name: Cache node_modules
-        id: cache-node-modules
-        uses: actions/cache@v4
-        with:
-          path: node_modules
-          key: node-modules-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}
-
       - name: Install dependencies
-        if: steps.cache-node-modules.outputs.cache-hit != 'true'
         run: npm ci --prefer-offline --no-audit --no-fund
 
       - name: TypeScript type check
@@ -63,7 +60,7 @@ jobs:
         run: node scripts/fix-article-internal-links.js --check
 
       - name: Restore Next.js build cache
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: .next/cache
           key: next-cache-${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('src/**', 'app/**') }}
@@ -82,7 +79,7 @@ jobs:
         run: tar -czf next-standalone.tar.gz -C dist .
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: next-standalone
           path: next-standalone.tar.gz
@@ -96,12 +93,12 @@ jobs:
     if: github.ref == 'refs/heads/main'
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           fetch-depth: 1
 
       - name: Download artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v7
         with:
           name: next-standalone
           path: ./artifact
@@ -120,7 +117,7 @@ jobs:
           PORT="${{ secrets.DEPLOY_SSH_PORT }}"; [ -z "$PORT" ] && PORT=22
 
           sshpass -p "$PASS" rsync -av \
-            -e "ssh -o StrictHostKeyChecking=no -p $PORT" \
+            -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ServerAliveInterval=10 -o ServerAliveCountMax=6 -o TCPKeepAlive=yes -p $PORT" \
             artifact/next-standalone.tar.gz.part \
             "$USER@$HOST:/srv/customer/sites/houle.ai/artifact/"
 
@@ -132,13 +129,13 @@ jobs:
           PORT="${{ secrets.DEPLOY_SSH_PORT }}"; [ -z "$PORT" ] && PORT=22
 
           echo "[deploy] Testing SSH connectivity to $HOST:$PORT as $USER"
-          if sshpass -p "$PASS" ssh -o StrictHostKeyChecking=no -o ConnectTimeout=10 -p "$PORT" "$USER@$HOST" 'echo "SSH probe successful"' 2>/dev/null; then
+          if sshpass -p "$PASS" ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ServerAliveInterval=10 -o ServerAliveCountMax=6 -o TCPKeepAlive=yes -o ConnectTimeout=10 -p "$PORT" "$USER@$HOST" 'echo "SSH probe successful"' 2>/dev/null; then
             echo "[deploy] SSH probe successful"
           else
             echo "[deploy] SSH probe failed (this may be expected); proceeding with deployment"
           fi
 
-          sshpass -p "$PASS" ssh -p "$PORT" -o StrictHostKeyChecking=no "$USER@$HOST" bash -lc '
+          sshpass -p "$PASS" ssh -p "$PORT" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ServerAliveInterval=10 -o ServerAliveCountMax=6 -o TCPKeepAlive=yes "$USER@$HOST" bash -lc '
             set -euo pipefail
             BASE_DIR="/srv/customer/sites/houle.ai"
             RELEASES_DIR="$BASE_DIR/releases"
@@ -195,6 +192,7 @@ jobs:
           '
 
       - name: Restart Node.js server
+        timeout-minutes: 3
         run: |
           HOST="${{ secrets.DEPLOY_SSH_HOST }}"
           USER="${{ secrets.DEPLOY_SSH_USER }}"
@@ -203,25 +201,27 @@ jobs:
           TOKEN="${{ secrets.RESTART_SECRET_TOKEN }}"
 
           echo "[restart] Killing old process..."
-          curl -X POST "https://houle.ai/api/kill/" -H "Authorization: Bearer $TOKEN" -s -o /dev/null -w "[restart] Kill request status: %{http_code}\n" || echo "[restart] Kill request failed or no process to kill"
+          curl --connect-timeout 5 --max-time 20 -X POST "https://houle.ai/api/kill/" -H "Authorization: Bearer $TOKEN" -s -o /dev/null -w "[restart] Kill request status: %{http_code}\n" || echo "[restart] Kill request failed or no process to kill"
 
           echo "[restart] Waiting for process to terminate..."
           sleep 30
 
           echo "[restart] Starting new process (refreshing symlink each restart)..."
-          sshpass -p "$PASS" ssh -p "$PORT" -o StrictHostKeyChecking=no "$USER@$HOST" '
+          sshpass -p "$PASS" ssh -p "$PORT" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ServerAliveInterval=10 -o ServerAliveCountMax=6 -o TCPKeepAlive=yes "$USER@$HOST" '
             set -e
             # Supervisor loop: re-enter current symlink on every iteration so new releases apply
-            nohup bash -lc "while true; do cd /srv/customer/sites/houle.ai/current && node server.js >> server.out 2>&1; echo \"Node crashed, restarting...\" >> server.out; sleep 1; done" &
+            nohup bash -lc "while true; do cd /srv/customer/sites/houle.ai/current && node server.js >> server.out 2>&1; echo \"Node crashed, restarting...\" >> server.out; sleep 1; done" >/dev/null 2>&1 </dev/null &
           ' || echo "[restart] SSH command completed"
 
           sleep 30
 
       - name: Health check and warmup
+        timeout-minutes: 5
         run: |
+          CURL_TIMEOUTS=(--connect-timeout 5 --max-time 8)
           ATTEMPTS=40; SLEEP=3; OK=0
           for i in $(seq 1 $ATTEMPTS); do
-            STATUS=$(curl -o /dev/null -s -w "%{http_code}" -L "https://houle.ai/fr/")
+            STATUS=$(curl "${CURL_TIMEOUTS[@]}" -o /dev/null -s -w "%{http_code}" -L "https://houle.ai/fr/" || echo "000")
             if [ "$STATUS" -eq 200 ]; then
               echo "✅ Health check OK"
               OK=1
@@ -234,14 +234,14 @@ jobs:
 
           echo "[deploy] Warming up paths..."
           for path in "/" "/en/" "/fr/"; do
-            curl -fsSL "https://houle.ai$path" >/dev/null 2>&1 || true
+            curl "${CURL_TIMEOUTS[@]}" -fsSL "https://houle.ai$path" >/dev/null 2>&1 || true
           done
 
           echo "[deploy] Simple warmup of next/image URLs (non-blocking)"
           for locale in en fr; do
-            HTML=$(curl -fsSL "https://houle.ai/$locale/" || true)
+            HTML=$(curl "${CURL_TIMEOUTS[@]}" -fsSL "https://houle.ai/$locale/" || true)
             echo "$HTML" | grep -Eo '/_next/image/\?url=[^" ]+' | sed 's/&amp;/\&/g' | head -n 30 | while read -r u; do
-              curl -fsSL "https://houle.ai$u" >/dev/null 2>&1 || true
+              curl "${CURL_TIMEOUTS[@]}" -fsSL "https://houle.ai$u" >/dev/null 2>&1 || true
             done
           done
 
@@ -251,9 +251,9 @@ jobs:
         continue-on-error: true
         run: |
           echo "Checking sitemap format..."
-          curl -s "https://houle.ai/sitemap.xml" | head -50
+          curl --connect-timeout 5 --max-time 20 -s "https://houle.ai/sitemap.xml" | head -50
           # Check if URLs have trailing slashes (look for any URL without trailing slash before </loc>)
-          if curl -s "https://houle.ai/sitemap.xml" | grep -q '<loc>https://houle.ai/[a-z][^/]*</loc>'; then
+          if curl --connect-timeout 5 --max-time 20 -s "https://houle.ai/sitemap.xml" | grep -q '<loc>https://houle.ai/[a-z][^/]*</loc>'; then
             echo "⚠️ WARNING: Found sitemap URLs without trailing slashes"
           else
             echo "✅ Sitemap URLs appear to have trailing slashes"

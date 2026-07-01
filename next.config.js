@@ -14,7 +14,6 @@ const baseConfig = {
   experimental: {
     optimizePackageImports: ["lucide-react", "react-hook-form", "sonner"],
     optimizeCss: true,
-    nextScriptWorkers: true,
   },
   // Ensure runtime access to JSON translation files in standalone/serverless outputs
   outputFileTracingIncludes: {
