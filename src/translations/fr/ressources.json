@@ -2290,7 +2290,7 @@
       "references": [
         {
           "labelKey": "Gouvernance et Sécurité de l’IA - PrismIA",
-          "url": "https://www.prismia.ch/gouvernance-et-securite-de-lia/"
+          "url": "https://www.prismia.ch/webinars/gouvernance-et-securite-de-lia/"
         },
         {
           "labelKey": "L’IA grimpe à la 2ème place des principaux risques pour les entreprises",
@@ -2303,10 +2303,6 @@
         {
           "labelKey": "Rapport 2025 sur la gouvernance prête pour l’IA - One Trust",
           "url": "https://www-onetrust-com.proxy.sbu.usi.ch/fr/resources/2025-ai-ready-governance-report/"
-        },
-        {
-          "labelKey": "Confiance clé pour l’adoption de l’IA - Portail PME",
-          "url": "https://www.kmu.admin.ch/kmu/fr/home/actuel/interviews/2025/confiance-cle-adoption-ia.html"
         },
         {
           "labelKey": "IA en 2026 : état et enjeux des entreprises",
@@ -2322,7 +2318,7 @@
         },
         {
           "labelKey": "ISO/IEC 42001 : Une gouvernance responsable de l’IA",
-          "url": "https://digicomp.ch/blognews/2025/06/24/iso-iec-42001-une-gouvernance-responsable-de-lia"
+          "url": "https://digicomp.ch/blognews/post/iso-iec-42001-une-gouvernance-responsable-de-lia"
         }
       ],
       "category": "ai-strategy-adoption",
@@ -2464,10 +2460,6 @@
           "url": "https://www.rts.ch/info/economie/2025/article/microsoft-investit-400-millions-en-suisse-pour-booster-le-cloud-et-l-ia-28901924.html"
         },
         {
-          "labelKey": "Formation en AI pour améliorer l'adoption",
-          "url": "https://www.kmu.admin.ch/kmu/fr/home/actuel/theme-du-mois/2025/conseils-integration-ia-entreprise.html"
-        },
-        {
           "labelKey": "Microsoft Azure OpenAI Service Documentation",
           "url": "https://learn.microsoft.com/en-us/azure/foundry/"
         },
@@ -2550,10 +2542,6 @@
       "date": "2026-03-07",
       "references": [
         {
-          "labelKey": "La confiance est la clé de l’adoption de l’IA",
-          "url": "https://www.kmu.admin.ch/kmu/fr/home/actuel/interviews/2025/confiance-cle-adoption-ia.html"
-        },
-        {
           "labelKey": "FINMA : risques liés à l’utilisation de l’IA",
           "url": "https://www.finma.ch/fr/~/media/finma/dokumente/dokumentencenter/8news/medienmitteilungen/2024/12/20241218-mm-finma-am-08-24.pdf?sc_lang=fr&hash=CDA3FD88333345F35AFA00646F5E9B78"
         },
@@ -2579,7 +2567,7 @@
         },
         {
           "labelKey": "ISO/IEC 42001 : Une gouvernance responsable de l'IA",
-          "url": "https://digicomp.ch/blognews/2025/06/24/iso-iec-42001-une-gouvernance-responsable-de-lia"
+          "url": "https://digicomp.ch/blognews/post/iso-iec-42001-une-gouvernance-responsable-de-lia"
         },
         {
           "labelKey": "Analyser les risques ESG et de réputation avec l’IA",
@@ -3299,10 +3287,6 @@
           "url": "https://learn.microsoft.com/fr-fr/azure/architecture/ai-ml/guide/rag/rag-llm-evaluation-phase"
         },
         {
-          "labelKey": "Management de la qualité - Portail PME SECO",
-          "url": "https://www.kmu.admin.ch/kmu/fr/home/savoir-pratique/gestion-pme/certification-normalisation/normalisation/management-qualite.html"
-        },
-        {
           "labelKey": "HERMES Online - Aperçu de la méthode",
           "url": "https://www.hermes.admin.ch/fr/gestion-de-projet/apercu-de-la-methode.html"
         }
@@ -3643,10 +3627,6 @@
         {
           "labelKey": "The DDPS – Security for Switzerland",
           "url": "https://www.vbs.admin.ch/en"
-        },
-        {
-          "labelKey": "Intégration IA et gouvernance avec Microsoft Purview",
-          "url": "https://www.kmu.admin.ch/kmu/fr/home/actuel/theme-du-mois/2025/conseils-integration-ia-entreprise.html"
         }
       ],
       "category": "ai-strategy-adoption",
@@ -3696,7 +3676,7 @@
         },
         {
           "labelKey": "Taxonomy of Prompt Engineering Techniques (Springer)",
-          "url": "https://link.springer.com/article/10.1007/s11704-025-50058-z?error=cookies_not_supported&code=9c70f439-e28d-44c4-ae51-9a61249f5991"
+          "url": "https://link.springer.com/article/10.1007/s11704-025-50058-z?error=cookies_not_supported&code=ce7fcd09-e145-4adc-a272-4ca3e35603ca"
         }
       ],
       "category": "quality-governance",
@@ -3861,10 +3841,6 @@
         {
           "labelKey": "Charte IA, modèle et directives - Outilia",
           "url": "https://outilia.ch/charte-ia-entreprises-outils-ia-directive/"
-        },
-        {
-          "labelKey": "Comment intégrer l'IA en entreprise - SECO Portail PME",
-          "url": "https://www.kmu.admin.ch/kmu/fr/home/actuel/theme-du-mois/2025/conseils-integration-ia-entreprise.html"
         },
         {
           "labelKey": "HUG: Charte d'utilisation IA",
@@ -4263,7 +4239,7 @@
         },
         {
           "labelKey": "Gestion de la conformité RGPD avec Power Automate",
-          "url": "https://www.microsoft.com/en-us/trustcenter/compliance/gdpr"
+          "url": "https://www.microsoft.com/en-us/trust-center"
         },
         {
           "labelKey": "Fiche technique conformitée LPD - Chancellery suisse",
@@ -4325,7 +4301,7 @@
         },
         {
           "labelKey": "AI et Cybersecurity Insights",
-          "url": "https://link.springer.com/article/10.1007/s10115-025-02429-y"
+          "url": "https://link.springer.com/article/10.1007/s10115-025-02429-y?error=cookies_not_supported&code=707f6128-120c-4b60-b71a-466d56685a09"
         }
       ],
       "category": "security-compliance",
@@ -4358,7 +4334,7 @@
         },
         {
           "labelKey": "Bonnes pratiques pour éviter les erreurs des add-ins Outlook",
-          "url": "https://support.microsoft.com/"
+          "url": "https://support.microsoft.com/en-us/"
         },
         {
           "labelKey": "Documentation officielle Microsoft sur Power Automate",
@@ -4370,15 +4346,15 @@
         },
         {
           "labelKey": "Exemple d'un pipeline de tri d'email basé sur un add-in",
-          "url": "https://litmus.com/blog/"
+          "url": "https://www.litmus.com/blog"
         },
         {
           "labelKey": "Documentation Power Apps Microsoft sur les connecteurs API",
-          "url": "https://learn.microsoft.com/en-us/connectors/overview/"
+          "url": "https://learn.microsoft.com/en-us/connectors/overview"
         },
         {
           "labelKey": "Governance et sécurité dans les systèmes au cloud Microsoft",
-          "url": "https://docs.microsoft.com/en-us/microsoft-365/compliance/"
+          "url": "https://learn.microsoft.com/en-us/purview/"
         }
       ],
       "category": "security-compliance",
