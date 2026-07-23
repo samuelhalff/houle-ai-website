@@ -4632,6 +4632,38 @@
         "rgpd",
         "rag"
       ]
+    },
+    {
+      "slug": "automatiser-correspondance-formelle-entreprise-ia-suisse",
+      "title": "Automatiser la correspondance formelle de l'entreprise avec l'IA : du modèle Word au service de bout en bout",
+      "description": "Modèles Word, add-ins Microsoft 365, produits IA verticaux : panorama des approches pour automatiser la correspondance d'entreprise en Suisse, avec leurs forces, leurs limites et les questions de gouvernance à trancher.",
+      "content": "# Automatiser la correspondance formelle de l'entreprise avec l'IA : du modèle Word au service de bout en bout\n\nLa correspondance formelle — résiliations, mises en demeure, réponses aux autorités, courriers clients sensibles — est l'un des derniers processus documentaires que beaucoup d'entreprises suisses gèrent encore entièrement à la main. Paradoxe intéressant : c'est aussi l'un des processus où l'IA générative apporte aujourd'hui le gain le plus tangible, à condition de choisir le bon niveau d'automatisation. Cet article dresse un panorama des approches, de la plus simple à la plus intégrée.\n\n## Niveau 1 : les modèles et la bureautique classique\n\nLa plupart des organisations partent d'une bibliothèque de modèles Word : en-têtes, blocs de signature, formules types. C'est un socle utile, mais il montre vite ses limites : les modèles vieillissent, les collaborateurs les copient localement, et la qualité du contenu dépend entièrement de la personne qui remplit les trous. Le coût caché n'est pas la rédaction, mais la variance — deux courriers traitant du même cas peuvent partir avec des structures, des tons et des niveaux de rigueur très différents.\n\n## Niveau 2 : l'assistance IA dans Microsoft 365\n\nL'étape suivante consiste à amener l'assistance rédactionnelle là où les collaborateurs travaillent déjà : dans Word et Outlook. Des compléments Office connectés à un modèle de langage permettent de générer un premier jet structuré à partir d'une consigne, de reformuler un paragraphe dans le ton de l'entreprise ou de résumer un échange avant d'y répondre. C'est le cœur de notre métier chez Houle : intégrer ces capacités dans l'environnement Microsoft 365 de nos clients, avec un point d'attention constant — la maîtrise des données. Un courrier de résiliation ou une réponse à une autorité contient des données personnelles et stratégiques ; le choix du déploiement (Azure OpenAI en région Suisse, instances privées, journalisation) n'est pas un détail technique mais une décision de gouvernance.\n\nL'assistance intégrée excelle pour le volume et l'homogénéité. Sa limite : elle s'arrête à la porte du document. Imprimer, mettre sous pli, affranchir et déposer un recommandé restent des étapes manuelles — précisément celles qui font rater des délais.\n\n## Niveau 3 : les produits verticaux de bout en bout\n\nUne troisième approche émerge : des produits spécialisés qui prennent en charge la chaîne complète pour un cas d'usage précis. Un bon exemple suisse est [Episto](https://episto.ch/), qui applique ce principe à la lettre formelle : l'utilisateur décrit sa situation, le service rédige un courrier correctement structuré, génère le PDF prêt à l'expédition et le remet à la voie postale — sans imprimante ni passage au guichet. Ce type de produit illustre ce que nous appelons le pattern vertical : plutôt qu'un assistant généraliste, un flux étroit mais complet, où l'IA est invisible et où la valeur se mesure en délais tenus.\n\nPour une PME, la question n'est pas « add-in ou produit vertical ? » mais « quel volume et quelle criticité pour chaque type de correspondance ? ». Le courrier client quotidien justifie l'assistance intégrée à Microsoft 365 ; la lettre formelle occasionnelle mais critique justifie un service de bout en bout ; et les deux coexistent très bien.\n\n## La gouvernance avant l'outillage\n\nQuelle que soit l'approche retenue, trois questions doivent être tranchées avant le déploiement :\n\n1. **Où transitent les données ?** Localisation des traitements, sous-traitants, conformité à la nLPD et, le cas échéant, au RGPD. Un outil de rédaction qui envoie le contenu d'une mise en demeure vers une API non documentée est un risque, pas un gain.\n2. **Qui valide ?** L'IA produit un premier jet ; la responsabilité de l'envoi reste humaine. Le circuit de validation (rédacteur, valideur, signataire) doit être explicite, surtout pour les courriers à portée juridique.\n3. **Que garde-t-on ?** La valeur d'un courrier formel tient à sa traçabilité : version envoyée, date, preuve de remise. L'archivage doit être pensé dans le flux, pas ajouté après coup.\n\n## Par où commencer\n\nNotre recommandation habituelle : cartographier un mois de correspondance sortante, classer par volume et par criticité, puis traiter d'abord le quadrant « faible volume, forte criticité » — c'est là que les délais se perdent et que les produits de bout en bout rendent le plus service — et le quadrant « fort volume, faible criticité », terrain naturel de l'assistance intégrée à Microsoft 365. Les cas intermédiaires suivront une fois les premiers gains démontrés.\n\nL'automatisation de la correspondance n'est pas un projet d'infrastructure : c'est une série de décisions ciblées, outillées par des briques désormais matures. Bien menée, elle rend un service très concret — des courriers plus homogènes, des délais tenus, et des collaborateurs qui consacrent leur attention au contenu plutôt qu'à la logistique.",
+      "author": "Houle Team",
+      "date": "2026-07-23",
+      "category": "document-email-automation",
+      "tags": [
+        "automatisation documentaire",
+        "ia générative",
+        "microsoft 365",
+        "correspondance formelle",
+        "gouvernance des données",
+        "nlpd",
+        "pme suisse"
+      ],
+      "references": [
+        {
+          "labelKey": "Azure OpenAI Service — Microsoft Azure",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
+        },
+        {
+          "labelKey": "Préposé fédéral à la protection des données (PFPDT)",
+          "url": "https://www.edoeb.admin.ch/fr"
+        },
+        {
+          "labelKey": "Episto — courrier formel en ligne (Suisse)",
+          "url": "https://episto.ch/"
+        }
+      ]
     }
   ],
   "FAQ": {

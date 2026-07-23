@@ -4640,6 +4640,38 @@
           "url": "https://fedlex.admin.ch/eli/fga/2026/204/fr"
         }
       ]
+    },
+    {
+      "slug": "automatiser-correspondance-formelle-entreprise-ia-suisse",
+      "title": "Formelle Geschäftskorrespondenz mit KI automatisieren: von der Word-Vorlage zum End-to-End-Service",
+      "description": "Word-Vorlagen, Microsoft-365-Add-ins, vertikale KI-Produkte: ein Überblick über die Ansätze zur Automatisierung der Geschäftskorrespondenz in der Schweiz – mit ihren Stärken, ihren Grenzen und den Governance-Fragen, die zu klären sind.",
+      "content": "# Formelle Geschäftskorrespondenz mit KI automatisieren: von der Word-Vorlage zum End-to-End-Service\n\nFormelle Korrespondenz — Kündigungen, Mahnschreiben, Antworten an Behörden, heikle Kundenbriefe — ist einer der letzten Dokumentenprozesse, den viele Schweizer Unternehmen noch vollständig von Hand abwickeln. Ein interessantes Paradox: Es ist zugleich einer der Prozesse, in denen generative KI heute den greifbarsten Nutzen bringt — vorausgesetzt, man wählt die richtige Automatisierungsstufe. Dieser Artikel gibt einen Überblick über die Ansätze, vom einfachsten bis zum am stärksten integrierten.\n\n## Stufe 1: Vorlagen und klassische Büroautomation\n\nDie meisten Organisationen starten mit einer Bibliothek von Word-Vorlagen: Briefköpfe, Signaturblöcke, Standardformulierungen. Das ist eine nützliche Grundlage, stösst aber schnell an Grenzen: Vorlagen veralten, Mitarbeitende kopieren sie lokal, und die Qualität des Inhalts hängt vollständig von der Person ab, die die Lücken füllt. Die versteckten Kosten liegen nicht im Schreiben, sondern in der Varianz — zwei Briefe zum selben Fall können mit sehr unterschiedlichen Strukturen, Tonlagen und Sorgfaltsniveaus hinausgehen.\n\n## Stufe 2: KI-Unterstützung in Microsoft 365\n\nDer nächste Schritt besteht darin, die Schreibunterstützung dorthin zu bringen, wo die Mitarbeitenden bereits arbeiten: in Word und Outlook. Mit einem Sprachmodell verbundene Office-Add-ins erstellen aus einer kurzen Vorgabe einen strukturierten ersten Entwurf, formulieren einen Absatz im Ton des Unternehmens um oder fassen einen Austausch zusammen, bevor man darauf antwortet. Das ist der Kern unserer Arbeit bei Houle: Wir integrieren diese Fähigkeiten in die Microsoft-365-Umgebung unserer Kunden — mit einem konstanten Augenmerk auf die Datenhoheit. Ein Kündigungsschreiben oder eine Antwort an eine Behörde enthält persönliche und strategische Daten; die Wahl des Deployments (Azure OpenAI in der Region Schweiz, private Instanzen, Protokollierung) ist kein technisches Detail, sondern ein Governance-Entscheid.\n\nDie integrierte Unterstützung glänzt bei Volumen und Einheitlichkeit. Ihre Grenze: Sie endet an der Türe des Dokuments. Drucken, Kuvertieren, Frankieren und die Aufgabe eines Einschreibens bleiben manuelle Schritte — genau jene, an denen Fristen verpasst werden.\n\n## Stufe 3: vertikale End-to-End-Produkte\n\nEin dritter Ansatz zeichnet sich ab: spezialisierte Produkte, die für einen präzisen Anwendungsfall die gesamte Kette übernehmen. Ein gutes Schweizer Beispiel ist [Episto](https://episto.ch/), das dieses Prinzip auf den formellen Brief anwendet: Die Nutzerin oder der Nutzer beschreibt die Situation, der Dienst verfasst einen korrekt strukturierten Brief, erzeugt das versandfertige PDF und übergibt es dem Postweg — ohne Drucker und ohne Gang zum Schalter. Diese Art von Produkt veranschaulicht, was wir das vertikale Muster nennen: statt eines generalistischen Assistenten ein schmaler, aber vollständiger Ablauf, in dem die KI unsichtbar ist und sich der Wert an eingehaltenen Fristen misst.\n\nFür ein KMU lautet die Frage nicht «Add-in oder vertikales Produkt?», sondern «welches Volumen und welche Kritikalität für jede Art von Korrespondenz?». Die tägliche Kundenkorrespondenz rechtfertigt die in Microsoft 365 integrierte Unterstützung; der gelegentliche, aber kritische formelle Brief rechtfertigt einen End-to-End-Service; und beides koexistiert sehr gut.\n\n## Governance vor Werkzeugen\n\nUnabhängig vom gewählten Ansatz müssen vor dem Rollout drei Fragen geklärt werden:\n\n1. **Wo fliessen die Daten durch?** Ort der Verarbeitung, Unterauftragnehmer, Konformität mit dem revDSG und gegebenenfalls mit der DSGVO. Ein Schreibwerkzeug, das den Inhalt eines Mahnschreibens an eine nicht dokumentierte API sendet, ist ein Risiko, kein Gewinn.\n2. **Wer validiert?** Die KI liefert einen ersten Entwurf; die Verantwortung für den Versand bleibt beim Menschen. Der Freigabeprozess (Verfasser, Prüfer, Unterzeichner) muss explizit sein, insbesondere bei Briefen mit rechtlicher Tragweite.\n3. **Was bewahren wir auf?** Der Wert eines formellen Briefs liegt in seiner Nachvollziehbarkeit: versandte Version, Datum, Zustellnachweis. Die Archivierung muss im Ablauf mitgedacht und nicht nachträglich ergänzt werden.\n\n## Womit beginnen\n\nUnsere übliche Empfehlung: einen Monat ausgehender Korrespondenz kartieren, nach Volumen und Kritikalität ordnen und dann zuerst den Quadranten «geringes Volumen, hohe Kritikalität» angehen — dort gehen Fristen verloren, und dort leisten End-to-End-Produkte den grössten Dienst — sowie den Quadranten «hohes Volumen, geringe Kritikalität», das natürliche Terrain der in Microsoft 365 integrierten Unterstützung. Die dazwischenliegenden Fälle folgen, sobald die ersten Erfolge nachgewiesen sind.\n\nDie Automatisierung der Korrespondenz ist kein Infrastrukturprojekt: Sie ist eine Reihe gezielter Entscheide, gestützt auf inzwischen ausgereifte Bausteine. Gut umgesetzt, leistet sie einen sehr konkreten Dienst — einheitlichere Briefe, eingehaltene Fristen und Mitarbeitende, die ihre Aufmerksamkeit dem Inhalt statt der Logistik widmen.",
+      "author": "Houle Team",
+      "date": "2026-07-23",
+      "category": "document-email-automation",
+      "tags": [
+        "dokumentenautomatisierung",
+        "generative ki",
+        "microsoft 365",
+        "formelle korrespondenz",
+        "datengovernance",
+        "revdsg",
+        "schweizer kmu"
+      ],
+      "references": [
+        {
+          "labelKey": "Azure OpenAI Service — Microsoft Azure",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
+        },
+        {
+          "labelKey": "Préposé fédéral à la protection des données (PFPDT)",
+          "url": "https://www.edoeb.admin.ch/fr"
+        },
+        {
+          "labelKey": "Episto — courrier formel en ligne (Suisse)",
+          "url": "https://episto.ch/"
+        }
+      ]
     }
   ],
   "FAQ": {

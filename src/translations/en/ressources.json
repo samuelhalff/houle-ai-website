@@ -4644,6 +4644,38 @@
           "url": "https://fedlex.admin.ch/eli/fga/2026/204/fr"
         }
       ]
+    },
+    {
+      "slug": "automatiser-correspondance-formelle-entreprise-ia-suisse",
+      "title": "Automating formal business correspondence with AI: from Word templates to end-to-end services",
+      "description": "Word templates, Microsoft 365 add-ins, vertical AI products: an overview of the approaches to automating business correspondence in Switzerland, with their strengths, their limits and the governance questions to settle.",
+      "content": "# Automating formal business correspondence with AI: from Word templates to end-to-end services\n\nFormal correspondence — terminations, formal notices, replies to authorities, sensitive customer letters — is one of the last document processes that many Swiss companies still handle entirely by hand. An interesting paradox: it is also one of the processes where generative AI delivers the most tangible gains today, provided you choose the right level of automation. This article maps out the approaches, from the simplest to the most integrated.\n\n## Level 1: templates and traditional office tools\n\nMost organizations start from a library of Word templates: letterheads, signature blocks, standard phrases. It is a useful foundation, but its limits show quickly: templates age, employees copy them locally, and the quality of the content depends entirely on the person filling in the blanks. The hidden cost is not the drafting but the variance — two letters dealing with the same case can go out with very different structures, tones and levels of rigor.\n\n## Level 2: AI assistance inside Microsoft 365\n\nThe next step is to bring drafting assistance to where employees already work: in Word and Outlook. Office add-ins connected to a language model can generate a structured first draft from a short brief, rephrase a paragraph in the company's tone, or summarize an exchange before replying. This is the core of what we do at Houle: integrating these capabilities into our clients' Microsoft 365 environment, with one constant point of attention — control over the data. A termination letter or a reply to an authority contains personal and strategic data; the deployment choice (Azure OpenAI in the Switzerland region, private instances, logging) is not a technical detail but a governance decision.\n\nIntegrated assistance excels at volume and consistency. Its limit: it stops at the edge of the document. Printing, stuffing envelopes, franking and posting a registered letter remain manual steps — precisely the ones that cause missed deadlines.\n\n## Level 3: end-to-end vertical products\n\nA third approach is emerging: specialized products that cover the entire chain for one specific use case. A good Swiss example is [Episto](https://episto.ch/), which applies this principle to the formal letter: the user describes their situation, the service drafts a properly structured letter, generates a PDF ready for dispatch and hands it over to the postal channel — no printer, no trip to the counter. This type of product illustrates what we call the vertical pattern: rather than a general-purpose assistant, a narrow but complete workflow, where the AI is invisible and the value is measured in deadlines met.\n\nFor an SME, the question is not \"add-in or vertical product?\" but \"what volume and what criticality for each type of correspondence?\". Day-to-day customer mail justifies assistance integrated into Microsoft 365; the occasional but critical formal letter justifies an end-to-end service; and the two coexist very well.\n\n## Governance before tooling\n\nWhichever approach you choose, three questions must be settled before deployment:\n\n1. **Where does the data travel?** Location of processing, subcontractors, compliance with the Swiss FADP and, where applicable, the GDPR. A drafting tool that sends the content of a formal notice to an undocumented API is a risk, not a gain.\n2. **Who validates?** The AI produces a first draft; responsibility for sending remains human. The validation chain (drafter, approver, signatory) must be explicit, especially for letters with legal implications.\n3. **What do we keep?** The value of a formal letter lies in its traceability: the version sent, the date, proof of delivery. Archiving must be designed into the workflow, not bolted on afterwards.\n\n## Where to start\n\nOur usual recommendation: map one month of outgoing correspondence, sort it by volume and criticality, then tackle first the \"low volume, high criticality\" quadrant — this is where deadlines get lost and where end-to-end products help the most — and the \"high volume, low criticality\" quadrant, the natural territory of assistance integrated into Microsoft 365. The in-between cases will follow once the first gains have been demonstrated.\n\nAutomating correspondence is not an infrastructure project: it is a series of targeted decisions, supported by building blocks that are now mature. Done well, it delivers something very concrete — more consistent letters, deadlines met, and employees who devote their attention to the content rather than the logistics.",
+      "author": "Houle Team",
+      "date": "2026-07-23",
+      "category": "document-email-automation",
+      "tags": [
+        "document automation",
+        "generative ai",
+        "microsoft 365",
+        "formal correspondence",
+        "data governance",
+        "swiss fadp",
+        "swiss smes"
+      ],
+      "references": [
+        {
+          "labelKey": "Azure OpenAI Service — Microsoft Azure",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
+        },
+        {
+          "labelKey": "Préposé fédéral à la protection des données (PFPDT)",
+          "url": "https://www.edoeb.admin.ch/fr"
+        },
+        {
+          "labelKey": "Episto — courrier formel en ligne (Suisse)",
+          "url": "https://episto.ch/"
+        }
+      ]
     }
   ],
   "FAQ": {

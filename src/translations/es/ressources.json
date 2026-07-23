@@ -4644,6 +4644,38 @@
           "url": "https://fedlex.admin.ch/eli/fga/2026/204/fr"
         }
       ]
+    },
+    {
+      "slug": "automatiser-correspondance-formelle-entreprise-ia-suisse",
+      "title": "Automatizar la correspondencia formal de la empresa con IA: de la plantilla de Word al servicio de extremo a extremo",
+      "description": "Plantillas de Word, complementos de Microsoft 365, productos verticales de IA: panorama de los enfoques para automatizar la correspondencia empresarial en Suiza, con sus fortalezas, sus límites y las cuestiones de gobernanza que hay que resolver.",
+      "content": "# Automatizar la correspondencia formal de la empresa con IA: de la plantilla de Word al servicio de extremo a extremo\n\nLa correspondencia formal — rescisiones, requerimientos, respuestas a las autoridades, cartas sensibles a clientes — es uno de los últimos procesos documentales que muchas empresas suizas siguen gestionando por completo a mano. Paradoja interesante: también es uno de los procesos en los que la IA generativa aporta hoy el beneficio más tangible, siempre que se elija el nivel de automatización adecuado. Este artículo ofrece un panorama de los enfoques, del más sencillo al más integrado.\n\n## Nivel 1: las plantillas y la ofimática clásica\n\nLa mayoría de las organizaciones parten de una biblioteca de plantillas de Word: membretes, bloques de firma, fórmulas tipo. Es una base útil, pero muestra pronto sus límites: las plantillas envejecen, los colaboradores las copian localmente y la calidad del contenido depende por completo de la persona que rellena los huecos. El coste oculto no es la redacción, sino la varianza — dos cartas que tratan el mismo caso pueden salir con estructuras, tonos y niveles de rigor muy distintos.\n\n## Nivel 2: la asistencia de IA en Microsoft 365\n\nEl siguiente paso consiste en llevar la asistencia a la redacción allí donde los colaboradores ya trabajan: a Word y Outlook. Los complementos de Office conectados a un modelo de lenguaje permiten generar un primer borrador estructurado a partir de una consigna, reformular un párrafo en el tono de la empresa o resumir un intercambio antes de responder. Es el núcleo de nuestro trabajo en Houle: integrar estas capacidades en el entorno Microsoft 365 de nuestros clientes, con un punto de atención constante — el control de los datos. Una carta de rescisión o una respuesta a una autoridad contiene datos personales y estratégicos; la elección del despliegue (Azure OpenAI en la región de Suiza, instancias privadas, registro de actividad) no es un detalle técnico, sino una decisión de gobernanza.\n\nLa asistencia integrada destaca en volumen y homogeneidad. Su límite: se detiene en la puerta del documento. Imprimir, ensobrar, franquear y depositar un certificado siguen siendo pasos manuales — precisamente los que hacen incumplir los plazos.\n\n## Nivel 3: los productos verticales de extremo a extremo\n\nEmerge un tercer enfoque: productos especializados que se hacen cargo de la cadena completa para un caso de uso concreto. Un buen ejemplo suizo es [Episto](https://episto.ch/), que aplica este principio a la carta formal: el usuario describe su situación, el servicio redacta una carta correctamente estructurada, genera el PDF listo para el envío y lo entrega a la vía postal — sin impresora ni paso por la ventanilla. Este tipo de producto ilustra lo que llamamos el patrón vertical: en lugar de un asistente generalista, un flujo estrecho pero completo, donde la IA es invisible y el valor se mide en plazos cumplidos.\n\nPara una pyme, la pregunta no es «¿complemento o producto vertical?», sino «¿qué volumen y qué criticidad para cada tipo de correspondencia?». El correo diario a clientes justifica la asistencia integrada en Microsoft 365; la carta formal ocasional pero crítica justifica un servicio de extremo a extremo; y ambos coexisten muy bien.\n\n## La gobernanza antes que las herramientas\n\nSea cual sea el enfoque elegido, hay que resolver tres cuestiones antes del despliegue:\n\n1. **¿Por dónde transitan los datos?** Localización de los tratamientos, subcontratistas, conformidad con la nLPD y, en su caso, con el RGPD. Una herramienta de redacción que envía el contenido de un requerimiento a una API no documentada es un riesgo, no una ganancia.\n2. **¿Quién valida?** La IA produce un primer borrador; la responsabilidad del envío sigue siendo humana. El circuito de validación (redactor, validador, firmante) debe ser explícito, sobre todo en las cartas con alcance jurídico.\n3. **¿Qué conservamos?** El valor de una carta formal reside en su trazabilidad: versión enviada, fecha, prueba de entrega. El archivado debe concebirse dentro del flujo, no añadirse a posteriori.\n\n## Por dónde empezar\n\nNuestra recomendación habitual: cartografiar un mes de correspondencia saliente, clasificarla por volumen y criticidad, y abordar primero el cuadrante «bajo volumen, alta criticidad» — ahí es donde se pierden los plazos y donde los productos de extremo a extremo prestan el mayor servicio — y el cuadrante «alto volumen, baja criticidad», terreno natural de la asistencia integrada en Microsoft 365. Los casos intermedios vendrán después, una vez demostradas las primeras ganancias.\n\nLa automatización de la correspondencia no es un proyecto de infraestructura: es una serie de decisiones focalizadas, apoyadas en componentes ya maduros. Bien llevada, presta un servicio muy concreto — cartas más homogéneas, plazos cumplidos y colaboradores que dedican su atención al contenido en lugar de a la logística.",
+      "author": "Houle Team",
+      "date": "2026-07-23",
+      "category": "document-email-automation",
+      "tags": [
+        "automatización documental",
+        "ia generativa",
+        "microsoft 365",
+        "correspondencia formal",
+        "gobernanza de datos",
+        "nlpd",
+        "pymes suizas"
+      ],
+      "references": [
+        {
+          "labelKey": "Azure OpenAI Service — Microsoft Azure",
+          "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
+        },
+        {
+          "labelKey": "Préposé fédéral à la protection des données (PFPDT)",
+          "url": "https://www.edoeb.admin.ch/fr"
+        },
+        {
+          "labelKey": "Episto — courrier formel en ligne (Suisse)",
+          "url": "https://episto.ch/"
+        }
+      ]
     }
   ],
   "FAQ": {
