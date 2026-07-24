@@ -29,6 +29,11 @@
             "description": "Produits IA prêts à l'emploi pour Microsoft 365 : add-in Word, add-in Outlook et plateforme Swiss GPT. Intégration transparente, hébergement suisse, sécurité entreprise.",
             "keywords": "add-in ia word, assistant ia outlook, gpt suisse, produits ia microsoft 365, add-ins office suisse"
         },
+        "/products/ai-agents": {
+            "title": "Agents IA hébergés en Suisse | Agents IA suisses sur Azure",
+            "description": "Des agents IA spécialisés qui perçoivent, raisonnent, agissent via des outils, avec validation humaine. Hébergés sur Azure en Suisse pour Microsoft 365.",
+            "keywords": "agents ia suisse, agents ia hébergés suisse, azure ai foundry, ia agentique, ia validation humaine, automatisation processus métier"
+        },
         "/products/word-addin": {
             "title": "Add-in Word avec IA | houle - Assistant Hébergé en Suisse",
             "description": "Add-in Word avec IA pour rédiger, éditer et résumer des documents. S'intègre à votre GPT hébergé en Suisse pour un contrôle total des données.",
@@ -43,6 +48,11 @@
             "title": "Plateforme Swiss GPT | IA d'Entreprise Hébergée en Suisse",
             "description": "Plateforme GPT d'entreprise hébergée dans des centres de données suisses. Connectez-vous à vos données Microsoft 365 avec souveraineté complète. Infrastructure conforme FINMA, certifiée LPD.",
             "keywords": "gpt suisse, gpt entreprise suisse, plateforme gpt privée, ia conforme finma, souveraineté données suisse"
+        },
+        "/solutions": {
+            "title": "Solutions IA par cas d'usage | Agents IA suisses",
+            "description": "Agents IA hébergés en Suisse et add-ins Microsoft 365 pour comptabilité, paie, factures, tri des e-mails et plus. Explorez les solutions par cas d'usage.",
+            "keywords": "cas d'usage ia suisse, solutions automatisation ia, agents ia suisses, add-ins ia microsoft 365"
         },
         "/services": {
             "title": "Conseil IA & Microsoft 365 | houle — Genève & Lausanne",
@@ -70,6 +80,11 @@
             "titleTemplate": "{articleTitle} | houle - IA pour Microsoft 365",
             "descriptionTemplate": "{articleDescription} | Expertise de Genève avec souveraineté des données suisse.",
             "keywords": "ia microsoft 365, solutions ia suisse, conseil ia genève, souveraineté données suisse"
+        },
+        "solutions": {
+            "titleTemplate": "{title} | houle - Agents IA suisses",
+            "descriptionTemplate": "{description} | IA hébergée en Suisse, validation humaine, pensée pour Microsoft 365.",
+            "keywords": "agents ia suisse, automatisation ia, solutions ia suisses, ia validation humaine, automatisation microsoft 365"
         }
     }
 }

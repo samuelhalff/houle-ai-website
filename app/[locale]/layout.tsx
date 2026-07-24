@@ -37,6 +37,11 @@ export default async function LocaleLayout({
           },
           products: [
             {
+              href: "/products/ai-agents/",
+              title: "Agents IA",
+              description: "Agents IA spécialisés hébergés en Suisse",
+            },
+            {
               href: "/products/word-addin/",
               title: "Add-in Word",
               description: "Assistant IA pour Microsoft Word",
@@ -79,6 +84,11 @@ export default async function LocaleLayout({
               mobileNavigation: "Menü",
             },
             products: [
+              {
+                href: "/products/ai-agents/",
+                title: "KI-Agenten",
+                description: "Spezialisierte KI-Agenten, in der Schweiz gehostet",
+              },
               {
                 href: "/products/word-addin/",
                 title: "KI-Add-in für Word",
@@ -123,6 +133,11 @@ export default async function LocaleLayout({
               },
               products: [
                 {
+                  href: "/products/ai-agents/",
+                  title: "Agentes de IA",
+                  description: "Agentes de IA especializados alojados en Suiza",
+                },
+                {
                   href: "/products/word-addin/",
                   title: "Add-in para Word",
                   description: "Asistente IA para Microsoft Word",
@@ -166,6 +181,11 @@ export default async function LocaleLayout({
                 },
                 products: [
                   {
+                    href: "/products/ai-agents/",
+                    title: "Agentes de IA",
+                    description: "Agentes de IA especializados hospedados na Suíça",
+                  },
+                  {
                     href: "/products/word-addin/",
                     title: "Add-in para Word",
                     description: "Assistente IA para Microsoft Word",
@@ -207,6 +227,11 @@ export default async function LocaleLayout({
                   mobileNavigation: "Menu",
                 },
                 products: [
+                  {
+                    href: "/products/ai-agents/",
+                    title: "AI Agents",
+                    description: "Swiss-hosted specialised AI agents",
+                  },
                   {
                     href: "/products/word-addin/",
                     title: "Word Add-in",

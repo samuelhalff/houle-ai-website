@@ -1,0 +1,57 @@
+{
+    "Hero": {
+        "Badge": "Agents IA hébergés en Suisse",
+        "Title": "Agents IA spécialisés pour votre entreprise",
+        "Description": "Des agents IA qui exécutent des tâches métier de bout en bout — lecture de documents, saisie, rédaction, suivi — hébergés sur Azure en Suisse, avec une validation humaine à chaque étape sensible."
+    },
+    "Answer": "Un agent IA est un logiciel qui poursuit un objectif de façon autonome : il perçoit une situation (un e-mail entrant, une facture, un formulaire), raisonne sur ce qu'il faut faire, agit en utilisant vos outils (Microsoft 365, votre ERP, votre GPT interne) et soumet le résultat à une personne pour validation. Nos agents sont hébergés sur Azure en Suisse et construits avec Azure AI Foundry, afin que vos données restent dans le périmètre suisse et que chaque décision reste traçable et supervisée.",
+    "How": {
+        "Title": "Comment fonctionne un agent IA",
+        "Description": "Quatre étapes, du signal d'entrée jusqu'à la validation humaine.",
+        "Perceive": {
+            "Title": "1. Percevoir",
+            "Description": "L'agent reçoit une entrée — un e-mail, un document PDF, une ligne d'un tableau, une demande dans un chat — et en extrait les informations pertinentes grâce à la compréhension du langage et à la lecture de documents."
+        },
+        "Reason": {
+            "Title": "2. Raisonner et planifier",
+            "Description": "Il décompose l'objectif en étapes, décide de l'ordre des actions et sélectionne les données et outils nécessaires. Il s'appuie sur vos règles métier et sur vos sources internes pour rester ancré dans votre contexte."
+        },
+        "Act": {
+            "Title": "3. Agir via des outils",
+            "Description": "L'agent exécute les actions en appelant des outils connectés : rechercher dans SharePoint, écrire dans votre ERP, générer un document Word, envoyer un brouillon d'e-mail. Il n'invente rien : il utilise vos systèmes réels."
+        },
+        "Review": {
+            "Title": "4. Validation humaine",
+            "Description": "Avant toute action à effet réel, un collaborateur relit et valide. L'agent propose, l'humain décide. Vous gardez le contrôle, la traçabilité et la responsabilité finale."
+        }
+    },
+    "Features": {
+        "Title": "Ce que nos agents savent faire",
+        "Tools": {
+            "Title": "Accès à vos outils",
+            "Description": "Les agents se connectent à Microsoft 365, SharePoint, Outlook, votre ERP et vos API internes pour lire et écrire là où le travail se fait réellement — sans copier-coller manuel."
+        },
+        "Grounding": {
+            "Title": "Ancrage dans vos données",
+            "Description": "Chaque réponse s'appuie sur vos documents, vos règles et votre GPT interne hébergé en Suisse, ce qui réduit les erreurs et permet de citer les sources utilisées."
+        },
+        "Governance": {
+            "Title": "Gouvernance et audit",
+            "Description": "Journalisation des actions, contrôles d'accès et points de validation humaine intégrés. Vous savez ce que l'agent a fait, quand et sur quelles données."
+        },
+        "Integration": {
+            "Title": "Hébergement suisse",
+            "Description": "Les agents sont déployés sur Azure en Suisse avec Azure AI Foundry. Vos données restent dans le périmètre suisse, en cohérence avec votre gouvernance des données."
+        }
+    },
+    "UseCases": {
+        "Eyebrow": "Cas d'usage",
+        "Title": "Des agents pour des processus concrets",
+        "Description": "Chaque agent est conçu pour un processus métier précis. Découvrez les cas d'usage les plus demandés par les entreprises de services suisses.",
+        "AllLink": "Voir toutes les solutions"
+    },
+    "CTA": {
+        "Title": "Mettez un agent IA au travail",
+        "Description": "Parlons de vos processus les plus chronophages. Nous identifions ensemble le premier agent à déployer et son cadre de validation humaine."
+    }
+}

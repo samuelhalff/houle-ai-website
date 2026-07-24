@@ -29,6 +29,11 @@
             "description": "Productos de IA listos para usar para Microsoft 365: complemento Word, complemento Outlook y plataforma Swiss GPT. Integración perfecta, alojamiento suizo, seguridad empresarial.",
             "keywords": "complemento ia word, asistente ia outlook, gpt suizo, productos ia microsoft 365, complementos office suiza"
         },
+        "/products/ai-agents": {
+            "title": "Agentes de IA alojados en Suiza | Agentes de IA suizos en Azure",
+            "description": "Agentes de IA especializados que perciben, razonan y actúan con herramientas, con validación humana. Alojados en Azure en Suiza para Microsoft 365.",
+            "keywords": "agentes ia suiza, agentes ia alojados suiza, azure ai foundry, ia agéntica, ia validación humana, automatización procesos de negocio"
+        },
         "/products/word-addin": {
             "title": "Complemento Word con IA | houle - Asistente Alojado en Suiza",
             "description": "Complemento Word con IA para redactar, editar y resumir documentos. Se integra con su GPT alojado en Suiza para control total de datos.",
@@ -43,6 +48,11 @@
             "title": "Plataforma Swiss GPT | IA Empresarial Alojada en Suiza",
             "description": "Plataforma GPT empresarial alojada en centros de datos suizos. Conéctese a sus datos de Microsoft 365 con soberanía completa. Infraestructura conforme FINMA, certificada LPD.",
             "keywords": "gpt suizo, gpt empresarial suiza, plataforma gpt privada, ia conforme finma, soberanía datos suiza"
+        },
+        "/solutions": {
+            "title": "Soluciones de IA por caso de uso | Agentes IA suizos & add-ins",
+            "description": "Agentes de IA alojados en Suiza y add-ins de Microsoft 365 para contabilidad, nóminas, facturas, clasificación de correo y más. Soluciones por caso de uso.",
+            "keywords": "casos de uso ia suiza, soluciones automatización ia, agentes ia suizos, add-ins ia microsoft 365"
         },
         "/services": {
             "title": "Servicios de Consultoría IA & Microsoft 365 | houle Ginebra",
@@ -70,6 +80,11 @@
             "titleTemplate": "{articleTitle} | houle - IA para Microsoft 365",
             "descriptionTemplate": "{articleDescription} | Experiencia de Ginebra con soberanía de datos suiza.",
             "keywords": "ia microsoft 365, soluciones ia suiza, consultoría ia ginebra, soberanía datos suiza"
+        },
+        "solutions": {
+            "titleTemplate": "{title} | houle - Agentes de IA suizos",
+            "descriptionTemplate": "{description} | IA alojada en Suiza, validación humana, pensada para Microsoft 365.",
+            "keywords": "agentes ia suiza, automatización ia, soluciones ia suizas, ia validación humana, automatización microsoft 365"
         }
     }
 }

@@ -3,6 +3,7 @@ import { locales, type Locale } from "@/src/lib/i18n-locales";
 import { localizePath } from "@/src/lib/paths";
 import { hreflangFor } from "@/src/lib/hreflang";
 import { getArticles, getValidLocalesForSlug } from "@/src/lib/articles";
+import { getTranslationsRecord } from "@/src/lib/i18n";
 
 const BASE = "https://houle.ai";
 const canonicalLocale: Locale = "fr";
@@ -29,6 +30,7 @@ const staticPaths = [
   "/products",
   "/ressources",
   "/contact",
+  "/solutions",
   "/legal/terms",
   "/legal/privacy",
   "/legal/cookies",
@@ -40,10 +42,25 @@ const servicePaths = [
 ];
 
 const productPaths = [
+  "/products/ai-agents",
   "/products/word-addin",
   "/products/outlook-addin",
   "/products/swiss-gpt",
 ];
+
+// Enumerate all solution slugs from the FR solutions.json (canonical), like articles.
+function buildSolutionEntries(): PathEntry[] {
+  const solutions = getTranslationsRecord("fr", "solutions") as Record<
+    string,
+    { hero?: unknown }
+  >;
+  return Object.keys(solutions)
+    .filter((slug) => {
+      const entry = solutions[slug];
+      return entry && typeof entry === "object" && (entry as { hero?: unknown }).hero;
+    })
+    .map((slug) => ({ path: `/solutions/${slug}` }));
+}
 
 type PathEntry = {
   path: string;
@@ -83,10 +100,12 @@ async function buildArticleEntries(sitemapLocales: Locale[]): Promise<PathEntry[
 export async function GET() {
   const sitemapLocales = getSitemapLocales();
   const articleEntries = await buildArticleEntries(sitemapLocales);
+  const solutionEntries = buildSolutionEntries();
   const paths: PathEntry[] = [
     ...staticPaths.map((path) => ({ path })),
     ...servicePaths.map((path) => ({ path })),
     ...productPaths.map((path) => ({ path })),
+    ...solutionEntries,
     ...articleEntries,
   ];
 

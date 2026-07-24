@@ -29,6 +29,11 @@
             "description": "Ready-to-use AI products for Microsoft 365: Word add-in, Outlook add-in, and Swiss GPT platform. Seamless integration, Swiss data hosting, enterprise-grade security.",
             "keywords": "word ai add-in, outlook ai assistant, swiss gpt, microsoft 365 ai products, office add-ins switzerland"
         },
+        "/products/ai-agents": {
+            "title": "AI Agents Hosted in Switzerland | Swiss AI Agents on Azure",
+            "description": "Specialised AI agents that perceive, reason, act via tools and keep a human in the loop. Hosted on Azure in Switzerland for Microsoft 365 workflows.",
+            "keywords": "ai agents switzerland, swiss ai agents, azure ai foundry, agentic ai, human-in-the-loop ai, business process automation"
+        },
         "/products/word-addin": {
             "title": "Word Add-in with AI | houle - Swiss-hosted Assistant",
             "description": "AI-powered Word add-in for drafting, editing, and summarizing documents. Integrates with your Swiss-hosted GPT for complete data control.",
@@ -43,6 +48,11 @@
             "title": "Swiss GPT Platform | Enterprise AI Hosted in Switzerland",
             "description": "Enterprise GPT platform hosted in Swiss data centers. Connect to your Microsoft 365 data with complete sovereignty. FINMA-compliant, LPD-certified infrastructure.",
             "keywords": "swiss gpt, enterprise gpt switzerland, private gpt platform, finma compliant ai, swiss data sovereignty"
+        },
+        "/solutions": {
+            "title": "AI Solutions by Use Case | Swiss AI Agents & M365 Add-ins",
+            "description": "Swiss-hosted AI agents and Microsoft 365 add-ins for accounting, payroll, invoicing, email triage and more. Explore solutions by use case.",
+            "keywords": "ai use cases switzerland, ai automation solutions, swiss ai agents, microsoft 365 ai add-ins"
         },
         "/services": {
             "title": "AI & Microsoft 365 Consulting | houle — Geneva & Lausanne",
@@ -70,6 +80,11 @@
             "titleTemplate": "{articleTitle} | houle - AI for Microsoft 365",
             "descriptionTemplate": "{articleDescription} | Expert insights from Geneva with Swiss data sovereignty.",
             "keywords": "ai microsoft 365, swiss ai solutions, geneva ai consulting, data sovereignty switzerland"
+        },
+        "solutions": {
+            "titleTemplate": "{title} | houle - Swiss AI Agents",
+            "descriptionTemplate": "{description} | Swiss-hosted AI, human-in-the-loop, built for Microsoft 365.",
+            "keywords": "ai agents switzerland, ai automation, swiss ai solutions, human-in-the-loop ai, microsoft 365 automation"
         }
     }
 }

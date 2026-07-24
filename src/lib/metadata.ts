@@ -29,6 +29,11 @@ interface MetadataConfig {
       descriptionTemplate: string;
       keywords: string;
     };
+    solutions?: {
+      titleTemplate: string;
+      descriptionTemplate: string;
+      keywords: string;
+    };
   };
 }
 
@@ -128,6 +133,20 @@ export async function getPageMetadata(
     );
     description = config.dynamic.articles.descriptionTemplate.replace(
       "{articleDescription}",
+      customData.articleDescription || "",
+    );
+  } else if (
+    normalizedPath.startsWith("/solutions/") &&
+    normalizedPath !== "/solutions" &&
+    config.dynamic.solutions &&
+    customData?.articleTitle
+  ) {
+    title = config.dynamic.solutions.titleTemplate.replace(
+      "{title}",
+      customData.articleTitle,
+    );
+    description = config.dynamic.solutions.descriptionTemplate.replace(
+      "{description}",
       customData.articleDescription || "",
     );
   }

@@ -1,0 +1,57 @@
+{
+    "Hero": {
+        "Badge": "In der Schweiz gehostete KI-Agenten",
+        "Title": "Spezialisierte KI-Agenten für Ihr Unternehmen",
+        "Description": "KI-Agenten, die geschäftliche Aufgaben durchgängig erledigen – Dokumente lesen, Daten erfassen, Texte verfassen, Vorgänge nachverfolgen – gehostet in der Schweiz auf Azure, mit menschlicher Freigabe bei jedem sensiblen Schritt."
+    },
+    "Answer": "Ein KI-Agent ist eine Software, die ein Ziel eigenständig verfolgt: Sie erfasst eine Situation (eine eingehende E-Mail, eine Rechnung, ein Formular), überlegt, was zu tun ist, handelt mithilfe Ihrer Werkzeuge (Microsoft 365, Ihr ERP, Ihr internes GPT) und legt das Ergebnis einer Person zur Freigabe vor. Unsere Agenten werden in der Schweiz auf Azure gehostet und mit Azure AI Foundry erstellt, damit Ihre Daten im schweizerischen Umfeld bleiben und jede Entscheidung nachvollziehbar und überwacht bleibt.",
+    "How": {
+        "Title": "So funktioniert ein KI-Agent",
+        "Description": "Vier Schritte, vom Eingangssignal bis zur menschlichen Freigabe.",
+        "Perceive": {
+            "Title": "1. Wahrnehmen",
+            "Description": "Der Agent erhält eine Eingabe – eine E-Mail, ein PDF-Dokument, eine Zeile in einer Tabelle, eine Anfrage im Chat – und extrahiert daraus die relevanten Informationen dank Sprachverständnis und Dokumentenlesung."
+        },
+        "Reason": {
+            "Title": "2. Überlegen und planen",
+            "Description": "Er zerlegt das Ziel in Schritte, entscheidet über die Reihenfolge der Aktionen und wählt die erforderlichen Daten und Werkzeuge aus. Er stützt sich auf Ihre Geschäftsregeln und Ihre internen Quellen, um in Ihrem Kontext verankert zu bleiben."
+        },
+        "Act": {
+            "Title": "3. Über Werkzeuge handeln",
+            "Description": "Der Agent führt die Aktionen aus, indem er angebundene Werkzeuge aufruft: in SharePoint suchen, in Ihr ERP schreiben, ein Word-Dokument erstellen, einen E-Mail-Entwurf versenden. Er erfindet nichts: Er nutzt Ihre realen Systeme."
+        },
+        "Review": {
+            "Title": "4. Menschliche Freigabe",
+            "Description": "Vor jeder Aktion mit realer Wirkung prüft und bestätigt ein Mitarbeitender. Der Agent schlägt vor, der Mensch entscheidet. Sie behalten die Kontrolle, die Nachvollziehbarkeit und die letzte Verantwortung."
+        }
+    },
+    "Features": {
+        "Title": "Was unsere Agenten leisten",
+        "Tools": {
+            "Title": "Zugriff auf Ihre Werkzeuge",
+            "Description": "Die Agenten verbinden sich mit Microsoft 365, SharePoint, Outlook, Ihrem ERP und Ihren internen APIs, um dort zu lesen und zu schreiben, wo die Arbeit tatsächlich stattfindet – ohne manuelles Kopieren und Einfügen."
+        },
+        "Grounding": {
+            "Title": "Verankerung in Ihren Daten",
+            "Description": "Jede Antwort stützt sich auf Ihre Dokumente, Ihre Regeln und Ihr in der Schweiz gehostetes internes GPT, was Fehler reduziert und es ermöglicht, die verwendeten Quellen zu nennen."
+        },
+        "Governance": {
+            "Title": "Governance und Audit",
+            "Description": "Protokollierung der Aktionen, Zugriffskontrollen und integrierte menschliche Freigabepunkte. Sie wissen, was der Agent getan hat, wann und auf Basis welcher Daten."
+        },
+        "Integration": {
+            "Title": "Hosting in der Schweiz",
+            "Description": "Die Agenten werden in der Schweiz auf Azure mit Azure AI Foundry betrieben. Ihre Daten bleiben im schweizerischen Umfeld, im Einklang mit Ihrer Daten-Governance."
+        }
+    },
+    "UseCases": {
+        "Eyebrow": "Anwendungsfälle",
+        "Title": "Agenten für konkrete Prozesse",
+        "Description": "Jeder Agent ist für einen bestimmten Geschäftsprozess konzipiert. Entdecken Sie die von Schweizer Dienstleistungsunternehmen am häufigsten nachgefragten Anwendungsfälle.",
+        "AllLink": "Alle Lösungen ansehen"
+    },
+    "CTA": {
+        "Title": "Setzen Sie einen KI-Agenten ein",
+        "Description": "Sprechen wir über Ihre zeitaufwendigsten Prozesse. Gemeinsam bestimmen wir den ersten Agenten, den Sie einsetzen, und seinen Rahmen für die menschliche Freigabe."
+    }
+}

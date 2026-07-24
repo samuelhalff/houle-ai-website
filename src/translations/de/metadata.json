@@ -29,6 +29,11 @@
             "description": "Einsatzbereite KI-Produkte für Microsoft 365: Word-Add-In, Outlook-Add-In und Swiss GPT-Plattform. Nahtlose Integration, Schweizer Daten-Hosting, Unternehmenssicherheit.",
             "keywords": "word ki add-in, outlook ki assistent, swiss gpt, microsoft 365 ki produkte, office add-ins schweiz"
         },
+        "/products/ai-agents": {
+            "title": "KI-Agenten aus der Schweiz | Schweizer KI-Agenten auf Azure",
+            "description": "Spezialisierte KI-Agenten, die wahrnehmen, planen und über Tools handeln – mit menschlicher Prüfung. In der Schweiz auf Azure gehostet für Microsoft 365.",
+            "keywords": "ki-agenten schweiz, schweizer ki-agenten, azure ai foundry, agentische ki, ki mit menschlicher prüfung, geschäftsprozessautomatisierung"
+        },
         "/products/word-addin": {
             "title": "Word Add-in mit KI | houle - In der Schweiz Gehosteter Assistent",
             "description": "KI-gestütztes Word-Add-In zum Verfassen, Bearbeiten und Zusammenfassen von Dokumenten. Integriert sich mit Ihrem in der Schweiz gehosteten GPT für vollständige Datenkontrolle.",
@@ -43,6 +48,11 @@
             "title": "Swiss GPT Plattform | Enterprise KI Gehostet in der Schweiz",
             "description": "Enterprise-GPT-Plattform in Schweizer Rechenzentren gehostet. Verbinden Sie sich mit Ihren Microsoft 365-Daten bei vollständiger Souveränität. FINMA-konform, LPD-zertifizierte Infrastruktur.",
             "keywords": "swiss gpt, enterprise gpt schweiz, private gpt plattform, finma konforme ki, schweizer datensouveränität"
+        },
+        "/solutions": {
+            "title": "KI-Lösungen nach Anwendungsfall | Schweizer KI-Agenten & Add-ins",
+            "description": "In der Schweiz gehostete KI-Agenten und Microsoft-365-Add-ins für Buchhaltung, Lohn, Rechnungen, E-Mail-Triage und mehr. Lösungen nach Anwendungsfall.",
+            "keywords": "ki anwendungsfälle schweiz, ki automatisierungslösungen, schweizer ki-agenten, microsoft 365 ki add-ins"
         },
         "/services": {
             "title": "KI & Microsoft 365 Beratungsdienstleistungen | houle Genf",
@@ -70,6 +80,11 @@
             "titleTemplate": "{articleTitle} | houle - KI für Microsoft 365",
             "descriptionTemplate": "{articleDescription} | Expertenwissen aus Genf mit Schweizer Datensouveränität.",
             "keywords": "ki microsoft 365, schweizer ki lösungen, ki beratung genf, datensouveränität schweiz"
+        },
+        "solutions": {
+            "titleTemplate": "{title} | houle - Schweizer KI-Agenten",
+            "descriptionTemplate": "{description} | In der Schweiz gehostete KI, menschliche Prüfung, für Microsoft 365.",
+            "keywords": "ki-agenten schweiz, ki-automatisierung, schweizer ki-lösungen, ki mit menschlicher prüfung, microsoft 365 automatisierung"
         }
     }
 }

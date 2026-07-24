@@ -1,0 +1,1542 @@
+{
+    "accounting-automation": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "AI agent · Accounting",
+            "title": "AI-agent accounting automation",
+            "description": "A houle.ai AI agent that processes your accounting entries, reconciles your accounts and prepares your year-end closings, under the oversight of your accountants."
+        },
+        "answer": "houle.ai's accounting automation is built on an AI agent that records, classifies and reconciles your entries from the documents received, then prepares posting proposals for your team to approve. The agent is built on Azure AI Foundry and hosted on Azure in Switzerland, so that your data stays within Switzerland. Every material action goes through human validation before it is recorded in your accounting software.",
+        "how": [
+            {
+                "title": "Collecting documents",
+                "description": "The agent gathers invoices, statements and supporting documents from your inboxes, shared folders or business tools, then standardises them."
+            },
+            {
+                "title": "Proposing entries",
+                "description": "It proposes the account, the nature of the transaction and the VAT rate for each document, drawing on your chart of accounts and your posting practices."
+            },
+            {
+                "title": "Bank reconciliation",
+                "description": "The agent matches bank movements with the corresponding entries and flags any discrepancies for review."
+            },
+            {
+                "title": "Validation and closing",
+                "description": "Your accountant approves or corrects the proposals; the agent then records the approved entries and prepares the statements for the year-end closing."
+            }
+        ],
+        "features": [
+            {
+                "title": "Assisted posting",
+                "description": "Recognition of the account and VAT rate from the documents, learning your internal rules over time."
+            },
+            {
+                "title": "Automated reconciliation",
+                "description": "Matching of bank statements and highlighting of discrepancies for fast handling."
+            },
+            {
+                "title": "Complete audit trail",
+                "description": "Every proposal keeps the source document and the name of the approver, for end-to-end traceability."
+            },
+            {
+                "title": "Swiss hosting",
+                "description": "Agent built on Azure AI Foundry and hosted on Azure in Switzerland; your data stays within Switzerland."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Less manual data entry",
+                "description": "Your accountants focus on analysis and advisory work rather than re-keying documents."
+            },
+            {
+                "title": "Faster closings",
+                "description": "Entries and reconciliations are prepared on an ongoing basis, easing the workload during closing periods."
+            },
+            {
+                "title": "Control retained",
+                "description": "Nothing is posted without human validation; the agent proposes, your team decides."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Does the agent replace my accountant?",
+                "a": "No. It prepares and proposes entries, but every material posting is approved by an accountant. The aim is to automate data entry, not responsibility."
+            },
+            {
+                "q": "Does it integrate with my accounting software?",
+                "a": "The agent connects to the main software packages used by Swiss accounting firms and can be adapted to your environment during setup."
+            },
+            {
+                "q": "Where is my accounting data hosted?",
+                "a": "On Azure in Switzerland. Your data stays within Switzerland and is not used to train public models."
+            }
+        ],
+        "cta": {
+            "title": "Automate your accounting with a Swiss AI agent",
+            "description": "See how houle.ai can ease data entry and speed up your closings, while keeping your accountants in charge."
+        }
+    },
+    "mailroom-automation": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "AI agent · Incoming mail",
+            "title": "AI-agent scanning and sorting of incoming mail",
+            "description": "An AI agent that scans, classifies and routes your incoming mail to the right files and the right people."
+        },
+        "answer": "houle.ai's incoming-mail automation is built on an AI agent that reads every document received, extracts the key information, classifies it and routes it to the right person or the right file. The agent is built on Azure AI Foundry and hosted on Azure in Switzerland, so that your documents stay within Switzerland. Ambiguous cases are flagged for human validation rather than filed automatically.",
+        "how": [
+            {
+                "title": "Scanning",
+                "description": "Paper or electronic mail is scanned and converted into usable text, including handwritten or scanned documents."
+            },
+            {
+                "title": "Data extraction",
+                "description": "The agent identifies the sender, subject, dates and relevant references for each document."
+            },
+            {
+                "title": "Classification",
+                "description": "It assigns the right document type, links it to the right client or file and applies your naming rules."
+            },
+            {
+                "title": "Routing",
+                "description": "The document is forwarded to the right person or filed in the right folder; uncertain cases are held for validation."
+            }
+        ],
+        "features": [
+            {
+                "title": "Multi-format reading",
+                "description": "Processing of PDFs, scans, photos and email attachments, including documents of variable quality."
+            },
+            {
+                "title": "Smart classification",
+                "description": "Automatic linking to the right client and the right document type according to your rules."
+            },
+            {
+                "title": "Exceptions queue",
+                "description": "Unrecognised documents are grouped together for quick human handling, without holding up the flow."
+            },
+            {
+                "title": "Swiss hosting",
+                "description": "Agent built on Azure AI Foundry and hosted on Azure in Switzerland; your documents stay within Switzerland."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Mail handled faster",
+                "description": "Documents reach the right place without manual sorting, as soon as they arrive."
+            },
+            {
+                "title": "Fewer filing errors",
+                "description": "Linking to the right file is consistent and documented, with an audit trail."
+            },
+            {
+                "title": "Teams relieved",
+                "description": "Your staff stop opening and sorting every envelope and can focus on the cases themselves."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Does the agent handle paper mail?",
+                "a": "Yes, once it has been scanned. From a scan or a photo, it extracts the information, classifies the document and routes it automatically."
+            },
+            {
+                "q": "What happens if a document is not recognised?",
+                "a": "It is placed in an exceptions queue for human handling. The agent does not guess: it flags uncertain cases rather than filing them incorrectly."
+            },
+            {
+                "q": "Do my documents leave Switzerland?",
+                "a": "No. Processing takes place on Azure in Switzerland and your documents stay within Switzerland."
+            }
+        ],
+        "cta": {
+            "title": "Automate your incoming mail",
+            "description": "Let a Swiss AI agent scan, classify and route your documents, so that nothing gets lost and everything reaches the right place."
+        }
+    },
+    "payroll-automation": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "AI agent · Payroll",
+            "title": "AI-agent Swiss payroll automation",
+            "description": "An AI agent that prepares your payslips, gathers the month's variable inputs and makes your Swiss payroll processing more reliable."
+        },
+        "answer": "houle.ai's payroll automation is built on an AI agent that gathers the month's variable inputs, prepares the payslips and checks the consistency of social security contributions before validation. The agent is built on Azure AI Foundry and hosted on Azure in Switzerland, so that your employees' data stays within Switzerland. The payroll administrator approves each cycle before any payment or filing.",
+        "how": [
+            {
+                "title": "Gathering variable inputs",
+                "description": "The agent collects hours, absences, bonuses and expense claims from your input tools and your emails."
+            },
+            {
+                "title": "Preparing payslips",
+                "description": "It calculates salary components and social security contributions (OASI/AVS, occupational pension/BVG-LPP, accident insurance/LAA) according to each employee's settings."
+            },
+            {
+                "title": "Consistency checks",
+                "description": "The agent compares the month with the previous one and flags any unusual variances to review before closing."
+            },
+            {
+                "title": "Approval by the administrator",
+                "description": "The payroll administrator reviews and approves the cycle; the agent then prepares the payslips and the payment files."
+            }
+        ],
+        "features": [
+            {
+                "title": "Swiss parameters",
+                "description": "Handling of OASI/AVS, occupational pension (BVG/LPP) and accident insurance (LAA) contributions and the cantonal specifics of Swiss payroll."
+            },
+            {
+                "title": "Anomaly detection",
+                "description": "Highlighting of unusual month-on-month variations before closing."
+            },
+            {
+                "title": "Filing preparation",
+                "description": "Generation of the inputs needed for social security statements and salary certificates."
+            },
+            {
+                "title": "Swiss hosting",
+                "description": "Agent built on Azure AI Foundry and hosted on Azure in Switzerland; HR data stays within Switzerland."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "More reliable payroll cycles",
+                "description": "Consistency checks reduce the risk of error before payments are made."
+            },
+            {
+                "title": "Monthly time savings",
+                "description": "Gathering and formatting the variable inputs is automated for each cycle."
+            },
+            {
+                "title": "Human decision preserved",
+                "description": "No payslip is finalised without the payroll administrator's approval."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Does the agent handle the specifics of Swiss payroll?",
+                "a": "Yes. It takes account of OASI/AVS, occupational pension (BVG/LPP) and accident insurance (LAA) contributions as well as cantonal rules, according to the settings defined for your company."
+            },
+            {
+                "q": "Does it make payments automatically?",
+                "a": "Not without validation. The agent prepares the payslips and the payment files, but the administrator approves each cycle before any payment."
+            },
+            {
+                "q": "Is my employees' data protected?",
+                "a": "It is processed on Azure in Switzerland and stays within Switzerland, without being used to train public models."
+            }
+        ],
+        "cta": {
+            "title": "Make your Swiss payroll more reliable",
+            "description": "Entrust the preparation of your payslips to a Swiss AI agent and keep the final sign-off in the hands of your payroll administrator."
+        }
+    },
+    "invoice-processing": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "AI agent · Supplier invoices",
+            "title": "AI-agent supplier invoice processing",
+            "description": "An AI agent that reads your supplier invoices, extracts the data and prepares the posting and payment, under human oversight."
+        },
+        "answer": "houle.ai's supplier invoice processing is built on an AI agent that reads every invoice received, extracts the amounts, VAT and due dates, then prepares the posting and the payment proposal. The agent is built on Azure AI Foundry and hosted on Azure in Switzerland, so that your data stays within Switzerland. Invoices are subject to human validation before any payment is made.",
+        "how": [
+            {
+                "title": "Receipt",
+                "description": "The agent collects invoices from your inboxes, supplier portals and shared folders."
+            },
+            {
+                "title": "Extraction",
+                "description": "It identifies the supplier, the net and gross amounts, the VAT rate, the date and the due date of each invoice."
+            },
+            {
+                "title": "Checking and allocation",
+                "description": "The agent matches the invoice against the purchase order or contract, proposes the accounting allocation and detects duplicates."
+            },
+            {
+                "title": "Validation and payment",
+                "description": "The manager approves the invoice; the agent then prepares the posting and the payment file."
+            }
+        ],
+        "features": [
+            {
+                "title": "Reliable extraction",
+                "description": "Reading of amounts, VAT and due dates, even on invoices with varied layouts."
+            },
+            {
+                "title": "Duplicate detection",
+                "description": "Identification of invoices already received or already paid to avoid double payments."
+            },
+            {
+                "title": "Approval workflow",
+                "description": "Routing of invoices to the right approvers according to your thresholds and internal rules."
+            },
+            {
+                "title": "Swiss hosting",
+                "description": "Agent built on Azure AI Foundry and hosted on Azure in Switzerland; your data stays within Switzerland."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Faster accounts payable",
+                "description": "Invoices are captured and routed automatically, without manual re-keying."
+            },
+            {
+                "title": "Fewer payment errors",
+                "description": "Duplicate detection and consistency checks limit erroneous payments."
+            },
+            {
+                "title": "Controlled validation",
+                "description": "No invoice is paid without human approval according to your rules."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Does the agent pay invoices automatically?",
+                "a": "No. It prepares the posting and the payment file, but payment remains subject to human validation according to your approval thresholds."
+            },
+            {
+                "q": "Does it handle invoices in several formats?",
+                "a": "Yes. It reads PDFs, scans and electronic invoices with a variety of layouts and extracts the key data from them."
+            },
+            {
+                "q": "Where are the invoices processed?",
+                "a": "On Azure in Switzerland. Your data stays within Switzerland throughout processing."
+            }
+        ],
+        "cta": {
+            "title": "Speed up your supplier invoice processing",
+            "description": "A Swiss AI agent reads, checks and prepares your invoices; you keep control over every payment approval."
+        }
+    },
+    "customer-email-triage": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "AI agent · Customer emails",
+            "title": "AI-agent customer email triage",
+            "description": "An AI agent that reads, classifies and prioritises your customer emails, and prepares replies for your team to approve."
+        },
+        "answer": "houle.ai's customer email triage is built on an AI agent that reads every incoming message, identifies its subject and urgency, classifies it and proposes a reply or an action. The agent is built on Azure AI Foundry and hosted on Azure in Switzerland, so that your correspondence stays within Switzerland. Replies to customers are prepared by the agent but approved by a member of staff before sending.",
+        "how": [
+            {
+                "title": "Reading emails",
+                "description": "The agent analyses every incoming message, including attachments, to understand the request."
+            },
+            {
+                "title": "Classification and prioritisation",
+                "description": "It assigns a category and a level of urgency, then routes the message to the right department or person."
+            },
+            {
+                "title": "Draft reply",
+                "description": "The agent drafts a reply drawing on your knowledge base and your email templates."
+            },
+            {
+                "title": "Validation and sending",
+                "description": "A member of staff reviews the draft, adjusts it if needed, then sends the approved reply."
+            }
+        ],
+        "features": [
+            {
+                "title": "Automatic classification",
+                "description": "Categorisation of requests by topic, urgency and the department concerned."
+            },
+            {
+                "title": "Prepared replies",
+                "description": "Email drafts generated from your internal knowledge base."
+            },
+            {
+                "title": "Prioritisation",
+                "description": "Highlighting of urgent or sensitive messages for fast handling."
+            },
+            {
+                "title": "Swiss hosting",
+                "description": "Agent built on Azure AI Foundry and hosted on Azure in Switzerland; your emails stay within Switzerland."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Faster replies",
+                "description": "Requests are triaged and pre-drafted as soon as they arrive, reducing turnaround times."
+            },
+            {
+                "title": "Better-organised inbox",
+                "description": "Every message is classified and prioritised, without manual sorting."
+            },
+            {
+                "title": "Controlled tone",
+                "description": "Every reply is reviewed by a member of staff before sending, to preserve your tone and accuracy."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Does the agent reply to customers directly?",
+                "a": "It prepares the replies, but a member of staff approves them before sending. You keep control over what goes out to your customers."
+            },
+            {
+                "q": "How does it know our usual responses?",
+                "a": "It draws on your knowledge base and your email templates, which you provide during setup."
+            },
+            {
+                "q": "Is our customer correspondence confidential?",
+                "a": "Yes. Processing takes place on Azure in Switzerland and your emails stay within Switzerland."
+            }
+        ],
+        "cta": {
+            "title": "Triage your customer emails automatically",
+            "description": "A Swiss AI agent classifies, prioritises and pre-drafts your replies; your teams approve and send."
+        }
+    },
+    "research-agent": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "AI agent · Research",
+            "title": "AI research agent for your analyses",
+            "description": "An AI agent that gathers, synthesises and sources the information your teams need in order to decide."
+        },
+        "answer": "houle.ai's research agent is an AI agent that queries your internal and public sources, synthesises the relevant information and delivers a structured answer with its references. The agent is built on Azure AI Foundry and hosted on Azure in Switzerland, so that your research stays within Switzerland. Every synthesis cites its sources so that your staff can verify it.",
+        "how": [
+            {
+                "title": "Framing the question",
+                "description": "You ask your question in natural language and specify the intended scope."
+            },
+            {
+                "title": "Gathering sources",
+                "description": "The agent queries your internal documents and, if permitted, relevant external sources."
+            },
+            {
+                "title": "Synthesis",
+                "description": "It brings the findings together into a structured answer, distinguishing facts from uncertainties."
+            },
+            {
+                "title": "Verifiable references",
+                "description": "Every statement is linked to its source so that your teams can check it."
+            }
+        ],
+        "features": [
+            {
+                "title": "Multi-source research",
+                "description": "Combined querying of your internal databases and authorised external sources."
+            },
+            {
+                "title": "Sourced synthesis",
+                "description": "Structured answers linked to their references, with no unverifiable claims."
+            },
+            {
+                "title": "Configurable scope",
+                "description": "Control over the authorised sources and the level of detail expected, according to your needs."
+            },
+            {
+                "title": "Swiss hosting",
+                "description": "Agent built on Azure AI Foundry and hosted on Azure in Switzerland; your research stays within Switzerland."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Faster research",
+                "description": "Your teams get an initial synthesis in moments rather than after hours of reading."
+            },
+            {
+                "title": "Better-supported decisions",
+                "description": "Sourced answers make it possible to base a decision on verifiable evidence."
+            },
+            {
+                "title": "Controlled sources",
+                "description": "You decide which sources the agent may consult and verify its references."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Can I trust the agent's answers?",
+                "a": "The agent cites its sources for every answer, allowing you to verify them. It is designed to flag uncertainties rather than make things up."
+            },
+            {
+                "q": "Can it search our internal documents?",
+                "a": "Yes. It queries the internal sources you authorise, alongside external sources if you wish."
+            },
+            {
+                "q": "Do my queries remain confidential?",
+                "a": "Yes. They are processed on Azure in Switzerland and stay within Switzerland."
+            }
+        ],
+        "cta": {
+            "title": "Give your teams an AI research agent",
+            "description": "Get sourced syntheses from your internal and external sources, hosted in Switzerland."
+        }
+    },
+    "contract-review": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "AI agent · Contracts",
+            "title": "AI-agent contract review",
+            "description": "An AI agent that analyses your contracts, spots risky clauses and prepares a summary for your legal team."
+        },
+        "answer": "houle.ai's contract review is built on an AI agent that reads your contracts, extracts the key clauses and flags points of risk against your criteria. The agent is built on Azure AI Foundry and hosted on Azure in Switzerland, so that your contracts stay within Switzerland. The agent prepares an analysis, but the legal decision always rests with your lawyers.",
+        "how": [
+            {
+                "title": "Uploading the contract",
+                "description": "You submit the contract to be analysed in the format of your choice."
+            },
+            {
+                "title": "Clause extraction",
+                "description": "The agent identifies the key clauses: term, termination, liability, confidentiality, penalties."
+            },
+            {
+                "title": "Risk analysis",
+                "description": "It compares the clauses against your criteria and your templates, then flags discrepancies and points of attention."
+            },
+            {
+                "title": "Summary for review",
+                "description": "The agent produces an annotated summary for your lawyer to review and approve."
+            }
+        ],
+        "features": [
+            {
+                "title": "Clause extraction",
+                "description": "Automatic identification of the essential clauses and the obligations of each party."
+            },
+            {
+                "title": "Comparison with templates",
+                "description": "Highlighting of discrepancies against your standard clauses and your internal policy."
+            },
+            {
+                "title": "Points of attention",
+                "description": "Flagging of unusual or potentially unfavourable clauses to review."
+            },
+            {
+                "title": "Swiss hosting",
+                "description": "Agent built on Azure AI Foundry and hosted on Azure in Switzerland; your contracts stay within Switzerland."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Faster review",
+                "description": "The key clauses are extracted and annotated within minutes, ahead of the legal review."
+            },
+            {
+                "title": "Points of vigilance highlighted",
+                "description": "Discrepancies against your standards are flagged systematically."
+            },
+            {
+                "title": "Legal decision preserved",
+                "description": "The agent assists your lawyers; it does not replace their analysis or their approval."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Does the agent provide legal advice?",
+                "a": "No. It extracts the clauses and flags points of attention to speed up the review, but the legal assessment and the decision remain with your lawyers."
+            },
+            {
+                "q": "Can it use our standard clauses?",
+                "a": "Yes. You provide your templates and your criteria, and the agent compares each contract against your standards."
+            },
+            {
+                "q": "Are my contracts confidential?",
+                "a": "Yes. They are processed on Azure in Switzerland and stay within Switzerland."
+            }
+        ],
+        "cta": {
+            "title": "Speed up your contract review",
+            "description": "A Swiss AI agent extracts the clauses and flags the risks; your lawyers keep the final decision."
+        }
+    },
+    "compliance-kyc-monitoring": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "AI agent · Compliance and KYC",
+            "title": "AI-agent compliance and KYC monitoring",
+            "description": "An AI agent that prepares and updates your KYC files and monitors compliance points, under the oversight of your compliance officers."
+        },
+        "answer": "houle.ai's compliance and KYC monitoring is built on an AI agent that gathers identification documents, extracts the data and flags items to check or update. The agent is built on Azure AI Foundry and hosted on Azure in Switzerland, so that your files stay within Switzerland. The agent prepares the analysis and raises alerts, but the compliance decision rests with your officer.",
+        "how": [
+            {
+                "title": "Collecting documents",
+                "description": "The agent gathers the identification documents and supporting evidence provided by the client."
+            },
+            {
+                "title": "Extraction and checking",
+                "description": "It extracts the required data, verifies its consistency and identifies missing or expired documents."
+            },
+            {
+                "title": "Ongoing monitoring",
+                "description": "The agent tracks update deadlines and flags files to be reviewed periodically."
+            },
+            {
+                "title": "Alert and validation",
+                "description": "Points of attention are escalated to the compliance officer, who decides on the next steps."
+            }
+        ],
+        "features": [
+            {
+                "title": "KYC files prepared",
+                "description": "Extraction and structuring of identification data from the documents provided."
+            },
+            {
+                "title": "Gap detection",
+                "description": "Identification of missing, incomplete or expired documents."
+            },
+            {
+                "title": "Deadline tracking",
+                "description": "Reminders on files to update according to your review cycles."
+            },
+            {
+                "title": "Swiss hosting",
+                "description": "Agent built on Azure AI Foundry and hosted on Azure in Switzerland; your files stay within Switzerland."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Files kept up to date",
+                "description": "Deadlines and missing documents are tracked continuously, with nothing overlooked."
+            },
+            {
+                "title": "Lighter checks",
+                "description": "Preparing the files is automated, freeing up time for analysis."
+            },
+            {
+                "title": "Responsibility retained",
+                "description": "The agent raises alerts and documents; the compliance decision remains human."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Does the agent decide whether a file is compliant?",
+                "a": "No. It prepares the files, checks the documents and flags points of attention, but the compliance decision rests with your officer."
+            },
+            {
+                "q": "Does it help meet update obligations?",
+                "a": "Yes. It tracks review deadlines and alerts you to files that need updating according to your internal rules."
+            },
+            {
+                "q": "Where is this sensitive data kept?",
+                "a": "On Azure in Switzerland. Your KYC files stay within Switzerland and are not used to train public models."
+            }
+        ],
+        "cta": {
+            "title": "Make your KYC monitoring more reliable",
+            "description": "A Swiss AI agent prepares your files and tracks deadlines; your officers keep the compliance decision."
+        }
+    },
+    "hr-onboarding": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "AI agent · HR onboarding",
+            "title": "AI-agent onboarding of new employees",
+            "description": "An AI agent that orchestrates the onboarding of your new hires, from the documents to prepare to the access to request."
+        },
+        "answer": "houle.ai's HR onboarding is built on an AI agent that prepares the hiring documents, tracks the onboarding steps and answers new hires' common questions. The agent is built on Azure AI Foundry and hosted on Azure in Switzerland, so that your employees' data stays within Switzerland. Committing actions, such as creating access rights, are subject to human validation.",
+        "how": [
+            {
+                "title": "Opening the file",
+                "description": "The agent creates the onboarding task list based on the new hire's profile and role."
+            },
+            {
+                "title": "Preparing documents",
+                "description": "It prepares contracts, forms and information sheets from your HR templates."
+            },
+            {
+                "title": "Tracking the steps",
+                "description": "The agent follows up with managers on the access rights, equipment and training to arrange."
+            },
+            {
+                "title": "Supporting the new hire",
+                "description": "It answers the new employee's frequently asked questions; access requests go through human validation."
+            }
+        ],
+        "features": [
+            {
+                "title": "Onboarding journey",
+                "description": "Generation of a task list tailored to the role and tracking of its progress."
+            },
+            {
+                "title": "Pre-filled documents",
+                "description": "Preparation of contracts and forms from your internal templates."
+            },
+            {
+                "title": "Assistant for the new hire",
+                "description": "Answers to common questions about leave, payroll or company tools."
+            },
+            {
+                "title": "Swiss hosting",
+                "description": "Agent built on Azure AI Foundry and hosted on Azure in Switzerland; HR data stays within Switzerland."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Onboarding with nothing overlooked",
+                "description": "Every step is tracked, from documents to access rights, for a smooth integration."
+            },
+            {
+                "title": "HR relieved",
+                "description": "Repetitive tasks are automated, freeing up time for the human side of welcoming new staff."
+            },
+            {
+                "title": "Access under control",
+                "description": "The creation of access rights and commitments remains subject to human validation."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Does the agent create IT access rights itself?",
+                "a": "It prepares and tracks the requests, but the actual creation of access rights goes through human validation. It coordinates; it does not decide on its own."
+            },
+            {
+                "q": "Can it use our contract templates?",
+                "a": "Yes. It pre-fills contracts and forms from your HR templates, which you provide during setup."
+            },
+            {
+                "q": "Is new hires' data protected?",
+                "a": "Yes. It is processed on Azure in Switzerland and stays within Switzerland."
+            }
+        ],
+        "cta": {
+            "title": "Simplify onboarding for your new hires",
+            "description": "A Swiss AI agent orchestrates onboarding and prepares the documents; your HR teams keep control over access rights."
+        }
+    },
+    "quote-proposal-generation": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "AI agent · Quotes and proposals",
+            "title": "AI-agent quote and proposal generation",
+            "description": "An AI agent that prepares your quotes and sales proposals from your templates and your catalogue."
+        },
+        "answer": "houle.ai's quote and proposal generation is built on an AI agent that turns a client request into a structured quote or proposal, drawing on your templates, rates and services. The agent is built on Azure AI Foundry and hosted on Azure in Switzerland, so that your commercial data stays within Switzerland. Every proposal is reviewed and approved by a salesperson before sending.",
+        "how": [
+            {
+                "title": "Analysing the request",
+                "description": "The agent reads the client's request and identifies the services expected and the scope."
+            },
+            {
+                "title": "Building the proposal",
+                "description": "It assembles the services, applies your rates and terms, and calculates the amounts and VAT."
+            },
+            {
+                "title": "Drafting",
+                "description": "The agent drafts the quote or proposal from your templates and your brand guidelines."
+            },
+            {
+                "title": "Sales approval",
+                "description": "A salesperson reviews it, adjusts the terms if needed, then sends the approved proposal."
+            }
+        ],
+        "features": [
+            {
+                "title": "Quotes from templates",
+                "description": "Generation of proposals consistent with your brand guidelines and your terms and conditions."
+            },
+            {
+                "title": "Consistent pricing",
+                "description": "Application of your service catalogue, your rates and the VAT calculation."
+            },
+            {
+                "title": "Personalisation",
+                "description": "Adaptation of the proposal to each client's context based on the request received."
+            },
+            {
+                "title": "Swiss hosting",
+                "description": "Agent built on Azure AI Foundry and hosted on Azure in Switzerland; your commercial data stays within Switzerland."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Faster proposals",
+                "description": "Quotes are pre-drafted within minutes, shortening your response times."
+            },
+            {
+                "title": "Commercial consistency",
+                "description": "Rates, terms and presentation stay aligned with your standards."
+            },
+            {
+                "title": "Control before sending",
+                "description": "Every proposal is approved by a salesperson before it goes to the client."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Does the agent send the quotes directly?",
+                "a": "No. It prepares the proposal, but a salesperson reviews and approves it before sending. You keep control over your terms and your prices."
+            },
+            {
+                "q": "Does it use our rates and templates?",
+                "a": "Yes. It draws on your service catalogue, your rates and your proposal templates."
+            },
+            {
+                "q": "Is our commercial data protected?",
+                "a": "Yes. It is processed on Azure in Switzerland and stays within Switzerland."
+            }
+        ],
+        "cta": {
+            "title": "Generate your quotes faster",
+            "description": "A Swiss AI agent prepares your proposals from your templates; your salespeople approve and send."
+        }
+    },
+    "meeting-notes-agent": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "AI agent · Meeting minutes",
+            "title": "AI-agent meeting minutes",
+            "description": "An AI agent that transcribes your meetings, extracts the decisions and prepares minutes ready to share."
+        },
+        "answer": "houle.ai's meeting minutes agent transcribes your meetings, draws out the decisions and follow-up actions, then drafts structured minutes. The agent is built on Azure AI Foundry and hosted on Azure in Switzerland, so that your discussions stay within Switzerland. The minutes are reviewed and approved by a participant before distribution.",
+        "how": [
+            {
+                "title": "Transcription",
+                "description": "The agent transcribes the recording or the meeting notes into structured text."
+            },
+            {
+                "title": "Extracting key points",
+                "description": "It draws out the decisions taken, the open items and the follow-up actions with their owners."
+            },
+            {
+                "title": "Drafting the minutes",
+                "description": "The agent produces clear minutes in your usual format."
+            },
+            {
+                "title": "Validation and sharing",
+                "description": "A participant reviews and approves the minutes before they are distributed to those concerned."
+            }
+        ],
+        "features": [
+            {
+                "title": "Automatic transcription",
+                "description": "Faithful rendering of the discussions from a recording or from notes."
+            },
+            {
+                "title": "Decisions and actions",
+                "description": "Extraction of the decisions, the owners and the associated deadlines."
+            },
+            {
+                "title": "Customisable format",
+                "description": "Minutes tailored to your template and your presentation style."
+            },
+            {
+                "title": "Swiss hosting",
+                "description": "Agent built on Azure AI Foundry and hosted on Azure in Switzerland; your discussions stay within Switzerland."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Immediate minutes",
+                "description": "A draft of the minutes is available as soon as the meeting ends."
+            },
+            {
+                "title": "Action follow-up",
+                "description": "Decisions and tasks are clearly identified, with their owners."
+            },
+            {
+                "title": "Human validation",
+                "description": "Every set of minutes is reviewed and approved by a participant before sharing."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Does the agent share the minutes automatically?",
+                "a": "No. It drafts them, but a participant approves them before distribution, which guarantees the accuracy of what is shared."
+            },
+            {
+                "q": "Can it follow our minutes format?",
+                "a": "Yes. It adapts to your template and your style, which you define during setup."
+            },
+            {
+                "q": "Do our meetings remain confidential?",
+                "a": "Yes. Transcription and drafting take place on Azure in Switzerland and your discussions stay within Switzerland."
+            }
+        ],
+        "cta": {
+            "title": "Stop losing time on your minutes",
+            "description": "A Swiss AI agent transcribes and drafts; all that's left is to review and share."
+        }
+    },
+    "it-helpdesk-agent": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "AI agent · IT support",
+            "title": "AI agent for internal IT support",
+            "description": "An AI agent that answers your staff's support requests and prepares tickets for your IT team."
+        },
+        "answer": "houle.ai's IT support agent answers your staff's common questions, proposes solutions from your knowledge base and prepares tickets for complex cases. The agent is built on Azure AI Foundry and hosted on Azure in Switzerland, so that your data stays within Switzerland. Sensitive interventions are escalated to your IT team for validation.",
+        "how": [
+            {
+                "title": "Receiving the request",
+                "description": "The staff member asks the agent their question, by chat or email."
+            },
+            {
+                "title": "Guided resolution",
+                "description": "The agent proposes a solution from your knowledge base and your internal procedures."
+            },
+            {
+                "title": "Ticket creation",
+                "description": "If the case goes beyond first level, the agent structures a complete ticket for the IT team."
+            },
+            {
+                "title": "Controlled escalation",
+                "description": "Sensitive or risky requests are passed to a technician to handle."
+            }
+        ],
+        "features": [
+            {
+                "title": "First-level responses",
+                "description": "Resolution of common requests from your internal documentation."
+            },
+            {
+                "title": "Structured tickets",
+                "description": "Preparation of clear, complete tickets to speed up handling by IT."
+            },
+            {
+                "title": "Smart escalation",
+                "description": "Routing of complex or sensitive cases to the right support level."
+            },
+            {
+                "title": "Swiss hosting",
+                "description": "Agent built on Azure AI Foundry and hosted on Azure in Switzerland; your data stays within Switzerland."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Support available around the clock",
+                "description": "Staff get an initial response without waiting for IT to be available."
+            },
+            {
+                "title": "IT team refocused",
+                "description": "Simple requests are handled automatically, leaving complex cases to the technicians."
+            },
+            {
+                "title": "Controlled interventions",
+                "description": "Sensitive actions remain approved by a technician before execution."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Does the agent make changes to our systems?",
+                "a": "It guides and prepares the requests, but sensitive interventions are escalated to a technician for validation. It does not replace human oversight over risky actions."
+            },
+            {
+                "q": "What information does it rely on?",
+                "a": "Your knowledge base and your internal procedures, which you provide during setup."
+            },
+            {
+                "q": "Are exchanges with staff confidential?",
+                "a": "Yes. They are processed on Azure in Switzerland and stay within Switzerland."
+            }
+        ],
+        "cta": {
+            "title": "Offer responsive IT support",
+            "description": "A Swiss AI agent answers common requests and prepares tickets; your IT team focuses on what matters."
+        }
+    },
+    "lead-qualification": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "AI agent · Lead qualification",
+            "title": "AI-agent lead qualification",
+            "description": "An AI agent that sorts and qualifies your inbound leads, so that your salespeople focus on the best opportunities."
+        },
+        "answer": "houle.ai's lead qualification is built on an AI agent that analyses your inbound leads, scores them against your criteria and prioritises them for your salespeople. The agent is built on Azure AI Foundry and hosted on Azure in Switzerland, so that your commercial data stays within Switzerland. The agent qualifies and proposes a priority, but the sales follow-up remains led by your teams.",
+        "how": [
+            {
+                "title": "Collecting leads",
+                "description": "The agent gathers the leads from your forms, emails and campaigns."
+            },
+            {
+                "title": "Enrichment",
+                "description": "It completes each record with the information available and checks its consistency."
+            },
+            {
+                "title": "Scoring",
+                "description": "The agent assesses the lead against your qualification criteria and assigns it a priority."
+            },
+            {
+                "title": "Routing",
+                "description": "Qualified leads are passed to the right salesperson; the less mature ones stay in nurturing."
+            }
+        ],
+        "features": [
+            {
+                "title": "Qualification against your criteria",
+                "description": "Assessment of leads according to the rules you define for your business."
+            },
+            {
+                "title": "Prioritisation",
+                "description": "Ranking of leads to direct sales effort towards the best opportunities."
+            },
+            {
+                "title": "Automatic routing",
+                "description": "Assignment of qualified leads to the right salesperson or team."
+            },
+            {
+                "title": "Swiss hosting",
+                "description": "Agent built on Azure AI Foundry and hosted on Azure in Switzerland; your data stays within Switzerland."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Targeted sales effort",
+                "description": "Your salespeople focus on the most promising leads."
+            },
+            {
+                "title": "Greater responsiveness",
+                "description": "Inbound leads are sorted and routed with no waiting time."
+            },
+            {
+                "title": "Sales decision preserved",
+                "description": "The agent proposes a priority; the sales relationship remains led by your teams."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Does the agent contact the leads itself?",
+                "a": "It qualifies and prioritises the leads, but the sales contact remains handled by your teams. You decide the timing and tone of the approach."
+            },
+            {
+                "q": "How does it define a good lead?",
+                "a": "According to the qualification criteria you provide, tailored to your market and your offering."
+            },
+            {
+                "q": "Where is my leads' data processed?",
+                "a": "On Azure in Switzerland. It stays within Switzerland throughout processing."
+            }
+        ],
+        "cta": {
+            "title": "Qualify your leads automatically",
+            "description": "A Swiss AI agent sorts and prioritises your leads; your salespeople focus on the best opportunities."
+        }
+    },
+    "document-data-extraction": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "AI agent · Data extraction",
+            "title": "AI-agent document data extraction",
+            "description": "An AI agent that extracts structured data from your documents and returns it ready to integrate into your systems."
+        },
+        "answer": "houle.ai's document data extraction is built on an AI agent that reads your documents, extracts the relevant fields and returns them in a structured format that your tools can use. The agent is built on Azure AI Foundry and hosted on Azure in Switzerland, so that your documents stay within Switzerland. Uncertain extractions are flagged for human verification.",
+        "how": [
+            {
+                "title": "Uploading documents",
+                "description": "You submit your documents in the formats of your choice, including scans and photos."
+            },
+            {
+                "title": "Field recognition",
+                "description": "The agent identifies the fields to extract according to the defined document template."
+            },
+            {
+                "title": "Structuring",
+                "description": "It returns the extracted data in a structured format ready to integrate into your systems."
+            },
+            {
+                "title": "Exception handling",
+                "description": "Uncertain values are flagged for human verification before integration."
+            }
+        ],
+        "features": [
+            {
+                "title": "Targeted extraction",
+                "description": "Identification of the fields you define, whatever the document type."
+            },
+            {
+                "title": "Structured output",
+                "description": "Return of the data in a format your tools can use directly."
+            },
+            {
+                "title": "Quality control",
+                "description": "Flagging of low-confidence extractions for human verification."
+            },
+            {
+                "title": "Swiss hosting",
+                "description": "Agent built on Azure AI Foundry and hosted on Azure in Switzerland; your documents stay within Switzerland."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "An end to manual data entry",
+                "description": "Data is extracted automatically rather than re-keyed by hand."
+            },
+            {
+                "title": "Easier integration",
+                "description": "The structured output integrates directly into your business applications."
+            },
+            {
+                "title": "Verified quality",
+                "description": "Uncertain cases are checked by a human before integration."
+            }
+        ],
+        "faq": [
+            {
+                "q": "What types of document does the agent handle?",
+                "a": "It handles a wide variety of documents (invoices, forms, contracts, statements) in different formats, including scans and photos."
+            },
+            {
+                "q": "What happens if there is doubt about a piece of data?",
+                "a": "The agent flags low-confidence extractions for human verification rather than integrating them without checking."
+            },
+            {
+                "q": "Do my documents stay in Switzerland?",
+                "a": "Yes. Processing takes place on Azure in Switzerland and your documents stay within Switzerland."
+            }
+        ],
+        "cta": {
+            "title": "Extract your document data automatically",
+            "description": "A Swiss AI agent reads your documents and returns structured data, ready to integrate into your systems."
+        }
+    },
+    "word-contract-drafting": {
+        "product": "word-addin",
+        "hero": {
+            "badge": "Word add-in · Contracts",
+            "title": "Drafting contracts in Word with AI",
+            "description": "The houle.ai Word add-in helps you draft and adapt your contracts without leaving your document."
+        },
+        "answer": "Drafting contracts with houle.ai happens directly in Microsoft Word, thanks to the Word add-in that proposes clauses, adapts the text to your context and flags points to check. The add-in draws on houle.ai's AI hosted on Azure in Switzerland, so that the content of your contracts stays within Switzerland. You keep control over every change made to the document.",
+        "how": [
+            {
+                "title": "Opening in Word",
+                "description": "You activate the houle.ai add-in directly in your Word document."
+            },
+            {
+                "title": "Generating clauses",
+                "description": "You describe the need and the add-in proposes clauses from your templates."
+            },
+            {
+                "title": "Adapting to the context",
+                "description": "The add-in adjusts the wording to the parties, the term and the terms of your contract."
+            },
+            {
+                "title": "Review and insertion",
+                "description": "You review the proposals and insert into the document the ones you approve."
+            }
+        ],
+        "features": [
+            {
+                "title": "Built into Word",
+                "description": "Drafting assistance without leaving your document or switching tools."
+            },
+            {
+                "title": "Clauses from your templates",
+                "description": "Generation and adaptation of clauses consistent with your internal standards."
+            },
+            {
+                "title": "Assisted rewording",
+                "description": "Help to clarify, shorten or strengthen an existing clause."
+            },
+            {
+                "title": "Swiss hosting",
+                "description": "AI hosted on Azure in Switzerland; the content of your contracts stays within Switzerland."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Faster drafting",
+                "description": "First versions of clauses are generated in moments, within Word."
+            },
+            {
+                "title": "Consistent contracts",
+                "description": "The proposed clauses stay aligned with your templates and your terminology."
+            },
+            {
+                "title": "Drafter in control",
+                "description": "Nothing is inserted without your approval; you decide on every change."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Do I have to switch tools to use it?",
+                "a": "No. The add-in works directly in Microsoft Word; you draft and approve without leaving your document."
+            },
+            {
+                "q": "Does the add-in replace a lawyer?",
+                "a": "No. It speeds up drafting and proposes clauses, but the legal review and validation remain your responsibility."
+            },
+            {
+                "q": "Does the content of my contracts stay confidential?",
+                "a": "Yes. The AI is hosted on Azure in Switzerland and the content of your contracts stays within Switzerland."
+            }
+        ],
+        "cta": {
+            "title": "Draft your contracts faster in Word",
+            "description": "Install the houle.ai Word add-in and draft your contracts with the assistance of an AI hosted in Switzerland."
+        }
+    },
+    "word-report-generation": {
+        "product": "word-addin",
+        "hero": {
+            "badge": "Word add-in · Reports",
+            "title": "Generating reports in Word with AI",
+            "description": "The houle.ai Word add-in helps you structure and write your professional reports without leaving your document."
+        },
+        "answer": "Generating reports with houle.ai happens directly in Microsoft Word, thanks to the Word add-in that structures your ideas, writes the sections and harmonises the tone of your document. The add-in draws on houle.ai's AI hosted on Azure in Switzerland, so that the content of your reports stays within Switzerland. You keep control over every passage inserted.",
+        "how": [
+            {
+                "title": "Defining the outline",
+                "description": "You state the topic and the objective; the add-in proposes a report structure."
+            },
+            {
+                "title": "Writing the sections",
+                "description": "It writes each section from your key points and the material you provide."
+            },
+            {
+                "title": "Harmonisation",
+                "description": "The add-in standardises the tone, style and terminology across the whole document."
+            },
+            {
+                "title": "Review and validation",
+                "description": "You review, adjust and approve the text inserted into your report."
+            }
+        ],
+        "features": [
+            {
+                "title": "Built into Word",
+                "description": "Writing assistance directly in your document, with no additional tool."
+            },
+            {
+                "title": "Guided structure",
+                "description": "Proposal of a clear outline tailored to the type of report in view."
+            },
+            {
+                "title": "Consistent style",
+                "description": "Harmonisation of tone and terminology across the whole document."
+            },
+            {
+                "title": "Swiss hosting",
+                "description": "AI hosted on Azure in Switzerland; the content of your reports stays within Switzerland."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Reports written faster",
+                "description": "Sections are pre-drafted from your key points, within Word."
+            },
+            {
+                "title": "Professional finish",
+                "description": "The tone and presentation stay consistent across the whole document."
+            },
+            {
+                "title": "Author in control",
+                "description": "You approve every passage before it is inserted into your report."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Does the add-in work in Word?",
+                "a": "Yes. It integrates directly with Microsoft Word; you generate and approve your report without switching tools."
+            },
+            {
+                "q": "Can it follow our editorial guidelines?",
+                "a": "Yes. It harmonises the tone and terminology according to your preferences, defined during setup."
+            },
+            {
+                "q": "Is the content of my reports confidential?",
+                "a": "Yes. The AI is hosted on Azure in Switzerland and the content of your reports stays within Switzerland."
+            }
+        ],
+        "cta": {
+            "title": "Write your reports faster in Word",
+            "description": "Install the houle.ai Word add-in and structure your reports with the assistance of an AI hosted in Switzerland."
+        }
+    },
+    "outlook-email-drafting": {
+        "product": "outlook-addin",
+        "hero": {
+            "badge": "Outlook add-in · Drafting",
+            "title": "Drafting emails in Outlook with AI",
+            "description": "The houle.ai Outlook add-in helps you draft and adapt your professional emails, directly in your inbox."
+        },
+        "answer": "Drafting emails with houle.ai happens directly in Microsoft Outlook, thanks to the Outlook add-in that proposes drafts, adapts the tone and saves you time on your replies. The add-in draws on houle.ai's AI hosted on Azure in Switzerland, so that the content of your emails stays within Switzerland. Every message is still reviewed and sent by you.",
+        "how": [
+            {
+                "title": "Opening in Outlook",
+                "description": "You activate the houle.ai add-in directly in your Outlook mailbox."
+            },
+            {
+                "title": "Describing the intent",
+                "description": "You state the message to convey, or the email to reply to."
+            },
+            {
+                "title": "Generating the draft",
+                "description": "The add-in writes an email draft with the appropriate tone, based on the context."
+            },
+            {
+                "title": "Review and sending",
+                "description": "You adjust the draft if needed, then send it yourself."
+            }
+        ],
+        "features": [
+            {
+                "title": "Built into Outlook",
+                "description": "Drafting assistance without leaving your mailbox or copy-pasting between tools."
+            },
+            {
+                "title": "Adaptable tone",
+                "description": "Generation of formal or direct messages according to the recipient and the context."
+            },
+            {
+                "title": "Assisted replies",
+                "description": "Reply drafts that take the existing thread into account."
+            },
+            {
+                "title": "Swiss hosting",
+                "description": "AI hosted on Azure in Switzerland; the content of your emails stays within Switzerland."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Emails written faster",
+                "description": "You start from a draft ready to adjust rather than a blank page."
+            },
+            {
+                "title": "Professional tone",
+                "description": "Your messages stay clear and tailored to each recipient."
+            },
+            {
+                "title": "Controlled sending",
+                "description": "You review and send every email yourself; nothing is sent automatically."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Does the add-in send emails on my behalf?",
+                "a": "No. It prepares drafts; you review and send them yourself. You keep control over every message."
+            },
+            {
+                "q": "Does it work in Outlook?",
+                "a": "Yes. It integrates directly with Microsoft Outlook and assists you without leaving your inbox."
+            },
+            {
+                "q": "Does the content of my emails stay confidential?",
+                "a": "Yes. The AI is hosted on Azure in Switzerland and the content of your emails stays within Switzerland."
+            }
+        ],
+        "cta": {
+            "title": "Write your emails faster in Outlook",
+            "description": "Install the houle.ai Outlook add-in and save time on your emails, with an AI hosted in Switzerland."
+        }
+    },
+    "outlook-inbox-triage": {
+        "product": "outlook-addin",
+        "hero": {
+            "badge": "Outlook add-in · Triage",
+            "title": "Inbox triage in Outlook with AI",
+            "description": "The houle.ai Outlook add-in helps you triage, summarise and prioritise your emails, directly in your inbox."
+        },
+        "answer": "Inbox triage with houle.ai happens directly in Microsoft Outlook, thanks to the Outlook add-in that summarises your emails, ranks them by priority and suggests the actions to take. The add-in draws on houle.ai's AI hosted on Azure in Switzerland, so that your emails stay within Switzerland. You decide which actions to apply to each message.",
+        "how": [
+            {
+                "title": "Analysing the inbox",
+                "description": "The add-in goes through your incoming emails to understand their subject and urgency."
+            },
+            {
+                "title": "Summary",
+                "description": "It summarises long messages or threads for quick reading."
+            },
+            {
+                "title": "Prioritisation",
+                "description": "The add-in highlights the messages to handle first according to your criteria."
+            },
+            {
+                "title": "Action suggestion",
+                "description": "It proposes an action (reply, file, forward) that you approve before it is applied."
+            }
+        ],
+        "features": [
+            {
+                "title": "Built into Outlook",
+                "description": "Triage and summary without leaving your mailbox."
+            },
+            {
+                "title": "Thread summaries",
+                "description": "Synthesis of long threads to grasp the essentials at a glance."
+            },
+            {
+                "title": "Smart prioritisation",
+                "description": "Highlighting of urgent or important messages according to your rules."
+            },
+            {
+                "title": "Swiss hosting",
+                "description": "AI hosted on Azure in Switzerland; your emails stay within Switzerland."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Inbox under control",
+                "description": "You quickly identify what matters and handle your emails more efficiently."
+            },
+            {
+                "title": "Faster reading",
+                "description": "The summaries save you from going through long threads."
+            },
+            {
+                "title": "Actions under control",
+                "description": "The add-in suggests, but you approve each action before it is applied."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Does the add-in move my emails automatically?",
+                "a": "No. It suggests actions (file, reply, forward), but you approve them before they are applied."
+            },
+            {
+                "q": "Does it work in Outlook?",
+                "a": "Yes. It integrates directly with Microsoft Outlook and helps you triage without leaving your inbox."
+            },
+            {
+                "q": "Do my emails stay confidential?",
+                "a": "Yes. The AI is hosted on Azure in Switzerland and your emails stay within Switzerland."
+            }
+        ],
+        "cta": {
+            "title": "Take back control of your inbox",
+            "description": "Install the houle.ai Outlook add-in to triage and summarise your emails, with an AI hosted in Switzerland."
+        }
+    },
+    "swiss-gpt-knowledge-assistant": {
+        "product": "swiss-gpt",
+        "hero": {
+            "badge": "Swiss GPT · Knowledge base",
+            "title": "Enterprise knowledge assistant with Swiss GPT",
+            "description": "Swiss GPT queries your company's document base and answers your staff from your own content."
+        },
+        "answer": "houle.ai's knowledge assistant is built on Swiss GPT, which queries your company's document base and answers your staff's questions from your own content, with its sources. Swiss GPT is hosted on Azure in Switzerland, so that your documents and your exchanges stay within Switzerland. Every answer points back to the documents used so that your teams can verify them.",
+        "how": [
+            {
+                "title": "Connecting your sources",
+                "description": "You link your internal documents to Swiss GPT: procedures, contracts, notes and business databases."
+            },
+            {
+                "title": "Question in natural language",
+                "description": "Your staff ask their questions as they would a colleague, with no technical query."
+            },
+            {
+                "title": "Sourced answer",
+                "description": "Swiss GPT answers from your content and cites the documents used."
+            },
+            {
+                "title": "Verification",
+                "description": "Your teams open the cited sources to confirm and dig deeper into the answer."
+            }
+        ],
+        "features": [
+            {
+                "title": "Answers from your content",
+                "description": "Swiss GPT answers from your document base, not from generic knowledge."
+            },
+            {
+                "title": "Cited sources",
+                "description": "Every answer points back to the documents used for verification."
+            },
+            {
+                "title": "Controlled access",
+                "description": "Your staff's access rights are respected in the answers provided."
+            },
+            {
+                "title": "Swiss hosting",
+                "description": "Swiss GPT hosted on Azure in Switzerland; your documents stay within Switzerland."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Knowledge accessible to all",
+                "description": "Your staff find the right information without digging through the files."
+            },
+            {
+                "title": "Reliable answers",
+                "description": "The cited sources make it possible to verify and contextualise every answer."
+            },
+            {
+                "title": "Internal knowledge preserved",
+                "description": "Your content stays with you, hosted in Switzerland, without feeding any public model."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Does Swiss GPT make up answers?",
+                "a": "It answers from your documents and cites its sources, allowing you to verify. It is designed to draw on your content rather than on generic knowledge."
+            },
+            {
+                "q": "Does it respect everyone's access rights?",
+                "a": "Yes. The answers take account of each staff member's permissions on your documents."
+            },
+            {
+                "q": "Where are our documents hosted?",
+                "a": "On Azure in Switzerland. Your documents and your exchanges stay within Switzerland and do not feed any public model."
+            }
+        ],
+        "cta": {
+            "title": "Make your company's knowledge accessible",
+            "description": "With Swiss GPT, your staff query your document base and get sourced answers, hosted in Switzerland."
+        }
+    },
+    "swiss-gpt-secure-chat": {
+        "product": "swiss-gpt",
+        "hero": {
+            "badge": "Swiss GPT · Secure chat",
+            "title": "Secure enterprise AI chat with Swiss GPT",
+            "description": "Swiss GPT gives your staff a conversational assistant hosted in Switzerland, without your exchanges leaving Switzerland."
+        },
+        "answer": "houle.ai's secure chat is built on Swiss GPT, a conversational assistant for the enterprise whose exchanges are hosted on Azure in Switzerland and stay within Switzerland. Your staff use it to write, summarise, translate and analyse in full confidentiality, without exposing your data to consumer services. Your conversations are not used to train any public model.",
+        "how": [
+            {
+                "title": "Secure access",
+                "description": "Your staff sign in to Swiss GPT through your company's authentication."
+            },
+            {
+                "title": "Conversation",
+                "description": "They ask their questions and request writing, summarising, translation or analysis."
+            },
+            {
+                "title": "Processing in Switzerland",
+                "description": "The exchanges are processed on Azure in Switzerland and stay within Switzerland."
+            },
+            {
+                "title": "Everyday use",
+                "description": "The assistant fits into your teams' day-to-day work, without exposing your data to consumer tools."
+            }
+        ],
+        "features": [
+            {
+                "title": "Versatile assistant",
+                "description": "Writing, summarising, translation and analysis for your teams' everyday work."
+            },
+            {
+                "title": "Confidentiality",
+                "description": "Your exchanges stay within Switzerland and are not used to train any public model."
+            },
+            {
+                "title": "Managed access",
+                "description": "Sign-in through your company's authentication and user management."
+            },
+            {
+                "title": "Swiss hosting",
+                "description": "Swiss GPT hosted on Azure in Switzerland; your conversations stay within Switzerland."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "General-purpose AI without compromise",
+                "description": "Your teams benefit from a powerful assistant without exposing your data to consumer services."
+            },
+            {
+                "title": "Simple adoption",
+                "description": "A familiar chat interface, accessible without technical skills."
+            },
+            {
+                "title": "Data under control",
+                "description": "Your exchanges stay in Switzerland, within Switzerland, under your control."
+            }
+        ],
+        "faq": [
+            {
+                "q": "How does Swiss GPT differ from a consumer AI chat?",
+                "a": "Swiss GPT is hosted on Azure in Switzerland and your exchanges stay within Switzerland, without feeding any public model. Your business data is not exposed to a consumer service."
+            },
+            {
+                "q": "Can my staff use it day to day?",
+                "a": "Yes. The chat interface is familiar and is used to write, summarise, translate or analyse without any particular technical skills."
+            },
+            {
+                "q": "Are our conversations used to train the AI?",
+                "a": "No. Your conversations stay within Switzerland and are not used to train any public model."
+            }
+        ],
+        "cta": {
+            "title": "Give your teams a secure AI chat",
+            "description": "With Swiss GPT, your staff benefit from a conversational assistant hosted in Switzerland, without exposing your data."
+        }
+    }
+}

@@ -1,0 +1,57 @@
+{
+    "Hero": {
+        "Badge": "Agentes de IA alojados en Suiza",
+        "Title": "Agentes de IA especializados para su empresa",
+        "Description": "Agentes de IA que ejecutan tareas de negocio de principio a fin — lectura de documentos, registro de datos, redacción, seguimiento — alojados en Azure en Suiza, con validación humana en cada paso sensible."
+    },
+    "Answer": "Un agente de IA es un software que persigue un objetivo de forma autónoma: percibe una situación (un correo entrante, una factura, un formulario), razona sobre qué hacer, actúa utilizando sus herramientas (Microsoft 365, su ERP, su GPT interno) y somete el resultado a una persona para su validación. Nuestros agentes están alojados en Azure en Suiza y se construyen con Azure AI Foundry, de modo que sus datos permanecen dentro del perímetro suizo y cada decisión sigue siendo trazable y supervisada.",
+    "How": {
+        "Title": "Cómo funciona un agente de IA",
+        "Description": "Cuatro etapas, desde la señal de entrada hasta la validación humana.",
+        "Perceive": {
+            "Title": "1. Percibir",
+            "Description": "El agente recibe una entrada — un correo, un documento PDF, una fila de una tabla, una solicitud en un chat — y extrae la información relevante gracias a la comprensión del lenguaje y a la lectura de documentos."
+        },
+        "Reason": {
+            "Title": "2. Razonar y planificar",
+            "Description": "Descompone el objetivo en pasos, decide el orden de las acciones y selecciona los datos y las herramientas necesarias. Se apoya en sus reglas de negocio y en sus fuentes internas para mantenerse anclado en su contexto."
+        },
+        "Act": {
+            "Title": "3. Actuar mediante herramientas",
+            "Description": "El agente ejecuta las acciones invocando herramientas conectadas: buscar en SharePoint, escribir en su ERP, generar un documento Word, redactar un borrador de correo. No inventa nada: utiliza sus sistemas reales."
+        },
+        "Review": {
+            "Title": "4. Validación humana",
+            "Description": "Antes de cualquier acción con efecto real, un empleado revisa y valida. El agente propone, la persona decide. Usted conserva el control, la trazabilidad y la responsabilidad final."
+        }
+    },
+    "Features": {
+        "Title": "Lo que saben hacer nuestros agentes",
+        "Tools": {
+            "Title": "Acceso a sus herramientas",
+            "Description": "Los agentes se conectan a Microsoft 365, SharePoint, Outlook, su ERP y sus API internas para leer y escribir allí donde realmente se realiza el trabajo — sin copiar y pegar manualmente."
+        },
+        "Grounding": {
+            "Title": "Anclaje en sus datos",
+            "Description": "Cada respuesta se apoya en sus documentos, sus reglas y su GPT interno alojado en Suiza, lo que reduce los errores y permite citar las fuentes utilizadas."
+        },
+        "Governance": {
+            "Title": "Gobernanza y auditoría",
+            "Description": "Registro de las acciones, controles de acceso y puntos de validación humana integrados. Usted sabe qué ha hecho el agente, cuándo y con qué datos."
+        },
+        "Integration": {
+            "Title": "Alojamiento en Suiza",
+            "Description": "Los agentes se despliegan en Azure en Suiza con Azure AI Foundry. Sus datos permanecen dentro del perímetro suizo, en coherencia con su gobernanza de datos."
+        }
+    },
+    "UseCases": {
+        "Eyebrow": "Casos de uso",
+        "Title": "Agentes para procesos concretos",
+        "Description": "Cada agente está diseñado para un proceso de negocio preciso. Descubra los casos de uso más solicitados por las empresas de servicios suizas.",
+        "AllLink": "Ver todas las soluciones"
+    },
+    "CTA": {
+        "Title": "Ponga un agente de IA a trabajar",
+        "Description": "Hablemos de sus procesos más costosos en tiempo. Identificamos juntos el primer agente que desplegar y su marco de validación humana."
+    }
+}

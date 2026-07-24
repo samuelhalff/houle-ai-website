@@ -1,0 +1,1542 @@
+{
+    "accounting-automation": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "Agente de IA · Contabilidade",
+            "title": "Automatização contabilística por agente de IA",
+            "description": "Um agente de IA houle.ai que processa os seus lançamentos contabilísticos, reconcilia as suas contas e prepara os seus fechos, sob o controlo dos seus contabilistas."
+        },
+        "answer": "A automatização contabilística da houle.ai assenta num agente de IA que regista, classifica e reconcilia os seus lançamentos a partir dos documentos recebidos e prepara depois as propostas de contabilização que a sua equipa valida. O agente é construído sobre o Azure AI Foundry e alojado no Azure na Suíça, de modo que os seus dados permanecem no perímetro suíço. Qualquer ação estruturante passa por uma validação humana antes de ser inscrita no seu software de contabilidade.",
+        "how": [
+            {
+                "title": "Recolha dos documentos",
+                "description": "O agente recupera faturas, extratos e comprovativos das suas caixas de e-mail, pastas partilhadas ou ferramentas de negócio, e depois normaliza-os."
+            },
+            {
+                "title": "Proposta de lançamentos",
+                "description": "Propõe a conta, a natureza e a taxa de IVA para cada documento, apoiando-se no seu plano de contas e nos seus hábitos de contabilização."
+            },
+            {
+                "title": "Reconciliação bancária",
+                "description": "O agente concilia os movimentos bancários com os lançamentos correspondentes e assinala as diferenças a examinar."
+            },
+            {
+                "title": "Validação e fecho",
+                "description": "O seu contabilista valida ou corrige as propostas; o agente inscreve em seguida os lançamentos aprovados e prepara as demonstrações para o fecho."
+            }
+        ],
+        "features": [
+            {
+                "title": "Contabilização assistida",
+                "description": "Reconhecimento da conta e da taxa de IVA a partir dos documentos, com aprendizagem das suas regras internas."
+            },
+            {
+                "title": "Reconciliação automatizada",
+                "description": "Conciliação dos extratos bancários e destaque das diferenças para um tratamento rápido."
+            },
+            {
+                "title": "Trilho de auditoria completo",
+                "description": "Cada proposta conserva o documento de origem e o autor da validação, para uma rastreabilidade integral."
+            },
+            {
+                "title": "Alojamento suíço",
+                "description": "Agente construído sobre o Azure AI Foundry e alojado no Azure na Suíça; os seus dados permanecem no perímetro suíço."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Menos introdução manual",
+                "description": "Os seus contabilistas concentram-se na análise e no aconselhamento em vez da reintrodução dos documentos."
+            },
+            {
+                "title": "Fechos mais rápidos",
+                "description": "Os lançamentos e as reconciliações são preparados de forma contínua, o que alivia a carga dos períodos de fecho."
+            },
+            {
+                "title": "Controlo mantido",
+                "description": "Nada é contabilizado sem validação humana; o agente propõe, a sua equipa decide."
+            }
+        ],
+        "faq": [
+            {
+                "q": "O agente substitui o meu contabilista?",
+                "a": "Não. Prepara e propõe os lançamentos, mas cada contabilização estruturante é validada por um contabilista. O objetivo é automatizar a introdução, não a responsabilidade."
+            },
+            {
+                "q": "Integra-se com o meu software de contabilidade?",
+                "a": "O agente liga-se aos principais softwares utilizados pelas empresas fiduciárias suíças e pode ser adaptado ao seu ambiente durante a implementação."
+            },
+            {
+                "q": "Onde são alojados os meus dados contabilísticos?",
+                "a": "No Azure na Suíça. Os seus dados permanecem no perímetro suíço e não são utilizados para treinar modelos públicos."
+            }
+        ],
+        "cta": {
+            "title": "Automatize a sua contabilidade com um agente de IA suíço",
+            "description": "Descubra como a houle.ai pode aliviar a introdução de dados e acelerar os seus fechos, mantendo os seus contabilistas ao comando."
+        }
+    },
+    "mailroom-automation": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "Agente de IA · Correio recebido",
+            "title": "Digitalização e triagem do correio recebido por agente de IA",
+            "description": "Um agente de IA que digitaliza, classifica e encaminha o seu correio recebido para as pastas e as pessoas certas."
+        },
+        "answer": "A automatização do correio recebido da houle.ai apoia-se num agente de IA que lê cada documento recebido, extrai as informações essenciais, classifica-o e encaminha-o para o colaborador ou a pasta certos. O agente é construído sobre o Azure AI Foundry e alojado no Azure na Suíça, para que os seus documentos permaneçam no perímetro suíço. Os casos ambíguos são assinalados para validação humana em vez de serem classificados automaticamente.",
+        "how": [
+            {
+                "title": "Digitalização",
+                "description": "O correio em papel ou eletrónico é digitalizado e convertido em texto processável, incluindo os documentos manuscritos ou digitalizados."
+            },
+            {
+                "title": "Extração dos dados",
+                "description": "O agente identifica o remetente, o assunto, as datas e as referências úteis de cada documento."
+            },
+            {
+                "title": "Classificação",
+                "description": "Atribui o tipo de documento correto, associa-o ao cliente ou processo certos e aplica as suas regras de nomenclatura."
+            },
+            {
+                "title": "Encaminhamento",
+                "description": "O documento é transmitido à pessoa certa ou depositado na pasta certa; os casos incertos ficam em espera de validação."
+            }
+        ],
+        "features": [
+            {
+                "title": "Leitura multiformato",
+                "description": "Processamento de PDF, digitalizações, fotografias e anexos de e-mail, incluindo documentos de qualidade variável."
+            },
+            {
+                "title": "Classificação inteligente",
+                "description": "Associação automática ao cliente e ao tipo de documento certos segundo as suas regras."
+            },
+            {
+                "title": "Fila de exceções",
+                "description": "Os documentos não reconhecidos são agrupados para um tratamento humano rápido, sem bloquear o fluxo."
+            },
+            {
+                "title": "Alojamento suíço",
+                "description": "Agente construído sobre o Azure AI Foundry e alojado no Azure na Suíça; os seus documentos permanecem no perímetro suíço."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Correio tratado mais depressa",
+                "description": "Os documentos chegam ao sítio certo sem triagem manual, logo após a receção."
+            },
+            {
+                "title": "Menos erros de classificação",
+                "description": "A associação à pasta certa é coerente e documentada, com um trilho de auditoria."
+            },
+            {
+                "title": "Equipas aliviadas",
+                "description": "Os seus colaboradores deixam de abrir e triar cada envelope para se concentrarem nos processos."
+            }
+        ],
+        "faq": [
+            {
+                "q": "O agente trata o correio em papel?",
+                "a": "Sim, uma vez digitalizado. A partir de uma digitalização ou de uma fotografia, extrai as informações, classifica o documento e encaminha-o automaticamente."
+            },
+            {
+                "q": "O que acontece se um documento não for reconhecido?",
+                "a": "É colocado numa fila de exceções para tratamento humano. O agente não adivinha: assinala os casos incertos em vez de os classificar erradamente."
+            },
+            {
+                "q": "Os meus documentos saem da Suíça?",
+                "a": "Não. O processamento ocorre no Azure na Suíça e os seus documentos permanecem no perímetro suíço."
+            }
+        ],
+        "cta": {
+            "title": "Automatize o seu correio recebido",
+            "description": "Deixe um agente de IA suíço digitalizar, classificar e encaminhar os seus documentos, para que nada se perca e tudo chegue ao sítio certo."
+        }
+    },
+    "payroll-automation": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "Agente de IA · Salários",
+            "title": "Automatização do processamento salarial suíço por agente de IA",
+            "description": "Um agente de IA que prepara os seus recibos de salário, recolhe as variáveis do mês e torna mais fiável o seu processamento salarial suíço."
+        },
+        "answer": "A automatização do processamento salarial da houle.ai apoia-se num agente de IA que reúne os elementos variáveis do mês, prepara os recibos de salário e verifica a coerência dos encargos sociais antes da validação. O agente é construído sobre o Azure AI Foundry e alojado no Azure na Suíça, de modo que os dados dos seus colaboradores permanecem no perímetro suíço. O gestor de salários valida cada ciclo antes de qualquer pagamento ou declaração.",
+        "how": [
+            {
+                "title": "Recolha das variáveis",
+                "description": "O agente reúne horas, ausências, prémios e notas de despesas a partir das suas ferramentas de introdução e dos seus e-mails."
+            },
+            {
+                "title": "Preparação dos recibos",
+                "description": "Calcula os elementos de salário e as contribuições sociais (AVS, LPP, LAA) segundo os parâmetros de cada colaborador."
+            },
+            {
+                "title": "Controlos de coerência",
+                "description": "O agente compara o mês com o anterior e assinala as diferenças invulgares a verificar antes do fecho."
+            },
+            {
+                "title": "Validação pelo gestor",
+                "description": "O gestor de salários controla e aprova o ciclo; o agente prepara em seguida os recibos e os ficheiros de pagamento."
+            }
+        ],
+        "features": [
+            {
+                "title": "Parâmetros suíços",
+                "description": "Consideração das contribuições AVS, LPP e LAA e das especificidades cantonais do processamento salarial suíço."
+            },
+            {
+                "title": "Deteção de anomalias",
+                "description": "Destaque das variações invulgares de um mês para o outro antes do fecho."
+            },
+            {
+                "title": "Preparação das declarações",
+                "description": "Geração dos elementos necessários aos mapas sociais e aos certificados de salário."
+            },
+            {
+                "title": "Alojamento suíço",
+                "description": "Agente construído sobre o Azure AI Foundry e alojado no Azure na Suíça; os dados de RH permanecem no perímetro suíço."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Ciclos salariais mais fiáveis",
+                "description": "Os controlos de coerência reduzem o risco de erro antes dos pagamentos."
+            },
+            {
+                "title": "Ganho de tempo mensal",
+                "description": "A recolha e a formatação das variáveis são automatizadas em cada ciclo."
+            },
+            {
+                "title": "Decisão humana preservada",
+                "description": "Nenhum recibo é finalizado sem a validação do gestor de salários."
+            }
+        ],
+        "faq": [
+            {
+                "q": "O agente lida com as especificidades do processamento salarial suíço?",
+                "a": "Sim. Tem em conta as contribuições AVS, LPP e LAA bem como as regras cantonais, segundo os parâmetros definidos para a sua empresa."
+            },
+            {
+                "q": "Efetua os pagamentos automaticamente?",
+                "a": "Não sem validação. O agente prepara os recibos e os ficheiros de pagamento, mas o gestor aprova cada ciclo antes de qualquer pagamento."
+            },
+            {
+                "q": "Os dados dos meus colaboradores estão protegidos?",
+                "a": "São processados no Azure na Suíça e permanecem no perímetro suíço, sem serem utilizados para treinar modelos públicos."
+            }
+        ],
+        "cta": {
+            "title": "Torne mais fiável o seu processamento salarial suíço",
+            "description": "Confie a preparação dos seus recibos a um agente de IA suíço e mantenha a validação final nas mãos do seu gestor de salários."
+        }
+    },
+    "invoice-processing": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "Agente de IA · Faturas de fornecedores",
+            "title": "Processamento de faturas de fornecedores por agente de IA",
+            "description": "Um agente de IA que lê as suas faturas de fornecedores, extrai os dados e prepara a contabilização e o pagamento, sob controlo humano."
+        },
+        "answer": "O processamento de faturas de fornecedores da houle.ai assenta num agente de IA que lê cada fatura recebida, extrai os montantes, o IVA e os prazos de vencimento, e prepara depois a contabilização e a proposta de pagamento. O agente é construído sobre o Azure AI Foundry e alojado no Azure na Suíça, de modo que os seus dados permanecem no perímetro suíço. As faturas são submetidas a validação humana antes de qualquer pagamento.",
+        "how": [
+            {
+                "title": "Receção",
+                "description": "O agente recolhe as faturas das suas caixas de e-mail, portais de fornecedores e pastas partilhadas."
+            },
+            {
+                "title": "Extração",
+                "description": "Identifica o fornecedor, os montantes sem e com IVA, a taxa de IVA, a data e o prazo de vencimento de cada fatura."
+            },
+            {
+                "title": "Controlo e imputação",
+                "description": "O agente concilia a fatura com a encomenda ou o contrato, propõe a imputação contabilística e deteta duplicados."
+            },
+            {
+                "title": "Validação e pagamento",
+                "description": "O responsável aprova a fatura; o agente prepara então a contabilização e o ficheiro de pagamento."
+            }
+        ],
+        "features": [
+            {
+                "title": "Extração fiável",
+                "description": "Leitura dos montantes, do IVA e dos prazos, mesmo em faturas com apresentações variadas."
+            },
+            {
+                "title": "Deteção de duplicados",
+                "description": "Identificação das faturas já recebidas ou já pagas para evitar pagamentos em duplicado."
+            },
+            {
+                "title": "Circuito de validação",
+                "description": "Encaminhamento das faturas para os aprovadores certos segundo os seus limiares e as suas regras internas."
+            },
+            {
+                "title": "Alojamento suíço",
+                "description": "Agente construído sobre o Azure AI Foundry e alojado no Azure na Suíça; os seus dados permanecem no perímetro suíço."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Contas a pagar aceleradas",
+                "description": "As faturas são registadas e encaminhadas automaticamente, sem reintrodução manual."
+            },
+            {
+                "title": "Menos erros de pagamento",
+                "description": "A deteção de duplicados e os controlos de coerência limitam os pagamentos incorretos."
+            },
+            {
+                "title": "Validação controlada",
+                "description": "Nenhuma fatura é paga sem aprovação humana segundo as suas regras."
+            }
+        ],
+        "faq": [
+            {
+                "q": "O agente paga as faturas automaticamente?",
+                "a": "Não. Prepara a contabilização e o ficheiro de pagamento, mas a execução do pagamento continua sujeita a validação humana segundo os seus limiares de aprovação."
+            },
+            {
+                "q": "Lida com faturas em vários formatos?",
+                "a": "Sim. Lê PDF, digitalizações e faturas eletrónicas com apresentações diversas e extrai delas os dados essenciais."
+            },
+            {
+                "q": "Onde são processadas as faturas?",
+                "a": "No Azure na Suíça. Os seus dados permanecem no perímetro suíço durante todo o processamento."
+            }
+        ],
+        "cta": {
+            "title": "Acelere o processamento das suas faturas de fornecedores",
+            "description": "Um agente de IA suíço lê, controla e prepara as suas faturas; mantém o controlo sobre cada validação de pagamento."
+        }
+    },
+    "customer-email-triage": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "Agente de IA · E-mails de clientes",
+            "title": "Triagem dos e-mails de clientes por agente de IA",
+            "description": "Um agente de IA que lê, classifica e prioriza os seus e-mails de clientes e prepara respostas que a sua equipa valida."
+        },
+        "answer": "A triagem dos e-mails de clientes da houle.ai apoia-se num agente de IA que lê cada mensagem recebida, identifica o assunto e a urgência, classifica-a e propõe uma resposta ou uma ação. O agente é construído sobre o Azure AI Foundry e alojado no Azure na Suíça, de modo que as suas trocas permanecem no perímetro suíço. As respostas aos clientes são preparadas pelo agente mas validadas por um colaborador antes do envio.",
+        "how": [
+            {
+                "title": "Leitura dos e-mails",
+                "description": "O agente analisa cada mensagem recebida, incluindo os anexos, para compreender o pedido."
+            },
+            {
+                "title": "Classificação e priorização",
+                "description": "Atribui uma categoria e um nível de urgência, e encaminha depois a mensagem para o serviço ou a pessoa certos."
+            },
+            {
+                "title": "Proposta de resposta",
+                "description": "O agente redige uma resposta apoiando-se na sua base de conhecimento e nos seus modelos de correio."
+            },
+            {
+                "title": "Validação e envio",
+                "description": "Um colaborador revê, ajusta se necessário e envia a resposta validada."
+            }
+        ],
+        "features": [
+            {
+                "title": "Classificação automática",
+                "description": "Categorização dos pedidos por tema, urgência e serviço em causa."
+            },
+            {
+                "title": "Respostas preparadas",
+                "description": "Rascunhos de correio gerados a partir da sua base de conhecimento interna."
+            },
+            {
+                "title": "Priorização",
+                "description": "Destaque das mensagens urgentes ou sensíveis para um tratamento rápido."
+            },
+            {
+                "title": "Alojamento suíço",
+                "description": "Agente construído sobre o Azure AI Foundry e alojado no Azure na Suíça; os seus e-mails permanecem no perímetro suíço."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Respostas mais rápidas",
+                "description": "Os pedidos são triados e pré-redigidos logo à chegada, o que reduz os prazos."
+            },
+            {
+                "title": "Caixa mais organizada",
+                "description": "Cada mensagem é classificada e priorizada, sem triagem manual."
+            },
+            {
+                "title": "Tom controlado",
+                "description": "Cada resposta é revista por um colaborador antes do envio, para manter o seu tom e a sua exatidão."
+            }
+        ],
+        "faq": [
+            {
+                "q": "O agente responde diretamente aos clientes?",
+                "a": "Prepara as respostas, mas um colaborador valida-as antes do envio. Mantém o controlo sobre o que segue para os seus clientes."
+            },
+            {
+                "q": "Como conhece as nossas respostas habituais?",
+                "a": "Apoia-se na sua base de conhecimento e nos seus modelos de correio, que fornece durante a implementação."
+            },
+            {
+                "q": "As nossas trocas com clientes são confidenciais?",
+                "a": "Sim. O processamento ocorre no Azure na Suíça e os seus e-mails permanecem no perímetro suíço."
+            }
+        ],
+        "cta": {
+            "title": "Faça a triagem dos seus e-mails de clientes automaticamente",
+            "description": "Um agente de IA suíço classifica, prioriza e pré-redige as suas respostas; as suas equipas validam e enviam."
+        }
+    },
+    "research-agent": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "Agente de IA · Investigação",
+            "title": "Agente de investigação de IA para as suas análises",
+            "description": "Um agente de IA que reúne, sintetiza e referencia a informação de que as suas equipas precisam para decidir."
+        },
+        "answer": "O agente de investigação da houle.ai é um agente de IA que consulta as suas fontes internas e públicas, sintetiza a informação relevante e fornece uma resposta estruturada com as respetivas referências. O agente é construído sobre o Azure AI Foundry e alojado no Azure na Suíça, de modo que as suas investigações permanecem no perímetro suíço. Cada síntese cita as suas fontes para que os seus colaboradores as possam verificar.",
+        "how": [
+            {
+                "title": "Formulação da pergunta",
+                "description": "Coloca a sua pergunta em linguagem natural e especifica o âmbito pretendido."
+            },
+            {
+                "title": "Recolha das fontes",
+                "description": "O agente consulta os seus documentos internos e, se autorizado, fontes externas relevantes."
+            },
+            {
+                "title": "Síntese",
+                "description": "Reúne os elementos encontrados numa resposta estruturada, distinguindo factos e incertezas."
+            },
+            {
+                "title": "Referências verificáveis",
+                "description": "Cada afirmação é associada à sua fonte para que as suas equipas a possam controlar."
+            }
+        ],
+        "features": [
+            {
+                "title": "Investigação multifonte",
+                "description": "Consulta combinada das suas bases internas e de fontes externas autorizadas."
+            },
+            {
+                "title": "Síntese referenciada",
+                "description": "Respostas estruturadas ligadas às suas referências, sem afirmações não verificáveis."
+            },
+            {
+                "title": "Âmbito parametrizável",
+                "description": "Controlo das fontes autorizadas e do nível de detalhe pretendido segundo as suas necessidades."
+            },
+            {
+                "title": "Alojamento suíço",
+                "description": "Agente construído sobre o Azure AI Foundry e alojado no Azure na Suíça; as suas investigações permanecem no perímetro suíço."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Investigação acelerada",
+                "description": "As suas equipas obtêm uma primeira síntese em instantes em vez de horas de leitura."
+            },
+            {
+                "title": "Decisões mais fundamentadas",
+                "description": "As respostas referenciadas permitem fundamentar uma decisão em elementos verificáveis."
+            },
+            {
+                "title": "Fontes controladas",
+                "description": "Decide que fontes o agente pode consultar e verifica as suas referências."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Posso confiar nas respostas do agente?",
+                "a": "O agente cita as suas fontes em cada resposta, o que lhe permite verificar. Foi concebido para assinalar as incertezas em vez de inventar."
+            },
+            {
+                "q": "Pode pesquisar nos nossos documentos internos?",
+                "a": "Sim. Consulta as fontes internas que lhe autorizar, em complemento de fontes externas se assim o desejar."
+            },
+            {
+                "q": "As minhas consultas permanecem confidenciais?",
+                "a": "Sim. São processadas no Azure na Suíça e permanecem no perímetro suíço."
+            }
+        ],
+        "cta": {
+            "title": "Dê às suas equipas um agente de investigação de IA",
+            "description": "Obtenha sínteses referenciadas a partir das suas fontes internas e externas, alojadas na Suíça."
+        }
+    },
+    "contract-review": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "Agente de IA · Contratos",
+            "title": "Revisão de contratos por agente de IA",
+            "description": "Um agente de IA que analisa os seus contratos, deteta as cláusulas de risco e prepara uma síntese para os seus juristas."
+        },
+        "answer": "A revisão de contratos da houle.ai assenta num agente de IA que lê os seus contratos, extrai as cláusulas essenciais e assinala os pontos de risco face aos seus critérios. O agente é construído sobre o Azure AI Foundry e alojado no Azure na Suíça, de modo que os seus contratos permanecem no perímetro suíço. O agente prepara uma análise, mas a decisão jurídica cabe sempre aos seus juristas.",
+        "how": [
+            {
+                "title": "Submissão do contrato",
+                "description": "Submete o contrato a analisar no formato que preferir."
+            },
+            {
+                "title": "Extração das cláusulas",
+                "description": "O agente identifica as cláusulas essenciais: duração, resolução, responsabilidade, confidencialidade, penalizações."
+            },
+            {
+                "title": "Análise dos riscos",
+                "description": "Compara as cláusulas com os seus critérios e os seus modelos, e assinala depois as divergências e os pontos de atenção."
+            },
+            {
+                "title": "Síntese para revisão",
+                "description": "O agente produz uma síntese comentada que o seu jurista examina e valida."
+            }
+        ],
+        "features": [
+            {
+                "title": "Extração de cláusulas",
+                "description": "Identificação automática das cláusulas essenciais e das obrigações de cada parte."
+            },
+            {
+                "title": "Comparação com os modelos",
+                "description": "Destaque das divergências face às suas cláusulas-tipo e à sua política interna."
+            },
+            {
+                "title": "Pontos de atenção",
+                "description": "Assinalamento das cláusulas invulgares ou potencialmente desfavoráveis a examinar."
+            },
+            {
+                "title": "Alojamento suíço",
+                "description": "Agente construído sobre o Azure AI Foundry e alojado no Azure na Suíça; os seus contratos permanecem no perímetro suíço."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Revisão mais rápida",
+                "description": "As cláusulas essenciais são extraídas e comentadas em minutos, antes da análise jurídica."
+            },
+            {
+                "title": "Pontos de vigilância destacados",
+                "description": "As divergências face aos seus padrões são assinaladas sistematicamente."
+            },
+            {
+                "title": "Decisão jurídica preservada",
+                "description": "O agente apoia os seus juristas; não substitui a sua análise nem a sua validação."
+            }
+        ],
+        "faq": [
+            {
+                "q": "O agente emite um parecer jurídico?",
+                "a": "Não. Extrai as cláusulas e assinala os pontos de atenção para acelerar a revisão, mas a apreciação jurídica e a decisão continuam a cargo dos seus juristas."
+            },
+            {
+                "q": "Pode utilizar as nossas cláusulas-tipo?",
+                "a": "Sim. Fornece os seus modelos e os seus critérios, e o agente compara cada contrato com os seus padrões."
+            },
+            {
+                "q": "Os meus contratos são confidenciais?",
+                "a": "Sim. São processados no Azure na Suíça e permanecem no perímetro suíço."
+            }
+        ],
+        "cta": {
+            "title": "Acelere a revisão dos seus contratos",
+            "description": "Um agente de IA suíço extrai as cláusulas e assinala os riscos; os seus juristas mantêm a decisão final."
+        }
+    },
+    "compliance-kyc-monitoring": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "Agente de IA · Conformidade e KYC",
+            "title": "Monitorização de conformidade e KYC por agente de IA",
+            "description": "Um agente de IA que prepara e atualiza os seus processos KYC e monitoriza os pontos de conformidade, sob o controlo dos seus responsáveis."
+        },
+        "answer": "A monitorização de conformidade e KYC da houle.ai apoia-se num agente de IA que reúne os documentos de identificação, extrai os dados e assinala os elementos a controlar ou a atualizar. O agente é construído sobre o Azure AI Foundry e alojado no Azure na Suíça, de modo que os seus processos permanecem no perímetro suíço. O agente prepara a análise e alerta, mas a decisão de conformidade cabe ao seu responsável.",
+        "how": [
+            {
+                "title": "Recolha dos documentos",
+                "description": "O agente reúne os documentos de identificação e os comprovativos fornecidos pelo cliente."
+            },
+            {
+                "title": "Extração e controlo",
+                "description": "Extrai os dados exigidos, verifica a sua coerência e deteta os documentos em falta ou caducados."
+            },
+            {
+                "title": "Monitorização contínua",
+                "description": "O agente acompanha os prazos de atualização e assinala os processos a rever periodicamente."
+            },
+            {
+                "title": "Alerta e validação",
+                "description": "Os pontos de atenção são reportados ao responsável de conformidade, que decide o seguimento a dar."
+            }
+        ],
+        "features": [
+            {
+                "title": "Processos KYC preparados",
+                "description": "Extração e estruturação dos dados de identificação a partir dos documentos fornecidos."
+            },
+            {
+                "title": "Deteção de lacunas",
+                "description": "Identificação dos documentos em falta, incompletos ou com prazo expirado."
+            },
+            {
+                "title": "Acompanhamento dos prazos",
+                "description": "Lembretes sobre os processos a atualizar segundo os seus ciclos de revisão."
+            },
+            {
+                "title": "Alojamento suíço",
+                "description": "Agente construído sobre o Azure AI Foundry e alojado no Azure na Suíça; os seus processos permanecem no perímetro suíço."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Processos mantidos atualizados",
+                "description": "Os prazos e os documentos em falta são acompanhados de forma contínua, sem esquecimentos."
+            },
+            {
+                "title": "Controlos aliviados",
+                "description": "A preparação dos processos é automatizada, o que liberta tempo para a análise."
+            },
+            {
+                "title": "Responsabilidade mantida",
+                "description": "O agente alerta e documenta; a decisão de conformidade continua humana."
+            }
+        ],
+        "faq": [
+            {
+                "q": "O agente decide sobre a conformidade de um processo?",
+                "a": "Não. Prepara os processos, controla os documentos e assinala os pontos de atenção, mas a decisão de conformidade cabe ao seu responsável."
+            },
+            {
+                "q": "Ajuda a cumprir as obrigações de atualização?",
+                "a": "Sim. Acompanha os prazos de revisão e alerta-o sobre os processos a atualizar segundo as suas regras internas."
+            },
+            {
+                "q": "Onde são conservados estes dados sensíveis?",
+                "a": "No Azure na Suíça. Os seus processos KYC permanecem no perímetro suíço e não servem para treinar modelos públicos."
+            }
+        ],
+        "cta": {
+            "title": "Torne mais fiável a sua monitorização KYC",
+            "description": "Um agente de IA suíço prepara os seus processos e acompanha os prazos; os seus responsáveis mantêm a decisão de conformidade."
+        }
+    },
+    "hr-onboarding": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "Agente de IA · Integração de RH",
+            "title": "Integração dos novos colaboradores por agente de IA",
+            "description": "Um agente de IA que orquestra o acolhimento dos seus novos recrutas, dos documentos a preparar aos acessos a solicitar."
+        },
+        "answer": "A integração de RH da houle.ai assenta num agente de IA que prepara os documentos de contratação, acompanha as etapas de acolhimento e responde às perguntas correntes dos novos recrutas. O agente é construído sobre o Azure AI Foundry e alojado no Azure na Suíça, de modo que os dados dos seus colaboradores permanecem no perímetro suíço. As ações vinculativas, como a criação de acessos, são submetidas a validação humana.",
+        "how": [
+            {
+                "title": "Abertura do processo",
+                "description": "O agente cria a lista de tarefas de integração a partir do perfil e do cargo do novo recruta."
+            },
+            {
+                "title": "Preparação dos documentos",
+                "description": "Prepara contratos, formulários e fichas de informação a partir dos seus modelos de RH."
+            },
+            {
+                "title": "Acompanhamento das etapas",
+                "description": "O agente relembra os responsáveis sobre os acessos, o equipamento e as formações a prever."
+            },
+            {
+                "title": "Acompanhamento do recruta",
+                "description": "Responde às perguntas frequentes do novo colaborador; os pedidos de acesso passam por validação humana."
+            }
+        ],
+        "features": [
+            {
+                "title": "Percurso de integração",
+                "description": "Geração de uma lista de tarefas adaptada ao cargo e acompanhamento do seu progresso."
+            },
+            {
+                "title": "Documentos pré-preenchidos",
+                "description": "Preparação dos contratos e formulários a partir dos seus modelos internos."
+            },
+            {
+                "title": "Assistente para o recruta",
+                "description": "Respostas às perguntas correntes sobre as férias, os salários ou as ferramentas da empresa."
+            },
+            {
+                "title": "Alojamento suíço",
+                "description": "Agente construído sobre o Azure AI Foundry e alojado no Azure na Suíça; os dados de RH permanecem no perímetro suíço."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Acolhimento sem esquecimentos",
+                "description": "Cada etapa é acompanhada, dos documentos aos acessos, para uma integração fluida."
+            },
+            {
+                "title": "RH aliviados",
+                "description": "As tarefas repetitivas são automatizadas, o que liberta tempo para o acolhimento humano."
+            },
+            {
+                "title": "Acessos controlados",
+                "description": "A criação de acessos e de compromissos continua sujeita a validação humana."
+            }
+        ],
+        "faq": [
+            {
+                "q": "O agente cria os acessos informáticos por si próprio?",
+                "a": "Prepara e acompanha os pedidos, mas a criação efetiva dos acessos passa por uma validação humana. Coordena, não decide sozinho."
+            },
+            {
+                "q": "Pode utilizar os nossos modelos de contratos?",
+                "a": "Sim. Pré-preenche contratos e formulários a partir dos seus modelos de RH, que fornece durante a implementação."
+            },
+            {
+                "q": "Os dados dos recrutas estão protegidos?",
+                "a": "Sim. São processados no Azure na Suíça e permanecem no perímetro suíço."
+            }
+        ],
+        "cta": {
+            "title": "Simplifique a integração dos seus recrutas",
+            "description": "Um agente de IA suíço orquestra o acolhimento e prepara os documentos; as suas equipas de RH mantêm o controlo dos acessos."
+        }
+    },
+    "quote-proposal-generation": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "Agente de IA · Orçamentos e propostas",
+            "title": "Geração de orçamentos e propostas por agente de IA",
+            "description": "Um agente de IA que prepara os seus orçamentos e propostas comerciais a partir dos seus modelos e do seu catálogo."
+        },
+        "answer": "A geração de orçamentos e propostas da houle.ai apoia-se num agente de IA que transforma um pedido de cliente num orçamento ou numa proposta estruturada, a partir dos seus modelos, tarifas e serviços. O agente é construído sobre o Azure AI Foundry e alojado no Azure na Suíça, de modo que os seus dados comerciais permanecem no perímetro suíço. Cada proposta é revista e validada por um comercial antes do envio.",
+        "how": [
+            {
+                "title": "Análise do pedido",
+                "description": "O agente lê o pedido do cliente e identifica os serviços pretendidos e o âmbito."
+            },
+            {
+                "title": "Construção da proposta",
+                "description": "Reúne os serviços, aplica as suas tarifas e as suas condições, e calcula os montantes e o IVA."
+            },
+            {
+                "title": "Redação",
+                "description": "O agente redige o orçamento ou a proposta a partir dos seus modelos e da sua identidade."
+            },
+            {
+                "title": "Validação comercial",
+                "description": "Um comercial revê, ajusta as condições se necessário e envia a proposta validada."
+            }
+        ],
+        "features": [
+            {
+                "title": "Orçamentos a partir de modelos",
+                "description": "Geração de propostas conformes à sua identidade e às suas condições gerais."
+            },
+            {
+                "title": "Tarifação coerente",
+                "description": "Aplicação do seu catálogo de serviços, das suas tarifas e do cálculo do IVA."
+            },
+            {
+                "title": "Personalização",
+                "description": "Adaptação da proposta ao contexto de cada cliente a partir do pedido recebido."
+            },
+            {
+                "title": "Alojamento suíço",
+                "description": "Agente construído sobre o Azure AI Foundry e alojado no Azure na Suíça; os seus dados comerciais permanecem no perímetro suíço."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Propostas mais rápidas",
+                "description": "Os orçamentos são pré-redigidos em minutos, o que encurta os seus prazos de resposta."
+            },
+            {
+                "title": "Coerência comercial",
+                "description": "Tarifas, condições e apresentação mantêm-se alinhadas com os seus padrões."
+            },
+            {
+                "title": "Controlo antes do envio",
+                "description": "Cada proposta é validada por um comercial antes de ser enviada ao cliente."
+            }
+        ],
+        "faq": [
+            {
+                "q": "O agente envia os orçamentos diretamente?",
+                "a": "Não. Prepara a proposta, mas um comercial revê-a e valida-a antes do envio. Mantém o controlo sobre as suas condições e os seus preços."
+            },
+            {
+                "q": "Utiliza as nossas tarifas e modelos?",
+                "a": "Sim. Apoia-se no seu catálogo de serviços, nas suas tarifas e nos seus modelos de proposta."
+            },
+            {
+                "q": "Os nossos dados comerciais estão protegidos?",
+                "a": "Sim. São processados no Azure na Suíça e permanecem no perímetro suíço."
+            }
+        ],
+        "cta": {
+            "title": "Gere os seus orçamentos mais depressa",
+            "description": "Um agente de IA suíço prepara as suas propostas a partir dos seus modelos; os seus comerciais validam e enviam."
+        }
+    },
+    "meeting-notes-agent": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "Agente de IA · Atas",
+            "title": "Atas de reunião por agente de IA",
+            "description": "Um agente de IA que transcreve as suas reuniões, extrai as decisões e prepara uma ata pronta a partilhar."
+        },
+        "answer": "O agente de atas da houle.ai transcreve as suas reuniões, identifica as decisões e as ações a acompanhar, e redige depois uma ata estruturada. O agente é construído sobre o Azure AI Foundry e alojado no Azure na Suíça, de modo que as suas trocas permanecem no perímetro suíço. A ata é revista e validada por um participante antes da divulgação.",
+        "how": [
+            {
+                "title": "Transcrição",
+                "description": "O agente transcreve a gravação ou as notas da reunião em texto estruturado."
+            },
+            {
+                "title": "Extração dos pontos essenciais",
+                "description": "Identifica as decisões tomadas, os pontos em aberto e as ações a acompanhar com os respetivos responsáveis."
+            },
+            {
+                "title": "Redação da ata",
+                "description": "O agente produz uma ata clara segundo o seu formato habitual."
+            },
+            {
+                "title": "Validação e partilha",
+                "description": "Um participante revê e valida a ata antes da sua divulgação às pessoas em causa."
+            }
+        ],
+        "features": [
+            {
+                "title": "Transcrição automática",
+                "description": "Reprodução fiel das trocas a partir de uma gravação ou de notas."
+            },
+            {
+                "title": "Decisões e ações",
+                "description": "Extração das decisões, dos responsáveis e dos prazos associados."
+            },
+            {
+                "title": "Formato personalizável",
+                "description": "Atas adaptadas ao seu modelo e ao seu estilo de apresentação."
+            },
+            {
+                "title": "Alojamento suíço",
+                "description": "Agente construído sobre o Azure AI Foundry e alojado no Azure na Suíça; as suas trocas permanecem no perímetro suíço."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Atas imediatas",
+                "description": "Um projeto de ata fica disponível logo no final da reunião."
+            },
+            {
+                "title": "Acompanhamento das ações",
+                "description": "As decisões e as tarefas são claramente identificadas, com os respetivos responsáveis."
+            },
+            {
+                "title": "Validação humana",
+                "description": "Cada ata é revista e validada por um participante antes da partilha."
+            }
+        ],
+        "faq": [
+            {
+                "q": "O agente partilha a ata automaticamente?",
+                "a": "Não. Redige o projeto, mas um participante valida-o antes da divulgação, o que garante a exatidão do que é partilhado."
+            },
+            {
+                "q": "Pode seguir o nosso formato de ata?",
+                "a": "Sim. Adapta-se ao seu modelo e ao seu estilo, que define durante a implementação."
+            },
+            {
+                "q": "As nossas reuniões permanecem confidenciais?",
+                "a": "Sim. A transcrição e a redação ocorrem no Azure na Suíça e as suas trocas permanecem no perímetro suíço."
+            }
+        ],
+        "cta": {
+            "title": "Não perca mais tempo com as suas atas",
+            "description": "Um agente de IA suíço transcreve e redige; resta apenas rever e partilhar."
+        }
+    },
+    "it-helpdesk-agent": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "Agente de IA · Suporte informático",
+            "title": "Agente de IA de suporte informático interno",
+            "description": "Um agente de IA que responde aos pedidos de suporte dos seus colaboradores e prepara os tickets para a sua equipa de TI."
+        },
+        "answer": "O agente de suporte informático da houle.ai responde às perguntas correntes dos seus colaboradores, propõe soluções da sua base de conhecimento e prepara os tickets para os casos complexos. O agente é construído sobre o Azure AI Foundry e alojado no Azure na Suíça, de modo que os seus dados permanecem no perímetro suíço. As intervenções sensíveis são escaladas para a sua equipa de TI para validação.",
+        "how": [
+            {
+                "title": "Receção do pedido",
+                "description": "O colaborador coloca a sua pergunta ao agente, por chat ou por e-mail."
+            },
+            {
+                "title": "Resolução guiada",
+                "description": "O agente propõe uma solução a partir da sua base de conhecimento e dos seus procedimentos internos."
+            },
+            {
+                "title": "Criação de ticket",
+                "description": "Se o caso ultrapassar o primeiro nível, o agente estrutura um ticket completo para a equipa de TI."
+            },
+            {
+                "title": "Escalamento controlado",
+                "description": "Os pedidos sensíveis ou de risco são transmitidos a um técnico para tratamento."
+            }
+        ],
+        "features": [
+            {
+                "title": "Respostas de primeiro nível",
+                "description": "Resolução dos pedidos correntes a partir da sua documentação interna."
+            },
+            {
+                "title": "Tickets estruturados",
+                "description": "Preparação de tickets claros e completos para acelerar o tratamento pela equipa de TI."
+            },
+            {
+                "title": "Escalamento inteligente",
+                "description": "Transmissão dos casos complexos ou sensíveis para o nível de suporte certo."
+            },
+            {
+                "title": "Alojamento suíço",
+                "description": "Agente construído sobre o Azure AI Foundry e alojado no Azure na Suíça; os seus dados permanecem no perímetro suíço."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Suporte disponível de forma contínua",
+                "description": "Os colaboradores obtêm uma primeira resposta sem esperar pela disponibilidade da equipa de TI."
+            },
+            {
+                "title": "Equipa de TI mais focada",
+                "description": "Os pedidos simples são tratados automaticamente, deixando os casos complexos aos técnicos."
+            },
+            {
+                "title": "Intervenções controladas",
+                "description": "As ações sensíveis continuam validadas por um técnico antes da execução."
+            }
+        ],
+        "faq": [
+            {
+                "q": "O agente efetua alterações nos nossos sistemas?",
+                "a": "Orienta e prepara os pedidos, mas as intervenções sensíveis são escaladas a um técnico para validação. Não substitui o controlo humano sobre as ações de risco."
+            },
+            {
+                "q": "Em que informações se apoia?",
+                "a": "Na sua base de conhecimento e nos seus procedimentos internos, que fornece durante a implementação."
+            },
+            {
+                "q": "As trocas com os colaboradores são confidenciais?",
+                "a": "Sim. São processadas no Azure na Suíça e permanecem no perímetro suíço."
+            }
+        ],
+        "cta": {
+            "title": "Ofereça um suporte informático ágil",
+            "description": "Um agente de IA suíço responde aos pedidos correntes e prepara os tickets; a sua equipa de TI concentra-se no essencial."
+        }
+    },
+    "lead-qualification": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "Agente de IA · Qualificação de leads",
+            "title": "Qualificação de leads por agente de IA",
+            "description": "Um agente de IA que tria e qualifica os seus potenciais clientes, para que os seus comerciais se concentrem nas melhores oportunidades."
+        },
+        "answer": "A qualificação de leads da houle.ai apoia-se num agente de IA que analisa os seus potenciais clientes, avalia-os segundo os seus critérios e prioriza-os para os seus comerciais. O agente é construído sobre o Azure AI Foundry e alojado no Azure na Suíça, de modo que os seus dados comerciais permanecem no perímetro suíço. O agente qualifica e propõe uma prioridade, mas o acompanhamento comercial continua conduzido pelas suas equipas.",
+        "how": [
+            {
+                "title": "Recolha dos leads",
+                "description": "O agente reúne os potenciais clientes provenientes dos seus formulários, e-mails e campanhas."
+            },
+            {
+                "title": "Enriquecimento",
+                "description": "Completa cada ficha com as informações disponíveis e verifica a sua coerência."
+            },
+            {
+                "title": "Pontuação",
+                "description": "O agente avalia o potencial cliente segundo os seus critérios de qualificação e atribui-lhe uma prioridade."
+            },
+            {
+                "title": "Encaminhamento",
+                "description": "Os leads qualificados são transmitidos ao comercial certo; os menos maduros ficam em acompanhamento."
+            }
+        ],
+        "features": [
+            {
+                "title": "Qualificação segundo os seus critérios",
+                "description": "Avaliação dos potenciais clientes segundo as regras que define para a sua atividade."
+            },
+            {
+                "title": "Priorização",
+                "description": "Ordenação dos leads para orientar o esforço comercial para as melhores oportunidades."
+            },
+            {
+                "title": "Encaminhamento automático",
+                "description": "Atribuição dos potenciais clientes qualificados ao comercial ou à equipa certos."
+            },
+            {
+                "title": "Alojamento suíço",
+                "description": "Agente construído sobre o Azure AI Foundry e alojado no Azure na Suíça; os seus dados permanecem no perímetro suíço."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Esforço comercial direcionado",
+                "description": "Os seus comerciais concentram-se nos potenciais clientes mais promissores."
+            },
+            {
+                "title": "Maior agilidade de resposta",
+                "description": "Os leads recebidos são triados e encaminhados sem tempo de espera."
+            },
+            {
+                "title": "Decisão comercial preservada",
+                "description": "O agente propõe uma prioridade; a relação comercial continua conduzida pelas suas equipas."
+            }
+        ],
+        "faq": [
+            {
+                "q": "O agente contacta os potenciais clientes por si próprio?",
+                "a": "Qualifica e prioriza os leads, mas o contacto comercial continua conduzido pelas suas equipas. Decide o momento e o tom da abordagem."
+            },
+            {
+                "q": "Como define um bom lead?",
+                "a": "Segundo os critérios de qualificação que fornece, adaptados ao seu mercado e às suas ofertas."
+            },
+            {
+                "q": "Onde são processados os dados dos meus potenciais clientes?",
+                "a": "No Azure na Suíça. Permanecem no perímetro suíço ao longo de todo o processamento."
+            }
+        ],
+        "cta": {
+            "title": "Qualifique os seus leads automaticamente",
+            "description": "Um agente de IA suíço tria e prioriza os seus potenciais clientes; os seus comerciais concentram-se nas melhores oportunidades."
+        }
+    },
+    "document-data-extraction": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "Agente de IA · Extração de dados",
+            "title": "Extração de dados documentais por agente de IA",
+            "description": "Um agente de IA que extrai os dados estruturados dos seus documentos e os devolve prontos a integrar nos seus sistemas."
+        },
+        "answer": "A extração de dados documentais da houle.ai assenta num agente de IA que lê os seus documentos, extrai os campos relevantes e devolve-os num formato estruturado utilizável pelas suas ferramentas. O agente é construído sobre o Azure AI Foundry e alojado no Azure na Suíça, de modo que os seus documentos permanecem no perímetro suíço. As extrações incertas são assinaladas para verificação humana.",
+        "how": [
+            {
+                "title": "Submissão dos documentos",
+                "description": "Submete os seus documentos nos formatos que preferir, incluindo digitalizações e fotografias."
+            },
+            {
+                "title": "Reconhecimento dos campos",
+                "description": "O agente identifica os campos a extrair segundo o modelo de documento definido."
+            },
+            {
+                "title": "Estruturação",
+                "description": "Devolve os dados extraídos num formato estruturado pronto a integrar nos seus sistemas."
+            },
+            {
+                "title": "Controlo das exceções",
+                "description": "Os valores incertos são assinalados para verificação humana antes da integração."
+            }
+        ],
+        "features": [
+            {
+                "title": "Extração direcionada",
+                "description": "Identificação dos campos que define, seja qual for o tipo de documento."
+            },
+            {
+                "title": "Saída estruturada",
+                "description": "Devolução dos dados num formato diretamente utilizável pelas suas ferramentas."
+            },
+            {
+                "title": "Controlo de qualidade",
+                "description": "Assinalamento das extrações com baixo grau de confiança para verificação humana."
+            },
+            {
+                "title": "Alojamento suíço",
+                "description": "Agente construído sobre o Azure AI Foundry e alojado no Azure na Suíça; os seus documentos permanecem no perímetro suíço."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Fim da introdução manual",
+                "description": "Os dados são extraídos automaticamente em vez de reintroduzidos à mão."
+            },
+            {
+                "title": "Integração facilitada",
+                "description": "As saídas estruturadas integram-se diretamente nas suas aplicações de negócio."
+            },
+            {
+                "title": "Qualidade verificada",
+                "description": "Os casos incertos são controlados por um humano antes da integração."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Que tipos de documentos o agente processa?",
+                "a": "Processa uma grande variedade de documentos (faturas, formulários, contratos, extratos) em diferentes formatos, incluindo digitalizações e fotografias."
+            },
+            {
+                "q": "O que acontece em caso de dúvida sobre um dado?",
+                "a": "O agente assinala as extrações com baixo grau de confiança para verificação humana em vez de as integrar sem controlo."
+            },
+            {
+                "q": "Os meus documentos permanecem na Suíça?",
+                "a": "Sim. O processamento ocorre no Azure na Suíça e os seus documentos permanecem no perímetro suíço."
+            }
+        ],
+        "cta": {
+            "title": "Extraia os seus dados documentais automaticamente",
+            "description": "Um agente de IA suíço lê os seus documentos e devolve dados estruturados, prontos a integrar nos seus sistemas."
+        }
+    },
+    "word-contract-drafting": {
+        "product": "word-addin",
+        "hero": {
+            "badge": "Suplemento Word · Contratos",
+            "title": "Redação de contratos no Word com IA",
+            "description": "O suplemento Word da houle.ai ajuda-o a redigir e adaptar os seus contratos sem sair do documento."
+        },
+        "answer": "A redação de contratos com a houle.ai faz-se diretamente no Microsoft Word, graças ao suplemento Word que propõe cláusulas, adapta o texto ao seu contexto e assinala os pontos a verificar. O suplemento apoia-se na IA da houle.ai alojada no Azure na Suíça, de modo que o conteúdo dos seus contratos permanece no perímetro suíço. Mantém o controlo sobre cada alteração feita ao documento.",
+        "how": [
+            {
+                "title": "Abertura no Word",
+                "description": "Ativa o suplemento houle.ai diretamente no seu documento Word."
+            },
+            {
+                "title": "Geração de cláusulas",
+                "description": "Descreve a necessidade e o suplemento propõe cláusulas a partir dos seus modelos."
+            },
+            {
+                "title": "Adaptação ao contexto",
+                "description": "O suplemento ajusta a formulação às partes, à duração e às condições do seu contrato."
+            },
+            {
+                "title": "Revisão e inserção",
+                "description": "Revê as propostas e insere no documento as que validar."
+            }
+        ],
+        "features": [
+            {
+                "title": "Integrado no Word",
+                "description": "Assistência à redação sem sair do documento nem mudar de ferramenta."
+            },
+            {
+                "title": "Cláusulas a partir dos seus modelos",
+                "description": "Geração e adaptação de cláusulas conformes aos seus padrões internos."
+            },
+            {
+                "title": "Reformulação assistida",
+                "description": "Ajuda a clarificar, encurtar ou reforçar uma cláusula existente."
+            },
+            {
+                "title": "Alojamento suíço",
+                "description": "IA alojada no Azure na Suíça; o conteúdo dos seus contratos permanece no perímetro suíço."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Redação acelerada",
+                "description": "As primeiras versões das cláusulas são geradas em instantes, no Word."
+            },
+            {
+                "title": "Coerência dos contratos",
+                "description": "As cláusulas propostas mantêm-se alinhadas com os seus modelos e a sua terminologia."
+            },
+            {
+                "title": "Controlo do redator",
+                "description": "Nada é inserido sem a sua validação; decide cada alteração."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Preciso de mudar de ferramenta para o utilizar?",
+                "a": "Não. O suplemento funciona diretamente no Microsoft Word; redige e valida sem sair do documento."
+            },
+            {
+                "q": "O suplemento substitui um jurista?",
+                "a": "Não. Acelera a redação e propõe cláusulas, mas a revisão e a validação jurídicas continuam a seu cargo."
+            },
+            {
+                "q": "O conteúdo dos meus contratos permanece confidencial?",
+                "a": "Sim. A IA está alojada no Azure na Suíça e o conteúdo dos seus contratos permanece no perímetro suíço."
+            }
+        ],
+        "cta": {
+            "title": "Redija os seus contratos mais depressa no Word",
+            "description": "Instale o suplemento Word da houle.ai e redija os seus contratos com a assistência de uma IA alojada na Suíça."
+        }
+    },
+    "word-report-generation": {
+        "product": "word-addin",
+        "hero": {
+            "badge": "Suplemento Word · Relatórios",
+            "title": "Geração de relatórios no Word com IA",
+            "description": "O suplemento Word da houle.ai ajuda-o a estruturar e redigir os seus relatórios profissionais sem sair do documento."
+        },
+        "answer": "A geração de relatórios com a houle.ai faz-se diretamente no Microsoft Word, graças ao suplemento Word que estrutura as suas ideias, redige as secções e harmoniza o tom do seu documento. O suplemento apoia-se na IA da houle.ai alojada no Azure na Suíça, de modo que o conteúdo dos seus relatórios permanece no perímetro suíço. Mantém o controlo sobre cada passagem inserida.",
+        "how": [
+            {
+                "title": "Definição da estrutura",
+                "description": "Indica o tema e o objetivo; o suplemento propõe uma estrutura de relatório."
+            },
+            {
+                "title": "Redação das secções",
+                "description": "Redige cada secção a partir dos seus pontos essenciais e dos elementos que fornece."
+            },
+            {
+                "title": "Harmonização",
+                "description": "O suplemento uniformiza o tom, o estilo e a terminologia em todo o documento."
+            },
+            {
+                "title": "Revisão e validação",
+                "description": "Revê, ajusta e valida o texto inserido no seu relatório."
+            }
+        ],
+        "features": [
+            {
+                "title": "Integrado no Word",
+                "description": "Ajuda à redação diretamente no seu documento, sem ferramenta adicional."
+            },
+            {
+                "title": "Estrutura guiada",
+                "description": "Proposta de uma estrutura clara adaptada ao tipo de relatório pretendido."
+            },
+            {
+                "title": "Estilo coerente",
+                "description": "Harmonização do tom e da terminologia em todo o documento."
+            },
+            {
+                "title": "Alojamento suíço",
+                "description": "IA alojada no Azure na Suíça; o conteúdo dos seus relatórios permanece no perímetro suíço."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Relatórios redigidos mais depressa",
+                "description": "As secções são pré-redigidas a partir dos seus pontos essenciais, no Word."
+            },
+            {
+                "title": "Resultado profissional",
+                "description": "O tom e a apresentação mantêm-se coerentes em todo o documento."
+            },
+            {
+                "title": "Autor ao comando",
+                "description": "Valida cada passagem antes de ser inserida no seu relatório."
+            }
+        ],
+        "faq": [
+            {
+                "q": "O suplemento funciona no Word?",
+                "a": "Sim. Integra-se diretamente no Microsoft Word; gera e valida o seu relatório sem mudar de ferramenta."
+            },
+            {
+                "q": "Pode seguir a nossa linha editorial?",
+                "a": "Sim. Harmoniza o tom e a terminologia segundo as suas preferências, definidas durante a implementação."
+            },
+            {
+                "q": "O conteúdo dos meus relatórios é confidencial?",
+                "a": "Sim. A IA está alojada no Azure na Suíça e o conteúdo dos seus relatórios permanece no perímetro suíço."
+            }
+        ],
+        "cta": {
+            "title": "Redija os seus relatórios mais depressa no Word",
+            "description": "Instale o suplemento Word da houle.ai e estruture os seus relatórios com a assistência de uma IA alojada na Suíça."
+        }
+    },
+    "outlook-email-drafting": {
+        "product": "outlook-addin",
+        "hero": {
+            "badge": "Suplemento Outlook · Redação",
+            "title": "Redação de e-mails no Outlook com IA",
+            "description": "O suplemento Outlook da houle.ai ajuda-o a redigir e adaptar os seus e-mails profissionais, diretamente na sua caixa."
+        },
+        "answer": "A redação de e-mails com a houle.ai faz-se diretamente no Microsoft Outlook, graças ao suplemento Outlook que propõe rascunhos, adapta o tom e permite ganhar tempo nas suas respostas. O suplemento apoia-se na IA da houle.ai alojada no Azure na Suíça, de modo que o conteúdo dos seus e-mails permanece no perímetro suíço. Cada mensagem continua a ser revista e enviada por si.",
+        "how": [
+            {
+                "title": "Abertura no Outlook",
+                "description": "Ativa o suplemento houle.ai diretamente no seu correio Outlook."
+            },
+            {
+                "title": "Descrição da intenção",
+                "description": "Indica a mensagem a transmitir, ou o e-mail a que responder."
+            },
+            {
+                "title": "Geração do rascunho",
+                "description": "O suplemento redige um projeto de e-mail com o tom apropriado, a partir do contexto."
+            },
+            {
+                "title": "Revisão e envio",
+                "description": "Ajusta o rascunho se necessário e envia-o você mesmo."
+            }
+        ],
+        "features": [
+            {
+                "title": "Integrado no Outlook",
+                "description": "Ajuda à redação sem sair do seu correio nem copiar e colar entre ferramentas."
+            },
+            {
+                "title": "Tom adaptável",
+                "description": "Geração de mensagens formais ou diretas segundo o destinatário e o contexto."
+            },
+            {
+                "title": "Respostas assistidas",
+                "description": "Rascunhos de resposta que têm em conta o fio de conversação existente."
+            },
+            {
+                "title": "Alojamento suíço",
+                "description": "IA alojada no Azure na Suíça; o conteúdo dos seus e-mails permanece no perímetro suíço."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "E-mails redigidos mais depressa",
+                "description": "Parte de um rascunho pronto a ajustar em vez de uma página em branco."
+            },
+            {
+                "title": "Tom profissional",
+                "description": "As suas mensagens mantêm-se claras e adaptadas a cada destinatário."
+            },
+            {
+                "title": "Envio controlado",
+                "description": "Revê e envia cada e-mail você mesmo; nada é enviado automaticamente."
+            }
+        ],
+        "faq": [
+            {
+                "q": "O suplemento envia os e-mails por mim?",
+                "a": "Não. Prepara rascunhos; revê-os e envia-os você mesmo. Mantém o controlo sobre cada mensagem."
+            },
+            {
+                "q": "Funciona no Outlook?",
+                "a": "Sim. Integra-se diretamente no Microsoft Outlook e assiste-o sem sair da sua caixa de entrada."
+            },
+            {
+                "q": "O conteúdo dos meus e-mails permanece confidencial?",
+                "a": "Sim. A IA está alojada no Azure na Suíça e o conteúdo dos seus e-mails permanece no perímetro suíço."
+            }
+        ],
+        "cta": {
+            "title": "Redija os seus e-mails mais depressa no Outlook",
+            "description": "Instale o suplemento Outlook da houle.ai e ganhe tempo nos seus e-mails, com uma IA alojada na Suíça."
+        }
+    },
+    "outlook-inbox-triage": {
+        "product": "outlook-addin",
+        "hero": {
+            "badge": "Suplemento Outlook · Triagem",
+            "title": "Triagem da caixa de entrada no Outlook com IA",
+            "description": "O suplemento Outlook da houle.ai ajuda-o a triar, resumir e priorizar os seus e-mails, diretamente na sua caixa."
+        },
+        "answer": "A triagem da caixa de entrada com a houle.ai faz-se diretamente no Microsoft Outlook, graças ao suplemento Outlook que resume os seus e-mails, classifica-os por prioridade e sugere as ações a realizar. O suplemento apoia-se na IA da houle.ai alojada no Azure na Suíça, de modo que os seus e-mails permanecem no perímetro suíço. Decide as ações a aplicar a cada mensagem.",
+        "how": [
+            {
+                "title": "Análise da caixa",
+                "description": "O suplemento percorre os seus e-mails recebidos para compreender o assunto e a urgência."
+            },
+            {
+                "title": "Resumo",
+                "description": "Resume as mensagens longas ou os fios de conversação para uma leitura rápida."
+            },
+            {
+                "title": "Priorização",
+                "description": "O suplemento destaca as mensagens a tratar primeiro segundo os seus critérios."
+            },
+            {
+                "title": "Sugestão de ação",
+                "description": "Propõe uma ação (responder, arquivar, reencaminhar) que valida antes da aplicação."
+            }
+        ],
+        "features": [
+            {
+                "title": "Integrado no Outlook",
+                "description": "Triagem e resumo sem sair do seu correio."
+            },
+            {
+                "title": "Resumos de fios",
+                "description": "Síntese das longas conversações para captar o essencial num relance."
+            },
+            {
+                "title": "Priorização inteligente",
+                "description": "Destaque das mensagens urgentes ou importantes segundo as suas regras."
+            },
+            {
+                "title": "Alojamento suíço",
+                "description": "IA alojada no Azure na Suíça; os seus e-mails permanecem no perímetro suíço."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Caixa de entrada controlada",
+                "description": "Identifica rapidamente o que importa e trata os seus e-mails de forma mais eficiente."
+            },
+            {
+                "title": "Leitura acelerada",
+                "description": "Os resumos evitam-lhe percorrer longos fios de conversação."
+            },
+            {
+                "title": "Ações sob controlo",
+                "description": "O suplemento sugere, mas valida cada ação antes de a aplicar."
+            }
+        ],
+        "faq": [
+            {
+                "q": "O suplemento move os meus e-mails automaticamente?",
+                "a": "Não. Sugere ações (arquivar, responder, reencaminhar), mas valida-as antes de serem aplicadas."
+            },
+            {
+                "q": "Funciona no Outlook?",
+                "a": "Sim. Integra-se diretamente no Microsoft Outlook e ajuda-o a triar sem sair da sua caixa."
+            },
+            {
+                "q": "Os meus e-mails permanecem confidenciais?",
+                "a": "Sim. A IA está alojada no Azure na Suíça e os seus e-mails permanecem no perímetro suíço."
+            }
+        ],
+        "cta": {
+            "title": "Retome o controlo da sua caixa de entrada",
+            "description": "Instale o suplemento Outlook da houle.ai para triar e resumir os seus e-mails, com uma IA alojada na Suíça."
+        }
+    },
+    "swiss-gpt-knowledge-assistant": {
+        "product": "swiss-gpt",
+        "hero": {
+            "badge": "Swiss GPT · Base de conhecimento",
+            "title": "Assistente de conhecimento empresarial com o Swiss GPT",
+            "description": "O Swiss GPT consulta a base documental da sua empresa e responde aos seus colaboradores a partir dos seus próprios conteúdos."
+        },
+        "answer": "O assistente de conhecimento da houle.ai assenta no Swiss GPT, que consulta a base documental da sua empresa e responde às perguntas dos seus colaboradores a partir dos seus próprios conteúdos, com as respetivas fontes. O Swiss GPT está alojado no Azure na Suíça, de modo que os seus documentos e as suas trocas permanecem no perímetro suíço. Cada resposta remete para os documentos utilizados para que as suas equipas os possam verificar.",
+        "how": [
+            {
+                "title": "Ligação das suas fontes",
+                "description": "Liga ao Swiss GPT os seus documentos internos: procedimentos, contratos, notas e bases de negócio."
+            },
+            {
+                "title": "Pergunta em linguagem natural",
+                "description": "Os seus colaboradores colocam as suas perguntas como a um colega, sem consultas técnicas."
+            },
+            {
+                "title": "Resposta referenciada",
+                "description": "O Swiss GPT responde a partir dos seus conteúdos e cita os documentos utilizados."
+            },
+            {
+                "title": "Verificação",
+                "description": "As suas equipas abrem as fontes citadas para confirmar e aprofundar a resposta."
+            }
+        ],
+        "features": [
+            {
+                "title": "Respostas sobre os seus conteúdos",
+                "description": "O Swiss GPT responde a partir da sua base documental, e não de conhecimentos genéricos."
+            },
+            {
+                "title": "Fontes citadas",
+                "description": "Cada resposta remete para os documentos utilizados para verificação."
+            },
+            {
+                "title": "Acessos controlados",
+                "description": "Os direitos de acesso dos seus colaboradores são respeitados nas respostas fornecidas."
+            },
+            {
+                "title": "Alojamento suíço",
+                "description": "Swiss GPT alojado no Azure na Suíça; os seus documentos permanecem no perímetro suíço."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Conhecimento acessível a todos",
+                "description": "Os seus colaboradores encontram a informação certa sem procurar nas pastas."
+            },
+            {
+                "title": "Respostas fiáveis",
+                "description": "As fontes citadas permitem verificar cada resposta e contextualizá-la."
+            },
+            {
+                "title": "Conhecimento interno preservado",
+                "description": "Os seus conteúdos permanecem consigo, alojados na Suíça, sem alimentar qualquer modelo público."
+            }
+        ],
+        "faq": [
+            {
+                "q": "O Swiss GPT inventa respostas?",
+                "a": "Responde a partir dos seus documentos e cita as suas fontes, o que permite verificar. Foi concebido para se apoiar nos seus conteúdos em vez de conhecimentos genéricos."
+            },
+            {
+                "q": "Respeita os direitos de acesso de cada um?",
+                "a": "Sim. As respostas têm em conta as autorizações de cada colaborador sobre os seus documentos."
+            },
+            {
+                "q": "Onde são alojados os nossos documentos?",
+                "a": "No Azure na Suíça. Os seus documentos e as suas trocas permanecem no perímetro suíço e não alimentam qualquer modelo público."
+            }
+        ],
+        "cta": {
+            "title": "Torne o conhecimento da sua empresa acessível",
+            "description": "Com o Swiss GPT, os seus colaboradores consultam a sua base documental e obtêm respostas referenciadas, alojadas na Suíça."
+        }
+    },
+    "swiss-gpt-secure-chat": {
+        "product": "swiss-gpt",
+        "hero": {
+            "badge": "Swiss GPT · Chat seguro",
+            "title": "Chat de IA seguro para a empresa com o Swiss GPT",
+            "description": "O Swiss GPT oferece aos seus colaboradores um assistente conversacional alojado na Suíça, sem que as suas trocas saiam do perímetro suíço."
+        },
+        "answer": "O chat seguro da houle.ai assenta no Swiss GPT, um assistente conversacional para a empresa cujas trocas estão alojadas no Azure na Suíça e permanecem no perímetro suíço. Os seus colaboradores redigem, resumem, traduzem e analisam com total confidencialidade, sem expor os seus dados a serviços de grande público. As suas conversas não servem para treinar qualquer modelo público.",
+        "how": [
+            {
+                "title": "Acesso seguro",
+                "description": "Os seus colaboradores ligam-se ao Swiss GPT através da autenticação da sua empresa."
+            },
+            {
+                "title": "Conversação",
+                "description": "Colocam as suas perguntas e pedem redação, síntese, tradução ou análise."
+            },
+            {
+                "title": "Processamento na Suíça",
+                "description": "As trocas são processadas no Azure na Suíça e permanecem no perímetro suíço."
+            },
+            {
+                "title": "Utilização quotidiana",
+                "description": "O assistente integra-se no trabalho corrente das suas equipas, sem expor os seus dados a ferramentas de grande público."
+            }
+        ],
+        "features": [
+            {
+                "title": "Assistente versátil",
+                "description": "Redação, síntese, tradução e análise para o trabalho quotidiano das suas equipas."
+            },
+            {
+                "title": "Confidencialidade",
+                "description": "As suas trocas permanecem no perímetro suíço e não servem para treinar qualquer modelo público."
+            },
+            {
+                "title": "Acesso gerido",
+                "description": "Ligação através da autenticação da sua empresa e gestão dos utilizadores."
+            },
+            {
+                "title": "Alojamento suíço",
+                "description": "Swiss GPT alojado no Azure na Suíça; as suas conversas permanecem no perímetro suíço."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "IA geral sem compromissos",
+                "description": "As suas equipas beneficiam de um assistente poderoso sem expor os seus dados a serviços de grande público."
+            },
+            {
+                "title": "Adoção simples",
+                "description": "Uma interface de chat familiar, acessível sem competências técnicas."
+            },
+            {
+                "title": "Dados controlados",
+                "description": "As suas trocas permanecem na Suíça, no perímetro suíço, sob o seu controlo."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Em que difere o Swiss GPT de um chat de IA de grande público?",
+                "a": "O Swiss GPT está alojado no Azure na Suíça e as suas trocas permanecem no perímetro suíço, sem alimentar qualquer modelo público. Os seus dados empresariais não são expostos a um serviço de grande público."
+            },
+            {
+                "q": "Os meus colaboradores podem utilizá-lo no dia a dia?",
+                "a": "Sim. A interface de chat é familiar e serve para redigir, resumir, traduzir ou analisar sem competências técnicas específicas."
+            },
+            {
+                "q": "As nossas conversas servem para treinar a IA?",
+                "a": "Não. As suas conversas permanecem no perímetro suíço e não são utilizadas para treinar qualquer modelo público."
+            }
+        ],
+        "cta": {
+            "title": "Ofereça um chat de IA seguro às suas equipas",
+            "description": "Com o Swiss GPT, os seus colaboradores beneficiam de um assistente conversacional alojado na Suíça, sem expor os seus dados."
+        }
+    }
+}

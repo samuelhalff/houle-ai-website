@@ -1,0 +1,57 @@
+{
+    "Hero": {
+        "Badge": "AI agents hosted in Switzerland",
+        "Title": "Specialised AI agents for your business",
+        "Description": "AI agents that carry out business tasks end to end — reading documents, data entry, drafting, follow-up — hosted on Azure in Switzerland, with human validation at every sensitive step."
+    },
+    "Answer": "An AI agent is software that pursues a goal autonomously: it perceives a situation (an incoming email, an invoice, a form), reasons about what needs to be done, acts using your tools (Microsoft 365, your ERP, your in-house GPT) and submits the result to a person for validation. Our agents are hosted on Azure in Switzerland and built with Azure AI Foundry, so that your data stays within Switzerland and every decision remains traceable and supervised.",
+    "How": {
+        "Title": "How an AI agent works",
+        "Description": "Four steps, from the input signal through to human validation.",
+        "Perceive": {
+            "Title": "1. Perceive",
+            "Description": "The agent receives an input — an email, a PDF document, a row in a spreadsheet, a request in a chat — and extracts the relevant information from it through language understanding and document reading."
+        },
+        "Reason": {
+            "Title": "2. Reason and plan",
+            "Description": "It breaks the goal down into steps, decides the order of actions and selects the data and tools required. It draws on your business rules and internal sources to stay grounded in your context."
+        },
+        "Act": {
+            "Title": "3. Act through tools",
+            "Description": "The agent carries out actions by calling connected tools: searching SharePoint, writing to your ERP, generating a Word document, drafting an email. It invents nothing: it works through your actual systems."
+        },
+        "Review": {
+            "Title": "4. Human validation",
+            "Description": "Before any action with a real-world effect, a member of your team reviews and approves it. The agent proposes, the human decides. You retain control, traceability and ultimate responsibility."
+        }
+    },
+    "Features": {
+        "Title": "What our agents can do",
+        "Tools": {
+            "Title": "Access to your tools",
+            "Description": "The agents connect to Microsoft 365, SharePoint, Outlook, your ERP and your internal APIs to read and write where the work actually happens — with no manual copy-pasting."
+        },
+        "Grounding": {
+            "Title": "Grounded in your data",
+            "Description": "Every response draws on your documents, your rules and your in-house GPT hosted in Switzerland, which reduces errors and makes it possible to cite the sources used."
+        },
+        "Governance": {
+            "Title": "Governance and audit",
+            "Description": "Action logging, access controls and built-in human validation checkpoints. You know what the agent did, when and on which data."
+        },
+        "Integration": {
+            "Title": "Swiss hosting",
+            "Description": "The agents are deployed on Azure in Switzerland with Azure AI Foundry. Your data stays within Switzerland, in line with your data governance."
+        }
+    },
+    "UseCases": {
+        "Eyebrow": "Use cases",
+        "Title": "Agents for real-world processes",
+        "Description": "Each agent is designed for a specific business process. Explore the use cases most in demand among Swiss professional services firms.",
+        "AllLink": "See all solutions"
+    },
+    "CTA": {
+        "Title": "Put an AI agent to work",
+        "Description": "Let's talk about your most time-consuming processes. Together we identify the first agent to deploy and its human validation framework."
+    }
+}

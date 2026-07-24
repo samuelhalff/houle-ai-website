@@ -1,0 +1,1542 @@
+{
+    "accounting-automation": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "KI-Agent · Buchhaltung",
+            "title": "Buchhaltungsautomatisierung durch KI-Agent",
+            "description": "Ein KI-Agent von houle.ai, der Ihre Buchungen verarbeitet, Ihre Konten abstimmt und Ihre Abschlüsse vorbereitet – unter der Kontrolle Ihrer Buchhalter."
+        },
+        "answer": "Die Buchhaltungsautomatisierung von houle.ai beruht auf einem KI-Agenten, der Ihre Buchungen anhand der eingegangenen Belege erfasst, klassifiziert und abstimmt und anschliessend Buchungsvorschläge vorbereitet, die Ihr Team freigibt. Der Agent basiert auf Azure AI Foundry und wird in der Schweiz auf Azure gehostet, sodass Ihre Daten im schweizerischen Umfeld bleiben. Jede strukturierende Aktion durchläuft eine menschliche Freigabe, bevor sie in Ihrer Buchhaltungssoftware erfasst wird.",
+        "how": [
+            {
+                "title": "Erfassung der Belege",
+                "description": "Der Agent holt Rechnungen, Auszüge und Belege aus Ihren Postfächern, gemeinsamen Ordnern oder Fachanwendungen und normalisiert sie."
+            },
+            {
+                "title": "Buchungsvorschlag",
+                "description": "Er schlägt für jeden Beleg das Konto, die Art und den MWST-Satz vor und stützt sich dabei auf Ihren Kontenplan und Ihre Buchungsgewohnheiten."
+            },
+            {
+                "title": "Bankabstimmung",
+                "description": "Der Agent gleicht die Bankbewegungen mit den entsprechenden Buchungen ab und weist auf zu prüfende Abweichungen hin."
+            },
+            {
+                "title": "Freigabe und Abschluss",
+                "description": "Ihr Buchhalter gibt die Vorschläge frei oder korrigiert sie; der Agent erfasst anschliessend die freigegebenen Buchungen und bereitet die Auswertungen für den Abschluss vor."
+            }
+        ],
+        "features": [
+            {
+                "title": "Unterstützte Verbuchung",
+                "description": "Erkennung von Konto und MWST-Satz anhand der Belege, mit Erlernen Ihrer internen Regeln."
+            },
+            {
+                "title": "Automatisierte Abstimmung",
+                "description": "Abgleich der Bankauszüge und Hervorhebung der Differenzen für eine rasche Bearbeitung."
+            },
+            {
+                "title": "Vollständiger Audit-Trail",
+                "description": "Jeder Vorschlag bewahrt den Ursprungsbeleg und den Urheber der Freigabe – für eine lückenlose Nachvollziehbarkeit."
+            },
+            {
+                "title": "Hosting in der Schweiz",
+                "description": "Agent auf Azure AI Foundry aufgebaut und in der Schweiz auf Azure gehostet; Ihre Daten bleiben im schweizerischen Umfeld."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Weniger manuelle Erfassung",
+                "description": "Ihre Buchhalter konzentrieren sich auf Analyse und Beratung statt auf das Neuerfassen von Belegen."
+            },
+            {
+                "title": "Schnellere Abschlüsse",
+                "description": "Buchungen und Abstimmungen werden laufend vorbereitet, was die Belastung in den Abschlussphasen verringert."
+            },
+            {
+                "title": "Kontrolle bleibt erhalten",
+                "description": "Nichts wird ohne menschliche Freigabe verbucht; der Agent schlägt vor, Ihr Team entscheidet."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Ersetzt der Agent meinen Buchhalter?",
+                "a": "Nein. Er bereitet die Buchungen vor und schlägt sie vor, aber jede strukturierende Verbuchung wird von einem Buchhalter freigegeben. Ziel ist es, die Erfassung zu automatisieren, nicht die Verantwortung."
+            },
+            {
+                "q": "Lässt er sich in meine Buchhaltungssoftware integrieren?",
+                "a": "Der Agent verbindet sich mit den wichtigsten von Schweizer Treuhandgesellschaften genutzten Programmen und kann bei der Einrichtung an Ihre Umgebung angepasst werden."
+            },
+            {
+                "q": "Wo werden meine Buchhaltungsdaten gehostet?",
+                "a": "In der Schweiz auf Azure. Ihre Daten bleiben im schweizerischen Umfeld und werden nicht zum Trainieren öffentlicher Modelle verwendet."
+            }
+        ],
+        "cta": {
+            "title": "Automatisieren Sie Ihre Buchhaltung mit einem Schweizer KI-Agenten",
+            "description": "Erfahren Sie, wie houle.ai die Erfassung erleichtern und Ihre Abschlüsse beschleunigen kann – und Ihre Buchhalter dabei am Steuer bleiben."
+        }
+    },
+    "mailroom-automation": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "KI-Agent · Posteingang",
+            "title": "Digitalisierung und Sortierung des Posteingangs durch KI-Agent",
+            "description": "Ein KI-Agent, der Ihren eingehenden Posteingang digitalisiert, klassifiziert und an die richtigen Dossiers und die richtigen Personen weiterleitet."
+        },
+        "answer": "Die Posteingangsautomatisierung von houle.ai stützt sich auf einen KI-Agenten, der jedes eingegangene Dokument liest, die wichtigsten Informationen extrahiert, es klassifiziert und an den richtigen Mitarbeitenden oder das richtige Dossier weiterleitet. Der Agent basiert auf Azure AI Foundry und wird in der Schweiz auf Azure gehostet, damit Ihre Dokumente im schweizerischen Umfeld bleiben. Uneindeutige Fälle werden zur menschlichen Freigabe gemeldet, statt automatisch klassifiziert zu werden.",
+        "how": [
+            {
+                "title": "Digitalisierung",
+                "description": "Papier- oder elektronische Post wird digitalisiert und in verwertbaren Text umgewandelt, einschliesslich handschriftlicher oder gescannter Dokumente."
+            },
+            {
+                "title": "Datenextraktion",
+                "description": "Der Agent erkennt Absender, Betreff, Daten und nützliche Referenzen für jedes Dokument."
+            },
+            {
+                "title": "Klassifizierung",
+                "description": "Er ordnet den richtigen Dokumenttyp zu, verknüpft es mit dem richtigen Kunden oder Dossier und wendet Ihre Benennungsregeln an."
+            },
+            {
+                "title": "Weiterleitung",
+                "description": "Das Dokument wird an die richtige Person übermittelt oder im richtigen Ordner abgelegt; unsichere Fälle werden zur Freigabe zurückgestellt."
+            }
+        ],
+        "features": [
+            {
+                "title": "Multiformat-Lesung",
+                "description": "Verarbeitung von PDFs, Scans, Fotos und E-Mail-Anhängen, auch bei unterschiedlicher Dokumentqualität."
+            },
+            {
+                "title": "Intelligente Klassifizierung",
+                "description": "Automatische Zuordnung zum richtigen Kunden und Dokumenttyp nach Ihren Regeln."
+            },
+            {
+                "title": "Ausnahmenwarteschlange",
+                "description": "Nicht erkannte Dokumente werden für eine rasche menschliche Bearbeitung gebündelt, ohne den Ablauf zu blockieren."
+            },
+            {
+                "title": "Hosting in der Schweiz",
+                "description": "Agent auf Azure AI Foundry aufgebaut und in der Schweiz auf Azure gehostet; Ihre Dokumente bleiben im schweizerischen Umfeld."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Post schneller bearbeitet",
+                "description": "Die Dokumente gelangen ohne manuelle Sortierung direkt bei Eingang an die richtige Stelle."
+            },
+            {
+                "title": "Weniger Ablagefehler",
+                "description": "Die Zuordnung zum richtigen Dossier ist konsistent und dokumentiert, mit einem Audit-Trail."
+            },
+            {
+                "title": "Entlastete Teams",
+                "description": "Ihre Mitarbeitenden müssen nicht mehr jeden Umschlag öffnen und sortieren und können sich auf die Dossiers konzentrieren."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Verarbeitet der Agent auch Papierpost?",
+                "a": "Ja, sobald sie digitalisiert ist. Ausgehend von einem Scan oder Foto extrahiert er die Informationen, klassifiziert das Dokument und leitet es automatisch weiter."
+            },
+            {
+                "q": "Was passiert, wenn ein Dokument nicht erkannt wird?",
+                "a": "Es wird in eine Ausnahmenwarteschlange zur menschlichen Bearbeitung gestellt. Der Agent rät nicht: Er meldet unsichere Fälle, statt sie falsch zu klassifizieren."
+            },
+            {
+                "q": "Verlassen meine Dokumente die Schweiz?",
+                "a": "Nein. Die Verarbeitung erfolgt in der Schweiz auf Azure und Ihre Dokumente bleiben im schweizerischen Umfeld."
+            }
+        ],
+        "cta": {
+            "title": "Automatisieren Sie Ihren Posteingang",
+            "description": "Lassen Sie einen Schweizer KI-Agenten Ihre Dokumente digitalisieren, klassifizieren und weiterleiten, damit nichts verloren geht und alles an der richtigen Stelle ankommt."
+        }
+    },
+    "payroll-automation": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "KI-Agent · Löhne",
+            "title": "Automatisierung der Schweizer Lohnbuchhaltung durch KI-Agent",
+            "description": "Ein KI-Agent, der Ihre Lohnabrechnungen vorbereitet, die monatlichen Variablen sammelt und Ihre Schweizer Lohnbuchhaltung zuverlässiger macht."
+        },
+        "answer": "Die Lohnautomatisierung von houle.ai stützt sich auf einen KI-Agenten, der die variablen Elemente des Monats zusammenträgt, die Lohnabrechnungen vorbereitet und vor der Freigabe die Stimmigkeit der Sozialabgaben prüft. Der Agent basiert auf Azure AI Foundry und wird in der Schweiz auf Azure gehostet, sodass die Daten Ihrer Mitarbeitenden im schweizerischen Umfeld bleiben. Der Lohnverantwortliche gibt jeden Zyklus frei, bevor eine Auszahlung oder Meldung erfolgt.",
+        "how": [
+            {
+                "title": "Erfassung der Variablen",
+                "description": "Der Agent sammelt Stunden, Abwesenheiten, Prämien und Spesenabrechnungen aus Ihren Erfassungstools und Ihren E-Mails."
+            },
+            {
+                "title": "Vorbereitung der Abrechnungen",
+                "description": "Er berechnet die Lohnbestandteile und die Sozialabgaben (AHV, BVG, UVG) gemäss den Parametern jedes Mitarbeitenden."
+            },
+            {
+                "title": "Plausibilitätskontrollen",
+                "description": "Der Agent vergleicht den Monat mit dem vorangegangenen und meldet ungewöhnliche Abweichungen zur Prüfung vor dem Abschluss."
+            },
+            {
+                "title": "Freigabe durch den Verantwortlichen",
+                "description": "Der Lohnverantwortliche prüft und genehmigt den Zyklus; der Agent bereitet anschliessend die Abrechnungen und die Zahlungsdateien vor."
+            }
+        ],
+        "features": [
+            {
+                "title": "Schweizer Parameter",
+                "description": "Berücksichtigung der AHV-, BVG- und UVG-Beiträge sowie der kantonalen Besonderheiten der Schweizer Lohnbuchhaltung."
+            },
+            {
+                "title": "Anomalieerkennung",
+                "description": "Hervorhebung ungewöhnlicher Schwankungen von einem Monat zum anderen vor dem Abschluss."
+            },
+            {
+                "title": "Vorbereitung der Meldungen",
+                "description": "Erzeugung der für die Sozialabrechnungen und Lohnausweise notwendigen Elemente."
+            },
+            {
+                "title": "Hosting in der Schweiz",
+                "description": "Agent auf Azure AI Foundry aufgebaut und in der Schweiz auf Azure gehostet; die HR-Daten bleiben im schweizerischen Umfeld."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Zuverlässigere Lohnzyklen",
+                "description": "Die Plausibilitätskontrollen verringern das Fehlerrisiko vor den Auszahlungen."
+            },
+            {
+                "title": "Monatliche Zeitersparnis",
+                "description": "Das Sammeln und Aufbereiten der Variablen ist in jedem Zyklus automatisiert."
+            },
+            {
+                "title": "Menschliche Entscheidung bleibt gewahrt",
+                "description": "Keine Abrechnung wird ohne die Freigabe des Lohnverantwortlichen abgeschlossen."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Berücksichtigt der Agent die Besonderheiten der Schweizer Lohnbuchhaltung?",
+                "a": "Ja. Er berücksichtigt die AHV-, BVG- und UVG-Beiträge sowie die kantonalen Regeln gemäss den für Ihr Unternehmen definierten Parametern."
+            },
+            {
+                "q": "Führt er die Auszahlungen automatisch durch?",
+                "a": "Nicht ohne Freigabe. Der Agent bereitet die Abrechnungen und die Zahlungsdateien vor, aber der Verantwortliche genehmigt jeden Zyklus vor jeder Auszahlung."
+            },
+            {
+                "q": "Sind die Daten meiner Mitarbeitenden geschützt?",
+                "a": "Sie werden in der Schweiz auf Azure verarbeitet und bleiben im schweizerischen Umfeld, ohne zum Trainieren öffentlicher Modelle verwendet zu werden."
+            }
+        ],
+        "cta": {
+            "title": "Machen Sie Ihre Schweizer Lohnbuchhaltung zuverlässiger",
+            "description": "Übertragen Sie die Vorbereitung Ihrer Abrechnungen einem Schweizer KI-Agenten und behalten Sie die endgültige Freigabe in den Händen Ihres Lohnverantwortlichen."
+        }
+    },
+    "invoice-processing": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "KI-Agent · Lieferantenrechnungen",
+            "title": "Verarbeitung von Lieferantenrechnungen durch KI-Agent",
+            "description": "Ein KI-Agent, der Ihre Lieferantenrechnungen liest, die Daten extrahiert und die Verbuchung und Zahlung vorbereitet – unter menschlicher Kontrolle."
+        },
+        "answer": "Die Verarbeitung von Lieferantenrechnungen von houle.ai beruht auf einem KI-Agenten, der jede eingegangene Rechnung liest, die Beträge, die MWST und die Fälligkeiten extrahiert und anschliessend die Verbuchung und den Zahlungsvorschlag vorbereitet. Der Agent basiert auf Azure AI Foundry und wird in der Schweiz auf Azure gehostet, sodass Ihre Daten im schweizerischen Umfeld bleiben. Die Rechnungen werden vor jeder Zahlungsfreigabe einer menschlichen Freigabe unterzogen.",
+        "how": [
+            {
+                "title": "Eingang",
+                "description": "Der Agent sammelt die Rechnungen aus Ihren Postfächern, Lieferantenportalen und gemeinsamen Ordnern."
+            },
+            {
+                "title": "Extraktion",
+                "description": "Er erkennt den Lieferanten, die Netto- und Bruttobeträge, den MWST-Satz, das Datum und die Fälligkeit jeder Rechnung."
+            },
+            {
+                "title": "Prüfung und Zuordnung",
+                "description": "Der Agent gleicht die Rechnung mit der Bestellung oder dem Vertrag ab, schlägt die buchhalterische Zuordnung vor und erkennt Doppelerfassungen."
+            },
+            {
+                "title": "Freigabe und Zahlung",
+                "description": "Der Verantwortliche genehmigt die Rechnung; der Agent bereitet dann die Verbuchung und die Zahlungsdatei vor."
+            }
+        ],
+        "features": [
+            {
+                "title": "Zuverlässige Extraktion",
+                "description": "Erfassung der Beträge, der MWST und der Fälligkeiten, auch bei Rechnungen mit unterschiedlichem Layout."
+            },
+            {
+                "title": "Erkennung von Doppelerfassungen",
+                "description": "Aufspüren bereits eingegangener oder bereits bezahlter Rechnungen zur Vermeidung von Doppelzahlungen."
+            },
+            {
+                "title": "Freigabeprozess",
+                "description": "Weiterleitung der Rechnungen an die richtigen Genehmiger gemäss Ihren Schwellenwerten und internen Regeln."
+            },
+            {
+                "title": "Hosting in der Schweiz",
+                "description": "Agent auf Azure AI Foundry aufgebaut und in der Schweiz auf Azure gehostet; Ihre Daten bleiben im schweizerischen Umfeld."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Beschleunigte Kreditorenbuchhaltung",
+                "description": "Die Rechnungen werden automatisch erfasst und weitergeleitet, ohne manuelle Neuerfassung."
+            },
+            {
+                "title": "Weniger Zahlungsfehler",
+                "description": "Die Erkennung von Doppelerfassungen und die Plausibilitätskontrollen begrenzen fehlerhafte Zahlungen."
+            },
+            {
+                "title": "Kontrollierte Freigabe",
+                "description": "Keine Rechnung wird ohne menschliche Genehmigung gemäss Ihren Regeln bezahlt."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Bezahlt der Agent die Rechnungen automatisch?",
+                "a": "Nein. Er bereitet die Verbuchung und die Zahlungsdatei vor, aber die Zahlungsfreigabe unterliegt weiterhin einer menschlichen Freigabe gemäss Ihren Genehmigungsschwellen."
+            },
+            {
+                "q": "Verarbeitet er Rechnungen in verschiedenen Formaten?",
+                "a": "Ja. Er liest PDFs, Scans und elektronische Rechnungen mit unterschiedlichem Layout und extrahiert daraus die wichtigsten Daten."
+            },
+            {
+                "q": "Wo werden die Rechnungen verarbeitet?",
+                "a": "In der Schweiz auf Azure. Ihre Daten bleiben während der gesamten Verarbeitung im schweizerischen Umfeld."
+            }
+        ],
+        "cta": {
+            "title": "Beschleunigen Sie die Verarbeitung Ihrer Lieferantenrechnungen",
+            "description": "Ein Schweizer KI-Agent liest, prüft und bereitet Ihre Rechnungen vor; Sie behalten die Kontrolle über jede Zahlungsfreigabe."
+        }
+    },
+    "customer-email-triage": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "KI-Agent · Kunden-E-Mails",
+            "title": "Sortierung von Kunden-E-Mails durch KI-Agent",
+            "description": "Ein KI-Agent, der Ihre Kunden-E-Mails liest, klassifiziert und priorisiert und Antworten vorbereitet, die Ihr Team freigibt."
+        },
+        "answer": "Die Sortierung von Kunden-E-Mails von houle.ai stützt sich auf einen KI-Agenten, der jede eingehende Nachricht liest, ihr Anliegen und ihre Dringlichkeit erkennt, sie klassifiziert und eine Antwort oder Aktion vorschlägt. Der Agent basiert auf Azure AI Foundry und wird in der Schweiz auf Azure gehostet, sodass Ihr Schriftverkehr im schweizerischen Umfeld bleibt. Die Antworten an die Kunden werden vom Agenten vorbereitet, aber vor dem Versand von einem Mitarbeitenden freigegeben.",
+        "how": [
+            {
+                "title": "Lesen der E-Mails",
+                "description": "Der Agent analysiert jede eingehende Nachricht, einschliesslich der Anhänge, um das Anliegen zu verstehen."
+            },
+            {
+                "title": "Klassifizierung und Priorisierung",
+                "description": "Er weist eine Kategorie und einen Dringlichkeitsgrad zu und leitet die Nachricht anschliessend an die richtige Abteilung oder Person weiter."
+            },
+            {
+                "title": "Antwortvorschlag",
+                "description": "Der Agent verfasst eine Antwort auf Basis Ihrer Wissensdatenbank und Ihrer E-Mail-Vorlagen."
+            },
+            {
+                "title": "Freigabe und Versand",
+                "description": "Ein Mitarbeitender liest die Antwort gegen, passt sie bei Bedarf an und versendet dann die freigegebene Antwort."
+            }
+        ],
+        "features": [
+            {
+                "title": "Automatische Klassifizierung",
+                "description": "Kategorisierung der Anfragen nach Thema, Dringlichkeit und betroffener Abteilung."
+            },
+            {
+                "title": "Vorbereitete Antworten",
+                "description": "E-Mail-Entwürfe, erstellt auf Basis Ihrer internen Wissensdatenbank."
+            },
+            {
+                "title": "Priorisierung",
+                "description": "Hervorhebung dringender oder heikler Nachrichten für eine rasche Bearbeitung."
+            },
+            {
+                "title": "Hosting in der Schweiz",
+                "description": "Agent auf Azure AI Foundry aufgebaut und in der Schweiz auf Azure gehostet; Ihre E-Mails bleiben im schweizerischen Umfeld."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Schnellere Antworten",
+                "description": "Die Anfragen werden bereits bei Eingang sortiert und vorformuliert, was die Bearbeitungszeiten verkürzt."
+            },
+            {
+                "title": "Besser organisiertes Postfach",
+                "description": "Jede Nachricht wird ohne manuelle Sortierung klassifiziert und priorisiert."
+            },
+            {
+                "title": "Kontrollierter Tonfall",
+                "description": "Jede Antwort wird vor dem Versand von einem Mitarbeitenden gegengelesen, um Ihren Tonfall und Ihre Genauigkeit zu wahren."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Antwortet der Agent direkt den Kunden?",
+                "a": "Er bereitet die Antworten vor, aber ein Mitarbeitender gibt sie vor dem Versand frei. Sie behalten die Kontrolle darüber, was an Ihre Kunden geht."
+            },
+            {
+                "q": "Woher kennt er unsere üblichen Antworten?",
+                "a": "Er stützt sich auf Ihre Wissensdatenbank und Ihre E-Mail-Vorlagen, die Sie bei der Einrichtung bereitstellen."
+            },
+            {
+                "q": "Ist unser Kundenverkehr vertraulich?",
+                "a": "Ja. Die Verarbeitung erfolgt in der Schweiz auf Azure und Ihre E-Mails bleiben im schweizerischen Umfeld."
+            }
+        ],
+        "cta": {
+            "title": "Sortieren Sie Ihre Kunden-E-Mails automatisch",
+            "description": "Ein Schweizer KI-Agent klassifiziert, priorisiert und formuliert Ihre Antworten vor; Ihre Teams geben frei und versenden."
+        }
+    },
+    "research-agent": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "KI-Agent · Recherche",
+            "title": "KI-Rechercheagent für Ihre Analysen",
+            "description": "Ein KI-Agent, der die Informationen zusammenträgt, zusammenfasst und mit Quellen belegt, die Ihre Teams für Entscheidungen benötigen."
+        },
+        "answer": "Der Rechercheagent von houle.ai ist ein KI-Agent, der Ihre internen und öffentlichen Quellen abfragt, die relevanten Informationen zusammenfasst und eine strukturierte Antwort mit ihren Quellenangaben liefert. Der Agent basiert auf Azure AI Foundry und wird in der Schweiz auf Azure gehostet, sodass Ihre Recherchen im schweizerischen Umfeld bleiben. Jede Zusammenfassung nennt ihre Quellen, damit Ihre Mitarbeitenden sie überprüfen können.",
+        "how": [
+            {
+                "title": "Formulierung der Frage",
+                "description": "Sie stellen Ihre Frage in natürlicher Sprache und legen den erwarteten Umfang fest."
+            },
+            {
+                "title": "Erfassung der Quellen",
+                "description": "Der Agent fragt Ihre internen Dokumente und, falls erlaubt, relevante externe Quellen ab."
+            },
+            {
+                "title": "Zusammenfassung",
+                "description": "Er fasst die gefundenen Elemente zu einer strukturierten Antwort zusammen und unterscheidet dabei Fakten von Unsicherheiten."
+            },
+            {
+                "title": "Überprüfbare Quellen",
+                "description": "Jede Aussage ist mit ihrer Quelle verknüpft, damit Ihre Teams sie kontrollieren können."
+            }
+        ],
+        "features": [
+            {
+                "title": "Recherche aus mehreren Quellen",
+                "description": "Kombinierte Abfrage Ihrer internen Datenbanken und erlaubter externer Quellen."
+            },
+            {
+                "title": "Belegte Zusammenfassung",
+                "description": "Strukturierte Antworten, mit ihren Quellenangaben verknüpft, ohne nicht überprüfbare Aussagen."
+            },
+            {
+                "title": "Konfigurierbarer Umfang",
+                "description": "Steuerung der erlaubten Quellen und des erwarteten Detailgrads nach Ihren Bedürfnissen."
+            },
+            {
+                "title": "Hosting in der Schweiz",
+                "description": "Agent auf Azure AI Foundry aufgebaut und in der Schweiz auf Azure gehostet; Ihre Recherchen bleiben im schweizerischen Umfeld."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Beschleunigte Recherche",
+                "description": "Ihre Teams erhalten innert Augenblicken eine erste Zusammenfassung statt nach stundenlangem Lesen."
+            },
+            {
+                "title": "Besser fundierte Entscheidungen",
+                "description": "Die belegten Antworten erlauben es, eine Entscheidung auf überprüfbaren Elementen aufzubauen."
+            },
+            {
+                "title": "Kontrollierte Quellen",
+                "description": "Sie entscheiden, welche Quellen der Agent einsehen darf, und prüfen seine Belege."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Kann ich den Antworten des Agenten vertrauen?",
+                "a": "Der Agent nennt für jede Antwort seine Quellen, sodass Sie sie überprüfen können. Er ist darauf ausgelegt, Unsicherheiten zu melden, statt etwas zu erfinden."
+            },
+            {
+                "q": "Kann er in unseren internen Dokumenten suchen?",
+                "a": "Ja. Er fragt die internen Quellen ab, die Sie ihm erlauben, ergänzt durch externe Quellen, wenn Sie es wünschen."
+            },
+            {
+                "q": "Bleiben meine Anfragen vertraulich?",
+                "a": "Ja. Sie werden in der Schweiz auf Azure verarbeitet und bleiben im schweizerischen Umfeld."
+            }
+        ],
+        "cta": {
+            "title": "Geben Sie Ihren Teams einen KI-Rechercheagenten",
+            "description": "Erhalten Sie belegte Zusammenfassungen aus Ihren internen und externen Quellen, gehostet in der Schweiz."
+        }
+    },
+    "contract-review": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "KI-Agent · Verträge",
+            "title": "Vertragsprüfung durch KI-Agent",
+            "description": "Ein KI-Agent, der Ihre Verträge analysiert, riskante Klauseln erkennt und eine Zusammenfassung für Ihre Juristen vorbereitet."
+        },
+        "answer": "Die Vertragsprüfung von houle.ai beruht auf einem KI-Agenten, der Ihre Verträge liest, die zentralen Klauseln extrahiert und die anhand Ihrer Kriterien riskanten Punkte kennzeichnet. Der Agent basiert auf Azure AI Foundry und wird in der Schweiz auf Azure gehostet, sodass Ihre Verträge im schweizerischen Umfeld bleiben. Der Agent bereitet eine Analyse vor, aber die juristische Entscheidung obliegt stets Ihren Juristen.",
+        "how": [
+            {
+                "title": "Hochladen des Vertrags",
+                "description": "Sie reichen den zu analysierenden Vertrag im Format Ihrer Wahl ein."
+            },
+            {
+                "title": "Extraktion der Klauseln",
+                "description": "Der Agent erkennt die zentralen Klauseln: Laufzeit, Kündigung, Haftung, Vertraulichkeit, Vertragsstrafen."
+            },
+            {
+                "title": "Risikoanalyse",
+                "description": "Er vergleicht die Klauseln mit Ihren Kriterien und Ihren Mustern und kennzeichnet dann Abweichungen und Aufmerksamkeitspunkte."
+            },
+            {
+                "title": "Zusammenfassung zur Prüfung",
+                "description": "Der Agent erstellt eine kommentierte Zusammenfassung, die Ihr Jurist prüft und freigibt."
+            }
+        ],
+        "features": [
+            {
+                "title": "Klauselextraktion",
+                "description": "Automatisches Aufspüren der wesentlichen Klauseln und der Pflichten jeder Partei."
+            },
+            {
+                "title": "Abgleich mit Mustern",
+                "description": "Hervorhebung der Abweichungen gegenüber Ihren Musterklauseln und Ihrer internen Richtlinie."
+            },
+            {
+                "title": "Aufmerksamkeitspunkte",
+                "description": "Kennzeichnung ungewöhnlicher oder potenziell nachteiliger Klauseln zur Prüfung."
+            },
+            {
+                "title": "Hosting in der Schweiz",
+                "description": "Agent auf Azure AI Foundry aufgebaut und in der Schweiz auf Azure gehostet; Ihre Verträge bleiben im schweizerischen Umfeld."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Schnellere Prüfung",
+                "description": "Die zentralen Klauseln werden innert Minuten extrahiert und kommentiert, noch vor der juristischen Prüfung."
+            },
+            {
+                "title": "Hervorgehobene Prüfpunkte",
+                "description": "Die Abweichungen von Ihren Standards werden systematisch gekennzeichnet."
+            },
+            {
+                "title": "Juristische Entscheidung bleibt gewahrt",
+                "description": "Der Agent unterstützt Ihre Juristen; er ersetzt weder ihre Analyse noch ihre Freigabe."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Gibt der Agent eine Rechtsauskunft?",
+                "a": "Nein. Er extrahiert die Klauseln und kennzeichnet die Aufmerksamkeitspunkte, um die Prüfung zu beschleunigen, aber die rechtliche Beurteilung und Entscheidung bleiben Sache Ihrer Juristen."
+            },
+            {
+                "q": "Kann er unsere Musterklauseln nutzen?",
+                "a": "Ja. Sie stellen Ihre Muster und Kriterien bereit, und der Agent vergleicht jeden Vertrag mit Ihren Standards."
+            },
+            {
+                "q": "Sind meine Verträge vertraulich?",
+                "a": "Ja. Sie werden in der Schweiz auf Azure verarbeitet und bleiben im schweizerischen Umfeld."
+            }
+        ],
+        "cta": {
+            "title": "Beschleunigen Sie die Prüfung Ihrer Verträge",
+            "description": "Ein Schweizer KI-Agent extrahiert die Klauseln und kennzeichnet die Risiken; Ihre Juristen behalten die letzte Entscheidung."
+        }
+    },
+    "compliance-kyc-monitoring": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "KI-Agent · Compliance und KYC",
+            "title": "Compliance- und KYC-Überwachung durch KI-Agent",
+            "description": "Ein KI-Agent, der Ihre KYC-Dossiers vorbereitet und aktualisiert und die Compliance-Punkte überwacht – unter der Kontrolle Ihrer Verantwortlichen."
+        },
+        "answer": "Die Compliance- und KYC-Überwachung von houle.ai stützt sich auf einen KI-Agenten, der die Identifikationsunterlagen zusammenträgt, die Daten extrahiert und die zu prüfenden oder zu aktualisierenden Elemente kennzeichnet. Der Agent basiert auf Azure AI Foundry und wird in der Schweiz auf Azure gehostet, sodass Ihre Dossiers im schweizerischen Umfeld bleiben. Der Agent bereitet die Analyse vor und warnt, aber die Compliance-Entscheidung obliegt Ihrem Verantwortlichen.",
+        "how": [
+            {
+                "title": "Erfassung der Unterlagen",
+                "description": "Der Agent trägt die vom Kunden bereitgestellten Identifikationsunterlagen und Belege zusammen."
+            },
+            {
+                "title": "Extraktion und Kontrolle",
+                "description": "Er extrahiert die erforderlichen Daten, prüft ihre Stimmigkeit und erkennt fehlende oder abgelaufene Unterlagen."
+            },
+            {
+                "title": "Laufende Überwachung",
+                "description": "Der Agent verfolgt die Aktualisierungsfristen und kennzeichnet die periodisch zu überprüfenden Dossiers."
+            },
+            {
+                "title": "Warnung und Freigabe",
+                "description": "Die Aufmerksamkeitspunkte werden an den Compliance-Verantwortlichen weitergegeben, der über das weitere Vorgehen entscheidet."
+            }
+        ],
+        "features": [
+            {
+                "title": "Vorbereitete KYC-Dossiers",
+                "description": "Extraktion und Strukturierung der Identifikationsdaten anhand der bereitgestellten Unterlagen."
+            },
+            {
+                "title": "Erkennung von Lücken",
+                "description": "Aufspüren fehlender, unvollständiger oder abgelaufener Unterlagen."
+            },
+            {
+                "title": "Fristenverfolgung",
+                "description": "Erinnerungen an die zu aktualisierenden Dossiers gemäss Ihren Überprüfungszyklen."
+            },
+            {
+                "title": "Hosting in der Schweiz",
+                "description": "Agent auf Azure AI Foundry aufgebaut und in der Schweiz auf Azure gehostet; Ihre Dossiers bleiben im schweizerischen Umfeld."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Dossiers stets aktuell",
+                "description": "Fristen und fehlende Unterlagen werden laufend verfolgt, ohne dass etwas vergessen geht."
+            },
+            {
+                "title": "Entlastete Kontrollen",
+                "description": "Die Vorbereitung der Dossiers ist automatisiert, was Zeit für die Analyse freisetzt."
+            },
+            {
+                "title": "Verantwortung bleibt erhalten",
+                "description": "Der Agent warnt und dokumentiert; die Compliance-Entscheidung bleibt menschlich."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Entscheidet der Agent über die Compliance eines Dossiers?",
+                "a": "Nein. Er bereitet die Dossiers vor, prüft die Unterlagen und kennzeichnet die Aufmerksamkeitspunkte, aber die Compliance-Entscheidung obliegt Ihrem Verantwortlichen."
+            },
+            {
+                "q": "Hilft er, die Aktualisierungspflichten einzuhalten?",
+                "a": "Ja. Er verfolgt die Überprüfungsfristen und warnt Sie vor den zu aktualisierenden Dossiers gemäss Ihren internen Regeln."
+            },
+            {
+                "q": "Wo werden diese sensiblen Daten aufbewahrt?",
+                "a": "In der Schweiz auf Azure. Ihre KYC-Dossiers bleiben im schweizerischen Umfeld und dienen nicht dem Trainieren öffentlicher Modelle."
+            }
+        ],
+        "cta": {
+            "title": "Machen Sie Ihre KYC-Überwachung zuverlässiger",
+            "description": "Ein Schweizer KI-Agent bereitet Ihre Dossiers vor und verfolgt die Fristen; Ihre Verantwortlichen behalten die Compliance-Entscheidung."
+        }
+    },
+    "hr-onboarding": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "KI-Agent · HR-Onboarding",
+            "title": "Onboarding neuer Mitarbeitender durch KI-Agent",
+            "description": "Ein KI-Agent, der das Onboarding Ihrer neuen Mitarbeitenden orchestriert – von den vorzubereitenden Dokumenten bis zu den anzufordernden Zugängen."
+        },
+        "answer": "Das HR-Onboarding von houle.ai beruht auf einem KI-Agenten, der die Einstellungsdokumente vorbereitet, die Onboarding-Schritte verfolgt und die häufigen Fragen neuer Mitarbeitender beantwortet. Der Agent basiert auf Azure AI Foundry und wird in der Schweiz auf Azure gehostet, sodass die Daten Ihrer Mitarbeitenden im schweizerischen Umfeld bleiben. Verpflichtende Aktionen wie das Anlegen von Zugängen unterliegen einer menschlichen Freigabe.",
+        "how": [
+            {
+                "title": "Eröffnung des Dossiers",
+                "description": "Der Agent erstellt die Liste der Onboarding-Aufgaben anhand des Profils und der Stelle des neuen Mitarbeitenden."
+            },
+            {
+                "title": "Vorbereitung der Dokumente",
+                "description": "Er bereitet Verträge, Formulare und Informationsblätter anhand Ihrer HR-Vorlagen vor."
+            },
+            {
+                "title": "Verfolgung der Schritte",
+                "description": "Der Agent erinnert die Verantwortlichen an die vorzusehenden Zugänge, Geräte und Schulungen."
+            },
+            {
+                "title": "Begleitung des Mitarbeitenden",
+                "description": "Er beantwortet die häufigen Fragen des neuen Mitarbeitenden; die Zugangsanträge durchlaufen eine menschliche Freigabe."
+            }
+        ],
+        "features": [
+            {
+                "title": "Onboarding-Ablauf",
+                "description": "Erstellung einer auf die Stelle abgestimmten Aufgabenliste und Verfolgung ihres Fortschritts."
+            },
+            {
+                "title": "Vorausgefüllte Dokumente",
+                "description": "Vorbereitung der Verträge und Formulare anhand Ihrer internen Vorlagen."
+            },
+            {
+                "title": "Assistent für den Mitarbeitenden",
+                "description": "Antworten auf häufige Fragen zu Ferien, Lohn oder den Werkzeugen des Unternehmens."
+            },
+            {
+                "title": "Hosting in der Schweiz",
+                "description": "Agent auf Azure AI Foundry aufgebaut und in der Schweiz auf Azure gehostet; die HR-Daten bleiben im schweizerischen Umfeld."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Onboarding ohne Vergessen",
+                "description": "Jeder Schritt wird verfolgt, von den Dokumenten bis zu den Zugängen, für eine reibungslose Integration."
+            },
+            {
+                "title": "Entlastete HR",
+                "description": "Die wiederkehrenden Aufgaben sind automatisiert, was Zeit für den menschlichen Empfang freisetzt."
+            },
+            {
+                "title": "Kontrollierte Zugänge",
+                "description": "Das Anlegen von Zugängen und Verpflichtungen unterliegt weiterhin einer menschlichen Freigabe."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Legt der Agent die IT-Zugänge selbst an?",
+                "a": "Er bereitet die Anträge vor und verfolgt sie, aber das tatsächliche Anlegen der Zugänge durchläuft eine menschliche Freigabe. Er koordiniert, entscheidet aber nicht allein."
+            },
+            {
+                "q": "Kann er unsere Vertragsvorlagen nutzen?",
+                "a": "Ja. Er füllt Verträge und Formulare anhand Ihrer HR-Vorlagen vor, die Sie bei der Einrichtung bereitstellen."
+            },
+            {
+                "q": "Sind die Daten der Mitarbeitenden geschützt?",
+                "a": "Ja. Sie werden in der Schweiz auf Azure verarbeitet und bleiben im schweizerischen Umfeld."
+            }
+        ],
+        "cta": {
+            "title": "Vereinfachen Sie das Onboarding Ihrer Mitarbeitenden",
+            "description": "Ein Schweizer KI-Agent orchestriert das Onboarding und bereitet die Dokumente vor; Ihre HR-Teams behalten die Kontrolle über die Zugänge."
+        }
+    },
+    "quote-proposal-generation": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "KI-Agent · Offerten und Angebote",
+            "title": "Erstellung von Offerten und Angeboten durch KI-Agent",
+            "description": "Ein KI-Agent, der Ihre Offerten und Verkaufsangebote anhand Ihrer Vorlagen und Ihres Katalogs vorbereitet."
+        },
+        "answer": "Die Erstellung von Offerten und Angeboten von houle.ai stützt sich auf einen KI-Agenten, der eine Kundenanfrage anhand Ihrer Vorlagen, Tarife und Leistungen in eine strukturierte Offerte oder ein Angebot umwandelt. Der Agent basiert auf Azure AI Foundry und wird in der Schweiz auf Azure gehostet, sodass Ihre Geschäftsdaten im schweizerischen Umfeld bleiben. Jedes Angebot wird vor dem Versand von einem Vertriebsmitarbeitenden gegengelesen und freigegeben.",
+        "how": [
+            {
+                "title": "Analyse der Anfrage",
+                "description": "Der Agent liest die Kundenanfrage und erkennt die erwarteten Leistungen und den Umfang."
+            },
+            {
+                "title": "Aufbau des Angebots",
+                "description": "Er stellt die Leistungen zusammen, wendet Ihre Tarife und Konditionen an und berechnet die Beträge und die MWST."
+            },
+            {
+                "title": "Ausformulierung",
+                "description": "Der Agent verfasst die Offerte oder das Angebot anhand Ihrer Vorlagen und Ihres Corporate Designs."
+            },
+            {
+                "title": "Kaufmännische Freigabe",
+                "description": "Ein Vertriebsmitarbeitender liest gegen, passt bei Bedarf die Konditionen an und versendet dann das freigegebene Angebot."
+            }
+        ],
+        "features": [
+            {
+                "title": "Offerten aus Vorlagen",
+                "description": "Erstellung von Angeboten, die Ihrem Corporate Design und Ihren allgemeinen Geschäftsbedingungen entsprechen."
+            },
+            {
+                "title": "Konsistente Preisgestaltung",
+                "description": "Anwendung Ihres Leistungskatalogs, Ihrer Tarife und der MWST-Berechnung."
+            },
+            {
+                "title": "Personalisierung",
+                "description": "Anpassung des Angebots an den Kontext jedes Kunden anhand der eingegangenen Anfrage."
+            },
+            {
+                "title": "Hosting in der Schweiz",
+                "description": "Agent auf Azure AI Foundry aufgebaut und in der Schweiz auf Azure gehostet; Ihre Geschäftsdaten bleiben im schweizerischen Umfeld."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Schnellere Angebote",
+                "description": "Die Offerten sind innert Minuten vorformuliert, was Ihre Antwortzeiten verkürzt."
+            },
+            {
+                "title": "Kaufmännische Konsistenz",
+                "description": "Tarife, Konditionen und Darstellung bleiben an Ihren Standards ausgerichtet."
+            },
+            {
+                "title": "Kontrolle vor dem Versand",
+                "description": "Jedes Angebot wird vor dem Versand an den Kunden von einem Vertriebsmitarbeitenden freigegeben."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Versendet der Agent die Offerten direkt?",
+                "a": "Nein. Er bereitet das Angebot vor, aber ein Vertriebsmitarbeitender liest es gegen und gibt es vor dem Versand frei. Sie behalten die Kontrolle über Ihre Konditionen und Preise."
+            },
+            {
+                "q": "Nutzt er unsere Tarife und Vorlagen?",
+                "a": "Ja. Er stützt sich auf Ihren Leistungskatalog, Ihre Tarife und Ihre Angebotsvorlagen."
+            },
+            {
+                "q": "Sind unsere Geschäftsdaten geschützt?",
+                "a": "Ja. Sie werden in der Schweiz auf Azure verarbeitet und bleiben im schweizerischen Umfeld."
+            }
+        ],
+        "cta": {
+            "title": "Erstellen Sie Ihre Offerten schneller",
+            "description": "Ein Schweizer KI-Agent bereitet Ihre Angebote anhand Ihrer Vorlagen vor; Ihre Vertriebsmitarbeitenden geben frei und versenden."
+        }
+    },
+    "meeting-notes-agent": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "KI-Agent · Protokolle",
+            "title": "Sitzungsprotokolle durch KI-Agent",
+            "description": "Ein KI-Agent, der Ihre Sitzungen transkribiert, die Entscheidungen extrahiert und ein versandfertiges Protokoll vorbereitet."
+        },
+        "answer": "Der Protokoll-Agent von houle.ai transkribiert Ihre Sitzungen, leitet daraus die Entscheidungen und die nachzuverfolgenden Aufgaben ab und verfasst anschliessend ein strukturiertes Protokoll. Der Agent basiert auf Azure AI Foundry und wird in der Schweiz auf Azure gehostet, sodass Ihr Austausch im schweizerischen Umfeld bleibt. Das Protokoll wird vor der Verteilung von einem Teilnehmenden gegengelesen und freigegeben.",
+        "how": [
+            {
+                "title": "Transkription",
+                "description": "Der Agent transkribiert die Aufzeichnung oder die Notizen der Sitzung in strukturierten Text."
+            },
+            {
+                "title": "Extraktion der Kernpunkte",
+                "description": "Er leitet die getroffenen Entscheidungen, die offenen Punkte und die nachzuverfolgenden Aufgaben mit ihren Verantwortlichen ab."
+            },
+            {
+                "title": "Verfassen des Protokolls",
+                "description": "Der Agent erstellt ein klares Protokoll in Ihrem üblichen Format."
+            },
+            {
+                "title": "Freigabe und Verteilung",
+                "description": "Ein Teilnehmender liest das Protokoll gegen und gibt es frei, bevor es an die betroffenen Personen verteilt wird."
+            }
+        ],
+        "features": [
+            {
+                "title": "Automatische Transkription",
+                "description": "Getreue Wiedergabe des Austauschs anhand einer Aufzeichnung oder von Notizen."
+            },
+            {
+                "title": "Entscheidungen und Aufgaben",
+                "description": "Extraktion der Entscheidungen, der Verantwortlichen und der zugehörigen Fristen."
+            },
+            {
+                "title": "Anpassbares Format",
+                "description": "Protokolle, abgestimmt auf Ihre Vorlage und Ihren Darstellungsstil."
+            },
+            {
+                "title": "Hosting in der Schweiz",
+                "description": "Agent auf Azure AI Foundry aufgebaut und in der Schweiz auf Azure gehostet; Ihr Austausch bleibt im schweizerischen Umfeld."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Sofortige Protokolle",
+                "description": "Ein Protokollentwurf steht bereits nach Ende der Sitzung zur Verfügung."
+            },
+            {
+                "title": "Verfolgung der Aufgaben",
+                "description": "Die Entscheidungen und Aufgaben sind klar benannt, samt ihren Verantwortlichen."
+            },
+            {
+                "title": "Menschliche Freigabe",
+                "description": "Jedes Protokoll wird vor der Verteilung von einem Teilnehmenden gegengelesen und freigegeben."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Verteilt der Agent das Protokoll automatisch?",
+                "a": "Nein. Er verfasst den Entwurf, aber ein Teilnehmender gibt ihn vor der Verteilung frei, was die Richtigkeit des Verteilten sicherstellt."
+            },
+            {
+                "q": "Kann er unserem Protokollformat folgen?",
+                "a": "Ja. Er passt sich an Ihre Vorlage und Ihren Stil an, die Sie bei der Einrichtung festlegen."
+            },
+            {
+                "q": "Bleiben unsere Sitzungen vertraulich?",
+                "a": "Ja. Die Transkription und das Verfassen erfolgen in der Schweiz auf Azure und Ihr Austausch bleibt im schweizerischen Umfeld."
+            }
+        ],
+        "cta": {
+            "title": "Verlieren Sie keine Zeit mehr mit Ihren Protokollen",
+            "description": "Ein Schweizer KI-Agent transkribiert und verfasst; es bleibt nur noch das Gegenlesen und Verteilen."
+        }
+    },
+    "it-helpdesk-agent": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "KI-Agent · IT-Support",
+            "title": "KI-Agent für den internen IT-Support",
+            "description": "Ein KI-Agent, der die Supportanfragen Ihrer Mitarbeitenden beantwortet und die Tickets für Ihr IT-Team vorbereitet."
+        },
+        "answer": "Der IT-Support-Agent von houle.ai beantwortet die häufigen Fragen Ihrer Mitarbeitenden, schlägt Lösungen aus Ihrer Wissensdatenbank vor und bereitet für komplexe Fälle die Tickets vor. Der Agent basiert auf Azure AI Foundry und wird in der Schweiz auf Azure gehostet, sodass Ihre Daten im schweizerischen Umfeld bleiben. Heikle Eingriffe werden zur Freigabe an Ihr IT-Team eskaliert.",
+        "how": [
+            {
+                "title": "Eingang der Anfrage",
+                "description": "Der Mitarbeitende stellt dem Agenten seine Frage, per Chat oder E-Mail."
+            },
+            {
+                "title": "Geführte Lösung",
+                "description": "Der Agent schlägt eine Lösung anhand Ihrer Wissensdatenbank und Ihrer internen Abläufe vor."
+            },
+            {
+                "title": "Ticketerstellung",
+                "description": "Übersteigt der Fall die erste Ebene, strukturiert der Agent ein vollständiges Ticket für das IT-Team."
+            },
+            {
+                "title": "Kontrollierte Eskalation",
+                "description": "Heikle oder riskante Anfragen werden zur Bearbeitung an einen Techniker weitergeleitet."
+            }
+        ],
+        "features": [
+            {
+                "title": "Antworten der ersten Ebene",
+                "description": "Lösung häufiger Anfragen anhand Ihrer internen Dokumentation."
+            },
+            {
+                "title": "Strukturierte Tickets",
+                "description": "Vorbereitung klarer und vollständiger Tickets zur Beschleunigung der Bearbeitung durch die IT."
+            },
+            {
+                "title": "Intelligente Eskalation",
+                "description": "Weiterleitung komplexer oder heikler Fälle an die richtige Supportebene."
+            },
+            {
+                "title": "Hosting in der Schweiz",
+                "description": "Agent auf Azure AI Foundry aufgebaut und in der Schweiz auf Azure gehostet; Ihre Daten bleiben im schweizerischen Umfeld."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Durchgehend verfügbarer Support",
+                "description": "Die Mitarbeitenden erhalten eine erste Antwort, ohne auf die Verfügbarkeit der IT warten zu müssen."
+            },
+            {
+                "title": "Fokussiertes IT-Team",
+                "description": "Einfache Anfragen werden automatisch bearbeitet, sodass die komplexen Fälle den Technikern bleiben."
+            },
+            {
+                "title": "Kontrollierte Eingriffe",
+                "description": "Heikle Aktionen werden weiterhin vor der Ausführung von einem Techniker freigegeben."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Nimmt der Agent Änderungen an unseren Systemen vor?",
+                "a": "Er begleitet und bereitet die Anfragen vor, aber heikle Eingriffe werden zur Freigabe an einen Techniker eskaliert. Er ersetzt nicht die menschliche Kontrolle über riskante Aktionen."
+            },
+            {
+                "q": "Auf welche Informationen stützt er sich?",
+                "a": "Auf Ihre Wissensdatenbank und Ihre internen Abläufe, die Sie bei der Einrichtung bereitstellen."
+            },
+            {
+                "q": "Ist der Austausch mit den Mitarbeitenden vertraulich?",
+                "a": "Ja. Er wird in der Schweiz auf Azure verarbeitet und bleibt im schweizerischen Umfeld."
+            }
+        ],
+        "cta": {
+            "title": "Bieten Sie reaktionsschnellen IT-Support",
+            "description": "Ein Schweizer KI-Agent beantwortet häufige Anfragen und bereitet die Tickets vor; Ihr IT-Team konzentriert sich auf das Wesentliche."
+        }
+    },
+    "lead-qualification": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "KI-Agent · Lead-Qualifizierung",
+            "title": "Lead-Qualifizierung durch KI-Agent",
+            "description": "Ein KI-Agent, der Ihre eingehenden Interessenten sortiert und qualifiziert, damit sich Ihre Vertriebsmitarbeitenden auf die besten Chancen konzentrieren."
+        },
+        "answer": "Die Lead-Qualifizierung von houle.ai stützt sich auf einen KI-Agenten, der Ihre eingehenden Interessenten analysiert, sie nach Ihren Kriterien bewertet und für Ihre Vertriebsmitarbeitenden priorisiert. Der Agent basiert auf Azure AI Foundry und wird in der Schweiz auf Azure gehostet, sodass Ihre Geschäftsdaten im schweizerischen Umfeld bleiben. Der Agent qualifiziert und schlägt eine Priorität vor, aber die vertriebliche Betreuung bleibt in der Hand Ihrer Teams.",
+        "how": [
+            {
+                "title": "Erfassung der Leads",
+                "description": "Der Agent sammelt die Interessenten aus Ihren Formularen, E-Mails und Kampagnen."
+            },
+            {
+                "title": "Anreicherung",
+                "description": "Er ergänzt jeden Datensatz mit den verfügbaren Informationen und prüft ihre Stimmigkeit."
+            },
+            {
+                "title": "Scoring",
+                "description": "Der Agent bewertet den Interessenten nach Ihren Qualifizierungskriterien und weist ihm eine Priorität zu."
+            },
+            {
+                "title": "Weiterleitung",
+                "description": "Die qualifizierten Leads werden an den richtigen Vertriebsmitarbeitenden übermittelt; die weniger reifen bleiben im Nurturing."
+            }
+        ],
+        "features": [
+            {
+                "title": "Qualifizierung nach Ihren Kriterien",
+                "description": "Bewertung der Interessenten nach den Regeln, die Sie für Ihre Tätigkeit festlegen."
+            },
+            {
+                "title": "Priorisierung",
+                "description": "Einstufung der Leads, um den vertrieblichen Aufwand auf die besten Chancen zu lenken."
+            },
+            {
+                "title": "Automatische Weiterleitung",
+                "description": "Zuweisung der qualifizierten Interessenten an den richtigen Vertriebsmitarbeitenden oder das richtige Team."
+            },
+            {
+                "title": "Hosting in der Schweiz",
+                "description": "Agent auf Azure AI Foundry aufgebaut und in der Schweiz auf Azure gehostet; Ihre Daten bleiben im schweizerischen Umfeld."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Gezielter Vertriebsaufwand",
+                "description": "Ihre Vertriebsmitarbeitenden konzentrieren sich auf die vielversprechendsten Interessenten."
+            },
+            {
+                "title": "Höhere Reaktionsschnelligkeit",
+                "description": "Die eingehenden Leads werden ohne Wartezeit sortiert und weitergeleitet."
+            },
+            {
+                "title": "Vertriebliche Entscheidung bleibt gewahrt",
+                "description": "Der Agent schlägt eine Priorität vor; die Kundenbeziehung bleibt in der Hand Ihrer Teams."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Kontaktiert der Agent die Interessenten selbst?",
+                "a": "Er qualifiziert und priorisiert die Leads, aber der vertriebliche Kontakt bleibt Sache Ihrer Teams. Sie entscheiden über Zeitpunkt und Tonfall der Ansprache."
+            },
+            {
+                "q": "Wie definiert er einen guten Lead?",
+                "a": "Nach den Qualifizierungskriterien, die Sie bereitstellen, abgestimmt auf Ihren Markt und Ihre Angebote."
+            },
+            {
+                "q": "Wo werden die Daten meiner Interessenten verarbeitet?",
+                "a": "In der Schweiz auf Azure. Sie bleiben während der gesamten Verarbeitung im schweizerischen Umfeld."
+            }
+        ],
+        "cta": {
+            "title": "Qualifizieren Sie Ihre Leads automatisch",
+            "description": "Ein Schweizer KI-Agent sortiert und priorisiert Ihre Interessenten; Ihre Vertriebsmitarbeitenden konzentrieren sich auf die besten Chancen."
+        }
+    },
+    "document-data-extraction": {
+        "product": "ai-agents",
+        "hero": {
+            "badge": "KI-Agent · Datenextraktion",
+            "title": "Extraktion von Dokumentdaten durch KI-Agent",
+            "description": "Ein KI-Agent, der die strukturierten Daten aus Ihren Dokumenten extrahiert und sie bereit zur Integration in Ihre Systeme liefert."
+        },
+        "answer": "Die Extraktion von Dokumentdaten von houle.ai beruht auf einem KI-Agenten, der Ihre Dokumente liest, die relevanten Felder extrahiert und sie in einem strukturierten, von Ihren Tools verwertbaren Format liefert. Der Agent basiert auf Azure AI Foundry und wird in der Schweiz auf Azure gehostet, sodass Ihre Dokumente im schweizerischen Umfeld bleiben. Unsichere Extraktionen werden zur menschlichen Prüfung gemeldet.",
+        "how": [
+            {
+                "title": "Hochladen der Dokumente",
+                "description": "Sie reichen Ihre Dokumente in den Formaten Ihrer Wahl ein, einschliesslich Scans und Fotos."
+            },
+            {
+                "title": "Erkennung der Felder",
+                "description": "Der Agent erkennt die zu extrahierenden Felder gemäss dem definierten Dokumentmodell."
+            },
+            {
+                "title": "Strukturierung",
+                "description": "Er liefert die extrahierten Daten in einem strukturierten Format, bereit zur Integration in Ihre Systeme."
+            },
+            {
+                "title": "Ausnahmenkontrolle",
+                "description": "Unsichere Werte werden vor der Integration zur menschlichen Prüfung gemeldet."
+            }
+        ],
+        "features": [
+            {
+                "title": "Gezielte Extraktion",
+                "description": "Aufspüren der von Ihnen definierten Felder, unabhängig vom Dokumenttyp."
+            },
+            {
+                "title": "Strukturierte Ausgabe",
+                "description": "Bereitstellung der Daten in einem direkt von Ihren Tools verwertbaren Format."
+            },
+            {
+                "title": "Qualitätskontrolle",
+                "description": "Kennzeichnung von Extraktionen mit geringer Zuverlässigkeit zur menschlichen Prüfung."
+            },
+            {
+                "title": "Hosting in der Schweiz",
+                "description": "Agent auf Azure AI Foundry aufgebaut und in der Schweiz auf Azure gehostet; Ihre Dokumente bleiben im schweizerischen Umfeld."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Schluss mit der manuellen Erfassung",
+                "description": "Die Daten werden automatisch extrahiert, statt von Hand neu erfasst zu werden."
+            },
+            {
+                "title": "Erleichterte Integration",
+                "description": "Die strukturierten Ausgaben lassen sich direkt in Ihre Fachanwendungen integrieren."
+            },
+            {
+                "title": "Geprüfte Qualität",
+                "description": "Die unsicheren Fälle werden vor der Integration von einem Menschen kontrolliert."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Welche Dokumenttypen verarbeitet der Agent?",
+                "a": "Er verarbeitet eine breite Vielfalt an Dokumenten (Rechnungen, Formulare, Verträge, Auszüge) in verschiedenen Formaten, einschliesslich Scans und Fotos."
+            },
+            {
+                "q": "Was passiert bei Zweifeln an einer Angabe?",
+                "a": "Der Agent meldet Extraktionen mit geringer Zuverlässigkeit zur menschlichen Prüfung, statt sie ohne Kontrolle zu integrieren."
+            },
+            {
+                "q": "Bleiben meine Dokumente in der Schweiz?",
+                "a": "Ja. Die Verarbeitung erfolgt in der Schweiz auf Azure und Ihre Dokumente bleiben im schweizerischen Umfeld."
+            }
+        ],
+        "cta": {
+            "title": "Extrahieren Sie Ihre Dokumentdaten automatisch",
+            "description": "Ein Schweizer KI-Agent liest Ihre Dokumente und liefert strukturierte Daten, bereit zur Integration in Ihre Systeme."
+        }
+    },
+    "word-contract-drafting": {
+        "product": "word-addin",
+        "hero": {
+            "badge": "Word-Add-in · Verträge",
+            "title": "Vertragserstellung in Word mit KI",
+            "description": "Das Word-Add-in von houle.ai hilft Ihnen, Ihre Verträge zu erstellen und anzupassen, ohne Ihr Dokument zu verlassen."
+        },
+        "answer": "Die Vertragserstellung mit houle.ai erfolgt direkt in Microsoft Word, dank des Word-Add-ins, das Klauseln vorschlägt, den Text an Ihren Kontext anpasst und die zu prüfenden Punkte kennzeichnet. Das Add-in stützt sich auf die in der Schweiz auf Azure gehostete KI von houle.ai, sodass der Inhalt Ihrer Verträge im schweizerischen Umfeld bleibt. Sie behalten die Kontrolle über jede am Dokument vorgenommene Änderung.",
+        "how": [
+            {
+                "title": "Öffnen in Word",
+                "description": "Sie aktivieren das houle.ai-Add-in direkt in Ihrem Word-Dokument."
+            },
+            {
+                "title": "Erstellung von Klauseln",
+                "description": "Sie beschreiben den Bedarf, und das Add-in schlägt Klauseln anhand Ihrer Vorlagen vor."
+            },
+            {
+                "title": "Anpassung an den Kontext",
+                "description": "Das Add-in passt die Formulierung an die Parteien, die Laufzeit und die Bedingungen Ihres Vertrags an."
+            },
+            {
+                "title": "Prüfung und Einfügen",
+                "description": "Sie lesen die Vorschläge gegen und fügen die von Ihnen freigegebenen in das Dokument ein."
+            }
+        ],
+        "features": [
+            {
+                "title": "In Word integriert",
+                "description": "Unterstützung beim Verfassen, ohne Ihr Dokument zu verlassen oder das Werkzeug zu wechseln."
+            },
+            {
+                "title": "Klauseln aus Ihren Vorlagen",
+                "description": "Erstellung und Anpassung von Klauseln, die Ihren internen Standards entsprechen."
+            },
+            {
+                "title": "Unterstützte Umformulierung",
+                "description": "Hilfe beim Präzisieren, Kürzen oder Verstärken einer bestehenden Klausel."
+            },
+            {
+                "title": "Hosting in der Schweiz",
+                "description": "KI in der Schweiz auf Azure gehostet; der Inhalt Ihrer Verträge bleibt im schweizerischen Umfeld."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Beschleunigte Erstellung",
+                "description": "Die ersten Klauselversionen werden innert Augenblicken erstellt, direkt in Word."
+            },
+            {
+                "title": "Konsistenz der Verträge",
+                "description": "Die vorgeschlagenen Klauseln bleiben an Ihren Vorlagen und Ihrer Terminologie ausgerichtet."
+            },
+            {
+                "title": "Kontrolle beim Verfasser",
+                "description": "Nichts wird ohne Ihre Freigabe eingefügt; Sie entscheiden über jede Änderung."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Muss ich das Werkzeug wechseln, um es zu nutzen?",
+                "a": "Nein. Das Add-in funktioniert direkt in Microsoft Word; Sie verfassen und geben frei, ohne Ihr Dokument zu verlassen."
+            },
+            {
+                "q": "Ersetzt das Add-in einen Juristen?",
+                "a": "Nein. Es beschleunigt das Verfassen und schlägt Klauseln vor, aber die juristische Prüfung und Freigabe bleiben Ihre Sache."
+            },
+            {
+                "q": "Bleibt der Inhalt meiner Verträge vertraulich?",
+                "a": "Ja. Die KI wird in der Schweiz auf Azure gehostet und der Inhalt Ihrer Verträge bleibt im schweizerischen Umfeld."
+            }
+        ],
+        "cta": {
+            "title": "Erstellen Sie Ihre Verträge schneller in Word",
+            "description": "Installieren Sie das Word-Add-in von houle.ai und erstellen Sie Ihre Verträge mit Unterstützung einer in der Schweiz gehosteten KI."
+        }
+    },
+    "word-report-generation": {
+        "product": "word-addin",
+        "hero": {
+            "badge": "Word-Add-in · Berichte",
+            "title": "Berichterstellung in Word mit KI",
+            "description": "Das Word-Add-in von houle.ai hilft Ihnen, Ihre professionellen Berichte zu strukturieren und zu verfassen, ohne Ihr Dokument zu verlassen."
+        },
+        "answer": "Die Berichterstellung mit houle.ai erfolgt direkt in Microsoft Word, dank des Word-Add-ins, das Ihre Ideen strukturiert, die Abschnitte verfasst und den Ton Ihres Dokuments vereinheitlicht. Das Add-in stützt sich auf die in der Schweiz auf Azure gehostete KI von houle.ai, sodass der Inhalt Ihrer Berichte im schweizerischen Umfeld bleibt. Sie behalten die Kontrolle über jede eingefügte Passage.",
+        "how": [
+            {
+                "title": "Festlegen der Gliederung",
+                "description": "Sie geben das Thema und das Ziel an; das Add-in schlägt eine Berichtsstruktur vor."
+            },
+            {
+                "title": "Verfassen der Abschnitte",
+                "description": "Es verfasst jeden Abschnitt anhand Ihrer Kernpunkte und der von Ihnen bereitgestellten Elemente."
+            },
+            {
+                "title": "Vereinheitlichung",
+                "description": "Das Add-in vereinheitlicht Ton, Stil und Terminologie über das gesamte Dokument hinweg."
+            },
+            {
+                "title": "Gegenlesen und Freigabe",
+                "description": "Sie lesen den in Ihren Bericht eingefügten Text gegen, passen ihn an und geben ihn frei."
+            }
+        ],
+        "features": [
+            {
+                "title": "In Word integriert",
+                "description": "Unterstützung beim Verfassen direkt in Ihrem Dokument, ohne zusätzliches Werkzeug."
+            },
+            {
+                "title": "Geführte Struktur",
+                "description": "Vorschlag einer klaren Gliederung, abgestimmt auf den angestrebten Berichtstyp."
+            },
+            {
+                "title": "Konsistenter Stil",
+                "description": "Vereinheitlichung von Ton und Terminologie über das gesamte Dokument."
+            },
+            {
+                "title": "Hosting in der Schweiz",
+                "description": "KI in der Schweiz auf Azure gehostet; der Inhalt Ihrer Berichte bleibt im schweizerischen Umfeld."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Schneller verfasste Berichte",
+                "description": "Die Abschnitte werden anhand Ihrer Kernpunkte vorformuliert, direkt in Word."
+            },
+            {
+                "title": "Professionelles Ergebnis",
+                "description": "Ton und Darstellung bleiben über das gesamte Dokument hinweg konsistent."
+            },
+            {
+                "title": "Autor am Steuer",
+                "description": "Sie geben jede Passage frei, bevor sie in Ihren Bericht eingefügt wird."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Funktioniert das Add-in in Word?",
+                "a": "Ja. Es integriert sich direkt in Microsoft Word; Sie erstellen und geben Ihren Bericht frei, ohne das Werkzeug zu wechseln."
+            },
+            {
+                "q": "Kann es unseren Redaktionsleitfaden befolgen?",
+                "a": "Ja. Es vereinheitlicht Ton und Terminologie gemäss Ihren Vorgaben, die Sie bei der Einrichtung festlegen."
+            },
+            {
+                "q": "Ist der Inhalt meiner Berichte vertraulich?",
+                "a": "Ja. Die KI wird in der Schweiz auf Azure gehostet und der Inhalt Ihrer Berichte bleibt im schweizerischen Umfeld."
+            }
+        ],
+        "cta": {
+            "title": "Verfassen Sie Ihre Berichte schneller in Word",
+            "description": "Installieren Sie das Word-Add-in von houle.ai und strukturieren Sie Ihre Berichte mit Unterstützung einer in der Schweiz gehosteten KI."
+        }
+    },
+    "outlook-email-drafting": {
+        "product": "outlook-addin",
+        "hero": {
+            "badge": "Outlook-Add-in · Verfassen",
+            "title": "E-Mail-Erstellung in Outlook mit KI",
+            "description": "Das Outlook-Add-in von houle.ai hilft Ihnen, Ihre geschäftlichen E-Mails direkt in Ihrem Postfach zu verfassen und anzupassen."
+        },
+        "answer": "Die E-Mail-Erstellung mit houle.ai erfolgt direkt in Microsoft Outlook, dank des Outlook-Add-ins, das Entwürfe vorschlägt, den Ton anpasst und Zeit bei Ihren Antworten spart. Das Add-in stützt sich auf die in der Schweiz auf Azure gehostete KI von houle.ai, sodass der Inhalt Ihrer E-Mails im schweizerischen Umfeld bleibt. Jede Nachricht wird weiterhin von Ihnen gegengelesen und versendet.",
+        "how": [
+            {
+                "title": "Öffnen in Outlook",
+                "description": "Sie aktivieren das houle.ai-Add-in direkt in Ihrem Outlook-Postfach."
+            },
+            {
+                "title": "Beschreibung der Absicht",
+                "description": "Sie geben die zu übermittelnde Nachricht an oder die E-Mail, auf die Sie antworten möchten."
+            },
+            {
+                "title": "Erstellung des Entwurfs",
+                "description": "Das Add-in verfasst anhand des Kontexts einen E-Mail-Entwurf im passenden Ton."
+            },
+            {
+                "title": "Gegenlesen und Versand",
+                "description": "Sie passen den Entwurf bei Bedarf an und versenden ihn dann selbst."
+            }
+        ],
+        "features": [
+            {
+                "title": "In Outlook integriert",
+                "description": "Unterstützung beim Verfassen, ohne Ihr Postfach zu verlassen oder zwischen Werkzeugen zu kopieren und einzufügen."
+            },
+            {
+                "title": "Anpassbarer Ton",
+                "description": "Erstellung förmlicher oder direkter Nachrichten je nach Empfänger und Kontext."
+            },
+            {
+                "title": "Unterstützte Antworten",
+                "description": "Antwortentwürfe, die den bestehenden Gesprächsverlauf berücksichtigen."
+            },
+            {
+                "title": "Hosting in der Schweiz",
+                "description": "KI in der Schweiz auf Azure gehostet; der Inhalt Ihrer E-Mails bleibt im schweizerischen Umfeld."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Schneller verfasste E-Mails",
+                "description": "Sie starten von einem anpassungsbereiten Entwurf statt von einem leeren Blatt."
+            },
+            {
+                "title": "Professioneller Ton",
+                "description": "Ihre Nachrichten bleiben klar und auf jeden Empfänger abgestimmt."
+            },
+            {
+                "title": "Kontrollierter Versand",
+                "description": "Sie lesen jede E-Mail selbst gegen und versenden sie; nichts wird automatisch versendet."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Versendet das Add-in die E-Mails an meiner Stelle?",
+                "a": "Nein. Es bereitet Entwürfe vor; Sie lesen sie gegen und versenden sie selbst. Sie behalten die Kontrolle über jede Nachricht."
+            },
+            {
+                "q": "Funktioniert es in Outlook?",
+                "a": "Ja. Es integriert sich direkt in Microsoft Outlook und unterstützt Sie, ohne Ihr Postfach zu verlassen."
+            },
+            {
+                "q": "Bleibt der Inhalt meiner E-Mails vertraulich?",
+                "a": "Ja. Die KI wird in der Schweiz auf Azure gehostet und der Inhalt Ihrer E-Mails bleibt im schweizerischen Umfeld."
+            }
+        ],
+        "cta": {
+            "title": "Verfassen Sie Ihre E-Mails schneller in Outlook",
+            "description": "Installieren Sie das Outlook-Add-in von houle.ai und sparen Sie Zeit bei Ihren E-Mails, mit einer in der Schweiz gehosteten KI."
+        }
+    },
+    "outlook-inbox-triage": {
+        "product": "outlook-addin",
+        "hero": {
+            "badge": "Outlook-Add-in · Sortierung",
+            "title": "Posteingangssortierung in Outlook mit KI",
+            "description": "Das Outlook-Add-in von houle.ai hilft Ihnen, Ihre E-Mails direkt in Ihrem Postfach zu sortieren, zusammenzufassen und zu priorisieren."
+        },
+        "answer": "Die Posteingangssortierung mit houle.ai erfolgt direkt in Microsoft Outlook, dank des Outlook-Add-ins, das Ihre E-Mails zusammenfasst, nach Priorität ordnet und die auszuführenden Aktionen vorschlägt. Das Add-in stützt sich auf die in der Schweiz auf Azure gehostete KI von houle.ai, sodass Ihre E-Mails im schweizerischen Umfeld bleiben. Sie entscheiden über die auf jede Nachricht anzuwendenden Aktionen.",
+        "how": [
+            {
+                "title": "Analyse des Postfachs",
+                "description": "Das Add-in durchläuft Ihre eingehenden E-Mails, um Anliegen und Dringlichkeit zu verstehen."
+            },
+            {
+                "title": "Zusammenfassung",
+                "description": "Es fasst lange Nachrichten oder Gesprächsverläufe für ein rasches Lesen zusammen."
+            },
+            {
+                "title": "Priorisierung",
+                "description": "Das Add-in hebt die zuerst zu bearbeitenden Nachrichten gemäss Ihren Kriterien hervor."
+            },
+            {
+                "title": "Aktionsvorschlag",
+                "description": "Es schlägt eine Aktion vor (antworten, ablegen, weiterleiten), die Sie vor der Ausführung freigeben."
+            }
+        ],
+        "features": [
+            {
+                "title": "In Outlook integriert",
+                "description": "Sortieren und Zusammenfassen, ohne Ihr Postfach zu verlassen."
+            },
+            {
+                "title": "Zusammenfassungen von Verläufen",
+                "description": "Synthese langer Diskussionen, um das Wesentliche auf einen Blick zu erfassen."
+            },
+            {
+                "title": "Intelligente Priorisierung",
+                "description": "Hervorhebung dringender oder wichtiger Nachrichten gemäss Ihren Regeln."
+            },
+            {
+                "title": "Hosting in der Schweiz",
+                "description": "KI in der Schweiz auf Azure gehostet; Ihre E-Mails bleiben im schweizerischen Umfeld."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Beherrschter Posteingang",
+                "description": "Sie erkennen rasch, was zählt, und bearbeiten Ihre E-Mails effizienter."
+            },
+            {
+                "title": "Beschleunigtes Lesen",
+                "description": "Die Zusammenfassungen ersparen Ihnen das Durchlesen langer Gesprächsverläufe."
+            },
+            {
+                "title": "Aktionen unter Kontrolle",
+                "description": "Das Add-in schlägt vor, aber Sie geben jede Aktion frei, bevor sie ausgeführt wird."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Verschiebt das Add-in meine E-Mails automatisch?",
+                "a": "Nein. Es schlägt Aktionen vor (ablegen, antworten, weiterleiten), aber Sie geben sie frei, bevor sie ausgeführt werden."
+            },
+            {
+                "q": "Funktioniert es in Outlook?",
+                "a": "Ja. Es integriert sich direkt in Microsoft Outlook und hilft Ihnen beim Sortieren, ohne Ihr Postfach zu verlassen."
+            },
+            {
+                "q": "Bleiben meine E-Mails vertraulich?",
+                "a": "Ja. Die KI wird in der Schweiz auf Azure gehostet und Ihre E-Mails bleiben im schweizerischen Umfeld."
+            }
+        ],
+        "cta": {
+            "title": "Übernehmen Sie wieder die Kontrolle über Ihren Posteingang",
+            "description": "Installieren Sie das Outlook-Add-in von houle.ai, um Ihre E-Mails zu sortieren und zusammenzufassen, mit einer in der Schweiz gehosteten KI."
+        }
+    },
+    "swiss-gpt-knowledge-assistant": {
+        "product": "swiss-gpt",
+        "hero": {
+            "badge": "Swiss GPT · Wissensdatenbank",
+            "title": "Unternehmenswissensassistent mit Swiss GPT",
+            "description": "Swiss GPT durchsucht die Dokumentenbasis Ihres Unternehmens und beantwortet Ihren Mitarbeitenden Fragen auf Basis Ihrer eigenen Inhalte."
+        },
+        "answer": "Der Wissensassistent von houle.ai beruht auf Swiss GPT, das die Dokumentenbasis Ihres Unternehmens durchsucht und die Fragen Ihrer Mitarbeitenden auf Basis Ihrer eigenen Inhalte beantwortet, samt Quellen. Swiss GPT wird in der Schweiz auf Azure gehostet, sodass Ihre Dokumente und Ihr Austausch im schweizerischen Umfeld bleiben. Jede Antwort verweist auf die verwendeten Dokumente, damit Ihre Teams sie überprüfen können.",
+        "how": [
+            {
+                "title": "Anbindung Ihrer Quellen",
+                "description": "Sie binden Ihre internen Dokumente an Swiss GPT an: Abläufe, Verträge, Notizen und Fachdatenbanken."
+            },
+            {
+                "title": "Frage in natürlicher Sprache",
+                "description": "Ihre Mitarbeitenden stellen ihre Fragen wie einem Kollegen, ohne technische Abfrage."
+            },
+            {
+                "title": "Belegte Antwort",
+                "description": "Swiss GPT antwortet auf Basis Ihrer Inhalte und nennt die verwendeten Dokumente."
+            },
+            {
+                "title": "Überprüfung",
+                "description": "Ihre Teams öffnen die genannten Quellen, um die Antwort zu bestätigen und zu vertiefen."
+            }
+        ],
+        "features": [
+            {
+                "title": "Antworten auf Basis Ihrer Inhalte",
+                "description": "Swiss GPT antwortet auf Basis Ihrer Dokumentenbasis und nicht auf Basis allgemeinen Wissens."
+            },
+            {
+                "title": "Genannte Quellen",
+                "description": "Jede Antwort verweist zur Überprüfung auf die verwendeten Dokumente."
+            },
+            {
+                "title": "Kontrollierte Zugriffe",
+                "description": "Die Zugriffsrechte Ihrer Mitarbeitenden werden in den gelieferten Antworten berücksichtigt."
+            },
+            {
+                "title": "Hosting in der Schweiz",
+                "description": "Swiss GPT in der Schweiz auf Azure gehostet; Ihre Dokumente bleiben im schweizerischen Umfeld."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Wissen für alle zugänglich",
+                "description": "Ihre Mitarbeitenden finden die richtige Information, ohne die Ordner zu durchsuchen."
+            },
+            {
+                "title": "Verlässliche Antworten",
+                "description": "Die genannten Quellen ermöglichen es, jede Antwort zu überprüfen und einzuordnen."
+            },
+            {
+                "title": "Internes Wissen bleibt gewahrt",
+                "description": "Ihre Inhalte bleiben bei Ihnen, in der Schweiz gehostet, ohne ein öffentliches Modell zu speisen."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Erfindet Swiss GPT Antworten?",
+                "a": "Es antwortet auf Basis Ihrer Dokumente und nennt seine Quellen, sodass eine Überprüfung möglich ist. Es ist darauf ausgelegt, sich auf Ihre Inhalte zu stützen statt auf allgemeines Wissen."
+            },
+            {
+                "q": "Berücksichtigt es die Zugriffsrechte jeder Person?",
+                "a": "Ja. Die Antworten berücksichtigen die Berechtigungen jedes Mitarbeitenden auf Ihre Dokumente."
+            },
+            {
+                "q": "Wo werden unsere Dokumente gehostet?",
+                "a": "In der Schweiz auf Azure. Ihre Dokumente und Ihr Austausch bleiben im schweizerischen Umfeld und speisen kein öffentliches Modell."
+            }
+        ],
+        "cta": {
+            "title": "Machen Sie das Wissen Ihres Unternehmens zugänglich",
+            "description": "Mit Swiss GPT durchsuchen Ihre Mitarbeitenden Ihre Dokumentenbasis und erhalten belegte Antworten, gehostet in der Schweiz."
+        }
+    },
+    "swiss-gpt-secure-chat": {
+        "product": "swiss-gpt",
+        "hero": {
+            "badge": "Swiss GPT · Sicherer Chat",
+            "title": "Sicherer KI-Chat für das Unternehmen mit Swiss GPT",
+            "description": "Swiss GPT bietet Ihren Mitarbeitenden einen in der Schweiz gehosteten Konversationsassistenten, ohne dass Ihr Austausch das schweizerische Umfeld verlässt."
+        },
+        "answer": "Der sichere Chat von houle.ai beruht auf Swiss GPT, einem Konversationsassistenten für das Unternehmen, dessen Austausch in der Schweiz auf Azure gehostet wird und im schweizerischen Umfeld bleibt. Ihre Mitarbeitenden verfassen, fassen zusammen, übersetzen und analysieren dort in aller Vertraulichkeit, ohne Ihre Daten Publikumsdiensten preiszugeben. Ihre Gespräche dienen nicht dem Trainieren öffentlicher Modelle.",
+        "how": [
+            {
+                "title": "Sicherer Zugang",
+                "description": "Ihre Mitarbeitenden melden sich über die Authentifizierung Ihres Unternehmens bei Swiss GPT an."
+            },
+            {
+                "title": "Konversation",
+                "description": "Sie stellen ihre Fragen und verlangen Textverfassung, Zusammenfassung, Übersetzung oder Analyse."
+            },
+            {
+                "title": "Verarbeitung in der Schweiz",
+                "description": "Der Austausch wird in der Schweiz auf Azure verarbeitet und bleibt im schweizerischen Umfeld."
+            },
+            {
+                "title": "Tägliche Nutzung",
+                "description": "Der Assistent fügt sich in die tägliche Arbeit Ihrer Teams ein, ohne Ihre Daten Publikumswerkzeugen preiszugeben."
+            }
+        ],
+        "features": [
+            {
+                "title": "Vielseitiger Assistent",
+                "description": "Textverfassung, Zusammenfassung, Übersetzung und Analyse für die tägliche Arbeit Ihrer Teams."
+            },
+            {
+                "title": "Vertraulichkeit",
+                "description": "Ihr Austausch bleibt im schweizerischen Umfeld und dient nicht dem Trainieren öffentlicher Modelle."
+            },
+            {
+                "title": "Verwalteter Zugang",
+                "description": "Anmeldung über die Authentifizierung Ihres Unternehmens und Benutzerverwaltung."
+            },
+            {
+                "title": "Hosting in der Schweiz",
+                "description": "Swiss GPT in der Schweiz auf Azure gehostet; Ihre Gespräche bleiben im schweizerischen Umfeld."
+            }
+        ],
+        "benefits": [
+            {
+                "title": "Allgemeine KI ohne Kompromisse",
+                "description": "Ihre Teams profitieren von einem leistungsstarken Assistenten, ohne Ihre Daten Publikumsdiensten preiszugeben."
+            },
+            {
+                "title": "Einfache Einführung",
+                "description": "Eine vertraute Chat-Oberfläche, zugänglich ohne technische Kenntnisse."
+            },
+            {
+                "title": "Beherrschte Daten",
+                "description": "Ihr Austausch bleibt in der Schweiz, im schweizerischen Umfeld, unter Ihrer Kontrolle."
+            }
+        ],
+        "faq": [
+            {
+                "q": "Worin unterscheidet sich Swiss GPT von einem KI-Chat für das breite Publikum?",
+                "a": "Swiss GPT wird in der Schweiz auf Azure gehostet und Ihr Austausch bleibt im schweizerischen Umfeld, ohne ein öffentliches Modell zu speisen. Ihre Unternehmensdaten werden keinem Publikumsdienst preisgegeben."
+            },
+            {
+                "q": "Können meine Mitarbeitenden es täglich nutzen?",
+                "a": "Ja. Die Chat-Oberfläche ist vertraut und dient dem Verfassen, Zusammenfassen, Übersetzen oder Analysieren, ohne besondere technische Kenntnisse."
+            },
+            {
+                "q": "Dienen unsere Gespräche dem Trainieren der KI?",
+                "a": "Nein. Ihre Gespräche bleiben im schweizerischen Umfeld und werden nicht zum Trainieren öffentlicher Modelle verwendet."
+            }
+        ],
+        "cta": {
+            "title": "Bieten Sie Ihren Teams einen sicheren KI-Chat",
+            "description": "Mit Swiss GPT profitieren Ihre Mitarbeitenden von einem in der Schweiz gehosteten Konversationsassistenten, ohne Ihre Daten preiszugeben."
+        }
+    }
+}
