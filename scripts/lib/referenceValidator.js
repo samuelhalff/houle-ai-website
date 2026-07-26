@@ -599,6 +599,20 @@ const VERIFIED_FALLBACK_REFS = {
       url: "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/",
     },
   ],
+  governance: [
+    {
+      labelKey: "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+      url: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
+    },
+    {
+      labelKey: "AI Risk Management Framework (AI RMF) - NIST",
+      url: "https://www.nist.gov/itl/ai-risk-management-framework",
+    },
+    {
+      labelKey: "Loi fédérale sur la protection des données (LPD) - Fedlex",
+      url: "https://www.fedlex.admin.ch/eli/cc/2022/491/fr",
+    },
+  ],
   general: [
     {
       labelKey: "Azure OpenAI Service - Azure Product Page",
@@ -607,6 +621,17 @@ const VERIFIED_FALLBACK_REFS = {
     {
       labelKey: "Microsoft Learn - Terms of Use",
       url: "https://learn.microsoft.com/en-us/legal/termsofuse",
+    },
+    // Authoritative, non-Microsoft anchors so any category that falls back to
+    // "general" still retains at least one trusted reference after dedup by domain
+    // (the Microsoft entries above often duplicate an article's existing refs).
+    {
+      labelKey: "AI Risk Management Framework (AI RMF) - NIST",
+      url: "https://www.nist.gov/itl/ai-risk-management-framework",
+    },
+    {
+      labelKey: "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+      url: "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai",
     },
   ],
 };
