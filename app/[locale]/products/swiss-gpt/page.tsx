@@ -4,7 +4,7 @@ import { getTranslations, type Locale } from "@/src/lib/i18n";
 import { getCspNonce } from "@/src/lib/csp";
 import { generateMetadataForPage } from "@/src/lib/metadata";
 import StructuredData from "@/src/components/seo/StructuredData";
-import { buildBreadcrumbList, buildProductSchema, buildOrganizationSchema } from "@/src/lib/structuredData";
+import { buildBreadcrumbList, buildOrganizationSchema } from "@/src/lib/structuredData";
 import { localizePath } from "@/src/lib/paths";
 import PageHero from "@/src/components/site/page-hero";
 import SectionHeading from "@/src/components/site/section-heading";
@@ -50,12 +50,6 @@ const SwissGPTPage = async (props: { params: Promise<{ locale: string }> }) => {
       <StructuredData
         nonce={nonce}
         data={[breadcrumbJsonLd,
-          buildProductSchema({
-            name: (t("Hero.Title") as string) || "Enterprise GPT for Switzerland",
-            description: (t("Hero.Description") as string) || "Swiss-hosted AI platform with complete data sovereignty",
-            url: `${baseUrl}${localePrefix}/products/swiss-gpt/`,
-            brand: "houle.ai",
-          }),
           buildOrganizationSchema(),
         ]}
       />

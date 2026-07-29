@@ -6,7 +6,6 @@ import { generateMetadataForPage } from "@/src/lib/metadata";
 import StructuredData from "@/src/components/seo/StructuredData";
 import {
   buildBreadcrumbList,
-  buildProductSchema,
   buildOrganizationSchema,
 } from "@/src/lib/structuredData";
 import PageHero from "@/src/components/site/page-hero";
@@ -72,14 +71,6 @@ const AIAgentsPage = async (props: { params: Promise<{ locale: string }> }) => {
         nonce={nonce}
         data={[
           breadcrumbJsonLd,
-          buildProductSchema({
-            name: (t("Hero.Title") as string) || "Swiss-Hosted AI Agents",
-            description:
-              (t("Hero.Description") as string) ||
-              "Specialised AI agents hosted on Azure in Switzerland",
-            url: `${baseUrl}${localePrefix}/products/ai-agents/`,
-            brand: "houle.ai",
-          }),
           buildOrganizationSchema(),
         ]}
       />

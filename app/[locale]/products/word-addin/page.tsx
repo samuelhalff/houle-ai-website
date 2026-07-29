@@ -4,7 +4,7 @@ import { getTranslations, type Locale } from "@/src/lib/i18n";
 import { getCspNonce } from "@/src/lib/csp";
 import { generateMetadataForPage } from "@/src/lib/metadata";
 import StructuredData from "@/src/components/seo/StructuredData";
-import { buildBreadcrumbList, buildProductSchema, buildOrganizationSchema } from "@/src/lib/structuredData";
+import { buildBreadcrumbList, buildOrganizationSchema } from "@/src/lib/structuredData";
 import { localizePath } from "@/src/lib/paths";
 import PageHero from "@/src/components/site/page-hero";
 import SectionHeading from "@/src/components/site/section-heading";
@@ -46,11 +46,6 @@ const WordAddinPage = async (props: { params: Promise<{ locale: string }> }) => 
       <StructuredData
         nonce={nonce}
         data={[breadcrumbJsonLd,
-          buildProductSchema({
-            name: (t("Hero.Title") as string) || "AI Assistant for Word",
-            description: (t("Hero.Description") as string) || "AI-powered add-in for Microsoft Word",
-            url: `${baseUrl}/${params.locale}${localizePath("/products/word-addin", params.locale as Locale)}/`,
-          }),
           buildOrganizationSchema(),
         ]}
       />

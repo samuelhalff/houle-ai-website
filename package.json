@@ -16,6 +16,8 @@
     "prod": "npm run build && npm run standalone:prepare && PORT=${PORT:-5000} node .next/standalone/server.js",
     "lint": "eslint .",
     "typecheck": "tsc -p tsconfig.json --noEmit --incremental false",
+    "test": "npm run typecheck && npm run test:structured-data",
+    "test:structured-data": "node --test scripts/structured-data.test.js",
     "lint:translations": "node scripts/lint-translations.js",
     "validate:translations": "node scripts/validate-translations.js",
     "validate:article-refs": "node scripts/validate-article-refs.js",

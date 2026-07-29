@@ -187,9 +187,9 @@ export interface ProductSchemaConfig {
   description: string;
   url: string;
   brand?: string;
-  offers?: {
-    price?: string;
-    priceCurrency?: string;
+  offers: {
+    price: string;
+    priceCurrency: string;
   };
 }
 
@@ -204,18 +204,12 @@ export function buildProductSchema(cfg: ProductSchemaConfig) {
       "@type": "Organization",
       name: cfg.brand || "houle.ai",
     },
-    ...(cfg.offers
-      ? {
-          offers: {
-            "@type": "Offer",
-            availability: "https://schema.org/PreOrder",
-            ...(cfg.offers.price ? { price: cfg.offers.price } : {}),
-            ...(cfg.offers.priceCurrency
-              ? { priceCurrency: cfg.offers.priceCurrency }
-              : {}),
-          },
-        }
-      : {}),
+    offers: {
+      "@type": "Offer",
+      availability: "https://schema.org/PreOrder",
+      price: cfg.offers.price,
+      priceCurrency: cfg.offers.priceCurrency,
+    },
   } as const;
 }
 
