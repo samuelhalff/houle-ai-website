@@ -1925,10 +1925,6 @@
         {
           "labelKey": "Intelligence artificielle dans l'information financière - KPMG",
           "url": "https://lyon-finance.org/app/uploads/2024/10/KPMG-Etude-Francaise-IA-information-financiere-et-audit_compressed.pdf"
-        },
-        {
-          "labelKey": "Rapport sur l’intelligence artificielle - CNUCED",
-          "url": "https://unctad.org/fr/publication/rapport-sur-la-technologie-et-linnovation-2025"
         }
       ],
       "category": "ai-strategy-adoption",
@@ -2541,20 +2537,7 @@
         "fiduciaire",
         "suisse romande"
       ],
-      "references": [
-        {
-          "labelKey": "Ark Fiduciaire SA",
-          "url": "https://ark-fid.ch/"
-        },
-        {
-          "labelKey": "Azure AI Foundry Agent Service — Microsoft Learn",
-          "url": "https://learn.microsoft.com/en-us/azure/ai-foundry/agents/overview"
-        },
-        {
-          "labelKey": "Azure AI Foundry — Microsoft",
-          "url": "https://azure.microsoft.com/en-us/products/ai-foundry"
-        }
-      ]
+      "references": []
     },
     {
       "slug": "automatisation-salle-courrier-ia-entreprise-services",
@@ -2571,20 +2554,7 @@
         "extraction de documents",
         "entreprise de services"
       ],
-      "references": [
-        {
-          "labelKey": "Azure AI Foundry Agent Service — Microsoft Learn",
-          "url": "https://learn.microsoft.com/en-us/azure/ai-foundry/agents/overview"
-        },
-        {
-          "labelKey": "Azure AI Foundry — Microsoft",
-          "url": "https://azure.microsoft.com/en-us/products/ai-foundry"
-        },
-        {
-          "labelKey": "Configure private link for Azure AI Foundry — Microsoft Learn",
-          "url": "https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/configure-private-link"
-        }
-      ]
+      "references": []
     },
     {
       "slug": "automatisation-paie-pme-suisse-agents-ia",
@@ -2601,20 +2571,7 @@
         "swissdec",
         "human-in-the-loop"
       ],
-      "references": [
-        {
-          "labelKey": "Azure AI Foundry Agent Service — Microsoft Learn",
-          "url": "https://learn.microsoft.com/en-us/azure/ai-foundry/agents/overview"
-        },
-        {
-          "labelKey": "Azure AI Foundry — Microsoft",
-          "url": "https://azure.microsoft.com/en-us/products/ai-foundry"
-        },
-        {
-          "labelKey": "Préposé fédéral à la protection des données (nLPD)",
-          "url": "https://www.edoeb.admin.ch/fr"
-        }
-      ]
+      "references": []
     },
     {
       "slug": "quest-ce-quun-agent-ia-fonctionnement",
@@ -2632,20 +2589,7 @@
         "human-in-the-loop",
         "azure ai foundry"
       ],
-      "references": [
-        {
-          "labelKey": "Azure AI Foundry Agent Service — Microsoft Learn",
-          "url": "https://learn.microsoft.com/en-us/azure/ai-foundry/agents/overview"
-        },
-        {
-          "labelKey": "Azure AI Foundry — Microsoft",
-          "url": "https://azure.microsoft.com/en-us/products/ai-foundry"
-        },
-        {
-          "labelKey": "Configure private link for Azure AI Foundry — Microsoft Learn",
-          "url": "https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/configure-private-link"
-        }
-      ]
+      "references": []
     },
     {
       "slug": "agents-ia-vs-rpa-automatisation-traditionnelle",
@@ -2662,20 +2606,7 @@
         "comparatif",
         "processus"
       ],
-      "references": [
-        {
-          "labelKey": "Azure AI Foundry Agent Service — Microsoft Learn",
-          "url": "https://learn.microsoft.com/en-us/azure/ai-foundry/agents/overview"
-        },
-        {
-          "labelKey": "Azure AI Foundry — Microsoft",
-          "url": "https://azure.microsoft.com/en-us/products/ai-foundry"
-        },
-        {
-          "labelKey": "Azure geographies (Switzerland) — Microsoft",
-          "url": "https://azure.microsoft.com/en-us/explore/global-infrastructure/geographies/"
-        }
-      ]
+      "references": []
     },
     {
       "slug": "deployer-agents-ia-suisse-securite-residence-donnees",
@@ -2693,20 +2624,7 @@
         "human-in-the-loop",
         "gouvernance ia"
       ],
-      "references": [
-        {
-          "labelKey": "Azure geographies (Switzerland) — Microsoft",
-          "url": "https://azure.microsoft.com/en-us/explore/global-infrastructure/geographies/"
-        },
-        {
-          "labelKey": "Configure private link for Azure AI Foundry — Microsoft Learn",
-          "url": "https://learn.microsoft.com/en-us/azure/ai-foundry/how-to/configure-private-link"
-        },
-        {
-          "labelKey": "Préposé fédéral à la protection des données (nLPD)",
-          "url": "https://www.edoeb.admin.ch/fr"
-        }
-      ]
+      "references": []
     },
     {
       "slug": "cas-usage-agents-ia-entreprises-services",
@@ -2723,20 +2641,7 @@
         "automatisation",
         "productivité"
       ],
-      "references": [
-        {
-          "labelKey": "Azure AI Foundry Agent Service — Microsoft Learn",
-          "url": "https://learn.microsoft.com/en-us/azure/ai-foundry/agents/overview"
-        },
-        {
-          "labelKey": "Azure AI Foundry — Microsoft",
-          "url": "https://azure.microsoft.com/en-us/products/ai-foundry"
-        },
-        {
-          "labelKey": "Azure geographies (Switzerland) — Microsoft",
-          "url": "https://azure.microsoft.com/en-us/explore/global-infrastructure/geographies/"
-        }
-      ]
+      "references": []
     },
     {
       "slug": "rediger-politique-usage-ia-entreprise",
@@ -2753,34 +2658,6 @@
         "rgpd"
       ],
       "references": [
-        {
-          "labelKey": "Directive de la CISA : sécurisation des systèmes IA",
-          "url": "https://www.cisa.gov/ai"
-        },
-        {
-          "labelKey": "Déclaration politique : Usage responsable de l'IA",
-          "url": "https://www.state.gov/declaration-politique-sur-lutilisation-responsable-de-lintelligence-et-de-lautonomie-artificielles"
-        },
-        {
-          "labelKey": "Modèles de clauses contractuelles pour l'IA",
-          "url": "https://des.wa.gov/sites/default/files/2025-04/WA-Procurement-AI-contract-clauses.docx"
-        },
-        {
-          "labelKey": "Guide pour la conformité réglementaire des applications IA",
-          "url": "https://learn.microsoft.com/fr-fr/security/security-for-ai/govern"
-        },
-        {
-          "labelKey": "Inventaire des conventions collectives sur la technologie",
-          "url": "https://laborcenter.berkeley.edu/negotiating-tech/"
-        },
-        {
-          "labelKey": "Approche proactive de Microsoft sur la conformité IA",
-          "url": "https://learn.microsoft.com/fr-fr/compliance/assurance/assurance-artificial-intelligence"
-        },
-        {
-          "labelKey": "Stratégies d’IA responsables et gouvernance (Azure CAF)",
-          "url": "https://learn.microsoft.com/fr-fr/azure/cloud-adoption-framework/ai/strategy"
-        },
         {
           "labelKey": "Règlements IA émergents et conformité",
           "url": "https://une.edu/sites/default/files/2023-10/Guidance%20for%20the%20Use%20of%20Artificial%20Intelligence%20%28AI%29%20in%20Research.pdf"
@@ -2801,28 +2678,7 @@
         "nLPD",
         "rgpd"
       ],
-      "references": [
-        {
-          "labelKey": "Guide pratique pour une politique IA",
-          "url": "https://techcrunch.com/2024/01/27/critical-2024-ai-policy-blueprint-unlocking-potential-and-safeguarding-against-workplace-risks/"
-        },
-        {
-          "labelKey": "Réglementation de l'IA en Suisse",
-          "url": "https://www.bakom.admin.ch/fr/intelligence-artificielle"
-        },
-        {
-          "labelKey": "Réseau de compétences en intelligence artificielle",
-          "url": "https://www.bk.admin.ch/fr/iafr"
-        },
-        {
-          "labelKey": "Gouvernance et risques IA dans les entreprises",
-          "url": "https://www.forbes.com/councils/forbestechcouncil/2025/04/04/why-companies-urgently-need-an-ai-usage-policy/"
-        },
-        {
-          "labelKey": "Protection des données et IA - Préposé fédéral à la protection des données",
-          "url": "https://www.edoeb.admin.ch/fr/ia-et-protection-des-donnees"
-        }
-      ]
+      "references": []
     },
     {
       "slug": "qualite-assistant-ia-jeux-tests-scoring-regression",
@@ -2838,28 +2694,7 @@
         "politique ia",
         "monitoring"
       ],
-      "references": [
-        {
-          "labelKey": "Perspectives de gouvernance pour les systèmes IA en Europe",
-          "url": "https://digital-strategy.ec.europa.eu/en/policies/european-approach-artificial-intelligence"
-        },
-        {
-          "labelKey": "Utilisation des modèles de régression pour l’analyse",
-          "url": "https://github.com/scikit-learn/scikit-learn"
-        },
-        {
-          "labelKey": "Évaluation automatisée et scoring avec LLM",
-          "url": "https://education.umd.edu/research/centers/marc/selected-projects/ai-enhanced-assessment-methods/automated-scoring"
-        },
-        {
-          "labelKey": "Scoring d’LLM pour les réponses ouvertes",
-          "url": "https://openscoring.du.edu/ocsai"
-        },
-        {
-          "labelKey": "Conformité IA en entreprise en Suisse",
-          "url": "https://www.edoeb.admin.ch/edoeb/fr/home.html"
-        }
-      ]
+      "references": []
     },
     {
       "slug": "modele-politique-usage-ia-entreprise",
@@ -2878,28 +2713,8 @@
       ],
       "references": [
         {
-          "labelKey": "Guide AI Governance",
-          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
-        },
-        {
           "labelKey": "Perspectives sur la réglementation de l’IA en Suisse",
           "url": "https://www.newsd.admin.ch/newsd/message/attachments/71097.pdf"
-        },
-        {
-          "labelKey": "IA et protection des données - PFPDT",
-          "url": "https://www.edoeb.admin.ch/fr/ia-et-protection-des-donnees"
-        },
-        {
-          "labelKey": "Régulation de l’IA: Conseil Fédéral - 2025",
-          "url": "https://www.bk.admin.ch/fr/intelligence-artificielle"
-        },
-        {
-          "labelKey": "Guide réglementaire et approche suisse de l’IA (BAKOM)",
-          "url": "https://www.bakom.admin.ch/fr/intelligence-artificielle"
-        },
-        {
-          "labelKey": "Éthique et gouvernance IA (UNESCO, 2023)",
-          "url": "https://en.unesco.org/artificial-intelligence/ethics-governance"
         }
       ]
     }
