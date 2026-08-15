@@ -166,6 +166,10 @@
       "references": [
         {
           "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/"
+        },
+        {
+          "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
         },
         {
@@ -725,6 +729,10 @@
       "references": [
         {
           "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/"
+        },
+        {
+          "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
         },
         {
@@ -1075,6 +1083,10 @@
       "author": "houle Team",
       "date": "2025-11-13",
       "references": [
+        {
+          "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/"
+        },
         {
           "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
@@ -1947,6 +1959,10 @@
       "author": "houle Team",
       "date": "2025-09-17",
       "references": [
+        {
+          "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/"
+        },
         {
           "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
@@ -4571,7 +4587,7 @@
         },
         {
           "labelKey": "Bonnes pratiques pour une charte et gouvernance IA en entreprise",
-          "url": "https://aiinstitute.com/ai-best-practices-governance"
+          "url": "https://rai-inst.com/"
         },
         {
           "labelKey": "Exemple de clauses pour une charte IA",
@@ -4608,7 +4624,7 @@
         },
         {
           "labelKey": "SwissCognitive : Stratégies IA en entreprises suisses",
-          "url": "https://swisscognitive.ch"
+          "url": "https://swisscognitive.com/"
         },
         {
           "labelKey": "Fedlex: Régulation suisse sur la transparence algorithmique",
