@@ -1137,12 +1137,7 @@
       "content": "A reforma do [IVA](/services/taxes) 2025 em vigor na Suíça afeta muitas empresas de Genebra e da Suíça francófona, que devem se adaptar sem demora para garantir sua conformidade. Este artigo apresenta uma decomposição clara dos desafios, as etapas práticas para uma transição bem-sucedida, um checklist para os responsáveis administrativos ou direção e respostas às perguntas frequentes feitas desde o início do segundo semestre de 2025.\n\n**1. Quais são as principais alterações?**\nDesde 1.1.2025, as taxas de [IVA](/services/taxes) foram alteradas (normal: 8,1 %, reduzida: 2,6 %, especial alojamento: 3,8 %) e novas obrigações de declaração eletrônica entraram em vigor (ficheiros, formulários, anexo de desoneração, declaração online obrigatória conforme perfis). Os regimes forfaitários e o método da taxa de dívida fiscal líquida também são afetados.\n\n**2. Para quem essas mudanças são críticas em Genebra?**\n- PME ativas em serviços, artesanato e distribuição (comércio B2B e B2C)\n- Independentes que ultrapassam o limite de 100.000 CHF por ano\n- Sociedades holdings e administradoras imobiliárias\n- Associações e fundações com colaboradores\n- Empresas beneficiárias de subsídios ou ativas em plataformas digitais\n\n**3. Pontos de atenção específicos de Genebra**\n- Implementação a partir do Q4 2025 em todos os sistemas Odoo, Abacus ou Winbiz\n- Alinhamento entre faturação, folha (benefícios fiscais, formação interna sobre a nova LPP/AVS/LAA), e [contabilidade](/services/accounting) Swiss GAAP FER\n- Declaração eletrónica obrigatória (e-IVA): guias práticos no portal da AFC\n- Controles reforçados anunciados para Genebra (prazos, sanções administrativas, foco no setor imobiliário e consultoria)\n\n**4. Checklist expresso para direção de PME:**\n- Atualizar a configuração do seu software contábil e de folha (Odoo, Winbiz, Abacus)\n- Rever modelos de faturação cliente/fornecedor e automatizar a exibição da taxa correta\n- Formar responsáveis de folha/services/accounting sobre os novos limites e isenções\n- Sincronizar a política de faturação e arquivo com sua consultoria\n- Monitorar fluxos transfronteiriços: isenções, limites, menções obrigatórias\n\n**5. Oportunidades de otimização e missões de consultoria:**\n- Revisão dos modelos contratuais e CGV fora do IVA (evite correções, integre a nova lógica)\n- Externalização ou delegação para uma consultoria na gestão das declarações e controles AFC\n- Digitalização dos processos administrativos e sinergias com outras obrigações RH/administrativas (especialmente para LPP/AVS/LAA)\n\n**Palavras-chave \n\nPara saber mais, a documentação oficial e o suporte da Administração Federal de Contribuições e as ferramentas recomendadas estão listados abaixo.\n\n### Related Services\n\n- [Tax Services](/services/taxes)\n- [Contact Us](/contact)",
       "author": "houle Team",
       "date": "2025-09-17",
-      "references": [
-        {
-          "labelKey": "Checklist afc e-tva",
-          "url": "https://www.amsuisse.ch/fileadmin/forum_archiv/pdf/2024/06/2024_06_F_120_Modification_TVA.pdf"
-        }
-      ],
+      "references": [],
       "category": "security-compliance",
       "tags": [
         "sécurité",
@@ -1623,12 +1618,7 @@
       "content": "# Automatização de Workflows com IA: 10 Ganhos de Produtividade para Equipes de TI\n\n## Por que automatizar workflows de TI com IA?\n\nA automatização de workflows de TI com inteligência artificial (IA) tornou-se um fator estratégico para empresas modernas. Ela reduz tarefas repetitivas, melhora a precisão e libera tempo para atividades de maior valor. Segundo um estudo recente, empresas que adotam a automatização de workflows observam um aumento médio de 30% na produtividade (fonte: IA e automatização de workflows de TI para produtividade).\n\n### Principais vantagens da automatização com IA\n\n- **Economia de tempo**: Tarefas manuais e demoradas são automatizadas, permitindo que equipes de TI foquem em projetos estratégicos.\n- **Redução de erros humanos**: Processos automatizados são menos propensos a erros, melhorando a qualidade dos resultados.\n- **Melhoria da colaboração**: Ferramentas como Power Automate facilitam a integração entre sistemas, fortalecendo a comunicação entre equipes.\n- **Escalabilidade**: Soluções baseadas em IA se adaptam facilmente ao crescimento da empresa.\n\n## Identificar e priorizar processos-chave para sua equipe de TI\n\nAntes de implementar uma solução de automatização, é essencial mapear os processos de TI existentes e determinar quais são mais adequados para automatizar.\n\n### Etapas para identificar processos-chave\n\n1. **Análise de tarefas recorrentes**: Identifique tarefas repetitivas e demoradas, como gestão de tickets de suporte ou criação de contas de usuários.\n2. **Avaliação do impacto**: Priorize processos que impactam diretamente a produtividade ou a satisfação dos usuários.\n3. **Identificação de gargalos**: Detecte etapas que atrasam os fluxos de trabalho.\n4. **Consulta às equipes**: Envolva membros da equipe de TI para obter feedback sobre as tarefas mais cansativas.\n\n### Exemplo de priorização de processos\n\n| Processo de TI | Frequência | Tempo atual (por mês) | Impacto potencial da automatização |\n|-------------------------------|-----------|--------------------------|---------------------------------------|\n| Gestão de tickets de suporte | Alta | 40 horas | Redução de 50% |\n| Criação de contas de usuários | Média | 20 horas | Redução de 70% |\n| Monitoramento de sistemas | Alta | 30 horas | Redução de 60% |\n\n## Exemplos de automatizações bem-sucedidas no contexto de TI\n\n### Automatização da gestão de tickets de suporte\n\nEquipes de TI podem usar ferramentas como Power Automate para automatizar a criação, atribuição e acompanhamento de tickets de suporte. Por exemplo, um chatbot alimentado pelo Azure OpenAI pode responder perguntas frequentes dos usuários, reduzindo a carga de trabalho dos técnicos.\n\n### Monitoramento proativo de sistemas\n\nCom IA, é possível configurar alertas automáticas para detectar anomalias nos sistemas de TI. Um modelo de aprendizado de máquina pode analisar logs de servidores para identificar comportamentos incomuns e prevenir falhas antes que ocorram.\n\n## Como integrar controles e auditorias em workflows automatizados\n\nAutomatização não significa ausência de controle. Pelo contrário, é crucial implementar mecanismos de auditoria para garantir conformidade e segurança.\n\n### Etapas para integrar controles\n\n1. **Definir pontos de controle**: Identifique etapas críticas onde validações manuais ou automáticas são necessárias.\n2. **Utilizar ferramentas de auditoria**: Soluções como Power Automate permitem gerar logs detalhados para cada processo automatizado.\n3. **Treinar as equipes**: Garanta que os membros da equipe de TI saibam interpretar e usar os dados de auditoria.\n\n### Checklist para auditorias eficazes\n\n- [ ] Os logs de auditoria estão ativados para todos os processos críticos?\n- [ ] Os dados coletados são analisados regularmente?\n- [ ] As equipes de TI estão treinadas para identificar anomalias nos relatórios de auditoria?\n\n## Implantação de uma solução de automatização: planejamento e execução\n\n### Etapas para um deployment bem-sucedido\n\n1. **Definir objetivos**: Identifique claramente o que deseja alcançar com a automatização.\n2. **Escolher as ferramentas certas**: Avalie soluções como Power Automate conforme suas necessidades específicas.\n3. **Criar um plano de projeto**: Defina etapas, recursos necessários e prazos.\n4. **Testar a solução**: Realize testes piloto para validar a eficácia dos workflows automatizados.\n5. **Treinar os usuários**: Garanta que equipes de TI e usuários finais saibam como usar os novos processos.\n\n### Caso prático: Automatização de um processo de TI\n\n**Contexto**: Uma PME suíça dedica 30 horas por mês à gestão de tickets de suporte.\n\n**Solução**: Implantação de um chatbot baseado no Azure OpenAI para responder perguntas frequentes e direcionar solicitações complexas aos técnicos.\n\n**Resultados**:\n\n- Redução do tempo dedicado aos tickets de 30 para 15 horas por mês.\n- Economia estimada: 15 horas x CHF 100/h = CHF 1.500 por mês.\n- Retorno do investimento em 3 meses.\n\n## Erros comuns a evitar no design de workflows automatizados\n\n### Erros frequentes\n\n1. **Automatizar processos ineficientes**: Se um processo é mal desenhado, automatizá-lo só amplifica seus defeitos.\n2. **Ignorar as necessidades dos usuários**: Uma solução que não atende às expectativas dos usuários finais terá baixa adoção.\n3. **Negligenciar a segurança**: Automatização pode introduzir vulnerabilidades se controles de segurança não forem integrados.\n\n### Como evitar\n\n- Faça uma análise aprofundada dos processos antes de automatizar.\n- Envolva os usuários desde as primeiras etapas do projeto.\n- Integre mecanismos de segurança desde o design.\n\n## Especificidades de ferramentas como Power Automate\n\nPower Automate é uma das ferramentas mais populares para automatização de workflows de TI. Oferece uma interface intuitiva e integração nativa com Microsoft 365.\n\n### Funcionalidades principais\n\n- **Conectores**: Mais de 500 conectores para integrar diversos sistemas.\n- **Modelos predefinidos**: Workflows prontos para tarefas comuns.\n- **Automatização baseada em IA**: Integração com Azure OpenAI para processos inteligentes.\n\n### Vantagens\n\n- Facilidade de uso.\n- Escalabilidade para atender necessidades crescentes.\n- Segurança reforçada graças ao ecossistema Microsoft.\n\n## Tendências futuras: A evolução dos workflows com agentes de IA avançados\n\nO futuro dos workflows de TI está no uso de agentes de IA avançados capazes de tomar decisões autônomas. Esses agentes, baseados em modelos de linguagem como GPT, podem analisar dados complexos e propor soluções em tempo real.\n\n### Exemplos de tendências\n\n- **RAG (Retrieval-Augmented Generation)**: Combinação de IA generativa e pesquisa documental para respostas precisas.\n- **Hiperautomatização**: Integração de várias tecnologias para automatizar processos complexos.\n- **IA conversacional**: Desenvolvimento de chatbots ainda mais intuitivos e contextuais.\n\n## FAQ Respostas para perguntas frequentes sobre automatização de workflows de TI\n\n### 1. Quais são as melhores ferramentas para automatizar workflows de TI?\nFerramentas como Power Automate, Azure Logic Apps e Workato são especialmente adequadas para equipes de TI.\n\n### 2. Quanto tempo leva para implantar uma solução de automatização?\nDepende da complexidade dos processos, mas um projeto piloto pode ser lançado em 4 a 6 semanas.\n\n### 3. A automatização pode substituir equipes de TI?\nNão, a automatização é feita para auxiliar equipes de TI, não para substituí-las. Permite que se concentrem em tarefas estratégicas.\n\n### 4. Quais são os custos associados à automatização de workflows de TI?\nOs custos variam conforme as ferramentas utilizadas e a complexidade dos processos, mas as economias geralmente compensam o investimento inicial.\n\n### 5. Como medir o sucesso de um projeto de automatização?\nUse indicadores como tempo economizado, redução de erros e melhoria da satisfação dos usuários.\n\n### 6. Quais são os riscos da automatização de workflows?\nOs principais riscos incluem erros no design dos processos, problemas de segurança e resistência à mudança.\n\n## Conclusão\n\nA automatização de workflows de TI com IA é uma grande oportunidade para empresas que buscam melhorar eficiência e produtividade. Seguindo boas práticas e evitando erros comuns, você pode transformar seus processos de TI e oferecer mais valor à organização. Ferramentas como Power Automate, aliadas a tecnologias avançadas como Azure OpenAI, são parceiros valiosos nessa transformação.\n\n## Otimizar a colaboração entre equipes com automatização\n\nA automatização de workflows não se limita à execução de tarefas repetitivas. Também pode desempenhar um papel fundamental na melhoria da colaboração entre equipes de TI e outros departamentos.\n\n### Facilitar a comunicação entre equipes\n\nA automatização permite centralizar informações e torná-las acessíveis em tempo real para todos os envolvidos. Exemplos:\n\n- **Compartilhamento automático de atualizações**: Ferramentas de automatização podem enviar notificações automáticas para equipes relevantes quando um ticket de suporte é atualizado ou um projeto atinge uma etapa importante.\n- **Sincronização de calendários**: Integrações entre ferramentas de gestão de projetos e calendários permitem coordenar agendas das equipes sem esforço manual.\n- **Gestão de aprovações**: Workflows automatizados podem incluir etapas de aprovação que notificam automaticamente os responsáveis e registram suas decisões.\n\n### Checklist: Melhorar a colaboração com automatização\n\n- [ ] As ferramentas de comunicação estão integradas aos workflows automatizados?\n- [ ] As notificações estão configuradas para informar as pessoas certas no momento certo?\n- [ ] Os processos de aprovação são fluidos e bem definidos?\n- [ ] Os dados críticos estão acessíveis para todos os envolvidos?\n\n## Medir a eficácia dos workflows automatizados\n\nPara garantir o sucesso das iniciativas de automatização, é essencial medir o impacto usando indicadores-chave de desempenho (KPIs).\n\n### Principais KPIs a acompanhar\n\n1. **Tempo médio de processamento**: Meça quanto tempo leva para concluir uma tarefa antes e depois da automatização.\n2. **Taxa de erro**: Analise a redução de erros em processos automatizados.\n3. **Satisfação dos usuários**: Colete feedback dos usuários finais para avaliar o impacto da automatização na experiência.\n4. **Retorno sobre investimento (ROI)**: Calcule as economias obtidas com a automatização em relação aos custos iniciais.\n\n### Exemplo de tabela de acompanhamento de KPIs\n\n| KPI | Antes da automatização | Depois da automatização | Melhoria (%) |\n|----------------------------|----------------------|-----------------------|------------------|\n| Tempo médio de processamento | 5 horas | 2 horas | 60% |\n| Taxa de erro | 15% | 3% | 80% |\n| Satisfação dos usuários (de 10) | 6 | 9 | 50% |\n| Custo mensal (CHF) | 10.000 | 6.000 | 40% |\n\n## Desafios da automatização e como superá-los\n\nApesar das inúmeras vantagens, a automatização de workflows de TI pode apresentar desafios. Identificar esses obstáculos e agir proativamente é essencial para garantir o sucesso dos projetos.\n\n### Desafios comuns\n\n1. **Resistência à mudança**: Funcionários podem temer que a automatização substitua seus cargos ou altere significativamente seu trabalho.\n2. **Complexidade dos processos**: Alguns workflows são muito complexos ou mal definidos para serem automatizados com eficácia.\n3. **Falta de competências**: Equipes de TI podem não ter conhecimento sobre ferramentas de automatização ou IA.\n4. **Problemas de integração**: Sistemas existentes podem não ser compatíveis com novas soluções de automatização.\n\n### Soluções para superar esses desafios\n\n- **Comunicação e treinamento**: Explique os benefícios da automatização aos funcionários e ofereça treinamentos para facilitar a adaptação.\n- **Simplificação de processos**: Antes de automatizar, otimize workflows para eliminar etapas desnecessárias.\n- **Colaboração com especialistas**: Conte com consultores ou parceiros como houle para aproveitar sua expertise.\n- **Testes e ajustes**: Realize testes piloto para identificar e resolver problemas de integração antes do deployment completo.\n\n## FAQ: Perguntas adicionais sobre automatização de workflows de TI\n\n### 7. Como treinar equipes para usar ferramentas de automatização?\nÉ essencial oferecer sessões de treinamento adaptadas às necessidades das equipes. Também é possível fornecer guias práticos e vídeos explicativos para facilitar o aprendizado.\n\n### 8. Quais são os critérios para escolher uma ferramenta de automatização?\nOs critérios incluem facilidade de uso, opções de integração, custo, segurança e capacidade de adaptação ao crescimento da empresa.\n\n### 9. Todos os processos de TI podem ser automatizados?\nNão, alguns processos exigem intervenção humana devido à complexidade ou natureza estratégica. Automatização é ideal para tarefas repetitivas e padronizadas.\n\n### 10. Como gerenciar erros em workflows automatizados?\nImplemente mecanismos de monitoramento e alerta para detectar rapidamente erros. Garanta também que os workflows incluam etapas de validação para evitar problemas.\n\n### 11. Automatização é adequada para pequenas empresas?\nSim, pequenas empresas também podem se beneficiar da automatização, especialmente para otimizar recursos limitados e melhorar a eficiência operacional.\n\n## Automatização e gestão de dados em workflows de TI\n\nA automatização de workflows de TI não se limita à gestão de tarefas operacionais. Também desempenha papel crucial na gestão de dados, facilitando coleta, processamento e análise.\n\n### Centralização e organização de dados\n\nA automatização permite centralizar dados de diferentes fontes, simplificando a gestão e análise. Veja como:\n\n- **Integração de sistemas**: Ferramentas de automatização como Power Automate podem conectar múltiplos bancos de dados e aplicativos para centralizar informações.\n- **Limpeza de dados**: Workflows automatizados podem incluir etapas para detectar e corrigir erros ou inconsistências nos dados.\n- **Atualização em tempo real**: Os dados são sincronizados automaticamente, garantindo que estejam sempre atualizados.\n\n### Segurança dos dados em workflows automatizados\n\nA automatização de workflows de TI deve ser acompanhada de medidas robustas para proteger dados sensíveis.\n\n- **Criptografia de dados**: Garanta que todos os dados que passam pelos workflows automatizados estejam criptografados.\n- **Controles de acesso**: Limite o acesso a dados sensíveis apenas a pessoas autorizadas.\n- **Monitoramento contínuo**: Use ferramentas de auditoria para monitorar acessos e modificações nos dados.\n\n### Checklist: Segurança dos dados em workflows automatizados\n\n- [ ] Os dados sensíveis estão criptografados em trânsito e em repouso?\n- [ ] As permissões de acesso são atualizadas e verificadas regularmente?\n- [ ] Os logs de acesso e modificação de dados estão ativados e analisados?\n- [ ] Os workflows incluem etapas para validar a qualidade dos dados?\n\n## Expandindo a automatização para outros departamentos\n\nEmbora a automatização geralmente seja iniciada por equipes de TI, ela também pode beneficiar outros departamentos da empresa.\n\n### Exemplos de automatização em outros departamentos\n\n1. **Recursos humanos**: Automatização do onboarding, gestão de férias e acompanhamento de desempenho.\n2. **Financeiro**: Automatização de conciliações bancárias, faturas e relatórios financeiros.\n3. **Marketing**: Automatização de campanhas de e-mail, geração de leads e análise de resultados.\n4. **Atendimento ao cliente**: Uso de chatbots para responder perguntas frequentes e direcionar solicitações complexas.\n\n### Tabela: Comparação dos benefícios da automatização por departamento\n\n| Departamento | Processos automatizados | Principais benefícios |\n|---------------------|----------------------------------------|------------------------------------------|\n| Recursos humanos | Onboarding de novos colaboradores | Economia de tempo, melhor experiência RH |\n| Financeiro | Conciliações bancárias | Redução de erros, maior conformidade |\n| Marketing | Campanhas de e-mail | Aumento da eficiência |\n| Atendimento ao cliente | Gestão de tickets | Redução do tempo de resposta |\n\n## FAQ: Perguntas adicionais sobre automatização de workflows de TI\n\n### 12. Quais são os benefícios da automatização para equipes de TI pequenas?\nA automatização permite que equipes pequenas gerenciem grandes volumes de trabalho, reduzindo tarefas repetitivas e otimizando processos.\n\n### 13. Como identificar processos que precisam de automatização?\nAnalise tarefas repetitivas, demoradas ou propensas a erros frequentes. Priorize aquelas que impactam diretamente a produtividade ou satisfação dos usuários.\n\n### 14. Quais ferramentas são mais adequadas para integração entre departamentos?\nFerramentas como Power Automate, Workato ou Zapier são especialmente eficazes para conectar sistemas e facilitar a colaboração entre departamentos.\n\n### 15. Como avaliar o custo total de um projeto de automatização?\nConsidere custos de licenças de software, treinamento, implementação, manutenção e economias potenciais em tempo e recursos.\n\n### 16. A automatização pode evoluir com as necessidades da empresa?\nSim, a maioria das ferramentas modernas de automatização são escaláveis e adaptam-se ao crescimento e mudanças da empresa.\n\n---\n### Referências\n- [Documentação oficial do Power Automate](https://learn.microsoft.com/fr-fr/power-automate/)\n- [Recomendações internacionais para sistemas de IA](https://www.nist.gov/)\n- [Como agentes de software e robôs redefinem a organização do trabalho](https://www.ictjournal.ch/news/2026-01-12/comment-agents-logiciels-et-robots-redefinissent-lorganisation-du-travail-selon)\n- [Agentes de IA e automatizações na rotina profissional](https://www.ibaw.ch/fr/cours/agents-ia-automatisations-dans-la-routine-professionnelle--D_103680_2853_1442)\n- [Por que agentes de IA vão transformar o suporte de TI e todas as funções internas](https://edana.ch/2026/01/09/pourquoi-les-agents-ia-vont-transformer-le-support-it-et-toutes-les-fonctions-internes/)\n- [IA e automatização de workflows de TI para produtividade](https://www.studiodahu.ch/blog/ia-automatisation-2026-pieges-a-eviter)\n- [Automatização de processos com IA](https://schenkerconsulting.ch/ia-automatisation-des-process/)\n- [Inteligência artificial no centro da TI](https://infologo.ch/intelligence-artificielle-au-coeur-de-it/)\n- [Make vs n8n vs Zapier: Qual é a melhor ferramenta de automatização?](https://digital-foundation.ch/make-vs-n8n-vs-zapier-quel-est-le-meilleur-outils-dautomatisation/)\n- [Workato: A plataforma agentic AI para empresas](https://itconcepts.ch/fr/workato-la-plateforme-agentic-ai-pour-les-entreprises/)\n- [Marcos legais e práticos da IA na Suíça](https://fedlex.admin.ch/)\n- [O impacto das novas IA na automatização de tarefas](https://amdigital.ch/blog/limpact-des-nouvelles-ia-dans-lautomatisation-des-taches/)\n",
       "author": "Houle Team",
       "date": "2026-03-13",
-      "references": [
-        {
-          "labelKey": "Automatisations et outils d’IA dans les routines professionnelles",
-          "url": "https://www.ibaw.ch/fr/cours/agents-ia-automatisations-dans-la-routine-professionnelle--D_103680_2853_1442"
-        }
-      ],
+      "references": [],
       "category": "workflow-automation",
       "tags": [
         "automatisation",
@@ -2872,32 +2862,7 @@
         "rgpd",
         "power automate"
       ],
-      "references": [
-        {
-          "labelKey": "Documenter les processus automatisés avec Power Automate",
-          "url": "https://github.com/MicrosoftDocs/power-automate-docs"
-        },
-        {
-          "labelKey": "Documentation officielle de Power Automate",
-          "url": "https://learn.microsoft.com/fr-fr/training/paths/automate-business-processes-power-automate/"
-        },
-        {
-          "labelKey": "Architectures de référence Power Automate",
-          "url": "https://learn.microsoft.com/fr-fr/power-platform/architecture/products/power-automate"
-        },
-        {
-          "labelKey": "Découvrez Power Automate sur Microsoft Learn",
-          "url": "https://learn.microsoft.com/fr-fr/power-automate/"
-        },
-        {
-          "labelKey": "Loi fédérale sur la protection des données (LPD)",
-          "url": "https://www.fedlex.admin.ch/eli/cc/2022/491/reg"
-        },
-        {
-          "labelKey": "La protection des données et l'IA en Suisse (LPD)",
-          "url": "https://www.edoeb.admin.ch/fr/ia-et-protection-des-donnees"
-        }
-      ]
+      "references": []
     },
     {
       "slug": "automatisation-power-automate-rh-finance-conformite",
@@ -2914,32 +2879,7 @@
         "productivité",
         "conformité"
       ],
-      "references": [
-        {
-          "labelKey": "Parcours d’apprentissage Power Automate et IA",
-          "url": "https://learn.microsoft.com/fr-fr/training/paths/automate-business-processes-power-automate/"
-        },
-        {
-          "labelKey": "Utilisation des connecteurs Power Automate",
-          "url": "https://learn.microsoft.com/fr-fr/connectors/"
-        },
-        {
-          "labelKey": "Architectures de références Power Automate",
-          "url": "https://learn.microsoft.com/fr-fr/power-platform/architecture/products/power-automate"
-        },
-        {
-          "labelKey": "Conformité IA et normes suisses",
-          "url": "https://www.ch.ch/fr/numerisation-et-protection-des-donnees/"
-        },
-        {
-          "labelKey": "Documentation officielle Microsoft Power Automate",
-          "url": "https://learn.microsoft.com/fr-fr/power-automate/"
-        },
-        {
-          "labelKey": "Ligne directrice nLPD sur la conformité IA",
-          "url": "https://edoeb.admin.ch/edoeb/fr/home.html"
-        }
-      ]
+      "references": []
     },
     {
       "slug": "politique-ia-modele-clauses-gouvernance",
@@ -2955,32 +2895,7 @@
         "nLPD",
         "rgpd"
       ],
-      "references": [
-        {
-          "labelKey": "Initiative européenne sur la gouvernance IA",
-          "url": "https://digital-strategy.ec.europa.eu/en/library/ethics-guidelines-trustworthy-ai"
-        },
-        {
-          "labelKey": "Politique d'utilisation des nouvelles technologies en Suisse",
-          "url": "https://www.ch.ch/fr/"
-        },
-        {
-          "labelKey": "BISE Université Laval: Politiques et pratiques en IA",
-          "url": "https://www.ulaval.ca/"
-        },
-        {
-          "labelKey": "Université du Québec: Cadre d'éthique pour l'intelligence artificielle",
-          "url": "https://www.uqtr.ca/"
-        },
-        {
-          "labelKey": "Règlementation sur la gestion des données en entreprise",
-          "url": "https://www.fedlex.admin.ch/eli/cc/235.1"
-        },
-        {
-          "labelKey": "Lignes directrices sur l'utilisation de l'intelligence artificielle",
-          "url": "https://www.edoeb.admin.ch/edoeb/fr/home.html"
-        }
-      ]
+      "references": []
     },
     {
       "slug": "politique-usage-ia-clause-conformite-suisse",
@@ -2996,40 +2911,7 @@
         "nLPD",
         "rgpd"
       ],
-      "references": [
-        {
-          "labelKey": "AI Regulation in Switzerland - Federal Council",
-          "url": "https://www.bk.admin.ch/en/regulation"
-        },
-        {
-          "labelKey": "nFADP - New Federal Data Protection Act",
-          "url": "https://www.kmu.admin.ch/en/new-federal-act-on-data-protection-nfadp"
-        },
-        {
-          "labelKey": "Fedlex: Protection des données",
-          "url": "https://www.fedlex.admin.ch/fr/cc/235_1/202309010000/202307010000"
-        },
-        {
-          "labelKey": "Guide pratique sur les analyses d’impact sur la protection des données (edoeb.admin.ch)",
-          "url": "https://www.edoeb.admin.ch/fr/ia-et-protection-des-donnees"
-        },
-        {
-          "labelKey": "Gouvernance d'entreprise, SECO",
-          "url": "https://www.seco.admin.ch/fr/gouvernance-entreprise"
-        },
-        {
-          "labelKey": "Artificial Intelligence in Finance, Swiss Federal Department of Finance",
-          "url": "https://www.sif.admin.ch/en/artificial-intelligence"
-        },
-        {
-          "labelKey": "Artificial Intelligence Overview by Federal Justice Administration",
-          "url": "https://www.bj.admin.ch/fr/intelligence-artificielle"
-        },
-        {
-          "labelKey": "Swiss approach to AI regulation - BAKOM",
-          "url": "https://www.bakom.admin.ch/de/kuenstliche-intelligenz"
-        }
-      ]
+      "references": []
     }
   ],
   "FAQ": {
