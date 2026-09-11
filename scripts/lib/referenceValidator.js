@@ -154,6 +154,23 @@ function isTrustedDomain(url) {
   }
 }
 
+// Domains that serve an identical 200 SPA shell for every path (even dead
+// ones), making link liveness impossible to verify over plain HTTP. Confirmed
+// for www.ch.ch on 2026-09-11 (see ark-fid.ch audit): dead and live paths
+// return byte-identical HTML to non-browser clients.
+const UNVERIFIABLE_SPA_DOMAINS = ["ch.ch"];
+
+function isUnverifiableSpaDomain(url) {
+  try {
+    const { hostname } = new URL(url);
+    return UNVERIFIABLE_SPA_DOMAINS.some(
+      (d) => hostname === d || hostname.endsWith(`.${d}`),
+    );
+  } catch {
+    return false;
+  }
+}
+
 /**
  * Extract domain from URL for deduplication
  * @param {string} url - URL to extract domain from
@@ -279,6 +296,18 @@ async function validateUrl(url, options = {}) {
   if (!/^https?:\/\//.test(url)) {
     result.error = "URL must start with http:// or https://";
     result.reason = "invalid-protocol";
+    return result;
+  }
+
+  // Client-rendered SPA domains cannot be verified over HTTP from CI.
+  // Default: keep existing references (valid, but flagged). With
+  // strictUnverifiable (pipeline gate for NEW references), reject them.
+  if (isUnverifiableSpaDomain(url)) {
+    result.reason = "unverifiable-spa";
+    result.valid = !options.strictUnverifiable;
+    result.error = options.strictUnverifiable
+      ? "SPA domain cannot be verified over HTTP; not accepted for new references"
+      : null;
     return result;
   }
 
@@ -493,7 +522,13 @@ async function validateReferences(references, options = {}) {
           });
           continue;
         }
-        const result = await validateUrl(ref.url, validateOptions);
+        // Gate for NEW references entering the corpus: unverifiable SPA
+        // domains are rejected here, while existing refs checked via
+        // validateUrl directly keep the benefit of the doubt.
+        const result = await validateUrl(ref.url, {
+          strictUnverifiable: true,
+          ...validateOptions,
+        });
         results.push({ ref, result });
       }
     },
@@ -651,6 +686,7 @@ module.exports = {
   deduplicateByDomain,
   extractDomain,
   isTrustedDomain,
+  isUnverifiableSpaDomain,
   getFallbackReferences,
   VERIFIED_FALLBACK_REFS,
   DEFAULT_TIMEOUT_MS,
