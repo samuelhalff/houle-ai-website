@@ -18,7 +18,7 @@
       "date": "2025-12-17",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -26,7 +26,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -49,11 +49,11 @@
       "date": "2025-12-17",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -79,11 +79,11 @@
       "date": "2025-12-13",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -108,7 +108,7 @@
       "date": "2025-12-13",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -116,7 +116,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -139,7 +139,7 @@
       "date": "2025-12-09",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -147,7 +147,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -169,11 +169,11 @@
       "date": "2025-12-09",
       "references": [
         {
-          "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
+          "labelKey": "Azure OpenAI - Documentação Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
         },
         {
-          "labelKey": "Azure OpenAI - Use your data (RAG) - Microsoft Learn",
+          "labelKey": "Azure OpenAI - Usar os seus dados (RAG) - Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data"
         }
       ],
@@ -194,11 +194,11 @@
       "date": "2025-12-05",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -224,11 +224,11 @@
       "date": "2025-12-05",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -253,11 +253,11 @@
       "date": "2025-12-01",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -283,11 +283,11 @@
       "date": "2025-12-01",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -312,7 +312,7 @@
       "date": "2025-11-29",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -320,7 +320,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -343,11 +343,11 @@
       "date": "2025-11-29",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -374,11 +374,11 @@
       "date": "2025-11-26",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -403,11 +403,11 @@
       "date": "2025-11-25",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -434,11 +434,11 @@
       "date": "2025-11-25",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -463,11 +463,11 @@
       "date": "2025-11-25",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -492,11 +492,11 @@
       "date": "2025-11-22",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -522,7 +522,7 @@
       "date": "2025-11-22",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -530,7 +530,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -552,7 +552,7 @@
       "date": "2025-11-21",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -560,7 +560,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -582,11 +582,11 @@
       "date": "2025-11-21",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -611,7 +611,7 @@
       "date": "2025-11-21",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -619,7 +619,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -642,11 +642,11 @@
       "date": "2025-11-20",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -672,11 +672,11 @@
       "date": "2025-11-20",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -701,11 +701,11 @@
       "date": "2025-11-20",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -732,11 +732,11 @@
       "date": "2025-11-20",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -761,11 +761,11 @@
       "date": "2025-11-19",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -791,11 +791,11 @@
       "date": "2025-11-19",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -821,11 +821,11 @@
       "date": "2025-11-18",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -850,11 +850,11 @@
       "date": "2025-11-18",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -879,11 +879,11 @@
       "date": "2025-11-17",
       "references": [
         {
-          "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
+          "labelKey": "Azure OpenAI - Documentação Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
         },
         {
-          "labelKey": "Azure OpenAI - Use your data (RAG) - Microsoft Learn",
+          "labelKey": "Azure OpenAI - Usar os seus dados (RAG) - Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data"
         }
       ],
@@ -905,11 +905,11 @@
       "date": "2025-11-17",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -936,11 +936,11 @@
       "date": "2025-11-16",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -966,7 +966,7 @@
       "date": "2025-11-15",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -974,7 +974,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -995,11 +995,11 @@
       "date": "2025-11-15",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -1025,7 +1025,7 @@
       "date": "2025-11-14",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -1033,7 +1033,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -1055,11 +1055,11 @@
       "date": "2025-11-13",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -1084,11 +1084,11 @@
       "date": "2025-11-13",
       "references": [
         {
-          "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
+          "labelKey": "Azure OpenAI - Documentação Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
         },
         {
-          "labelKey": "Azure OpenAI - Use your data (RAG) - Microsoft Learn",
+          "labelKey": "Azure OpenAI - Usar os seus dados (RAG) - Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data"
         }
       ],
@@ -1110,11 +1110,11 @@
       "date": "2025-11-12",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -1139,7 +1139,7 @@
       "date": "2025-11-11",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -1147,7 +1147,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -1169,11 +1169,11 @@
       "date": "2025-11-11",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -1199,7 +1199,7 @@
       "date": "2025-11-09",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -1207,7 +1207,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -1228,7 +1228,7 @@
       "date": "2025-11-07",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -1236,7 +1236,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -1257,11 +1257,11 @@
       "date": "2025-11-05",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -1287,11 +1287,11 @@
       "date": "2025-11-01",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -1316,7 +1316,7 @@
       "date": "2025-10-29",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -1324,7 +1324,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -1345,11 +1345,11 @@
       "date": "2025-10-24",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -1392,7 +1392,7 @@
       "content": "Criar a sua empresa na Suíça (GmbH/Sàrl, AG/SA ou empresa individual) requer algumas decisões essenciais. Este guia explica, de forma simples, como criar uma empresa na Suíça: escolha da forma jurídica, inscrição no Registo do Comércio, [IVA](/services/taxes), banca e custos iniciais.\n\nExpressões de pesquisa (integradas naturalmente): criar empresa, criar a sua empresa, criar uma Sàrl, criar uma SA, constituição de empresa na Suíça.\n\n## 1) Escolher a forma jurídica: GmbH, AG ou empresa individual\n\n- **GmbH (Sàrl)**\n  - Capital: **CHF 20.000** (recomendável libertação total).\n  - Responsabilidade limitada.\n  - Governação simples, adequada a PME e vários fundadores.\n\n- **AG (SA)**\n  - Capital: **CHF 100.000** (mín. CHF 50.000 libertados).\n  - Imagem mais corporativa, ações transmissíveis, governação mais formal (Conselho).\n  - Indicada para captação de investimento e projetos com maior exposição.\n\n- **Empresa individual**\n  - Sem capital mínimo, **responsabilidade ilimitada**.\n  - Trâmite simples; inscrição no Registo Comercial normalmente a partir de **CHF 100.000** de volume anual (ou antes consoante atividade/banco).\n\n> Dica rápida: para arrancar depressa com responsabilidade limitada, a **GmbH/Sàrl** é a opção mais comum.\n\n## 2) Passos para criar a sociedade (checklist)\n\n1. **Nome, objeto e sede**: verificar disponibilidade e definir o objeto.\n2. **Domicílio**: arrendamento, espaço de parceiro ou **[domiciliação](/services/domiciliation)** profissional.\n3. **Estatutos**: capital, estrutura de ações/quotas, governação, cláusulas de transmissão/assinatura.\n4. **Banco & capital**: abrir conta de **bloqueio** do capital (atestado).\n5. **Escritura pública (GmbH/AG)**: notário.\n6. **Dossiê Registo Comercial**: estatutos assinados, certidões, formulários e documentos de identidade.\n7. **[IVA](/services/taxes)**: avaliar **sujeição** (limiar CHF 100.000 de faturação global) e registar se aplicável.\n8. **Segurança social**: AVS/AI/APG, LAA e fundo de pensões (LPP) se houver empregados.\n9. **Contabilidade & ferramentas**: plano de contas, faturação, controlos internos.\n\n## 3) Prazos habituais\n\n- Preparação de estatutos/dossiê: **2–7 dias úteis**.\n- Notário e atestado bancário: **2–5 dias**.\n- Registo Comercial (após entrega completa): **3–10 dias**.\n- IVA/segurança social: **alguns dias** conforme portal/período.\n\nNo total, a constituição costuma levar **1–3 semanas**.\n\n## 4) Custos e valores de partida (indicativos)\n\nValores **indicativos**, variáveis por cantão, notário, banco, complexidade e prazos.\n\n- **Pack de constituição GmbH/Sàrl** (estatutos, dossiê RC, coordenação notário, formalidades IVA/AVS se aplicáveis): **desde CHF 1.250–1.900 + IVA**.\n- **Pack de constituição AG/SA**: **desde CHF 1.800–2.800 + IVA**.\n- **Domiciliação** (Genebra/Romandia): **desde CHF 90–180 + IVA/mês**.\n- **Arranque contabilístico** (plano de contas, primeiras automatizações): **desde CHF 450–900 + IVA**.\n\nCustos de terceiros (típicos):\n\n- **Notário**: aprox. **CHF 600–2.500**.\n- **Taxas do Registo Comercial**: aprox. **CHF 120–600**.\n- **Atestado de bloqueio (banco)**: aprox. **CHF 100–300**.\n\n> Pacotes transparentes e flexíveis; orçamento detalhado antes do arranque.\n\n## 5) IVA: quando registar?\n\n- Limiar de **CHF 100.000** de faturação (global, CH + exterior) em 12 meses móveis.\n- Registo voluntário possível abaixo do limiar (para recuperar IVA suportado).\n- **Método efetivo** ou **taxa líquida** conforme dimensão/setor.\n\n## 6) Erros frequentes a evitar\n\n- Desvalorizar a **redação dos estatutos** (direitos/obrigações, lock‑up, cláusulas de saída).\n- Omitir **afiliações sociais** ao contratar.\n- Tratar o banco tardiamente (é necessário **atestado de bloqueio** antes da escritura).\n- Adiar a **[contabilidade](/services/accounting)** (faturação e IVA desde o primeiro dia).\n\n## 7) FAQ – criar empresa na Suíça\n\n- **Quanto tempo para uma GmbH?** Normalmente 1–2 semanas com dossiê completo.\n- **Notário é obrigatório?** Sim para GmbH/AG. Não para empresa individual.\n- **Posso constituir sem capital libertado?** Não: depósito em conta bloqueada antes da escritura (GmbH/AG).\n- **Quando registar no IVA?** A partir de CHF 100.000 (ou por opção).\n\n### Serviços Ark Fiduciaire\n\nApoiamos a **constituição de empresas** (GmbH/AG/individual) em Genebra e Romandia: estatutos, Registo Comercial, IVA, bancos, **[domiciliação](/services/domiciliation)** e depois [contabilidade](/services/accounting) e [payroll](/services/payroll).\n\nPara um arranque tranquilo, **contacte a nossa [equipa](/team)** para orçamento e calendário à medida.\n\n### Related Services\n\n- [Company Incorporation](/services/incorporation)\n- [Domiciliation Services](/services/domiciliation)\n- [Accounting Services](/services/accounting)\n- [Contact Us](/contact)\n\n## Practical tips for Microsoft/Azure\n- Keep examples concrete: show 1-2 configuration steps (Azure resource, ask prompt), and test with a small dataset first.\n- Prefer RAG (retrieval-augmented generation) for grounding answers: index internal docs, add answer citations and logging.\n- Deploy models in a Swiss region for data sovereignty and enable proper moderation + access controls (Azure AD, role-based).\n",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -1400,7 +1400,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -1421,11 +1421,11 @@
       "date": "2025-10-21",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -1450,11 +1450,11 @@
       "date": "2025-10-21",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -1481,7 +1481,7 @@
       "updated": "2026-03-26",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -1489,7 +1489,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -1511,11 +1511,11 @@
       "date": "2025-10-11",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -1542,11 +1542,11 @@
       "date": "2025-10-09",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -1571,11 +1571,11 @@
       "date": "2026-03-26",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -1602,11 +1602,11 @@
       "date": "2025-10-05",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -1631,11 +1631,11 @@
       "date": "2025-10-03",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -1660,11 +1660,11 @@
       "date": "2025-10-02",
       "references": [
         {
-          "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
+          "labelKey": "Azure OpenAI - Documentação Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
         },
         {
-          "labelKey": "Azure OpenAI - Use your data (RAG) - Microsoft Learn",
+          "labelKey": "Azure OpenAI - Usar os seus dados (RAG) - Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data"
         }
       ],
@@ -1686,7 +1686,7 @@
       "date": "2025-10-01",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -1694,7 +1694,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -1715,11 +1715,11 @@
       "date": "2025-10-01",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -1745,11 +1745,11 @@
       "date": "2025-09-19",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -1774,7 +1774,7 @@
       "date": "2025-09-17",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -1782,7 +1782,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -1803,11 +1803,11 @@
       "date": "2025-09-17",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -1832,11 +1832,11 @@
       "date": "2025-09-17",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -1861,11 +1861,11 @@
       "date": "2025-09-17",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -1890,11 +1890,11 @@
       "date": "2025-09-17",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -1921,11 +1921,11 @@
       "date": "2025-09-17",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -1952,11 +1952,11 @@
       "date": "2025-09-17",
       "references": [
         {
-          "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
+          "labelKey": "Azure OpenAI - Documentação Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
         },
         {
-          "labelKey": "Azure OpenAI - Use your data (RAG) - Microsoft Learn",
+          "labelKey": "Azure OpenAI - Usar os seus dados (RAG) - Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data"
         }
       ],
@@ -1977,7 +1977,7 @@
       "date": "2025-09-17",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -1985,7 +1985,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -2008,7 +2008,7 @@
       "date": "2025-09-17",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -2016,7 +2016,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -2037,7 +2037,7 @@
       "content": "Em novembro de 2024, os genebrinos aprovaram massivamente uma redução histórica dos impostos cantonais e comunais, a primeira desde 1999. Esta reforma importante, aprovada por mais de 61%, traz mudanças significativas para todos os contribuintes genebrinos a partir do ano fiscal de 2025.\n\n### Uma redução diferenciada segundo os rendimentos\n\nA reforma genebrina não beneficia uniformemente todos os contribuintes. As reduções variam segundo as faixas de rendimentos:\n\n- **Classe média (75.000–150.000 CHF)**: redução de até 11,4%.\n- **Rendimentos modestos (<75.000 CHF)**: redução média de 8,8% (cerca de 870 CHF economizados para 50.000 CHF de rendimento).\n- **Altos rendimentos (>200.000 CHF)**: redução de 5,3%.\n\n### Passagem para 12 mensalidades\n\nA partir de 2025, o pagamento dos adiantamentos passa de 10 para 12 mensalidades, melhorando a distribuição dos encargos.\n\n### Impactos para as empresas\n\n- **Poder de compra aumentado** impulsiona o consumo local.\n- **Competitividade reforçada** na guerra dos talentos.\n\n### Conselhos práticos\n\n- Ajuste seus adiantamentos através da calculadora online.\n- Antecipe 2026 otimizando suas deduções.\n\n(Artigo de 1.850 palavras detalhando cada ponto com exemplos, estudos de caso e simulações cifradas.)\n\n### Related Services\n\n- [Tax Services](/services/taxes)\n- [Contact Us](/contact)",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -2045,7 +2045,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -2067,11 +2067,11 @@
       "content": "Houle.ai é uma empresa de consultoria líder especializada em **inteligência artificial** e **tecnologias Microsoft**. Com profunda expertise em soluções em nuvem, inteligência empresarial e transformação digital, a Houle.ai ajuda empresas a aproveitar tecnologia de ponta para otimizar suas operações e impulsionar o crescimento.\n\n## Serviços Principais\n\n### Consultoria em IA\n- Implementação de machine learning\n- Soluções de processamento de linguagem natural\n- Aplicações de visão computacional\n- Análise preditiva\n- Desenvolvimento de estratégia e roteiro de IA\n\n### Expertise em Tecnologia Microsoft\n- **Soluções Azure Cloud**: Migração, otimização e gestão\n- **Microsoft 365**: Implementação e personalização\n- **Power Platform**: Power BI, Power Apps, Power Automate\n- **Dynamics 365**: Implementação de CRM e ERP\n- **Modern Workplace**: Ferramentas de colaboração e produtividade\n\n## Por Que Escolher Houle.ai?\n\n### Abordagem Orientada pela Inovação\nHoule.ai permanece na vanguarda da inovação tecnológica, explorando continuamente novas capacidades de IA e recursos da plataforma Microsoft para oferecer vantagens competitivas aos clientes.\n\n### Expertise na Indústria\nA equipe traz vasta experiência em múltiplos setores, incluindo serviços financeiros, saúde, manufatura, varejo e serviços profissionais.\n\n### Metodologia Comprovada\nHoule.ai emprega uma abordagem estruturada para a transformação digital:\n1. **Avaliação**: Compreender o estado atual e os objetivos\n2. **Estratégia**: Desenvolver um roteiro personalizado\n3. **Implementação**: Executar com as melhores práticas\n4. **Otimização**: Melhoria contínua e suporte\n\n## Produtos e Soluções\n\n### Aplicações de IA Personalizadas\nHoule.ai desenvolve soluções de IA sob medida projetadas para abordar desafios empresariais específicos, desde a automação de tarefas rotineiras até a descoberta de insights valiosos a partir de dados.\n\n### Plataformas Baseadas em Microsoft\nAproveitando o ecossistema Microsoft, Houle.ai cria plataformas integradas que aumentam a produtividade, simplificam fluxos de trabalho e melhoram a tomada de decisões.\n\n## Parceria e Colaboração\n\nComo **parceiro Microsoft**, Houle.ai mantém relações estreitas com as equipes de produtos da Microsoft, garantindo acesso antecipado a novos recursos e a capacidade de fornecer aos clientes soluções de ponta.\n\n## Sucesso na Transformação Digital\n\nHoule.ai orientou com sucesso inúmeras organizações através de suas jornadas de transformação digital, ajudando-as a reduzir custos operacionais, melhorar a experiência do cliente, acelerar o tempo de comercialização, aprimorar a tomada de decisões baseada em dados e promover uma cultura de inovação.\n\n## Contato e Mais Informações\n\nPara empresas que buscam aproveitar o poder da IA e das tecnologias Microsoft, Houle.ai oferece serviços de consultoria abrangentes adaptados a necessidades e objetivos específicos.\n\nVisite **[houle.ai](https://houle.ai)** para saber mais sobre seus serviços, casos de estudo e como eles podem apoiar suas iniciativas de transformação digital.\n\n### Related Services\n\n- [Contact Us](/contact)\n- [Our Team](/team)\n\n## Practical tips for Microsoft/Azure\n- Keep examples concrete: show 1-2 configuration steps (Azure resource, ask prompt), and test with a small dataset first.\n- Prefer RAG (retrieval-augmented generation) for grounding answers: index internal docs, add answer citations and logging.\n- Deploy models in a Swiss region for data sovereignty and enable proper moderation + access controls (Azure AD, role-based).\n",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -2096,7 +2096,7 @@
       "content": "A Suíça se estabeleceu como uma referência global em regulamentação de criptomoedas. Com uma estrutura legal clara e uma abordagem pragmática, as autoridades helvéticas oferecem um ambiente favorável, mantendo uma conformidade estrita.\n\n#### Classificação de tokens (FINMA)\n- **Payment Tokens**: isenção de ganhos de capital privados, mas inclusão no patrimônio.\n- **Utility Tokens**: status variável dependendo do uso.\n- **Security Tokens**: tratamentos alinhados com valores mobiliários.\n\n#### Obrigações fiscais\n- **Imposto sobre a fortuna**: declaração obrigatória em 31 de dezembro.\n- **Ganhos de capital**: isentos para investidores privados, tributáveis se atividades especulativas.\n- **[IVA](/services/taxes)**: assimilado à troca, sujeição ao valor em CHF.\n\n#### Declarações\n- Obrigações de mineração (rendimentos da atividade)\n- Staking, DeFi, NFTs: tributações específicas\n\n#### Estratégias de otimização\n- Timing das cessões\n- Estruturação familiar\n- Domiciliação vantajosa\n\n(Artigo de 1.900 palavras com casos práticos de Genebra e da região da Romandia.)\n\n### Related Services\n\n- [Tax Services](/services/taxes)\n- [Contact Us](/contact)",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -2104,7 +2104,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -2125,11 +2125,11 @@
       "date": "2025-08-25",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -2154,11 +2154,11 @@
       "date": "2025-12-21",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -2185,11 +2185,11 @@
       "date": "2025-12-25",
       "references": [
         {
-          "labelKey": "Power Automate - Documentation Microsoft Learn",
+          "labelKey": "Power Automate - Documentação Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/power-automate/"
         },
         {
-          "labelKey": "Microsoft Graph - Overview - Microsoft Learn",
+          "labelKey": "Microsoft Graph - Visão Geral - Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/graph/overview"
         }
       ],
@@ -2212,11 +2212,11 @@
       "date": "2025-12-29",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -2243,11 +2243,11 @@
       "date": "2026-01-01",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -2274,7 +2274,7 @@
       "date": "2026-01-05",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -2282,7 +2282,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -2305,11 +2305,11 @@
       "date": "2026-01-09",
       "references": [
         {
-          "labelKey": "Power Automate - Documentation Microsoft Learn",
+          "labelKey": "Power Automate - Documentação Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/power-automate/"
         },
         {
-          "labelKey": "Microsoft Graph - Overview - Microsoft Learn",
+          "labelKey": "Microsoft Graph - Visão Geral - Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/graph/overview"
         }
       ],
@@ -2332,11 +2332,11 @@
       "date": "2026-02-05",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -2363,7 +2363,7 @@
       "date": "2026-02-08",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -2371,7 +2371,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -2394,7 +2394,7 @@
       "date": "2026-02-11",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -2402,7 +2402,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -2424,11 +2424,11 @@
       "date": "2026-02-14",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -2455,11 +2455,11 @@
       "date": "2026-02-17",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -2485,11 +2485,11 @@
       "date": "2026-02-20",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -2516,11 +2516,11 @@
       "date": "2026-02-23",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -2547,7 +2547,7 @@
       "date": "2026-02-26",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -2555,7 +2555,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -2577,7 +2577,7 @@
       "date": "2026-02-26",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -2585,7 +2585,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -2606,7 +2606,7 @@
       "date": "2026-02-26",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -2614,7 +2614,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -2636,15 +2636,15 @@
       "date": "2026-02-26",
       "references": [
         {
-          "labelKey": "Recueil des règles de conservation des documents (Canton de Vaud)",
+          "labelKey": "Compilação das regras de conservação de documentos (Cantão de Vaud)",
           "url": "https://www.vd.ch/fileadmin/user_upload/themes/etat_droit/archives_cantonales/Fichiers-PDF/Gestion-documentaire/doc-20210705-Recueil_regles_docs_gestion_2006.pdf"
         },
         {
-          "labelKey": "Gestion des documents internes et pratiques organisationnelles (FINMA)",
+          "labelKey": "Gestão de documentos internos e práticas organizacionais (FINMA)",
           "url": "https://www.finma.ch/fr/finma/organisation/corporate-governance/contr%C3%B4les-internes/"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ],
@@ -2666,11 +2666,11 @@
       "date": "2026-02-28",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -2696,11 +2696,11 @@
       "date": "2026-03-01",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -2727,11 +2727,11 @@
       "date": "2026-03-04",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -2758,15 +2758,15 @@
       "date": "2026-03-07",
       "references": [
         {
-          "labelKey": "FINMA : risques liés à l’utilisation de l’IA",
+          "labelKey": "FINMA: riscos associados à utilização da IA",
           "url": "https://www.finma.ch/fr/~/media/finma/dokumente/dokumentencenter/8news/medienmitteilungen/2024/12/20241218-mm-finma-am-08-24.pdf?sc_lang=fr&hash=CDA3FD88333345F35AFA00646F5E9B78"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ],
@@ -2787,11 +2787,11 @@
       "date": "2026-03-13",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -2816,11 +2816,11 @@
       "date": "2026-03-10",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -2845,15 +2845,15 @@
       "date": "2026-03-16",
       "references": [
         {
-          "labelKey": "Plan d'action sur l'IA aux États-Unis - Maison Blanche",
+          "labelKey": "Plano de ação sobre IA nos Estados Unidos - Casa Branca",
           "url": "https://www.whitehouse.gov/wp-content/uploads/2025/07/Americas-AI-Action-Plan.pdf"
         },
         {
-          "labelKey": "Guide officieux sur IA et copyrights par Copyright Office",
+          "labelKey": "Guia oficioso sobre IA e direitos de autor pelo Copyright Office",
           "url": "https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-3-Generative-AI-Training-Report-Pre-Publication-Version.pdf"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ],
@@ -2875,15 +2875,15 @@
       "date": "2026-03-19",
       "references": [
         {
-          "labelKey": "Template de Charte IA - ABCI.org",
+          "labelKey": "Template de Carta de IA - ABCI.org",
           "url": "https://www.abci.org/files/files/2025/Template-de-Charte-IA.pdf"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ],
@@ -2905,11 +2905,11 @@
       "date": "2026-03-22",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -2934,19 +2934,19 @@
       "date": "2026-03-25",
       "references": [
         {
-          "labelKey": "Collège des administrateurs | Article sur IA et gouvernance",
+          "labelKey": "Colégio dos Administradores | Artigo sobre IA e governança",
           "url": "https://www.cas.ulaval.ca/wp-content/uploads/2025/09/College_Article_CA_et_IA_2025-09_v5-corrige.pdf"
         },
         {
-          "labelKey": "Rapport IA dans le canton de Vaud (vd.ch)",
+          "labelKey": "Relatório sobre IA no Cantão de Vaud (vd.ch)",
           "url": "https://www.vd.ch/fileadmin/user_upload/organisation/dinf/dsi/fichiers_pdf/IA_Rapport_interd%C3%A9partemental.pdf"
         },
         {
-          "labelKey": "Plan Global pour les standards IA - NIST",
+          "labelKey": "Plano Global para normas de IA - NIST",
           "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-5.pdf"
         },
         {
-          "labelKey": "Gouvernance et risques liés à l'IA (finma.ch)",
+          "labelKey": "Governança e riscos associados à IA (finma.ch)",
           "url": "https://www.finma.ch/fr/~/media/finma/dokumente/dokumentencenter/myfinma/4dokumentation/finma-aufsichtsmitteilungen/20241218-finma-aufsichtsmitteilung-08-2024.pdf?sc_lang=fr&hash=13E1E8A0EBF3AE250A1EB6E26BD3428D"
         }
       ],
@@ -2967,11 +2967,11 @@
       "date": "2026-03-28",
       "references": [
         {
-          "labelKey": "Charte et gouvernance de l'IA au travail",
+          "labelKey": "Carta e governança da IA no trabalho",
           "url": "https://www.erudit.org/fr/revues/admachina/2021-n5-admachina06837/1087042ar.pdf"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -2996,15 +2996,15 @@
       "date": "2026-03-31",
       "references": [
         {
-          "labelKey": "Guide de l’UNIGE pour un usage pédagogique responsable de l’IA générative",
+          "labelKey": "Guia da UNIGE para uso pedagógico responsável da IA generativa",
           "url": "https://www.unige.ch/lettres/application/files/7217/4980/4045/recommandations_IA_2025-2026_130625.pdf"
         },
         {
-          "labelKey": "Politique IA RGIS : Pourquoi avoir une politique IA",
+          "labelKey": "Política de IA RGIS: Porque ter uma política de IA",
           "url": "https://fr.rgis.ch/wp-content/uploads/2023/04/RGIS_MC_0072_01-RGIS-AI-POLICY-FR.pdf"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ],
@@ -3027,15 +3027,15 @@
       "date": "2026-04-01",
       "references": [
         {
-          "labelKey": "Propriété intellectuelle et technologie de pointe (WIPO)",
+          "labelKey": "Propriedade intelectual e tecnologia de ponta (WIPO)",
           "url": "https://www.wipo.int/edocs/pubdocs/fr/wipo-pub-rn2024-8-fr-generative-ai-navigating-intellectual-property.pdf"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ],
@@ -3056,15 +3056,15 @@
       "date": "2026-04-04",
       "references": [
         {
-          "labelKey": "Analyse des réglementations IA (France et international)",
+          "labelKey": "Análise das regulamentações de IA (França e internacional)",
           "url": "https://parispeaceforum.org/app/uploads/2022/04/fr-beyond-the-north-south-fork-on-the-road-to-ai-governance.pdf"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ],
@@ -3085,7 +3085,7 @@
       "date": "2026-04-07",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -3093,7 +3093,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -3119,11 +3119,11 @@
           "url": "https://computing.mit.edu/wp-content/uploads/2023/11/AIPolicyBrief.pdf"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ],
@@ -3144,11 +3144,11 @@
       "date": "2026-04-13",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -3175,7 +3175,7 @@
       "date": "2026-04-16",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -3183,7 +3183,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -3206,11 +3206,11 @@
       "date": "2026-04-19",
       "references": [
         {
-          "labelKey": "Intelligence artificielle dans l'information financière - KPMG",
+          "labelKey": "Inteligência artificial na informação financeira - KPMG",
           "url": "https://lyon-finance.org/app/uploads/2024/10/KPMG-Etude-Francaise-IA-information-financiere-et-audit_compressed.pdf"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -3235,11 +3235,11 @@
       "date": "2026-04-22",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -3265,7 +3265,7 @@
       "date": "2026-04-25",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -3273,7 +3273,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -3295,11 +3295,11 @@
       "date": "2026-04-28",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -3325,11 +3325,11 @@
       "date": "2026-05-01",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -3356,15 +3356,15 @@
       "date": "2026-05-04",
       "references": [
         {
-          "labelKey": "État des lieux sur la réglementation de l’intelligence artificielle",
+          "labelKey": "Estado atual da regulamentação da inteligência artificial",
           "url": "https://www.bakom.admin.ch/dam/fr/sd-web/MKUEgci9oDRD/Auslegeordnung%20zur%20Regulierung%20von%20%20k%C3%BCnstlicher%20Intelligenz_def.pdf"
         },
         {
-          "labelKey": "Communication FINMA sur la surveillance 08/2024",
+          "labelKey": "Comunicação FINMA sobre a supervisão 08/2024",
           "url": "https://www.finma.ch/fr/~/media/finma/dokumente/dokumentencenter/myfinma/4dokumentation/finma-aufsichtsmitteilungen/20241218-finma-aufsichtsmitteilung-08-2024.pdf?sc_lang=fr&hash=13E1E8A0EBF3AE250A1EB6E26BD3428D"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ],
@@ -3386,11 +3386,11 @@
       "date": "2026-05-07",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -3415,11 +3415,11 @@
       "date": "2026-05-10",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -3446,7 +3446,7 @@
       "date": "2026-05-16",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -3454,7 +3454,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -3477,7 +3477,7 @@
       "date": "2026-05-19",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -3485,7 +3485,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -3507,11 +3507,11 @@
       "date": "2026-05-22",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -3538,11 +3538,11 @@
       "date": "2026-05-25",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -3569,11 +3569,11 @@
       "date": "2026-05-28",
       "references": [
         {
-          "labelKey": "Power Automate - Documentation Microsoft Learn",
+          "labelKey": "Power Automate - Documentação Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/power-automate/"
         },
         {
-          "labelKey": "Microsoft Graph - Overview - Microsoft Learn",
+          "labelKey": "Microsoft Graph - Visão Geral - Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/graph/overview"
         }
       ],
@@ -3594,15 +3594,15 @@
       "date": "2026-05-31",
       "references": [
         {
-          "labelKey": "Guide pratique mise en place politique IA dans les entreprises",
+          "labelKey": "Guia prático para implementação de política de IA nas empresas",
           "url": "https://www.swissinfo.ch/content/wp-content/uploads/sites/13/2024/04/2024_SWI_AI_Guidelines-2024_FRA.pdf"
         },
         {
-          "labelKey": "Charte IA Ville de Genève",
+          "labelKey": "Carta de IA da Cidade de Genebra",
           "url": "https://www.geneve.ch/sites/default/files/2025-04/charte-IA-ville-geneve.pdf"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ],
@@ -3623,11 +3623,11 @@
       "date": "2026-06-01",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -3652,15 +3652,15 @@
       "date": "2026-06-04",
       "references": [
         {
-          "labelKey": "Lignes directrices pour une approche stratégique de l'IA dans l'administration fédérale",
+          "labelKey": "Diretrizes para uma abordagem estratégica da IA na administração federal",
           "url": "https://www.bk.admin.ch/dam/fr/sd-web/r84AJpxifth2/ki-leitlinien.pdf"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ],
@@ -3681,15 +3681,15 @@
       "date": "2026-06-10",
       "references": [
         {
-          "labelKey": "Modèle de politique d’usage de l’IA générative",
+          "labelKey": "Modelo de política de uso de IA generativa",
           "url": "https://data.org/wp-content/uploads/2024/11/Generative-AI-Policy-Template.pdf"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ],
@@ -3719,15 +3719,15 @@
       ],
       "references": [
         {
-          "labelKey": "Institut Montaigne : IA en entreprise",
+          "labelKey": "Institut Montaigne: IA nas empresas",
           "url": "https://www.institutmontaigne.org/ressources/pdfs/publications/note-ia-en-entreprise-le-guide-dune-integration-maitrisee.pdf"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ]
@@ -3748,11 +3748,11 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -3777,11 +3777,11 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -3808,11 +3808,11 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -3837,7 +3837,7 @@
       ],
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -3845,7 +3845,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ]
@@ -3868,7 +3868,7 @@
       ],
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -3876,7 +3876,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ]
@@ -3898,11 +3898,11 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -3927,7 +3927,7 @@
       ],
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -3935,7 +3935,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ]
@@ -3957,7 +3957,7 @@
       ],
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -3965,7 +3965,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ]
@@ -3990,7 +3990,7 @@
           "url": "https://www.seas.ucla.edu/spapl/paper/balaji_slate2025_llm.pdf"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -4016,15 +4016,15 @@
       ],
       "references": [
         {
-          "labelKey": "Guide de conformité AI Act par France Digitale",
+          "labelKey": "Guia de conformidade AI Act por France Digitale",
           "url": "https://media.francedigitale.org/app/uploads/prod/2024/02/01163100/Guide-Conformite-AI-Act-Fev-2024-1.pdf"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ]
@@ -4046,7 +4046,7 @@
       ],
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -4054,7 +4054,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ]
@@ -4076,11 +4076,11 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -4106,7 +4106,7 @@
       ],
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -4114,7 +4114,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ]
@@ -4136,11 +4136,11 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -4168,11 +4168,11 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -4199,7 +4199,7 @@
       ],
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -4207,7 +4207,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ]
@@ -4229,11 +4229,11 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -4259,7 +4259,7 @@
       ],
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -4267,7 +4267,7 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "AI Act - Quadro regulamentar da UE sobre IA - Comissão Europeia",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ]
@@ -4290,11 +4290,11 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -4320,11 +4320,11 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -4351,11 +4351,11 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -4381,11 +4381,11 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -4410,15 +4410,15 @@
       ],
       "references": [
         {
-          "labelKey": "Règlements IA émergents et conformité",
+          "labelKey": "Regulamentos emergentes de IA e conformidade",
           "url": "https://www.une.edu/sites/default/files/2023-10/Guidance%20for%20the%20Use%20of%20Artificial%20Intelligence%20%28AI%29%20in%20Research.pdf"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ]
@@ -4439,11 +4439,11 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -4468,11 +4468,11 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -4498,15 +4498,15 @@
       ],
       "references": [
         {
-          "labelKey": "Perspectives sur la réglementation de l’IA en Suisse",
+          "labelKey": "Perspetivas sobre a regulamentação da IA na Suíça",
           "url": "https://www.newsd.admin.ch/newsd/message/attachments/71097.pdf"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ]
@@ -4529,15 +4529,15 @@
       ],
       "references": [
         {
-          "labelKey": "VD.ch - Mesures essentielles de cybersécurité dans les entreprises",
+          "labelKey": "VD.ch - Medidas essenciais de cibersegurança nas empresas",
           "url": "https://www.vd.ch/fileadmin/user_upload/organisation/dinf/dsi/fichiers_pdf/securite/Mesures_essentielles_de_cybers%C3%A9curit%C3%A9_-_Niveau_priorit%C3%A9_1_v2.0.pdf"
         },
         {
-          "labelKey": "FINMA - Guide de gestion des risques liés à l'intelligence artificielle",
+          "labelKey": "FINMA - Guia de gestão de riscos associados à inteligência artificial",
           "url": "https://www.finma.ch/en/news/2024/12/20241218-mm-finma-am-08-24/"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
@@ -4558,11 +4558,11 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -4587,11 +4587,11 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -4616,11 +4616,11 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -4647,11 +4647,11 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -4676,15 +4676,15 @@
       ],
       "references": [
         {
-          "labelKey": "Etat des lieux sur la règlementation de l'IA",
+          "labelKey": "Estado atual da regulamentação da IA",
           "url": "https://www.bakom.admin.ch/dam/fr/sd-web/MKUEgci9oDRD/Auslegeordnung%20zur%20Regulierung%20von%20%20k%C3%BCnstlicher%20Intelligenz_def.pdf"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ]
@@ -4705,15 +4705,15 @@
       ],
       "references": [
         {
-          "labelKey": "Charte IA France Travail",
+          "labelKey": "Carta de IA France Travail",
           "url": "https://www.francetravail.org/files/live/sites/peorg/files/documents/Publications/Charte%20france%20travail%20IA%202025_DCE-jan25.pdf"
         },
         {
-          "labelKey": "Réglementer l’IA dans l’entreprise – OpenEdition Journals",
+          "labelKey": "Regulamentar a IA na empresa – OpenEdition Journals",
           "url": "https://journals.openedition.org/chroniquestravail/pdf/1719"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
@@ -4735,11 +4735,11 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -4765,11 +4765,11 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -4794,11 +4794,11 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -4823,11 +4823,11 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página do Produto Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Termos de Utilização",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
@@ -4853,27 +4853,27 @@
       ],
       "references": [
         {
-          "labelKey": "NIST: Gouvernance IA et évaluation des risques",
+          "labelKey": "NIST: Governação de IA e avaliação de riscos",
           "url": "https://www.nist.gov/artificial-intelligence"
         },
         {
-          "labelKey": "SIF - Innovation et réglementation de l'IA",
+          "labelKey": "SIF - Inovação e regulamentação da IA",
           "url": "https://www.sif.admin.ch/fr/intelligence-artificielle"
         },
         {
-          "labelKey": "SECO - Gouvernance d'entreprise",
+          "labelKey": "SECO - Governação empresarial",
           "url": "https://www.seco.admin.ch/fr/gouvernance-entreprise"
         },
         {
-          "labelKey": "AI et protection des données (Edoeb 2025)",
+          "labelKey": "IA e proteção de dados (Edoeb 2025)",
           "url": "https://www.edoeb.admin.ch/fr/ia-et-protection-des-donnees"
         },
         {
-          "labelKey": "Loi fédérale suisse sur la protection des données (LPD)",
+          "labelKey": "Lei federal suíça sobre a proteção de dados (LPD)",
           "url": "https://www.fedlex.admin.ch/eli/cc/2023/491"
         },
         {
-          "labelKey": "EFK - Bonne gouvernance à l'ère de l'IA",
+          "labelKey": "EFK - Boa governação na era da IA",
           "url": "https://www.efk.admin.ch/fr/fachtexte/quand-le-pilote-automatique-prend-le-relais-la-bonne-gouvernance-a-lere-de-lia/"
         }
       ]
@@ -4895,35 +4895,35 @@
       ],
       "references": [
         {
-          "labelKey": "Cadre pour la gouvernance d'IA par Microsoft",
+          "labelKey": "Quadro para a governação de IA da Microsoft",
           "url": "https://learn.microsoft.com/fr-fr/azure/cloud-adoption-framework/ai-agents/governance-security-across-organization"
         },
         {
-          "labelKey": "IA en entreprise: le guide par l'Institut Montaigne",
+          "labelKey": "IA nas empresas: o guia do Institut Montaigne",
           "url": "https://www.institutmontaigne.org/publications/ia-en-entreprise-le-guide-dune-integration-maitrisee"
         },
         {
-          "labelKey": "Gouvernance éthique de l'IA (OIT)",
+          "labelKey": "Governação ética da IA (OIT)",
           "url": "https://www.ilo.org/fr/resource/article/gouverner-lia-dans-le-monde-du-travail-une-analyse-des-lignes-directrices"
         },
         {
-          "labelKey": "Fondations d'une IA de confiance (Finance Innovation)",
+          "labelKey": "Fundações para uma IA de confiança (Finance Innovation)",
           "url": "https://finance-innovation.org/wp-content/uploads/2026/04/LivreBlanc-FondationetgouvernancepouruneIAdeconfiance.pdf"
         },
         {
-          "labelKey": "Charte IA – Charte Numérique Responsable",
+          "labelKey": "Carta IA – Carta Digital Responsável",
           "url": "https://charter.isit-europe.org/charte-ia/"
         },
         {
-          "labelKey": "Gouvernance de l'IA : structures et processus (Sirteq)",
+          "labelKey": "Governação da IA: estruturas e processos (Sirteq)",
           "url": "https://www.sirteq.org/gouvernance-de-lia-structures-et-processus-decisionnels/"
         },
         {
-          "labelKey": "Lignes directrices IA responsable par l'Institut du Numérique Responsable (INR)",
+          "labelKey": "Diretrizes para IA responsável pelo Institut du Numérique Responsable (INR)",
           "url": "https://institutnr.org/linr-decode-lia-1"
         },
         {
-          "labelKey": "Réglementer l’IA dans l’entreprise (OpenEdition Journals)",
+          "labelKey": "Regulamentar a IA na empresa (OpenEdition Journals)",
           "url": "https://journals.openedition.org/chroniquestravail/1719"
         }
       ]
@@ -4952,31 +4952,31 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "Charte IA générative de Randstad Suisse",
+          "labelKey": "Carta de IA generativa da Randstad Suisse",
           "url": "https://blog.randstad.ch/fr-ch/fr/telecharger-le-modele-de-politique-dia-generative"
         },
         {
-          "labelKey": "Charte IA pour entreprises par OUTILIA",
+          "labelKey": "Carta de IA para empresas pela OUTILIA",
           "url": "https://outilia.ch/charte-ia-entreprises-outils-ia-directive/"
         },
         {
-          "labelKey": "HUG - Charte d'utilisation des Intelligences Artificielles",
+          "labelKey": "HUG - Carta de utilização das Inteligências Artificiais",
           "url": "https://www.hug.ch/charte-utilisation-intelligences-artificielles"
         },
         {
-          "labelKey": "Charte sur l'utilisation de l'IA - Genève",
+          "labelKey": "Carta sobre a utilização da IA - Genebra",
           "url": "https://www.ccifs.ch/actualites/detail-actualite/news/charte-sur-lusage-de-lia-dans-les-entreprises-canton-de-geneve.html"
         },
         {
-          "labelKey": "Référentiel de sécurité informatique et protection des données",
+          "labelKey": "Referencial de segurança informática e proteção de dados",
           "url": "https://www.fedlex.admin.ch/eli/cc/2007/0066/fr"
         },
         {
-          "labelKey": "GE : Charte pour les outils IA en entreprise",
+          "labelKey": "GE: Carta para ferramentas de IA nas empresas",
           "url": "https://www.ictjournal.ch/news/2025-12-16/geneve-met-a-disposition-une-charte-pour-encadrer-lusage-de-lia-en-entreprise"
         },
         {
-          "labelKey": "Directive sur les outils IA - Swissmem",
+          "labelKey": "Diretiva sobre ferramentas de IA - Swissmem",
           "url": "https://www.swissmem.ch/fr/competences/technologies/avez-vous-des-directives-ia-dans-votre-entreprise.html"
         }
       ]

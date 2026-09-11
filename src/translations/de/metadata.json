@@ -15,8 +15,8 @@
     },
     "pages": {
         "/": {
-            "title": "houle | Private KI für Microsoft 365 - In der Schweiz Gehostete Lösungen",
-            "description": "Transformieren Sie Ihr Microsoft 365 mit in der Schweiz gehosteter KI. Office-Add-Ins für Outlook und Word, Enterprise-GPT-Plattform und KI-Expertenberatung. Datensouveränität garantiert.",
+            "title": "houle | Private KI für Microsoft 365 — Schweizer Hosting",
+            "description": "Transformieren Sie Microsoft 365 mit in der Schweiz gehosteter KI: Add-Ins für Outlook und Word, Enterprise-GPT und Expertenberatung.",
             "keywords": "ki microsoft 365, schweizer ki lösungen, privates gpt, outlook ki assistent, word ki, ki beratung genf, microsoft 365 automatisierung, schweizer datenschutz"
         },
         "/contact": {
@@ -25,8 +25,8 @@
             "keywords": "kontakt ki berater genf, microsoft 365 ki anfrage, schweizer ki lösungen kontakt"
         },
         "/products": {
-            "title": "KI-Produkte für Microsoft 365 | Word & Outlook Add-Ins mit Swiss GPT",
-            "description": "Einsatzbereite KI-Produkte für Microsoft 365: Word-Add-In, Outlook-Add-In und Swiss GPT-Plattform. Nahtlose Integration, Schweizer Daten-Hosting, Unternehmenssicherheit.",
+            "title": "KI-Produkte für Microsoft 365 | Word & Outlook Add-Ins",
+            "description": "Einsatzbereite KI-Produkte für Microsoft 365: Word-Add-In, Outlook-Add-In und Swiss GPT. Schweizer Hosting, Unternehmenssicherheit.",
             "keywords": "word ki add-in, outlook ki assistent, swiss gpt, microsoft 365 ki produkte, office add-ins schweiz"
         },
         "/products/ai-agents": {
@@ -36,17 +36,17 @@
         },
         "/products/word-addin": {
             "title": "Word Add-in mit KI | houle - In der Schweiz Gehosteter Assistent",
-            "description": "KI-gestütztes Word-Add-In zum Verfassen, Bearbeiten und Zusammenfassen von Dokumenten. Integriert sich mit Ihrem in der Schweiz gehosteten GPT für vollständige Datenkontrolle.",
+            "description": "KI-gestütztes Word-Add-In zum Verfassen, Bearbeiten und Zusammenfassen von Dokumenten – mit Ihrem in der Schweiz gehosteten GPT.",
             "keywords": "word ki add-in, microsoft word ki assistent, dokumentenautomatisierung ki, swiss word plugin"
         },
         "/products/outlook-addin": {
-            "title": "Outlook Add-in mit KI | houle - E-Mail-Assistent für Microsoft 365",
+            "title": "Outlook Add-in mit KI | E-Mail-Assistent für Microsoft 365",
             "description": "KI-Assistent für Outlook, der E-Mails verfasst, Threads zusammenfasst und Antworten verwaltet. In der Schweiz gehostet mit Null-Datenaufbewahrung.",
             "keywords": "outlook ki add-in, e-mail ki assistent, microsoft outlook automatisierung, schweizer e-mail ki"
         },
         "/products/swiss-gpt": {
             "title": "Swiss GPT Plattform | Enterprise KI Gehostet in der Schweiz",
-            "description": "Enterprise-GPT-Plattform in Schweizer Rechenzentren gehostet. Verbinden Sie sich mit Ihren Microsoft 365-Daten bei vollständiger Souveränität. FINMA-konform, LPD-zertifizierte Infrastruktur.",
+            "description": "Enterprise-GPT-Plattform in Schweizer Rechenzentren. Verbinden Sie Ihre Microsoft 365-Daten mit voller Souveränität. FINMA- und DSG-konform.",
             "keywords": "swiss gpt, enterprise gpt schweiz, private gpt plattform, finma konforme ki, schweizer datensouveränität"
         },
         "/solutions": {
@@ -56,7 +56,7 @@
         },
         "/services": {
             "title": "KI & Microsoft 365 Beratungsdienstleistungen | houle Genf",
-            "description": "Expertenberatung für KI-Integration und Microsoft 365-Optimierung. Maßgeschneiderte Lösungen, Power Automate, SharePoint, Azure KI. Für Genf, Lausanne und die Schweiz.",
+            "description": "Expertenberatung für KI-Integration und Microsoft 365-Optimierung. Power Automate, SharePoint, Azure KI. Für Genf, Lausanne und die Schweiz.",
             "keywords": "ki beratung genf, microsoft 365 beratung, azure ki services, power automate schweiz, sharepoint beratung"
         },
         "/services/ai-consulting": {
@@ -65,13 +65,13 @@
             "keywords": "ki beratung genf, azure ki schweiz, individuelle ki entwicklung, intelligente automatisierung genf, ki integration microsoft 365"
         },
         "/services/microsoft-consulting": {
-            "title": "Microsoft 365 Beratung Genf | Power Automate, SharePoint, Power BI",
+            "title": "Microsoft 365 Beratung Genf | Power Automate, Power BI",
             "description": "Microsoft 365-Expertenberatung in Genf. Power Automate-Workflows, SharePoint-Anpassung, Power BI-Dashboards, SPFx-Entwicklung. Schweizer Team.",
             "keywords": "microsoft 365 beratung genf, power automate schweiz, sharepoint beratung genf, power bi berater, SPFx entwicklung"
         },
         "/ressources": {
             "title": "KI & Microsoft 365 Ressourcen | Fallstudien aus Genf",
-            "description": "Echte Fallstudien und praktische Leitfäden für KI- und Microsoft 365-Implementierungen in Genfer und Schweizer Unternehmen. Messbare Ergebnisse und umsetzbare Erkenntnisse.",
+            "description": "Echte Fallstudien und Leitfäden für KI- und Microsoft 365-Projekte in Schweizer Unternehmen. Messbare Ergebnisse, umsetzbare Erkenntnisse.",
             "keywords": "ki fallstudien genf, microsoft 365 implementierung, schweizer ki erfolgsgeschichten, automatisierungsbeispiele"
         }
     },

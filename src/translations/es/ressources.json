@@ -18,15 +18,15 @@
       "date": "2025-12-17",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -49,15 +49,15 @@
       "date": "2025-12-17",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -79,15 +79,15 @@
       "date": "2025-12-13",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -108,15 +108,15 @@
       "date": "2025-12-13",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -139,15 +139,15 @@
       "date": "2025-12-09",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -169,11 +169,11 @@
       "date": "2025-12-09",
       "references": [
         {
-          "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
+          "labelKey": "Azure OpenAI - Documentación Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
         },
         {
-          "labelKey": "Azure OpenAI - Use your data (RAG) - Microsoft Learn",
+          "labelKey": "Azure OpenAI - Usa tus datos (RAG) - Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data"
         }
       ],
@@ -194,15 +194,15 @@
       "date": "2025-12-05",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -224,15 +224,15 @@
       "date": "2025-12-05",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -253,15 +253,15 @@
       "date": "2025-12-01",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -283,11 +283,11 @@
       "date": "2025-12-01",
       "references": [
         {
-          "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
+          "labelKey": "Azure OpenAI - Documentación Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
         },
         {
-          "labelKey": "Azure OpenAI - Use your data (RAG) - Microsoft Learn",
+          "labelKey": "Azure OpenAI - Usa tus datos (RAG) - Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data"
         }
       ],
@@ -308,15 +308,15 @@
       "date": "2025-11-29",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -339,15 +339,15 @@
       "date": "2025-11-29",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -370,15 +370,15 @@
       "date": "2025-11-26",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -399,15 +399,15 @@
       "date": "2025-11-25",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -430,15 +430,15 @@
       "date": "2025-11-25",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -459,15 +459,15 @@
       "date": "2025-11-25",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -488,15 +488,15 @@
       "date": "2025-11-22",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -518,15 +518,15 @@
       "date": "2025-11-22",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -548,15 +548,15 @@
       "date": "2025-11-21",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -578,15 +578,15 @@
       "date": "2025-11-21",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -607,15 +607,15 @@
       "date": "2025-11-21",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -638,15 +638,15 @@
       "date": "2025-11-20",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -668,15 +668,15 @@
       "date": "2025-11-20",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -697,15 +697,15 @@
       "date": "2025-11-20",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -728,15 +728,15 @@
       "date": "2025-11-20",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -757,15 +757,15 @@
       "date": "2025-11-19",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -787,15 +787,15 @@
       "date": "2025-11-19",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -817,15 +817,15 @@
       "date": "2025-11-18",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -846,15 +846,15 @@
       "date": "2025-11-18",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -875,11 +875,11 @@
       "date": "2025-11-17",
       "references": [
         {
-          "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
+          "labelKey": "Azure OpenAI - Documentación Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
         },
         {
-          "labelKey": "Azure OpenAI - Use your data (RAG) - Microsoft Learn",
+          "labelKey": "Azure OpenAI - Usa tus datos (RAG) - Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data"
         }
       ],
@@ -901,15 +901,15 @@
       "date": "2025-11-17",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -932,15 +932,15 @@
       "date": "2025-11-16",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -962,15 +962,15 @@
       "date": "2025-11-15",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -991,15 +991,15 @@
       "date": "2025-11-15",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -1021,15 +1021,15 @@
       "date": "2025-11-14",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -1051,15 +1051,15 @@
       "date": "2025-11-13",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -1080,11 +1080,11 @@
       "date": "2025-11-13",
       "references": [
         {
-          "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
+          "labelKey": "Azure OpenAI - Documentación Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
         },
         {
-          "labelKey": "Azure OpenAI - Use your data (RAG) - Microsoft Learn",
+          "labelKey": "Azure OpenAI - Usa tus datos (RAG) - Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data"
         }
       ],
@@ -1106,15 +1106,15 @@
       "date": "2025-11-12",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -1135,15 +1135,15 @@
       "date": "2025-11-11",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -1165,15 +1165,15 @@
       "date": "2025-11-11",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -1195,15 +1195,15 @@
       "date": "2025-11-09",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -1224,15 +1224,15 @@
       "date": "2025-11-07",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -1253,15 +1253,15 @@
       "date": "2025-11-05",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -1283,15 +1283,15 @@
       "date": "2025-11-01",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -1312,15 +1312,15 @@
       "date": "2025-10-29",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -1341,15 +1341,15 @@
       "date": "2025-10-24",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -1388,15 +1388,15 @@
       "content": "Crear su empresa en Suiza (GmbH/Sàrl, AG/SA o empresa individual) exige algunas decisiones clave. Esta guía explica de forma sencilla cómo crear una empresa en Suiza: elección de forma jurídica, inscripción en el Registro Mercantil, [IVA](/services/taxes), banca y costes iniciales.\n\nFrases de búsqueda (integradas de forma natural): crear empresa, crear su empresa, crear una Sàrl, crear una SA, constitución de empresa en Suiza.\n\n## 1) Elegir la forma jurídica: GmbH, AG o empresa individual\n\n- **GmbH (Sàrl)**\n  - Capital: **CHF 20.000** (recomendable liberación total).\n  - Responsabilidad limitada.\n  - Gobernanza sencilla, adecuada para pymes y varios fundadores.\n\n- **AG (SA)**\n  - Capital: **CHF 100.000** (mín. CHF 50.000 liberados).\n  - Imagen más corporativa, acciones transmisibles, gobernanza más formal (Consejo).\n  - Idónea para rondas de financiación o proyectos con mayor exposición.\n\n- **Empresa individual**\n  - Sin capital mínimo, **responsabilidad ilimitada**.\n  - Tramitación simple; inscripción en el Registro Mercantil normalmente desde **CHF 100.000** de facturación anual (o antes según actividad/banco).\n\n> Recomendación: para empezar rápido con responsabilidad limitada, la **GmbH/Sàrl** es la opción más común.\n\n## 2) Pasos para crear una sociedad (checklist)\n\n1. **Nombre, objeto y domicilio**: comprobar disponibilidad y definir objeto social.\n2. **Domicilio social**: alquiler, oficina de un socio o **[domiciliación](/services/domiciliation)** profesional.\n3. **Estatutos**: capital, reparto de acciones/participaciones, gobernanza, cláusulas de transmisión/firma.\n4. **Banco y capital**: abrir cuenta de **bloqueo** del capital (certificado).\n5. **Escritura pública (GmbH/AG)**: notaría.\n6. **Expediente Registro Mercantil**: estatutos firmados, certificados, formularios y documentos de identidad.\n7. **[IVA](/services/taxes)**: evaluar el **sujeción** (umbral CHF 100.000 de volumen global) y registrarse si procede.\n8. **Seguros sociales**: AVS/AI/APG, LAA y fondo de pensiones (LPP) si hay empleados.\n9. **Contabilidad y herramientas**: plan contable, facturación, controles internos.\n\n## 3) Plazos habituales\n\n- Preparación de estatutos/expediente: **2–7 días laborables**.\n- Notaría y certificado bancario: **2–5 días**.\n- Registro Mercantil (una vez completo): **3–10 días**.\n- IVA/seguros sociales: **unos días** según portal y periodos.\n\nEn total, la constitución suele requerir **1–3 semanas**.\n\n## 4) Costes y tarifas (orientativas)\n\nImportes **orientativos**: varían por cantón, notario, banco, complejidad y plazos.\n\n- **Pack constitución GmbH/Sàrl** (estatutos, expediente, coordinación notario, formalidades IVA/AVS si aplican): **desde CHF 1.250–1.900 + IVA**.\n- **Pack constitución AG/SA**: **desde CHF 1.800–2.800 + IVA**.\n- **Domiciliación** (Ginebra/Romandía): **desde CHF 90–180 + IVA/mes**.\n- **Puesta en marcha contable** (plan contable, primeras automatizaciones): **desde CHF 450–900 + IVA**.\n\nCostes de terceros (típicos):\n\n- **Notaría**: aprox. **CHF 600–2.500**.\n- **Tasas Registro Mercantil**: aprox. **CHF 120–600**.\n- **Certificado de bloqueo (banco)**: aprox. **CHF 100–300**.\n\n> Paquetes transparentes y flexibles; presupuesto detallado antes del inicio.\n\n## 5) IVA: ¿cuándo registrarse?\n\n- Umbral **CHF 100.000** de facturación (global, Suiza + exterior) en 12 meses móviles.\n- Posible registro voluntario por debajo del umbral (para recuperar IVA soportado).\n- **Método efectivo** o **tasa neta del impuesto** según tamaño/sector.\n\n## 6) Errores frecuentes a evitar\n\n- Infravalorar la **redacción de estatutos** (derechos/obligaciones, bloqueo, cláusulas de salida).\n- Omitir **afiliaciones sociales** al contratar.\n- Abrir la cuenta bancaria demasiado tarde (el **certificado de bloqueo** es previo a la constitución).\n- Retrasar la **[contabilidad](/services/accounting)** (facturación e IVA desde el primer día).\n\n## 7) FAQ – crear empresa en Suiza\n\n- **¿Cuánto tarda una GmbH?** Suele ser 1–2 semanas con expediente completo.\n- **¿Es obligatoria la notaría?** Sí para GmbH/AG. No para empresa individual.\n- **¿Puedo constituir sin liberar capital?** No: ingreso en cuenta bloqueada antes de la escritura (GmbH/AG).\n- **¿Cuándo debo registrarme en el IVA?** Desde CHF 100.000 de facturación (o por opción).\n\n### Servicios Ark Fiduciaire\n\nAcompañamos la **constitución de empresas** (GmbH/AG/individual) en Ginebra y Romandía: estatutos, Registro Mercantil, IVA, bancos, **[domiciliación](/services/domiciliation)**, y después [contabilidad](/services/accounting) y [nóminas](/services/payroll).\n\nPara un inicio sin fricciones, **contáctenos** para presupuesto y calendario adaptados.\n\n### Related Services\n\n- [Company Incorporation](/services/incorporation)\n- [Domiciliation Services](/services/domiciliation)\n- [Accounting Services](/services/accounting)\n- [Contact Us](/contact)\n\n## Practical tips for Microsoft/Azure\n- Keep examples concrete: show 1-2 configuration steps (Azure resource, ask prompt), and test with a small dataset first.\n- Prefer RAG (retrieval-augmented generation) for grounding answers: index internal docs, add answer citations and logging.\n- Deploy models in a Swiss region for data sovereignty and enable proper moderation + access controls (Azure AD, role-based).\n",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -1417,15 +1417,15 @@
       "date": "2025-10-21",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -1446,15 +1446,15 @@
       "date": "2025-10-21",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -1477,15 +1477,15 @@
       "updated": "2026-03-26",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -1507,15 +1507,15 @@
       "date": "2025-10-11",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -1538,15 +1538,15 @@
       "date": "2025-10-09",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -1567,15 +1567,15 @@
       "date": "2026-03-26",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -1598,15 +1598,15 @@
       "date": "2025-10-05",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -1627,15 +1627,15 @@
       "date": "2025-10-03",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -1656,15 +1656,15 @@
       "date": "2025-10-02",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -1686,15 +1686,15 @@
       "date": "2025-10-01",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -1715,15 +1715,15 @@
       "date": "2025-10-01",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -1745,15 +1745,15 @@
       "date": "2025-09-19",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -1774,15 +1774,15 @@
       "date": "2025-09-17",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -1803,15 +1803,15 @@
       "date": "2025-09-17",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -1832,15 +1832,15 @@
       "date": "2025-09-17",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -1861,15 +1861,15 @@
       "date": "2025-09-17",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -1890,15 +1890,15 @@
       "date": "2025-09-17",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -1921,15 +1921,15 @@
       "date": "2025-09-17",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -1952,11 +1952,11 @@
       "date": "2025-09-17",
       "references": [
         {
-          "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
+          "labelKey": "Azure OpenAI - Documentación Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
         },
         {
-          "labelKey": "Azure OpenAI - Use your data (RAG) - Microsoft Learn",
+          "labelKey": "Azure OpenAI - Usa tus datos (RAG) - Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data"
         }
       ],
@@ -1977,15 +1977,15 @@
       "date": "2025-09-17",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -2008,15 +2008,15 @@
       "date": "2025-09-17",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -2037,15 +2037,15 @@
       "content": "En noviembre de 2024, los ginebrinos aprobaron masivamente una bajada histórica de los impuestos cantonales y comunales, la primera desde 1999. Esta reforma mayor, aprobada por más del 61%, aporta cambios significativos para todos los contribuyentes ginebrinos desde el año fiscal 2025.\n\n### Una bajada diferenciada según los ingresos\n\nLa reforma ginebrina no beneficia uniformemente a todos los contribuyentes. Las bajadas varían según los tramos de ingresos:\n\n- **Clase media (75'000–150'000 CHF)**: reducción de hasta el 11,4%.\n- **Ingresos modestos (<75'000 CHF)**: reducción media del 8,8% (aproximadamente 870 CHF ahorrados para 50'000 CHF de ingresos).\n- **Ingresos altos (>200'000 CHF)**: reducción del 5,3%.\n\n### Paso a 12 mensualidades\n\nDesde 2025, el pago de los anticipos pasa de 10 a 12 mensualidades, mejorando la repartición de las cargas.\n\n### Impactos para las empresas\n\n- **Poder adquisitivo incrementado** impulsa el consumo local.\n- **Competitividad reforzada** en la guerra de los talentos.\n\n### Consejos prácticos\n\n- Ajustar sus anticipos a través de la calculadora en línea.\n- Anticipar 2026 optimizando sus deducciones.\n\n(Artículo de 1 850 palabras que detalla cada punto con ejemplos, estudios de caso y simulaciones cifradas.)\n\n### Related Services\n\n- [Tax Services](/services/taxes)\n- [Contact Us](/contact)",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -2067,15 +2067,15 @@
       "content": "Houle.ai es una firma de consultoría líder especializada en **inteligencia artificial** y **tecnologías Microsoft**. Con profunda experiencia en soluciones en la nube, inteligencia empresarial y transformación digital, Houle.ai ayuda a las empresas a aprovechar la tecnología de vanguardia para optimizar sus operaciones e impulsar el crecimiento.\n\n## Servicios Principales\n\n### Consultoría en IA\n- Implementación de machine learning\n- Soluciones de procesamiento del lenguaje natural\n- Aplicaciones de visión por computadora\n- Análisis predictivo\n- Desarrollo de estrategia y hoja de ruta de IA\n\n### Experiencia en Tecnología Microsoft\n- **Soluciones Azure Cloud**: Migración, optimización y gestión\n- **Microsoft 365**: Implementación y personalización\n- **Power Platform**: Power BI, Power Apps, Power Automate\n- **Dynamics 365**: Implementación de CRM y ERP\n- **Modern Workplace**: Herramientas de colaboración y productividad\n\n## ¿Por Qué Elegir Houle.ai?\n\n### Enfoque Impulsado por la Innovación\nHoule.ai se mantiene a la vanguardia de la innovación tecnológica, explorando continuamente nuevas capacidades de IA y características de la plataforma Microsoft para ofrecer ventajas competitivas a los clientes.\n\n### Experiencia en la Industria\nEl [equipo](/team) aporta amplia experiencia en múltiples sectores, incluyendo servicios financieros, salud, manufactura, comercio minorista y servicios profesionales.\n\n### Metodología Comprobada\nHoule.ai emplea un enfoque estructurado para la transformación digital:\n1. **Evaluación**: Comprender el estado actual y los objetivos\n2. **Estrategia**: Desarrollar una hoja de ruta personalizada\n3. **Implementación**: Ejecutar con mejores prácticas\n4. **Optimización**: Mejora continua y soporte\n\n## Productos y Soluciones\n\n### Aplicaciones de IA Personalizadas\nHoule.ai desarrolla soluciones de IA a medida diseñadas para abordar desafíos empresariales específicos, desde la automatización de tareas rutinarias hasta el descubrimiento de información valiosa a partir de datos.\n\n### Plataformas Basadas en Microsoft\nAprovechando el ecosistema de Microsoft, Houle.ai crea plataformas integradas que mejoran la productividad, optimizan los flujos de trabajo y mejoran la toma de decisiones.\n\n## Asociación y Colaboración\n\nComo **socio de Microsoft**, Houle.ai mantiene relaciones estrechas con los equipos de productos de Microsoft, asegurando acceso temprano a nuevas funciones y la capacidad de proporcionar a los clientes soluciones de vanguardia.\n\n## Éxito en Transformación Digital\n\nHoule.ai ha guiado exitosamente a numerosas organizaciones a través de sus viajes de transformación digital, ayudándolas a reducir costos operativos, mejorar la experiencia del cliente, acelerar el tiempo de comercialización, mejorar la toma de decisiones basada en datos y fomentar una cultura de innovación.\n\n## Contacto e Información Adicional\n\nPara empresas que buscan aprovechar el poder de la IA y las tecnologías Microsoft, Houle.ai ofrece servicios de consultoría integral adaptados a necesidades y objetivos específicos.\n\nVisite **[houle.ai](https://houle.ai)** para obtener más información sobre sus servicios, casos de estudio y cómo pueden apoyar sus iniciativas de transformación digital.\n\n### Related Services\n\n- [Contact Us](/contact)\n- [Our Team](/team)\n\n## Practical tips for Microsoft/Azure\n- Keep examples concrete: show 1-2 configuration steps (Azure resource, ask prompt), and test with a small dataset first.\n- Prefer RAG (retrieval-augmented generation) for grounding answers: index internal docs, add answer citations and logging.\n- Deploy models in a Swiss region for data sovereignty and enable proper moderation + access controls (Azure AD, role-based).\n",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -2096,15 +2096,15 @@
       "content": "Suiza se ha impuesto como una referencia mundial en materia de regulación de las criptomonedas. Con un marco jurídico claro y un enfoque pragmático, las autoridades helvéticas ofrecen un entorno favorable al tiempo que mantienen un cumplimiento estricto.\n\n#### Clasificación de los tokens (FINMA)\n- **Payment Tokens**: exención de las plusvalías privadas pero inclusión en el patrimonio.\n- **Utility Tokens**: estatus variable según el uso.\n- **Security Tokens**: tratamientos alineados con los valores mobiliarios.\n\n#### Obligaciones fiscales\n- **Impuesto sobre el patrimonio**: declaración obligatoria al 31 de diciembre.\n- **Plusvalías**: exentas para inversores privados, imponibles si hay actividades especulativas.\n- **[IVA](/services/taxes)**: asimilado al trueque, sujeción al valor CHF.\n\n#### Declaraciones\n- Obligaciones de minería (ingresos de actividad)\n- Staking, DeFi, NFTs: tributaciones específicas\n\n#### Estrategias de optimización\n- Timing de las cesiones\n- Estructuración familiar\n- Domiciliación ventajosa\n\n(Artículo de 1.900 palabras con casos prácticos ginebrinos y romandos).\n\n### Related Services\n\n- [Tax Services](/services/taxes)\n- [Contact Us](/contact)",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -2125,15 +2125,15 @@
       "date": "2025-08-25",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -2154,15 +2154,15 @@
       "date": "2025-12-21",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -2185,11 +2185,11 @@
       "date": "2025-12-25",
       "references": [
         {
-          "labelKey": "Power Automate - Documentation Microsoft Learn",
+          "labelKey": "Power Automate - Documentación Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/power-automate/"
         },
         {
-          "labelKey": "Microsoft Graph - Overview - Microsoft Learn",
+          "labelKey": "Microsoft Graph - Panorama general - Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/graph/overview"
         }
       ],
@@ -2212,15 +2212,15 @@
       "date": "2025-12-29",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -2243,15 +2243,15 @@
       "date": "2026-01-01",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -2274,15 +2274,15 @@
       "date": "2026-01-05",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -2305,11 +2305,11 @@
       "date": "2026-01-09",
       "references": [
         {
-          "labelKey": "Power Automate - Documentation Microsoft Learn",
+          "labelKey": "Power Automate - Documentación Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/power-automate/"
         },
         {
-          "labelKey": "Microsoft Graph - Overview - Microsoft Learn",
+          "labelKey": "Microsoft Graph - Panorama general - Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/graph/overview"
         }
       ],
@@ -2332,15 +2332,15 @@
       "date": "2026-02-05",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -2363,15 +2363,15 @@
       "date": "2026-02-08",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -2394,15 +2394,15 @@
       "date": "2026-02-11",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -2424,15 +2424,15 @@
       "date": "2026-02-14",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -2455,15 +2455,15 @@
       "date": "2026-02-17",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -2485,15 +2485,15 @@
       "date": "2026-02-20",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -2516,15 +2516,15 @@
       "date": "2026-02-23",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -2547,15 +2547,15 @@
       "date": "2026-02-26",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -2577,15 +2577,15 @@
       "date": "2026-02-26",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -2606,15 +2606,15 @@
       "date": "2026-02-26",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -2636,15 +2636,15 @@
       "date": "2026-02-26",
       "references": [
         {
-          "labelKey": "Recueil des règles de conservation des documents (Canton de Vaud)",
+          "labelKey": "Recopilación de reglas de conservación de documentos (Cantón de Vaud)",
           "url": "https://www.vd.ch/fileadmin/user_upload/themes/etat_droit/archives_cantonales/Fichiers-PDF/Gestion-documentaire/doc-20210705-Recueil_regles_docs_gestion_2006.pdf"
         },
         {
-          "labelKey": "Gestion des documents internes et pratiques organisationnelles (FINMA)",
+          "labelKey": "Gestión de documentos internos y prácticas organizacionales (FINMA)",
           "url": "https://www.finma.ch/fr/finma/organisation/corporate-governance/contr%C3%B4les-internes/"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ],
@@ -2666,15 +2666,15 @@
       "date": "2026-02-28",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -2696,15 +2696,15 @@
       "date": "2026-03-01",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -2727,15 +2727,15 @@
       "date": "2026-03-04",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -2758,15 +2758,15 @@
       "date": "2026-03-07",
       "references": [
         {
-          "labelKey": "FINMA : risques liés à l’utilisation de l’IA",
+          "labelKey": "FINMA: riesgos relacionados con el uso de IA",
           "url": "https://www.finma.ch/fr/~/media/finma/dokumente/dokumentencenter/8news/medienmitteilungen/2024/12/20241218-mm-finma-am-08-24.pdf?sc_lang=fr&hash=CDA3FD88333345F35AFA00646F5E9B78"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ],
@@ -2787,15 +2787,15 @@
       "date": "2026-03-13",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -2816,15 +2816,15 @@
       "date": "2026-03-10",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -2845,15 +2845,15 @@
       "date": "2026-03-16",
       "references": [
         {
-          "labelKey": "Plan d'action sur l'IA aux États-Unis - Maison Blanche",
+          "labelKey": "Plan de acción sobre IA en Estados Unidos - Casa Blanca",
           "url": "https://www.whitehouse.gov/wp-content/uploads/2025/07/Americas-AI-Action-Plan.pdf"
         },
         {
-          "labelKey": "Guide officieux sur IA et copyrights par Copyright Office",
+          "labelKey": "Guía no oficial sobre IA y derechos de autor por Copyright Office",
           "url": "https://www.copyright.gov/ai/Copyright-and-Artificial-Intelligence-Part-3-Generative-AI-Training-Report-Pre-Publication-Version.pdf"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ],
@@ -2875,15 +2875,15 @@
       "date": "2026-03-19",
       "references": [
         {
-          "labelKey": "Template de Charte IA - ABCI.org",
+          "labelKey": "Plantilla de Carta de IA - ABCI.org",
           "url": "https://www.abci.org/files/files/2025/Template-de-Charte-IA.pdf"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ],
@@ -2905,15 +2905,15 @@
       "date": "2026-03-22",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -2934,19 +2934,19 @@
       "date": "2026-03-25",
       "references": [
         {
-          "labelKey": "Collège des administrateurs | Article sur IA et gouvernance",
+          "labelKey": "Colegio de administradores | Artículo sobre IA y gobernanza",
           "url": "https://www.cas.ulaval.ca/wp-content/uploads/2025/09/College_Article_CA_et_IA_2025-09_v5-corrige.pdf"
         },
         {
-          "labelKey": "Rapport IA dans le canton de Vaud (vd.ch)",
+          "labelKey": "Informe sobre IA en el cantón de Vaud (vd.ch)",
           "url": "https://www.vd.ch/fileadmin/user_upload/organisation/dinf/dsi/fichiers_pdf/IA_Rapport_interd%C3%A9partemental.pdf"
         },
         {
-          "labelKey": "Plan Global pour les standards IA - NIST",
+          "labelKey": "Plan Global para estándares de IA - NIST",
           "url": "https://nvlpubs.nist.gov/nistpubs/ai/NIST.AI.100-5.pdf"
         },
         {
-          "labelKey": "Gouvernance et risques liés à l'IA (finma.ch)",
+          "labelKey": "Gobernanza y riesgos relacionados con la IA (finma.ch)",
           "url": "https://www.finma.ch/fr/~/media/finma/dokumente/dokumentencenter/myfinma/4dokumentation/finma-aufsichtsmitteilungen/20241218-finma-aufsichtsmitteilung-08-2024.pdf?sc_lang=fr&hash=13E1E8A0EBF3AE250A1EB6E26BD3428D"
         }
       ],
@@ -2967,15 +2967,15 @@
       "date": "2026-03-28",
       "references": [
         {
-          "labelKey": "Charte et gouvernance de l'IA au travail",
+          "labelKey": "Carta y gobernanza de la IA en el trabajo",
           "url": "https://www.erudit.org/fr/revues/admachina/2021-n5-admachina06837/1087042ar.pdf"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ],
@@ -2996,15 +2996,15 @@
       "date": "2026-03-31",
       "references": [
         {
-          "labelKey": "Guide de l’UNIGE pour un usage pédagogique responsable de l’IA générative",
+          "labelKey": "Guía de UNIGE para un uso pedagógico responsable de la IA generativa",
           "url": "https://www.unige.ch/lettres/application/files/7217/4980/4045/recommandations_IA_2025-2026_130625.pdf"
         },
         {
-          "labelKey": "Politique IA RGIS : Pourquoi avoir une politique IA",
+          "labelKey": "Política de IA RGIS: Por qué tener una política de IA",
           "url": "https://fr.rgis.ch/wp-content/uploads/2023/04/RGIS_MC_0072_01-RGIS-AI-POLICY-FR.pdf"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ],
@@ -3027,15 +3027,15 @@
       "date": "2026-04-01",
       "references": [
         {
-          "labelKey": "Propriété intellectuelle et technologie de pointe (WIPO)",
+          "labelKey": "Propiedad intelectual y tecnología avanzada (WIPO)",
           "url": "https://www.wipo.int/edocs/pubdocs/fr/wipo-pub-rn2024-8-fr-generative-ai-navigating-intellectual-property.pdf"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ],
@@ -3056,15 +3056,15 @@
       "date": "2026-04-04",
       "references": [
         {
-          "labelKey": "Analyse des réglementations IA (France et international)",
+          "labelKey": "Análisis de regulaciones de IA (Francia e internacional)",
           "url": "https://parispeaceforum.org/app/uploads/2022/04/fr-beyond-the-north-south-fork-on-the-road-to-ai-governance.pdf"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ],
@@ -3085,15 +3085,15 @@
       "date": "2026-04-07",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -3115,15 +3115,15 @@
       "date": "2026-04-10",
       "references": [
         {
-          "labelKey": "A Framework for U.S. AI Governance",
+          "labelKey": "Un marco para la gobernanza de IA en EE.UU.",
           "url": "https://computing.mit.edu/wp-content/uploads/2023/11/AIPolicyBrief.pdf"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ],
@@ -3144,15 +3144,15 @@
       "date": "2026-04-13",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -3175,15 +3175,15 @@
       "date": "2026-04-16",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -3206,15 +3206,15 @@
       "date": "2026-04-19",
       "references": [
         {
-          "labelKey": "Intelligence artificielle dans l'information financière - KPMG",
+          "labelKey": "Inteligencia artificial en la información financiera - KPMG",
           "url": "https://lyon-finance.org/app/uploads/2024/10/KPMG-Etude-Francaise-IA-information-financiere-et-audit_compressed.pdf"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ],
@@ -3235,15 +3235,15 @@
       "date": "2026-04-22",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -3265,15 +3265,15 @@
       "date": "2026-04-25",
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ],
@@ -3295,15 +3295,15 @@
       "date": "2026-04-28",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -3325,15 +3325,15 @@
       "date": "2026-05-01",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -3356,15 +3356,15 @@
       "date": "2026-05-04",
       "references": [
         {
-          "labelKey": "État des lieux sur la réglementation de l’intelligence artificielle",
+          "labelKey": "Estado actual de la regulación de la inteligencia artificial",
           "url": "https://www.bakom.admin.ch/dam/fr/sd-web/MKUEgci9oDRD/Auslegeordnung%20zur%20Regulierung%20von%20%20k%C3%BCnstlicher%20Intelligenz_def.pdf"
         },
         {
-          "labelKey": "Communication FINMA sur la surveillance 08/2024",
+          "labelKey": "Comunicación FINMA sobre la supervisión 08/2024",
           "url": "https://www.finma.ch/fr/~/media/finma/dokumente/dokumentencenter/myfinma/4dokumentation/finma-aufsichtsmitteilungen/20241218-finma-aufsichtsmitteilung-08-2024.pdf?sc_lang=fr&hash=13E1E8A0EBF3AE250A1EB6E26BD3428D"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ],
@@ -3386,15 +3386,15 @@
       "date": "2026-05-07",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -3415,15 +3415,15 @@
       "date": "2026-05-10",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -3446,15 +3446,15 @@
       "date": "2026-05-16",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -3477,15 +3477,15 @@
       "date": "2026-05-19",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -3507,15 +3507,15 @@
       "date": "2026-05-22",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -3538,15 +3538,15 @@
       "date": "2026-05-25",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -3569,11 +3569,11 @@
       "date": "2026-05-28",
       "references": [
         {
-          "labelKey": "Power Automate - Documentation Microsoft Learn",
+          "labelKey": "Power Automate - Documentación Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/power-automate/"
         },
         {
-          "labelKey": "Microsoft Graph - Overview - Microsoft Learn",
+          "labelKey": "Microsoft Graph - Panorama general - Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/graph/overview"
         }
       ],
@@ -3594,15 +3594,15 @@
       "date": "2026-05-31",
       "references": [
         {
-          "labelKey": "Guide pratique mise en place politique IA dans les entreprises",
+          "labelKey": "Guía práctica para implementar una política de IA en empresas",
           "url": "https://www.swissinfo.ch/content/wp-content/uploads/sites/13/2024/04/2024_SWI_AI_Guidelines-2024_FRA.pdf"
         },
         {
-          "labelKey": "Charte IA Ville de Genève",
+          "labelKey": "Carta de IA Ciudad de Ginebra",
           "url": "https://www.geneve.ch/sites/default/files/2025-04/charte-IA-ville-geneve.pdf"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ],
@@ -3623,15 +3623,15 @@
       "date": "2026-06-01",
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
@@ -3652,15 +3652,15 @@
       "date": "2026-06-04",
       "references": [
         {
-          "labelKey": "Lignes directrices pour une approche stratégique de l'IA dans l'administration fédérale",
+          "labelKey": "Directrices para un enfoque estratégico de la IA en la administración federal",
           "url": "https://www.bk.admin.ch/dam/fr/sd-web/r84AJpxifth2/ki-leitlinien.pdf"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ],
@@ -3681,15 +3681,15 @@
       "date": "2026-06-10",
       "references": [
         {
-          "labelKey": "Modèle de politique d’usage de l’IA générative",
+          "labelKey": "Modelo de política de uso de IA generativa",
           "url": "https://data.org/wp-content/uploads/2024/11/Generative-AI-Policy-Template.pdf"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ],
@@ -3719,15 +3719,15 @@
       ],
       "references": [
         {
-          "labelKey": "Institut Montaigne : IA en entreprise",
+          "labelKey": "Institut Montaigne: IA en la empresa",
           "url": "https://www.institutmontaigne.org/ressources/pdfs/publications/note-ia-en-entreprise-le-guide-dune-integration-maitrisee.pdf"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ]
@@ -3748,15 +3748,15 @@
       ],
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ]
@@ -3777,15 +3777,15 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ]
@@ -3808,15 +3808,15 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ]
@@ -3837,15 +3837,15 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ]
@@ -3868,15 +3868,15 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ]
@@ -3898,15 +3898,15 @@
       ],
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ]
@@ -3927,15 +3927,15 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ]
@@ -3957,15 +3957,15 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ]
@@ -3986,15 +3986,15 @@
       ],
       "references": [
         {
-          "labelKey": "Leveraging ASR and LLMs - UCLA Paper",
+          "labelKey": "Aprovechando ASR y LLMs - Artículo de UCLA",
           "url": "https://www.seas.ucla.edu/spapl/paper/balaji_slate2025_llm.pdf"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ]
@@ -4016,15 +4016,15 @@
       ],
       "references": [
         {
-          "labelKey": "Guide de conformité AI Act par France Digitale",
+          "labelKey": "Guía de cumplimiento de la Ley de IA por France Digitale",
           "url": "https://media.francedigitale.org/app/uploads/prod/2024/02/01163100/Guide-Conformite-AI-Act-Fev-2024-1.pdf"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ]
@@ -4046,15 +4046,15 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ]
@@ -4076,15 +4076,15 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ]
@@ -4106,15 +4106,15 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ]
@@ -4136,15 +4136,15 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ]
@@ -4168,15 +4168,15 @@
       ],
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ]
@@ -4199,15 +4199,15 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ]
@@ -4229,15 +4229,15 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ]
@@ -4259,15 +4259,15 @@
       ],
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ]
@@ -4290,15 +4290,15 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ]
@@ -4320,15 +4320,15 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ]
@@ -4351,15 +4351,15 @@
       ],
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ]
@@ -4381,15 +4381,15 @@
       ],
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ]
@@ -4410,15 +4410,15 @@
       ],
       "references": [
         {
-          "labelKey": "Règlements IA émergents et conformité",
+          "labelKey": "Regulaciones emergentes de IA y cumplimiento",
           "url": "https://www.une.edu/sites/default/files/2023-10/Guidance%20for%20the%20Use%20of%20Artificial%20Intelligence%20%28AI%29%20in%20Research.pdf"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ]
@@ -4439,15 +4439,15 @@
       ],
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ]
@@ -4468,15 +4468,15 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ]
@@ -4498,15 +4498,15 @@
       ],
       "references": [
         {
-          "labelKey": "Perspectives sur la réglementation de l’IA en Suisse",
+          "labelKey": "Perspectivas sobre la regulación de la IA en Suiza",
           "url": "https://www.newsd.admin.ch/newsd/message/attachments/71097.pdf"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ]
@@ -4529,15 +4529,15 @@
       ],
       "references": [
         {
-          "labelKey": "VD.ch - Mesures essentielles de cybersécurité dans les entreprises",
+          "labelKey": "VD.ch - Medidas esenciales de ciberseguridad en empresas",
           "url": "https://www.vd.ch/fileadmin/user_upload/organisation/dinf/dsi/fichiers_pdf/securite/Mesures_essentielles_de_cybers%C3%A9curit%C3%A9_-_Niveau_priorit%C3%A9_1_v2.0.pdf"
         },
         {
-          "labelKey": "FINMA - Guide de gestion des risques liés à l'intelligence artificielle",
+          "labelKey": "FINMA - Guía de gestión de riesgos relacionados con la inteligencia artificial",
           "url": "https://www.finma.ch/en/news/2024/12/20241218-mm-finma-am-08-24/"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         }
       ]
@@ -4558,15 +4558,15 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ]
@@ -4587,15 +4587,15 @@
       ],
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ]
@@ -4616,15 +4616,15 @@
       ],
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ]
@@ -4647,15 +4647,15 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ]
@@ -4676,15 +4676,15 @@
       ],
       "references": [
         {
-          "labelKey": "Etat des lieux sur la règlementation de l'IA",
+          "labelKey": "Estado actual de la regulación de la IA",
           "url": "https://www.bakom.admin.ch/dam/fr/sd-web/MKUEgci9oDRD/Auslegeordnung%20zur%20Regulierung%20von%20%20k%C3%BCnstlicher%20Intelligenz_def.pdf"
         },
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ]
@@ -4705,15 +4705,15 @@
       ],
       "references": [
         {
-          "labelKey": "Charte IA France Travail",
+          "labelKey": "Carta de IA France Travail",
           "url": "https://www.francetravail.org/files/live/sites/peorg/files/documents/Publications/Charte%20france%20travail%20IA%202025_DCE-jan25.pdf"
         },
         {
-          "labelKey": "Réglementer l’IA dans l’entreprise – OpenEdition Journals",
+          "labelKey": "Regular la IA en la empresa – OpenEdition Journals",
           "url": "https://journals.openedition.org/chroniquestravail/pdf/1719"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ]
@@ -4735,15 +4735,15 @@
       ],
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ]
@@ -4765,15 +4765,15 @@
       ],
       "references": [
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "labelKey": "Ley de IA - Marco regulatorio de la UE sobre IA - Comisión Europea",
           "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
         }
       ]
@@ -4794,15 +4794,15 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ]
@@ -4823,15 +4823,15 @@
       ],
       "references": [
         {
-          "labelKey": "Azure OpenAI Service - Azure Product Page",
+          "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
-          "labelKey": "Microsoft Learn - Terms of Use",
+          "labelKey": "Microsoft Learn - Términos de uso",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         },
         {
-          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "labelKey": "Marco de gestión de riesgos de IA (AI RMF) - NIST",
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ]
@@ -4853,27 +4853,27 @@
       ],
       "references": [
         {
-          "labelKey": "NIST: Gouvernance IA et évaluation des risques",
+          "labelKey": "NIST: Gobernanza de IA y evaluación de riesgos",
           "url": "https://www.nist.gov/artificial-intelligence"
         },
         {
-          "labelKey": "SIF - Innovation et réglementation de l'IA",
+          "labelKey": "SIF - Innovación y regulación de la IA",
           "url": "https://www.sif.admin.ch/fr/intelligence-artificielle"
         },
         {
-          "labelKey": "SECO - Gouvernance d'entreprise",
+          "labelKey": "SECO - Gobernanza corporativa",
           "url": "https://www.seco.admin.ch/fr/gouvernance-entreprise"
         },
         {
-          "labelKey": "AI et protection des données (Edoeb 2025)",
+          "labelKey": "IA y protección de datos (Edoeb 2025)",
           "url": "https://www.edoeb.admin.ch/fr/ia-et-protection-des-donnees"
         },
         {
-          "labelKey": "Loi fédérale suisse sur la protection des données (LPD)",
+          "labelKey": "Ley federal suiza sobre protección de datos (LPD)",
           "url": "https://www.fedlex.admin.ch/eli/cc/2023/491"
         },
         {
-          "labelKey": "EFK - Bonne gouvernance à l'ère de l'IA",
+          "labelKey": "EFK - Buena gobernanza en la era de la IA",
           "url": "https://www.efk.admin.ch/fr/fachtexte/quand-le-pilote-automatique-prend-le-relais-la-bonne-gouvernance-a-lere-de-lia/"
         }
       ]
@@ -4895,35 +4895,35 @@
       ],
       "references": [
         {
-          "labelKey": "Cadre pour la gouvernance d'IA par Microsoft",
+          "labelKey": "Marco para la gobernanza de IA por Microsoft",
           "url": "https://learn.microsoft.com/fr-fr/azure/cloud-adoption-framework/ai-agents/governance-security-across-organization"
         },
         {
-          "labelKey": "IA en entreprise: le guide par l'Institut Montaigne",
+          "labelKey": "IA en la empresa: la guía por el Institut Montaigne",
           "url": "https://www.institutmontaigne.org/publications/ia-en-entreprise-le-guide-dune-integration-maitrisee"
         },
         {
-          "labelKey": "Gouvernance éthique de l'IA (OIT)",
+          "labelKey": "Gobernanza ética de la IA (OIT)",
           "url": "https://www.ilo.org/fr/resource/article/gouverner-lia-dans-le-monde-du-travail-une-analyse-des-lignes-directrices"
         },
         {
-          "labelKey": "Fondations d'une IA de confiance (Finance Innovation)",
+          "labelKey": "Fundamentos de una IA confiable (Finance Innovation)",
           "url": "https://finance-innovation.org/wp-content/uploads/2026/04/LivreBlanc-FondationetgouvernancepouruneIAdeconfiance.pdf"
         },
         {
-          "labelKey": "Charte IA – Charte Numérique Responsable",
+          "labelKey": "Carta IA – Carta Digital Responsable",
           "url": "https://charter.isit-europe.org/charte-ia/"
         },
         {
-          "labelKey": "Gouvernance de l'IA : structures et processus (Sirteq)",
+          "labelKey": "Gobernanza de la IA: estructuras y procesos (Sirteq)",
           "url": "https://www.sirteq.org/gouvernance-de-lia-structures-et-processus-decisionnels/"
         },
         {
-          "labelKey": "Lignes directrices IA responsable par l'Institut du Numérique Responsable (INR)",
+          "labelKey": "Directrices para una IA responsable por el Institut du Numérique Responsable (INR)",
           "url": "https://institutnr.org/linr-decode-lia-1"
         },
         {
-          "labelKey": "Réglementer l’IA dans l’entreprise (OpenEdition Journals)",
+          "labelKey": "Regular la IA en la empresa (OpenEdition Journals)",
           "url": "https://journals.openedition.org/chroniquestravail/1719"
         }
       ]
@@ -4952,31 +4952,31 @@
           "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         },
         {
-          "labelKey": "Charte IA générative de Randstad Suisse",
+          "labelKey": "Carta de IA generativa de Randstad Suiza",
           "url": "https://blog.randstad.ch/fr-ch/fr/telecharger-le-modele-de-politique-dia-generative"
         },
         {
-          "labelKey": "Charte IA pour entreprises par OUTILIA",
+          "labelKey": "Carta de IA para empresas por OUTILIA",
           "url": "https://outilia.ch/charte-ia-entreprises-outils-ia-directive/"
         },
         {
-          "labelKey": "HUG - Charte d'utilisation des Intelligences Artificielles",
+          "labelKey": "HUG - Carta de uso de Inteligencias Artificiales",
           "url": "https://www.hug.ch/charte-utilisation-intelligences-artificielles"
         },
         {
-          "labelKey": "Charte sur l'utilisation de l'IA - Genève",
+          "labelKey": "Carta sobre el uso de la IA - Ginebra",
           "url": "https://www.ccifs.ch/actualites/detail-actualite/news/charte-sur-lusage-de-lia-dans-les-entreprises-canton-de-geneve.html"
         },
         {
-          "labelKey": "Référentiel de sécurité informatique et protection des données",
+          "labelKey": "Referencial de seguridad informática y protección de datos",
           "url": "https://www.fedlex.admin.ch/eli/cc/2007/0066/fr"
         },
         {
-          "labelKey": "GE : Charte pour les outils IA en entreprise",
+          "labelKey": "GE: Carta para herramientas de IA en la empresa",
           "url": "https://www.ictjournal.ch/news/2025-12-16/geneve-met-a-disposition-une-charte-pour-encadrer-lusage-de-lia-en-entreprise"
         },
         {
-          "labelKey": "Directive sur les outils IA - Swissmem",
+          "labelKey": "Directriz sobre herramientas de IA - Swissmem",
           "url": "https://www.swissmem.ch/fr/competences/technologies/avez-vous-des-directives-ia-dans-votre-entreprise.html"
         }
       ]
