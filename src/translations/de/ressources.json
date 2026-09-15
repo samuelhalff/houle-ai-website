@@ -166,10 +166,14 @@
       "references": [
         {
           "labelKey": "Azure OpenAI - Dokumentation Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/"
+        },
+        {
+          "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
         },
         {
-          "labelKey": "Azure OpenAI - Eigene Daten nutzen (RAG) - Microsoft Learn",
+          "labelKey": "Azure OpenAI - Use your data (RAG) - Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data"
         }
       ],
@@ -725,10 +729,14 @@
       "references": [
         {
           "labelKey": "Azure OpenAI - Dokumentation Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/"
+        },
+        {
+          "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
         },
         {
-          "labelKey": "Azure OpenAI - Eigene Daten nutzen (RAG) - Microsoft Learn",
+          "labelKey": "Azure OpenAI - Use your data (RAG) - Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data"
         }
       ],
@@ -1077,10 +1085,14 @@
       "references": [
         {
           "labelKey": "Azure OpenAI - Dokumentation Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/"
+        },
+        {
+          "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
         },
         {
-          "labelKey": "Azure OpenAI - Eigene Daten nutzen (RAG) - Microsoft Learn",
+          "labelKey": "Azure OpenAI - Use your data (RAG) - Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data"
         }
       ],
@@ -1949,10 +1961,14 @@
       "references": [
         {
           "labelKey": "Azure OpenAI - Dokumentation Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/"
+        },
+        {
+          "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
         },
         {
-          "labelKey": "Azure OpenAI - Eigene Daten nutzen (RAG) - Microsoft Learn",
+          "labelKey": "Azure OpenAI - Use your data (RAG) - Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data"
         }
       ],
@@ -3023,16 +3039,16 @@
       "date": "2026-04-01",
       "references": [
         {
-          "labelKey": "Geistiges Eigentum und Spitzentechnologie (WIPO)",
-          "url": "https://www.wipo.int/edocs/pubdocs/fr/wipo-pub-rn2024-8-fr-generative-ai-navigating-intellectual-property.pdf"
-        },
-        {
           "labelKey": "Azure OpenAI Service - Azure Produktseite",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
           "labelKey": "Microsoft Learn - Nutzungsbedingungen",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
       "category": "security-compliance",

@@ -170,6 +170,10 @@
       "references": [
         {
           "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/"
+        },
+        {
+          "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
         },
         {
@@ -733,6 +737,10 @@
       "references": [
         {
           "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/"
+        },
+        {
+          "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
         },
         {
@@ -1083,6 +1091,10 @@
       "author": "houle Team",
       "date": "2025-11-13",
       "references": [
+        {
+          "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/"
+        },
         {
           "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
@@ -3035,16 +3047,16 @@
       "date": "2026-04-01",
       "references": [
         {
-          "labelKey": "Propriété intellectuelle et technologie de pointe (WIPO)",
-          "url": "https://www.wipo.int/edocs/pubdocs/fr/wipo-pub-rn2024-8-fr-generative-ai-navigating-intellectual-property.pdf"
-        },
-        {
           "labelKey": "Azure OpenAI Service - Azure Product Page",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
       "category": "security-compliance",
