@@ -243,34 +243,29 @@ jobs:
       - name: Restart Node.js server
         timeout-minutes: 5
         run: |
-          HOST="${{ secrets.DEPLOY_SSH_HOST }}"
-          USER="${{ secrets.DEPLOY_SSH_USER }}"
-          PASS="${{ secrets.DEPLOY_SSH_PASSWORD }}"
-          PORT="${{ secrets.DEPLOY_SSH_PORT }}"; [ -z "$PORT" ] && PORT=22
           TOKEN="${{ secrets.RESTART_SECRET_TOKEN }}"
+          BUILD_ID=$(cat dist/.next/BUILD_ID 2>/dev/null || echo "")
 
-          echo "[restart] Killing old process via kill endpoint..."
-          curl --connect-timeout 5 --max-time 20 -X POST "https://houle.ai/api/kill/" -H "Authorization: Bearer $TOKEN" -s -o /dev/null -w "[restart] Kill request status: %{http_code}\n" || echo "[restart] Kill request failed or no process to kill"
+          # Router world: the app child exits via the kill endpoint and the
+          # tenant router respawns it from the updated current/ symlink.
+          # NEVER start processes over ssh here — the legacy nohup supervisor
+          # spawned a SECOND site entrypoint per deploy; the duplicates fought
+          # for the port and flapped Infomaniak's watchdog (2026-09-18).
+          echo "[restart] Killing app child via kill endpoint..."
+          curl --connect-timeout 5 --max-time 20 -X POST "https://houle.ai/api/kill/" -H "Authorization: Bearer $TOKEN" -s -o /dev/null -w "[restart] Kill request status: %{http_code}\n" || echo "[restart] Kill request failed"
 
-          echo "[restart] Waiting for process to terminate..."
-          sleep 15
-
-          echo "[restart] Starting new process via SSH (supervisor loop)..."
-          # Retry the ssh start 3 times with 45s spacing (ContainerSSH may throttle).
-          # The remote command is wrapped in bash -lc so the login env is sourced.
-          for attempt in 1 2 3; do
-            if sshpass -p "$PASS" ssh -p "$PORT" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ServerAliveInterval=10 -o ServerAliveCountMax=6 -o TCPKeepAlive=yes -o ConnectTimeout=20 "$USER@$HOST" bash -lc '
-              set -e
-              nohup bash -lc "while true; do cd /srv/customer/sites/houle.ai/current && node server.js >> server.out 2>&1; echo \"Node crashed, restarting...\" >> server.out; sleep 1; done" >/dev/null 2>&1 </dev/null &
-            '; then
-              echo "[restart] SSH start succeeded on attempt $attempt"
+          echo "[restart] Verifying the new build answers..."
+          OK=0
+          for i in $(seq 1 40); do
+            LIVE=$(curl -s --max-time 4 "https://houle.ai/api/health/?d=${GITHUB_RUN_ID}-${RANDOM}" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("buildId",""))' 2>/dev/null || true)
+            if [ -n "$BUILD_ID" ] && [ "$LIVE" = "$BUILD_ID" ]; then
+              echo "[restart] Build $BUILD_ID confirmed live (check $i)"
+              OK=1
               break
             fi
-            echo "[restart] SSH attempt $attempt failed"
-            [ "$attempt" -lt 3 ] && sleep 45
+            sleep 3
           done
-
-          sleep 30
+          [ "$OK" -eq 1 ] || { echo "[restart] New build never answered — investigate (no ssh fallback by design)"; exit 1; }
 
       - name: Health check and warmup
         timeout-minutes: 5
