@@ -10,6 +10,7 @@
 // No external dependencies. Remove once ridger.ch has its own hosting.
 "use strict";
 
+const fs = require("fs");
 const http = require("http");
 const net = require("net");
 const path = require("path");
@@ -58,10 +59,47 @@ const spawnApp = () => {
   });
 };
 spawnApp();
+
+// ── supervise the Ridger tenant too ──
+// The router is the only process the Infomaniak panel resurrects; if it does
+// not own the Ridger app, a panel restart leaves ridger.ch dead until a
+// pipeline ssh restart gets through the host's session throttle. Owning it
+// also makes ridger deploys self-contained: the app exits via its /api/kill
+// endpoint and is respawned here from the updated current/ symlink.
+const RIDGER_DIR = process.env.RIDGER_DIR || "/srv/customer/sites/ridger.ch/current";
+let ridgerChild = null;
+let ridgerExits = [];
+const spawnRidger = () => {
+  const entry = path.join(RIDGER_DIR, "server.js");
+  if (!fs.existsSync(entry)) {
+    console.error(`[router] ridger entry missing (${entry}); retry in 30s`);
+    setTimeout(spawnRidger, 30000);
+    return;
+  }
+  ridgerChild = spawn(process.execPath, ["server.js"], {
+    cwd: RIDGER_DIR,
+    env: { ...process.env, PORT: String(RIDGER_PORT), HOSTNAME: "127.0.0.1" },
+    stdio: "inherit",
+  });
+  ridgerChild.on("exit", (code, signal) => {
+    if (shuttingDown) return;
+    const now = Date.now();
+    ridgerExits = ridgerExits.filter((t) => now - t < 60000);
+    ridgerExits.push(now);
+    const delay = ridgerExits.length > 5 ? 15000 : 1000;
+    console.error(
+      `[router] ridger child exited (code=${code} signal=${signal}); respawn in ${delay}ms`
+    );
+    setTimeout(spawnRidger, delay);
+  });
+};
+spawnRidger();
+
 for (const sig of ["SIGTERM", "SIGINT"]) {
   process.on(sig, () => {
     shuttingDown = true;
     if (child) child.kill(sig);
+    if (ridgerChild) ridgerChild.kill(sig);
     process.exit(0);
   });
 }
