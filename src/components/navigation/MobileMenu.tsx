@@ -12,7 +12,6 @@ import ThemeToggleMobile from "@/src/components/navigation/ThemeToggleMobile";
 import { useState } from "react";
 import Link from "next/link";
 import { cn } from "@/src/lib/utils";
-import { MessageIcon } from "@/src/components/icons/MessageIcon";
 import type { NavData } from "@/src/components/navigation/types";
 
 const MobileMenuToggleIcon = ({
@@ -118,18 +117,6 @@ const MobileMenu = ({
             <Suspense fallback={null}>
               <LangSwitchMobile onLocaleChange={handleLinkClick} />
             </Suspense>
-            <div className="mt-3 mb-3">
-              <Link
-                href={`${localePrefix}/contact/`}
-                onClick={handleLinkClick}
-                prefetch={false}
-                className="flex items-center justify-center gap-2 w-full text-center font-semibold text-lg py-3 rounded-xl border border-accent bg-transparent hover:bg-accent/30 active:scale-[0.99] transition-all"
-                style={{ letterSpacing: 0.5 }}
-              >
-                <MessageIcon size={20} className="opacity-80" />
-                <span>{navData.labels.contact}</span>
-              </Link>
-            </div>
             <div>
               <Link
                 href={`${localePrefix}/`}
@@ -197,6 +184,24 @@ const MobileMenu = ({
               >
                 <span>{navData.labels.ressources}</span>
               </Link>
+            </div>
+            {/* Contact: final entry — hairline separator then accent-coloured
+                label with a mono email line beneath. */}
+            <div className="mt-5 border-t border-border pt-6">
+              <Link
+                href={`${localePrefix}/contact/`}
+                onClick={handleLinkClick}
+                prefetch={false}
+                className="flex items-center px-2 py-2 text-md font-bold text-brand transition-opacity hover:opacity-80"
+              >
+                <span>{navData.labels.contact}</span>
+              </Link>
+              <a
+                href="mailto:contact@houle.ai"
+                className="block px-2 pt-0.5 font-mono text-[11px] uppercase tracking-[0.14em] text-muted-foreground"
+              >
+                contact@houle.ai
+              </a>
             </div>
           </nav>
         </div>

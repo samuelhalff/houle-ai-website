@@ -13,6 +13,8 @@ on:
       - "package.json"
       - "package-lock.json"
       - "scripts/**"
+      - "server.js"
+      - ".github/workflows/build-and-deploy.yml"
   pull_request:
     branches: [main]
     paths:
@@ -25,11 +27,16 @@ on:
       - "package.json"
       - "package-lock.json"
       - "scripts/**"
+      - "server.js"
+      - ".github/workflows/build-and-deploy.yml"
   workflow_dispatch:
 
+# PR builds get their own concurrency group (cancellable) so they never queue
+# behind or delay a production deploy; production runs stay serialized and
+# uncancellable (killing a run mid-extract/symlink/restart is unsafe).
 concurrency:
-  group: production-deploy
-  cancel-in-progress: false
+  group: ${{ github.event_name == 'pull_request' && format('build-pr-{0}', github.event.pull_request.number) || 'production-deploy' }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 env:
   GIT_CONFIG_COUNT: "1"
@@ -90,7 +97,7 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
     steps:
       - name: Checkout repo
         uses: actions/checkout@v6
@@ -104,7 +111,7 @@ jobs:
           path: ./artifact
 
       - name: Install deploy tools
-        run: sudo apt-get update && sudo apt-get install -y sshpass curl
+        run: command -v sshpass >/dev/null || { sudo apt-get update && sudo apt-get install -y sshpass; }
 
       - name: Prepare partial artifact
         run: cp artifact/next-standalone.tar.gz artifact/next-standalone.tar.gz.part
@@ -120,6 +127,46 @@ jobs:
             -e "ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ServerAliveInterval=10 -o ServerAliveCountMax=6 -o TCPKeepAlive=yes -p $PORT" \
             artifact/next-standalone.tar.gz.part \
             "$USER@$HOST:/srv/customer/sites/houle.ai/artifact/"
+
+      - name: Sync shared env (secrets -> prod)
+        env:
+          FORMSPARK_ACTION_URL: ${{ secrets.FORMSPARK_ACTION_URL }}
+          RESTART_SECRET_TOKEN: ${{ secrets.RESTART_SECRET_TOKEN }}
+          INDEXNOW_SECRET: ${{ secrets.INDEXNOW_SECRET }}
+        run: |
+          HOST="${{ secrets.DEPLOY_SSH_HOST }}"
+          USER="${{ secrets.DEPLOY_SSH_USER }}"
+          PASS="${{ secrets.DEPLOY_SSH_PASSWORD }}"
+          PORT="${{ secrets.DEPLOY_SSH_PORT }}"; [ -z "$PORT" ] && PORT=22
+
+          python - <<'PY'
+          import os
+          keys = [
+            "FORMSPARK_ACTION_URL",
+            "RESTART_SECRET_TOKEN",
+            "INDEXNOW_SECRET",
+          ]
+          lines = [
+            "PORT=5000",
+            "NEXT_PUBLIC_SITE_URL=https://houle.ai",
+          ]
+          for key in keys:
+            value = os.environ.get(key, "")
+            if value:
+              lines.append(f"{key}={value}")
+          with open("env_sync_file", "w") as fh:
+            fh.write("\n".join(lines) + "\n")
+          print(f"[deploy] env file built with {len(lines)} entries")
+          PY
+
+          # SFTP, not ssh-exec: exec channels on this host have failed silently
+          # (ContainerSSH wedge, 2026-09-18), leaving secrets out of the runtime
+          # env while the step looked green. SFTP is a distinct channel.
+          sshpass -p "$PASS" sftp -P "$PORT" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ConnectTimeout=20 "$USER@$HOST" <<'SFTP'
+          put env_sync_file /srv/customer/sites/houle.ai/shared/.env
+          SFTP
+          rm -f env_sync_file
+          echo "[deploy] shared/.env written via sftp"
 
       - name: Extract, symlink and cleanup releases
         run: |
@@ -192,7 +239,7 @@ jobs:
           '
 
       - name: Restart Node.js server
-        timeout-minutes: 3
+        timeout-minutes: 5
         run: |
           HOST="${{ secrets.DEPLOY_SSH_HOST }}"
           USER="${{ secrets.DEPLOY_SSH_USER }}"
@@ -200,18 +247,26 @@ jobs:
           PORT="${{ secrets.DEPLOY_SSH_PORT }}"; [ -z "$PORT" ] && PORT=22
           TOKEN="${{ secrets.RESTART_SECRET_TOKEN }}"
 
-          echo "[restart] Killing old process..."
+          echo "[restart] Killing old process via kill endpoint..."
           curl --connect-timeout 5 --max-time 20 -X POST "https://houle.ai/api/kill/" -H "Authorization: Bearer $TOKEN" -s -o /dev/null -w "[restart] Kill request status: %{http_code}\n" || echo "[restart] Kill request failed or no process to kill"
 
           echo "[restart] Waiting for process to terminate..."
-          sleep 30
+          sleep 15
 
-          echo "[restart] Starting new process (refreshing symlink each restart)..."
-          sshpass -p "$PASS" ssh -p "$PORT" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ServerAliveInterval=10 -o ServerAliveCountMax=6 -o TCPKeepAlive=yes "$USER@$HOST" '
-            set -e
-            # Supervisor loop: re-enter current symlink on every iteration so new releases apply
-            nohup bash -lc "while true; do cd /srv/customer/sites/houle.ai/current && node server.js >> server.out 2>&1; echo \"Node crashed, restarting...\" >> server.out; sleep 1; done" >/dev/null 2>&1 </dev/null &
-          ' || echo "[restart] SSH command completed"
+          echo "[restart] Starting new process via SSH (supervisor loop)..."
+          # Retry the ssh start 3 times with 45s spacing (ContainerSSH may throttle).
+          # The remote command is wrapped in bash -lc so the login env is sourced.
+          for attempt in 1 2 3; do
+            if sshpass -p "$PASS" ssh -p "$PORT" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ServerAliveInterval=10 -o ServerAliveCountMax=6 -o TCPKeepAlive=yes -o ConnectTimeout=20 "$USER@$HOST" bash -lc '
+              set -e
+              nohup bash -lc "while true; do cd /srv/customer/sites/houle.ai/current && node server.js >> server.out 2>&1; echo \"Node crashed, restarting...\" >> server.out; sleep 1; done" >/dev/null 2>&1 </dev/null &
+            '; then
+              echo "[restart] SSH start succeeded on attempt $attempt"
+              break
+            fi
+            echo "[restart] SSH attempt $attempt failed"
+            [ "$attempt" -lt 3 ] && sleep 45
+          done
 
           sleep 30
 
@@ -223,14 +278,14 @@ jobs:
           for i in $(seq 1 $ATTEMPTS); do
             STATUS=$(curl "${CURL_TIMEOUTS[@]}" -o /dev/null -s -w "%{http_code}" -L "https://houle.ai/fr/" || echo "000")
             if [ "$STATUS" -eq 200 ]; then
-              echo "✅ Health check OK"
+              echo "Health check OK"
               OK=1
               break
             fi
             echo "Waiting for server... ($i/$ATTEMPTS, got $STATUS)"
             sleep $SLEEP
           done
-          [ "$OK" -eq 1 ] || { echo "❌ Health check failed"; exit 1; }
+          [ "$OK" -eq 1 ] || { echo "Health check failed"; exit 1; }
 
           echo "[deploy] Warming up paths..."
           for path in "/" "/en/" "/fr/"; do
@@ -252,9 +307,8 @@ jobs:
         run: |
           echo "Checking sitemap format..."
           curl --connect-timeout 5 --max-time 20 -s "https://houle.ai/sitemap.xml" | head -50
-          # Check if URLs have trailing slashes (look for any URL without trailing slash before </loc>)
           if curl --connect-timeout 5 --max-time 20 -s "https://houle.ai/sitemap.xml" | grep -q '<loc>https://houle.ai/[a-z][^/]*</loc>'; then
-            echo "⚠️ WARNING: Found sitemap URLs without trailing slashes"
+            echo "WARNING: Found sitemap URLs without trailing slashes"
           else
-            echo "✅ Sitemap URLs appear to have trailing slashes"
+            echo "Sitemap URLs appear to have trailing slashes"
           fi

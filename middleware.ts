@@ -1,6 +1,19 @@
 import { NextRequest, NextResponse } from "next/server";
 import { locales } from "./src/lib/i18n-locales";
 
+// Behind the tenant proxy, request.url carries the internal server identity
+// (localhost:PORT); every externally visible redirect must use the public
+// origin derived from the Host header instead.
+const toPublicOrigin = (url: URL, request: NextRequest): URL => {
+  const host = (request.headers.get("host") || "").split(":")[0];
+  if (host) {
+    url.hostname = host;
+    url.protocol = "https";
+    url.port = "";
+  }
+  return url;
+};
+
 type SecurityHeaderOptions = {
   nonce: string;
   csp: string;
@@ -54,6 +67,9 @@ export function middleware(request: NextRequest) {
     const redirectUrl = request.nextUrl.clone();
     redirectUrl.hostname = host.replace(/^www\./, "");
     redirectUrl.protocol = "https";
+    // nextUrl carries the internal server port behind the tenant proxy;
+    // public URLs are always :443.
+    redirectUrl.port = "";
     const response = NextResponse.redirect(redirectUrl, 308);
     response.headers.set("X-Robots-Tag", "noindex, nofollow");
     return response;
@@ -129,16 +145,11 @@ export function middleware(request: NextRequest) {
       rest.length > 1 && rest.endsWith("/") ? rest.slice(0, -1) : rest;
 
     const redirectWithHeaders = (targetPath: string) => {
-      const redirectUrl = new URL(targetPath, request.url);
+      const redirectUrl = toPublicOrigin(new URL(targetPath, request.url), request);
       redirectUrl.search = request.nextUrl.search;
       const response = NextResponse.redirect(redirectUrl, 308);
-      applySecurityHeaders(response, {
-        nonce,
-        csp,
-        isProd,
-        noIndex: shouldNoIndex,
-      });
       response.headers.set("x-pathname", pathname);
+      applySecurityHeaders(response, { nonce, csp, isProd, noIndex: shouldNoIndex });
       // Always noindex redirects to avoid "Page with redirect" indexing noise.
       if (!response.headers.has("X-Robots-Tag")) {
         response.headers.set("X-Robots-Tag", "noindex, nofollow");
@@ -194,15 +205,10 @@ export function middleware(request: NextRequest) {
 
     if (needsTrailingSlash) {
       const targetPath = `${pathname}/`;
-      const redirectUrl = new URL(targetPath, request.url);
+      const redirectUrl = toPublicOrigin(new URL(targetPath, request.url), request);
       redirectUrl.search = request.nextUrl.search;
       const response = NextResponse.redirect(redirectUrl, 308);
-      applySecurityHeaders(response, {
-        nonce,
-        csp,
-        isProd,
-        noIndex: shouldNoIndex,
-      });
+      applySecurityHeaders(response, { nonce, csp, isProd, noIndex: shouldNoIndex });
       if (!response.headers.has("X-Robots-Tag")) {
         response.headers.set("X-Robots-Tag", "noindex, nofollow");
       }
@@ -239,21 +245,16 @@ export function middleware(request: NextRequest) {
   if (!targetPath.endsWith("/")) {
     targetPath += "/";
   }
-  const redirectUrl = new URL(targetPath, request.url);
+  const redirectUrl = toPublicOrigin(new URL(targetPath, request.url), request);
   // Preserve query parameters (e.g. ?utm_source=..., ?articles=43)
   redirectUrl.search = request.nextUrl.search;
   // Use 308 permanent redirect so search engines treat non-locale URLs as
   // permanently moved (matching ark-fid pattern). The redirect always targets
   // a trailing-slash URL so browsers cache the correct canonical destination.
   const response = NextResponse.redirect(redirectUrl, 308);
-  applySecurityHeaders(response, {
-    nonce,
-    csp,
-    isProd,
-    noIndex: shouldNoIndex,
-  });
   response.headers.set("x-pathname", pathname);
   response.headers.set("Vary", "Accept-Language");
+  applySecurityHeaders(response, { nonce, csp, isProd, noIndex: shouldNoIndex });
   // Removed report-only header
   if (!response.headers.has("X-Robots-Tag")) {
     response.headers.set("X-Robots-Tag", "noindex, nofollow");

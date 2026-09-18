@@ -249,9 +249,9 @@ export default async function ContactPage(
   const whatsappLink = getWhatsAppLink(locale);
 
   return (
-    <div className="mx-auto w-full max-w-[1200px] px-5 py-12 sm:px-8 space-y-12">
+    <div className="mx-auto w-full max-w-[1200px] px-5 py-8 sm:px-8 space-y-8">
       {/* Page title */}
-      <div className="abstract-background mx-auto max-w-3xl text-center space-y-4 py-8 sm:py-10 lg:py-14">
+      <div className="abstract-background mx-auto max-w-3xl text-center space-y-4 pb-6 sm:pb-10 pt-2 sm:pt-4">
         <p className="text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-brand-hover dark:text-brand">
           {locale === "fr" ? "Contact"
           : locale === "de" ? "Kontakt"
