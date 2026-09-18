@@ -60,12 +60,53 @@ const compressor = compression({
   },
 });
 
+// Host-based tenant routing: ridger.ch is an Infomaniak alias of this site
+// (the hosting allows a single Node.js site), so its traffic lands here and
+// is proxied to the Ridger app supervised on RIDGER_PORT by its own deploy
+// pipeline. Remove once ridger.ch moves to a dedicated hosting.
+const RIDGER_PORT = parseInt(process.env.RIDGER_PORT || "5001", 10);
+const RIDGER_HOSTS = new Set(["ridger.ch", "www.ridger.ch"]);
+
+const isRidgerRequest = (req) => {
+  const rawHost = req.headers["x-forwarded-host"] || req.headers.host || "";
+  const host = String(rawHost).split(",")[0].trim().toLowerCase().split(":")[0];
+  return RIDGER_HOSTS.has(host);
+};
+
+const proxyToRidger = (req, res) => {
+  const upstream = http.request(
+    {
+      host: "127.0.0.1",
+      port: RIDGER_PORT,
+      method: req.method,
+      path: req.url,
+      headers: req.headers,
+    },
+    (upRes) => {
+      res.writeHead(upRes.statusCode || 502, upRes.headers);
+      upRes.pipe(res);
+    }
+  );
+  upstream.setTimeout(30000, () => upstream.destroy(new Error("upstream timeout")));
+  upstream.on("error", () => {
+    if (!res.headersSent) {
+      res.writeHead(503, { "Content-Type": "text/plain" });
+    }
+    res.end("Service temporarily unavailable");
+  });
+  req.pipe(upstream);
+};
+
 app
   .prepare()
   .then(() => {
     const handle = app.getRequestHandler();
 
     const server = http.createServer((req, res) => {
+      if (isRidgerRequest(req)) {
+        proxyToRidger(req, res);
+        return;
+      }
       req.originalUrl = req.url;
       compressor(req, res, () => {
         const parsedUrl = parse(req.url, true);
