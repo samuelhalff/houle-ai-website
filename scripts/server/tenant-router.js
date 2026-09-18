@@ -15,10 +15,19 @@ const net = require("net");
 const path = require("path");
 const { spawn } = require("child_process");
 
-const PUBLIC_PORT = parseInt(process.env.PORT, 10) || 5000;
-const APP_PORT = parseInt(process.env.APP_PORT, 10) || 5010;
-const parsedRidgerPort = parseInt(process.env.RIDGER_PORT || "5001", 10);
-const RIDGER_PORT = Number.isInteger(parsedRidgerPort) ? parsedRidgerPort : 5001;
+const intEnv = (name, fallback) => {
+  const parsed = parseInt(process.env[name] || "", 10);
+  return Number.isInteger(parsed) ? parsed : fallback;
+};
+const PUBLIC_PORT = intEnv("PORT", 5000);
+const APP_PORT = intEnv("APP_PORT", 5010);
+const RIDGER_PORT = intEnv("RIDGER_PORT", 5001);
+if (APP_PORT === PUBLIC_PORT || RIDGER_PORT === PUBLIC_PORT) {
+  console.error(
+    `[router] port collision (public=${PUBLIC_PORT} app=${APP_PORT} ridger=${RIDGER_PORT})`
+  );
+  process.exit(1);
+}
 const RIDGER_HOSTS = new Set(["ridger.ch", "www.ridger.ch"]);
 
 // ── spawn the real Next server on the internal port ──
@@ -91,6 +100,7 @@ server.on("upgrade", (req, socket, head) => {
 });
 
 server.keepAliveTimeout = 65000;
+server.headersTimeout = 66000;
 server.listen(PUBLIC_PORT, "0.0.0.0", () => {
   console.log(
     `[router] public :${PUBLIC_PORT} → app :${APP_PORT}, ridger :${RIDGER_PORT}`
