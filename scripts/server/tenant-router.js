@@ -30,21 +30,38 @@ if (APP_PORT === PUBLIC_PORT || RIDGER_PORT === PUBLIC_PORT) {
 }
 const RIDGER_HOSTS = new Set(["ridger.ch", "www.ridger.ch"]);
 
-// ── spawn the real Next server on the internal port ──
+// ── spawn the real Next server on the internal port, respawn on exit ──
+// The router must stay alive even if the app child dies: exiting with the
+// child makes the whole site flap, which trips Infomaniak's process watchdog
+// into "maintenance" mode (observed 2026-09-18). Respawn with backoff instead.
 const appEntry = path.join(__dirname, "server-app.js");
-const child = spawn(process.execPath, [appEntry], {
-  env: { ...process.env, PORT: String(APP_PORT), HOSTNAME: "127.0.0.1" },
-  stdio: "inherit",
-});
-child.on("exit", (code, signal) => {
-  // The supervisor loop restarts the whole entrypoint; die with the child so
-  // we never serve a half-dead tenant pair.
-  console.error(`[router] app child exited (code=${code} signal=${signal})`);
-  process.exit(code === null ? 1 : code);
-});
+let child = null;
+let shuttingDown = false;
+let recentExits = [];
+const spawnApp = () => {
+  child = spawn(process.execPath, [appEntry], {
+    env: { ...process.env, PORT: String(APP_PORT), HOSTNAME: "127.0.0.1" },
+    stdio: "inherit",
+  });
+  child.on("exit", (code, signal) => {
+    if (shuttingDown) return;
+    const now = Date.now();
+    recentExits = recentExits.filter((t) => now - t < 60000);
+    recentExits.push(now);
+    // Crash-looping child (>5 exits/min): back off hard but keep the router
+    // alive so the other tenant and the maintenance-free front survive.
+    const delay = recentExits.length > 5 ? 15000 : 1000;
+    console.error(
+      `[router] app child exited (code=${code} signal=${signal}); respawn in ${delay}ms`
+    );
+    setTimeout(spawnApp, delay);
+  });
+};
+spawnApp();
 for (const sig of ["SIGTERM", "SIGINT"]) {
   process.on(sig, () => {
-    child.kill(sig);
+    shuttingDown = true;
+    if (child) child.kill(sig);
     process.exit(0);
   });
 }
