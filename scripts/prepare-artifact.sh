@@ -14,11 +14,6 @@ mkdir -p "$DIST_DIR/.next"
 # Copy the standalone server and minimal node_modules into dist/
 cp -R "$BUILD_DIR/standalone/"* "$DIST_DIR/"
 
-# Tenant routing: the public entrypoint is the dependency-free router, which
-# spawns the real Next server (renamed server-app.js) on an internal port and
-# proxies ridger.ch hosts to the Ridger app. See scripts/server/tenant-router.js.
-mv "$DIST_DIR/server.js" "$DIST_DIR/server-app.js"
-cp "$ROOT_DIR/scripts/server/tenant-router.js" "$DIST_DIR/server.js"
 
 # Ensure .next/static resides alongside the server bundle
 mkdir -p "$DIST_DIR/.next"
