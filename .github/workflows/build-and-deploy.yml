@@ -240,32 +240,24 @@ jobs:
             echo "[deploy] Cleanup completed, keeping last $KEEP releases" >> "$LOG"
           '
 
-      - name: Restart Node.js server
-        timeout-minutes: 5
+      - name: Wait for router rolling swap
+        timeout-minutes: 6
         run: |
-          TOKEN="${{ secrets.RESTART_SECRET_TOKEN }}"
           BUILD_ID=$(cat dist/.next/BUILD_ID 2>/dev/null || echo "")
-
-          # Router world: the app child exits via the kill endpoint and the
-          # tenant router respawns it from the updated current/ symlink.
-          # NEVER start processes over ssh here — the legacy nohup supervisor
-          # spawned a SECOND site entrypoint per deploy; the duplicates fought
-          # for the port and flapped Infomaniak's watchdog (2026-09-18).
-          echo "[restart] Killing app child via kill endpoint..."
-          curl --connect-timeout 5 --max-time 20 -X POST "https://houle.ai/api/kill/" -H "Authorization: Bearer $TOKEN" -s -o /dev/null -w "[restart] Kill request status: %{http_code}\n" || echo "[restart] Kill request failed"
-
-          echo "[restart] Verifying the new build answers..."
+          # v4 router watches current/.next/BUILD_ID and rolls the tenant to
+          # the new build by itself (spawn alt port -> health -> switch).
+          # CI only OBSERVES; it never kicks processes (external kill-churn
+          # tripped Infomaniak's watchdog into maintenance, 2026-09-18).
+          echo "[deploy] waiting for router to roll to build $BUILD_ID"
           OK=0
-          for i in $(seq 1 40); do
+          for i in $(seq 1 60); do
             LIVE=$(curl -s --max-time 4 "https://houle.ai/api/health/?d=${GITHUB_RUN_ID}-${RANDOM}" | python3 -c 'import json,sys; print(json.load(sys.stdin).get("buildId",""))' 2>/dev/null || true)
             if [ -n "$BUILD_ID" ] && [ "$LIVE" = "$BUILD_ID" ]; then
-              echo "[restart] Build $BUILD_ID confirmed live (check $i)"
-              OK=1
-              break
+              echo "[deploy] build $BUILD_ID live (check $i)"; OK=1; break
             fi
-            sleep 3
+            sleep 5
           done
-          [ "$OK" -eq 1 ] || { echo "[restart] New build never answered — investigate (no ssh fallback by design)"; exit 1; }
+          [ "$OK" -eq 1 ] || { echo "[deploy] router never rolled — check maintenance flag / router logs"; exit 1; }
 
       - name: Health check and warmup
         timeout-minutes: 5
