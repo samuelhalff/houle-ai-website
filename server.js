@@ -64,12 +64,17 @@ const compressor = compression({
 // (the hosting allows a single Node.js site), so its traffic lands here and
 // is proxied to the Ridger app supervised on RIDGER_PORT by its own deploy
 // pipeline. Remove once ridger.ch moves to a dedicated hosting.
-const RIDGER_PORT = parseInt(process.env.RIDGER_PORT || "5001", 10);
+const parsedRidgerPort = parseInt(process.env.RIDGER_PORT || "5001", 10);
+const RIDGER_PORT = Number.isInteger(parsedRidgerPort) ? parsedRidgerPort : 5001;
 const RIDGER_HOSTS = new Set(["ridger.ch", "www.ridger.ch"]);
 
 const isRidgerRequest = (req) => {
-  const rawHost = req.headers["x-forwarded-host"] || req.headers.host || "";
-  const host = String(rawHost).split(",")[0].trim().toLowerCase().split(":")[0];
+  // Host only — x-forwarded-host is client-spoofable and must not cross the
+  // tenant boundary. The edge sets Host to the requested domain.
+  const host = String(req.headers.host || "")
+    .trim()
+    .toLowerCase()
+    .split(":")[0];
   return RIDGER_HOSTS.has(host);
 };
 
