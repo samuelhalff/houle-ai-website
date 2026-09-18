@@ -66,7 +66,14 @@ const server = http.createServer((req, res) => {
       port: targetPortFor(req),
       method: req.method,
       path: req.url,
-      headers: req.headers,
+      // TLS terminates at the Infomaniak front; assert the public scheme so
+      // apps never leak internal ports into redirects/canonical URLs.
+      headers: {
+        ...req.headers,
+        "x-forwarded-proto": "https",
+        "x-forwarded-host": req.headers.host || "",
+        "x-forwarded-port": "443",
+      },
     },
     (upRes) => {
       res.writeHead(upRes.statusCode || 502, upRes.headers);
