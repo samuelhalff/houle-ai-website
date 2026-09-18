@@ -14,6 +14,14 @@ mkdir -p "$DIST_DIR/.next"
 # Copy the standalone server and minimal node_modules into dist/
 cp -R "$BUILD_DIR/standalone/"* "$DIST_DIR/"
 
+# Tenant routing entrypoint: router owns the public port (panel env, :3000),
+# runs the real Next server (server-app.js) internally and the Ridger tenant
+# on :5001. See scripts/server/tenant-router.js and the 2026-09-18 postmortem:
+# the earlier maintenance flaps were caused by the ridger app crash-looping on
+# a port collision, not by the router.
+mv "$DIST_DIR/server.js" "$DIST_DIR/server-app.js"
+cp "$ROOT_DIR/scripts/server/tenant-router.js" "$DIST_DIR/server.js"
+
 
 # Ensure .next/static resides alongside the server bundle
 mkdir -p "$DIST_DIR/.next"
