@@ -64,6 +64,17 @@ export default async function HomePage(
       ctaPrimary: "Get in touch",
       ctaSecondary: "See our products",
       learnMore: "Learn more",
+      facts: [
+        { label: "Data residency", value: "Swiss-hosted", sub: "Runs on Microsoft Azure Switzerland — every document and email stays within Swiss borders." },
+        { label: "Integration", value: "M365-native", sub: "Add-ins for Outlook and Word, plus Azure and Power Platform — no new apps to learn." },
+        { label: "Compliance", value: "nLPD & GDPR", sub: "Human-in-the-loop by design, aligned with Swiss and EU data-protection rules." },
+      ],
+      trustEyebrow: "Built for Swiss teams",
+      trust: [
+        { title: "Swiss data residency", description: "Hosted on Microsoft Azure Switzerland — your data never leaves the country." },
+        { title: "Human-in-the-loop", description: "Your teams validate every AI suggestion before it becomes final." },
+        { title: "Geneva & Lausanne", description: "A local consulting team guiding you from concept to production." },
+      ],
       productsEyebrow: "Products",
       productsTitle: "AI that lives inside Microsoft 365",
       productsDesc:
@@ -109,6 +120,17 @@ export default async function HomePage(
       ctaPrimary: "Nous contacter",
       ctaSecondary: "Voir nos produits",
       learnMore: "En savoir plus",
+      facts: [
+        { label: "Résidence des données", value: "Hébergé en Suisse", sub: "Sur Microsoft Azure Suisse — chaque document et e-mail reste sur le territoire suisse." },
+        { label: "Intégration", value: "Natif Microsoft 365", sub: "Add-ins pour Outlook et Word, plus Azure et Power Platform — aucune nouvelle app à apprendre." },
+        { label: "Conformité", value: "nLPD & RGPD", sub: "Approche human-in-the-loop, alignée sur les règles suisses et européennes de protection des données." },
+      ],
+      trustEyebrow: "Pensé pour les équipes suisses",
+      trust: [
+        { title: "Données hébergées en Suisse", description: "Sur Microsoft Azure Suisse — vos données ne quittent jamais le pays." },
+        { title: "Human-in-the-loop", description: "Vos équipes valident chaque suggestion de l'IA avant qu'elle ne devienne définitive." },
+        { title: "Genève & Lausanne", description: "Une équipe de conseil locale, du concept jusqu'à la production." },
+      ],
       productsEyebrow: "Produits",
       productsTitle: "Une IA intégrée à Microsoft 365",
       productsDesc:
@@ -154,6 +176,17 @@ export default async function HomePage(
       ctaPrimary: "Kontakt aufnehmen",
       ctaSecondary: "Unsere Produkte",
       learnMore: "Mehr erfahren",
+      facts: [
+        { label: "Datenresidenz", value: "In der Schweiz gehostet", sub: "Auf Microsoft Azure Schweiz — jedes Dokument und jede E-Mail bleibt innerhalb der Schweizer Grenzen." },
+        { label: "Integration", value: "Microsoft-365-nativ", sub: "Add-ins für Outlook und Word, dazu Azure und Power Platform — keine neuen Apps." },
+        { label: "Compliance", value: "DSG & DSGVO", sub: "Human-in-the-loop by Design, konform mit Schweizer und EU-Datenschutzregeln." },
+      ],
+      trustEyebrow: "Für Schweizer Teams gebaut",
+      trust: [
+        { title: "Daten in der Schweiz", description: "Auf Microsoft Azure Schweiz — Ihre Daten verlassen das Land nie." },
+        { title: "Human-in-the-loop", description: "Ihre Teams validieren jeden KI-Vorschlag, bevor er endgültig wird." },
+        { title: "Genf & Lausanne", description: "Ein lokales Beratungsteam vom Konzept bis zur Produktion." },
+      ],
       productsEyebrow: "Produkte",
       productsTitle: "KI direkt in Microsoft 365",
       productsDesc:
@@ -199,6 +232,17 @@ export default async function HomePage(
       ctaPrimary: "Contactarnos",
       ctaSecondary: "Ver productos",
       learnMore: "Saber más",
+      facts: [
+        { label: "Residencia de datos", value: "Alojado en Suiza", sub: "En Microsoft Azure Suiza — cada documento y email permanece dentro de las fronteras suizas." },
+        { label: "Integración", value: "Nativo Microsoft 365", sub: "Complementos para Outlook y Word, más Azure y Power Platform — sin nuevas apps." },
+        { label: "Cumplimiento", value: "nLPD & RGPD", sub: "Human-in-the-loop por diseño, alineado con las normas suizas y europeas de protección de datos." },
+      ],
+      trustEyebrow: "Diseñado para equipos suizos",
+      trust: [
+        { title: "Datos alojados en Suiza", description: "En Microsoft Azure Suiza — tus datos nunca salen del país." },
+        { title: "Human-in-the-loop", description: "Tus equipos validan cada sugerencia de IA antes de que sea definitiva." },
+        { title: "Ginebra y Lausana", description: "Un equipo de consultoría local, del concepto a la producción." },
+      ],
       productsEyebrow: "Productos",
       productsTitle: "IA que vive dentro de Microsoft 365",
       productsDesc:
@@ -244,6 +288,17 @@ export default async function HomePage(
       ctaPrimary: "Entre em contato",
       ctaSecondary: "Ver produtos",
       learnMore: "Saiba mais",
+      facts: [
+        { label: "Residência de dados", value: "Hospedado na Suíça", sub: "No Microsoft Azure Suíça — cada documento e email permanece dentro das fronteiras suíças." },
+        { label: "Integração", value: "Nativo Microsoft 365", sub: "Suplementos para Outlook e Word, além de Azure e Power Platform — sem novos apps." },
+        { label: "Conformidade", value: "nLPD & LGPD", sub: "Human-in-the-loop por design, alinhado às regras suíças e europeias de proteção de dados." },
+      ],
+      trustEyebrow: "Feito para equipes suíças",
+      trust: [
+        { title: "Dados hospedados na Suíça", description: "No Microsoft Azure Suíça — seus dados nunca saem do país." },
+        { title: "Human-in-the-loop", description: "Suas equipes validam cada sugestão da IA antes de ela se tornar definitiva." },
+        { title: "Genebra e Lausanne", description: "Uma equipe de consultoria local, do conceito à produção." },
+      ],
       productsEyebrow: "Produtos",
       productsTitle: "IA que vive dentro do Microsoft 365",
       productsDesc:
@@ -327,7 +382,52 @@ export default async function HomePage(
                 </Button>
               </Link>
             </div>
+
+            {/* Facts band */}
+            <div className="mt-16 grid grid-cols-1 gap-8 border-t border-border/50 pt-10 sm:grid-cols-3 sm:gap-10">
+              {t.facts.map((fact) => (
+                <div key={fact.label} className="flex flex-col gap-2">
+                  <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-muted-foreground/60">
+                    {fact.label}
+                  </p>
+                  <p className="text-[28px] font-semibold leading-none tracking-[-0.025em] text-foreground sm:text-[32px]">
+                    {fact.value}
+                  </p>
+                  <p className="text-[13.5px] leading-[1.55] text-muted-foreground">
+                    {fact.sub}
+                  </p>
+                </div>
+              ))}
+            </div>
           </Reveal>
+        </div>
+      </section>
+
+      {/* ── Trust band ───────────────────────────────────────────────── */}
+      <section
+        id="trust"
+        className="mx-auto w-full max-w-[1200px] border-y border-border/50 px-5 py-8 sm:px-8 sm:py-10"
+        aria-labelledby="trust-title"
+      >
+        <div className="grid items-start gap-8 sm:grid-cols-[auto_repeat(3,1fr)] sm:items-center sm:gap-10">
+          <p
+            id="trust-title"
+            className="font-mono text-[10px] uppercase leading-5 tracking-[0.14em] text-muted-foreground/70 sm:max-w-[100px]"
+          >
+            {t.trustEyebrow}
+          </p>
+          <ul className="col-span-3 grid grid-cols-1 gap-6 sm:grid-cols-3 sm:gap-8">
+            {t.trust.map((item) => (
+              <li key={item.title} className="flex flex-col gap-1.5">
+                <p className="text-[17px] font-semibold leading-tight tracking-[-0.02em] text-foreground">
+                  {item.title}
+                </p>
+                <p className="text-[13px] leading-[1.55] text-muted-foreground">
+                  {item.description}
+                </p>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
