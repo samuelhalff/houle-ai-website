@@ -123,6 +123,35 @@ server.on("upgrade", (req, socket, head) => {
   socket.on("error", () => upstream.destroy());
 });
 
+// ── forensic status log: one line/min with RSS of router+children and the
+// cgroup memory ceiling, appended next to the supervisor's server.out so it
+// survives ssh-throttled hosts and panel restarts. Capped at ~512KB.
+const STATUS_LOG = process.env.ROUTER_STATUS_LOG ||
+  path.join(__dirname, "..", "router-status.log");
+const readNum = (p) => {
+  try { return fs.readFileSync(p, "utf8").trim(); } catch { return "?"; }
+};
+const rssOf = (pid) => {
+  try {
+    const m = fs.readFileSync(`/proc/${pid}/status`, "utf8").match(/VmRSS:\s+(\d+) kB/);
+    return m ? Math.round(parseInt(m[1], 10) / 1024) : -1;
+  } catch { return -1; }
+};
+setInterval(() => {
+  try {
+    const st = fs.statSync(STATUS_LOG);
+    if (st.size > 512 * 1024) fs.truncateSync(STATUS_LOG, 0);
+  } catch {}
+  const line = [
+    new Date().toISOString(),
+    `router=${rssOf(process.pid)}MB`,
+    `app=${child ? rssOf(child.pid) : "down"}MB`,
+    `cgroup=${readNum("/sys/fs/cgroup/memory.current")}/${readNum("/sys/fs/cgroup/memory.max")}`,
+    `load=${readNum("/proc/loadavg").split(" ").slice(0,1)}`,
+  ].join(" ");
+  fs.appendFile(STATUS_LOG, line + "\n", () => {});
+}, 60000).unref();
+
 server.keepAliveTimeout = 65000;
 server.headersTimeout = 66000;
 server.listen(PUBLIC_PORT, "0.0.0.0", () => {
