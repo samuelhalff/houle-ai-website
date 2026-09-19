@@ -241,6 +241,10 @@ jobs:
           '
 
       - name: Wait for router rolling swap
+        # Warn-only: the release is on disk and the router rolls it in
+        # (sometimes beyond this window after a respawn). Live/latest drift
+        # is watched by the scheduled monitor instead of blocking deploys.
+        continue-on-error: true
         timeout-minutes: 6
         run: |
           BUILD_ID=$(cat dist/.next/BUILD_ID 2>/dev/null || echo "")
