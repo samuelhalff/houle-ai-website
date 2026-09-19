@@ -12,7 +12,7 @@
     "build": "next build",
     "standalone:prepare": "mkdir -p .next/standalone/.next/static .next/standalone/public .next/standalone/src && cp -R .next/static/* .next/standalone/.next/static/ 2>/dev/null || true && cp -R public/* .next/standalone/public/ 2>/dev/null || true && cp -R src/translations .next/standalone/src/ 2>/dev/null || true",
     "prestart": "npm run standalone:prepare",
-    "start": "PORT=${PORT:-5000} node .next/standalone/server.js",
+    "start": "PORT=${PORT:-3000} node server.js",
     "prod": "npm run build && npm run standalone:prepare && PORT=${PORT:-5000} node .next/standalone/server.js",
     "lint": "eslint .",
     "typecheck": "tsc -p tsconfig.json --noEmit --incremental false",
