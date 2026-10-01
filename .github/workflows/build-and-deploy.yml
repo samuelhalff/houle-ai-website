@@ -74,9 +74,14 @@ jobs:
       - name: Install dependencies
         run: npm ci --prefer-offline --no-audit --no-fund
 
-      - name: TypeScript type check
+      # Blocking since 2026-10-01 (green on a fresh checkout). houle.ai's
+      # artifact carries the router for ridger.ch too, so nothing that fails
+      # these gates should reach the shared host.
+      - name: TypeScript type check (blocking)
         run: npm run typecheck
-        continue-on-error: true
+
+      - name: Fast safety checks (structured data guardrails)
+        run: npm run test:structured-data
 
       - name: Check malformed internal markdown links (blocking)
         run: node scripts/fix-article-internal-links.js --check
@@ -281,8 +286,10 @@ jobs:
             [ "$attempt" -lt 3 ] && sleep $((attempt * 10))
           done
 
-          DISK_BUILD=$(tr -d '[:space:]' < disk_build 2>/dev/null || true)
-          field() { sed -n "s/^$1=//p" deploy_state 2>/dev/null | head -n1; }
+          # Both tolerate a missing file: an incomplete read-back must reach
+          # the live gate (and its rollback), not abort this step.
+          DISK_BUILD=$(cat disk_build 2>/dev/null | tr -d '[:space:]' || true)
+          field() { sed -n "s/^$1=//p" deploy_state 2>/dev/null | head -n1 || true; }
           STATE_BUILD=$(field NEW_BUILD_ID)
           echo "[deploy] expected build $BUILD_ID; current/ on disk: ${DISK_BUILD:-unreadable}"
 
@@ -347,6 +354,29 @@ jobs:
           BASE="/srv/customer/sites/houle.ai"
           BUILD_ID=$(cat dist/.next/BUILD_ID)
 
+          # The extract step exports the previous release only when its SFTP
+          # read-back worked. If it did not, read deploy_state again now: it
+          # is only trusted when it describes this very build.
+          field() { sed -n "s/^$1=//p" deploy_state 2>/dev/null | head -n1 || true; }
+          if [ -z "$PREV_REL" ] || [ -z "$PREV_BUILD_ID" ]; then
+            for attempt in 1 2 3; do
+              rm -f deploy_state
+              sshpass -p "$PASS" sftp -P "$PORT" -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -o LogLevel=ERROR -o ConnectTimeout=20 "$USER@$HOST" >/dev/null <<SFTP || true
+          get $BASE/deploy_state deploy_state
+          SFTP
+              if [ -s deploy_state ]; then break; fi
+              echo "[rollback] deploy_state read attempt $attempt failed"
+              [ "$attempt" -lt 3 ] && sleep $((attempt * 10))
+            done
+            if [ "$(field NEW_BUILD_ID)" = "$BUILD_ID" ]; then
+              PREV_REL=$(field PREV_REL)
+              PREV_BUILD_ID=$(field PREV_BUILD_ID)
+              echo "[rollback] previous release read from deploy_state: ${PREV_REL:-none} (${PREV_BUILD_ID:-?})"
+            else
+              echo "[rollback] deploy_state unreadable or not about build $BUILD_ID"
+            fi
+          fi
+
           if ! [[ "$PREV_REL" =~ ^/srv/customer/sites/houle\.ai/releases/[0-9]{14}$ ]] || [ -z "$PREV_BUILD_ID" ] || [ "$PREV_BUILD_ID" = "$BUILD_ID" ]; then
             echo "::error::No usable previous release recorded (rel='$PREV_REL' build='$PREV_BUILD_ID'); roll back manually (see docs/deploy-ci.md)"
             exit 1
@@ -363,7 +393,7 @@ jobs:
           rename $BASE/current.rollback $BASE/current
           get $BASE/current/.next/BUILD_ID rb_build
           SFTP
-            if [ "$(tr -d '[:space:]' < rb_build 2>/dev/null)" = "$PREV_BUILD_ID" ]; then DONE=1; break; fi
+            if [ "$(cat rb_build 2>/dev/null | tr -d '[:space:]' || true)" = "$PREV_BUILD_ID" ]; then DONE=1; break; fi
             echo "[rollback] attempt $attempt not confirmed"
             [ "$attempt" -lt 3 ] && sleep $((attempt * 10))
           done
