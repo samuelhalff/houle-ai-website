@@ -2951,10 +2951,6 @@
       "date": "2026-03-28",
       "references": [
         {
-          "labelKey": "AI Charter and Governance at Work",
-          "url": "https://www.erudit.org/fr/revues/admachina/2021-n5-admachina06837/1087042ar.pdf"
-        },
-        {
           "labelKey": "Azure OpenAI Service - Azure Product Page",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
         },
@@ -5039,32 +5035,8 @@
       ],
       "references": [
         {
-          "labelKey": "Réglementation de l'utilisation de l'IA (Conseil fédéral)",
-          "url": "https://www.sif.admin.ch/fr/intelligence-artificielle"
-        },
-        {
-          "labelKey": "La loi suisse de protection des données applicable à l’IA - PFPDT",
-          "url": "https://www.edoeb.admin.ch/fr/update-loi-actuelle-applicable-ia"
-        },
-        {
-          "labelKey": "Lignes directrices sur l'IA - Conseil fédéral",
-          "url": "https://www.bk.admin.ch/fr/newnsb/uj3obgFHSuVW"
-        },
-        {
-          "labelKey": "Lignes directrices pour l’utilisation de l’IA - BAKOM",
-          "url": "https://www.bakom.admin.ch/fr/ia-lignes-directrices"
-        },
-        {
           "labelKey": "Approches réglementaires IA en Suisse",
           "url": "https://www.newsd.admin.ch/newsd/message/attachments/71097.pdf"
-        },
-        {
-          "labelKey": "Gouvernance de l’utilisation de l’IA en PME - admin.ch",
-          "url": "https://www.kmu.admin.ch/fr/cinq-conseils-pour-integrer-efficacement-lia-dans-son-entreprise"
-        },
-        {
-          "labelKey": "Modèle de politique d’usage IA pour entreprises - UNIL",
-          "url": "https://wp.unil.ch/govai/fr/"
         }
       ]
     },
@@ -5082,36 +5054,7 @@
         "transformation digitale",
         "gouvernance"
       ],
-      "references": [
-        {
-          "labelKey": "2026 AI Index Report (Stanford HAI)",
-          "url": "https://hai.stanford.edu/ai-index/2026-ai-index-report/responsible-ai"
-        },
-        {
-          "labelKey": "A Framework for AI Decision Rights",
-          "url": "https://mitsloan.mit.edu/ideas-made-to-matter/a-framework-determining-when-ai-can-make-decisions"
-        },
-        {
-          "labelKey": "Mapping the AI Governance Landscape (MIT/AGORA)",
-          "url": "https://cset.georgetown.edu/article/mapping-the-ai-governance-landscape-april-2026-update/"
-        },
-        {
-          "labelKey": "Roles and Responsibilities in Enterprise AI Adoption",
-          "url": "https://corpgov.law.harvard.edu/2026/05/25/roles-and-responsibilities-threshold-questions-in-enterprise-ai-adoption/"
-        },
-        {
-          "labelKey": "Loi fédérale sur la protection des données USA 235.1",
-          "url": "https://www.fedlex.admin.ch/eli/cc/2023/825/fr"
-        },
-        {
-          "labelKey": "AI Threats to Democracy (HEC Paris)",
-          "url": "https://www.hec.edu/fr/dare/geopolitique-pouvoirs/l-intelligence-artificielle-menace-t-elle-la-democratie-ou-peut-elle-la-sauver"
-        },
-        {
-          "labelKey": "Chaire Stratégie et Gouvernance des Données et de l'IA (ESSEC)",
-          "url": "https://chairestratgouvinfo.essec.edu/newsroom/levaluation-de-la-gouvernance-de-linformation"
-        }
-      ]
+      "references": []
     },
     {
       "slug": "outlook-add-in-automatisez-reponses-suivi",
@@ -5129,28 +5072,7 @@
         "microsoft 365",
         "sécurité"
       ],
-      "references": [
-        {
-          "labelKey": "Améliorez la productivité avec Power Automate et le connecteur Office 365 Outlook",
-          "url": "https://learn.microsoft.com/en-us/training/modules/enhance-productivity/"
-        },
-        {
-          "labelKey": "Déployer des compléments dans le centre d'administration Microsoft 365",
-          "url": "https://learn.microsoft.com/en-us/microsoft-365/admin/manage/manage-deployment-of-add-ins?view=o365-worldwide"
-        },
-        {
-          "labelKey": "Comment utiliser Outlook avec Power Automate",
-          "url": "https://learn.microsoft.com/fr-fr/power-automate/email-overview"
-        },
-        {
-          "labelKey": "Certification de la sécurité des applications Outlook",
-          "url": "https://learn.microsoft.com/fr-fr/microsoft-365-app-certification/outlook/outlook-apps"
-        },
-        {
-          "labelKey": "Vue d'ensemble sur les compléments Outlook",
-          "url": "https://learn.microsoft.com/fr-fr/office/dev/add-ins/outlook/outlook-add-ins-overview"
-        }
-      ]
+      "references": []
     }
   ],
   "FAQ": {
