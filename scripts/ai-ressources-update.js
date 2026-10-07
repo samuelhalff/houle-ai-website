@@ -5,22 +5,24 @@
  * AI ARTICLE GENERATION SYSTEM - TOPIC SCOPE DOCUMENTATION
  * =============================================================================
  * 
- * This script generates AI-powered articles for houle.ai, which is focused
- * EXCLUSIVELY on AI solutions for Microsoft 365 and related technology.
- * 
- * ALLOWED TOPICS (AI, Technology, and Microsoft 365 Focus):
- * ----------------------------------------------------------
- * ✅ AI privée et assistants internes (RAG, anti-hallucinations, contrôle des sources)
- * ✅ Add-ins Microsoft 365 (Outlook, Word, Teams) et intégrations
- * ✅ Architecture Azure OpenAI / Azure AI Foundry (sécurité, réseau, identité, clés)
- * ✅ Gouvernance IA, conformité et privacy (nLPD, RGPD, DPIA, registre des traitements)
- * ✅ Automatisation et productivité avec IA (Power Platform, Graph, workflows)
- * ✅ Évaluation qualité IA et monitoring (tests, scoring, régression, guardrails)
- * ✅ Adoption entreprise d'outils IA (ROI, cas d'usage, conduite du changement)
- * ✅ Technologies IA: LLM, GPT, fine-tuning, embeddings, vector databases
- * ✅ Hébergement en Suisse pour solutions IA et souveraineté des données
- * ✅ Sécurité et conformité SPÉCIFIQUES aux déploiements IA
- * 
+ * This script generates articles for houle.ai, a vendor-neutral AI consulting
+ * firm (Geneva). Microsoft 365 is one topic family among others.
+ *
+ * TOPIC SELECTION (enforced by code, not by the prompt):
+ * ------------------------------------------------------
+ * - Topics come from data/article-backlog.json (categories, intent, keywords
+ *   per locale, service page to link to).
+ * - scripts/lib/articleBacklog.js picks the next topic deterministically:
+ *   never two consecutive articles of the same category, regulation/policy
+ *   capped, under-represented and commercial-intent topics preferred, no
+ *   topic used twice, near-duplicates of existing titles refused.
+ * - Preview: node scripts/article-topic-plan.js --next 12
+ * - Manual override: FORCE_TOPIC (backlog id or free text),
+ *   FORCE_TOPIC_KEYWORDS, FORCE_TOPIC_CATEGORY, SKIP_TOPIC_ROTATION=1.
+ * - Every article gets a CTA block linking to the topic's service page and to
+ *   the contact page, in each locale, and carries topicId/topicFamily.
+ * - Examples are illustrative scenarios: no named clients, no invented figures.
+ *
  * FORBIDDEN TOPICS (Non-AI General Business Services):
  * -----------------------------------------------------
  * ❌ Comptabilité générale et tenue de livres (sauf si automatisée par IA)
@@ -35,7 +37,7 @@
  * 
  * WHY THIS RESTRICTION EXISTS:
  * ----------------------------
- * houle.ai provides AI and Microsoft 365 solutions, NOT general business services.
+ * houle.ai provides AI consulting and automation, NOT general business services.
  * General accounting, VAT, fiduciary, and payroll services are offered by
  * ark-fid.ch (sister company). This separation ensures each brand maintains
  * clear positioning and serves its specific audience effectively.
@@ -54,7 +56,8 @@ const fs = require("fs");
 const path = require("path");
 
 // Import trend and reference validation modules
-const { getTopicSuggestions, buildSEOSuggestions } = require("./lib/trends");
+const { buildSEOSuggestions, enrichKeywordsWithSuggest } = require("./lib/trends");
+const articleBacklog = require("./lib/articleBacklog");
 const {
   validateReferences,
   deduplicateByDomain,
@@ -175,14 +178,78 @@ const BRAND_NAME = "houle";
 const AUTHOR_NAME = "Houle Team";
 
 const SERVICES = [
-  "ia privée et assistants internes (rag, anti-hallucinations, contrôle des sources)",
-  "add-ins microsoft 365 (outlook, word, teams) et intégrations",
-  "architecture azure openai / azure ai foundry (sécurité, réseau, identité, clés)",
-  "gouvernance ia, conformité et privacy (nlpd, rgpd, dpia, registre des traitements pour systèmes ia)",
-  "automatisation ia et productivité microsoft 365 (power platform, graph, workflows)",
-  "évaluation qualité ia et monitoring (tests, scoring, régression, guardrails)",
-  "adoption entreprise de solutions ia (roi, cas d'usage, conduite du changement)",
+  "conseil en ia indépendant des éditeurs (choix entre microsoft/openai, anthropic, mistral et modèles open source)",
+  "modèles open source hébergés en suisse (auto-hébergement ou cloud suisse, résidence des données, secret professionnel et médical)",
+  "triage par ia: séparer les cas traitables automatiquement de ceux qui demandent un humain",
+  "agents ia et automatisation de processus (courrier, factures, devis, onboarding, support)",
+  "assistants privés et recherche sur documents internes (rag, contrôle des sources)",
+  "microsoft 365, power platform et add-ins outlook/word (une option parmi d'autres)",
+  "intégrations odoo et erp",
+  "cadrage, budget, roi et formation des équipes",
 ];
+
+const ARTICLE_BACKLOG = articleBacklog.loadBacklog(process.cwd());
+const BACKLOG_RULES = articleBacklog.getRules(ARTICLE_BACKLOG);
+const SKIP_TOPIC_ROTATION = process.env.SKIP_TOPIC_ROTATION === "1";
+// Set in main() once the topic of this run is known.
+let CURRENT_TOPIC = null;
+
+function copilotRule() {
+  const allowed =
+    BACKLOG_RULES.allowCopilot && (!CURRENT_TOPIC || CURRENT_TOPIC.requires === "copilot");
+  return allowed
+    ? "- Microsoft Copilot peut être cité et comparé de façon factuelle et neutre, sans le présenter comme la solution par défaut."
+    : "- Ne fais pas de Microsoft Copilot le sujet de l'article: au plus une mention factuelle si la comparaison l'exige.";
+}
+
+const EDITORIAL_RULES = [
+  "=== POSITIONNEMENT (OBLIGATOIRE) ===",
+  "- houle est un cabinet de conseil en IA indépendant des éditeurs, basé à Genève. Ne le présente jamais comme un partenaire ou revendeur d'un éditeur en particulier.",
+  "- Reste neutre entre Microsoft/OpenAI, Anthropic, Mistral et les modèles open source (Llama, Mistral, Qwen, Gemma…). Les angles open source et hébergement en Suisse (auto-hébergé ou cloud suisse) sont bienvenus quand ils servent le lecteur.",
+  "- Microsoft 365 est une option parmi d'autres, pas le cadre de l'article (sauf si le sujet imposé porte dessus).",
+  "- Lecteur visé: dirigeant ou responsable métier d'une PME, fiduciaire, étude d'avocats, family office ou institution en Suisse romande, qui évalue un projet et un prestataire. Écris pour l'aider à décider, pas pour un public d'ingénieurs ni de juristes.",
+  "=== EXEMPLES ET CHIFFRES (OBLIGATOIRE) ===",
+  "- Tout exemple d'entreprise est un scénario illustratif, annoncé comme tel. N'invente jamais de client nommé, de témoignage ni de citation.",
+  "- N'invente aucune statistique. Un chiffre est soit tiré d'une référence fournie (source citée), soit une hypothèse de calcul présentée explicitement comme hypothèse.",
+  "- Ne promets ni prix ni gain garanti au nom de houle.",
+];
+
+function buildTopicBrief(topic) {
+  if (!topic) return [];
+  const cat = ARTICLE_BACKLOG.categories.find((c) => c.id === topic.category);
+  const kw = (topic.keywords && topic.keywords.fr) || [];
+  const capped = Object.keys(BACKLOG_RULES.cappedCategories || {});
+  const lines = [
+    "=== SUJET IMPOSÉ (NON NÉGOCIABLE) ===",
+    `Sujet: "${topic.title}"`,
+    `Angle: ${topic.angle}`,
+    `Famille éditoriale: ${cat ? cat.label : topic.category}`,
+    `Intention de recherche: ${topic.intent} (${
+      topic.intent === "informational"
+        ? "expliquer clairement, puis montrer comment passer à l'action"
+        : "le lecteur compare des options ou cherche un prestataire: critères, étapes, coûts, erreurs à éviter"
+    })`,
+    `Mot-clé principal: ${kw[0] || topic.title}`,
+    kw.length > 1 ? `Mots-clés secondaires: ${kw.slice(1).join(", ")}` : "",
+    Array.isArray(topic.relatedQueries) && topic.relatedQueries.length
+      ? `Requêtes associées (à reprendre seulement si elles collent au sujet): ${topic.relatedQueries.join(", ")}`
+      : "",
+    `Slug suggéré: ${topic.id}`,
+    "Le titre peut être reformulé mais le sujet, l'angle et le mot-clé principal sont imposés. N'en choisis pas un autre.",
+    "Termine l'article par une section « prochaines étapes » concrète, sans URL (le lien vers la page de service et le contact est ajouté automatiquement).",
+  ];
+  if (topic.category === "ai-triage") {
+    lines.push(
+      "Structure attendue pour un sujet de triage: volume et types de cas, règles et seuil de confiance, ce qui part en traitement automatique, ce qui revient à un humain, contrôle par échantillonnage, piste d'audit, coût d'une erreur.",
+    );
+  }
+  if (!capped.includes(topic.category)) {
+    lines.push(
+      "INTERDIT: en faire un article sur la politique d'usage de l'IA, une charte, la gouvernance ou la conformité (thèmes déjà sur-traités). La conformité tient en une courte section au plus.",
+    );
+  }
+  return lines.filter(Boolean);
+}
 
 const TOPIC_KEYWORDS = [
   {
@@ -530,7 +597,7 @@ function assertAIRelatedTopic(article, where = "article") {
       if (!term.aiContext.test(textToCheck)) {
         const err = new Error(
           `Article hors sujet détecté dans ${where}: le terme "${term.label}" est présent sans contexte IA/technologie. ` +
-          `houle.ai est focalisé sur les solutions IA pour Microsoft 365, pas sur les services d'affaires généraux. ` +
+          `houle.ai est un cabinet de conseil et d'intégration IA indépendant, pas un prestataire de services d'affaires généraux. ` +
           `Si l'article concerne l'automatisation IA de processus ${term.label}, assurez-vous que le contexte IA est clair dans le slug, titre et description.`
         );
         err.code = "OFF_TOPIC_ARTICLE";
@@ -543,11 +610,11 @@ function assertAIRelatedTopic(article, where = "article") {
   }
 
   // Additional check: ensure at least SOME AI/tech related terms are present
-  const aiTechTerms = /(ia|ai|intelligence artificielle|microsoft\s*365|m365|outlook|word|teams|add-in|gpt|llm|openai|azure|automatisation|assistant|rag|vector|embedding|prompt)/i;
+  const aiTechTerms = /(ia|ai|intelligence artificielle|microsoft\s*365|m365|outlook|word|teams|add-in|gpt|llm|openai|azure|automatisation|assistant|rag|vector|embedding|prompt|mod[eè]les?|open[- ]source|mistral|llama|agent|tri(er|age)?)/i;
   if (!aiTechTerms.test(textToCheck)) {
     const err = new Error(
-      `Article potentiellement hors sujet dans ${where}: aucun terme lié à l'IA ou Microsoft 365 détecté. ` +
-      `houle.ai doit se concentrer exclusivement sur l'IA et Microsoft 365. ` +
+      `Article potentiellement hors sujet dans ${where}: aucun terme lié à l'IA ou à l'automatisation détecté. ` +
+      `Les articles de houle.ai portent sur l'IA, ses modèles et son intégration. ` +
       `Slug: "${article.slug}", Titre: "${article.title}"`
     );
     err.code = "MISSING_AI_CONTEXT";
@@ -742,15 +809,17 @@ function buildSystemPrompt(frJson, trendData = null) {
     `Date actuelle: ${today}. Privilégie des sources publiées ou mises à jour entre ${twelveMonthsAgo} et ${today}. Les sources officielles et techniques stables (fedlex.admin.ch, edoeb.admin.ch, ch.ch, nist.gov, learn.microsoft.com, azure.microsoft.com) peuvent être plus anciennes si elles restent valables.`,
     topicNote,
     "",
-    "=== DIVERSITÉ THÉMATIQUE (CRITIQUE) ===",
-    ...diversityGuidance,
-    ...trendGuidance,
+    ...(CURRENT_TOPIC
+      ? buildTopicBrief(CURRENT_TOPIC)
+      : ["=== DIVERSITÉ THÉMATIQUE (CRITIQUE) ===", ...diversityGuidance, ...trendGuidance]),
     "",
-    "Objectif: proposer EXACTEMENT 1 nouvel article (section « Articles ») en français, utile pour des décideurs IT/produit, équipes conformité et dirigeants d'entreprises en Suisse.",
+    ...EDITORIAL_RULES,
+    "",
+    "Objectif: proposer EXACTEMENT 1 nouvel article (section « Articles ») en français, utile pour des dirigeants et responsables métier en Suisse qui évaluent un projet d'IA.",
     "",
     "Contraintes impératives:",
-    "- FOCUS sur du concret: checklists, erreurs fréquentes + correctifs, étapes de mise en œuvre, matrices de décision, exemples de gouvernance.",
-    `- INTERDIT: mentionner Microsoft Copilot / M365 Copilot. N'écris pas le mot \"Copilot\".`,
+    "- FOCUS sur du concret: checklists, erreurs fréquentes + correctifs, étapes de mise en œuvre, matrices de décision, ordres de grandeur présentés comme hypothèses.",
+    copilotRule(),
     `- La marque doit être en minuscules: écris toujours \"${BRAND_NAME}\" (jamais \"Houle\").`,
     "- Sujet cohérent avec nos services (liste ci-dessous) et différent des articles récents.",
     "- Aucun doublon de slug, ni de sujet déjà traité récemment.",
@@ -767,16 +836,16 @@ function buildSystemPrompt(frJson, trendData = null) {
     "❌ INTERDIT: Domiciliation d'entreprise, audit financier traditionnel",
     "❌ INTERDIT: Réglementations commerciales suisses générales non liées à l'IA ou à la protection des données",
     "",
-    "⚠️ IMPORTANT: houle.ai est focalisé EXCLUSIVEMENT sur l'IA et Microsoft 365.",
+    "⚠️ IMPORTANT: houle.ai est focalisé sur l'IA et l'automatisation.",
     "⚠️ Les services d'affaires généraux (comptabilité, TVA, fiduciaire) sont offerts par ark-fid.ch.",
-    "⚠️ Si un sujet semble proche d'un thème interdit, assure-toi qu'il est CLAIREMENT lié à l'IA, à Microsoft 365, ou à l'automatisation technologique.",
+    "⚠️ Si un sujet semble proche d'un thème interdit, assure-toi qu'il est CLAIREMENT lié à l'IA ou à l'automatisation.",
     "",
     lengthGuidance,
     ...longFormRequirements,
     "- Style professionnel, humain, sans capitales superflues. Évite les tics d'écriture IA (\"Moreover\", \"Furthermore\", répétitions).",
     "- Références: fournis 4 à 6 liens vérifiables (HTTP 200, pas de login), sans URL inventée.",
-    "- Références: inclure au moins 1 source officielle/réglementaire (fedlex.admin.ch, edoeb.admin.ch, admin.ch, nist.gov).",
-    "- Références: inclure au moins 1 source technique (learn.microsoft.com / github.com).",
+    "- Références: inclure au moins 1 source officielle ou institutionnelle (admin.ch, kmu.admin.ch, bfs.admin.ch, edoeb.admin.ch, nist.gov).",
+    "- Références: inclure au moins 1 documentation technique d'éditeur ou de projet (learn.microsoft.com, docs.mistral.ai, huggingface.co, github.com…), sans privilégier un éditeur.",
     "- STRICT: 1 domaine = 1 lien (pas de doublons de domaine).",
     `Slugs récents à éviter: ${recentSlugs.join(", ") || "aucun"}.`,
     `Services à promouvoir: ${SERVICES.join(", ")}.`,
@@ -799,14 +868,25 @@ function buildSystemPrompt(frJson, trendData = null) {
   ].join("\n");
 }
 
-function buildTranslatePrompt(newArticle, newLabels) {
+function buildTranslatePrompt(newArticle, newLabels, topic = null) {
+  const keywordLines = topic && topic.keywords
+    ? LOCALES.filter((l) => Array.isArray(topic.keywords[l]) && topic.keywords[l].length).map(
+        (l) => `- ${l}: ${topic.keywords[l].join(", ")}`,
+      )
+    : [];
   return [
     "Tu es traducteur professionnel. Traduis les champs ci-dessous en conservant les structures, slugs, URLs et clés.",
     `Garde ${JSON.stringify(AUTHOR_NAME)} tel quel.`,
     `La marque doit être en minuscules: écris toujours "${BRAND_NAME}" (jamais "Houle").`,
-    `INTERDIT: mentionner Microsoft Copilot / M365 Copilot. N'écris pas le mot "Copilot".`,
     "Fourni uniquement le JSON demandé, sans commentaire.",
     "IMPORTANT: Chaque locale (en, de, es, pt) doit être traduite. Ne retourne jamais le texte français pour une autre langue.",
+    "IMPORTANT: traduction complète. Conserve exactement le même nombre de sections (titres ##), tableaux, listes et questions de FAQ que la source; ne résume pas, ne supprime rien.",
+    ...(keywordLines.length
+      ? [
+          "Mots-clés cibles par langue (à placer naturellement dans le titre, la description et au moins un sous-titre):",
+          ...keywordLines,
+        ]
+      : []),
     "",
     "Format attendu:",
     "{",
@@ -868,32 +948,38 @@ function buildResearchPrompt(frJson, trendData, seoSuggestions) {
     `Tu es un stratège SEO + chercheur web pour ${BRAND_NAME}.ai (Suisse).`,
     `Date actuelle: ${today}. Privilégie des sources publiées ou mises à jour entre ${twelveMonthsAgo} et ${today}. Les sources stables (fedlex.admin.ch, edoeb.admin.ch, ch.ch, nist.gov, learn.microsoft.com, github.com) peuvent être plus anciennes si elles restent valables.`,
     "",
-    "=== DIVERSITÉ THÉMATIQUE (CRITIQUE) ===",
-    avoidTopicsLabels.length
-      ? `⚠️ THÈMES À ÉVITER: ${avoidTopicsLabels.join(", ")}.`
-      : "",
-    suggestedTopics.length
-      ? `✅ THÈMES SUGGÉRÉS: ${suggestedTopics.join(", ")}.`
-      : "",
-    ...trendGuidance,
+    ...(CURRENT_TOPIC
+      ? buildTopicBrief(CURRENT_TOPIC)
+      : [
+          "=== DIVERSITÉ THÉMATIQUE (CRITIQUE) ===",
+          avoidTopicsLabels.length
+            ? `⚠️ THÈMES À ÉVITER: ${avoidTopicsLabels.join(", ")}.`
+            : "",
+          suggestedTopics.length
+            ? `✅ THÈMES SUGGÉRÉS: ${suggestedTopics.join(", ")}.`
+            : "",
+          ...trendGuidance,
+        ]),
     "",
-    "Objectif: proposer 1 sujet + plan + références vérifiables (PAS l'article complet).",
+    ...EDITORIAL_RULES,
+    "",
+    "Objectif: préparer le titre, le plan et des références vérifiables pour le sujet imposé (PAS l'article complet).",
     "",
     "Contraintes:",
     "- Sujet cohérent avec nos services (liste ci-dessous) et différent des articles récents.",
-    `- INTERDIT: mentionner Microsoft Copilot / M365 Copilot. N'écris pas le mot \"Copilot\".`,
+    copilotRule(),
     `- La marque doit être en minuscules: écris toujours \"${BRAND_NAME}\" (jamais \"Houle\").`,
     "",
-    "=== SUJETS INTERDITS (CRITIQUE - TOUS LES ARTICLES DOIVENT ÊTRE LIÉS À L'IA / MICROSOFT 365) ===",
+    "=== SUJETS INTERDITS (CRITIQUE - TOUS LES ARTICLES DOIVENT ÊTRE LIÉS À L'IA OU À L'AUTOMATISATION) ===",
     "❌ NE JAMAIS proposer de sujets sur: comptabilité générale, TVA/déclaration TVA, services fiduciaires, gestion de paie, AVS/LAA/LPP, création d'entreprise (SA/Sàrl), conseils fiscaux généraux, conseils juridiques généraux, domiciliation, audit financier traditionnel.",
-    "❌ Ces sujets sont hors du scope de houle.ai (qui est focalisé IA + Microsoft 365).",
-    "✅ TOUS les sujets proposés DOIVENT être clairement liés à: IA, Microsoft 365, automatisation avec IA, Azure OpenAI, add-ins Office, GPT, LLM, RAG, conformité IA (nLPD/RGPD), ou technologies IA.",
+    "❌ Ces sujets sont hors du scope de houle.ai (conseil en IA et automatisation).",
+    "✅ Le sujet DOIT rester clairement lié à l'IA: modèles de langage (propriétaires ou open source), agents, triage et automatisation de processus, assistants sur documents internes, hébergement, intégrations (Microsoft 365, Odoo…).",
     "✅ Si un processus métier (ex: comptabilité) est mentionné, il DOIT être dans le contexte de son automatisation par IA.",
     "",
     `- L'article final fera ${Math.max(minWords, 1500)} à ${Math.max(Math.max(minWords, 1500), maxWords)} mots.`,
     "- Références: fournir 8 à 12 liens vérifiables (HTTP 200, pas de login), sans URL inventée.",
-    "- Références: inclure au moins 2 sources officielles/réglementaires (fedlex.admin.ch, edoeb.admin.ch, nist.gov, admin.ch).",
-    "- Références: inclure au moins 2 sources techniques (learn.microsoft.com, github.com, docs officiels).",
+    "- Références: inclure au moins 1 source officielle ou institutionnelle (admin.ch, kmu.admin.ch, bfs.admin.ch, edoeb.admin.ch, nist.gov) — 2 si le sujet est réglementaire.",
+    "- Références: inclure au moins 2 documentations techniques d'éditeurs ou de projets différents (learn.microsoft.com, docs.mistral.ai, huggingface.co, github.com, docs officiels), sans privilégier un éditeur.",
     "- Références: compléter avec des sources institutionnelles (associations, standards, universités) et éventuellement médias économiques si accessible sans paywall.",
     "- STRICT: chaque référence doit provenir d'un domaine différent (1 domaine = 1 lien). Si tu donnes 12 références, ce sont 12 domaines distincts, sinon la réponse est rejetée.",
     `Slugs récents à éviter: ${recentSlugs.join(", ") || "aucun"}.`,
@@ -909,7 +995,7 @@ function buildResearchPrompt(frJson, trendData, seoSuggestions) {
     '    "slug": "<slug-unique-fr>",',
     '    "title": "<titre FR>",',
     '    "description": "<description FR>",',
-    '    "category": "<private-ai|microsoft-365|automation|rag-architecture|prompt-engineering|cloud-infra|governance|adoption-roi|copilot|data-analytics|cybersecurity-ai|sector-use-cases|general>",',
+    `    "category": ${JSON.stringify(CURRENT_TOPIC ? CURRENT_TOPIC.category : "general")},`,
     '    "primaryKeyword": "<mot-clé principal>",',
     '    "secondaryKeywords": ["..."],',
     '    "outline": ["H2 ...", "H2 ...", "FAQ ..."],',
@@ -930,15 +1016,18 @@ function buildDraftPromptFromResearch(research, validatedReferences) {
     "",
     `CONTRAINTE DE LONGUEUR (STRICTE): entre ${Math.max(minWords, 1500)} et ${Math.max(maxWords, Math.max(minWords, 1500))} mots (viser ~2200).`,
     "Si tu es en dessous du minimum, tu DOIS ajouter du contenu (plus de H2/H3, plus d'exemples). Ne termine pas tôt.",
-    "Structure obligatoire: 10+ sections H2, plusieurs H3, 2 tableaux, 2 checklists, 1 cas pratique chiffré (CHF), une section étape-par-étape, une section erreurs fréquentes + corrections, et une FAQ de 6 questions.",
+    "Structure obligatoire: 10+ sections H2, plusieurs H3, 2 tableaux, 2 checklists, 1 scénario illustratif chiffré en CHF (hypothèses explicites, entreprise non nommée), une section étape-par-étape, une section erreurs fréquentes + corrections, et une FAQ de 6 questions.",
     "",
-    "=== FOCUS IA ET MICROSOFT 365 (OBLIGATOIRE) ===",
-    "⚠️ RAPPEL CRITIQUE: houle.ai est focalisé EXCLUSIVEMENT sur l'IA et Microsoft 365.",
-    "✅ L'article DOIT clairement concerner: IA, assistants IA, Microsoft 365, Azure OpenAI, automatisation IA, add-ins Office, GPT, LLM, RAG, ou technologies IA.",
+    ...buildTopicBrief(CURRENT_TOPIC),
+    "",
+    ...EDITORIAL_RULES,
+    "",
+    "=== FOCUS IA (OBLIGATOIRE) ===",
+    "✅ L'article DOIT clairement concerner l'IA ou l'automatisation appliquée à un besoin d'entreprise.",
     "❌ NE PAS écrire sur: comptabilité générale, TVA, services fiduciaires, paie, conseils fiscaux/juridiques généraux sans lien clair avec l'IA.",
     "",
     "IMPORTANT:",
-    `- INTERDIT: mentionner Microsoft Copilot / M365 Copilot. N'écris pas le mot \"Copilot\".`,
+    copilotRule(),
     `- La marque doit être en minuscules: écris toujours \"${BRAND_NAME}\" (jamais \"Houle\").`,
     "- N'invente AUCUN lien ni URL.",
     "- N'inclus AUCUNE URL dans le texte (pas de http/https).",
@@ -985,7 +1074,9 @@ function buildDraftRepairPromptFromExistingArticle(article, { mode, minWords, ma
     "- Ne change PAS le slug, le titre, la description, l'auteur, la date.",
     "- Ne change PAS les références; garde exactement la même liste.",
     "- N'inclus AUCUNE URL dans le texte (pas de http/https).",
-    `- INTERDIT: mentionner Microsoft Copilot / M365 Copilot. N'écris pas le mot \"Copilot\".`,
+    copilotRule(),
+    "- Exemples = scénarios illustratifs annoncés comme tels; aucun client nommé, aucune statistique inventée (chiffre sourcé ou hypothèse explicite).",
+    "- houle est un cabinet de conseil en IA indépendant des éditeurs: reste neutre entre fournisseurs.",
     `- La marque doit être en minuscules: écris toujours \"${BRAND_NAME}\" (jamais \"Houle\").`,
     " - Conserve la structure (H2/H3) et les éléments obligatoires (2 tableaux, 2 checklists, 1 cas pratique chiffré CHF, étape-par-étape, erreurs fréquentes + corrections, FAQ 6 questions).",
     `- Longueur STRICTE: ${targetMin} à ${targetMax} mots. Le texte actuel fait ~${currentWords} mots.`,
@@ -1039,7 +1130,9 @@ function buildDraftAppendPromptFromExistingArticle(article, { minWords }) {
     "- Ajoute 1 checklist et 1 tableau dans les nouvelles sections.",
     "- Ajoute 3 à 5 questions de FAQ supplémentaires (si une FAQ existe déjà, continue-la).",
     "- N'inclus AUCUNE URL dans le texte (pas de http/https).",
-    `- INTERDIT: mentionner Microsoft Copilot / M365 Copilot. N'écris pas le mot \"Copilot\".`,
+    copilotRule(),
+    "- Exemples = scénarios illustratifs annoncés comme tels; aucun client nommé, aucune statistique inventée (chiffre sourcé ou hypothèse explicite).",
+    "- houle est un cabinet de conseil en IA indépendant des éditeurs: reste neutre entre fournisseurs.",
     `- La marque doit être en minuscules: écris toujours \"${BRAND_NAME}\" (jamais \"Houle\").`,
     "- Quand tu cites une source, écris seulement (source: <labelKey>) et utilise uniquement des labelKey déjà présents dans les références de l'article.",
     "",
@@ -2077,49 +2170,20 @@ function validateNewArticle(frData, article) {
   }
 }
 
-function enforceTopicRotation(frData, newArticle, { relaxed = false } = {}) {
-  const articles = Array.isArray(frData?.Articles) ? frData.Articles : [];
-  if (!articles.length) return;
-
-  // Get last 3 articles sorted by date (or 2 when relaxed on final retry)
-  // relaxed=true is used on the last retry attempt to widen the topic space
-  let windowSize = relaxed ? 2 : 3;
-  const sorted = [...articles].sort((a, b) =>
-    (b.date || "").localeCompare(a.date || ""),
-  );
-
-  const nextTopic = detectTopic(newArticle);
-  if (nextTopic === "general") return; // General topics are always allowed
-
-  // Auto-relax: when all non-general categories appear in the last 3 articles
-  // (unlikely with 12 categories), shrink the window to 2.
-  if (!relaxed) {
-    const nonGeneralTopics = TOPIC_KEYWORDS
-      .filter((t) => t.topic !== "general")
-      .map((t) => t.topic);
-    const topicsInThree = new Set(
-      sorted.slice(0, 3).map((a) => detectTopic(a)).filter((t) => t !== "general"),
-    );
-    if (nonGeneralTopics.every((t) => topicsInThree.has(t))) {
-      windowSize = 2;
-    }
-  }
-
-  const recentArticles = sorted.slice(0, windowSize);
-
-  // Check if this topic appears in any of the recent articles
-  for (const article of recentArticles) {
-    const articleTopic = detectTopic(article);
-    if (articleTopic === nextTopic) {
-      const err = new Error(
-        `Le thème "${describeTopic(nextTopic)}" a déjà été traité récemment (article: "${article.title}")`,
-      );
-      err.code = "TOPIC_DUPLICATE";
-      err.topic = nextTopic;
-      err.previousTitle = article.title;
-      throw err;
-    }
-  }
+/**
+ * Rotation is decided before generation by the backlog selector
+ * (scripts/lib/articleBacklog.js). This guard only checks that the generated
+ * title stayed on the imposed topic: no drift into a capped family
+ * (regulation/policy) and no paraphrase of an existing or reserved article.
+ */
+function enforceTopicRotation(frData, newArticle) {
+  if (!CURRENT_TOPIC || SKIP_TOPIC_ROTATION) return;
+  articleBacklog.assertTopicFit({
+    backlog: ARTICLE_BACKLOG,
+    topic: CURRENT_TOPIC,
+    article: newArticle,
+    articles: Array.isArray(frData?.Articles) ? frData.Articles : [],
+  });
 }
 
 function normalizeArticleDates(article) {
@@ -2139,12 +2203,8 @@ function buildRetryPrompt(basePrompt, error, frData) {
     hint =
       `⚠️ Le slug "${error.slug}" existe déjà. Choisis un nouveau sujet et un slug unique.\n` +
       `Slugs récents à éviter: ${recentSlugs.join(", ") || "aucun"}.`;
-  } else if (error.code === "TOPIC_DUPLICATE") {
-    hint =
-      `⚠️ Le dernier article (${
-        error.previousTitle
-      }) couvrait déjà ${describeTopic(error.topic)}.\n` +
-      "Choisis un autre axe stratégique (ia privée, microsoft 365 add-ins, productivité/automatisation, architecture/rag, gouvernance/roi, etc.).";
+  } else if (error.code === "TOPIC_DRIFT" || error.code === "NEAR_DUPLICATE") {
+    hint = `⚠️ ${error.message}`;
   } else if (error.code === "TOO_SHORT") {
     hint = [
       `⚠️ L'article est trop court (${error.words || "?"} mots).`,
@@ -2485,20 +2545,12 @@ async function generateArticleWithRetries(frData, attempts, trendData = null) {
         assertNoForbiddenTermsInArticle(newArticle, "fr");
       }
       validateNewArticle(frData, newArticle);
-      enforceTopicRotation(frData, newArticle, { relaxed: attempt === attempts });
+      enforceTopicRotation(frData, newArticle);
       normalizeArticleDates(newArticle);
       return { newArticle, newLabels, trendData: currentTrendData };
     } catch (error) {
       lastError = error;
       console.warn(`Draft invalid: ${error.message}`);
-      if (error.code === "TOPIC_DUPLICATE" && error.topic) {
-        currentTrendData = {
-          ...currentTrendData,
-          selectedTopic: null,
-          blockedCategories: [...(currentTrendData?.blockedCategories || []), error.topic],
-        };
-        basePrompt = buildSystemPrompt(frData, currentTrendData);
-      }
       prompt = buildRetryPrompt(basePrompt, error, frData);
     }
   }
@@ -2589,33 +2641,11 @@ async function generateResearchWithRetries(frData, attempts, trendData, seoSugge
         agentName: AZURE_AGENT_RESEARCH_NAME,
       });
       const research = validateResearchPayload(frData, payload);
-      enforceTopicRotation(frData, research, { relaxed: attempt === attempts });
+      enforceTopicRotation(frData, research);
       return { research, trendData: currentTrendData };
     } catch (error) {
       lastError = error;
       console.warn(`Research invalid: ${error.message}`);
-      if (error.code === "TOPIC_DUPLICATE" && error.topic) {
-        const updatedBlockedCategories = [...(currentTrendData?.blockedCategories || []), error.topic];
-        // Re-fetch trend suggestions with the newly blocked category so the AI gets
-        // a concrete alternative target rather than just an "avoid everything" list.
-        console.log(`[trends] Re-fetching topic after TOPIC_DUPLICATE (blocked: ${updatedBlockedCategories.join(", ")})`);
-        const topicAnalysis = analyzeRecentTopics(frData, 15);
-        const updatedAvoidTopics = [...new Set([...topicAnalysis.avoidTopics, ...updatedBlockedCategories])];
-        const freshTrendData = await getTopicSuggestions({
-          existingSlugs: (Array.isArray(frData.Articles) ? frData.Articles : []).map((a) => a.slug).filter(Boolean),
-          avoidTopics: updatedAvoidTopics,
-          recentTopicCategories: topicAnalysis.lastFiveTopics,
-          topicCounts: topicAnalysis.topicCounts,
-        });
-        if (freshTrendData.selectedTopic) {
-          console.log(`[trends] Fresh topic for retry: "${freshTrendData.selectedTopic.suggestedTopic}" (${freshTrendData.selectedTopic.category})`);
-        }
-        currentTrendData = {
-          ...freshTrendData,
-          blockedCategories: updatedBlockedCategories,
-        };
-        basePrompt = buildResearchPrompt(frData, currentTrendData, seoSuggestions);
-      }
       prompt = `${basePrompt}\n\n⚠️ Correction requise: ${error.message}. Retourne STRICTEMENT le JSON demandé.`;
     }
   }
@@ -2775,43 +2805,77 @@ async function main() {
 
   const frData = loadJSON(FR_PATH);
 
-  // Get existing slugs and topic analysis for trend selection
-  const existingSlugs = (Array.isArray(frData.Articles) ? frData.Articles : [])
-    .map((a) => a.slug)
-    .filter(Boolean);
-  const topicAnalysis = analyzeRecentTopics(frData, 15);
-
-  // Fetch trend-based topic suggestions
-  console.log("\n📊 Fetching trend signals for topic selection...");
-  const trendData = await getTopicSuggestions({
-    existingSlugs,
-    avoidTopics: topicAnalysis.avoidTopics,
-    recentTopicCategories: topicAnalysis.lastFiveTopics,
-    topicCounts: topicAnalysis.topicCounts,
+  // Topic selection: deterministic, from the backlog (data/article-backlog.json).
+  const frArticles = Array.isArray(frData.Articles) ? frData.Articles : [];
+  const backlogErrors = articleBacklog.validateBacklog(ARTICLE_BACKLOG, {
+    servicePaths: articleBacklog.loadServicePaths(ROOT),
   });
+  if (backlogErrors.length) {
+    throw new Error(`Invalid ${articleBacklog.BACKLOG_PATH}:\n- ${backlogErrors.join("\n- ")}`);
+  }
 
-  // Log trend information (keywords only, not sensitive)
-  if (trendData.selectedTopic) {
-    console.log(`[trends] Provider: ${trendData.provider}`);
-    console.log(`[trends] Trends checked: ${trendData.trendsChecked}`);
-    console.log(`[trends] Used fallback: ${trendData.usedFallback}`);
+  const forcedTopic = articleBacklog.resolveForcedTopic(ARTICLE_BACKLOG, {
+    topic: process.env.FORCE_TOPIC,
+    keywords: String(process.env.FORCE_TOPIC_KEYWORDS || "").split(","),
+    category: String(process.env.FORCE_TOPIC_CATEGORY || "").trim(),
+  });
+  if (forcedTopic) {
+    const violation = articleBacklog.forcedTopicViolation(ARTICLE_BACKLOG, forcedTopic, frArticles, {
+      skipRotation: SKIP_TOPIC_ROTATION,
+    });
+    if (violation) {
+      throw new Error(
+        `FORCE_TOPIC "${process.env.FORCE_TOPIC}" (${forcedTopic.category}) refused by the rotation rules: ${violation}. ` +
+          "Re-run with skip_topic_rotation to override.",
+      );
+    }
+    CURRENT_TOPIC = forcedTopic;
+    console.log(`[topic] Forced topic: "${forcedTopic.title}" (${forcedTopic.category})`);
+  } else {
+    const selection = articleBacklog.selectNextTopic({
+      backlog: ARTICLE_BACKLOG,
+      articles: frArticles,
+      skipRotation: SKIP_TOPIC_ROTATION,
+    });
+    if (!selection.topic) {
+      throw new Error(
+        `No topic available (${selection.reason}). Add topics to ${articleBacklog.BACKLOG_PATH}.`,
+      );
+    }
+    CURRENT_TOPIC = selection.topic;
+    for (const [category, reason] of Object.entries(selection.blocked)) {
+      if (reason) console.log(`[topic] Category "${category}" blocked: ${reason}`);
+    }
     console.log(
-      `[trends] Selected topic: "${trendData.selectedTopic.suggestedTopic}"`,
+      `[topic] Selected: "${CURRENT_TOPIC.title}" (${CURRENT_TOPIC.category}, ${CURRENT_TOPIC.intent})`,
     );
-    console.log(
-      `[trends] Target keywords: ${trendData.selectedTopic.keywords?.join(", ")}`,
-    );
-    if (trendData.error) {
-      console.warn(`[trends] API warning: ${trendData.error}`);
+  }
+  const topicService = CURRENT_TOPIC.service;
+  const leadLabel = (locale) =>
+    articleBacklog.resolveServiceLabel(ROOT, locale, topicService);
+
+  let selectedTopic = {
+    suggestedTopic: CURRENT_TOPIC.title,
+    keywords: CURRENT_TOPIC.keywords.fr,
+    suggestedSlug: CURRENT_TOPIC.id,
+    category: CURRENT_TOPIC.category,
+  };
+  if (!MOCK_DATA && !OFFLINE_MODE) {
+    try {
+      selectedTopic = await enrichKeywordsWithSuggest(selectedTopic);
+    } catch (error) {
+      console.warn(`[topic] Keyword suggestions unavailable: ${error.message}`);
     }
   }
+  const baseKeywords = new Set(CURRENT_TOPIC.keywords.fr.map((k) => k.toLowerCase()));
+  CURRENT_TOPIC = {
+    ...CURRENT_TOPIC,
+    relatedQueries: selectedTopic.keywords.filter((k) => !baseKeywords.has(k.toLowerCase())),
+  };
+  const trendData = { selectedTopic, provider: "backlog", usedFallback: false };
+  console.log(`[topic] Target keywords: ${selectedTopic.keywords.join(", ")}`);
 
-  // Build SEO suggestions
-  const seoSuggestions = buildSEOSuggestions(trendData.selectedTopic);
-  if (seoSuggestions) {
-    console.log(`[seo] Primary keyword: "${seoSuggestions.primaryKeyword}"`);
-    console.log(`[seo] Category: ${seoSuggestions.category}`);
-  }
+  const seoSuggestions = buildSEOSuggestions(selectedTopic);
 
   let newArticle;
   let newLabels;
@@ -2855,19 +2919,33 @@ async function main() {
     newLabels = drafted.newLabels || {};
   }
 
-  // Validate that the article is AI/Microsoft 365 related (not general business topics)
+  // Validate that the article is AI related (not general business topics)
   console.log("Validating article topic relevance...");
   assertAIRelatedTopic(newArticle, "generated article");
-  console.log("✅ Article topic validation passed - AI/Microsoft 365 focus confirmed");
+  console.log("✅ Article topic validation passed - AI focus confirmed");
 
-  // Detect the article category for reference fallback
-  const articleCategory =
-    seoSuggestions?.category || detectTopic(newArticle) || "general";
-  applyArticleTaxonomy(newArticle);
+  // Legacy keyword category, only used to pick fallback references.
+  const articleCategory = detectTopic(newArticle) || "general";
+  newArticle.topicId = CURRENT_TOPIC.id;
+  newArticle.topicFamily = CURRENT_TOPIC.category;
+  applyArticleTaxonomy(newArticle, {
+    category: articleBacklog.topicSiteCategory(ARTICLE_BACKLOG, CURRENT_TOPIC),
+  });
+  // Tags come from the topic (the taxonomy defaults are Microsoft-centred).
+  newArticle.tags = articleBacklog.topicTags(CURRENT_TOPIC, "fr");
   await repairReferences(newArticle, articleCategory);
   syncContentReferencesSection(newArticle);
   sanitizeContentExternalLinks(newArticle);
   normalizeArticleDates(newArticle);
+  // Translate from the version without the CTA: each locale gets its own
+  // CTA block with locale-prefixed links, added by code below.
+  const articleForTranslation = { ...newArticle };
+  newArticle.content = articleBacklog.insertLeadPath(newArticle.content, {
+    locale: "fr",
+    service: topicService,
+    serviceLabel: leadLabel("fr"),
+  });
+  articleBacklog.assertLeadPath(newArticle, "fr", topicService);
   logArticleMetrics(newArticle, "FR");
 
   if (DRY || !APPLY) {
@@ -2893,7 +2971,7 @@ async function main() {
   } else {
     ensureOpenAIEnv();
     translations = await azureOpenAITranslateJson(
-      buildTranslatePrompt(newArticle, newLabels),
+      buildTranslatePrompt(articleForTranslation, newLabels, CURRENT_TOPIC),
     );
   }
   if (REQUIRE_TRANSLATIONS) {
@@ -2930,11 +3008,29 @@ async function main() {
       date: newArticle.date,
       updated: newArticle.updated,
       category: newArticle.category,
-      tags: newArticle.tags,
+      tags: articleBacklog.topicTags(CURRENT_TOPIC, locale),
+      topicId: newArticle.topicId,
+      topicFamily: newArticle.topicFamily,
       references: newArticle.references,
     };
     normalizeBrandCaseInArticle(localizedArticle);
     assertNoForbiddenTermsInArticle(localizedArticle, locale);
+
+    // Parity with FR is checked before the CTA is added on both sides.
+    const parityIssues = articleBacklog.translationParityIssues(
+      articleForTranslation,
+      { ...localizedArticle, content: localizedArticle.content },
+    );
+    if (parityIssues.length) {
+      const message = `[parity] ${locale}:${newArticle.slug}: ${parityIssues.join("; ")}`;
+      if (REQUIRE_TRANSLATIONS) throw new Error(message);
+      console.warn(message);
+    }
+    localizedArticle.content = articleBacklog.insertLeadPath(
+      articleBacklog.localizeLeadLinks(localizedArticle.content, locale),
+      { locale, service: topicService, serviceLabel: leadLabel(locale) },
+    );
+    articleBacklog.assertLeadPath(localizedArticle, locale, topicService);
 
     if (
       REQUIRE_TRANSLATIONS &&

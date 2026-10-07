@@ -1,28 +1,28 @@
 {
     "default": {
-        "title": "houle | IA Privada para Microsoft 365",
-        "description": "Soluciones de IA alojadas en Suiza para Microsoft 365. Complementos de Office con IA para Outlook y Word, más plataforma GPT empresarial. Los datos permanecen en Suiza bajo su control.",
-        "keywords": "ia microsoft 365, ia suiza, gpt privado suiza, outlook ia, word ia, soberanía datos suiza, soluciones ia ginebra, consultoría microsoft 365",
+        "title": "houle | Consultoría de IA independiente en Ginebra",
+        "description": "Consultoría e integración de IA independientes en Ginebra. El modelo adecuado para cada caso: Microsoft, OpenAI, Mistral o código abierto alojado en Suiza.",
+        "keywords": "consultoría ia ginebra, consultoría ia suiza, modelos de código abierto alojados en suiza, ia soberana suiza, llm autoalojado, integración ia, gpt privado suiza, consultoría microsoft 365",
         "topics": [
-            "ia microsoft 365 suiza",
+            "consultoría ia suiza",
+            "modelos de código abierto alojados en suiza",
+            "clasificación de expedientes con ia",
             "gpt privado suiza",
-            "asistente ia outlook",
-            "complemento ia word",
-            "consultoría ia suiza"
+            "ia microsoft 365 suiza"
         ],
         "author": "houle",
         "siteName": "houle"
     },
     "pages": {
         "/": {
-            "title": "houle | IA Privada para Microsoft 365 — Alojada en Suiza",
-            "description": "Transforme su Microsoft 365 con IA alojada en Suiza: complementos para Outlook y Word, plataforma GPT empresarial y consultoría experta.",
-            "keywords": "ia microsoft 365, soluciones ia suiza, gpt privado, asistente ia outlook, ia word, consultoría ia ginebra, automatización microsoft 365, protección datos suiza"
+            "title": "houle | Consultoría de IA en Ginebra, modelos alojados en Suiza",
+            "description": "Consultoría e integración de IA independientes en Ginebra. Microsoft, OpenAI, Mistral o código abierto alojado en Suiza, según el caso. Primera llamada gratis.",
+            "keywords": "consultoría ia ginebra, consultoría ia lausana, consultor ia suiza, modelos de código abierto alojados en suiza, ia soberana, llm alojado en suiza, gpt privado suiza, microsoft 365 ia, integración ia"
         },
         "/contact": {
             "title": "Contacto houle | Soluciones de IA para Microsoft 365",
-            "description": "Póngase en contacto con houle para discutir la integración de IA en su entorno Microsoft 365. Consulta gratuita para empresas de Ginebra, Lausana y Suiza.",
-            "keywords": "contacto consultor ia ginebra, consulta ia microsoft 365, contacto soluciones ia suiza"
+            "description": "Reserve una llamada estratégica de IA gratuita con los consultores de houle en Ginebra. Casos de uso, elección del modelo, alojamiento en Suiza, integración.",
+            "keywords": "consultor ia ginebra contacto, consulta ia gratuita suiza, reservar llamada estrategia ia, consultoría ia independiente"
         },
         "/products": {
             "title": "Productos de IA para Microsoft 365 | Word y Outlook",
@@ -55,14 +55,14 @@
             "keywords": "casos de uso ia suiza, soluciones automatización ia, agentes ia suizos, add-ins ia microsoft 365"
         },
         "/services": {
-            "title": "Servicios de Consultoría IA & Microsoft 365 | houle Ginebra",
-            "description": "Consultoría de IA y optimización de Microsoft 365. Power Automate, SharePoint, Azure AI. Al servicio de Ginebra, Lausana y toda Suiza.",
-            "keywords": "consultoría ia ginebra, consultoría microsoft 365, servicios azure ai, power automate suiza, consultoría sharepoint"
+            "title": "Consultoría de IA independiente y Microsoft 365 | houle Ginebra",
+            "description": "Consultoría de IA independiente de los proveedores y Microsoft 365 para empresas suizas. Código abierto alojado en Suiza. Primera llamada gratuita.",
+            "keywords": "consultoría ia ginebra, consultoría ia lausana, consultoría ia independiente, modelos de código abierto suiza, consultoría microsoft 365 suiza, power automate suiza"
         },
         "/services/ai-consulting": {
-            "title": "Consultoría IA Ginebra | Soluciones Personalizadas con Azure AI",
-            "description": "Soluciones de IA para empresas suizas: integración Azure AI, automatización inteligente y asistentes conversacionales. Datos en Suiza.",
-            "keywords": "consultoría ia ginebra, azure ai suiza, desarrollo ia personalizado, automatización inteligente ginebra, integración ia microsoft 365"
+            "title": "Consultoría IA Ginebra | Independiente, código abierto en Suiza",
+            "description": "Consultoría de IA para empresas suizas: taller, elección de casos de uso y modelo, piloto, producción. Código abierto alojado en Suiza si hace falta.",
+            "keywords": "consultoría ia ginebra, consultoría ia lausana, consultor ia suiza, modelo de código abierto alojado en suiza, llm autoalojado, clasificación de expedientes ia, ia secreto profesional, piloto ia"
         },
         "/services/microsoft-consulting": {
             "title": "Consultoría Microsoft 365 Ginebra | Power Automate, Power BI",
@@ -70,16 +70,16 @@
             "keywords": "consultoría microsoft 365 ginebra, power automate suiza, consultoría sharepoint ginebra, consultor power bi, desarrollo SPFx"
         },
         "/ressources": {
-            "title": "Recursos IA & Microsoft 365 | Casos de Estudio de Ginebra",
-            "description": "Casos de estudio reales y guías prácticas de IA y Microsoft 365 en empresas suizas. Resultados medibles y conocimientos accionables.",
-            "keywords": "casos estudio ia ginebra, implementación microsoft 365, historias éxito ia suiza, ejemplos automatización"
+            "title": "Recursos de IA | Guías y casos de uso para empresas suizas",
+            "description": "Guías prácticas, casos de clientes y escenarios tipo para sus proyectos de IA en Suiza: elección del modelo, alojamiento, clasificación, Microsoft 365.",
+            "keywords": "guías ia suiza, casos de uso ia, modelos de código abierto suiza, clasificación de expedientes ia, implantación microsoft 365"
         }
     },
     "dynamic": {
         "articles": {
-            "titleTemplate": "{articleTitle} | houle - IA para Microsoft 365",
+            "titleTemplate": "{articleTitle} | houle - Consultoría IA Ginebra",
             "descriptionTemplate": "{articleDescription} | Experiencia de Ginebra con soberanía de datos suiza.",
-            "keywords": "ia microsoft 365, soluciones ia suiza, consultoría ia ginebra, soberanía datos suiza"
+            "keywords": "consultoría ia ginebra, soluciones ia suiza, modelos de código abierto alojados en suiza, soberanía de datos suiza"
         },
         "solutions": {
             "titleTemplate": "{title} | houle - Agentes de IA suizos",

@@ -1,9 +1,9 @@
 {
   "Hero": {
-    "Title": "Transformez votre entreprise avec des produits IA et des conseils d'experts.",
-    "Description": "Basés dans la région lémanique, nous proposons des compléments Office avec IA pour Microsoft 365 et des services de conseil professionnels."
+    "Title": "Le bon modèle d'IA pour chaque cas.",
+    "Description": "Cabinet indépendant de conseil et d'intégration IA à Genève : Microsoft ou OpenAI quand c'est pertinent, modèles open source hébergés en Suisse quand il le faut."
   },
   "Services": {
-    "Title": "Produits IA pour Microsoft 365"
+    "Title": "Conseil IA et produits prêts à l'emploi"
   }
 }

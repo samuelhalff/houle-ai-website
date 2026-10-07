@@ -1,28 +1,28 @@
 {
     "default": {
-        "title": "houle | IA Privée pour Microsoft 365",
-        "description": "Solutions IA hébergées en Suisse pour Microsoft 365. Add-ins Office avec IA pour Outlook et Word, plus plateforme GPT d'entreprise. Données restent en Suisse sous votre contrôle.",
-        "keywords": "ia microsoft 365, ia suisse, gpt privé suisse, outlook ia, word ia, souveraineté données suisse, solutions ia genève, conseil microsoft 365",
+        "title": "houle | Conseil IA indépendant à Genève",
+        "description": "Cabinet indépendant de conseil et d'intégration IA à Genève. Le bon modèle pour chaque cas : Microsoft, OpenAI, Mistral ou open source hébergé en Suisse.",
+        "keywords": "conseil ia genève, conseil ia suisse, modèles open source hébergés en suisse, ia souveraine suisse, llm auto-hébergé, intégration ia, gpt privé suisse, conseil microsoft 365",
         "topics": [
-            "ia microsoft 365 suisse",
+            "conseil ia suisse",
+            "modèles open source hébergés en suisse",
+            "tri de dossiers par ia",
             "gpt privé suisse",
-            "assistant ia outlook",
-            "add-in ia word",
-            "conseil ia suisse"
+            "ia microsoft 365 suisse"
         ],
         "author": "houle",
         "siteName": "houle"
     },
     "pages": {
         "/": {
-            "title": "houle | Conseil IA Genève — Solutions IA pour Microsoft 365",
-            "description": "Cabinet de conseil IA à Genève. GPT suisse, add-ins IA pour Outlook et Word, solutions Azure AI sur mesure. Conforme LPD. Réservez un appel stratégique gratuit.",
-            "keywords": "conseil ia genève, conseil ia lausanne, solutions ia suisse, gpt privé suisse, outlook ia, word ia, souveraineté données suisse, microsoft 365 ia, azure ia suisse"
+            "title": "houle | Conseil IA à Genève, modèles hébergés en Suisse",
+            "description": "Conseil et intégration IA indépendants à Genève. Microsoft, OpenAI, Mistral ou modèles open source hébergés en Suisse, selon le cas. Premier appel gratuit.",
+            "keywords": "conseil ia genève, conseil ia lausanne, consultant ia suisse, modèles open source hébergés en suisse, ia souveraine, llm hébergé en suisse, gpt privé suisse, microsoft 365 ia, intégration ia"
         },
         "/contact": {
             "title": "Réserver une Consultation IA Gratuite | houle Genève & Lausanne",
-            "description": "Réservez un appel stratégique IA gratuit avec les consultants de houle à Genève. Intégration IA Microsoft 365, GPT hébergé en Suisse, automatisation.",
-            "keywords": "consultant ia genève contact, consultation ia gratuite suisse, demande ia microsoft 365, réserver appel stratégie ia"
+            "description": "Réservez un appel stratégique IA gratuit avec les consultants de houle à Genève. Cas d'usage, choix du modèle, hébergement en Suisse, intégration.",
+            "keywords": "consultant ia genève contact, consultation ia gratuite suisse, réserver appel stratégie ia, conseil ia indépendant"
         },
         "/products": {
             "title": "Produits IA pour Microsoft 365 | Add-ins Word & Outlook",
@@ -55,14 +55,14 @@
             "keywords": "cas d'usage ia suisse, solutions automatisation ia, agents ia suisses, add-ins ia microsoft 365"
         },
         "/services": {
-            "title": "Conseil IA & Microsoft 365 | houle — Genève & Lausanne",
-            "description": "Conseil IA et optimisation Microsoft 365 pour entreprises suisses. Azure AI, Power Automate, SharePoint. Basés à Genève. Premier appel gratuit.",
-            "keywords": "conseil ia genève, conseil ia lausanne, conseil microsoft 365 suisse, services azure ia, power automate suisse, conseil sharepoint"
+            "title": "Conseil IA indépendant & Microsoft 365 | houle Genève",
+            "description": "Conseil IA indépendant des éditeurs et expertise Microsoft 365 pour entreprises suisses. Modèles open source hébergés en Suisse. Premier appel gratuit.",
+            "keywords": "conseil ia genève, conseil ia lausanne, conseil ia indépendant, modèles open source suisse, conseil microsoft 365 suisse, power automate suisse"
         },
         "/services/ai-consulting": {
-            "title": "Conseil IA Genève | Azure AI, GPT sur mesure, conforme LPD",
-            "description": "Conseil IA pour entreprises suisses. Solutions Azure AI, pipelines RAG, agents IA et automatisation Microsoft 365. Données en Suisse. Réservez un appel gratuit.",
-            "keywords": "conseil ia genève, conseil ia lausanne, azure ia suisse, pipeline rag conseil, agents ia microsoft 365, ia conforme lpd, développement ia suisse"
+            "title": "Conseil IA Genève | Indépendant, open source hébergé en Suisse",
+            "description": "Conseil IA pour entreprises suisses : atelier, choix des cas d'usage et du modèle, pilote, production. Open source hébergé en Suisse si nécessaire.",
+            "keywords": "conseil ia genève, conseil ia lausanne, consultant ia suisse, modèle open source hébergé en suisse, llm auto-hébergé, tri de dossiers ia, ia secret professionnel, pilote ia"
         },
         "/services/microsoft-consulting": {
             "title": "Conseil Microsoft 365 Genève | Power Automate, Power BI",
@@ -70,16 +70,16 @@
             "keywords": "conseil microsoft 365 genève, power automate suisse, conseil sharepoint genève, consultant power bi, développement SPFx"
         },
         "/ressources": {
-            "title": "Ressources IA & Microsoft 365 | Études de Cas de Genève",
-            "description": "Études de cas réelles et guides pratiques pour implémentations IA et Microsoft 365 en Suisse. Résultats mesurables et conseils actionnables.",
-            "keywords": "études de cas ia genève, implémentation microsoft 365, success stories ia suisse, exemples automatisation"
+            "title": "Ressources IA | Guides et cas d'usage pour entreprises suisses",
+            "description": "Guides pratiques, cas clients et scénarios types pour vos projets IA en Suisse : choix du modèle, hébergement, tri de dossiers, Microsoft 365.",
+            "keywords": "guides ia suisse, cas d'usage ia, modèles open source suisse, tri de dossiers ia, implémentation microsoft 365"
         }
     },
     "dynamic": {
         "articles": {
-            "titleTemplate": "{articleTitle} | houle - IA pour Microsoft 365",
+            "titleTemplate": "{articleTitle} | houle - Conseil IA Genève",
             "descriptionTemplate": "{articleDescription} | Expertise de Genève avec souveraineté des données suisse.",
-            "keywords": "ia microsoft 365, solutions ia suisse, conseil ia genève, souveraineté données suisse"
+            "keywords": "conseil ia genève, solutions ia suisse, modèles open source hébergés en suisse, souveraineté données suisse"
         },
         "solutions": {
             "titleTemplate": "{title} | houle - Agents IA suisses",

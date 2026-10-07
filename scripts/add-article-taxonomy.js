@@ -30,6 +30,9 @@ const frArticles = Array.isArray(frData.Articles) ? frData.Articles : [];
 const taxonomyBySlug = new Map();
 
 for (const article of frArticles) {
+  // Articles generated from the backlog already carry their category and
+  // per-locale tags (see scripts/lib/articleBacklog.js): leave them alone.
+  if (article.topicId) continue;
   const category = detectCategory(article);
   const tags = buildTags(article, category);
   taxonomyBySlug.set(article.slug, { category, tags });

@@ -24,7 +24,7 @@ export default async function HomePage(
   const nonce = await getCspNonce();
 
   const faqT = await getTranslations(locale as Locale, "faq");
-  const faqItems = Array.from({ length: 22 })
+  const faqItems = Array.from({ length: 25 })
     .map((_, i) => i + 1)
     .filter((i) => {
       const q = faqT(`Question${i}`) as string;
@@ -57,284 +57,414 @@ export default async function HomePage(
 
   const copy = {
     en: {
-      eyebrow: "AI Products & Consulting",
-      headline: "Private AI built into Microsoft 365.",
+      eyebrow:
+        "AI consulting & integration",
+      headline:
+        "The right AI model for each case.",
       subtext:
-        "AI consulting and Swiss-made Office add-ins with AI for Outlook and Word — plus a private GPT that stays in your control. Based in Geneva and Lausanne, we help teams use AI without compromising their data.",
-      ctaPrimary: "Get in touch",
-      ctaSecondary: "See our products",
-      learnMore: "Learn more",
+        "An independent AI consulting and integration firm in Geneva. We pick the model that fits each case: Microsoft or OpenAI where it makes sense, Anthropic or Mistral, or open-source models hosted in Switzerland when confidentiality, cost or independence matter.",
+      ctaPrimary:
+        "Get in touch",
+      ctaSecondary:
+        "See our AI consulting",
+      learnMore:
+        "Learn more",
       facts: [
-        { label: "Data residency", value: "Swiss-hosted", sub: "Runs on Microsoft Azure Switzerland — every document and email stays within Swiss borders." },
-        { label: "Integration", value: "M365-native", sub: "Add-ins for Outlook and Word, plus Azure and Power Platform — no new apps to learn." },
-        { label: "Compliance", value: "nLPD & GDPR", sub: "Human-in-the-loop by design, aligned with Swiss and EU data-protection rules." },
+        { label: "Models", value: "Vendor-neutral", sub: "Microsoft, OpenAI, Anthropic, Mistral or open source (Llama, Mistral, Qwen, Gemma): the choice follows the case, not a vendor contract." },
+        { label: "Hosting", value: "In Switzerland", sub: "When your data requires it, the model runs on your own infrastructure or in a Swiss cloud. Data and inference stay in the country." },
+        { label: "Method", value: "Human control", sub: "Your teams set the rules and validate what matters. Every decision leaves a trace." },
       ],
-      trustEyebrow: "Built for Swiss teams",
+      trustEyebrow:
+        "Built for Swiss teams",
       trust: [
-        { title: "Swiss data residency", description: "Hosted on Microsoft Azure Switzerland — your data never leaves the country." },
-        { title: "Human-in-the-loop", description: "Your teams validate every AI suggestion before it becomes final." },
+        { title: "No imposed model", description: "The recommendation starts from your data, your constraints and your budget." },
+        { title: "Swiss hosting when needed", description: "Open-source models on your infrastructure or in a Swiss cloud, when professional or medical secrecy calls for it." },
         { title: "Geneva & Lausanne", description: "A local consulting team guiding you from concept to production." },
       ],
-      productsEyebrow: "Products",
-      productsTitle: "AI that lives inside Microsoft 365",
+      productsEyebrow:
+        "Products",
+      productsTitle:
+        "Ready-to-use products",
       productsDesc:
-        "Add-ins for the tools your team already has. No new apps, no data leaving Switzerland.",
-      card1Label: "AI for Outlook",
-      card1Title: "Smarter email, instantly",
+        "Add-ins for Outlook and Word, AI agents and a private GPT platform, for teams that already work in Microsoft 365.",
+      card1Label:
+        "AI for Outlook",
+      card1Title:
+        "Smarter email, instantly",
       card1Body:
         "Summarize threads, draft replies, and flag action items — directly inside Outlook, with your data staying private.",
-      card2Label: "AI for Word",
-      card2Title: "Write faster, say more",
+      card2Label:
+        "AI for Word",
+      card2Title:
+        "Write faster, say more",
       card2Body:
         "Generate, improve, and review documents with AI built directly into Word. No copy-paste, no context switching.",
-      card3Label: "Swiss GPT",
-      card3Title: "Your private knowledge layer",
+      card3Label:
+        "Swiss GPT",
+      card3Title:
+        "Your private knowledge layer",
       card3Body:
         "A GPT platform hosted in Switzerland, connected to your data, controlled by your team. Build internal assistants your way.",
-      servicesEyebrow: "Consulting",
-      servicesTitle: "Expert guidance from strategy to production",
+      servicesEyebrow:
+        "Consulting",
+      servicesTitle:
+        "Expert guidance from strategy to production",
       servicesDesc:
-        "We help you navigate AI adoption, integrate systems, and deploy solutions that actually work in your Microsoft environment.",
-      s1Label: "AI Consulting",
-      s1Title: "Custom AI solutions",
+        "From the discovery workshop to production: choosing the use cases, choosing the model, pilot, integration and governance.",
+      s1Label:
+        "AI consulting",
+      s1Title:
+        "Independent AI consulting",
       s1Body:
-        "From proof-of-concept to full deployment: we design, build, and maintain AI workflows tailored to your operations.",
-      s2Label: "Microsoft Consulting",
-      s2Title: "Full Microsoft 365 expertise",
+        "Discovery workshop, use-case selection, model choice (proprietary or open source), measured pilot, production and governance.",
+      s2Label:
+        "Microsoft consulting",
+      s2Title:
+        "Full Microsoft 365 expertise",
       s2Body:
         "Azure, Power Automate, SharePoint, Power BI, SPFx — deep implementation experience across the Microsoft stack.",
-      whyEyebrow: "Why houle",
-      whyTitle: "Swiss-hosted AI technology",
+      whyEyebrow:
+        "Models and hosting",
+      whyTitle:
+        "Vendor-neutral, hosted in Switzerland when it matters",
       whyP1:
-        "Our enterprise AI platform runs on Microsoft Azure Switzerland, giving you access to state-of-the-art large language models while meeting strict data residency requirements. Every document processed, every email analyzed, and every workflow automated stays within Swiss borders under your control.",
+        "We start from your case, not from a product. For a writing assistant inside Microsoft 365, an OpenAI model on Azure often does the job very well. For sorting files covered by medical or professional secrecy, an open-source model (Llama, Mistral, Qwen, Gemma) hosted in Switzerland is often a better fit. We explain the choice and its limits before we build.",
       whyP2:
-        "We build AI solutions with a human-in-the-loop approach — your teams validate AI suggestions before they become final, ensuring accuracy and accountability. Our Office add-ins for Word and Outlook bring intelligent assistance directly into your daily tools without forcing a change in how you work.",
+        "Hosted in Switzerland has a precise meaning for us. For each project we put four things in writing: where the model runs, where the data is stored, who has access, and what is logged. With a self-hosted open-source model, the texts you process are not sent to the model's publisher.",
       whyP3:
-        "By combining Azure AI services with Power Platform automation, we help organizations stay compliant with nLPD (Swiss Data Protection Act) and GDPR while improving operational efficiency. Our consulting team guides you from initial concept through production deployment.",
+        "In every case your teams set the rules and keep the decision: thresholds, excluded cases, human validation, audit trail. We start with a pilot on one precise case, measured with your own figures, before rolling anything out.",
+      ctaTitle:
+        "A use case in mind?",
+      ctaBody:
+        "Let's talk about your data, your constraints and the model that fits.",
     },
     fr: {
-      eyebrow: "Produits IA & Conseil",
-      headline: "Une IA privée, directement dans Microsoft 365.",
+      eyebrow:
+        "Conseil et intégration IA",
+      headline:
+        "Le bon modèle d'IA pour chaque cas.",
       subtext:
-        "Conseil IA et add-ins Office avec IA pour Outlook et Word — plus un GPT privé hébergé en Suisse que vous contrôlez. Basés à Genève et Lausanne, nous aidons les équipes à utiliser l'IA sans compromettre leurs données.",
-      ctaPrimary: "Nous contacter",
-      ctaSecondary: "Voir nos produits",
-      learnMore: "En savoir plus",
+        "Cabinet indépendant de conseil et d'intégration IA à Genève. Nous choisissons le modèle adapté à chaque cas : Microsoft ou OpenAI quand c'est pertinent, Anthropic ou Mistral, ou des modèles open source hébergés en Suisse quand la confidentialité, le coût ou l'indépendance comptent.",
+      ctaPrimary:
+        "Nous contacter",
+      ctaSecondary:
+        "Découvrir le conseil IA",
+      learnMore:
+        "En savoir plus",
       facts: [
-        { label: "Résidence des données", value: "Hébergé en Suisse", sub: "Sur Microsoft Azure Suisse — chaque document et e-mail reste sur le territoire suisse." },
-        { label: "Intégration", value: "Natif Microsoft 365", sub: "Add-ins pour Outlook et Word, plus Azure et Power Platform — aucune nouvelle app à apprendre." },
-        { label: "Conformité", value: "nLPD & RGPD", sub: "Approche human-in-the-loop, alignée sur les règles suisses et européennes de protection des données." },
+        { label: "Modèles", value: "Indépendant", sub: "Microsoft, OpenAI, Anthropic, Mistral ou open source (Llama, Mistral, Qwen, Gemma) : le choix suit le cas, pas un contrat éditeur." },
+        { label: "Hébergement", value: "En Suisse", sub: "Quand vos données l'exigent, le modèle tourne sur votre infrastructure ou dans un cloud suisse. Données et inférence restent dans le pays." },
+        { label: "Méthode", value: "Contrôle humain", sub: "Vos équipes fixent les règles et valident ce qui compte. Chaque décision laisse une trace." },
       ],
-      trustEyebrow: "Pensé pour les équipes suisses",
+      trustEyebrow:
+        "Pensé pour les équipes suisses",
       trust: [
-        { title: "Données hébergées en Suisse", description: "Sur Microsoft Azure Suisse — vos données ne quittent jamais le pays." },
-        { title: "Human-in-the-loop", description: "Vos équipes valident chaque suggestion de l'IA avant qu'elle ne devienne définitive." },
+        { title: "Aucun modèle imposé", description: "La recommandation part de vos données, de vos contraintes et de votre budget." },
+        { title: "Hébergement suisse si nécessaire", description: "Des modèles open source sur votre infrastructure ou dans un cloud suisse, quand le secret professionnel ou médical l'impose." },
         { title: "Genève & Lausanne", description: "Une équipe de conseil locale, du concept jusqu'à la production." },
       ],
-      productsEyebrow: "Produits",
-      productsTitle: "Une IA intégrée à Microsoft 365",
+      productsEyebrow:
+        "Produits",
+      productsTitle:
+        "Des produits prêts à l'emploi",
       productsDesc:
-        "Des add-ins pour les outils que vos équipes utilisent déjà. Pas de nouvelles apps, pas de données qui quittent la Suisse.",
-      card1Label: "IA pour Outlook",
-      card1Title: "Des emails plus intelligents",
+        "Add-ins pour Outlook et Word, agents IA et plateforme GPT privée, pour les équipes qui travaillent déjà dans Microsoft 365.",
+      card1Label:
+        "IA pour Outlook",
+      card1Title:
+        "Des emails plus intelligents",
       card1Body:
         "Résumez les fils de discussion, rédigez des réponses et identifiez les actions — directement dans Outlook, vos données restent privées.",
-      card2Label: "IA pour Word",
-      card2Title: "Rédigez plus vite, dites plus",
+      card2Label:
+        "IA pour Word",
+      card2Title:
+        "Rédigez plus vite, dites plus",
       card2Body:
         "Générez, améliorez et relisez des documents avec une IA intégrée directement dans Word. Sans copier-coller, sans changer d'outil.",
-      card3Label: "Swiss GPT",
-      card3Title: "Votre couche de connaissance privée",
+      card3Label:
+        "Swiss GPT",
+      card3Title:
+        "Votre couche de connaissance privée",
       card3Body:
         "Une plateforme GPT hébergée en Suisse, connectée à vos données, contrôlée par votre équipe. Créez vos assistants internes à votre façon.",
-      servicesEyebrow: "Conseil",
-      servicesTitle: "Un accompagnement expert de la stratégie à la production",
+      servicesEyebrow:
+        "Conseil",
+      servicesTitle:
+        "Un accompagnement expert de la stratégie à la production",
       servicesDesc:
-        "Nous vous aidons à adopter l'IA, intégrer vos systèmes et déployer des solutions qui fonctionnent vraiment dans votre environnement Microsoft.",
-      s1Label: "Conseil IA",
-      s1Title: "Solutions IA sur mesure",
+        "De l'atelier de découverte à la mise en production : choix des cas d'usage, choix du modèle, pilote, intégration et gouvernance.",
+      s1Label:
+        "Conseil IA",
+      s1Title:
+        "Conseil IA indépendant",
       s1Body:
-        "Du proof-of-concept au déploiement complet : nous concevons, construisons et maintenons des workflows IA adaptés à vos opérations.",
-      s2Label: "Conseil Microsoft",
-      s2Title: "Expertise Microsoft 365",
+        "Atelier de découverte, sélection des cas d'usage, choix du modèle (propriétaire ou open source), pilote mesuré, mise en production et gouvernance.",
+      s2Label:
+        "Conseil Microsoft",
+      s2Title:
+        "Expertise Microsoft 365",
       s2Body:
         "Azure, Power Automate, SharePoint, Power BI, SPFx — une expérience approfondie sur toute la stack Microsoft.",
-      whyEyebrow: "Pourquoi houle",
-      whyTitle: "Technologie IA hébergée en Suisse",
+      whyEyebrow:
+        "Modèles et hébergement",
+      whyTitle:
+        "Indépendants des éditeurs, hébergés en Suisse quand il le faut",
       whyP1:
-        "Notre plateforme IA d'entreprise fonctionne sur Microsoft Azure Suisse, vous donnant accès aux modèles de langage les plus avancés tout en respectant les exigences strictes de résidence des données. Chaque document traité, chaque e-mail analysé et chaque workflow automatisé reste sur le territoire suisse, sous votre contrôle.",
+        "Nous partons de votre cas, pas d'un produit. Pour un assistant de rédaction dans Microsoft 365, un modèle OpenAI sur Azure fait souvent très bien l'affaire. Pour trier des dossiers couverts par le secret médical ou professionnel, un modèle open source (Llama, Mistral, Qwen, Gemma) hébergé en Suisse est souvent plus adapté. Nous expliquons ce choix et ses limites avant de construire.",
       whyP2:
-        "Nous construisons des solutions IA avec une approche human-in-the-loop. Vos équipes valident les suggestions de l'IA avant qu'elles ne deviennent définitives, garantissant précision et responsabilité. Nos add-ins Office pour Word et Outlook apportent une assistance intelligente directement dans vos outils quotidiens, sans bouleverser votre façon de travailler.",
+        "Hébergé en Suisse a pour nous un sens précis. Pour chaque projet, nous fixons quatre points par écrit : où tourne le modèle, où sont stockées les données, qui y a accès et ce qui est journalisé. Avec un modèle open source auto-hébergé, les textes traités ne sont pas transmis à l'éditeur du modèle.",
       whyP3:
-        "En combinant les services Azure AI avec l'automatisation Power Platform, nous aidons les organisations à rester conformes à la nLPD et au RGPD tout en améliorant leur efficacité opérationnelle. Notre équipe de conseil vous accompagne du concept initial jusqu'au déploiement en production.",
+        "Dans tous les cas, vos équipes fixent les règles et gardent la décision : seuils, cas exclus, validation humaine, piste d'audit. Nous commençons par un pilote sur un cas précis, mesuré avec vos propres chiffres, avant toute généralisation.",
+      ctaTitle:
+        "Un cas d'usage en tête ?",
+      ctaBody:
+        "Parlons de vos données, de vos contraintes et du modèle qui convient.",
     },
     de: {
-      eyebrow: "KI-Produkte & Beratung",
-      headline: "Private KI direkt in Microsoft 365.",
+      eyebrow:
+        "KI-Beratung & Integration",
+      headline:
+        "Das richtige KI-Modell für jeden Fall.",
       subtext:
-        "Schweizer Office-Add-ins mit KI für Outlook und Word — sowie ein privates GPT, das unter Ihrer Kontrolle bleibt. Wir helfen Teams, KI zu nutzen, ohne ihre Daten zu gefährden.",
-      ctaPrimary: "Kontakt aufnehmen",
-      ctaSecondary: "Unsere Produkte",
-      learnMore: "Mehr erfahren",
+        "Unabhängige KI-Beratung und Integration in Genf. Wir wählen das Modell, das zum Fall passt: Microsoft oder OpenAI, wo es sinnvoll ist, Anthropic oder Mistral, oder in der Schweiz gehostete Open-Source-Modelle, wenn Vertraulichkeit, Kosten oder Unabhängigkeit zählen.",
+      ctaPrimary:
+        "Kontakt aufnehmen",
+      ctaSecondary:
+        "Zur KI-Beratung",
+      learnMore:
+        "Mehr erfahren",
       facts: [
-        { label: "Datenresidenz", value: "In der Schweiz gehostet", sub: "Auf Microsoft Azure Schweiz — jedes Dokument und jede E-Mail bleibt innerhalb der Schweizer Grenzen." },
-        { label: "Integration", value: "Microsoft-365-nativ", sub: "Add-ins für Outlook und Word, dazu Azure und Power Platform — keine neuen Apps." },
-        { label: "Compliance", value: "DSG & DSGVO", sub: "Human-in-the-loop by Design, konform mit Schweizer und EU-Datenschutzregeln." },
+        { label: "Modelle", value: "Herstellerneutral", sub: "Microsoft, OpenAI, Anthropic, Mistral oder Open Source (Llama, Mistral, Qwen, Gemma): Die Wahl folgt dem Fall, nicht einem Herstellervertrag." },
+        { label: "Hosting", value: "In der Schweiz", sub: "Wenn Ihre Daten es verlangen, läuft das Modell auf Ihrer Infrastruktur oder in einer Schweizer Cloud. Daten und Inferenz bleiben im Land." },
+        { label: "Methode", value: "Menschliche Kontrolle", sub: "Ihre Teams legen die Regeln fest und prüfen, was zählt. Jede Entscheidung hinterlässt eine Spur." },
       ],
-      trustEyebrow: "Für Schweizer Teams gebaut",
+      trustEyebrow:
+        "Für Schweizer Teams gebaut",
       trust: [
-        { title: "Daten in der Schweiz", description: "Auf Microsoft Azure Schweiz — Ihre Daten verlassen das Land nie." },
-        { title: "Human-in-the-loop", description: "Ihre Teams validieren jeden KI-Vorschlag, bevor er endgültig wird." },
+        { title: "Kein vorgegebenes Modell", description: "Die Empfehlung geht von Ihren Daten, Ihren Vorgaben und Ihrem Budget aus." },
+        { title: "Schweizer Hosting bei Bedarf", description: "Open-Source-Modelle auf Ihrer Infrastruktur oder in einer Schweizer Cloud, wenn Berufs- oder Arztgeheimnis es verlangen." },
         { title: "Genf & Lausanne", description: "Ein lokales Beratungsteam vom Konzept bis zur Produktion." },
       ],
-      productsEyebrow: "Produkte",
-      productsTitle: "KI direkt in Microsoft 365",
+      productsEyebrow:
+        "Produkte",
+      productsTitle:
+        "Einsatzbereite Produkte",
       productsDesc:
-        "Add-ins für die Tools, die Ihre Teams bereits nutzen. Keine neuen Apps, keine Daten außerhalb der Schweiz.",
-      card1Label: "KI für Outlook",
-      card1Title: "Intelligentere E-Mails sofort",
+        "Add-ins für Outlook und Word, KI-Agenten und eine private GPT-Plattform für Teams, die bereits in Microsoft 365 arbeiten.",
+      card1Label:
+        "KI für Outlook",
+      card1Title:
+        "Intelligentere E-Mails sofort",
       card1Body:
         "Fassen Sie Threads zusammen, verfassen Sie Antworten und markieren Sie Aktionspunkte — direkt in Outlook, Ihre Daten bleiben privat.",
-      card2Label: "KI für Word",
-      card2Title: "Schneller schreiben, mehr sagen",
+      card2Label:
+        "KI für Word",
+      card2Title:
+        "Schneller schreiben, mehr sagen",
       card2Body:
         "Generieren, verbessern und überprüfen Sie Dokumente mit KI direkt in Word. Kein Kopieren, kein Kontextwechsel.",
-      card3Label: "Swiss GPT",
-      card3Title: "Ihre private Wissensebene",
+      card3Label:
+        "Swiss GPT",
+      card3Title:
+        "Ihre private Wissensebene",
       card3Body:
         "Eine in der Schweiz gehostete GPT-Plattform, mit Ihren Daten verbunden, von Ihrem Team kontrolliert.",
-      servicesEyebrow: "Beratung",
-      servicesTitle: "Expertenbegleitung von der Strategie bis zur Produktion",
+      servicesEyebrow:
+        "Beratung",
+      servicesTitle:
+        "Expertenbegleitung von der Strategie bis zur Produktion",
       servicesDesc:
-        "Wir helfen Ihnen bei der KI-Einführung, Systemintegration und dem Einsatz von Lösungen in Ihrer Microsoft-Umgebung.",
-      s1Label: "KI-Beratung",
-      s1Title: "Maßgeschneiderte KI-Lösungen",
+        "Vom Discovery-Workshop bis zum produktiven Betrieb: Auswahl der Anwendungsfälle, Modellwahl, Pilot, Integration und Governance.",
+      s1Label:
+        "KI-Beratung",
+      s1Title:
+        "Unabhängige KI-Beratung",
       s1Body:
-        "Vom Proof-of-Concept bis zur vollständigen Bereitstellung: Wir entwickeln KI-Workflows für Ihre Prozesse.",
-      s2Label: "Microsoft-Beratung",
-      s2Title: "Vollständige Microsoft 365-Expertise",
+        "Discovery-Workshop, Auswahl der Anwendungsfälle, Modellwahl (proprietär oder Open Source), gemessener Pilot, Produktion und Governance.",
+      s2Label:
+        "Microsoft-Beratung",
+      s2Title:
+        "Vollständige Microsoft 365-Expertise",
       s2Body:
         "Azure, Power Automate, SharePoint, Power BI, SPFx — tiefgehende Implementierungserfahrung im gesamten Microsoft-Stack.",
-      whyEyebrow: "Warum houle",
-      whyTitle: "In der Schweiz gehostete KI-Technologie",
+      whyEyebrow:
+        "Modelle und Hosting",
+      whyTitle:
+        "Herstellerneutral, in der Schweiz gehostet, wenn es darauf ankommt",
       whyP1:
-        "Unsere KI-Plattform läuft auf Microsoft Azure Schweiz und bietet Zugang zu modernsten Sprachmodellen bei gleichzeitiger Erfüllung strenger Anforderungen an die Datenresidenz. Jedes Dokument, jede E-Mail und jeder Workflow bleibt innerhalb der Schweizer Grenzen.",
+        "Wir gehen von Ihrem Fall aus, nicht von einem Produkt. Für einen Schreibassistenten in Microsoft 365 reicht ein OpenAI-Modell auf Azure oft völlig aus. Für die Triage von Dossiers, die dem Arzt- oder Berufsgeheimnis unterliegen, passt ein in der Schweiz gehostetes Open-Source-Modell (Llama, Mistral, Qwen, Gemma) oft besser. Wir erklären die Wahl und ihre Grenzen, bevor wir bauen.",
       whyP2:
-        "Wir entwickeln KI-Lösungen mit Human-in-the-Loop: Ihre Teams validieren KI-Vorschläge vor der Finalisierung. Unsere Add-ins bringen intelligente Unterstützung direkt in Ihre täglichen Tools.",
+        "In der Schweiz gehostet hat für uns eine genaue Bedeutung. Für jedes Projekt halten wir vier Punkte schriftlich fest: wo das Modell läuft, wo die Daten gespeichert sind, wer Zugriff hat und was protokolliert wird. Bei einem selbst gehosteten Open-Source-Modell werden die verarbeiteten Texte nicht an den Herausgeber des Modells übermittelt.",
       whyP3:
-        "Durch Azure AI und Power Platform helfen wir Ihnen, DSG und DSGVO einzuhalten und gleichzeitig die Effizienz zu steigern. Unser Beratungsteam begleitet Sie vom Konzept bis zum Produktionseinsatz.",
+        "In jedem Fall legen Ihre Teams die Regeln fest und behalten die Entscheidung: Schwellenwerte, ausgeschlossene Fälle, menschliche Prüfung, Audit-Trail. Wir beginnen mit einem Pilot an einem konkreten Fall, gemessen an Ihren eigenen Zahlen, bevor etwas ausgerollt wird.",
+      ctaTitle:
+        "Einen Anwendungsfall im Kopf?",
+      ctaBody:
+        "Sprechen wir über Ihre Daten, Ihre Vorgaben und das passende Modell.",
     },
     es: {
-      eyebrow: "Productos IA & Consultoría",
-      headline: "IA privada integrada en Microsoft 365.",
+      eyebrow:
+        "Consultoría e integración de IA",
+      headline:
+        "El modelo de IA adecuado para cada caso.",
       subtext:
-        "Complementos de Office con IA para Outlook y Word — más un GPT privado alojado en Suiza bajo tu control. Ayudamos a los equipos a usar IA sin comprometer sus datos.",
-      ctaPrimary: "Contactarnos",
-      ctaSecondary: "Ver productos",
-      learnMore: "Saber más",
+        "Consultora independiente de IA e integración en Ginebra. Elegimos el modelo que encaja con cada caso: Microsoft u OpenAI cuando tiene sentido, Anthropic o Mistral, o modelos de código abierto alojados en Suiza cuando importan la confidencialidad, el coste o la independencia.",
+      ctaPrimary:
+        "Contactarnos",
+      ctaSecondary:
+        "Ver la consultoría de IA",
+      learnMore:
+        "Saber más",
       facts: [
-        { label: "Residencia de datos", value: "Alojado en Suiza", sub: "En Microsoft Azure Suiza — cada documento y email permanece dentro de las fronteras suizas." },
-        { label: "Integración", value: "Nativo Microsoft 365", sub: "Complementos para Outlook y Word, más Azure y Power Platform — sin nuevas apps." },
-        { label: "Cumplimiento", value: "nLPD & RGPD", sub: "Human-in-the-loop por diseño, alineado con las normas suizas y europeas de protección de datos." },
+        { label: "Modelos", value: "Independiente", sub: "Microsoft, OpenAI, Anthropic, Mistral o código abierto (Llama, Mistral, Qwen, Gemma): la elección sigue al caso, no a un contrato con un proveedor." },
+        { label: "Alojamiento", value: "En Suiza", sub: "Cuando tus datos lo exigen, el modelo funciona en tu infraestructura o en una nube suiza. Los datos y la inferencia se quedan en el país." },
+        { label: "Método", value: "Control humano", sub: "Tus equipos fijan las reglas y validan lo que importa. Cada decisión deja rastro." },
       ],
-      trustEyebrow: "Diseñado para equipos suizos",
+      trustEyebrow:
+        "Diseñado para equipos suizos",
       trust: [
-        { title: "Datos alojados en Suiza", description: "En Microsoft Azure Suiza — tus datos nunca salen del país." },
-        { title: "Human-in-the-loop", description: "Tus equipos validan cada sugerencia de IA antes de que sea definitiva." },
+        { title: "Ningún modelo impuesto", description: "La recomendación parte de tus datos, tus restricciones y tu presupuesto." },
+        { title: "Alojamiento suizo si hace falta", description: "Modelos de código abierto en tu infraestructura o en una nube suiza, cuando el secreto profesional o médico lo exige." },
         { title: "Ginebra y Lausana", description: "Un equipo de consultoría local, del concepto a la producción." },
       ],
-      productsEyebrow: "Productos",
-      productsTitle: "IA que vive dentro de Microsoft 365",
+      productsEyebrow:
+        "Productos",
+      productsTitle:
+        "Productos listos para usar",
       productsDesc:
-        "Complementos para las herramientas que tu equipo ya usa. Sin nuevas apps, sin datos saliendo de Suiza.",
-      card1Label: "IA para Outlook",
-      card1Title: "Emails más inteligentes",
+        "Complementos para Outlook y Word, agentes de IA y una plataforma GPT privada, para equipos que ya trabajan en Microsoft 365.",
+      card1Label:
+        "IA para Outlook",
+      card1Title:
+        "Emails más inteligentes",
       card1Body:
         "Resume hilos, redacta respuestas e identifica acciones — directamente en Outlook, con tus datos privados.",
-      card2Label: "IA para Word",
-      card2Title: "Escribe más rápido",
+      card2Label:
+        "IA para Word",
+      card2Title:
+        "Escribe más rápido",
       card2Body:
         "Genera, mejora y revisa documentos con IA dentro de Word. Sin copiar y pegar, sin cambiar de herramienta.",
-      card3Label: "Swiss GPT",
-      card3Title: "Tu capa de conocimiento privado",
+      card3Label:
+        "Swiss GPT",
+      card3Title:
+        "Tu capa de conocimiento privado",
       card3Body:
         "Una plataforma GPT alojada en Suiza, conectada a tus datos, controlada por tu equipo.",
-      servicesEyebrow: "Consultoría",
-      servicesTitle: "Acompañamiento experto de la estrategia a la producción",
+      servicesEyebrow:
+        "Consultoría",
+      servicesTitle:
+        "Acompañamiento experto de la estrategia a la producción",
       servicesDesc:
-        "Te ayudamos a adoptar IA, integrar sistemas y desplegar soluciones en tu entorno Microsoft.",
-      s1Label: "Consultoría IA",
-      s1Title: "Soluciones IA personalizadas",
+        "Del taller de descubrimiento a la producción: elección de los casos de uso, elección del modelo, piloto, integración y gobernanza.",
+      s1Label:
+        "Consultoría IA",
+      s1Title:
+        "Consultoría de IA independiente",
       s1Body:
-        "De la prueba de concepto al despliegue completo: diseñamos, construimos y mantenemos workflows de IA.",
-      s2Label: "Consultoría Microsoft",
-      s2Title: "Experiencia Microsoft 365",
+        "Taller de descubrimiento, selección de casos de uso, elección del modelo (propietario o de código abierto), piloto medido, producción y gobernanza.",
+      s2Label:
+        "Consultoría Microsoft",
+      s2Title:
+        "Experiencia Microsoft 365",
       s2Body:
         "Azure, Power Automate, SharePoint, Power BI, SPFx — experiencia profunda en todo el stack de Microsoft.",
-      whyEyebrow: "Por qué houle",
-      whyTitle: "Tecnología IA alojada en Suiza",
+      whyEyebrow:
+        "Modelos y alojamiento",
+      whyTitle:
+        "Independientes de los proveedores, alojados en Suiza cuando hace falta",
       whyP1:
-        "Nuestra plataforma de IA empresarial funciona en Microsoft Azure Suiza, dándote acceso a LLMs de última generación cumpliendo con los requisitos de residencia de datos. Todo permanece dentro de las fronteras suizas bajo tu control.",
+        "Partimos de tu caso, no de un producto. Para un asistente de redacción en Microsoft 365, un modelo de OpenAI en Azure suele bastar. Para clasificar expedientes cubiertos por el secreto médico o profesional, un modelo de código abierto (Llama, Mistral, Qwen, Gemma) alojado en Suiza suele encajar mejor. Explicamos la elección y sus límites antes de construir.",
       whyP2:
-        "Construimos soluciones IA con human-in-the-loop — tus equipos validan sugerencias antes de que sean definitivas. Nuestros add-ins para Word y Outlook llevan asistencia inteligente a tus herramientas diarias.",
+        "Alojado en Suiza tiene para nosotros un sentido preciso. En cada proyecto dejamos cuatro puntos por escrito: dónde funciona el modelo, dónde se guardan los datos, quién tiene acceso y qué se registra. Con un modelo de código abierto autoalojado, los textos tratados no se envían al editor del modelo.",
       whyP3:
-        "Combinando Azure AI con Power Platform, ayudamos a cumplir con nLPD y RGPD mientras mejoramos la eficiencia. Nuestro equipo te guía del concepto al despliegue en producción.",
+        "En todos los casos tus equipos fijan las reglas y conservan la decisión: umbrales, casos excluidos, validación humana, pista de auditoría. Empezamos con un piloto sobre un caso concreto, medido con tus propias cifras, antes de generalizar.",
+      ctaTitle:
+        "¿Tienes un caso de uso en mente?",
+      ctaBody:
+        "Hablemos de tus datos, tus restricciones y el modelo que conviene.",
     },
     pt: {
-      eyebrow: "Produtos IA & Consultoria",
-      headline: "IA privada integrada no Microsoft 365.",
+      eyebrow:
+        "Consultoria e integração de IA",
+      headline:
+        "O modelo de IA certo para cada caso.",
       subtext:
-        "Suplementos do Office com IA para Outlook e Word — mais um GPT privado hospedado na Suíça sob seu controle. Ajudamos equipes a usar IA sem comprometer seus dados.",
-      ctaPrimary: "Entre em contato",
-      ctaSecondary: "Ver produtos",
-      learnMore: "Saiba mais",
+        "Consultoria independente de IA e integração em Genebra. Escolhemos o modelo adequado a cada caso: Microsoft ou OpenAI quando faz sentido, Anthropic ou Mistral, ou modelos de código aberto hospedados na Suíça quando a confidencialidade, o custo ou a independência contam.",
+      ctaPrimary:
+        "Entre em contato",
+      ctaSecondary:
+        "Ver a consultoria de IA",
+      learnMore:
+        "Saiba mais",
       facts: [
-        { label: "Residência de dados", value: "Hospedado na Suíça", sub: "No Microsoft Azure Suíça — cada documento e email permanece dentro das fronteiras suíças." },
-        { label: "Integração", value: "Nativo Microsoft 365", sub: "Suplementos para Outlook e Word, além de Azure e Power Platform — sem novos apps." },
-        { label: "Conformidade", value: "nLPD & LGPD", sub: "Human-in-the-loop por design, alinhado às regras suíças e europeias de proteção de dados." },
+        { label: "Modelos", value: "Independente", sub: "Microsoft, OpenAI, Anthropic, Mistral ou código aberto (Llama, Mistral, Qwen, Gemma): a escolha segue o caso, não um contrato com um fornecedor." },
+        { label: "Hospedagem", value: "Na Suíça", sub: "Quando os seus dados exigem, o modelo roda na sua infraestrutura ou numa nuvem suíça. Dados e inferência ficam no país." },
+        { label: "Método", value: "Controle humano", sub: "As suas equipes definem as regras e validam o que importa. Cada decisão deixa um registro." },
       ],
-      trustEyebrow: "Feito para equipes suíças",
+      trustEyebrow:
+        "Feito para equipes suíças",
       trust: [
-        { title: "Dados hospedados na Suíça", description: "No Microsoft Azure Suíça — seus dados nunca saem do país." },
-        { title: "Human-in-the-loop", description: "Suas equipes validam cada sugestão da IA antes de ela se tornar definitiva." },
+        { title: "Nenhum modelo imposto", description: "A recomendação parte dos seus dados, das suas restrições e do seu orçamento." },
+        { title: "Hospedagem suíça quando necessário", description: "Modelos de código aberto na sua infraestrutura ou numa nuvem suíça, quando o sigilo profissional ou médico o exige." },
         { title: "Genebra e Lausanne", description: "Uma equipe de consultoria local, do conceito à produção." },
       ],
-      productsEyebrow: "Produtos",
-      productsTitle: "IA que vive dentro do Microsoft 365",
+      productsEyebrow:
+        "Produtos",
+      productsTitle:
+        "Produtos prontos para usar",
       productsDesc:
-        "Suplementos para as ferramentas que sua equipe já usa. Sem novos apps, sem dados saindo da Suíça.",
-      card1Label: "IA para Outlook",
-      card1Title: "Emails mais inteligentes",
+        "Suplementos para Outlook e Word, agentes de IA e uma plataforma GPT privada, para equipes que já trabalham no Microsoft 365.",
+      card1Label:
+        "IA para Outlook",
+      card1Title:
+        "Emails mais inteligentes",
       card1Body:
         "Resuma threads, redija respostas e identifique ações — diretamente no Outlook, com seus dados privados.",
-      card2Label: "IA para Word",
-      card2Title: "Escreva mais rápido",
+      card2Label:
+        "IA para Word",
+      card2Title:
+        "Escreva mais rápido",
       card2Body:
         "Gere, melhore e revise documentos com IA dentro do Word. Sem copiar e colar, sem trocar de ferramenta.",
-      card3Label: "Swiss GPT",
-      card3Title: "Sua camada de conhecimento privado",
+      card3Label:
+        "Swiss GPT",
+      card3Title:
+        "Sua camada de conhecimento privado",
       card3Body:
         "Uma plataforma GPT hospedada na Suíça, conectada aos seus dados, controlada pela sua equipe.",
-      servicesEyebrow: "Consultoria",
-      servicesTitle: "Acompanhamento especializado da estratégia à produção",
+      servicesEyebrow:
+        "Consultoria",
+      servicesTitle:
+        "Acompanhamento especializado da estratégia à produção",
       servicesDesc:
-        "Ajudamos você a adotar IA, integrar sistemas e implantar soluções no seu ambiente Microsoft.",
-      s1Label: "Consultoria IA",
-      s1Title: "Soluções IA personalizadas",
+        "Do workshop de descoberta à produção: escolha dos casos de uso, escolha do modelo, piloto, integração e governança.",
+      s1Label:
+        "Consultoria IA",
+      s1Title:
+        "Consultoria de IA independente",
       s1Body:
-        "Da prova de conceito à implantação completa: projetamos, construímos e mantemos workflows de IA.",
-      s2Label: "Consultoria Microsoft",
-      s2Title: "Especialização Microsoft 365",
+        "Workshop de descoberta, seleção de casos de uso, escolha do modelo (proprietário ou de código aberto), piloto medido, produção e governança.",
+      s2Label:
+        "Consultoria Microsoft",
+      s2Title:
+        "Especialização Microsoft 365",
       s2Body:
         "Azure, Power Automate, SharePoint, Power BI, SPFx — experiência profunda em todo o stack Microsoft.",
-      whyEyebrow: "Por que houle",
-      whyTitle: "Tecnologia IA hospedada na Suíça",
+      whyEyebrow:
+        "Modelos e hospedagem",
+      whyTitle:
+        "Independentes dos fornecedores, hospedados na Suíça quando é preciso",
       whyP1:
-        "Nossa plataforma de IA empresarial funciona no Microsoft Azure Suíça, com acesso a LLMs de última geração e requisitos rígidos de residência de dados. Tudo permanece dentro das fronteiras suíças sob seu controle.",
+        "Partimos do seu caso, não de um produto. Para um assistente de redação no Microsoft 365, um modelo da OpenAI no Azure costuma resolver muito bem. Para triar processos cobertos pelo sigilo médico ou profissional, um modelo de código aberto (Llama, Mistral, Qwen, Gemma) hospedado na Suíça costuma ser mais adequado. Explicamos a escolha e os seus limites antes de construir.",
       whyP2:
-        "Construímos soluções de IA com human-in-the-loop — suas equipes validam sugestões antes de serem definitivas. Nossos suplementos para Word e Outlook trazem assistência inteligente para suas ferramentas diárias.",
+        "Hospedado na Suíça tem para nós um sentido preciso. Em cada projeto, deixamos quatro pontos por escrito: onde o modelo roda, onde os dados ficam guardados, quem tem acesso e o que é registrado. Com um modelo de código aberto auto-hospedado, os textos tratados não são enviados ao editor do modelo.",
       whyP3:
-        "Combinando Azure AI com Power Platform, ajudamos a cumprir nLPD e LGPD enquanto melhoramos a eficiência operacional. Nossa equipe o guia do conceito ao deployment.",
+        "Em todos os casos, as suas equipes definem as regras e mantêm a decisão: limites, casos excluídos, validação humana, trilha de auditoria. Começamos com um piloto num caso preciso, medido com os seus próprios números, antes de generalizar.",
+      ctaTitle:
+        "Tem um caso de uso em mente?",
+      ctaBody:
+        "Vamos falar dos seus dados, das suas restrições e do modelo que convém.",
     },
   } as const;
 
@@ -372,7 +502,7 @@ export default async function HomePage(
                   <span>{t.ctaPrimary}</span>
                 </Button>
               </Link>
-              <Link href={`${localePrefix}/products/`} className="w-full sm:w-auto" prefetch={false}>
+              <Link href={`${localePrefix}/services/ai-consulting/`} className="w-full sm:w-auto" prefetch={false}>
                 <Button
                   size="lg"
                   variant="secondary"
@@ -578,26 +708,10 @@ export default async function HomePage(
           <Reveal>
             <div className="rounded-2xl border border-brand/15 bg-brand-soft px-8 py-12 text-center sm:px-12">
               <h2 className="text-2xl font-semibold tracking-tight text-foreground sm:text-3xl">
-                {locale === "fr"
-                  ? "Prêt à intégrer l'IA dans vos outils Microsoft ?"
-                  : locale === "de"
-                    ? "Bereit, KI in Ihre Microsoft-Tools zu integrieren?"
-                    : locale === "es"
-                      ? "¿Listo para integrar IA en tus herramientas Microsoft?"
-                      : locale === "pt"
-                        ? "Pronto para integrar IA nas suas ferramentas Microsoft?"
-                        : "Ready to integrate AI into your Microsoft tools?"}
+                {t.ctaTitle}
               </h2>
               <p className="mx-auto mt-4 max-w-[48ch] text-base text-foreground/70">
-                {locale === "fr"
-                  ? "Discutons de votre situation et voyons comment nos solutions peuvent vous aider."
-                  : locale === "de"
-                    ? "Lassen Sie uns über Ihre Situation sprechen und wie unsere Lösungen helfen können."
-                    : locale === "es"
-                      ? "Hablemos de tu situación y cómo nuestras soluciones pueden ayudarte."
-                      : locale === "pt"
-                        ? "Vamos conversar sobre sua situação e como nossas soluções podem ajudar."
-                        : "Let's discuss your setup and how our solutions can help."}
+                {t.ctaBody}
               </p>
               <div className="mt-8 flex justify-center">
                 <Link href={`${localePrefix}/contact/`} prefetch={false}>

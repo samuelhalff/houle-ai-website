@@ -170,6 +170,22 @@ const AIConsultingPage = async (props: { params: Promise<{ locale: string }> }) 
             <p className="max-w-3xl text-sm leading-7 text-foreground/75">
               {tService("Presentation.Approach.Text") as string}
             </p>
+            {(() => {
+              const steps = tService("Presentation.Approach.Steps");
+              if (!Array.isArray(steps) || steps.length === 0) return null;
+              return (
+                <ol className="mt-8 grid gap-6 sm:grid-cols-2">
+                  {steps.map((step: any, index: number) => (
+                    <li key={index} className="border-l-2 border-brand/30 pl-5">
+                      <h3 className="font-semibold text-foreground">
+                        {index + 1}. {step.Title}
+                      </h3>
+                      <p className="mt-1 text-sm leading-6 text-muted-foreground">{step.Text}</p>
+                    </li>
+                  ))}
+                </ol>
+              );
+            })()}
           </section>
         </Reveal>
 
@@ -218,24 +234,24 @@ const AIConsultingPage = async (props: { params: Promise<{ locale: string }> }) 
           );
         })()}
 
-        {/* Azure AI */}
-        {tService("Presentation.AzureAI.Title") ? (
+        {/* Models and hosting */}
+        {tService("Presentation.ModelsHosting.Title") ? (
           <Reveal>
             <section className="mb-16">
               <h2 className="mb-4 text-2xl font-semibold tracking-tight text-foreground">
-                {tService("Presentation.AzureAI.Title") as string}
+                {tService("Presentation.ModelsHosting.Title") as string}
               </h2>
               <p className="mb-8 max-w-3xl text-sm leading-7 text-foreground/75">
-                {tService("Presentation.AzureAI.Intro") as string}
+                {tService("Presentation.ModelsHosting.Intro") as string}
               </p>
               <div className="space-y-6">
-                {["Models", "Indexing", "Agents", "Grounding"].map((key) => (
+                {["Choice", "OpenSource", "Swiss", "Proprietary", "Limits"].map((key) => (
                   <div key={key} className="border-l-2 border-brand/30 pl-5">
                     <h3 className="font-semibold text-foreground">
-                      {tService(`Presentation.AzureAI.${key}.Title`) as string}
+                      {tService(`Presentation.ModelsHosting.${key}.Title`) as string}
                     </h3>
                     <p className="mt-1 text-sm leading-6 text-muted-foreground">
-                      {tService(`Presentation.AzureAI.${key}.Text`) as string}
+                      {tService(`Presentation.ModelsHosting.${key}.Text`) as string}
                     </p>
                   </div>
                 ))}

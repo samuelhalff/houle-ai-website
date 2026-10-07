@@ -1,0 +1,2962 @@
+{
+  "version": 1,
+  "updated": "2026-10-07",
+  "notes": [
+    "Source of topics for scripts/ai-ressources-update.js. Selection logic: scripts/lib/articleBacklog.js.",
+    "category = rotation family (lead generation first); siteCategory = category shown on the site.",
+    "A topic is consumed when an article carries its id in topicId. Add topics here; never reuse an id.",
+    "reserved = topics written outside the pipeline: add the final slugs to slugs[] once the articles exist."
+  ],
+  "rules": {
+    "window": 20,
+    "similarityThreshold": 0.6,
+    "allowCopilot": true,
+    "intentBonus": {
+      "informational": 0,
+      "commercial": 8,
+      "transactional": 12
+    },
+    "cappedCategories": {
+      "regulation-policy": {
+        "window": 6,
+        "maxInLast20": 3
+      }
+    }
+  },
+  "reserved": [
+    {
+      "title": "Hôpital: triage par IA des cas RC bagatelle (petits sinistres en responsabilité civile)",
+      "slugs": [
+        "tri-ia-cas-bagatelle-rc-hopital"
+      ],
+      "reason": "cornerstone article written by hand"
+    },
+    {
+      "title": "Modèles open source hébergés en Suisse: panorama et critères de choix",
+      "slugs": [
+        "modeles-open-source-heberges-en-suisse-guide-decision"
+      ],
+      "reason": "cornerstone article written by hand"
+    },
+    {
+      "title": "Assureurs: triage par IA des petits sinistres",
+      "slugs": [
+        "tri-ia-petits-sinistres-assurance"
+      ],
+      "reason": "cornerstone article written by hand"
+    },
+    {
+      "title": "Fiduciaire: triage par IA des factures fournisseurs",
+      "slugs": [
+        "tri-ia-factures-notes-de-frais-tva-fiduciaire"
+      ],
+      "reason": "cornerstone article written by hand"
+    },
+    {
+      "title": "KYC et alertes LBA: trier par IA les dossiers complets et ceux qui demandent un analyste",
+      "slugs": [
+        "tri-ia-dossiers-kyc-alertes-lba"
+      ],
+      "reason": "cornerstone article written by hand"
+    }
+  ],
+  "categories": [
+    {
+      "id": "ai-triage",
+      "label": "Triage par IA: automatiser le simple, réserver l'humain au reste",
+      "weight": 18,
+      "siteCategory": "workflow-automation",
+      "defaultService": "/services/ai-consulting"
+    },
+    {
+      "id": "vendor-neutral-models",
+      "label": "Choix de modèles et d'éditeurs, conseil indépendant",
+      "weight": 12,
+      "siteCategory": "ai-strategy-adoption",
+      "defaultService": "/services/ai-consulting"
+    },
+    {
+      "id": "swiss-hosted-open-source",
+      "label": "Modèles open source hébergés en Suisse",
+      "weight": 12,
+      "siteCategory": "private-llm-rag",
+      "defaultService": "/products/swiss-gpt"
+    },
+    {
+      "id": "process-automation",
+      "label": "Automatisation d'un processus précis",
+      "weight": 12,
+      "siteCategory": "workflow-automation",
+      "defaultService": "/solutions"
+    },
+    {
+      "id": "industry",
+      "label": "Cas d'usage par secteur",
+      "weight": 10,
+      "siteCategory": "ai-strategy-adoption",
+      "defaultService": "/products/ai-agents"
+    },
+    {
+      "id": "cost-roi",
+      "label": "Coûts, budget et retour sur investissement",
+      "weight": 10,
+      "siteCategory": "ai-strategy-adoption",
+      "defaultService": "/services/ai-consulting"
+    },
+    {
+      "id": "implementation-guide",
+      "label": "Guides de mise en œuvre et choix d'un prestataire",
+      "weight": 9,
+      "siteCategory": "ai-strategy-adoption",
+      "defaultService": "/services/ai-consulting"
+    },
+    {
+      "id": "microsoft-365",
+      "label": "Microsoft 365, Copilot et Power Platform",
+      "weight": 6,
+      "siteCategory": "microsoft-365-copilot",
+      "defaultService": "/services/microsoft-consulting"
+    },
+    {
+      "id": "odoo-erp",
+      "label": "Odoo et intégrations ERP",
+      "weight": 4,
+      "siteCategory": "business-operations",
+      "defaultService": "/services/ai-consulting"
+    },
+    {
+      "id": "worked-scenario",
+      "label": "Scénarios illustratifs chiffrés",
+      "weight": 4,
+      "siteCategory": "case-studies",
+      "defaultService": "/services/ai-consulting"
+    },
+    {
+      "id": "regulation-policy",
+      "label": "Réglementation et politique (plafonné)",
+      "weight": 3,
+      "siteCategory": "security-compliance",
+      "defaultService": "/services/ai-consulting"
+    }
+  ],
+  "topics": [
+    {
+      "id": "triage-notes-de-frais-ia-validation-automatique",
+      "category": "ai-triage",
+      "intent": "commercial",
+      "priority": 1,
+      "service": "/services/ai-consulting",
+      "title": "Notes de frais: laisser l'IA valider les cas simples et signaler les autres",
+      "angle": "Séparer les notes de frais conformes (paiement automatique) de celles qui demandent un contrôle humain: règles, seuils de confiance, piste d'audit.",
+      "keywords": {
+        "fr": [
+          "triage notes de frais ia",
+          "validation automatique notes de frais",
+          "contrôle notes de frais"
+        ],
+        "en": [
+          "ai expense report triage",
+          "automatic expense approval"
+        ],
+        "de": [
+          "spesenabrechnung ki prüfung",
+          "automatische spesenfreigabe"
+        ],
+        "es": [
+          "triaje notas de gastos ia",
+          "aprobación automática de gastos"
+        ],
+        "pt": [
+          "triagem notas de despesas ia",
+          "aprovação automática de despesas"
+        ]
+      }
+    },
+    {
+      "id": "detection-anomalies-tva-ia-fiduciaire",
+      "category": "ai-triage",
+      "intent": "commercial",
+      "priority": 1,
+      "service": "/solutions/accounting-automation",
+      "title": "Anomalies de TVA: comment l'IA repère les écritures à vérifier avant le décompte",
+      "angle": "Dans une fiduciaire, laisser un modèle passer toutes les écritures et ne remonter au comptable que les cas douteux (taux, pays, pièces manquantes).",
+      "keywords": {
+        "fr": [
+          "détection anomalies tva ia",
+          "contrôle tva automatique",
+          "ia fiduciaire tva"
+        ],
+        "en": [
+          "ai vat anomaly detection",
+          "automated vat check"
+        ],
+        "de": [
+          "mwst anomalien ki",
+          "automatische mwst prüfung"
+        ],
+        "es": [
+          "detección anomalías iva ia",
+          "control automático del iva"
+        ],
+        "pt": [
+          "deteção anomalias iva ia",
+          "controlo automático do iva"
+        ]
+      }
+    },
+    {
+      "id": "triage-intake-nouveaux-mandats-etude-avocats",
+      "category": "ai-triage",
+      "intent": "commercial",
+      "priority": 1,
+      "service": "/services/ai-consulting",
+      "title": "Étude d'avocats: trier les demandes entrantes et vérifier les conflits d'intérêts avec l'IA",
+      "angle": "Qualifier les nouvelles demandes, extraire les parties et pré-contrôler les conflits; seuls les cas ambigus arrivent chez un associé.",
+      "keywords": {
+        "fr": [
+          "intake avocats ia",
+          "vérification conflits d'intérêts automatique",
+          "tri demandes étude d'avocats"
+        ],
+        "en": [
+          "law firm intake automation",
+          "ai conflict check"
+        ],
+        "de": [
+          "kanzlei mandatsannahme ki",
+          "interessenkonflikt prüfung automatisch"
+        ],
+        "es": [
+          "admisión de clientes despacho ia",
+          "control de conflictos de interés automático"
+        ],
+        "pt": [
+          "triagem de novos clientes advogados ia",
+          "verificação de conflitos de interesses"
+        ]
+      }
+    },
+    {
+      "id": "triage-revue-documentaire-avocats-ia",
+      "category": "ai-triage",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/solutions/contract-review",
+      "title": "Revue documentaire: l'IA classe les pièces, l'avocat lit celles qui comptent",
+      "angle": "Tri de gros volumes de pièces (pertinent, privilégié, à revoir) avec échantillonnage de contrôle et traçabilité.",
+      "keywords": {
+        "fr": [
+          "revue documentaire ia",
+          "tri de documents juridiques",
+          "classification pièces avocat"
+        ],
+        "en": [
+          "ai document review triage",
+          "legal document classification"
+        ],
+        "de": [
+          "dokumentenprüfung ki kanzlei",
+          "juristische dokumente klassifizieren"
+        ],
+        "es": [
+          "revisión documental ia",
+          "clasificación de documentos jurídicos"
+        ],
+        "pt": [
+          "revisão documental ia",
+          "classificação de documentos jurídicos"
+        ]
+      }
+    },
+    {
+      "id": "triage-alertes-lba-transactions-ia",
+      "category": "ai-triage",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/solutions/compliance-kyc-monitoring",
+      "title": "Alertes de surveillance: réduire les faux positifs sans rater les vrais cas",
+      "angle": "Pré-qualification des alertes de transactions et de screening par un modèle, avec justification écrite et revue humaine des cas retenus.",
+      "keywords": {
+        "fr": [
+          "tri alertes lba ia",
+          "faux positifs surveillance transactions",
+          "alertes compliance ia"
+        ],
+        "en": [
+          "aml alert triage ai",
+          "reduce false positives transaction monitoring"
+        ],
+        "de": [
+          "gwg alarme triage ki",
+          "fehlalarme transaktionsüberwachung"
+        ],
+        "es": [
+          "triaje alertas blanqueo ia",
+          "falsos positivos monitorización de transacciones"
+        ],
+        "pt": [
+          "triagem alertas branqueamento ia",
+          "falsos positivos monitorização de transações"
+        ]
+      }
+    },
+    {
+      "id": "triage-candidatures-rh-ia",
+      "category": "ai-triage",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/services/ai-consulting",
+      "title": "Candidatures: un premier tri par IA qui reste équitable et contrôlable",
+      "angle": "Écarter les dossiers hors critères, classer les autres, et garder une décision humaine documentée; biais et transparence envers les candidats.",
+      "keywords": {
+        "fr": [
+          "tri de candidatures ia",
+          "présélection cv automatique",
+          "ia recrutement pme"
+        ],
+        "en": [
+          "ai resume screening",
+          "automated candidate screening"
+        ],
+        "de": [
+          "bewerbungen vorsortieren ki",
+          "automatische cv vorauswahl"
+        ],
+        "es": [
+          "cribado de candidaturas ia",
+          "preselección automática de cv"
+        ],
+        "pt": [
+          "triagem de candidaturas ia",
+          "pré-seleção automática de cv"
+        ]
+      }
+    },
+    {
+      "id": "triage-certificats-medicaux-absences-rh",
+      "category": "ai-triage",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/services/ai-consulting",
+      "title": "Certificats médicaux et absences: automatiser la saisie, signaler les cas à suivre",
+      "angle": "Lecture des certificats, mise à jour des absences et alerte RH uniquement pour les situations qui exigent une action (durée, délais, assurance).",
+      "keywords": {
+        "fr": [
+          "gestion absences automatique",
+          "certificats médicaux ia rh",
+          "saisie certificat médical"
+        ],
+        "en": [
+          "automate sick note processing",
+          "absence management ai"
+        ],
+        "de": [
+          "arztzeugnis automatisch erfassen",
+          "absenzenmanagement ki"
+        ],
+        "es": [
+          "gestión de bajas médicas ia",
+          "automatizar partes de baja"
+        ],
+        "pt": [
+          "gestão de baixas médicas ia",
+          "automatizar atestados médicos"
+        ]
+      }
+    },
+    {
+      "id": "triage-dossiers-locataires-regie",
+      "category": "ai-triage",
+      "intent": "commercial",
+      "priority": 1,
+      "service": "/products/ai-agents",
+      "title": "Régie immobilière: trier les dossiers de candidature de locataires avec l'IA",
+      "angle": "Contrôle de complétude, extraction des pièces et classement des dossiers; le gérant ne traite que les dossiers complets et les exceptions.",
+      "keywords": {
+        "fr": [
+          "tri dossiers locataires ia",
+          "dossier de candidature location automatique",
+          "ia régie immobilière"
+        ],
+        "en": [
+          "tenant application screening ai",
+          "rental application automation"
+        ],
+        "de": [
+          "mieterdossier prüfen ki",
+          "bewerbungsdossier wohnung automatisieren"
+        ],
+        "es": [
+          "selección de inquilinos ia",
+          "automatizar solicitudes de alquiler"
+        ],
+        "pt": [
+          "triagem de candidaturas de inquilinos ia",
+          "automatizar pedidos de arrendamento"
+        ]
+      }
+    },
+    {
+      "id": "triage-tickets-maintenance-regie-immobiliere",
+      "category": "ai-triage",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/products/ai-agents",
+      "title": "Demandes de maintenance: router automatiquement les tickets de locataires",
+      "angle": "Classer urgence et corps de métier, envoyer le bon de travail simple directement, escalader les sinistres et les cas coûteux.",
+      "keywords": {
+        "fr": [
+          "tickets maintenance immobilier ia",
+          "gestion demandes locataires automatique",
+          "routage interventions régie"
+        ],
+        "en": [
+          "maintenance request triage ai",
+          "property management ticket automation"
+        ],
+        "de": [
+          "schadenmeldung mieter ki",
+          "unterhaltstickets automatisieren"
+        ],
+        "es": [
+          "incidencias de mantenimiento ia",
+          "automatizar solicitudes de inquilinos"
+        ],
+        "pt": [
+          "pedidos de manutenção ia",
+          "automatizar pedidos de inquilinos"
+        ]
+      }
+    },
+    {
+      "id": "triage-demandes-subventions-administration-publique",
+      "category": "ai-triage",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/services/ai-consulting",
+      "title": "Administrations: pré-instruire les demandes de subvention avec l'IA",
+      "angle": "Contrôle des critères formels et des pièces, proposition de décision pour les cas clairs, instruction humaine pour le reste; transparence et recours.",
+      "keywords": {
+        "fr": [
+          "instruction demandes de subvention ia",
+          "ia administration publique",
+          "traitement automatique demandes"
+        ],
+        "en": [
+          "ai grant application processing",
+          "public sector ai triage"
+        ],
+        "de": [
+          "subventionsgesuche ki prüfung",
+          "ki öffentliche verwaltung"
+        ],
+        "es": [
+          "tramitación de subvenciones ia",
+          "ia administración pública"
+        ],
+        "pt": [
+          "análise de pedidos de subsídio ia",
+          "ia administração pública"
+        ]
+      }
+    },
+    {
+      "id": "triage-demandes-permis-autorisations-administration",
+      "category": "ai-triage",
+      "intent": "informational",
+      "priority": 3,
+      "service": "/services/ai-consulting",
+      "title": "Demandes de permis et d'autorisations: ce que l'IA peut pré-contrôler",
+      "angle": "Vérification de complétude et de conformité formelle des dossiers avant l'examen par un collaborateur; limites légales de la décision automatisée.",
+      "keywords": {
+        "fr": [
+          "contrôle dossiers autorisation ia",
+          "demande de permis traitement automatique",
+          "ia commune canton"
+        ],
+        "en": [
+          "permit application ai pre-check",
+          "automated permit processing"
+        ],
+        "de": [
+          "bewilligungsgesuch ki vorprüfung",
+          "baugesuch automatisch prüfen"
+        ],
+        "es": [
+          "solicitudes de licencias ia",
+          "precontrol automático de expedientes"
+        ],
+        "pt": [
+          "pedidos de licença ia",
+          "pré-verificação automática de processos"
+        ]
+      }
+    },
+    {
+      "id": "routage-tickets-support-client-ia",
+      "category": "ai-triage",
+      "intent": "commercial",
+      "priority": 1,
+      "service": "/solutions/customer-email-triage",
+      "title": "Support client: router les tickets par IA et résoudre seuls les cas simples",
+      "angle": "Classification, réponse automatique sous conditions et transfert au bon collaborateur avec le contexte; mesurer le taux de résolution sans dégrader la satisfaction.",
+      "keywords": {
+        "fr": [
+          "routage tickets support ia",
+          "tri automatique demandes clients",
+          "ia service client pme"
+        ],
+        "en": [
+          "ai ticket routing",
+          "customer support triage automation"
+        ],
+        "de": [
+          "ticket routing ki",
+          "kundenanfragen automatisch sortieren"
+        ],
+        "es": [
+          "enrutamiento de tickets ia",
+          "clasificación automática de solicitudes"
+        ],
+        "pt": [
+          "encaminhamento de tickets ia",
+          "classificação automática de pedidos"
+        ]
+      }
+    },
+    {
+      "id": "remboursements-sous-seuil-automatiques-ia",
+      "category": "ai-triage",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/services/ai-consulting",
+      "title": "Remboursements sous un seuil: quand laisser l'IA décider seule",
+      "angle": "Définir un montant et des conditions en dessous desquels le remboursement part automatiquement, avec contrôle par échantillonnage et détection de fraude.",
+      "keywords": {
+        "fr": [
+          "remboursement automatique ia",
+          "seuil de validation automatique",
+          "traitement réclamations clients"
+        ],
+        "en": [
+          "automated refund approval ai",
+          "refund threshold automation"
+        ],
+        "de": [
+          "rückerstattung automatisch ki",
+          "schwellenwert automatische freigabe"
+        ],
+        "es": [
+          "reembolsos automáticos ia",
+          "umbral de aprobación automática"
+        ],
+        "pt": [
+          "reembolsos automáticos ia",
+          "limiar de aprovação automática"
+        ]
+      }
+    },
+    {
+      "id": "relances-debiteurs-triage-ia",
+      "category": "ai-triage",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/solutions/accounting-automation",
+      "title": "Recouvrement: trier les débiteurs et adapter les relances avec l'IA",
+      "angle": "Distinguer retard habituel, litige et risque réel pour automatiser les rappels standards et réserver les appels aux cas sensibles.",
+      "keywords": {
+        "fr": [
+          "relance débiteurs ia",
+          "recouvrement automatisé pme",
+          "tri créances impayées"
+        ],
+        "en": [
+          "ai dunning automation",
+          "accounts receivable triage"
+        ],
+        "de": [
+          "mahnwesen ki",
+          "debitoren automatisch priorisieren"
+        ],
+        "es": [
+          "gestión de cobros ia",
+          "recordatorios de pago automáticos"
+        ],
+        "pt": [
+          "cobranças ia",
+          "lembretes de pagamento automáticos"
+        ]
+      }
+    },
+    {
+      "id": "triage-demandes-achat-procurement-ia",
+      "category": "ai-triage",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/services/ai-consulting",
+      "title": "Demandes d'achat: approuver automatiquement les cas courants",
+      "angle": "Contrôle budget, fournisseur référencé et montant; validation automatique des achats standards, circuit humain pour les exceptions.",
+      "keywords": {
+        "fr": [
+          "demandes d'achat automatisation ia",
+          "approbation achats automatique",
+          "procurement ia pme"
+        ],
+        "en": [
+          "purchase request automation ai",
+          "automated procurement approval"
+        ],
+        "de": [
+          "bestellanforderung automatisieren ki",
+          "einkaufsfreigabe automatisch"
+        ],
+        "es": [
+          "solicitudes de compra ia",
+          "aprobación automática de compras"
+        ],
+        "pt": [
+          "pedidos de compra ia",
+          "aprovação automática de compras"
+        ]
+      }
+    },
+    {
+      "id": "seuil-de-confiance-triage-ia-methode",
+      "category": "ai-triage",
+      "intent": "informational",
+      "priority": 1,
+      "service": "/services/ai-consulting",
+      "title": "Seuil de confiance: comment décider ce que l'IA traite seule et ce qu'elle transmet",
+      "angle": "Méthode pour fixer et ajuster les seuils d'un triage par IA: coût d'une erreur, échantillons de contrôle, suivi dans le temps.",
+      "keywords": {
+        "fr": [
+          "seuil de confiance ia",
+          "human in the loop",
+          "validation humaine ia"
+        ],
+        "en": [
+          "ai confidence threshold",
+          "human in the loop automation"
+        ],
+        "de": [
+          "konfidenzschwelle ki",
+          "human in the loop automatisierung"
+        ],
+        "es": [
+          "umbral de confianza ia",
+          "revisión humana en automatización"
+        ],
+        "pt": [
+          "limiar de confiança ia",
+          "revisão humana na automatização"
+        ]
+      }
+    },
+    {
+      "id": "choisir-modele-ia-openai-anthropic-mistral-open-source",
+      "category": "vendor-neutral-models",
+      "intent": "commercial",
+      "priority": 1,
+      "service": "/services/ai-consulting",
+      "title": "OpenAI, Anthropic, Mistral ou open source: grille de choix pour une entreprise suisse",
+      "angle": "Critères concrets (qualité sur vos documents, langues, confidentialité, coût, dépendance) pour choisir un modèle sans parti pris d'éditeur.",
+      "keywords": {
+        "fr": [
+          "choisir modèle ia entreprise",
+          "openai anthropic mistral comparatif",
+          "quel llm choisir"
+        ],
+        "en": [
+          "choose ai model for business",
+          "openai vs anthropic vs mistral"
+        ],
+        "de": [
+          "ki modell auswählen unternehmen",
+          "openai anthropic mistral vergleich"
+        ],
+        "es": [
+          "elegir modelo de ia empresa",
+          "openai anthropic mistral comparativa"
+        ],
+        "pt": [
+          "escolher modelo de ia empresa",
+          "openai anthropic mistral comparação"
+        ]
+      }
+    },
+    {
+      "id": "llama-mistral-qwen-gemma-comparatif-open-source",
+      "category": "vendor-neutral-models",
+      "intent": "commercial",
+      "priority": 1,
+      "service": "/services/ai-consulting",
+      "title": "Llama, Mistral, Qwen, Gemma: quel modèle open source pour quel usage métier",
+      "angle": "Comparer les familles de modèles ouverts selon la tâche (extraction, rédaction, classification), la langue, la licence et le matériel requis.",
+      "keywords": {
+        "fr": [
+          "comparatif modèles open source",
+          "llama mistral qwen gemma",
+          "llm open source entreprise"
+        ],
+        "en": [
+          "open source llm comparison",
+          "llama vs mistral vs qwen"
+        ],
+        "de": [
+          "open source llm vergleich",
+          "llama mistral qwen gemma"
+        ],
+        "es": [
+          "comparativa modelos open source",
+          "llm open source empresa"
+        ],
+        "pt": [
+          "comparação modelos open source",
+          "llm open source empresa"
+        ]
+      }
+    },
+    {
+      "id": "eviter-dependance-fournisseur-ia-architecture",
+      "category": "vendor-neutral-models",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/services/ai-consulting",
+      "title": "Éviter la dépendance à un fournisseur d'IA: les choix d'architecture qui gardent la porte ouverte",
+      "angle": "Couche d'abstraction, prompts et évaluations portables, données chez soi: comment changer de modèle sans refaire le projet.",
+      "keywords": {
+        "fr": [
+          "dépendance fournisseur ia",
+          "vendor lock-in ia",
+          "changer de modèle ia"
+        ],
+        "en": [
+          "ai vendor lock-in",
+          "switch llm provider"
+        ],
+        "de": [
+          "vendor lock-in ki",
+          "ki anbieter wechseln"
+        ],
+        "es": [
+          "dependencia de proveedor ia",
+          "cambiar de proveedor llm"
+        ],
+        "pt": [
+          "dependência de fornecedor ia",
+          "mudar de fornecedor llm"
+        ]
+      }
+    },
+    {
+      "id": "petit-modele-vs-grand-modele-taches-metier",
+      "category": "vendor-neutral-models",
+      "intent": "informational",
+      "priority": 2,
+      "service": "/services/ai-consulting",
+      "title": "Petit ou grand modèle: la plupart des tâches métier n'ont pas besoin du plus gros",
+      "angle": "Quand un petit modèle spécialisé suffit (classification, extraction, triage) et quand un grand modèle se justifie; effets sur coût et délais.",
+      "keywords": {
+        "fr": [
+          "petit modèle de langage",
+          "slm vs llm",
+          "choisir taille modèle ia"
+        ],
+        "en": [
+          "small language model vs llm",
+          "slm for business tasks"
+        ],
+        "de": [
+          "kleines sprachmodell vs llm",
+          "slm unternehmen"
+        ],
+        "es": [
+          "modelo pequeño vs llm",
+          "slm para empresas"
+        ],
+        "pt": [
+          "modelo pequeno vs llm",
+          "slm para empresas"
+        ]
+      }
+    },
+    {
+      "id": "evaluer-modeles-ia-sur-vos-documents-benchmark-interne",
+      "category": "vendor-neutral-models",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/services/ai-consulting",
+      "title": "Comparer plusieurs modèles sur vos propres documents: monter un banc d'essai en une semaine",
+      "angle": "Constituer un jeu de cas réels anonymisés, comparer éditeurs et modèles ouverts à l'aveugle, décider sur des faits plutôt que sur des classements publics.",
+      "keywords": {
+        "fr": [
+          "comparer modèles ia",
+          "benchmark llm interne",
+          "tester plusieurs llm"
+        ],
+        "en": [
+          "compare llms on your data",
+          "internal llm benchmark"
+        ],
+        "de": [
+          "llm vergleichen eigene daten",
+          "interner llm benchmark"
+        ],
+        "es": [
+          "comparar llm con datos propios",
+          "benchmark interno de llm"
+        ],
+        "pt": [
+          "comparar llm com dados próprios",
+          "benchmark interno de llm"
+        ]
+      }
+    },
+    {
+      "id": "solution-ia-sur-mesure-vs-logiciel-standard",
+      "category": "vendor-neutral-models",
+      "intent": "commercial",
+      "priority": 1,
+      "service": "/services/ai-consulting",
+      "title": "Solution IA sur mesure ou logiciel standard: comment trancher",
+      "angle": "Grille de décision selon la spécificité du processus, les volumes, l'intégration et le coût total sur trois ans.",
+      "keywords": {
+        "fr": [
+          "ia sur mesure ou logiciel standard",
+          "développer ou acheter ia",
+          "make or buy ia"
+        ],
+        "en": [
+          "custom ai vs off the shelf",
+          "build vs buy ai"
+        ],
+        "de": [
+          "ki individuallösung oder standardsoftware",
+          "make or buy ki"
+        ],
+        "es": [
+          "ia a medida o software estándar",
+          "desarrollar o comprar ia"
+        ],
+        "pt": [
+          "ia à medida ou software standard",
+          "desenvolver ou comprar ia"
+        ]
+      }
+    },
+    {
+      "id": "agent-ia-vs-chatbot-service-client",
+      "category": "vendor-neutral-models",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/products/ai-agents",
+      "title": "Agent IA ou chatbot: que choisir pour répondre à vos clients",
+      "angle": "Différences pratiques (accès aux systèmes, actions, supervision), coûts et cas où un simple chatbot suffit.",
+      "keywords": {
+        "fr": [
+          "agent ia vs chatbot",
+          "chatbot ou agent ia",
+          "chatbot service client pme"
+        ],
+        "en": [
+          "ai agent vs chatbot",
+          "chatbot or ai agent"
+        ],
+        "de": [
+          "ki agent vs chatbot",
+          "chatbot oder ki agent"
+        ],
+        "es": [
+          "agente de ia vs chatbot",
+          "chatbot o agente de ia"
+        ],
+        "pt": [
+          "agente de ia vs chatbot",
+          "chatbot ou agente de ia"
+        ]
+      }
+    },
+    {
+      "id": "power-automate-vs-n8n-vs-make",
+      "category": "vendor-neutral-models",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/services/ai-consulting",
+      "title": "Power Automate, n8n ou Make: quel outil d'automatisation pour une PME suisse",
+      "angle": "Comparaison honnête: licences, hébergement des données, connecteurs, maintenance et profils nécessaires.",
+      "keywords": {
+        "fr": [
+          "power automate vs n8n",
+          "n8n vs make",
+          "outil automatisation pme"
+        ],
+        "en": [
+          "power automate vs n8n",
+          "n8n vs make"
+        ],
+        "de": [
+          "power automate vs n8n",
+          "n8n vs make vergleich"
+        ],
+        "es": [
+          "power automate vs n8n",
+          "n8n vs make"
+        ],
+        "pt": [
+          "power automate vs n8n",
+          "n8n vs make"
+        ]
+      }
+    },
+    {
+      "id": "copilot-vs-chatgpt-vs-assistant-prive",
+      "category": "vendor-neutral-models",
+      "intent": "commercial",
+      "priority": 1,
+      "service": "/products/swiss-gpt",
+      "title": "Copilot, ChatGPT ou assistant privé: lequel pour vos collaborateurs",
+      "angle": "Comparer trois approches sur la confidentialité, l'intégration aux outils, le prix par utilisateur et la maîtrise des données.",
+      "keywords": {
+        "fr": [
+          "copilot vs chatgpt",
+          "copilot ou chatgpt entreprise",
+          "assistant ia privé"
+        ],
+        "en": [
+          "copilot vs chatgpt",
+          "copilot vs chatgpt for business"
+        ],
+        "de": [
+          "copilot vs chatgpt",
+          "copilot oder chatgpt unternehmen"
+        ],
+        "es": [
+          "copilot vs chatgpt",
+          "copilot o chatgpt empresa"
+        ],
+        "pt": [
+          "copilot vs chatgpt",
+          "copilot ou chatgpt empresa"
+        ]
+      },
+      "requires": "copilot"
+    },
+    {
+      "id": "conseil-ia-independant-vs-integrateur-editeur",
+      "category": "vendor-neutral-models",
+      "intent": "transactional",
+      "priority": 1,
+      "service": "/services/ai-consulting",
+      "title": "Conseil IA indépendant ou intégrateur d'un éditeur: ce que cela change pour votre projet",
+      "angle": "Comment la rémunération et les partenariats d'un prestataire orientent ses recommandations, et les questions à poser avant de signer.",
+      "keywords": {
+        "fr": [
+          "conseil ia indépendant",
+          "consultant ia neutre",
+          "intégrateur ia suisse"
+        ],
+        "en": [
+          "independent ai consulting",
+          "vendor neutral ai consultant"
+        ],
+        "de": [
+          "unabhängige ki beratung",
+          "herstellerneutrale ki beratung"
+        ],
+        "es": [
+          "consultoría de ia independiente",
+          "consultor de ia neutral"
+        ],
+        "pt": [
+          "consultoria de ia independente",
+          "consultor de ia neutro"
+        ]
+      }
+    },
+    {
+      "id": "api-ia-europeennes-vs-americaines-entreprise",
+      "category": "vendor-neutral-models",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/services/ai-consulting",
+      "title": "API d'IA européennes ou américaines: différences pratiques pour une entreprise suisse",
+      "angle": "Localisation du traitement, conditions contractuelles, qualité en français et en allemand, prix: ce qui compte vraiment au quotidien.",
+      "keywords": {
+        "fr": [
+          "api ia européenne",
+          "fournisseur ia européen",
+          "mistral vs openai"
+        ],
+        "en": [
+          "european ai api",
+          "european llm provider"
+        ],
+        "de": [
+          "europäische ki api",
+          "europäischer llm anbieter"
+        ],
+        "es": [
+          "api de ia europea",
+          "proveedor de ia europeo"
+        ],
+        "pt": [
+          "api de ia europeia",
+          "fornecedor de ia europeu"
+        ]
+      }
+    },
+    {
+      "id": "cout-par-token-vs-licences-ia-comparaison",
+      "category": "swiss-hosted-open-source",
+      "intent": "commercial",
+      "priority": 1,
+      "service": "/products/swiss-gpt",
+      "title": "Coût par token ou licence par utilisateur: quel modèle économique pour votre IA",
+      "angle": "Comparer une facturation à l'usage sur un modèle hébergé en Suisse et des licences par siège, selon le nombre d'utilisateurs et l'intensité d'usage.",
+      "keywords": {
+        "fr": [
+          "coût par token",
+          "prix llm entreprise",
+          "licence ia par utilisateur"
+        ],
+        "en": [
+          "cost per token vs license",
+          "llm pricing for business"
+        ],
+        "de": [
+          "kosten pro token",
+          "llm preise unternehmen"
+        ],
+        "es": [
+          "coste por token",
+          "precio llm empresa"
+        ],
+        "pt": [
+          "custo por token",
+          "preço llm empresa"
+        ]
+      }
+    },
+    {
+      "id": "dimensionner-gpu-modele-open-source-pme",
+      "category": "swiss-hosted-open-source",
+      "intent": "commercial",
+      "priority": 1,
+      "service": "/services/ai-consulting",
+      "title": "Quel GPU pour faire tourner un modèle open source: dimensionner sans surpayer",
+      "angle": "Mémoire, débit, nombre d'utilisateurs simultanés: méthode de dimensionnement et ordres de grandeur à vérifier avec un test de charge.",
+      "keywords": {
+        "fr": [
+          "gpu pour llm",
+          "dimensionnement gpu ia",
+          "serveur ia entreprise"
+        ],
+        "en": [
+          "gpu sizing for llm",
+          "ai server for business"
+        ],
+        "de": [
+          "gpu für llm",
+          "ki server unternehmen"
+        ],
+        "es": [
+          "gpu para llm",
+          "servidor de ia empresa"
+        ],
+        "pt": [
+          "gpu para llm",
+          "servidor de ia empresa"
+        ]
+      }
+    },
+    {
+      "id": "rag-documents-internes-modele-open-source-suisse",
+      "category": "swiss-hosted-open-source",
+      "intent": "commercial",
+      "priority": 1,
+      "service": "/solutions/swiss-gpt-knowledge-assistant",
+      "title": "Interroger vos documents internes avec un modèle open source hébergé en Suisse",
+      "angle": "Mettre en place une recherche augmentée sur vos dossiers sans envoyer les données à l'étranger: indexation, droits d'accès, qualité des réponses.",
+      "keywords": {
+        "fr": [
+          "rag open source",
+          "assistant documents internes suisse",
+          "rag hébergé en suisse"
+        ],
+        "en": [
+          "open source rag",
+          "private document assistant switzerland"
+        ],
+        "de": [
+          "open source rag",
+          "dokumentenassistent schweiz gehostet"
+        ],
+        "es": [
+          "rag open source",
+          "asistente de documentos internos"
+        ],
+        "pt": [
+          "rag open source",
+          "assistente de documentos internos"
+        ]
+      }
+    },
+    {
+      "id": "secret-medical-ia-hebergement-suisse-cabinets",
+      "category": "swiss-hosted-open-source",
+      "intent": "commercial",
+      "priority": 1,
+      "service": "/products/swiss-gpt",
+      "title": "Secret médical et IA: pourquoi cliniques et cabinets regardent vers l'hébergement en Suisse",
+      "angle": "Ce qu'un établissement de santé doit vérifier avant d'utiliser un modèle de langage, et ce qu'un modèle ouvert hébergé localement change.",
+      "keywords": {
+        "fr": [
+          "ia secret médical",
+          "ia santé hébergement suisse",
+          "llm données de santé"
+        ],
+        "en": [
+          "ai medical confidentiality",
+          "healthcare llm swiss hosting"
+        ],
+        "de": [
+          "ki arztgeheimnis",
+          "ki gesundheitswesen schweizer hosting"
+        ],
+        "es": [
+          "ia secreto médico",
+          "llm datos de salud"
+        ],
+        "pt": [
+          "ia segredo médico",
+          "llm dados de saúde"
+        ]
+      }
+    },
+    {
+      "id": "cloud-suisse-vs-auto-hebergement-ia",
+      "category": "swiss-hosted-open-source",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/services/ai-consulting",
+      "title": "Cloud suisse ou serveurs chez vous: où faire tourner votre modèle d'IA",
+      "angle": "Comparer cloud souverain et auto-hébergement sur la sécurité, l'exploitation, la montée en charge et le coût sur trois ans.",
+      "keywords": {
+        "fr": [
+          "cloud suisse ia",
+          "ia auto-hébergée",
+          "hébergement llm suisse"
+        ],
+        "en": [
+          "swiss cloud ai",
+          "self-hosted llm"
+        ],
+        "de": [
+          "schweizer cloud ki",
+          "llm selbst hosten"
+        ],
+        "es": [
+          "nube suiza ia",
+          "llm autoalojado"
+        ],
+        "pt": [
+          "nuvem suíça ia",
+          "llm auto-hospedado"
+        ]
+      }
+    },
+    {
+      "id": "quand-open-source-suisse-bat-saas-americain",
+      "category": "swiss-hosted-open-source",
+      "intent": "commercial",
+      "priority": 1,
+      "service": "/services/ai-consulting",
+      "title": "Quand un modèle open source hébergé en Suisse fait mieux qu'un SaaS américain",
+      "angle": "Les situations où l'option souveraine l'emporte (données sensibles, volumes élevés, tâches répétitives) et celles où elle ne se justifie pas.",
+      "keywords": {
+        "fr": [
+          "alternative suisse chatgpt",
+          "ia souveraine suisse",
+          "open source vs saas ia"
+        ],
+        "en": [
+          "swiss alternative to chatgpt",
+          "sovereign ai switzerland"
+        ],
+        "de": [
+          "schweizer alternative chatgpt",
+          "souveräne ki schweiz"
+        ],
+        "es": [
+          "alternativa suiza a chatgpt",
+          "ia soberana"
+        ],
+        "pt": [
+          "alternativa suíça ao chatgpt",
+          "ia soberana"
+        ]
+      }
+    },
+    {
+      "id": "residence-donnees-ia-suisse-questions-fournisseur",
+      "category": "swiss-hosted-open-source",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/products/swiss-gpt",
+      "title": "Résidence des données: dix questions à poser à un fournisseur d'IA",
+      "angle": "Où les données sont traitées, journalisées et sauvegardées, qui peut y accéder, et comment le vérifier dans le contrat.",
+      "keywords": {
+        "fr": [
+          "résidence des données ia",
+          "hébergement données ia suisse",
+          "questions fournisseur ia"
+        ],
+        "en": [
+          "ai data residency",
+          "data residency questions ai vendor"
+        ],
+        "de": [
+          "datenresidenz ki",
+          "ki datenstandort schweiz"
+        ],
+        "es": [
+          "residencia de datos ia",
+          "preguntas proveedor ia"
+        ],
+        "pt": [
+          "residência de dados ia",
+          "perguntas fornecedor ia"
+        ]
+      }
+    },
+    {
+      "id": "migrer-chatgpt-vers-modele-heberge-suisse",
+      "category": "swiss-hosted-open-source",
+      "intent": "transactional",
+      "priority": 2,
+      "service": "/products/swiss-gpt",
+      "title": "Passer de ChatGPT à un modèle hébergé en Suisse: plan de migration",
+      "angle": "Inventaire des usages, reprise des prompts, tests de qualité et accompagnement des équipes pour changer d'outil sans perte de productivité.",
+      "keywords": {
+        "fr": [
+          "remplacer chatgpt entreprise",
+          "migration chatgpt",
+          "chatgpt suisse alternative"
+        ],
+        "en": [
+          "replace chatgpt in business",
+          "chatgpt migration"
+        ],
+        "de": [
+          "chatgpt ersetzen unternehmen",
+          "chatgpt migration"
+        ],
+        "es": [
+          "sustituir chatgpt empresa",
+          "migración de chatgpt"
+        ],
+        "pt": [
+          "substituir chatgpt empresa",
+          "migração do chatgpt"
+        ]
+      }
+    },
+    {
+      "id": "modeles-open-source-francais-allemand-qualite",
+      "category": "swiss-hosted-open-source",
+      "intent": "informational",
+      "priority": 2,
+      "service": "/services/ai-consulting",
+      "title": "Français, allemand, italien: que valent les modèles open source dans les langues suisses",
+      "angle": "Comment tester la qualité multilingue d'un modèle ouvert sur vos textes, et les pièges du vocabulaire juridique et administratif suisse.",
+      "keywords": {
+        "fr": [
+          "llm français allemand",
+          "modèle ia multilingue suisse",
+          "qualité llm français"
+        ],
+        "en": [
+          "multilingual open source llm",
+          "llm french german quality"
+        ],
+        "de": [
+          "llm deutsch französisch",
+          "mehrsprachiges open source llm"
+        ],
+        "es": [
+          "llm multilingüe open source",
+          "llm francés alemán"
+        ],
+        "pt": [
+          "llm multilingue open source",
+          "llm francês alemão"
+        ]
+      }
+    },
+    {
+      "id": "exploiter-modele-open-source-production-maintenance",
+      "category": "swiss-hosted-open-source",
+      "intent": "informational",
+      "priority": 3,
+      "service": "/services/ai-consulting",
+      "title": "Exploiter un modèle open source en production: ce que cela demande vraiment",
+      "angle": "Mises à jour, surveillance, sauvegardes, astreinte: la charge d'exploitation réelle et ce qu'il vaut mieux déléguer.",
+      "keywords": {
+        "fr": [
+          "llm en production",
+          "exploitation modèle open source",
+          "maintenance ia"
+        ],
+        "en": [
+          "run open source llm in production",
+          "llm operations"
+        ],
+        "de": [
+          "open source llm betrieb",
+          "llm produktion wartung"
+        ],
+        "es": [
+          "llm open source en producción",
+          "operación de llm"
+        ],
+        "pt": [
+          "llm open source em produção",
+          "operação de llm"
+        ]
+      }
+    },
+    {
+      "id": "extraction-donnees-documents-ocr-ia-pme",
+      "category": "process-automation",
+      "intent": "commercial",
+      "priority": 1,
+      "service": "/solutions/document-data-extraction",
+      "title": "Du PDF au logiciel métier sans ressaisie: extraire les données de vos documents",
+      "angle": "Lecture de documents variés par IA, contrôle des champs incertains et injection dans l'ERP ou la GED.",
+      "keywords": {
+        "fr": [
+          "extraction de données documents ia",
+          "ocr intelligent",
+          "saisie automatique documents"
+        ],
+        "en": [
+          "ai document data extraction",
+          "intelligent ocr"
+        ],
+        "de": [
+          "datenextraktion dokumente ki",
+          "intelligente ocr"
+        ],
+        "es": [
+          "extracción de datos de documentos ia",
+          "ocr inteligente"
+        ],
+        "pt": [
+          "extração de dados de documentos ia",
+          "ocr inteligente"
+        ]
+      }
+    },
+    {
+      "id": "automatiser-devis-propositions-commerciales-ia",
+      "category": "process-automation",
+      "intent": "transactional",
+      "priority": 1,
+      "service": "/solutions/quote-proposal-generation",
+      "title": "Générer devis et propositions commerciales avec l'IA: méthode et garde-fous",
+      "angle": "Passer d'une demande client à un devis prêt à valider: tarifs, modèles, contrôle avant envoi.",
+      "keywords": {
+        "fr": [
+          "générer devis ia",
+          "automatisation devis",
+          "proposition commerciale automatique"
+        ],
+        "en": [
+          "ai quote generation",
+          "automated proposal"
+        ],
+        "de": [
+          "offerten automatisieren ki",
+          "angebot automatisch erstellen"
+        ],
+        "es": [
+          "generar presupuestos ia",
+          "propuesta comercial automática"
+        ],
+        "pt": [
+          "gerar orçamentos ia",
+          "proposta comercial automática"
+        ]
+      }
+    },
+    {
+      "id": "onboarding-collaborateurs-automatise-ia",
+      "category": "process-automation",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/solutions/hr-onboarding",
+      "title": "Automatiser l'arrivée d'un nouveau collaborateur: checklist RH et IT",
+      "angle": "Comptes, matériel, documents et formation orchestrés par un agent, avec les validations qui restent humaines.",
+      "keywords": {
+        "fr": [
+          "onboarding collaborateur automatisé",
+          "automatiser intégration salarié",
+          "onboarding rh ia"
+        ],
+        "en": [
+          "automated employee onboarding",
+          "hr onboarding automation"
+        ],
+        "de": [
+          "onboarding mitarbeitende automatisieren",
+          "hr onboarding ki"
+        ],
+        "es": [
+          "onboarding de empleados automatizado",
+          "automatizar incorporación"
+        ],
+        "pt": [
+          "onboarding de colaboradores automatizado",
+          "automatizar integração"
+        ]
+      }
+    },
+    {
+      "id": "helpdesk-it-agent-ia-pme",
+      "category": "process-automation",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/solutions/it-helpdesk-agent",
+      "title": "Helpdesk IT: confier le premier niveau à un agent IA",
+      "angle": "Réinitialisations, demandes d'accès et questions courantes traitées automatiquement; escalade documentée vers le technicien.",
+      "keywords": {
+        "fr": [
+          "helpdesk it ia",
+          "agent ia support informatique",
+          "automatiser support it"
+        ],
+        "en": [
+          "ai it helpdesk",
+          "it support automation"
+        ],
+        "de": [
+          "it helpdesk ki",
+          "it support automatisieren"
+        ],
+        "es": [
+          "helpdesk de ti con ia",
+          "automatizar soporte informático"
+        ],
+        "pt": [
+          "helpdesk de ti com ia",
+          "automatizar suporte informático"
+        ]
+      }
+    },
+    {
+      "id": "qualification-leads-agent-ia",
+      "category": "process-automation",
+      "intent": "commercial",
+      "priority": 1,
+      "service": "/solutions/lead-qualification",
+      "title": "Qualifier les demandes entrantes avec un agent IA: du formulaire au CRM",
+      "angle": "Enrichir, noter et router chaque demande en quelques minutes, sans perdre le contact humain au bon moment.",
+      "keywords": {
+        "fr": [
+          "qualification leads ia",
+          "agent ia commercial",
+          "automatiser prospection entrante"
+        ],
+        "en": [
+          "ai lead qualification",
+          "automated lead scoring"
+        ],
+        "de": [
+          "lead qualifizierung ki",
+          "leads automatisch bewerten"
+        ],
+        "es": [
+          "cualificación de leads ia",
+          "puntuación automática de leads"
+        ],
+        "pt": [
+          "qualificação de leads ia",
+          "pontuação automática de leads"
+        ]
+      }
+    },
+    {
+      "id": "rapports-clients-automatiques-word-ia",
+      "category": "process-automation",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/solutions/word-report-generation",
+      "title": "Rapports clients: produire le premier jet à partir de vos données",
+      "angle": "Assembler chiffres, commentaires et mise en page dans vos modèles, puis relire au lieu de rédiger.",
+      "keywords": {
+        "fr": [
+          "génération de rapports automatique",
+          "rapport client ia",
+          "automatiser reporting"
+        ],
+        "en": [
+          "automated report generation",
+          "ai client reports"
+        ],
+        "de": [
+          "berichte automatisch erstellen",
+          "kundenreporting ki"
+        ],
+        "es": [
+          "generación automática de informes",
+          "informes de clientes ia"
+        ],
+        "pt": [
+          "geração automática de relatórios",
+          "relatórios de clientes ia"
+        ]
+      }
+    },
+    {
+      "id": "veille-recherche-agent-ia-dossiers",
+      "category": "process-automation",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/solutions/research-agent",
+      "title": "Agent de recherche: préparer un dossier en une heure au lieu d'une journée",
+      "angle": "Collecte de sources, synthèse citée et points à vérifier: ce qu'un agent de recherche fait bien et ce qu'il faut relire.",
+      "keywords": {
+        "fr": [
+          "agent de recherche ia",
+          "veille automatisée",
+          "synthèse documentaire ia"
+        ],
+        "en": [
+          "ai research agent",
+          "automated research"
+        ],
+        "de": [
+          "ki recherche agent",
+          "automatisierte recherche"
+        ],
+        "es": [
+          "agente de investigación ia",
+          "vigilancia automatizada"
+        ],
+        "pt": [
+          "agente de pesquisa ia",
+          "vigilância automatizada"
+        ]
+      }
+    },
+    {
+      "id": "rapprochement-bancaire-automatise-ia",
+      "category": "process-automation",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/solutions/accounting-automation",
+      "title": "Rapprochement bancaire: ce que l'IA lettre seule et ce qu'elle vous laisse",
+      "angle": "Lettrage automatique des mouvements évidents, propositions pour les cas partiels et file d'attente claire pour le comptable.",
+      "keywords": {
+        "fr": [
+          "rapprochement bancaire automatique",
+          "lettrage automatique ia",
+          "automatisation comptable"
+        ],
+        "en": [
+          "automated bank reconciliation",
+          "ai reconciliation"
+        ],
+        "de": [
+          "bankabstimmung automatisieren",
+          "kontenabgleich ki"
+        ],
+        "es": [
+          "conciliación bancaria automática",
+          "conciliación con ia"
+        ],
+        "pt": [
+          "reconciliação bancária automática",
+          "reconciliação com ia"
+        ]
+      }
+    },
+    {
+      "id": "ia-fiduciaire-cas-usage-rentables",
+      "category": "industry",
+      "intent": "commercial",
+      "priority": 1,
+      "service": "/solutions/accounting-automation",
+      "title": "IA pour fiduciaires: les cas d'usage qui se rentabilisent en premier",
+      "angle": "Courrier, pièces comptables, relances et rapports: par où commencer dans une fiduciaire de petite ou moyenne taille.",
+      "keywords": {
+        "fr": [
+          "ia fiduciaire",
+          "automatisation fiduciaire",
+          "intelligence artificielle comptabilité suisse"
+        ],
+        "en": [
+          "ai for accounting firms",
+          "fiduciary automation switzerland"
+        ],
+        "de": [
+          "ki treuhand",
+          "treuhand automatisierung"
+        ],
+        "es": [
+          "ia para asesorías contables",
+          "automatización gestoría"
+        ],
+        "pt": [
+          "ia para gabinetes de contabilidade",
+          "automatização contabilidade"
+        ]
+      }
+    },
+    {
+      "id": "ia-cabinet-avocats-geneve-cas-usage",
+      "category": "industry",
+      "intent": "commercial",
+      "priority": 1,
+      "service": "/products/swiss-gpt",
+      "title": "IA pour études d'avocats à Genève: cas d'usage et choix d'outils",
+      "angle": "Recherche, rédaction, revue de pièces et gestion des demandes, avec un regard particulier sur la confidentialité des dossiers.",
+      "keywords": {
+        "fr": [
+          "ia avocats genève",
+          "intelligence artificielle étude d'avocats",
+          "outil ia juridique suisse"
+        ],
+        "en": [
+          "ai for law firms geneva",
+          "legal ai switzerland"
+        ],
+        "de": [
+          "ki anwaltskanzlei",
+          "legal ki schweiz"
+        ],
+        "es": [
+          "ia para despachos de abogados",
+          "ia jurídica suiza"
+        ],
+        "pt": [
+          "ia para escritórios de advogados",
+          "ia jurídica suíça"
+        ]
+      }
+    },
+    {
+      "id": "ia-family-office-reporting-documents",
+      "category": "industry",
+      "intent": "commercial",
+      "priority": 1,
+      "service": "/products/ai-agents",
+      "title": "Family office: alléger reporting, courrier et suivi documentaire avec l'IA",
+      "angle": "Consolider les relevés, classer la correspondance et préparer les rapports périodiques dans un cadre strictement confidentiel.",
+      "keywords": {
+        "fr": [
+          "ia family office",
+          "automatisation family office",
+          "reporting patrimonial automatique"
+        ],
+        "en": [
+          "ai for family offices",
+          "family office automation"
+        ],
+        "de": [
+          "ki family office",
+          "family office automatisierung"
+        ],
+        "es": [
+          "ia para family office",
+          "automatización family office"
+        ],
+        "pt": [
+          "ia para family office",
+          "automatização family office"
+        ]
+      }
+    },
+    {
+      "id": "ia-cabinet-medical-administratif",
+      "category": "industry",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/products/ai-agents",
+      "title": "Cabinets médicaux: réduire l'administratif avec l'IA sans toucher à la décision médicale",
+      "angle": "Courrier, prises de rendez-vous, facturation et demandes d'assurance: ce qui s'automatise et les précautions propres aux données de santé.",
+      "keywords": {
+        "fr": [
+          "ia cabinet médical",
+          "automatisation administrative médecin",
+          "ia santé suisse"
+        ],
+        "en": [
+          "ai for medical practices",
+          "medical admin automation"
+        ],
+        "de": [
+          "ki arztpraxis",
+          "praxisadministration automatisieren"
+        ],
+        "es": [
+          "ia para consultas médicas",
+          "automatización administrativa médica"
+        ],
+        "pt": [
+          "ia para consultórios médicos",
+          "automatização administrativa médica"
+        ]
+      }
+    },
+    {
+      "id": "ia-commerce-detail-pme-suisse",
+      "category": "industry",
+      "intent": "commercial",
+      "priority": 3,
+      "service": "/products/ai-agents",
+      "title": "Commerce de détail: l'IA pour le service client, les fiches produits et les stocks",
+      "angle": "Trois chantiers accessibles à un commerçant indépendant ou à une petite chaîne, avec les prérequis côté données.",
+      "keywords": {
+        "fr": [
+          "ia commerce de détail",
+          "ia retail pme",
+          "automatisation boutique en ligne"
+        ],
+        "en": [
+          "ai for retail smes",
+          "retail automation"
+        ],
+        "de": [
+          "ki detailhandel",
+          "ki einzelhandel kmu"
+        ],
+        "es": [
+          "ia para comercio minorista",
+          "automatización retail"
+        ],
+        "pt": [
+          "ia para retalho",
+          "automatização retalho"
+        ]
+      }
+    },
+    {
+      "id": "ia-hotellerie-restauration-suisse",
+      "category": "industry",
+      "intent": "commercial",
+      "priority": 3,
+      "service": "/products/ai-agents",
+      "title": "Hôtels et restaurants: répondre aux demandes et gérer les réservations avec un agent IA",
+      "angle": "Emails, messages et demandes de groupes traités en plusieurs langues, avec reprise par l'équipe quand la demande sort du cadre.",
+      "keywords": {
+        "fr": [
+          "ia hôtellerie",
+          "agent ia hôtel",
+          "automatisation réservations restaurant"
+        ],
+        "en": [
+          "ai for hotels",
+          "hospitality ai agent"
+        ],
+        "de": [
+          "ki hotellerie",
+          "ki agent hotel"
+        ],
+        "es": [
+          "ia para hoteles",
+          "agente de ia hostelería"
+        ],
+        "pt": [
+          "ia para hotéis",
+          "agente de ia hotelaria"
+        ]
+      }
+    },
+    {
+      "id": "ia-gerants-fortune-independants",
+      "category": "industry",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/solutions/compliance-kyc-monitoring",
+      "title": "Gérants de fortune indépendants: l'IA pour la documentation client et le suivi",
+      "angle": "Profil client, comptes rendus d'entretien et contrôles périodiques préparés automatiquement et validés par le gérant.",
+      "keywords": {
+        "fr": [
+          "ia gérant de fortune",
+          "automatisation gestion de fortune",
+          "documentation client gérant indépendant"
+        ],
+        "en": [
+          "ai for wealth managers",
+          "asset manager automation"
+        ],
+        "de": [
+          "ki vermögensverwalter",
+          "vermögensverwaltung automatisierung"
+        ],
+        "es": [
+          "ia para gestores patrimoniales",
+          "automatización gestión de patrimonios"
+        ],
+        "pt": [
+          "ia para gestores de patrimónios",
+          "automatização gestão de patrimónios"
+        ]
+      }
+    },
+    {
+      "id": "ia-bureau-ingenieurs-architectes",
+      "category": "industry",
+      "intent": "commercial",
+      "priority": 3,
+      "service": "/solutions/quote-proposal-generation",
+      "title": "Bureaux d'architectes et d'ingénieurs: offres, soumissions et rapports assistés par IA",
+      "angle": "Réutiliser les dossiers passés pour répondre plus vite aux appels d'offres et produire les rapports de chantier.",
+      "keywords": {
+        "fr": [
+          "ia architectes",
+          "ia bureau d'ingénieurs",
+          "réponse appel d'offres ia"
+        ],
+        "en": [
+          "ai for architects",
+          "ai tender response"
+        ],
+        "de": [
+          "ki architekturbüro",
+          "ki ausschreibungen"
+        ],
+        "es": [
+          "ia para arquitectos",
+          "respuesta a licitaciones ia"
+        ],
+        "pt": [
+          "ia para arquitetos",
+          "resposta a concursos ia"
+        ]
+      }
+    },
+    {
+      "id": "ia-courtier-assurance-pme",
+      "category": "industry",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/products/ai-agents",
+      "title": "Courtiers en assurance: automatiser comparatifs, renouvellements et relances",
+      "angle": "Préparer les comparaisons d'offres, suivre les échéances et répondre aux demandes courantes des assurés.",
+      "keywords": {
+        "fr": [
+          "ia courtier en assurance",
+          "automatisation courtage",
+          "agent ia assurance"
+        ],
+        "en": [
+          "ai for insurance brokers",
+          "broker automation"
+        ],
+        "de": [
+          "ki versicherungsbroker",
+          "makler automatisierung"
+        ],
+        "es": [
+          "ia para corredores de seguros",
+          "automatización correduría"
+        ],
+        "pt": [
+          "ia para mediadores de seguros",
+          "automatização mediação de seguros"
+        ]
+      }
+    },
+    {
+      "id": "ia-etude-notaire-actes",
+      "category": "industry",
+      "intent": "commercial",
+      "priority": 3,
+      "service": "/solutions/word-contract-drafting",
+      "title": "Études de notaires: préparer les actes et gérer les pièces avec l'IA",
+      "angle": "Projets d'actes à partir de modèles et de données vérifiées, contrôle des pièces et suivi des délais.",
+      "keywords": {
+        "fr": [
+          "ia notaire",
+          "automatisation étude notariale",
+          "rédaction actes ia"
+        ],
+        "en": [
+          "ai for notaries",
+          "notary document automation"
+        ],
+        "de": [
+          "ki notariat",
+          "notariat automatisierung"
+        ],
+        "es": [
+          "ia para notarías",
+          "automatización notarial"
+        ],
+        "pt": [
+          "ia para notários",
+          "automatização notarial"
+        ]
+      }
+    },
+    {
+      "id": "cout-agent-ia-pme-suisse",
+      "category": "cost-roi",
+      "intent": "transactional",
+      "priority": 1,
+      "service": "/products/ai-agents",
+      "title": "Combien coûte un agent IA pour une PME en Suisse",
+      "angle": "Postes de coût (cadrage, intégration, modèle, exploitation) et facteurs qui font varier la facture, sans promesse de prix unique.",
+      "keywords": {
+        "fr": [
+          "prix agent ia",
+          "coût agent ia pme",
+          "tarif automatisation ia"
+        ],
+        "en": [
+          "ai agent cost",
+          "ai agent pricing for smes"
+        ],
+        "de": [
+          "kosten ki agent",
+          "ki agent preis kmu"
+        ],
+        "es": [
+          "coste agente de ia",
+          "precio agente de ia pyme"
+        ],
+        "pt": [
+          "custo agente de ia",
+          "preço agente de ia pme"
+        ]
+      }
+    },
+    {
+      "id": "calcul-roi-triage-ia-volumes-seuils",
+      "category": "cost-roi",
+      "intent": "commercial",
+      "priority": 1,
+      "service": "/services/ai-consulting",
+      "title": "Calculer le retour sur investissement d'un triage par IA",
+      "angle": "Formule simple à partir du volume de dossiers, de la part automatisable, du temps par dossier et du coût d'une erreur.",
+      "keywords": {
+        "fr": [
+          "roi automatisation ia",
+          "calcul roi ia",
+          "rentabilité triage automatique"
+        ],
+        "en": [
+          "ai automation roi",
+          "calculate ai roi"
+        ],
+        "de": [
+          "roi ki automatisierung",
+          "ki roi berechnen"
+        ],
+        "es": [
+          "roi automatización ia",
+          "calcular roi de ia"
+        ],
+        "pt": [
+          "roi automatização ia",
+          "calcular roi de ia"
+        ]
+      }
+    },
+    {
+      "id": "budget-projet-ia-pme-premiere-annee",
+      "category": "cost-roi",
+      "intent": "commercial",
+      "priority": 1,
+      "service": "/services/ai-consulting",
+      "title": "Budget d'un premier projet IA: ce qu'il faut prévoir la première année",
+      "angle": "Conseil, développement, usage du modèle, hébergement, formation et maintenance: construire un budget réaliste.",
+      "keywords": {
+        "fr": [
+          "budget projet ia",
+          "coût projet ia pme",
+          "prix intelligence artificielle entreprise"
+        ],
+        "en": [
+          "ai project budget",
+          "ai project cost sme"
+        ],
+        "de": [
+          "budget ki projekt",
+          "kosten ki projekt kmu"
+        ],
+        "es": [
+          "presupuesto proyecto ia",
+          "coste proyecto ia pyme"
+        ],
+        "pt": [
+          "orçamento projeto ia",
+          "custo projeto ia pme"
+        ]
+      }
+    },
+    {
+      "id": "cout-gpt-prive-entreprise-suisse",
+      "category": "cost-roi",
+      "intent": "transactional",
+      "priority": 2,
+      "service": "/products/swiss-gpt",
+      "title": "Assistant privé en entreprise: coût par utilisateur et coût à l'usage",
+      "angle": "Comparer les modes de facturation et estimer la dépense selon la taille de l'équipe.",
+      "keywords": {
+        "fr": [
+          "prix gpt privé",
+          "coût assistant ia entreprise",
+          "tarif chatgpt entreprise suisse"
+        ],
+        "en": [
+          "private gpt cost",
+          "enterprise ai assistant pricing"
+        ],
+        "de": [
+          "kosten privates gpt",
+          "ki assistent unternehmen preis"
+        ],
+        "es": [
+          "coste gpt privado",
+          "precio asistente de ia empresa"
+        ],
+        "pt": [
+          "custo gpt privado",
+          "preço assistente de ia empresa"
+        ]
+      }
+    },
+    {
+      "id": "cout-consultant-ia-geneve-tarifs",
+      "category": "cost-roi",
+      "intent": "transactional",
+      "priority": 1,
+      "service": "/services/ai-consulting",
+      "title": "Consultant IA à Genève: tarifs, formats de mission et livrables à exiger",
+      "angle": "Régie, forfait ou atelier de cadrage: comment se construisent les honoraires et comment comparer deux offres.",
+      "keywords": {
+        "fr": [
+          "tarif consultant ia",
+          "consultant ia genève",
+          "prix conseil ia suisse"
+        ],
+        "en": [
+          "ai consultant rates geneva",
+          "ai consulting pricing switzerland"
+        ],
+        "de": [
+          "ki berater tarif",
+          "ki beratung preise schweiz"
+        ],
+        "es": [
+          "tarifas consultor de ia",
+          "consultoría de ia ginebra"
+        ],
+        "pt": [
+          "tarifas consultor de ia",
+          "consultoria de ia genebra"
+        ]
+      }
+    },
+    {
+      "id": "prix-developpement-add-in-outlook-word",
+      "category": "cost-roi",
+      "intent": "transactional",
+      "priority": 3,
+      "service": "/services/microsoft-consulting",
+      "title": "Combien coûte le développement d'un add-in Outlook ou Word sur mesure",
+      "angle": "Ce qui détermine l'effort: fonctions, intégrations, sécurité, déploiement et maintenance.",
+      "keywords": {
+        "fr": [
+          "prix développement add-in outlook",
+          "coût add-in word",
+          "développement add-in office"
+        ],
+        "en": [
+          "outlook add-in development cost",
+          "custom office add-in pricing"
+        ],
+        "de": [
+          "kosten outlook add-in entwicklung",
+          "office add-in entwickeln preis"
+        ],
+        "es": [
+          "coste desarrollo complemento outlook",
+          "precio complemento office"
+        ],
+        "pt": [
+          "custo desenvolvimento suplemento outlook",
+          "preço suplemento office"
+        ]
+      }
+    },
+    {
+      "id": "cout-total-ia-auto-hebergee-vs-api",
+      "category": "cost-roi",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/services/ai-consulting",
+      "title": "IA auto-hébergée ou API: comparer le coût total sur trois ans",
+      "angle": "Matériel, énergie, exploitation et personnel face à une facturation à l'usage: méthode de calcul et seuil de bascule.",
+      "keywords": {
+        "fr": [
+          "coût ia auto-hébergée",
+          "tco llm",
+          "api ia vs serveur"
+        ],
+        "en": [
+          "self-hosted ai total cost",
+          "llm tco"
+        ],
+        "de": [
+          "kosten selbst gehostete ki",
+          "llm tco"
+        ],
+        "es": [
+          "coste ia autoalojada",
+          "tco llm"
+        ],
+        "pt": [
+          "custo ia auto-hospedada",
+          "tco llm"
+        ]
+      }
+    },
+    {
+      "id": "choisir-prestataire-ia-suisse-romande-criteres",
+      "category": "implementation-guide",
+      "intent": "transactional",
+      "priority": 1,
+      "service": "/services/ai-consulting",
+      "title": "Choisir un prestataire IA en Suisse romande: douze questions à poser",
+      "angle": "Références vérifiables, indépendance vis-à-vis des éditeurs, propriété du code, hébergement, suivi après la mise en service.",
+      "keywords": {
+        "fr": [
+          "prestataire ia suisse romande",
+          "choisir consultant ia",
+          "agence ia suisse"
+        ],
+        "en": [
+          "choose ai consultant switzerland",
+          "ai agency switzerland"
+        ],
+        "de": [
+          "ki dienstleister schweiz",
+          "ki agentur auswählen"
+        ],
+        "es": [
+          "elegir consultora de ia",
+          "agencia de ia suiza"
+        ],
+        "pt": [
+          "escolher consultora de ia",
+          "agência de ia suíça"
+        ]
+      }
+    },
+    {
+      "id": "premier-projet-ia-pme-90-jours",
+      "category": "implementation-guide",
+      "intent": "commercial",
+      "priority": 1,
+      "service": "/services/ai-consulting",
+      "title": "Premier projet IA en PME: un plan sur 90 jours",
+      "angle": "Du choix du cas d'usage à la mise en service: étapes, rôles et points de décision.",
+      "keywords": {
+        "fr": [
+          "premier projet ia pme",
+          "démarrer avec l'ia entreprise",
+          "feuille de route ia pme"
+        ],
+        "en": [
+          "first ai project sme",
+          "ai roadmap small business"
+        ],
+        "de": [
+          "erstes ki projekt kmu",
+          "ki einführung kmu"
+        ],
+        "es": [
+          "primer proyecto de ia pyme",
+          "hoja de ruta ia pyme"
+        ],
+        "pt": [
+          "primeiro projeto de ia pme",
+          "roteiro ia pme"
+        ]
+      }
+    },
+    {
+      "id": "audit-processus-automatisables-methode",
+      "category": "implementation-guide",
+      "intent": "transactional",
+      "priority": 1,
+      "service": "/services/ai-consulting",
+      "title": "Identifier les processus à automatiser: méthode d'audit en une demi-journée",
+      "angle": "Grille volume, répétitivité, règles et risque pour classer vos processus et choisir le premier.",
+      "keywords": {
+        "fr": [
+          "audit automatisation",
+          "processus à automatiser",
+          "audit ia entreprise"
+        ],
+        "en": [
+          "automation audit",
+          "processes to automate"
+        ],
+        "de": [
+          "automatisierungs audit",
+          "prozesse automatisieren identifizieren"
+        ],
+        "es": [
+          "auditoría de automatización",
+          "procesos a automatizar"
+        ],
+        "pt": [
+          "auditoria de automatização",
+          "processos a automatizar"
+        ]
+      }
+    },
+    {
+      "id": "cahier-des-charges-projet-ia-modele",
+      "category": "implementation-guide",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/services/ai-consulting",
+      "title": "Cahier des charges d'un projet IA: modèle commenté",
+      "angle": "Les rubriques indispensables (objectif mesurable, données, critères d'acceptation, exploitation) et les erreurs de rédaction courantes.",
+      "keywords": {
+        "fr": [
+          "cahier des charges ia",
+          "modèle cahier des charges projet ia",
+          "spécifications projet ia"
+        ],
+        "en": [
+          "ai project requirements template",
+          "ai project brief"
+        ],
+        "de": [
+          "lastenheft ki projekt",
+          "ki projekt anforderungen vorlage"
+        ],
+        "es": [
+          "pliego de condiciones proyecto ia",
+          "plantilla requisitos ia"
+        ],
+        "pt": [
+          "caderno de encargos projeto ia",
+          "modelo requisitos ia"
+        ]
+      }
+    },
+    {
+      "id": "pilote-ia-reussir-poc-production",
+      "category": "implementation-guide",
+      "intent": "informational",
+      "priority": 2,
+      "service": "/services/ai-consulting",
+      "title": "Du pilote à la production: pourquoi tant de projets IA s'arrêtent en route",
+      "angle": "Causes fréquentes d'échec et décisions à prendre dès le pilote pour pouvoir passer à l'échelle.",
+      "keywords": {
+        "fr": [
+          "poc ia production",
+          "projet ia échec",
+          "passer du pilote à la production ia"
+        ],
+        "en": [
+          "ai poc to production",
+          "why ai projects fail"
+        ],
+        "de": [
+          "ki poc produktion",
+          "ki projekte scheitern"
+        ],
+        "es": [
+          "poc de ia a producción",
+          "por qué fracasan los proyectos de ia"
+        ],
+        "pt": [
+          "poc de ia para produção",
+          "porque falham os projetos de ia"
+        ]
+      }
+    },
+    {
+      "id": "formation-ia-collaborateurs-pme-programme",
+      "category": "implementation-guide",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/services/ai-consulting",
+      "title": "Former ses collaborateurs à l'IA: un programme en quatre ateliers",
+      "angle": "Contenu, durée et exercices sur vos propres cas pour que l'outil soit réellement utilisé.",
+      "keywords": {
+        "fr": [
+          "formation ia entreprise",
+          "former collaborateurs ia",
+          "atelier ia pme"
+        ],
+        "en": [
+          "ai training for employees",
+          "ai workshop sme"
+        ],
+        "de": [
+          "ki schulung mitarbeitende",
+          "ki workshop kmu"
+        ],
+        "es": [
+          "formación en ia para empleados",
+          "taller de ia pyme"
+        ],
+        "pt": [
+          "formação em ia para colaboradores",
+          "workshop de ia pme"
+        ]
+      }
+    },
+    {
+      "id": "agence-ia-geneve-services-comparer-offres",
+      "category": "implementation-guide",
+      "intent": "transactional",
+      "priority": 1,
+      "service": "/services/ai-consulting",
+      "title": "Agence IA à Genève: quels services attendre et comment comparer les offres",
+      "angle": "Conseil, développement, hébergement, formation: lire une offre et repérer ce qui manque.",
+      "keywords": {
+        "fr": [
+          "agence ia genève",
+          "conseil ia genève",
+          "expert ia genève"
+        ],
+        "en": [
+          "ai agency geneva",
+          "ai consulting geneva"
+        ],
+        "de": [
+          "ki agentur genf",
+          "ki beratung genf"
+        ],
+        "es": [
+          "agencia de ia ginebra",
+          "consultoría de ia ginebra"
+        ],
+        "pt": [
+          "agência de ia genebra",
+          "consultoria de ia genebra"
+        ]
+      }
+    },
+    {
+      "id": "power-apps-application-metier-pme",
+      "category": "microsoft-365",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/services/microsoft-consulting",
+      "title": "Créer une application métier avec Power Apps: par où commencer",
+      "angle": "Cas adaptés, limites, licences et bonnes pratiques pour une première application utile.",
+      "keywords": {
+        "fr": [
+          "power apps pme",
+          "application métier power apps",
+          "créer application power apps"
+        ],
+        "en": [
+          "power apps for smes",
+          "build business app power apps"
+        ],
+        "de": [
+          "power apps kmu",
+          "geschäftsanwendung power apps"
+        ],
+        "es": [
+          "power apps para pymes",
+          "crear aplicación power apps"
+        ],
+        "pt": [
+          "power apps para pme",
+          "criar aplicação power apps"
+        ]
+      }
+    },
+    {
+      "id": "sharepoint-gestion-documentaire-pme-structure",
+      "category": "microsoft-365",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/services/microsoft-consulting",
+      "title": "Structurer SharePoint pour une PME: bibliothèques, métadonnées et droits",
+      "angle": "Une organisation simple qui tient dans le temps et prépare l'usage d'un assistant IA.",
+      "keywords": {
+        "fr": [
+          "sharepoint gestion documentaire pme",
+          "structurer sharepoint",
+          "ged sharepoint"
+        ],
+        "en": [
+          "sharepoint document management sme",
+          "structure sharepoint"
+        ],
+        "de": [
+          "sharepoint dokumentenmanagement kmu",
+          "sharepoint strukturieren"
+        ],
+        "es": [
+          "gestión documental sharepoint pyme",
+          "estructurar sharepoint"
+        ],
+        "pt": [
+          "gestão documental sharepoint pme",
+          "estruturar sharepoint"
+        ]
+      }
+    },
+    {
+      "id": "power-bi-tableau-de-bord-direction-pme",
+      "category": "microsoft-365",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/services/microsoft-consulting",
+      "title": "Tableau de bord de direction avec Power BI: les indicateurs utiles à une PME",
+      "angle": "Choisir peu d'indicateurs, brancher les bonnes sources et garder des chiffres fiables.",
+      "keywords": {
+        "fr": [
+          "tableau de bord power bi pme",
+          "power bi direction",
+          "indicateurs pme power bi"
+        ],
+        "en": [
+          "power bi dashboard for smes",
+          "executive dashboard power bi"
+        ],
+        "de": [
+          "power bi dashboard kmu",
+          "management cockpit power bi"
+        ],
+        "es": [
+          "cuadro de mando power bi pyme",
+          "dashboard directivo power bi"
+        ],
+        "pt": [
+          "painel power bi pme",
+          "dashboard de gestão power bi"
+        ]
+      }
+    },
+    {
+      "id": "copilot-microsoft-365-pme-vaut-il-le-cout",
+      "category": "microsoft-365",
+      "intent": "commercial",
+      "priority": 1,
+      "service": "/services/microsoft-consulting",
+      "title": "Copilot pour Microsoft 365 en PME: dans quels cas la licence se justifie",
+      "angle": "Prérequis côté données et droits, usages qui rapportent, et alternatives quand le besoin est ciblé.",
+      "keywords": {
+        "fr": [
+          "copilot microsoft 365 pme",
+          "copilot prix",
+          "copilot vaut-il le coût"
+        ],
+        "en": [
+          "is copilot worth it",
+          "microsoft 365 copilot for smes"
+        ],
+        "de": [
+          "copilot microsoft 365 kmu",
+          "lohnt sich copilot"
+        ],
+        "es": [
+          "copilot microsoft 365 pyme",
+          "merece la pena copilot"
+        ],
+        "pt": [
+          "copilot microsoft 365 pme",
+          "vale a pena o copilot"
+        ]
+      },
+      "requires": "copilot"
+    },
+    {
+      "id": "microsoft-365-licences-business-premium-e3-choisir",
+      "category": "microsoft-365",
+      "intent": "commercial",
+      "priority": 3,
+      "service": "/services/microsoft-consulting",
+      "title": "Business Premium, E3 ou E5: quelle licence Microsoft 365 pour une PME suisse",
+      "angle": "Différences utiles au quotidien (sécurité, conformité, automatisation) et erreurs d'achat fréquentes.",
+      "keywords": {
+        "fr": [
+          "licence microsoft 365 pme",
+          "business premium vs e3",
+          "choisir licence microsoft 365"
+        ],
+        "en": [
+          "microsoft 365 business premium vs e3",
+          "microsoft 365 license sme"
+        ],
+        "de": [
+          "microsoft 365 business premium vs e3",
+          "microsoft 365 lizenz kmu"
+        ],
+        "es": [
+          "microsoft 365 business premium vs e3",
+          "licencia microsoft 365 pyme"
+        ],
+        "pt": [
+          "microsoft 365 business premium vs e3",
+          "licença microsoft 365 pme"
+        ]
+      }
+    },
+    {
+      "id": "sharepoint-preparer-donnees-assistant-ia",
+      "category": "microsoft-365",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/services/microsoft-consulting",
+      "title": "Préparer SharePoint avant d'y brancher un assistant IA",
+      "angle": "Nettoyer les droits, archiver l'obsolète et structurer les sites pour éviter les réponses fausses ou indiscrètes.",
+      "keywords": {
+        "fr": [
+          "préparer sharepoint ia",
+          "droits sharepoint assistant ia",
+          "sharepoint oversharing"
+        ],
+        "en": [
+          "prepare sharepoint for ai",
+          "sharepoint oversharing"
+        ],
+        "de": [
+          "sharepoint für ki vorbereiten",
+          "sharepoint berechtigungen ki"
+        ],
+        "es": [
+          "preparar sharepoint para ia",
+          "permisos sharepoint ia"
+        ],
+        "pt": [
+          "preparar sharepoint para ia",
+          "permissões sharepoint ia"
+        ]
+      }
+    },
+    {
+      "id": "connecter-odoo-microsoft-365-outlook-teams",
+      "category": "odoo-erp",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/services/ai-consulting",
+      "title": "Connecter Odoo à votre messagerie et à vos outils collaboratifs",
+      "angle": "Emails, calendrier, documents et notifications: options d'intégration et points d'attention.",
+      "keywords": {
+        "fr": [
+          "odoo microsoft 365",
+          "connecter odoo outlook",
+          "intégration odoo teams"
+        ],
+        "en": [
+          "odoo microsoft 365 integration",
+          "connect odoo outlook"
+        ],
+        "de": [
+          "odoo microsoft 365 integration",
+          "odoo outlook verbinden"
+        ],
+        "es": [
+          "integración odoo microsoft 365",
+          "conectar odoo outlook"
+        ],
+        "pt": [
+          "integração odoo microsoft 365",
+          "ligar odoo outlook"
+        ]
+      }
+    },
+    {
+      "id": "odoo-crm-agent-ia-qualification",
+      "category": "odoo-erp",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/solutions/lead-qualification",
+      "title": "Odoo CRM: un agent IA pour qualifier et relancer les opportunités",
+      "angle": "Enrichissement des fiches, priorisation et relances préparées, avec validation par le commercial.",
+      "keywords": {
+        "fr": [
+          "odoo crm ia",
+          "agent ia odoo",
+          "automatisation crm odoo"
+        ],
+        "en": [
+          "odoo crm ai",
+          "odoo ai agent"
+        ],
+        "de": [
+          "odoo crm ki",
+          "odoo ki agent"
+        ],
+        "es": [
+          "odoo crm ia",
+          "agente de ia odoo"
+        ],
+        "pt": [
+          "odoo crm ia",
+          "agente de ia odoo"
+        ]
+      }
+    },
+    {
+      "id": "odoo-api-integration-outils-metier",
+      "category": "odoo-erp",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/services/ai-consulting",
+      "title": "Intégrer Odoo à vos outils métier par l'API: méthodes et bonnes pratiques",
+      "angle": "Synchronisations fiables, gestion des erreurs et sécurité des accès pour relier Odoo au reste de votre système.",
+      "keywords": {
+        "fr": [
+          "api odoo intégration",
+          "connecter odoo logiciel métier",
+          "intégration odoo suisse"
+        ],
+        "en": [
+          "odoo api integration",
+          "connect odoo to business software"
+        ],
+        "de": [
+          "odoo api integration",
+          "odoo schnittstelle"
+        ],
+        "es": [
+          "integración api odoo",
+          "conectar odoo software de gestión"
+        ],
+        "pt": [
+          "integração api odoo",
+          "ligar odoo software de gestão"
+        ]
+      }
+    },
+    {
+      "id": "migrer-vers-odoo-donnees-ia",
+      "category": "odoo-erp",
+      "intent": "commercial",
+      "priority": 3,
+      "service": "/services/ai-consulting",
+      "title": "Migrer vers Odoo: nettoyer et reprendre vos données avec l'aide de l'IA",
+      "angle": "Dédoublonnage, normalisation et contrôles avant import pour démarrer sur une base saine.",
+      "keywords": {
+        "fr": [
+          "migration odoo",
+          "reprise de données odoo",
+          "migrer vers odoo pme"
+        ],
+        "en": [
+          "odoo migration",
+          "odoo data migration"
+        ],
+        "de": [
+          "odoo migration",
+          "odoo datenmigration"
+        ],
+        "es": [
+          "migración a odoo",
+          "migración de datos odoo"
+        ],
+        "pt": [
+          "migração para odoo",
+          "migração de dados odoo"
+        ]
+      }
+    },
+    {
+      "id": "scenario-fiduciaire-10-personnes-courrier-notes-de-frais",
+      "category": "worked-scenario",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/solutions/mailroom-automation",
+      "title": "Scénario illustratif: une fiduciaire de dix personnes automatise courrier et notes de frais",
+      "angle": "Exemple fictif avec hypothèses explicites: situation de départ, solution, charge avant et après, points de vigilance.",
+      "keywords": {
+        "fr": [
+          "automatisation fiduciaire exemple",
+          "cas pratique ia fiduciaire",
+          "exemple chiffré automatisation"
+        ],
+        "en": [
+          "accounting firm automation example",
+          "ai worked example"
+        ],
+        "de": [
+          "treuhand automatisierung beispiel",
+          "ki praxisbeispiel"
+        ],
+        "es": [
+          "ejemplo automatización asesoría",
+          "caso práctico ia"
+        ],
+        "pt": [
+          "exemplo automatização contabilidade",
+          "caso prático ia"
+        ]
+      }
+    },
+    {
+      "id": "scenario-etude-avocats-intake-automatise",
+      "category": "worked-scenario",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/services/ai-consulting",
+      "title": "Scénario illustratif: une étude d'avocats automatise le tri de ses demandes entrantes",
+      "angle": "Exemple fictif avec hypothèses explicites: volumes, règles de tri, rôle de l'associé, gains attendus et limites.",
+      "keywords": {
+        "fr": [
+          "exemple ia étude d'avocats",
+          "cas pratique ia juridique",
+          "scénario automatisation avocats"
+        ],
+        "en": [
+          "law firm ai example",
+          "legal intake automation example"
+        ],
+        "de": [
+          "ki kanzlei beispiel",
+          "praxisbeispiel legal ki"
+        ],
+        "es": [
+          "ejemplo ia despacho de abogados",
+          "caso práctico ia jurídica"
+        ],
+        "pt": [
+          "exemplo ia escritório de advogados",
+          "caso prático ia jurídica"
+        ]
+      }
+    },
+    {
+      "id": "scenario-regie-immobiliere-tickets-locataires",
+      "category": "worked-scenario",
+      "intent": "commercial",
+      "priority": 3,
+      "service": "/products/ai-agents",
+      "title": "Scénario illustratif: une régie immobilière route seule ses demandes de locataires",
+      "angle": "Exemple fictif avec hypothèses explicites: catégories de demandes, part traitée automatiquement, organisation de l'équipe.",
+      "keywords": {
+        "fr": [
+          "exemple ia régie immobilière",
+          "cas pratique automatisation immobilier",
+          "scénario agent ia régie"
+        ],
+        "en": [
+          "property management ai example",
+          "real estate automation example"
+        ],
+        "de": [
+          "ki immobilienverwaltung beispiel",
+          "praxisbeispiel immobilien"
+        ],
+        "es": [
+          "ejemplo ia administración de fincas",
+          "caso práctico inmobiliario"
+        ],
+        "pt": [
+          "exemplo ia gestão imobiliária",
+          "caso prático imobiliário"
+        ]
+      }
+    },
+    {
+      "id": "scenario-pme-negoce-devis-odoo-agent-ia",
+      "category": "worked-scenario",
+      "intent": "commercial",
+      "priority": 3,
+      "service": "/solutions/quote-proposal-generation",
+      "title": "Scénario illustratif: une PME de négoce produit ses devis en quelques minutes",
+      "angle": "Exemple fictif avec hypothèses explicites: demande client, calcul, validation et envoi depuis l'ERP.",
+      "keywords": {
+        "fr": [
+          "exemple automatisation devis",
+          "cas pratique agent ia pme",
+          "scénario devis automatique"
+        ],
+        "en": [
+          "quote automation example",
+          "ai agent sme example"
+        ],
+        "de": [
+          "offerten automatisierung beispiel",
+          "ki agent kmu beispiel"
+        ],
+        "es": [
+          "ejemplo automatización de presupuestos",
+          "caso práctico agente de ia"
+        ],
+        "pt": [
+          "exemplo automatização de orçamentos",
+          "caso prático agente de ia"
+        ]
+      }
+    },
+    {
+      "id": "ai-act-pme-suisse-obligations-concretes",
+      "category": "regulation-policy",
+      "intent": "informational",
+      "priority": 2,
+      "service": "/services/ai-consulting",
+      "title": "AI Act européen: ce qui s'applique vraiment à une PME suisse",
+      "angle": "Cas où une entreprise suisse est concernée, catégories de risque et mesures proportionnées.",
+      "keywords": {
+        "fr": [
+          "ai act suisse",
+          "règlement ia européen pme",
+          "ai act obligations"
+        ],
+        "en": [
+          "eu ai act switzerland",
+          "ai act for smes"
+        ],
+        "de": [
+          "eu ai act schweiz",
+          "ki verordnung kmu"
+        ],
+        "es": [
+          "reglamento de ia suiza",
+          "ai act pymes"
+        ],
+        "pt": [
+          "regulamento ia suíça",
+          "ai act pme"
+        ]
+      }
+    },
+    {
+      "id": "secret-professionnel-avocats-outils-ia",
+      "category": "regulation-policy",
+      "intent": "commercial",
+      "priority": 1,
+      "service": "/products/swiss-gpt",
+      "title": "Secret professionnel et IA: ce qu'une étude d'avocats doit vérifier avant d'adopter un outil",
+      "angle": "Sous-traitance, localisation des données, journalisation et information du client.",
+      "keywords": {
+        "fr": [
+          "secret professionnel ia avocat",
+          "ia confidentialité étude d'avocats",
+          "chatgpt avocat secret professionnel"
+        ],
+        "en": [
+          "attorney client privilege ai",
+          "law firm ai confidentiality"
+        ],
+        "de": [
+          "anwaltsgeheimnis ki",
+          "berufsgeheimnis ki"
+        ],
+        "es": [
+          "secreto profesional ia abogados",
+          "confidencialidad ia despacho"
+        ],
+        "pt": [
+          "segredo profissional ia advogados",
+          "confidencialidade ia escritório"
+        ]
+      }
+    },
+    {
+      "id": "finma-ia-gerants-fortune-attentes",
+      "category": "regulation-policy",
+      "intent": "informational",
+      "priority": 2,
+      "service": "/services/ai-consulting",
+      "title": "IA chez les gérants de fortune et trustees: attentes du régulateur et bonnes pratiques",
+      "angle": "Gouvernance, externalisation et documentation à prévoir pour un usage maîtrisé de l'IA.",
+      "keywords": {
+        "fr": [
+          "finma intelligence artificielle",
+          "ia gérant de fortune réglementation",
+          "finma ia"
+        ],
+        "en": [
+          "finma ai guidance",
+          "ai regulation asset managers switzerland"
+        ],
+        "de": [
+          "finma künstliche intelligenz",
+          "ki vermögensverwalter regulierung"
+        ],
+        "es": [
+          "finma inteligencia artificial",
+          "regulación ia gestores"
+        ],
+        "pt": [
+          "finma inteligência artificial",
+          "regulação ia gestores"
+        ]
+      }
+    },
+    {
+      "id": "nlpd-clauses-fournisseur-ia-sous-traitance",
+      "category": "regulation-policy",
+      "intent": "commercial",
+      "priority": 2,
+      "service": "/services/ai-consulting",
+      "title": "nLPD: ce qu'il faut exiger par contrat d'un fournisseur d'IA",
+      "angle": "Sous-traitance, transferts à l'étranger, durée de conservation et droit d'audit, expliqués simplement.",
+      "keywords": {
+        "fr": [
+          "nlpd fournisseur ia",
+          "contrat sous-traitance ia",
+          "protection des données ia suisse"
+        ],
+        "en": [
+          "swiss fadp ai vendor contract",
+          "ai data processing agreement"
+        ],
+        "de": [
+          "ndsg ki anbieter",
+          "auftragsbearbeitung ki vertrag"
+        ],
+        "es": [
+          "lpd suiza proveedor ia",
+          "contrato encargado de tratamiento ia"
+        ],
+        "pt": [
+          "lpd suíça fornecedor ia",
+          "contrato subcontratante ia"
+        ]
+      }
+    },
+    {
+      "id": "analyse-impact-aipd-agent-ia",
+      "category": "regulation-policy",
+      "intent": "informational",
+      "priority": 3,
+      "service": "/services/ai-consulting",
+      "title": "Analyse d'impact pour un agent IA: quand elle s'impose et comment la mener",
+      "angle": "Critères de déclenchement, contenu attendu et lien avec les décisions automatisées.",
+      "keywords": {
+        "fr": [
+          "analyse d'impact ia",
+          "aipd agent ia",
+          "décision automatisée nlpd"
+        ],
+        "en": [
+          "ai impact assessment",
+          "dpia for ai agent"
+        ],
+        "de": [
+          "datenschutz folgenabschätzung ki",
+          "dsfa ki agent"
+        ],
+        "es": [
+          "evaluación de impacto ia",
+          "eipd agente de ia"
+        ],
+        "pt": [
+          "avaliação de impacto ia",
+          "aipd agente de ia"
+        ]
+      }
+    }
+  ]
+}

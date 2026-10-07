@@ -4,6 +4,53 @@
 
 The `scripts/ai-ressources-update.js` script includes topic validation to ensure all generated articles focus on AI and Microsoft 365 solutions, not general business services.
 
+## Topic rotation (since 2026-10)
+
+Topics are no longer left to the model or to trend feeds. They come from a
+categorised backlog and the rotation is enforced by code.
+
+- Backlog: `data/article-backlog.json` (categories with weights, topics with
+  intent, target keywords for fr/en/de/es/pt and the service page to link to).
+- Logic: `scripts/lib/articleBacklog.js` (pure, no network), tests in
+  `scripts/lib/articleBacklog.test.js` (`npm run test:article-rotation`).
+- Preview and diagnosis: `npm run articles:plan`
+  (`node scripts/article-topic-plan.js --check --diagnose --next 12`).
+
+Rules:
+
+- never two consecutive articles from the same category;
+- `regulation-policy` is capped: at most 1 in any 6 articles and none while 3
+  of the last 20 articles are already policy articles;
+- under-represented categories and commercial/transactional topics score higher;
+- a topic is used once (`topicId` on the article); topics too close to an
+  existing title or to a `reserved` entry are skipped;
+- the generated title is refused when it drifts into policy or paraphrases an
+  existing article.
+
+Positioning: houle is presented as vendor-neutral AI consulting (Microsoft,
+OpenAI, Anthropic, Mistral, open-source models, Swiss hosting). Microsoft 365
+is one category among others. Examples are illustrative scenarios: no named
+clients, no invented statistics.
+
+Every generated article gets a CTA block, added by code in each locale, with
+links to the topic's service page and to the contact page
+(`/<locale>/...`). Articles carry `topicId`, `topicFamily`, `category` and
+tags in all five locales; `npm run validate:latest-article` checks locale
+parity (metadata, section count, length) and the lead path.
+
+Manual run (workflow inputs): `force_topic` takes a backlog id or free text,
+`force_topic_keywords` and `force_topic_category` complete a free-text topic,
+`skip_topic_rotation` bypasses the cooldown, the policy cap and the duplicate
+check. A forced topic that breaks the rules fails with an explicit message
+unless `skip_topic_rotation` is set.
+
+To add topics: append entries to `topics` (new `id`, never reused) and run
+`npm run articles:plan`. Topics written by hand outside the pipeline go in
+`reserved` with their slugs.
+
+The sections below describe the older off-topic validation (still active),
+written when the site was positioned on Microsoft 365 only.
+
 ## Purpose
 
 **houle.ai** provides:

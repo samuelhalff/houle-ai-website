@@ -1,28 +1,28 @@
 {
     "default": {
-        "title": "houle | Private AI for Microsoft 365",
-        "description": "Swiss-hosted AI solutions for Microsoft 365. Office add-ins with AI for Outlook and Word, plus enterprise GPT platform. Data stays in Switzerland under your control.",
-        "keywords": "ai microsoft 365, swiss ai, private gpt switzerland, outlook ai, word ai, swiss data sovereignty, geneva ai solutions, microsoft 365 consulting",
+        "title": "houle | Independent AI consulting in Geneva",
+        "description": "Independent AI consulting and integration firm in Geneva. The right model for each case: Microsoft, OpenAI, Mistral or open source hosted in Switzerland.",
+        "keywords": "ai consulting geneva, ai consulting switzerland, open-source models hosted in switzerland, sovereign ai switzerland, self-hosted llm, ai integration, private gpt switzerland, microsoft 365 consulting",
         "topics": [
-            "ai microsoft 365 switzerland",
-            "private gpt swiss",
-            "outlook ai assistant",
-            "word ai add-in",
-            "swiss ai consulting"
+            "ai consulting switzerland",
+            "open-source models hosted in switzerland",
+            "ai file sorting",
+            "private gpt switzerland",
+            "microsoft 365 ai switzerland"
         ],
         "author": "houle",
         "siteName": "houle"
     },
     "pages": {
         "/": {
-            "title": "houle | AI Consulting Geneva — Microsoft 365 AI Solutions",
-            "description": "AI consulting firm in Geneva. Swiss-hosted GPT, Outlook & Word AI add-ins, and custom Azure AI solutions. nLPD-compliant. Book a free strategy session.",
-            "keywords": "ai consulting geneva, ai consulting lausanne, swiss ai solutions, private gpt switzerland, outlook ai, word ai, swiss data sovereignty, microsoft 365 ai, azure ai switzerland"
+            "title": "houle | AI consulting in Geneva, models hosted in Switzerland",
+            "description": "Independent AI consulting and integration in Geneva. Microsoft, OpenAI, Mistral or open-source models hosted in Switzerland, as needed. Free first call.",
+            "keywords": "ai consulting geneva, ai consulting lausanne, ai consultant switzerland, open-source models hosted in switzerland, sovereign ai, llm hosted in switzerland, private gpt switzerland, microsoft 365 ai, ai integration"
         },
         "/contact": {
             "title": "Book a Free AI Consultation | houle Geneva & Lausanne",
-            "description": "Book a free AI strategy session with houle's consultants in Geneva. Microsoft 365 AI integration, Swiss-hosted GPT, and custom automation for your business.",
-            "keywords": "ai consultant geneva contact, free ai consultation switzerland, microsoft 365 ai inquiry, book ai strategy session"
+            "description": "Book a free AI strategy call with houle's consultants in Geneva. Use cases, model choice, hosting in Switzerland, integration.",
+            "keywords": "ai consultant geneva contact, free ai consultation switzerland, book ai strategy call, independent ai consulting"
         },
         "/products": {
             "title": "AI Products for Microsoft 365 | Word & Outlook Add-ins",
@@ -55,14 +55,14 @@
             "keywords": "ai use cases switzerland, ai automation solutions, swiss ai agents, microsoft 365 ai add-ins"
         },
         "/services": {
-            "title": "AI & Microsoft 365 Consulting | houle — Geneva & Lausanne",
-            "description": "AI consulting and Microsoft 365 optimization for Swiss enterprises. Azure AI, Power Automate, SharePoint. Based in Geneva. Free initial call.",
-            "keywords": "ai consulting geneva, ai consulting lausanne, microsoft 365 consulting switzerland, azure ai services, power automate switzerland, sharepoint consulting"
+            "title": "Independent AI consulting & Microsoft 365 | houle Geneva",
+            "description": "Vendor-independent AI consulting and Microsoft 365 expertise for Swiss companies. Open-source models hosted in Switzerland. Free first call.",
+            "keywords": "ai consulting geneva, ai consulting lausanne, independent ai consulting, open-source models switzerland, microsoft 365 consulting switzerland, power automate switzerland"
         },
         "/services/ai-consulting": {
-            "title": "AI Consulting Geneva | Azure AI, Custom GPT, nLPD-Compliant",
-            "description": "AI consulting for Swiss enterprises. Custom Azure AI, RAG pipelines, AI agents and Microsoft 365 automation. Data stays in Switzerland.",
-            "keywords": "ai consulting geneva, ai consulting lausanne, azure ai switzerland, rag pipeline consulting, ai agents microsoft 365, nLPD compliant ai, custom ai development switzerland"
+            "title": "AI consulting Geneva | Independent, open source in Switzerland",
+            "description": "AI consulting for Swiss companies: workshop, choice of use cases and model, pilot, production. Open source hosted in Switzerland where needed.",
+            "keywords": "ai consulting geneva, ai consulting lausanne, ai consultant switzerland, open-source model hosted in switzerland, self-hosted llm, ai file sorting, ai professional secrecy, ai pilot"
         },
         "/services/microsoft-consulting": {
             "title": "Microsoft 365 Consulting Geneva | Power Automate, Power BI",
@@ -70,16 +70,16 @@
             "keywords": "microsoft 365 consulting geneva, power automate switzerland, sharepoint consulting geneva, power bi consultant, SPFx development"
         },
         "/ressources": {
-            "title": "AI & Microsoft 365 Resources | Case Studies from Geneva",
-            "description": "Real case studies and practical guides for AI and Microsoft 365 implementations in Geneva and Swiss businesses. Measurable results and actionable insights.",
-            "keywords": "ai case studies geneva, microsoft 365 implementation, swiss ai success stories, automation examples"
+            "title": "AI resources | Guides and use cases for Swiss companies",
+            "description": "Practical guides, client cases and illustrative scenarios for your AI projects in Switzerland: model choice, hosting, file sorting, Microsoft 365.",
+            "keywords": "ai guides switzerland, ai use cases, open-source models switzerland, ai file sorting, microsoft 365 implementation"
         }
     },
     "dynamic": {
         "articles": {
-            "titleTemplate": "{articleTitle} | houle - AI for Microsoft 365",
+            "titleTemplate": "{articleTitle} | houle - AI consulting Geneva",
             "descriptionTemplate": "{articleDescription} | Expert insights from Geneva with Swiss data sovereignty.",
-            "keywords": "ai microsoft 365, swiss ai solutions, geneva ai consulting, data sovereignty switzerland"
+            "keywords": "ai consulting geneva, ai solutions switzerland, open-source models hosted in switzerland, swiss data sovereignty"
         },
         "solutions": {
             "titleTemplate": "{title} | houle - Swiss AI Agents",

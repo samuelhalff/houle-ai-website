@@ -1,65 +1,120 @@
 {
     "Hero": {
         "Title": "Artificial intelligence consulting",
-        "Description": "Transform your business with AI solutions tailored to your needs. We support you in integrating artificial intelligence to automate your processes, improve your decisions and create value."
+        "Description": "Independent AI consulting, from discovery workshop to production. Together we choose the use cases worth pursuing and the right model, including open-source models hosted in Switzerland."
     },
     "Presentation": {
-        "Intro": "Artificial intelligence is no longer reserved for large corporations. Today, SMEs can leverage these technologies to gain efficiency, reduce costs and deliver better customer experiences. Our pragmatic approach allows you to adopt AI progressively, without disrupting your organization.",
+        "Intro": "Most AI projects do not fail because of the model, but because the use case was poorly chosen or nobody had set the rules. Our work therefore starts with your processes: where time goes, which decisions repeat, what data is involved. The choice of model comes afterwards, and it is not tied to any vendor.",
         "Why": {
-            "Title": "Why invest in AI now",
-            "Text": "Artificial intelligence technologies have reached a level of maturity that makes them accessible and profitable for businesses of all sizes. Whether automating repetitive tasks, analyzing large amounts of data, or improving your customer service, AI offers concrete transformation opportunities. We regularly see that companies adopting these tools gain productivity while freeing their teams for higher value missions."
+            "Title": "Why independent consulting",
+            "Text": "An OpenAI model on Azure, a model from Anthropic or Mistral, or an open-source model such as Llama, Qwen or Gemma each have different strengths, different costs and different consequences for your data. An integrator tied to a single vendor will offer you its platform. We compare the options on your case, with your documents, and we also tell you when AI is not the right answer."
         },
         "Services": {
-            "Title": "Our areas of expertise",
+            "Title": "What we do most often",
             "Automation": {
-                "Title": "Intelligent automation",
-                "Text": "We identify repetitive processes in your business and design AI-based automation solutions. This can include automatic document processing, data classification, or customer request management. The goal is to reduce time spent on routine tasks and minimize human errors."
+                "Title": "Sorting files and requests",
+                "Text": "A model reads each incoming file and sorts it according to your rules: those that can follow a simple route and those, fewer in number, that need a human eye. Low-value claims, supplier invoices, customer requests, compliance alerts: the principle is the same, and the rules are yours."
             },
             "Analytics": {
-                "Title": "Predictive analytics",
-                "Text": "Your data contains valuable information about your customers, operations and growth opportunities. We implement predictive analytics models that help you anticipate trends, optimize inventory or personalize your offerings. These tools transform your data into tangible competitive advantages."
+                "Title": "Document extraction and checking",
+                "Text": "Invoices, contracts, forms, identity documents, reports: the model extracts the useful information, checks that a file is complete and flags inconsistencies. Your teams review the discrepancies instead of re-entering everything."
             },
             "Chatbots": {
-                "Title": "Conversational assistants",
-                "Text": "Chatbots and virtual assistants improve your customer service while reducing your team workload. We develop solutions that understand natural language and can handle a wide range of requests, from technical support to sales inquiries. These assistants work around the clock and continuously improve through machine learning."
+                "Title": "Internal assistants on your documents",
+                "Text": "An assistant that answers from your procedures, contracts and files, citing its sources. It can run in Microsoft 365, in your business tools or on infrastructure hosted in Switzerland, depending on how sensitive the content is."
             },
             "Custom": {
-                "Title": "Custom solutions",
-                "Text": "Every business has specific needs. We design custom AI applications that integrate perfectly into your existing environment. Whether image recognition, natural language processing or complex process optimization, we develop the solution that precisely addresses your challenges."
+                "Title": "Integration into your tools",
+                "Text": "Useful AI lives where your teams work: email, ERP, business software, document management. We handle the integration, access rights, logging and monitoring, and we document everything for your IT team."
             }
         },
         "Approach": {
-            "Title": "Our working method",
-            "Text": "We always start by understanding your current processes and identifying improvement opportunities. Then we develop a pilot project that quickly demonstrates the value of AI in your context. This progressive approach allows you to see the benefits before extending the solution across your organization. We stay by your side to train your teams and ensure implementation success."
+            "Title": "Our method, from workshop to production",
+            "Text": "Six steps, each with a deliverable and a clear decision: continue, adjust or stop.",
+            "Steps": [
+                {
+                    "Title": "Discovery workshop",
+                    "Text": "A working session with your business and IT teams. We review your processes, volumes and constraints: professional secrecy, data protection, tools already in place."
+                },
+                {
+                    "Title": "Use case selection",
+                    "Text": "We rank the ideas by value, feasibility and risk, and we keep one or two. Cases where an error would cost too much, or where the rule cannot be written down, are set aside."
+                },
+                {
+                    "Title": "Choice of model and hosting",
+                    "Text": "We test several models, proprietary and open source, on a sample of your documents, and we compare quality, cost and consequences for your data. You receive a reasoned recommendation, with its limits."
+                },
+                {
+                    "Title": "Measured pilot",
+                    "Text": "The pilot runs on a limited scope, often alongside the existing process. The indicators are set before the start and measured on your own figures."
+                },
+                {
+                    "Title": "Going into production",
+                    "Text": "Integration into your tools, access rights, logging, supervision, team training and a manual fallback procedure in case of an outage."
+                },
+                {
+                    "Title": "Governance",
+                    "Text": "Who decides the rules, who changes them, who checks the errors, how often the model is reassessed. We document these points so that the system stays under control over time."
+                }
+            ]
         },
         "Technologies": {
-            "Title": "Technologies and tools",
-            "Text": "We work with the most powerful AI platforms on the market, including OpenAI, Microsoft Azure AI, and other specialized solutions according to your needs. Our expertise covers machine learning, natural language processing, computer vision and data analysis. We always select the technologies best suited to your situation, prioritizing reliability and ease of maintenance."
+            "Title": "The technologies we work with",
+            "Text": "Proprietary models: OpenAI (including through Azure OpenAI), Anthropic, Mistral. Open-source models: Llama, Mistral, Qwen, Gemma, deployed on your infrastructure or in a Swiss cloud. Microsoft ecosystem: Microsoft 365, Copilot, Power Platform and Azure, when your teams already work there. We have no exclusivity with any vendor: the list changes as models change, and the choice is always made on your case."
         },
-        "AzureAI": {
-            "Title": "Azure AI: infrastructure and data sovereignty",
-            "Intro": "Our expertise is built on Microsoft Azure AI, a comprehensive platform that combines technical power with confidentiality guarantees essential for Swiss businesses.",
-            "Models": {
-                "Title": "Private AI model deployment",
-                "Text": "We deploy state-of-the-art artificial intelligence models (GPT-4, GPT-4o, Llama 3, Mistral) in your own Azure environment. This approach ensures your data remains under your complete control and is never used to train third-party models. You choose the deployment region, ideally Switzerland North or West Europe to meet Swiss data localization requirements. Unlike public SaaS solutions, you control model versions, moderation policies, and update cycles."
+        "ModelsHosting": {
+            "Title": "Models and hosting: how we choose",
+            "Intro": "There is no best model in general. There is a model suited to a case, to certain data and to a budget. Here is how we reason.",
+            "Choice": {
+                "Title": "When to choose what",
+                "Text": "A managed service from a major vendor suits varied, low-sensitivity tasks, small volumes and teams without operations skills. An open-source model hosted in Switzerland becomes interesting when the data is covered by professional or medical secrecy, when the task is repetitive and well defined, when volumes make pay-per-use billing expensive, or when you do not want to depend on a single supplier."
             },
-            "Indexing": {
-                "Title": "Document indexing and semantic search",
-                "Text": "Azure AI Search indexes all your company documents, whether in SharePoint, OneDrive, databases or business systems. Semantic search understands the intent behind a query rather than simply matching words. Your employees instantly find relevant information even if phrased differently. Documents are automatically enriched with AI-extracted metadata, facilitating classification and regulatory compliance."
+            "OpenSource": {
+                "Title": "Open-source models hosted in Switzerland",
+                "Text": "Open models such as Llama, Mistral, Qwen or Gemma can be installed on your own servers or in a data centre in Switzerland. For targeted tasks such as sorting, extraction or summarising, they often give sufficient results, provided they are tested on your documents. Their licence varies from one model to another: we check it before any use."
             },
-            "Agents": {
-                "Title": "Autonomous AI agents and orchestration",
-                "Text": "We develop AI agents capable of autonomously executing complex tasks using Azure AI Agent Service and Microsoft Semantic Kernel. These agents can call your internal APIs, query your databases, generate reports, or trigger workflows as needed. Multi-agent orchestration breaks down complex processes into specialized tasks, each agent bringing its specific expertise. This modular architecture facilitates maintenance and evolution of your AI solutions."
+            "Swiss": {
+                "Title": "What \"hosted in Switzerland\" means in practice",
+                "Text": "For each project we set four points in writing. Where inference runs: on machines located in Switzerland, either yours or those of a Swiss host. Where the data is: documents, indexes and results stay on that same infrastructure. Who has access: a named list of people, with limited rights. What is logged: decisions and accesses, without keeping more content than necessary. Hosting in Switzerland does not replace your own legal analysis; it simplifies it."
             },
-            "Grounding": {
-                "Title": "Grounding with Bing and your data",
-                "Text": "Grounding anchors AI responses in reliable data sources. We connect your models to your internal knowledge bases via the RAG pattern (Retrieval Augmented Generation), ensuring responses are based on your official documents. For needs requiring current external information, integration with Bing Search enriches answers with recent public data while citing sources. This hybrid approach combines your company's internal expertise with up-to-date general knowledge."
+            "Proprietary": {
+                "Title": "Microsoft, OpenAI, Anthropic or Mistral, when it is the right choice",
+                "Text": "If your teams live in Microsoft 365 and the content is already there, staying in that environment is often the simplest option. For complex drafting or reasoning tasks, the large proprietary models keep an edge. We then review with you the processing region, the contractual terms and data retention."
+            },
+            "Limits": {
+                "Title": "What we do not promise",
+                "Text": "A model sometimes makes mistakes. We do not sell certification, turnkey compliance or full automation. We design systems where the rules are yours, where doubtful cases go to a person and where every decision can be explained after the fact."
             }
         },
         "UseCases": {
-            "Title": "Real-world use cases",
-            "Intro": "Discover how we helped Geneva businesses transform their operations with artificial intelligence. These real projects demonstrate the measurable benefits of AI applied to concrete business challenges.",
+            "Title": "Examples and use cases",
+            "Intro": "Client cases and illustrative scenarios published in our resources. The illustrative scenarios describe representative projects, with no named client and no quantified result.",
             "Cases": [
+                {
+                    "Title": "Minor liability claims at a hospital",
+                    "Slug": "tri-ia-cas-bagatelle-rc-hopital",
+                    "Summary": "Illustrative scenario. An open-source model hosted in Switzerland sorts a hospital's minor liability claims: automatic settlement for files that meet the institution's rules, human review for all the others."
+                },
+                {
+                    "Title": "Open source hosted in Switzerland or a US subscription",
+                    "Slug": "modeles-open-source-heberges-en-suisse-guide-decision",
+                    "Summary": "Decision guide. Data, cost, quality, maintenance, skills: the five criteria for choosing between an open-source model hosted in Switzerland and a US AI service, with a comparison table and the limits of each option."
+                },
+                {
+                    "Title": "Small insurance claims",
+                    "Slug": "tri-ia-petits-sinistres-assurance",
+                    "Summary": "Illustrative scenario. AI sorting separates the claims that can be settled directly from those that need a claims handler. The thresholds remain the insurer's and no refusal is automated."
+                },
+                {
+                    "Title": "Invoices, expense reports and VAT at a fiduciary firm",
+                    "Slug": "tri-ia-factures-notes-de-frais-tva-fiduciaire",
+                    "Summary": "Illustrative scenario. Each document receives a proposed entry or a reasoned anomaly flag. The accountant validates conforming documents in batches and concentrates on the discrepancies."
+                },
+                {
+                    "Title": "KYC files and AMLA alerts",
+                    "Slug": "tri-ia-dossiers-kyc-alertes-lba",
+                    "Summary": "Illustrative scenario. The model checks that files are complete and ranks alerts by priority with a sourced summary. Closing alerts and any compliance decision remain human."
+                },
                 {
                     "Title": "Mail and email automation",
                     "Slug": "automatisation-courrier-entrant-ia",

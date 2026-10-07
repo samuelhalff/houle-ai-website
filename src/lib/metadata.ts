@@ -178,7 +178,7 @@ export async function getPageMetadata(
 
   const ogImageWebp = `/assets/og/og-${locale}.webp`;
   const ogImageAvif = `/assets/og/og-${locale}.avif`;
-  const ogAlt = `houle.ai — AI consulting Geneva & Lausanne | Microsoft 365 AI solutions`;
+  const ogAlt = `houle.ai — independent AI consulting in Geneva & Lausanne | open-source models hosted in Switzerland`;
 
   const metadata: Metadata = {
     metadataBase: new URL(siteUrl),
@@ -344,10 +344,10 @@ export function generateOrganizationStructuredData() {
     legalName: "West-Bay SA",
     alternateName: ["Houle", "houle"],
     description:
-      "Swiss-hosted enterprise AI platform for Microsoft 365. Private GPT solutions with Azure Switzerland, Office add-ins with AI, and consulting services ensuring data sovereignty and nLPD compliance.",
+      "Independent AI consulting and integration firm in Geneva. Vendor-neutral model selection (Microsoft, OpenAI, Anthropic, Mistral, open-source models such as Llama, Qwen and Gemma), open-source models hosted in Switzerland when data residency or professional secrecy matter, plus Microsoft 365 expertise and Office add-ins with AI.",
     url: siteUrl,
     foundingDate: "2024-01-01",
-    slogan: "Private AI built into the Microsoft tools you already use",
+    slogan: "The right AI model for each case, hosted in Switzerland when it matters",
     logo: {
       "@type": "ImageObject",
       url: `${siteUrl}/assets/logo.svg`,
@@ -390,22 +390,31 @@ export function generateOrganizationStructuredData() {
     ],
     sameAs: ["https://www.linkedin.com/company/houle-ai/"],
     knowsAbout: [
-      "AI Microsoft 365",
-      "Swiss AI solutions",
-      "private GPT",
-      "Swiss Azure Hosting",
-      "Data Sovereignty",
-      "nLPD Compliance",
-      "FADP Compliance",
-      "GDPR Compliance",
-      "Outlook AI assistant",
-      "Word AI add-in",
-      "Microsoft 365 consulting",
-      "Azure AI integration",
-      "Power Automate Switzerland",
-      "SharePoint consulting",
+      "Artificial Intelligence",
+      "AI consulting",
+      "AI use-case selection",
       "Large Language Models",
+      "Open-source language models",
+      "Llama",
+      "Mistral",
+      "Qwen",
+      "Gemma",
+      "Self-hosted AI",
+      "Swiss-hosted AI",
+      "Data Sovereignty",
+      "Swiss Federal Act on Data Protection (nLPD / FADP)",
+      "Professional and medical secrecy",
       "Human-in-the-loop AI",
+      "AI governance",
+      "Case triage automation",
+      "Document processing automation",
+      "Retrieval-augmented generation",
+      "Azure OpenAI",
+      "Microsoft 365",
+      "Power Automate",
+      "SharePoint",
+      "Private AI Solutions",
+      "Business Automation",
     ],
     parentOrganization: {
       "@type": "Corporation",
@@ -474,12 +483,13 @@ export function generateSwissAIIntegrationStructuredData() {
     "@id": `${siteUrl}/#swiss-ai-integration`,
     name: "Swiss-Hosted AI Integration",
     description:
-      "End-to-end AI integration services for Microsoft 365, Power Platform, and custom enterprise applications. All processing occurs within Swiss borders, ensuring compliance with nLPD (Swiss Data Protection Act) and GDPR regulations.",
+      "Vendor-neutral AI integration services: use-case selection, model choice (proprietary or open source), pilot, production and governance. Open-source models can be self-hosted or run in a Swiss cloud so that data and inference stay in Switzerland; Microsoft 365 and Power Platform integration where it fits.",
     serviceType: [
       "AI Integration Consulting",
+      "AI Consulting",
+      "Open-source Model Deployment",
+      "Swiss-hosted AI",
       "Data Sovereignty",
-      "nLPD/GDPR Compliance",
-      "Swiss Azure Hosting",
       "Microsoft 365 Integration",
     ],
     url: `${siteUrl}/en/services/ai-consulting/`,
@@ -503,6 +513,8 @@ export function generateSwissAIIntegrationStructuredData() {
     },
     category: "Professional IT Services",
     knowsAbout: [
+      "Open-source language models (Llama, Mistral, Qwen, Gemma)",
+      "Self-hosted and Swiss-cloud inference",
       "Microsoft Azure Switzerland",
       "Large Language Models (LLM)",
       "Human-in-the-loop AI",

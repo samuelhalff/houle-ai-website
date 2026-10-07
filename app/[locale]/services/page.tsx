@@ -40,14 +40,14 @@ export default async function ServicesPage(props: { params: Promise<{ locale: st
 
   const pageIntro =
     locale === "fr"
-      ? "Nous proposons des services de conseil spécialisés en intelligence artificielle et technologies Microsoft pour accompagner votre transformation digitale."
+      ? "Un conseil IA indépendant des éditeurs, du choix des cas d'usage au choix du modèle, y compris open source hébergé en Suisse. Et une expertise Microsoft 365 pour les équipes qui y travaillent déjà."
     : locale === "de"
-      ? "Wir bieten spezialisierte Beratungsdienstleistungen in künstlicher Intelligenz und Microsoft-Technologien, um Ihre digitale Transformation zu begleiten."
+      ? "Herstellerneutrale KI-Beratung, von der Auswahl der Anwendungsfälle bis zur Modellwahl, auch Open Source mit Hosting in der Schweiz. Dazu Microsoft-365-Expertise für Teams, die bereits damit arbeiten."
     : locale === "es"
-      ? "Ofrecemos servicios de consultoría especializados en inteligencia artificial y tecnologías Microsoft para acompañar su transformación digital."
+      ? "Consultoría de IA independiente de los proveedores, de la elección de los casos de uso a la del modelo, incluido el código abierto alojado en Suiza. Y experiencia en Microsoft 365 para los equipos que ya trabajan con él."
     : locale === "pt"
-      ? "Oferecemos serviços de consultoria especializados em inteligência artificial e tecnologias Microsoft para acompanhar sua transformação digital."
-    : "We offer specialized consulting services in artificial intelligence and Microsoft technologies to support your digital transformation.";
+      ? "Consultoria de IA independente dos fornecedores, da escolha dos casos de uso à do modelo, incluindo código aberto hospedado na Suíça. E experiência em Microsoft 365 para as equipes que já trabalham com ele."
+    : "Vendor-neutral AI consulting, from choosing the use cases to choosing the model, including open source hosted in Switzerland. Plus Microsoft 365 expertise for teams that already work in it.";
 
   const learnMore =
     locale === "fr" ? "En savoir plus"
@@ -68,14 +68,14 @@ export default async function ServicesPage(props: { params: Promise<{ locale: st
         : "AI Consulting",
       description:
         locale === "fr"
-          ? "Solutions d'intelligence artificielle sur mesure pour automatiser vos processus et améliorer vos décisions."
+          ? "Atelier de découverte, choix des cas d'usage et du modèle (propriétaire ou open source hébergé en Suisse), pilote mesuré, mise en production et gouvernance."
         : locale === "de"
-          ? "Maßgeschneiderte KI-Lösungen zur Automatisierung Ihrer Prozesse und Verbesserung Ihrer Entscheidungen."
+          ? "Discovery-Workshop, Auswahl der Anwendungsfälle und des Modells (proprietär oder Open Source mit Hosting in der Schweiz), gemessener Pilot, Produktion und Governance."
         : locale === "es"
-          ? "Soluciones de inteligencia artificial a medida para automatizar sus procesos y mejorar sus decisiones."
+          ? "Taller de descubrimiento, elección de los casos de uso y del modelo (propietario o de código abierto alojado en Suiza), piloto medido, producción y gobernanza."
         : locale === "pt"
-          ? "Soluções de inteligência artificial personalizadas para automatizar seus processos e melhorar suas decisões."
-        : "Custom AI solutions to automate your processes, connect your knowledge, and improve decisions across your organization.",
+          ? "Workshop de descoberta, escolha dos casos de uso e do modelo (proprietário ou de código aberto hospedado na Suíça), piloto medido, produção e governança."
+        : "Discovery workshop, choice of use cases and model (proprietary or open source hosted in Switzerland), measured pilot, production and governance.",
     },
     {
       href: `${localePrefix}/services/microsoft-consulting/`,

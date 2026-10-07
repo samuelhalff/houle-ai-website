@@ -30,7 +30,7 @@ export default function Footer({ locale }: { locale?: string }) {
       termsOfService: "Terms of Service",
       cookiesPolicy: "Cookies Policy",
       cookieSettings: "Cookie Settings",
-      tagline: "Private AI built into the Microsoft tools you already use.",
+      tagline: "Independent AI consulting. The right model for each case, hosted in Switzerland when it matters.",
     },
     fr: {
       products: "Produits",
@@ -49,7 +49,7 @@ export default function Footer({ locale }: { locale?: string }) {
       termsOfService: "Conditions d'utilisation",
       cookiesPolicy: "Politique des cookies",
       cookieSettings: "Paramètres cookies",
-      tagline: "IA privée intégrée aux outils Microsoft que vous utilisez déjà.",
+      tagline: "Conseil IA indépendant. Le bon modèle pour chaque cas, hébergé en Suisse quand il le faut.",
     },
     de: {
       products: "Produkte",
@@ -68,7 +68,7 @@ export default function Footer({ locale }: { locale?: string }) {
       termsOfService: "Nutzungsbedingungen",
       cookiesPolicy: "Cookie-Richtlinie",
       cookieSettings: "Cookie-Einstellungen",
-      tagline: "Private KI integriert in die Microsoft-Tools, die Sie bereits nutzen.",
+      tagline: "Unabhängige KI-Beratung. Das richtige Modell für jeden Fall, in der Schweiz gehostet, wenn es darauf ankommt.",
     },
     es: {
       products: "Productos",
@@ -87,7 +87,7 @@ export default function Footer({ locale }: { locale?: string }) {
       termsOfService: "Términos de servicio",
       cookiesPolicy: "Política de cookies",
       cookieSettings: "Ajustes de cookies",
-      tagline: "IA privada integrada en las herramientas de Microsoft que ya usas.",
+      tagline: "Consultoría de IA independiente. El modelo adecuado para cada caso, alojado en Suiza cuando hace falta.",
     },
     pt: {
       products: "Produtos",
@@ -106,7 +106,7 @@ export default function Footer({ locale }: { locale?: string }) {
       termsOfService: "Termos de serviço",
       cookiesPolicy: "Política de cookies",
       cookieSettings: "Configurações de cookies",
-      tagline: "IA privada integrada nas ferramentas Microsoft que você já usa.",
+      tagline: "Consultoria de IA independente. O modelo certo para cada caso, hospedado na Suíça quando é preciso.",
     },
   };
 

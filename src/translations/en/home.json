@@ -1,9 +1,9 @@
 {
   "Hero": {
-    "Title": "Transform your business with AI products and expert consulting.",
-    "Description": "Based in the Lake Geneva region, we offer Swiss-made Office add-ins with AI for Microsoft 365 and professional consulting services."
+    "Title": "The right AI model for each case.",
+    "Description": "Independent AI consulting and integration firm in Geneva: Microsoft or OpenAI when relevant, open-source models hosted in Switzerland when needed."
   },
   "Services": {
-    "Title": "AI Products for Microsoft 365"
+    "Title": "AI consulting and ready-to-use products"
   }
 }

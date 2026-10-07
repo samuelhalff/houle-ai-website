@@ -29,6 +29,7 @@ try { require("dotenv").config(); } catch {}
 const fs = require("fs");
 const path = require("path");
 const { translateLabels } = require("./translate-reference-labels");
+const { localizeLeadLinks } = require("./lib/articleBacklog");
 
 const args = new Set(process.argv.slice(2).filter(a => !a.includes('=')));
 const getArg = (k, d) => {
@@ -280,7 +281,8 @@ async function main() {
     const tr = await azureChatJson(prompt);
       const title = (tr && tr.title) ? String(tr.title) : frA.title;
       const description = (tr && tr.description) ? String(tr.description) : frA.description;
-      const content = (tr && tr.content) ? String(tr.content) : frA.content;
+      // Lead links (/fr/contact/, /fr/solutions/...) must point to the target locale.
+      const content = localizeLeadLinks((tr && tr.content) ? String(tr.content) : frA.content, locale);
 
       if (hasUnnecessaryCaps(title) || hasUnnecessaryCaps(description)) {
         console.warn(`[WARN] ${locale}:${frA.slug} possible unnecessary capitals in title/description.`);

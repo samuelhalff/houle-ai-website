@@ -1,65 +1,120 @@
 {
     "Hero": {
         "Title": "Beratung für künstliche Intelligenz",
-        "Description": "Transformieren Sie Ihr Unternehmen mit maßgeschneiderten KI-Lösungen. Wir unterstützen Sie bei der Integration künstlicher Intelligenz, um Ihre Prozesse zu automatisieren, Ihre Entscheidungen zu verbessern und Mehrwert zu schaffen."
+        "Description": "Eine von Anbietern unabhängige KI-Beratung, vom Discovery-Workshop bis zum Produktivbetrieb. Wir wählen mit Ihnen die Anwendungsfälle, die sich lohnen, und das passende Modell, auch Open-Source-Modelle, die in der Schweiz gehostet sind."
     },
     "Presentation": {
-        "Intro": "Künstliche Intelligenz ist nicht mehr nur großen Unternehmen vorbehalten. Heute können KMU diese Technologien nutzen, um effizienter zu werden, Kosten zu senken und bessere Kundenerlebnisse zu bieten. Unser pragmatischer Ansatz ermöglicht es Ihnen, KI schrittweise einzuführen, ohne Ihre Organisation zu stören.",
+        "Intro": "Die meisten KI-Projekte scheitern nicht am Modell, sondern daran, dass der Anwendungsfall schlecht gewählt war oder niemand die Regeln festgelegt hatte. Unsere Arbeit beginnt deshalb bei Ihren Prozessen: wo die Zeit verloren geht, welche Entscheidungen sich wiederholen, welche Daten im Spiel sind. Die Wahl des Modells folgt danach und ist an keinen Anbieter gebunden.",
         "Why": {
-            "Title": "Warum jetzt in KI investieren",
-            "Text": "Technologien der künstlichen Intelligenz haben einen Reifegrad erreicht, der sie für Unternehmen jeder Größe zugänglich und rentabel macht. Ob zur Automatisierung repetitiver Aufgaben, zur Analyse großer Datenmengen oder zur Verbesserung Ihres Kundenservice - KI bietet konkrete Transformationsmöglichkeiten. Wir stellen regelmäßig fest, dass Unternehmen, die diese Werkzeuge einsetzen, an Produktivität gewinnen und gleichzeitig ihre Teams für wertvollere Aufgaben freistellen."
+            "Title": "Warum eine unabhängige Beratung",
+            "Text": "Ein Modell von OpenAI auf Azure, ein Modell von Anthropic oder Mistral oder ein Open-Source-Modell wie Llama, Qwen oder Gemma haben weder dieselben Stärken noch dieselben Kosten noch dieselben Folgen für Ihre Daten. Ein Integrator, der an einen einzigen Anbieter gebunden ist, wird Ihnen seine Plattform vorschlagen. Wir vergleichen die Optionen anhand Ihres Falls und mit Ihren Dokumenten, und wir sagen Ihnen auch, wenn KI nicht die richtige Antwort ist."
         },
         "Services": {
-            "Title": "Unsere Fachgebiete",
+            "Title": "Was wir am häufigsten tun",
             "Automation": {
-                "Title": "Intelligente Automatisierung",
-                "Text": "Wir identifizieren repetitive Prozesse in Ihrem Unternehmen und entwickeln KI-basierte Automatisierungslösungen. Dies kann die automatische Dokumentenverarbeitung, Datenklassifizierung oder Kundenanfragen-Management umfassen. Ziel ist es, die Zeit für Routineaufgaben zu reduzieren und menschliche Fehler zu minimieren."
+                "Title": "Triage von Dossiers und Anfragen",
+                "Text": "Ein Modell liest jedes eingehende Dossier und ordnet es nach Ihren Regeln ein: Dossiers, die einem einfachen Ablauf folgen können, und die weniger zahlreichen, die einen menschlichen Blick brauchen. Kleine Schadenfälle, Lieferantenrechnungen, Kundenanfragen, Compliance-Alarme: Das Prinzip ist dasselbe, die Regeln sind Ihre."
             },
             "Analytics": {
-                "Title": "Prädiktive Analytik",
-                "Text": "Ihre Daten enthalten wertvolle Informationen über Ihre Kunden, Abläufe und Wachstumschancen. Wir implementieren prädiktive Analysemodelle, die Ihnen helfen, Trends zu antizipieren, Bestände zu optimieren oder Angebote zu personalisieren. Diese Werkzeuge verwandeln Ihre Daten in greifbare Wettbewerbsvorteile."
+                "Title": "Extraktion und Kontrolle von Dokumenten",
+                "Text": "Rechnungen, Verträge, Formulare, Ausweisdokumente, Berichte: Das Modell extrahiert die nützlichen Informationen, prüft, ob ein Dossier vollständig ist, und meldet Unstimmigkeiten. Ihre Teams kontrollieren die Abweichungen, statt alles neu zu erfassen."
             },
             "Chatbots": {
-                "Title": "Konversationsassistenten",
-                "Text": "Chatbots und virtuelle Assistenten verbessern Ihren Kundenservice und entlasten Ihre Teams. Wir entwickeln Lösungen, die natürliche Sprache verstehen und eine breite Palette von Anfragen bearbeiten können, vom technischen Support bis zu Verkaufsanfragen. Diese Assistenten arbeiten rund um die Uhr und verbessern sich kontinuierlich durch maschinelles Lernen."
+                "Title": "Interne Assistenten auf Ihren Dokumenten",
+                "Text": "Ein Assistent, der auf der Grundlage Ihrer Verfahren, Verträge und Dossiers antwortet und seine Quellen nennt. Er kann in Microsoft 365, in Ihren Fachanwendungen oder auf einer in der Schweiz gehosteten Infrastruktur laufen, je nach Sensibilität der Inhalte."
             },
             "Custom": {
-                "Title": "Maßgeschneiderte Lösungen",
-                "Text": "Jedes Unternehmen hat spezifische Bedürfnisse. Wir entwerfen maßgeschneiderte KI-Anwendungen, die sich perfekt in Ihre bestehende Umgebung integrieren. Ob Bilderkennung, natürliche Sprachverarbeitung oder Optimierung komplexer Prozesse - wir entwickeln die Lösung, die Ihre Herausforderungen präzise adressiert."
+                "Title": "Integration in Ihre Werkzeuge",
+                "Text": "Nützliche KI lebt dort, wo Ihre Teams arbeiten: E-Mail, ERP, Fachsoftware, Dokumentenverwaltung. Wir übernehmen die Integration, die Zugriffsrechte, die Protokollierung und die Überwachung und dokumentieren alles für Ihre IT."
             }
         },
         "Approach": {
-            "Title": "Unsere Arbeitsmethode",
-            "Text": "Wir beginnen immer damit, Ihre aktuellen Prozesse zu verstehen und Verbesserungsmöglichkeiten zu identifizieren. Dann entwickeln wir ein Pilotprojekt, das den Wert von KI in Ihrem Kontext schnell demonstriert. Dieser schrittweise Ansatz ermöglicht es Ihnen, die Vorteile zu sehen, bevor Sie die Lösung in Ihrer gesamten Organisation ausweiten. Wir bleiben an Ihrer Seite, um Ihre Teams zu schulen und den Implementierungserfolg sicherzustellen."
+            "Title": "Unsere Methode, vom Workshop bis zum Produktivbetrieb",
+            "Text": "Sechs Schritte, jeweils mit einem Ergebnis und einer klaren Entscheidung: weiterfahren, anpassen oder abbrechen.",
+            "Steps": [
+                {
+                    "Title": "Discovery-Workshop",
+                    "Text": "Eine Arbeitssitzung mit Ihren Fach- und IT-Teams. Wir gehen Ihre Prozesse, Ihre Volumen und Ihre Randbedingungen durch: Berufsgeheimnis, Datenschutz, vorhandene Werkzeuge."
+                },
+                {
+                    "Title": "Auswahl der Anwendungsfälle",
+                    "Text": "Wir ordnen die Ideen nach Nutzen, Machbarkeit und Risiko ein und wählen eine oder zwei aus. Fälle, in denen ein Fehler zu teuer würde oder deren Regel sich nicht aufschreiben lässt, scheiden aus."
+                },
+                {
+                    "Title": "Wahl von Modell und Hosting",
+                    "Text": "Wir testen mehrere Modelle, proprietäre und Open-Source-Modelle, an einer Stichprobe Ihrer Dokumente und vergleichen Qualität, Kosten und Folgen für Ihre Daten. Sie erhalten eine begründete Empfehlung, einschliesslich ihrer Grenzen."
+                },
+                {
+                    "Title": "Gemessener Pilot",
+                    "Text": "Der Pilot läuft in einem begrenzten Rahmen, oft parallel zum bestehenden Prozess. Die Kennzahlen werden vor dem Start festgelegt und an Ihren eigenen Zahlen gemessen."
+                },
+                {
+                    "Title": "Produktivbetrieb",
+                    "Text": "Integration in Ihre Werkzeuge, Zugriffsrechte, Protokollierung, Überwachung, Schulung der Teams und ein Verfahren für die manuelle Übernahme bei einem Ausfall."
+                },
+                {
+                    "Title": "Governance",
+                    "Text": "Wer über die Regeln entscheidet, wer sie ändert, wer die Fehler kontrolliert, wie oft das Modell neu bewertet wird. Wir dokumentieren diese Punkte, damit das System auf Dauer beherrschbar bleibt."
+                }
+            ]
         },
         "Technologies": {
-            "Title": "Technologien und Werkzeuge",
-            "Text": "Wir arbeiten mit den leistungsstärksten KI-Plattformen auf dem Markt, darunter OpenAI, Microsoft Azure AI und andere spezialisierte Lösungen je nach Ihren Bedürfnissen. Unsere Expertise umfasst maschinelles Lernen, natürliche Sprachverarbeitung, Computer Vision und Datenanalyse. Wir wählen immer die Technologien aus, die am besten zu Ihrer Situation passen, wobei wir Zuverlässigkeit und Wartungsfreundlichkeit priorisieren."
+            "Title": "Die Technologien, mit denen wir arbeiten",
+            "Text": "Proprietäre Modelle: OpenAI (auch über Azure OpenAI), Anthropic, Mistral. Open-Source-Modelle: Llama, Mistral, Qwen, Gemma, betrieben auf Ihrer Infrastruktur oder in einer Schweizer Cloud. Microsoft-Umfeld: Microsoft 365, Copilot, Power Platform und Azure, wenn Ihre Teams bereits damit arbeiten. Wir haben mit keinem Anbieter eine Exklusivität: Die Liste entwickelt sich mit den Modellen weiter, und die Wahl richtet sich immer nach Ihrem Fall."
         },
-        "AzureAI": {
-            "Title": "Azure AI: Infrastruktur und Datensouveränität",
-            "Intro": "Unsere Expertise basiert auf Microsoft Azure AI, einer umfassenden Plattform, die technische Leistung mit Vertraulichkeitsgarantien kombiniert, die für Schweizer Unternehmen unerlässlich sind.",
-            "Models": {
-                "Title": "Bereitstellung privater KI-Modelle",
-                "Text": "Wir implementieren hochmoderne künstliche Intelligenzmodelle (GPT-4, GPT-4o, Llama 3, Mistral) in Ihrer eigenen Azure-Umgebung. Dieser Ansatz gewährleistet, dass Ihre Daten vollständig unter Ihrer Kontrolle bleiben und niemals zum Trainieren von Drittmodellen verwendet werden. Sie wählen die Bereitstellungsregion, idealerweise Switzerland North oder West Europe, um den Schweizer Anforderungen an die Datenlokalisierung zu entsprechen. Im Gegensatz zu öffentlichen SaaS-Lösungen kontrollieren Sie Modellversionen, Moderationsrichtlinien und Aktualisierungszyklen."
+        "ModelsHosting": {
+            "Title": "Modelle und Hosting: wie wir auswählen",
+            "Intro": "Es gibt nicht das beste Modell schlechthin. Es gibt ein Modell, das zu einem Fall, zu bestimmten Daten und zu einem Budget passt. So gehen wir vor.",
+            "Choice": {
+                "Title": "Wann was passt",
+                "Text": "Ein Managed Service eines grossen Anbieters eignet sich gut für abwechslungsreiche, wenig sensible Aufgaben, für kleine Volumen und für Teams ohne Betriebskompetenz. Ein in der Schweiz gehostetes Open-Source-Modell wird interessant, wenn die Daten dem Berufs- oder Arztgeheimnis unterliegen, wenn die Aufgabe repetitiv und klar definiert ist, wenn die Volumen die nutzungsabhängige Abrechnung teuer machen oder wenn Sie nicht von einem einzigen Anbieter abhängig sein möchten."
             },
-            "Indexing": {
-                "Title": "Dokumentenindizierung und semantische Suche",
-                "Text": "Azure AI Search indiziert alle Ihre Unternehmensdokumente, ob in SharePoint, OneDrive, Datenbanken oder Geschäftssystemen. Die semantische Suche versteht die Absicht hinter einer Anfrage, anstatt einfach nur Wörter abzugleichen. Ihre Mitarbeiter finden sofort relevante Informationen, auch wenn sie anders formuliert sind. Dokumente werden automatisch mit KI-extrahierten Metadaten angereichert, was Klassifizierung und regulatorische Compliance erleichtert."
+            "OpenSource": {
+                "Title": "In der Schweiz gehostete Open-Source-Modelle",
+                "Text": "Offene Modelle wie Llama, Mistral, Qwen oder Gemma können auf Ihren eigenen Servern oder in einem Rechenzentrum in der Schweiz installiert werden. Für gezielte Aufgaben wie Triage, Extraktion oder Zusammenfassung liefern sie oft ausreichende Ergebnisse, sofern sie an Ihren Dokumenten getestet werden. Ihre Lizenz ist von Modell zu Modell verschieden: Wir prüfen sie vor jeder Nutzung."
             },
-            "Agents": {
-                "Title": "Autonome KI-Agenten und Orchestrierung",
-                "Text": "Wir entwickeln KI-Agenten, die komplexe Aufgaben autonom mit Azure AI Agent Service und Microsoft Semantic Kernel ausführen können. Diese Agenten können Ihre internen APIs aufrufen, Ihre Datenbanken abfragen, Berichte generieren oder Workflows nach Bedarf auslösen. Die Multi-Agenten-Orchestrierung zerlegt komplexe Prozesse in spezialisierte Aufgaben, wobei jeder Agent sein spezifisches Fachwissen einbringt. Diese modulare Architektur erleichtert die Wartung und Weiterentwicklung Ihrer KI-Lösungen."
+            "Swiss": {
+                "Title": "Was «in der Schweiz gehostet» konkret bedeutet",
+                "Text": "Wir halten für jedes Projekt vier Punkte schriftlich fest. Wo die Inferenz läuft: auf Maschinen in der Schweiz, Ihren eigenen oder denen eines Schweizer Hosters. Wo die Daten liegen: Dokumente, Indizes und Ergebnisse bleiben auf derselben Infrastruktur. Wer Zugriff hat: eine namentliche Liste von Personen mit eingeschränkten Rechten. Was protokolliert wird: die Entscheidungen und die Zugriffe, ohne mehr Inhalt aufzubewahren als nötig. Das Hosting in der Schweiz ersetzt Ihre eigene rechtliche Analyse nicht, es vereinfacht sie."
             },
-            "Grounding": {
-                "Title": "Grounding mit Bing und Ihren Daten",
-                "Text": "Grounding verankert KI-Antworten in zuverlässigen Datenquellen. Wir verbinden Ihre Modelle über das RAG-Muster (Retrieval Augmented Generation) mit Ihren internen Wissensbasen und stellen sicher, dass die Antworten auf Ihren offiziellen Dokumenten basieren. Für Bedürfnisse, die aktuelle externe Informationen erfordern, reichert die Integration mit Bing Search die Antworten mit aktuellen öffentlichen Daten an und zitiert die Quellen. Dieser hybride Ansatz kombiniert das interne Fachwissen Ihres Unternehmens mit aktuellem Allgemeinwissen."
+            "Proprietary": {
+                "Title": "Microsoft, OpenAI, Anthropic oder Mistral, wenn es die richtige Wahl ist",
+                "Text": "Wenn Ihre Teams in Microsoft 365 arbeiten und die Inhalte dort bereits liegen, ist es oft am einfachsten, in dieser Umgebung zu bleiben. Für anspruchsvolle Aufgaben beim Schreiben oder Schlussfolgern haben die grossen proprietären Modelle weiterhin einen Vorsprung. Wir prüfen dann gemeinsam mit Ihnen die Verarbeitungsregion, die Vertragsbedingungen und die Aufbewahrung der Daten."
+            },
+            "Limits": {
+                "Title": "Was wir nicht versprechen",
+                "Text": "Ein Modell irrt sich manchmal. Wir verkaufen weder eine Zertifizierung noch eine schlüsselfertige Compliance noch eine vollständige Automatisierung. Wir bauen Systeme, in denen die Regeln Ihre sind, in denen zweifelhafte Fälle an eine Person gehen und in denen sich jede Entscheidung im Nachhinein erklären lässt."
             }
         },
         "UseCases": {
-            "Title": "Konkrete Anwendungsfälle",
-            "Intro": "Entdecken Sie, wie wir Genfer Unternehmen geholfen haben, ihre Abläufe mit künstlicher Intelligenz zu transformieren. Diese realen Projekte demonstrieren die messbaren Vorteile von KI, die auf konkrete geschäftliche Herausforderungen angewendet wird.",
+            "Title": "Beispiele und Anwendungsfälle",
+            "Intro": "Kundenfälle und typische Szenarien, die in unseren Ressourcen veröffentlicht sind. Die typischen Szenarien beschreiben repräsentative Projekte, ohne genannten Kunden und ohne bezifferte Ergebnisse.",
             "Cases": [
+                {
+                    "Title": "Haftpflicht-Bagatellfälle im Spital",
+                    "Slug": "tri-ia-cas-bagatelle-rc-hopital",
+                    "Summary": "Typisches Szenario. Ein in der Schweiz gehostetes Open-Source-Modell sortiert die kleinen Haftpflichtschäden eines Spitals: automatische Regulierung für die Dossiers, die die Regeln des Hauses erfüllen, menschliche Prüfung für alle anderen."
+                },
+                {
+                    "Title": "In der Schweiz gehostetes Open Source oder US-Abonnement",
+                    "Slug": "modeles-open-source-heberges-en-suisse-guide-decision",
+                    "Summary": "Entscheidungshilfe. Daten, Kosten, Qualität, Wartung, Kompetenzen: die fünf Kriterien für die Wahl zwischen einem in der Schweiz gehosteten Open-Source-Modell und einem US-amerikanischen KI-Dienst, mit Vergleichstabelle und den Grenzen jeder Option."
+                },
+                {
+                    "Title": "Kleine Schadenfälle in der Versicherung",
+                    "Slug": "tri-ia-petits-sinistres-assurance",
+                    "Summary": "Typisches Szenario. Die KI-Triage trennt die Meldungen, die direkt reguliert werden können, von denen, die einen Sachbearbeiter brauchen. Die Schwellenwerte bleiben die des Versicherers, und keine Ablehnung wird automatisiert."
+                },
+                {
+                    "Title": "Rechnungen, Spesenabrechnungen und MWST im Treuhandbüro",
+                    "Slug": "tri-ia-factures-notes-de-frais-tva-fiduciaire",
+                    "Summary": "Typisches Szenario. Jeder Beleg erhält einen Buchungsvorschlag oder eine begründete Meldung einer Auffälligkeit. Die Buchhalterin oder der Buchhalter bestätigt die korrekten Belege stapelweise und konzentriert sich auf die Abweichungen."
+                },
+                {
+                    "Title": "KYC-Dossiers und GwG-Alarme",
+                    "Slug": "tri-ia-dossiers-kyc-alertes-lba",
+                    "Summary": "Typisches Szenario. Das Modell prüft die Vollständigkeit der Dossiers und ordnet die Alarme nach Priorität, mit einer Zusammenfassung samt Quellen. Der Abschluss der Alarme und jede Compliance-Entscheidung bleiben beim Menschen."
+                },
                 {
                     "Title": "Post- und E-Mail-Automatisierung",
                     "Slug": "automatisation-courrier-entrant-ia",

@@ -1,0 +1,46 @@
+# houle.ai
+
+> houle is an independent, vendor-neutral AI consulting and integration firm based in Geneva, Switzerland (a brand of West-Bay SA). It helps organisations choose the use cases worth automating and the right model for each of them: Microsoft or OpenAI where it fits, Anthropic or Mistral, or open-source models (Llama, Mistral, Qwen, Gemma) hosted in Switzerland when data residency, professional or medical secrecy, cost or independence matter.
+
+The site is available in French (master), English, German, Spanish and Portuguese under /fr/, /en/, /de/, /es/ and /pt/.
+
+## What houle does
+
+- AI consulting: discovery workshop, use-case selection, model and hosting choice (proprietary or open source), measured pilot, production, governance.
+- Case and document triage: an AI model sorts incoming cases into those that meet the client's own rules for a simple path and the few that need human review. Rules and thresholds are set by the client, not by the model.
+- Open-source models hosted in Switzerland: self-hosted or in a Swiss cloud. For each project houle documents where inference runs, where data is stored, who has access and what is logged.
+- Microsoft 365 expertise: Azure, Power Automate, SharePoint, Power BI, SPFx. One competence among others.
+- Ready-to-use products for teams working in Microsoft 365: AI add-ins for Outlook and Word, AI agents, and Swiss GPT, a private GPT platform.
+
+houle does not claim certifications or turnkey compliance. Hosting in Switzerland simplifies a client's own legal analysis; it does not replace it.
+
+## Services
+
+- [AI consulting](https://houle.ai/en/services/ai-consulting/): the flagship service, from workshop to production and governance.
+- [Microsoft consulting](https://houle.ai/en/services/microsoft-consulting/): Microsoft 365, Power Platform and Azure.
+- [Contact](https://houle.ai/en/contact/): book a first call.
+
+## Products
+
+- [AI agents](https://houle.ai/en/products/ai-agents/)
+- [Swiss GPT](https://houle.ai/en/products/swiss-gpt/)
+- [AI for Outlook](https://houle.ai/en/products/outlook-addin/)
+- [AI for Word](https://houle.ai/en/products/word-addin/)
+- [Solutions by use case](https://houle.ai/en/solutions/)
+
+## Cornerstone articles
+
+Illustrative scenarios (no named client, no invented figures) and a decision guide:
+
+- [Minor liability claims in a hospital: sorting cases with an AI hosted in Switzerland](https://houle.ai/en/ressources/articles/tri-ia-cas-bagatelle-rc-hopital/)
+- [Open-source models hosted in Switzerland: when they beat a US AI subscription](https://houle.ai/en/ressources/articles/modeles-open-source-heberges-en-suisse-guide-decision/)
+- [Small insurance claims: AI triage between straight-through settlement and human review](https://houle.ai/en/ressources/articles/tri-ia-petits-sinistres-assurance/)
+- [Fiduciary firms: AI triage of supplier invoices, expense reports and VAT anomalies](https://houle.ai/en/ressources/articles/tri-ia-factures-notes-de-frais-tva-fiduciaire/)
+- [KYC files and AML alerts: AI triage of complete files and those that need an analyst](https://houle.ai/en/ressources/articles/tri-ia-dossiers-kyc-alertes-lba/)
+- [All resources](https://houle.ai/en/ressources/)
+
+## Company
+
+- Legal entity: West-Bay SA, Chemin Pré-Roset, 1294 Genthod (Geneva), Switzerland
+- Email: contact@houle.ai
+- Areas served: Geneva, Lausanne and the rest of Switzerland

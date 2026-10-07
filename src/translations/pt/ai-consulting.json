@@ -1,65 +1,120 @@
 {
     "Hero": {
         "Title": "Consultoria em inteligência artificial",
-        "Description": "Transforme sua empresa com soluções de IA adaptadas às suas necessidades. Acompanhamos você na integração da inteligência artificial para automatizar seus processos, melhorar suas decisões e criar valor."
+        "Description": "Uma consultoria de IA independente dos fornecedores, do workshop de descoberta à entrada em produção. Escolhemos com você os casos de uso que valem a pena e o modelo adequado, incluindo modelos de código aberto hospedados na Suíça."
     },
     "Presentation": {
-        "Intro": "A inteligência artificial não está mais reservada às grandes empresas. Hoje, as PMEs podem aproveitar essas tecnologias para ganhar eficiência, reduzir custos e oferecer melhores experiências aos seus clientes. Nossa abordagem pragmática permite adotar a IA progressivamente, sem perturbar sua organização.",
+        "Intro": "A maioria dos projetos de IA não fracassa por causa do modelo, mas porque o caso de uso foi mal escolhido ou porque ninguém havia definido as regras. Nosso trabalho começa, portanto, pelos seus processos: onde o tempo é gasto, quais decisões se repetem, quais dados estão em jogo. A escolha do modelo vem depois, e não está ligada a nenhum fornecedor.",
         "Why": {
-            "Title": "Por que investir em IA agora",
-            "Text": "As tecnologias de inteligência artificial atingiram um nível de maturidade que as torna acessíveis e rentáveis para empresas de todos os tamanhos. Seja para automatizar tarefas repetitivas, analisar grandes quantidades de dados ou melhorar seu serviço ao cliente, a IA oferece oportunidades concretas de transformação. Constatamos regularmente que as empresas que adotam essas ferramentas ganham em produtividade enquanto liberam suas equipes para missões de maior valor agregado."
+            "Title": "Por que uma consultoria independente",
+            "Text": "Um modelo da OpenAI no Azure, um modelo da Anthropic ou da Mistral, ou um modelo de código aberto como Llama, Qwen ou Gemma não têm os mesmos pontos fortes, nem os mesmos custos, nem as mesmas consequências para os seus dados. Um integrador ligado a um único fornecedor vai propor a plataforma dele. Nós comparamos as opções no seu caso, com os seus documentos, e também dizemos quando a IA não é a resposta certa."
         },
         "Services": {
-            "Title": "Nossas áreas de intervenção",
+            "Title": "O que fazemos com mais frequência",
             "Automation": {
-                "Title": "Automatização inteligente",
-                "Text": "Identificamos os processos repetitivos em sua empresa e concebemos soluções de automatização baseadas em IA. Isso pode incluir o processamento automático de documentos, a classificação de dados ou a gestão de solicitações de clientes. O objetivo é reduzir o tempo dedicado a tarefas rotineiras e minimizar os erros humanos."
+                "Title": "Triagem de processos e de solicitações",
+                "Text": "Um modelo lê cada processo recebido e o classifica segundo as suas regras: os que podem seguir um fluxo simples e os que, em menor número, exigem um olhar humano. Sinistros de baixo valor, faturas de fornecedores, solicitações de clientes, alertas de conformidade: o princípio é o mesmo, as regras são as suas."
             },
             "Analytics": {
-                "Title": "Análise preditiva",
-                "Text": "Seus dados contêm informações valiosas sobre seus clientes, operações e oportunidades de crescimento. Implementamos modelos de análise preditiva que ajudam a antecipar tendências, otimizar estoques ou personalizar suas ofertas. Essas ferramentas transformam seus dados em vantagens competitivas tangíveis."
+                "Title": "Extração e verificação de documentos",
+                "Text": "Faturas, contratos, formulários, documentos de identidade, relatórios: o modelo extrai as informações úteis, verifica se um processo está completo e aponta as incoerências. Suas equipes verificam as divergências em vez de digitar tudo de novo."
             },
             "Chatbots": {
-                "Title": "Assistentes conversacionais",
-                "Text": "Os chatbots e assistentes virtuais melhoram seu serviço ao cliente enquanto reduzem a carga de trabalho de suas equipes. Desenvolvemos soluções que compreendem a linguagem natural e podem gerenciar uma ampla gama de solicitações, do suporte técnico às consultas comerciais. Esses assistentes funcionam 24 horas por dia e melhoram continuamente graças ao aprendizado automático."
+                "Title": "Assistentes internos sobre os seus documentos",
+                "Text": "Um assistente que responde a partir dos seus procedimentos, contratos e processos, citando as fontes. Ele pode funcionar no Microsoft 365, nas suas ferramentas de negócio ou em uma infraestrutura hospedada na Suíça, conforme a sensibilidade dos conteúdos."
             },
             "Custom": {
-                "Title": "Soluções personalizadas",
-                "Text": "Cada empresa tem necessidades específicas. Concebemos aplicações de IA personalizadas que se integram perfeitamente em seu ambiente existente. Seja reconhecimento de imagens, processamento de linguagem natural ou otimização de processos complexos, desenvolvemos a solução que responde precisamente aos seus desafios."
+                "Title": "Integração nas suas ferramentas",
+                "Text": "Uma IA útil vive onde as suas equipes trabalham: e-mail, ERP, software de negócio, gestão de documentos. Realizamos a integração, os direitos de acesso, o registro de atividades e o acompanhamento, e documentamos tudo para o seu departamento de TI."
             }
         },
         "Approach": {
-            "Title": "Nosso método de trabalho",
-            "Text": "Sempre começamos por compreender seus processos atuais e identificar oportunidades de melhoria. Em seguida, desenvolvemos um projeto piloto que demonstra rapidamente o valor da IA em seu contexto. Essa abordagem progressiva permite constatar os benefícios antes de estender a solução a toda sua organização. Permanecemos ao seu lado para formar suas equipes e assegurar o sucesso da implementação."
+            "Title": "Nosso método, do workshop à produção",
+            "Text": "Seis etapas, cada uma com uma entrega e uma decisão clara: continuar, ajustar ou parar.",
+            "Steps": [
+                {
+                    "Title": "Workshop de descoberta",
+                    "Text": "Uma sessão de trabalho com as suas equipes de negócio e de TI. Revisamos os seus processos, volumes e restrições: sigilo profissional, proteção de dados, ferramentas já em uso."
+                },
+                {
+                    "Title": "Seleção dos casos de uso",
+                    "Text": "Classificamos as ideias segundo valor, viabilidade e risco, e escolhemos uma ou duas. Os casos em que um erro custaria caro demais ou cuja regra não pode ser escrita são descartados."
+                },
+                {
+                    "Title": "Escolha do modelo e da hospedagem",
+                    "Text": "Testamos vários modelos, proprietários e de código aberto, em uma amostra dos seus documentos, e comparamos qualidade, custo e consequências para os seus dados. Você recebe uma recomendação fundamentada, com seus limites."
+                },
+                {
+                    "Title": "Piloto medido",
+                    "Text": "O piloto roda em um escopo restrito, muitas vezes em paralelo ao processo existente. Os indicadores são definidos antes do início e medidos com os seus próprios números."
+                },
+                {
+                    "Title": "Entrada em produção",
+                    "Text": "Integração nas suas ferramentas, direitos de acesso, registro de atividades, supervisão, treinamento das equipes e procedimento de retomada manual em caso de falha."
+                },
+                {
+                    "Title": "Governança",
+                    "Text": "Quem decide as regras, quem as altera, quem controla os erros, com que frequência o modelo é reavaliado. Documentamos esses pontos para que o sistema continue sob controle ao longo do tempo."
+                }
+            ]
         },
         "Technologies": {
-            "Title": "Tecnologias e ferramentas",
-            "Text": "Trabalhamos com as plataformas de IA mais potentes do mercado, incluindo OpenAI, Microsoft Azure AI e outras soluções especializadas segundo suas necessidades. Nossa expertise cobre o aprendizado de máquina, o processamento de linguagem natural, a visão computacional e a análise de dados. Sempre selecionamos as tecnologias mais bem adaptadas à sua situação, privilegiando a confiabilidade e a facilidade de manutenção."
+            "Title": "As tecnologias com as quais trabalhamos",
+            "Text": "Modelos proprietários: OpenAI (inclusive via Azure OpenAI), Anthropic, Mistral. Modelos de código aberto: Llama, Mistral, Qwen, Gemma, implantados na sua infraestrutura ou em uma nuvem suíça. Ecossistema Microsoft: Microsoft 365, Copilot, Power Platform e Azure, quando as suas equipes já trabalham nele. Não temos exclusividade com nenhum fornecedor: a lista evolui com os modelos, e a escolha é sempre feita com base no seu caso."
         },
-        "AzureAI": {
-            "Title": "Azure AI: infraestrutura e soberania de dados",
-            "Intro": "Nossa experiência baseia-se no Microsoft Azure AI, uma plataforma abrangente que combina poder técnico com garantias de confidencialidade essenciais para empresas suíças.",
-            "Models": {
-                "Title": "Implantação de modelos de IA privados",
-                "Text": "Implantamos modelos de inteligência artificial de ponta (GPT-4, GPT-4o, Llama 3, Mistral) em seu próprio ambiente Azure. Esta abordagem garante que seus dados permaneçam sob seu controle total e nunca sejam usados para treinar modelos de terceiros. Você escolhe a região de implantação, idealmente Switzerland North ou West Europe para atender aos requisitos suíços de localização de dados. Ao contrário de soluções SaaS públicas, você controla versões de modelos, políticas de moderação e ciclos de atualização."
+        "ModelsHosting": {
+            "Title": "Modelos e hospedagem: como escolhemos",
+            "Intro": "Não existe um melhor modelo em geral. Existe um modelo adequado a um caso, a dados e a um orçamento. Veja como raciocinamos.",
+            "Choice": {
+                "Title": "Quando escolher o quê",
+                "Text": "Um serviço gerenciado por um grande fornecedor é adequado para tarefas variadas e pouco sensíveis, pequenos volumes e equipes sem competências de operação. Um modelo de código aberto hospedado na Suíça passa a ser interessante quando os dados são cobertos por sigilo profissional ou médico, quando a tarefa é repetitiva e bem definida, quando os volumes tornam a cobrança por uso cara, ou quando você não quer depender de um único fornecedor."
             },
-            "Indexing": {
-                "Title": "Indexação de documentos e busca semântica",
-                "Text": "O Azure AI Search indexa todos os seus documentos corporativos, sejam no SharePoint, OneDrive, bancos de dados ou sistemas empresariais. A busca semântica compreende a intenção por trás de uma consulta em vez de simplesmente corresponder palavras. Seus funcionários encontram instantaneamente informações relevantes mesmo se formuladas de forma diferente. Os documentos são enriquecidos automaticamente com metadados extraídos por IA, facilitando a classificação e conformidade regulatória."
+            "OpenSource": {
+                "Title": "Modelos de código aberto hospedados na Suíça",
+                "Text": "Modelos abertos como Llama, Mistral, Qwen ou Gemma podem ser instalados nos seus próprios servidores ou em um data center na Suíça. Para tarefas específicas como triagem, extração ou resumo, eles costumam dar resultados suficientes, desde que sejam testados nos seus documentos. A licença varia de um modelo para outro: nós a verificamos antes de qualquer uso."
             },
-            "Agents": {
-                "Title": "Agentes de IA autônomos e orquestração",
-                "Text": "Desenvolvemos agentes de IA capazes de executar tarefas complexas de forma autônoma usando Azure AI Agent Service e Microsoft Semantic Kernel. Esses agentes podem chamar suas APIs internas, consultar seus bancos de dados, gerar relatórios ou acionar fluxos de trabalho conforme necessário. A orquestração multiagente decompõe processos complexos em tarefas especializadas, cada agente trazendo sua experiência específica. Esta arquitetura modular facilita a manutenção e evolução de suas soluções de IA."
+            "Swiss": {
+                "Title": "O que «hospedado na Suíça» significa na prática",
+                "Text": "Definimos quatro pontos por escrito para cada projeto. Onde roda a inferência: em máquinas situadas na Suíça, as suas ou as de um provedor de hospedagem suíço. Onde estão os dados: documentos, índices e resultados permanecem nessa mesma infraestrutura. Quem tem acesso: uma lista nominal de pessoas, com direitos limitados. O que é registrado: as decisões e os acessos, sem guardar mais conteúdo do que o necessário. A hospedagem na Suíça não substitui a sua própria análise jurídica; ela a simplifica."
             },
-            "Grounding": {
-                "Title": "Grounding com Bing e seus dados",
-                "Text": "O grounding ancora as respostas de IA em fontes de dados confiáveis. Conectamos seus modelos às suas bases de conhecimento internas através do padrão RAG (Retrieval Augmented Generation), garantindo que as respostas sejam baseadas em seus documentos oficiais. Para necessidades que requerem informações externas atualizadas, a integração com Bing Search enriquece as respostas com dados públicos recentes citando as fontes. Esta abordagem híbrida combina a experiência interna de sua empresa com conhecimento geral atualizado."
+            "Proprietary": {
+                "Title": "Microsoft, OpenAI, Anthropic ou Mistral, quando é a escolha certa",
+                "Text": "Se as suas equipes vivem no Microsoft 365 e os conteúdos já estão lá, permanecer nesse ambiente costuma ser o mais simples. Para tarefas de redação ou de raciocínio complexo, os grandes modelos proprietários continuam à frente. Examinamos então com você a região de processamento, as condições contratuais e a retenção dos dados."
+            },
+            "Limits": {
+                "Title": "O que não prometemos",
+                "Text": "Um modelo às vezes erra. Não vendemos nem certificação, nem conformidade pronta, nem automação total. Projetamos sistemas em que as regras são as suas, em que os casos duvidosos vão para uma pessoa e em que cada decisão pode ser explicada depois."
             }
         },
         "UseCases": {
-            "Title": "Casos de uso reais",
-            "Intro": "Descubra como ajudamos empresas genebrinas a transformar suas operações com inteligência artificial. Estes projetos reais demonstram os benefícios mensuráveis da IA aplicada a desafios empresariais concretos.",
+            "Title": "Exemplos e casos de uso",
+            "Intro": "Casos de clientes e cenários típicos publicados nos nossos recursos. Os cenários típicos descrevem projetos representativos, sem cliente nomeado nem resultado numérico.",
             "Cases": [
+                {
+                    "Title": "Casos «bagatela» de responsabilidade civil no hospital",
+                    "Slug": "tri-ia-cas-bagatelle-rc-hopital",
+                    "Summary": "Cenário típico. Um modelo de código aberto hospedado na Suíça faz a triagem dos pequenos sinistros de responsabilidade civil de um hospital: liquidação automática para os processos que cumprem as regras da instituição, revisão humana para todos os outros."
+                },
+                {
+                    "Title": "Código aberto hospedado na Suíça ou assinatura americana",
+                    "Slug": "modeles-open-source-heberges-en-suisse-guide-decision",
+                    "Summary": "Guia de decisão. Dados, custo, qualidade, manutenção, competências: os cinco critérios para escolher entre um modelo de código aberto hospedado na Suíça e um serviço de IA americano, com uma tabela comparativa e os limites de cada opção."
+                },
+                {
+                    "Title": "Pequenos sinistros em seguros",
+                    "Slug": "tri-ia-petits-sinistres-assurance",
+                    "Summary": "Cenário típico. A triagem por IA separa as comunicações que podem ser liquidadas diretamente das que exigem um gestor. Os limites continuam sendo os da seguradora e nenhuma recusa é automatizada."
+                },
+                {
+                    "Title": "Faturas, relatórios de despesas e IVA em escritório contábil",
+                    "Slug": "tri-ia-factures-notes-de-frais-tva-fiduciaire",
+                    "Summary": "Cenário típico. Cada documento recebe uma proposta de lançamento ou um alerta de anomalia motivado. O contador valida em lote os documentos conformes e concentra-se nas divergências."
+                },
+                {
+                    "Title": "Processos KYC e alertas LBA",
+                    "Slug": "tri-ia-dossiers-kyc-alertes-lba",
+                    "Summary": "Cenário típico. O modelo verifica se os processos estão completos e classifica os alertas por prioridade, com um resumo fundamentado em fontes. O encerramento dos alertas e qualquer decisão de conformidade continuam humanos."
+                },
                 {
                     "Title": "Automação de correio postal e eletrônico",
                     "Slug": "automatisation-courrier-entrant-ia",

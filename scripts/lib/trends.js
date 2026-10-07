@@ -2,6 +2,11 @@
 /**
  * Trend signals for topic selection (Houle).
  *
+ * NOTE: the article pipeline no longer picks its topic here. Topics come from
+ * data/article-backlog.json via scripts/lib/articleBacklog.js (enforced
+ * rotation). Only enrichKeywordsWithSuggest and buildSEOSuggestions are still
+ * used; the trend/evergreen selection below is kept for reference.
+ *
  * Goals:
  * - Pick business-relevant topics for Houle's services.
  * - Stay robust in CI: no extra npm deps required.
@@ -657,6 +662,7 @@ module.exports = {
   filterRelevantTrends,
   mapTrendToArticleParams,
   getTopicSuggestions,
+  enrichKeywordsWithSuggest,
   buildSEOSuggestions,
   EVERGREEN_TOPICS,
 };

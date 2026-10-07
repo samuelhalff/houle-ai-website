@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
     inputs:
       force_topic:
-        description: "Override topic selection (e.g., copilot entreprise)"
+        description: "Override topic selection: a topic id from data/article-backlog.json, or free text"
         required: false
         type: string
       force_topic_keywords:
@@ -14,11 +14,11 @@ on:
         required: false
         type: string
       force_topic_category:
-        description: "Optional category override (private-ai, copilot, etc.)"
+        description: "Optional category for a free-text topic (ai-triage, vendor-neutral-models, swiss-hosted-open-source, process-automation, industry, cost-roi, implementation-guide, microsoft-365, odoo-erp, worked-scenario, regulation-policy)"
         required: false
         type: string
       skip_topic_rotation:
-        description: "Skip topic rotation guardrails"
+        description: "Skip topic rotation guardrails (category cooldown, policy cap, duplicate check)"
         required: false
         type: boolean
       force_date:
@@ -61,6 +61,11 @@ jobs:
               f.write('\n'.join(slugs))
           print(f"Captured {len(slugs)} existing article slugs")
           PY
+
+      - name: Check topic backlog and show the planned rotation
+        run: |
+          npm run test:article-rotation
+          node scripts/article-topic-plan.js --check --next 1
 
       - name: Run AI update (FR + translations via Azure OpenAI)
         env:
@@ -144,7 +149,7 @@ jobs:
           print(f"Detected new article: {a.get('title','')[:80]}")
           PY
 
-      - name: Validate latest article length
+      - name: Validate latest article (length, locale parity, lead path)
         run: npm run validate:latest-article
 
       - name: Commit and push changes

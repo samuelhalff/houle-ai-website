@@ -23,11 +23,11 @@ const copy = {
   en: {
     title: "Get in touch",
     subtitle:
-      "We are onboarding a small number of teams for early pilots on Microsoft 365.",
+      "Tell us about a use case. We start with a small, measured pilot.",
     callLabel: "Call",
     callTitle: "Book a short call",
     callDescription:
-      "The fastest way to discuss your Microsoft 365 setup, priorities, and next steps.",
+      "The fastest way to discuss your use case, your data constraints, and next steps.",
     bookingButton: "Book a call",
     writeLabel: "Or write to us",
     emailLabel: "Email",
@@ -49,7 +49,7 @@ const copy = {
       companyName: "Your company",
       phone: "Phone number",
       email: "you@company.com",
-      message: "Tell us about your Microsoft 365 setup",
+      message: "Tell us about your use case and your tools",
     },
     errors: {
       required: "This field is required",
@@ -65,11 +65,11 @@ const copy = {
   fr: {
     title: "Contactez-nous",
     subtitle:
-      "Nous accueillons quelques équipes pour des pilotes sur Microsoft 365.",
+      "Parlez-nous d'un cas d'usage. Nous commençons par un petit pilote mesuré.",
     callLabel: "Appel",
     callTitle: "Réservez un court appel",
     callDescription:
-      "Le moyen le plus simple pour parler de votre environnement Microsoft 365 et des prochaines étapes.",
+      "Le moyen le plus simple pour parler de votre cas d'usage, de vos contraintes de données et des prochaines étapes.",
     bookingButton: "Réserver un appel",
     writeLabel: "Ou écrivez-nous",
     emailLabel: "E-mail",
@@ -92,7 +92,7 @@ const copy = {
       companyName: "Votre entreprise",
       phone: "Numéro de téléphone",
       email: "vous@entreprise.com",
-      message: "Parlez-nous de votre organisation Microsoft 365",
+      message: "Parlez-nous de votre cas d'usage et de vos outils",
     },
     errors: {
       required: "Ce champ est requis",
@@ -108,11 +108,11 @@ const copy = {
   de: {
     title: "Kontakt aufnehmen",
     subtitle:
-      "Wir nehmen eine kleine Anzahl von Teams für frühe Pilotprojekte auf Microsoft 365 auf.",
+      "Erzählen Sie uns von einem Anwendungsfall. Wir beginnen mit einem kleinen, gemessenen Pilot.",
     callLabel: "Anruf",
     callTitle: "Kurzen Anruf buchen",
     callDescription:
-      "Der schnellste Weg, um Ihre Microsoft-365-Situation, Prioritäten und nächsten Schritte zu besprechen.",
+      "Der schnellste Weg, um Ihren Anwendungsfall, Ihre Datenvorgaben und die nächsten Schritte zu besprechen.",
     bookingButton: "Anruf buchen",
     writeLabel: "Oder schreiben Sie uns",
     emailLabel: "E-Mail",
@@ -136,7 +136,7 @@ const copy = {
       companyName: "Ihr Unternehmen",
       phone: "Telefonnummer",
       email: "sie@firma.com",
-      message: "Erzählen Sie uns von Ihrer Microsoft 365-Einrichtung",
+      message: "Erzählen Sie uns von Ihrem Anwendungsfall und Ihren Tools",
     },
     errors: {
       required: "Dieses Feld ist erforderlich",
@@ -152,11 +152,11 @@ const copy = {
   es: {
     title: "Contactar",
     subtitle:
-      "Estamos incorporando un pequeño número de equipos para pilotos iniciales en Microsoft 365.",
+      "Cuéntanos un caso de uso. Empezamos con un piloto pequeño y medido.",
     callLabel: "Llamada",
     callTitle: "Reserva una llamada breve",
     callDescription:
-      "La forma más rápida de hablar sobre tu entorno Microsoft 365, prioridades y próximos pasos.",
+      "La forma más rápida de hablar de tu caso de uso, tus restricciones de datos y los próximos pasos.",
     bookingButton: "Reservar una llamada",
     writeLabel: "O escríbenos",
     emailLabel: "Correo",
@@ -180,7 +180,7 @@ const copy = {
       companyName: "Tu empresa",
       phone: "Número de teléfono",
       email: "tu@empresa.com",
-      message: "Cuéntanos sobre tu configuración de Microsoft 365",
+      message: "Cuéntanos tu caso de uso y tus herramientas",
     },
     errors: {
       required: "Este campo es obligatorio",
@@ -196,11 +196,11 @@ const copy = {
   pt: {
     title: "Entre em contato",
     subtitle:
-      "Estamos integrando um pequeno número de equipes para pilotos iniciais no Microsoft 365.",
+      "Conte-nos um caso de uso. Começamos com um piloto pequeno e medido.",
     callLabel: "Ligação",
     callTitle: "Agende uma ligação curta",
     callDescription:
-      "A forma mais rápida de conversar sobre o seu ambiente Microsoft 365, prioridades e próximos passos.",
+      "A forma mais rápida de conversar sobre o seu caso de uso, as suas restrições de dados e os próximos passos.",
     bookingButton: "Agendar uma ligação",
     writeLabel: "Ou fale conosco por escrito",
     emailLabel: "E-mail",
@@ -224,7 +224,7 @@ const copy = {
       companyName: "Sua empresa",
       phone: "Número de telefone",
       email: "voce@empresa.com",
-      message: "Conte-nos sobre sua configuração do Microsoft 365",
+      message: "Conte-nos o seu caso de uso e as suas ferramentas",
     },
     errors: {
       required: "Este campo é obrigatório",

@@ -141,3 +141,32 @@ Keys for the home page.
 | `Hero.Title` | Hero section headline |
 | `Hero.Description` | Hero section description |
 | `Services.Title` | Services section heading |
+
+---
+
+## Namespace: ai-consulting (ai-consulting.json)
+
+Keys added or changed for the vendor-neutral positioning (2026-10). `Presentation.AzureAI.*` was removed and replaced by `Presentation.ModelsHosting.*`.
+
+| Key | Description |
+|-----|-------------|
+| `Presentation.Approach.Steps[]` | Six method steps (`Title`, `Text`): discovery workshop, use-case selection, model and hosting choice, pilot, production, governance |
+| `Presentation.ModelsHosting.Title` | Heading of the "models and hosting" section |
+| `Presentation.ModelsHosting.Intro` | Intro paragraph of the section |
+| `Presentation.ModelsHosting.Choice.Title` / `.Text` | When to choose which kind of model |
+| `Presentation.ModelsHosting.OpenSource.Title` / `.Text` | Open-source models hosted in Switzerland |
+| `Presentation.ModelsHosting.Swiss.Title` / `.Text` | What "hosted in Switzerland" means concretely |
+| `Presentation.ModelsHosting.Proprietary.Title` / `.Text` | When Microsoft, OpenAI, Anthropic or Mistral are the right choice |
+| `Presentation.ModelsHosting.Limits.Title` / `.Text` | What we do not promise |
+
+---
+
+## Namespace: faq (faq.json)
+
+| Key | Description |
+|-----|-------------|
+| `Question23` / `Answer23` | Which AI models we work with |
+| `Question24` / `Answer24` | What "hosted in Switzerland" means concretely |
+| `Question25` / `Answer25` | When an open-source model hosted in Switzerland beats a US AI subscription |
+
+The home page reads `Question1`–`Question25` (see `app/[locale]/page.tsx`).

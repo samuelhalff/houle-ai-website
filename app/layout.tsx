@@ -17,12 +17,12 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://houle.ai"),
   title: {
     template: "%s - houle",
-    default: "Houle | Swiss-Hosted Enterprise AI & Secure GPT Solutions",
+    default: "houle | Independent AI consulting in Geneva",
   },
   description:
-    "Houle provides secure, Swiss-hosted Enterprise AI solutions. Specializing in Human-AI collaboration, nLPD compliance, and private Azure-based GPT platforms.",
+    "houle is an independent AI consulting and integration firm in Geneva. The right model for each case: Microsoft, OpenAI, Anthropic, Mistral or open-source models hosted in Switzerland.",
   keywords:
-    "houle, enterprise ai, microsoft 365, outlook add-in, word add-in, private gpt, switzerland, swiss ai, azure switzerland, nlpd, data sovereignty, llm",
+    "houle, ai consulting geneva, vendor-neutral ai, open-source llm, swiss-hosted ai, self-hosted llm, private gpt, switzerland, nlpd, data sovereignty, microsoft 365, outlook add-in, word add-in",
   authors: [{ name: "houle" }],
   creator: "houle",
   publisher: "houle",
@@ -102,7 +102,7 @@ export default async function RootLayout({
     url: "https://houle.ai",
     name: "houle",
     description:
-      "Swiss-hosted enterprise AI solutions for Microsoft 365. Private GPT, Office add-ins with AI, and consulting services.",
+      "Independent AI consulting and integration in Geneva. Vendor-neutral model choice, open-source models hosted in Switzerland, Microsoft 365 expertise and Office add-ins with AI.",
     publisher: {
       "@type": "Organization",
       "@id": "https://houle.ai/#organization",
@@ -121,7 +121,7 @@ export default async function RootLayout({
     name: "houle.ai",
     alternateName: "houle",
     description:
-      "AI consulting firm in Geneva offering Microsoft 365 AI solutions, Swiss-hosted GPT platforms, and enterprise AI integration. nLPD and GDPR compliant. Serving Geneva, Lausanne, and Switzerland.",
+      "Independent AI consulting and integration firm in Geneva. Vendor-neutral model choice, including open-source models hosted in Switzerland, and Microsoft 365 expertise. Serving Geneva, Lausanne, and Switzerland.",
     url: "https://houle.ai",
     logo: "https://houle.ai/assets/logo.svg",
     image: "https://houle.ai/assets/og/og-en.webp",
@@ -153,14 +153,14 @@ export default async function RootLayout({
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "AI Consulting & Microsoft 365 Services",
+      name: "AI Consulting and Integration Services",
       itemListElement: [
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
             name: "AI Consulting Geneva",
-            description: "Custom AI solutions and Azure AI integration for Swiss businesses",
+            description: "Vendor-neutral AI consulting: use-case selection, model choice including open-source models hosted in Switzerland, pilot and production",
           },
         },
         {

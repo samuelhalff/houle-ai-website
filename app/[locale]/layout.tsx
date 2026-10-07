@@ -62,7 +62,7 @@ export default async function LocaleLayout({
               href: "/services/ai-consulting/",
               title: "Conseil en IA",
               description:
-                "Solutions d'intelligence artificielle sur mesure avec Azure AI",
+                "Conseil indépendant, du cas d'usage au choix du modèle, open source compris",
             },
             {
               href: "/services/microsoft-consulting/",
@@ -110,7 +110,7 @@ export default async function LocaleLayout({
                 href: "/services/ai-consulting/",
                 title: "KI-Beratung",
                 description:
-                  "Maßgeschneiderte KI-Lösungen mit Azure AI",
+                  "Unabhängige Beratung, vom Anwendungsfall bis zur Modellwahl, auch Open Source",
               },
               {
                 href: "/services/microsoft-consulting/",
@@ -158,7 +158,7 @@ export default async function LocaleLayout({
                   href: "/services/ai-consulting/",
                   title: "Consultoría IA",
                   description:
-                    "Soluciones de inteligencia artificial con Azure AI",
+                    "Consultoría independiente, del caso de uso a la elección del modelo, también código abierto",
                 },
                 {
                   href: "/services/microsoft-consulting/",
@@ -206,7 +206,7 @@ export default async function LocaleLayout({
                     href: "/services/ai-consulting/",
                     title: "Consultoria IA",
                     description:
-                      "Soluções de inteligência artificial com Azure AI",
+                      "Consultoria independente, do caso de uso à escolha do modelo, incluindo código aberto",
                   },
                   {
                     href: "/services/microsoft-consulting/",
@@ -253,7 +253,7 @@ export default async function LocaleLayout({
                     href: "/services/ai-consulting/",
                     title: "AI consulting",
                     description:
-                      "Custom artificial intelligence solutions with Azure AI",
+                      "Independent advice, from use case to model choice, open source included",
                   },
                   {
                     href: "/services/microsoft-consulting/",
