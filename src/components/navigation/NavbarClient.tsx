@@ -1,5 +1,6 @@
 "use client";
 
+import Logo from "@/src/components/site/Logo";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
@@ -59,10 +60,9 @@ export default function NavbarClient({
             href={`${localePrefix}/`}
             prefetch={false}
             aria-label={navData.labels.home}
-            className="site-logo font-semibold tracking-tight text-lg"
+            className="site-logo"
           >
-            <span className="text-brand">houle</span>
-            <span className="text-foreground">.ai</span>
+            <Logo className="text-[1.45rem]" />
           </Link>
 
           {/* Desktop nav */}

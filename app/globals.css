@@ -310,6 +310,15 @@
     height: 2.25rem;
   }
 
+  /* Wordmark (inline SVG, see src/components/site/Logo.tsx): sized by font-size. */
+  .site-wordmark {
+    display: block;
+    height: 0.86em;
+    width: auto;
+    color: oklch(var(--foreground));
+    flex: none;
+  }
+
   .site-header-controls {
     min-width: 8.5rem;
   }

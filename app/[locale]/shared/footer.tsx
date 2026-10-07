@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Logo from "@/src/components/site/Logo";
 import { Separator } from "@/src/components/ui/separator";
 import { WhatsAppIcon } from "@/src/components/icons/WhatsAppIcon";
 import { getWhatsAppContent, getWhatsAppLink } from "@/src/lib/whatsapp";
@@ -122,9 +123,8 @@ export default function Footer({ locale }: { locale?: string }) {
 
         {/* Brand column */}
         <div className="space-y-4 lg:col-span-1">
-          <p className="text-lg font-semibold tracking-tight">
-            <span className="text-brand">houle</span>
-            <span className="text-foreground">.ai</span>
+          <p>
+            <Logo className="text-[1.45rem]" />
           </p>
           <p className="max-w-[22ch] text-sm text-muted-foreground leading-relaxed">{t.tagline}</p>
           <div className="space-y-2">
