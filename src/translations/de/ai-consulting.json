@@ -91,9 +91,9 @@
             "Intro": "Kundenfälle und typische Szenarien, die in unseren Ressourcen veröffentlicht sind. Die typischen Szenarien beschreiben repräsentative Projekte, ohne genannten Kunden und ohne bezifferte Ergebnisse.",
             "Cases": [
                 {
-                    "Title": "Haftpflicht-Bagatellfälle im Spital",
-                    "Slug": "tri-ia-cas-bagatelle-rc-hopital",
-                    "Summary": "Typisches Szenario. Ein in der Schweiz gehostetes Open-Source-Modell sortiert die kleinen Haftpflichtschäden eines Spitals: automatische Regulierung für die Dossiers, die die Regeln des Hauses erfüllen, menschliche Prüfung für alle anderen."
+                    "Title": "Haftpflicht-Bagatellfälle in einer medizinischen Einrichtung",
+                    "Slug": "tri-ia-cas-bagatelle-rc-institution-medicale",
+                    "Summary": "Typisches Szenario. Ein in der Schweiz gehostetes Open-Source-Modell sortiert die kleinen Haftpflichtschäden einer medizinischen Einrichtung: automatische Regulierung für die Dossiers, die die Regeln des Hauses erfüllen, menschliche Prüfung für alle anderen."
                 },
                 {
                     "Title": "In der Schweiz gehostetes Open Source oder US-Abonnement",

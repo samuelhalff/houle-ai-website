@@ -91,9 +91,9 @@
             "Intro": "Casos de clientes e cenários típicos publicados nos nossos recursos. Os cenários típicos descrevem projetos representativos, sem cliente nomeado nem resultado numérico.",
             "Cases": [
                 {
-                    "Title": "Casos «bagatela» de responsabilidade civil no hospital",
-                    "Slug": "tri-ia-cas-bagatelle-rc-hopital",
-                    "Summary": "Cenário típico. Um modelo de código aberto hospedado na Suíça faz a triagem dos pequenos sinistros de responsabilidade civil de um hospital: liquidação automática para os processos que cumprem as regras da instituição, revisão humana para todos os outros."
+                    "Title": "Casos «bagatela» de responsabilidade civil em uma instituição médica",
+                    "Slug": "tri-ia-cas-bagatelle-rc-institution-medicale",
+                    "Summary": "Cenário típico. Um modelo de código aberto hospedado na Suíça faz a triagem dos pequenos sinistros de responsabilidade civil de uma instituição médica: liquidação automática para os processos que cumprem as regras da instituição, revisão humana para todos os outros."
                 },
                 {
                     "Title": "Código aberto hospedado na Suíça ou assinatura americana",

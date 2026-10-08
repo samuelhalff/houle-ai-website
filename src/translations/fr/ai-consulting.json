@@ -91,9 +91,9 @@
             "Intro": "Des cas clients et des scénarios types publiés dans nos ressources. Les scénarios types décrivent des projets représentatifs, sans client nommé ni résultat chiffré.",
             "Cases": [
                 {
-                    "Title": "Cas bagatelle RC à l'hôpital",
-                    "Slug": "tri-ia-cas-bagatelle-rc-hopital",
-                    "Summary": "Scénario type. Un modèle open source hébergé en Suisse trie les petits sinistres de responsabilité civile d'un hôpital : règlement automatique pour les dossiers qui remplissent les règles de l'établissement, revue humaine pour tous les autres."
+                    "Title": "Cas bagatelle RC en institution médicale",
+                    "Slug": "tri-ia-cas-bagatelle-rc-institution-medicale",
+                    "Summary": "Scénario type. Un modèle open source hébergé en Suisse trie les petits sinistres de responsabilité civile d'une institution médicale : règlement automatique pour les dossiers qui remplissent les règles de l'établissement, revue humaine pour tous les autres."
                 },
                 {
                     "Title": "Open source hébergé en Suisse ou abonnement américain",

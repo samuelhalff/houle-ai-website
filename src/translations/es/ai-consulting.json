@@ -91,9 +91,9 @@
             "Intro": "Casos de clientes y escenarios tipo publicados en nuestros recursos. Los escenarios tipo describen proyectos representativos, sin cliente nombrado ni resultado cifrado.",
             "Cases": [
                 {
-                    "Title": "Siniestros menores de responsabilidad civil en un hospital",
-                    "Slug": "tri-ia-cas-bagatelle-rc-hopital",
-                    "Summary": "Escenario tipo. Un modelo de código abierto alojado en Suiza clasifica los siniestros menores de responsabilidad civil de un hospital: liquidación automática para los expedientes que cumplen las reglas del centro y revisión humana para todos los demás."
+                    "Title": "Siniestros menores de responsabilidad civil en una institución médica",
+                    "Slug": "tri-ia-cas-bagatelle-rc-institution-medicale",
+                    "Summary": "Escenario tipo. Un modelo de código abierto alojado en Suiza clasifica los siniestros menores de responsabilidad civil de una institución médica: liquidación automática para los expedientes que cumplen las reglas del centro y revisión humana para todos los demás."
                 },
                 {
                     "Title": "Código abierto alojado en Suiza o suscripción estadounidense",

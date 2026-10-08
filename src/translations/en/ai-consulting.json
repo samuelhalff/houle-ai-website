@@ -91,9 +91,9 @@
             "Intro": "Client cases and illustrative scenarios published in our resources. The illustrative scenarios describe representative projects, with no named client and no quantified result.",
             "Cases": [
                 {
-                    "Title": "Minor liability claims at a hospital",
-                    "Slug": "tri-ia-cas-bagatelle-rc-hopital",
-                    "Summary": "Illustrative scenario. An open-source model hosted in Switzerland sorts a hospital's minor liability claims: automatic settlement for files that meet the institution's rules, human review for all the others."
+                    "Title": "Minor liability claims in a medical institution",
+                    "Slug": "tri-ia-cas-bagatelle-rc-institution-medicale",
+                    "Summary": "Illustrative scenario. An open-source model hosted in Switzerland sorts a medical institution's minor liability claims: automatic settlement for files that meet the institution's rules, human review for all the others."
                 },
                 {
                     "Title": "Open source hosted in Switzerland or a US subscription",

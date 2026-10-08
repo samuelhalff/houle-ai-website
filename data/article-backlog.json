@@ -25,8 +25,9 @@
   },
   "reserved": [
     {
-      "title": "Hôpital: triage par IA des cas RC bagatelle (petits sinistres en responsabilité civile)",
+      "title": "Institution médicale: triage par IA des cas RC bagatelle (petits sinistres en responsabilité civile)",
       "slugs": [
+        "tri-ia-cas-bagatelle-rc-institution-medicale",
         "tri-ia-cas-bagatelle-rc-hopital"
       ],
       "reason": "cornerstone article written by hand"

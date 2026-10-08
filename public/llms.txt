@@ -32,7 +32,7 @@ houle does not claim certifications or turnkey compliance. Hosting in Switzerlan
 
 Illustrative scenarios (no named client, no invented figures) and a decision guide:
 
-- [Minor liability claims in a hospital: sorting cases with an AI hosted in Switzerland](https://houle.ai/en/ressources/articles/tri-ia-cas-bagatelle-rc-hopital/)
+- [Minor liability claims in a medical institution: sorting cases with an AI hosted in Switzerland](https://houle.ai/en/ressources/articles/tri-ia-cas-bagatelle-rc-institution-medicale/)
 - [Open-source models hosted in Switzerland: when they beat a US AI subscription](https://houle.ai/en/ressources/articles/modeles-open-source-heberges-en-suisse-guide-decision/)
 - [Small insurance claims: AI triage between straight-through settlement and human review](https://houle.ai/en/ressources/articles/tri-ia-petits-sinistres-assurance/)
 - [Fiduciary firms: AI triage of supplier invoices, expense reports and VAT anomalies](https://houle.ai/en/ressources/articles/tri-ia-factures-notes-de-frais-tva-fiduciaire/)

@@ -48,6 +48,11 @@ function applySecurityHeaders(
   return response;
 }
 
+// Article slugs that were renamed after publication (old -> new).
+const RENAMED_ARTICLE_SLUGS: Record<string, string> = {
+  "tri-ia-cas-bagatelle-rc-hopital": "tri-ia-cas-bagatelle-rc-institution-medicale",
+};
+
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
   // Generate a per-request nonce for CSP
@@ -179,6 +184,19 @@ export function middleware(request: NextRequest) {
     );
     if (mdPathMatch) {
       return goneWithHeaders();
+    }
+
+    // Renamed article slugs: permanent redirect to the new slug, locale preserved.
+    const renamedArticleMatch = restNoTrailingSlash.match(
+      /^\/ressources\/articles\/([^/]+)$/,
+    );
+    const renamedArticleSlug = renamedArticleMatch
+      ? RENAMED_ARTICLE_SLUGS[renamedArticleMatch[1]]
+      : undefined;
+    if (renamedArticleSlug) {
+      return redirectWithHeaders(
+        `${localePrefix}/ressources/articles/${renamedArticleSlug}/`,
+      );
     }
   }
 
