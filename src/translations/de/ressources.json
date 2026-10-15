@@ -166,6 +166,10 @@
       "references": [
         {
           "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/"
+        },
+        {
+          "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
         },
         {
@@ -725,6 +729,10 @@
       "references": [
         {
           "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/"
+        },
+        {
+          "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
         },
         {
@@ -1075,6 +1083,10 @@
       "author": "houle Team",
       "date": "2025-11-13",
       "references": [
+        {
+          "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/"
+        },
         {
           "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
@@ -1947,6 +1959,10 @@
       "author": "houle Team",
       "date": "2025-09-17",
       "references": [
+        {
+          "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/"
+        },
         {
           "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
           "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
@@ -2969,6 +2985,10 @@
         {
           "labelKey": "Microsoft Learn - Terms of Use",
           "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ],
       "category": "quality-governance",
@@ -4872,11 +4892,11 @@
         },
         {
           "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
-          "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
+          "url": "https://learn.microsoft.com/en-us/azure/foundry/"
         },
         {
-          "labelKey": "Azure OpenAI - Use your data (RAG) - Microsoft Learn",
-          "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/concepts/use-your-data"
+          "labelKey": "Azure OpenAI - Documentation Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/azure/ai-services/openai/"
         }
       ]
     },
@@ -5041,6 +5061,14 @@
         {
           "labelKey": "Approches réglementaires IA en Suisse",
           "url": "https://www.newsd.admin.ch/newsd/message/attachments/71097.pdf"
+        },
+        {
+          "labelKey": "Microsoft Learn - Terms of Use",
+          "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
         }
       ]
     },
@@ -5058,7 +5086,20 @@
         "transformation digitale",
         "gouvernance"
       ],
-      "references": []
+      "references": [
+        {
+          "labelKey": "Microsoft Learn - Terms of Use",
+          "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        },
+        {
+          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+        }
+      ]
     },
     {
       "slug": "outlook-add-in-automatisez-reponses-suivi",
@@ -5076,7 +5117,20 @@
         "microsoft 365",
         "sécurité"
       ],
-      "references": []
+      "references": [
+        {
+          "labelKey": "Microsoft Learn - Terms of Use",
+          "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
+        },
+        {
+          "labelKey": "AI Risk Management Framework (AI RMF) - NIST",
+          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+        },
+        {
+          "labelKey": "AI Act - Cadre réglementaire de l'UE sur l'IA - Commission européenne",
+          "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+        }
+      ]
     },
     {
       "slug": "modelisation-politique-usage-ia-entreprise",
@@ -5095,19 +5149,19 @@
       "references": [
         {
           "labelKey": "Implementation details for AI risk governance - GitHub",
-          "url": "https://github.com"
+          "url": "https://github.com/"
         },
         {
           "labelKey": "Good Practices for Privacy-Preserving AI - NIST",
-          "url": "https://www.nist.gov/artificial-intelligence"
+          "url": "https://www.nist.gov/super-intelligence"
         },
         {
           "labelKey": "Exemples de politiques d’utilisation de l’IA – UQAM",
-          "url": "https://www.uqam.ca"
+          "url": "https://uqam.ca/"
         },
         {
           "labelKey": "Modèle de Politique sur l’usage des technologies – Université Laval",
-          "url": "https://www.ulaval.ca"
+          "url": "https://www.ulaval.ca/"
         },
         {
           "labelKey": "IA et protection des données - Préposé fédéral (PFPDT)",
@@ -5129,15 +5183,15 @@
       "references": [
         {
           "labelKey": "Schweizerisches Strafgesetzbuch, Art. 321 (Berufsgeheimnis) – Fedlex",
-          "url": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/fr#art_321"
-        },
-        {
-          "labelKey": "Bundesgesetz über den Datenschutz (DSG) – Fedlex",
-          "url": "https://www.fedlex.admin.ch/eli/cc/2022/491/fr"
+          "url": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/fr"
         },
         {
           "labelKey": "KI und Datenschutz – Eidgenössischer Datenschutz- und Öffentlichkeitsbeauftragter (EDÖB)",
           "url": "https://www.edoeb.admin.ch/fr/ia-et-protection-des-donnees"
+        },
+        {
+          "labelKey": "Microsoft Learn - Terms of Use",
+          "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ],
       "category": "workflow-automation",
@@ -5164,12 +5218,12 @@
           "url": "https://www.fedlex.admin.ch/eli/cc/2022/491/fr"
         },
         {
-          "labelKey": "Schweizerisches Strafgesetzbuch, Art. 321 (Berufsgeheimnis) – Fedlex",
-          "url": "https://www.fedlex.admin.ch/eli/cc/54/757_781_799/fr#art_321"
-        },
-        {
           "labelKey": "KI und Datenschutz – Eidgenössischer Datenschutz- und Öffentlichkeitsbeauftragter (EDÖB)",
           "url": "https://www.edoeb.admin.ch/fr/ia-et-protection-des-donnees"
+        },
+        {
+          "labelKey": "Microsoft Learn - Terms of Use",
+          "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ],
       "category": "private-llm-rag",
@@ -5196,12 +5250,12 @@
           "url": "https://www.fedlex.admin.ch/eli/cc/2022/491/fr"
         },
         {
-          "labelKey": "Versicherungsaufsichtsgesetz (VAG) – Fedlex",
-          "url": "https://www.fedlex.admin.ch/eli/cc/2005/734/fr"
-        },
-        {
           "labelKey": "FINMA-Aufsichtsmitteilung 08/2024: Governance und Risikomanagement beim Einsatz von KI",
           "url": "https://www.finma.ch/fr/news/2024/12/20241218-mm-finma-am-08-24/"
+        },
+        {
+          "labelKey": "Microsoft Learn - Terms of Use",
+          "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ],
       "category": "workflow-automation",
@@ -5225,19 +5279,15 @@
       "references": [
         {
           "labelKey": "Mehrwertsteuergesetz (MWSTG), Art. 70 – Fedlex",
-          "url": "https://www.fedlex.admin.ch/eli/cc/2009/615/fr#art_70"
-        },
-        {
-          "labelKey": "Obligationenrecht, Art. 958f (Aufbewahrung der Bücher) – Fedlex",
-          "url": "https://www.fedlex.admin.ch/eli/cc/27/317_321_377/fr#art_958_f"
-        },
-        {
-          "labelKey": "Bundesgesetz über den Datenschutz (DSG) – Fedlex",
-          "url": "https://www.fedlex.admin.ch/eli/cc/2022/491/fr"
+          "url": "https://www.fedlex.admin.ch/eli/cc/2009/615/fr"
         },
         {
           "labelKey": "Mehrwertsteuer – Eidgenössische Steuerverwaltung (ESTV)",
-          "url": "https://www.estv.admin.ch/estv/fr/accueil/taxe-sur-la-valeur-ajoutee.html"
+          "url": "https://www.estv.admin.ch/fr/taxe-sur-la-valeur-ajoutee"
+        },
+        {
+          "labelKey": "Microsoft Learn - Terms of Use",
+          "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ],
       "category": "business-operations",
@@ -5264,16 +5314,12 @@
           "url": "https://www.fedlex.admin.ch/eli/cc/1998/892_892_892/fr"
         },
         {
-          "labelKey": "Bankengesetz (BankG), Art. 47 – Fedlex",
-          "url": "https://www.fedlex.admin.ch/eli/cc/51/117_121_129/fr#art_47"
-        },
-        {
           "labelKey": "FINMA-Aufsichtsmitteilung 08/2024: Governance und Risikomanagement beim Einsatz von KI",
           "url": "https://www.finma.ch/fr/news/2024/12/20241218-mm-finma-am-08-24/"
         },
         {
-          "labelKey": "Bundesgesetz über den Datenschutz (DSG) – Fedlex",
-          "url": "https://www.fedlex.admin.ch/eli/cc/2022/491/fr"
+          "labelKey": "Microsoft Learn - Terms of Use",
+          "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
         }
       ],
       "category": "security-compliance",
@@ -5336,7 +5382,7 @@
         },
         {
           "labelKey": "Réponses au grand public sur l’utilisation des données en Suisse ",
-          "url": "https://www.edoeb.admin.ch/edoeb/fr/home.html"
+          "url": "https://www.edoeb.admin.ch/fr"
         }
       ]
     }
