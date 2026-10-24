@@ -87,13 +87,17 @@
             }
         },
         "UseCases": {
-            "Title": "Typical scenarios",
-            "Intro": "Representative projects, described without a named client or quantified result.",
+            "Title": "Client projects and typical scenarios",
+            "Intro": "Anonymised client projects and representative scenarios, described without names or quantified results.",
             "Cases": [
                 {
-                    "Title": "Minor liability claims in a medical institution",
+                    "Title": "Major Swiss medical institution: minor liability claims",
                     "Slug": "tri-ia-cas-bagatelle-rc-institution-medicale",
-                    "Summary": "Illustrative scenario. An open-source model hosted in Switzerland sorts a medical institution's minor liability claims: automatic settlement for files that meet the institution's rules, human review for all the others."
+                    "Summary": "Client project. For the legal department of a major Swiss medical institution, a model hosted in Switzerland classifies minor liability claims (lost items, damaged items, dental injuries), checks that files are complete, prepares acknowledgements and a draft reply. A lawyer validates every reply."
+                },
+                {
+                    "Title": "International school: security review of an AI platform",
+                    "Summary": "Client project. For an international school in Switzerland, a review of the code, Azure architecture, integrations and AI layer of an in-house platform holding student data: automated analysis, manual review of sensitive areas (authentication, authorisation, secrets, AI), then a report and a workshop with leadership."
                 },
                 {
                     "Title": "Open source hosted in Switzerland or a US subscription",

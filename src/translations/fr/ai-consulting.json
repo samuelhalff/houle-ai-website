@@ -87,13 +87,17 @@
             }
         },
         "UseCases": {
-            "Title": "Scénarios types",
-            "Intro": "Projets représentatifs, décrits sans client nommé ni résultat chiffré.",
+            "Title": "Projets clients et scénarios types",
+            "Intro": "Projets clients anonymisés et scénarios représentatifs, décrits sans nom ni résultat chiffré.",
             "Cases": [
                 {
-                    "Title": "Cas bagatelle RC en institution médicale",
+                    "Title": "Grande institution médicale suisse : petits sinistres RC",
                     "Slug": "tri-ia-cas-bagatelle-rc-institution-medicale",
-                    "Summary": "Scénario type. Un modèle open source hébergé en Suisse trie les petits sinistres de responsabilité civile d'une institution médicale : règlement automatique pour les dossiers qui remplissent les règles de l'établissement, revue humaine pour tous les autres."
+                    "Summary": "Projet client. Pour le service juridique d'une grande institution médicale suisse, un modèle hébergé en Suisse classe les cas bagatelle de responsabilité civile (objets perdus, objets endommagés, lésions dentaires), vérifie la complétude des dossiers, prépare les accusés de réception et un projet de réponse. Un juriste valide chaque réponse."
+                },
+                {
+                    "Title": "École internationale : revue de sécurité d'une plateforme IA",
+                    "Summary": "Projet client. Pour une école internationale en Suisse, revue du code, de l'architecture Azure, des intégrations et de la couche IA d'une plateforme développée en interne qui contient des données d'élèves : analyse automatisée, revue manuelle des zones sensibles (authentification, autorisations, secrets, IA), puis rapport et atelier avec la direction."
                 },
                 {
                     "Title": "Open source hébergé en Suisse ou abonnement américain",

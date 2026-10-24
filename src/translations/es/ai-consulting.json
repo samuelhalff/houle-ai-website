@@ -87,13 +87,17 @@
             }
         },
         "UseCases": {
-            "Title": "Escenarios tipo",
-            "Intro": "Proyectos representativos, descritos sin cliente nombrado ni resultado cifrado.",
+            "Title": "Proyectos de clientes y escenarios tipo",
+            "Intro": "Proyectos de clientes anonimizados y escenarios representativos, descritos sin nombres ni resultados cifrados.",
             "Cases": [
                 {
-                    "Title": "Siniestros menores de responsabilidad civil en una institución médica",
+                    "Title": "Gran institución médica suiza: siniestros menores de RC",
                     "Slug": "tri-ia-cas-bagatelle-rc-institution-medicale",
-                    "Summary": "Escenario tipo. Un modelo de código abierto alojado en Suiza clasifica los siniestros menores de responsabilidad civil de una institución médica: liquidación automática para los expedientes que cumplen las reglas del centro y revisión humana para todos los demás."
+                    "Summary": "Proyecto de cliente. Para el servicio jurídico de una gran institución médica suiza, un modelo alojado en Suiza clasifica los siniestros menores de responsabilidad civil (objetos perdidos, objetos dañados, lesiones dentales), verifica que los expedientes estén completos y prepara los acuses de recibo y un borrador de respuesta. Un jurista valida cada respuesta."
+                },
+                {
+                    "Title": "Escuela internacional: revisión de seguridad de una plataforma de IA",
+                    "Summary": "Proyecto de cliente. Para una escuela internacional en Suiza, revisión del código, la arquitectura Azure, las integraciones y la capa de IA de una plataforma desarrollada internamente que contiene datos de alumnos: análisis automatizado, revisión manual de las zonas sensibles (autenticación, autorizaciones, secretos, IA) y, después, informe y taller con la dirección."
                 },
                 {
                     "Title": "Código abierto alojado en Suiza o suscripción estadounidense",

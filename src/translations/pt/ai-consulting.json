@@ -87,13 +87,17 @@
             }
         },
         "UseCases": {
-            "Title": "Cenários típicos",
-            "Intro": "Projetos representativos, descritos sem cliente nomeado nem resultado numérico.",
+            "Title": "Projetos de clientes e cenários típicos",
+            "Intro": "Projetos de clientes anonimizados e cenários representativos, descritos sem nomes nem resultados numéricos.",
             "Cases": [
                 {
-                    "Title": "Casos «bagatela» de responsabilidade civil em uma instituição médica",
+                    "Title": "Grande instituição médica suíça: pequenos sinistros de RC",
                     "Slug": "tri-ia-cas-bagatelle-rc-institution-medicale",
-                    "Summary": "Cenário típico. Um modelo de código aberto hospedado na Suíça faz a triagem dos pequenos sinistros de responsabilidade civil de uma instituição médica: liquidação automática para os processos que cumprem as regras da instituição, revisão humana para todos os outros."
+                    "Summary": "Projeto de cliente. Para o serviço jurídico de uma grande instituição médica suíça, um modelo hospedado na Suíça classifica os pequenos sinistros de responsabilidade civil (objetos perdidos, objetos danificados, lesões dentárias), verifica se os processos estão completos e prepara os avisos de receção e um rascunho de resposta. Um jurista valida cada resposta."
+                },
+                {
+                    "Title": "Escola internacional: revisão de segurança de uma plataforma de IA",
+                    "Summary": "Projeto de cliente. Para uma escola internacional na Suíça, revisão do código, da arquitetura Azure, das integrações e da camada de IA de uma plataforma desenvolvida internamente que contém dados de alunos: análise automatizada, revisão manual das zonas sensíveis (autenticação, autorizações, segredos, IA) e, depois, relatório e workshop com a direção."
                 },
                 {
                     "Title": "Código aberto hospedado na Suíça ou assinatura americana",

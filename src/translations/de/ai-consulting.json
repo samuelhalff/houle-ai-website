@@ -87,13 +87,17 @@
             }
         },
         "UseCases": {
-            "Title": "Typische Szenarien",
-            "Intro": "Repräsentative Projekte, beschrieben ohne genannten Kunden und ohne bezifferte Ergebnisse.",
+            "Title": "Kundenprojekte und typische Szenarien",
+            "Intro": "Anonymisierte Kundenprojekte und repräsentative Szenarien, beschrieben ohne Namen und ohne bezifferte Ergebnisse.",
             "Cases": [
                 {
-                    "Title": "Haftpflicht-Bagatellfälle in einer medizinischen Einrichtung",
+                    "Title": "Grosse Schweizer Medizininstitution: Haftpflicht-Bagatellfälle",
                     "Slug": "tri-ia-cas-bagatelle-rc-institution-medicale",
-                    "Summary": "Typisches Szenario. Ein in der Schweiz gehostetes Open-Source-Modell sortiert die kleinen Haftpflichtschäden einer medizinischen Einrichtung: automatische Regulierung für die Dossiers, die die Regeln des Hauses erfüllen, menschliche Prüfung für alle anderen."
+                    "Summary": "Kundenprojekt. Für den Rechtsdienst einer grossen Schweizer Medizininstitution klassifiziert ein in der Schweiz gehostetes Modell Haftpflicht-Bagatellfälle (verlorene Gegenstände, beschädigte Gegenstände, Zahnverletzungen), prüft die Vollständigkeit der Dossiers und bereitet Eingangsbestätigungen sowie einen Antwortentwurf vor. Eine Juristin oder ein Jurist validiert jede Antwort."
+                },
+                {
+                    "Title": "Internationale Schule: Sicherheitsreview einer KI-Plattform",
+                    "Summary": "Kundenprojekt. Für eine internationale Schule in der Schweiz: Review von Code, Azure-Architektur, Integrationen und KI-Schicht einer intern entwickelten Plattform mit Schülerdaten – automatisierte Analyse, manuelle Prüfung sensibler Bereiche (Authentifizierung, Berechtigungen, Secrets, KI), danach Bericht und Workshop mit der Leitung."
                 },
                 {
                     "Title": "In der Schweiz gehostetes Open Source oder US-Abonnement",

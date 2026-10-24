@@ -279,7 +279,7 @@ const AIConsultingPage = async (props: { params: Promise<{ locale: string }> }) 
                 {(() => {
                   const cases = tService("Presentation.UseCases.Cases");
                   if (!Array.isArray(cases)) return null;
-                  return cases.map((item: any, index: number) => (
+                  return cases.map((item: any, index: number) => item.Slug ? (
                     <Link
                       key={index}
                       href={`${localePrefix}/ressources/articles/${item.Slug}`}
@@ -296,6 +296,11 @@ const AIConsultingPage = async (props: { params: Promise<{ locale: string }> }) 
                         </svg>
                       </span>
                     </Link>
+                  ) : (
+                    <div key={index} className="flex flex-col rounded-2xl border bg-card p-5 shadow-sm">
+                      <h3 className="font-semibold text-foreground">{item.Title}</h3>
+                      <p className="mt-2 flex-1 text-sm leading-6 text-muted-foreground">{item.Summary}</p>
+                    </div>
                   ));
                 })()}
               </div>
