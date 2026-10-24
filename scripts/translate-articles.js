@@ -1,6 +1,8 @@
 "use strict";
 // Load environment variables from .env if available (non-fatal if missing)
 try { require("dotenv").config(); } catch {}
+const topicScope = require("./lib/topicScope");
+const REDIRECTED_TO_ARK = topicScope.loadRedirectedKeys(process.cwd());
 
 /**
  * Translate FR articles to other locales (EN/DE/ES/PT) using Azure OpenAI (GPT-4.1) while preserving slugs and links.
@@ -269,6 +271,8 @@ async function main() {
       if (ONLY_SLUGS.size && !ONLY_SLUGS.has(frA.slug)) continue;
       const locA = bySlug.get(frA.slug);
       if (!needsTranslation(frA, locA)) continue;
+      // Articles moved to ark-fid.ch are never (re)translated.
+      if (topicScope.isRedirectedToArk(frA.slug, REDIRECTED_TO_ARK)) continue;
 
       processed++;
       if (MAX && processed > MAX) break;
@@ -286,6 +290,14 @@ async function main() {
 
       if (hasUnnecessaryCaps(title) || hasUnnecessaryCaps(description)) {
         console.warn(`[WARN] ${locale}:${frA.slug} possible unnecessary capitals in title/description.`);
+      }
+
+      const scopeProblems = topicScope.articleScopeProblems(
+        { ...frA, title },
+        { redirectedKeys: REDIRECTED_TO_ARK },
+      );
+      if (scopeProblems.length) {
+        throw new Error(`[scope] ${locale}:${frA.slug} rejected: ${scopeProblems.join("; ")}`);
       }
 
       const merged = {

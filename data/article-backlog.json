@@ -2608,38 +2608,6 @@
       }
     },
     {
-      "id": "odoo-api-integration-outils-metier",
-      "category": "odoo-erp",
-      "intent": "commercial",
-      "priority": 2,
-      "service": "/services/ai-consulting",
-      "title": "Intégrer Odoo à vos outils métier par l'API: méthodes et bonnes pratiques",
-      "angle": "Synchronisations fiables, gestion des erreurs et sécurité des accès pour relier Odoo au reste de votre système.",
-      "keywords": {
-        "fr": [
-          "api odoo intégration",
-          "connecter odoo logiciel métier",
-          "intégration odoo suisse"
-        ],
-        "en": [
-          "odoo api integration",
-          "connect odoo to business software"
-        ],
-        "de": [
-          "odoo api integration",
-          "odoo schnittstelle"
-        ],
-        "es": [
-          "integración api odoo",
-          "conectar odoo software de gestión"
-        ],
-        "pt": [
-          "integração api odoo",
-          "ligar odoo software de gestão"
-        ]
-      }
-    },
-    {
       "id": "migrer-vers-odoo-donnees-ia",
       "category": "odoo-erp",
       "intent": "commercial",

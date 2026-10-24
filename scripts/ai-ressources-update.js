@@ -58,6 +58,7 @@ const path = require("path");
 // Import trend and reference validation modules
 const { buildSEOSuggestions, enrichKeywordsWithSuggest } = require("./lib/trends");
 const articleBacklog = require("./lib/articleBacklog");
+const topicScope = require("./lib/topicScope");
 const {
   validateReferences,
   deduplicateByDomain,
@@ -203,6 +204,7 @@ function copilotRule() {
 }
 
 const EDITORIAL_RULES = [
+  ...topicScope.SCOPE_PROMPT_LINES,
   "=== POSITIONNEMENT (OBLIGATOIRE) ===",
   "- houle est un cabinet de conseil en IA indépendant des éditeurs, basé à Genève. Ne le présente jamais comme un partenaire ou revendeur d'un éditeur en particulier.",
   "- Reste neutre entre Microsoft/OpenAI, Anthropic, Mistral et les modèles open source (Llama, Mistral, Qwen, Gemma…). Les angles open source et hébergement en Suisse (auto-hébergé ou cloud suisse) sont bienvenus quand ils servent le lecteur.",
@@ -552,6 +554,18 @@ function assertNoForbiddenTermsInArticle(article, where = "article") {
  */
 function assertAIRelatedTopic(article, where = "article") {
   if (!article || typeof article !== "object") return;
+
+  // Hard editorial scope gate (fiduciary topics belong to ark-fid.ch).
+  const scope = topicScope.checkTopicScope({ title: article.title, slug: article.slug });
+  if (!scope.ok) {
+    const err = new Error(
+      `Article hors périmètre détecté dans ${where}: ${scope.reason}. Slug: "${article.slug}", Titre: "${article.title}"`,
+    );
+    err.code = "OFF_TOPIC_ARTICLE";
+    err.slug = article.slug;
+    err.title = article.title;
+    throw err;
+  }
 
   // Combine slug, title, and description for analysis
   const textToCheck = `${article.slug || ""} ${article.title || ""} ${article.description || ""}`.toLowerCase();
@@ -2933,6 +2947,15 @@ async function main() {
   });
   // Tags come from the topic (the taxonomy defaults are Microsoft-centred).
   newArticle.tags = articleBacklog.topicTags(CURRENT_TOPIC, "fr");
+  {
+    // Category-aware scope gate before anything is written.
+    const problems = topicScope.articleScopeProblems(newArticle, {
+      redirectedKeys: topicScope.loadRedirectedKeys(ROOT),
+    });
+    if (problems.length) {
+      throw new Error(`[scope] ${newArticle.slug} rejected before write: ${problems.join("; ")}`);
+    }
+  }
   await repairReferences(newArticle, articleCategory);
   syncContentReferencesSection(newArticle);
   sanitizeContentExternalLinks(newArticle);
@@ -3015,6 +3038,18 @@ async function main() {
     };
     normalizeBrandCaseInArticle(localizedArticle);
     assertNoForbiddenTermsInArticle(localizedArticle, locale);
+    // Hard scope gate on every localized output (translations can drift off-topic).
+    {
+      const scope = topicScope.checkTopicScope({
+        title: localizedArticle.title,
+        slug: localizedArticle.slug,
+      });
+      if (!scope.ok) {
+        throw new Error(
+          `[scope] ${locale}:${newArticle.slug} "${localizedArticle.title}" rejected: ${scope.reason}`,
+        );
+      }
+    }
 
     // Parity with FR is checked before the CTA is added on both sides.
     const parityIssues = articleBacklog.translationParityIssues(

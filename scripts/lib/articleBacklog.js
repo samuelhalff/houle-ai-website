@@ -17,6 +17,8 @@
  *   article title (or to a reserved topic) is skipped.
  */
 
+const topicScope = require("./topicScope");
+
 const fs = require("fs");
 const path = require("path");
 
@@ -340,6 +342,8 @@ function validateBacklog(backlog, { servicePaths = null, siteCategories = null }
     if (!catIds.has(t.category)) errors.push(`${where}: unknown category "${t.category}"`);
     if (!INTENTS.includes(t.intent)) errors.push(`${where}: invalid intent "${t.intent}"`);
     if (!t.title || !t.angle) errors.push(`${where}: title and angle are required`);
+    const scope = topicScope.checkTopicScope(t);
+    if (!scope.ok) errors.push(`${where}: ${scope.reason}`);
     if (servicePaths && !servicePaths.has(t.service)) {
       errors.push(`${where}: unknown service page "${t.service}"`);
     }
@@ -446,6 +450,8 @@ function categoryBlockReason(category, history, rules) {
 }
 
 function topicUnavailableReason(topic, history, backlog, rules) {
+  const scope = topicScope.checkTopicScope(topic);
+  if (!scope.ok) return `out of scope: ${scope.reason}`;
   if (topic.requires === "copilot" && !rules.allowCopilot) return "copilot topics disabled";
   if (history.some((h) => h.topicId === topic.id || h.slug === topic.id)) return "already used";
   const reserved = reservedEntries(backlog);
@@ -570,6 +576,9 @@ function resolveForcedTopic(backlog, { topic, keywords = [], category = "" }) {
  * skipRotation is set. Returns an error message or null.
  */
 function forcedTopicViolation(backlog, topic, articles, { skipRotation = false } = {}) {
+  // Editorial scope is never skippable (fiduciary topics belong to ark-fid.ch).
+  const scope = topicScope.checkTopicScope(topic);
+  if (!scope.ok) return `out of scope: ${scope.reason}`;
   if (skipRotation) return null;
   const rules = getRules(backlog);
   const history = buildHistory(articles);

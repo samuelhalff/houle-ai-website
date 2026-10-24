@@ -4,6 +4,8 @@
 const fs = require("fs");
 const path = require("path");
 
+const topicScope = require("./lib/topicScope");
+
 const MIN_WORDS = 700;
 const file = path.join(process.cwd(), "src", "translations", "fr", "ressources.json");
 const data = JSON.parse(fs.readFileSync(file, "utf8"));
@@ -16,6 +18,41 @@ const latest = articles
 if (!latest) {
   console.error("No dated FR articles found.");
   process.exit(1);
+}
+
+// Editorial scope: fiduciary topics belong to ark-fid.ch and must never be published here.
+const scopeProblems = topicScope.articleScopeProblems(latest, {
+  redirectedKeys: topicScope.loadRedirectedKeys(process.cwd()),
+});
+if (scopeProblems.length) {
+  console.error(
+    `Latest FR article "${latest.slug}" is out of houle.ai scope:\n- ${scopeProblems.join("\n- ")}`,
+  );
+  process.exit(1);
+}
+
+// The same slug must be in scope in every locale (translations can drift).
+{
+  const localeProblems = [];
+  for (const locale of ["en", "de", "es", "pt"]) {
+    const localeFile = path.join(process.cwd(), "src", "translations", locale, "ressources.json");
+    if (!fs.existsSync(localeFile)) continue;
+    const localized = (JSON.parse(fs.readFileSync(localeFile, "utf8")).Articles || []).find(
+      (a) => a.slug === latest.slug,
+    );
+    if (!localized) continue; // missing translations are reported by the parity checks below
+    const probs = topicScope.articleScopeProblems(
+      { ...localized, category: localized.category || latest.category },
+      { redirectedKeys: new Set() },
+    );
+    for (const p of probs) localeProblems.push(`${locale}: ${p}`);
+  }
+  if (localeProblems.length) {
+    console.error(
+      `Latest article "${latest.slug}" is out of houle.ai scope in translations:\n- ${localeProblems.join("\n- ")}`,
+    );
+    process.exit(1);
+  }
 }
 
 const words = String(latest.content || "")

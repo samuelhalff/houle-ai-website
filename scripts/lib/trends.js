@@ -25,6 +25,8 @@
  * - TRENDS_SUGGEST_MAX (default: 8)
  */
 
+const topicScope = require("./topicScope");
+
 const EVERGREEN_TOPICS = [
   // --- private-ai ---
   {
@@ -411,6 +413,8 @@ function filterRelevantTrends(trends = []) {
   ];
 
   return trends.filter((trend) => {
+    // Fiduciary topics belong to ark-fid.ch (see lib/topicScope.js).
+    if (!topicScope.isInScope({ title: trend.title })) return false;
     const searchText = `${trend.title || ""} ${(trend.relatedQueries || []).join(" ")}`.toLowerCase();
 
     // Avoid false positives on short tokens (e.g. "braga" contains "rag").
@@ -467,6 +471,7 @@ function guessCategoryFromText(text) {
 
 function mapTrendToArticleParams(trend, existingSlugs = []) {
   if (!trend || !trend.title) return null;
+  if (!topicScope.isInScope({ title: trend.title })) return null;
 
   const title = trend.title;
   const keywords = [title, ...(trend.relatedQueries || [])].filter(Boolean).slice(0, 6);
@@ -592,6 +597,7 @@ async function getTopicSuggestions(options = {}) {
     console.log("[trends] No suitable trending topic found, using evergreen topics");
     const candidates = EVERGREEN_TOPICS
       .filter((t) => !existingSlugs.includes(t.topic))
+      .filter((t) => topicScope.isInScope({ title: t.title, slug: t.topic }))
       .filter((t) => !avoidTopics.includes(t.category))
       .map((t) => ({
         t,
@@ -607,6 +613,7 @@ async function getTopicSuggestions(options = {}) {
     } else {
       const relaxedCandidates = EVERGREEN_TOPICS
         .filter((t) => !existingSlugs.includes(t.topic))
+        .filter((t) => topicScope.isInScope({ title: t.title, slug: t.topic }))
         .map((t) => ({
           t,
           count: (topicCounts && typeof topicCounts === "object")
