@@ -6,6 +6,7 @@ import { WhatsAppIcon } from "@/src/components/icons/WhatsAppIcon";
 import { getWhatsAppContent, getWhatsAppLink } from "@/src/lib/whatsapp";
 import type { Locale } from "@/src/lib/i18n-locales";
 import { cn } from "@/src/lib/utils";
+import { trackEvent } from "@/src/lib/analytics";
 
 const ENTRANCE_ANIMATION_DELAY = 180;
 const BASE_OFFSET = 16;
@@ -81,6 +82,12 @@ export default function WhatsAppButton({ locale }: { locale: Locale }) {
   return (
     <a
       href={href}
+      onClick={() =>
+        trackEvent("contact_channel_click", {
+          channel: "whatsapp",
+          location: "floating_button",
+        })
+      }
       target="_blank"
       rel="noopener noreferrer"
       aria-label={copy.floatingAriaLabel}

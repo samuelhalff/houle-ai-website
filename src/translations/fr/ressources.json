@@ -4729,5 +4729,22 @@
   "FAQ : Questions supplémentaires sur l’automatisation des devis": "Réponses à des questions fréquentes sur l'usage de l'IA pour les devis",
   "Intégration IA et ERP : Étude de cas suisse": "Intégration IA et ERP pour les devis complexes",
   "Défis de l'automatisation des devis": "Les limites et défis de l’automatisation des devis",
-  "Checklist : Évaluation des solutions IA": "Checklist pour choisir une solution d’automatisation des devis"
+  "Checklist : Évaluation des solutions IA": "Checklist pour choisir une solution d’automatisation des devis",
+  "ContextualCTA": {
+    "Title": "Une question sur ce sujet ?",
+    "Description": "Parlons de votre situation. Un premier échange est possible sans engagement.",
+    "PrimaryCTA": "Nous contacter",
+    "Services": {
+      "ai-consulting": {
+        "Title": "Envie d'avancer sur l'IA dans votre entreprise ?",
+        "Description": "Stratégie, gouvernance, sécurité : nous vous aidons à cadrer et à déployer l'IA de façon simple et maîtrisée.",
+        "ServiceCTA": "Découvrir le conseil en IA"
+      },
+      "microsoft-consulting": {
+        "Title": "Automatiser avec Microsoft 365 et Power Platform ?",
+        "Description": "Documents, e-mails, validations, tableaux de bord : nous mettons en place des solutions concrètes dans votre environnement Microsoft.",
+        "ServiceCTA": "Découvrir le conseil Microsoft"
+      }
+    }
+  }
 }

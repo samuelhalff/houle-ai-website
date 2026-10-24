@@ -4734,5 +4734,22 @@
   "FAQ : Questions supplémentaires sur l’automatisation des devis": "Respuestas a preguntas frecuentes sobre el uso de IA para presupuestos",
   "Intégration IA et ERP : Étude de cas suisse": "Integración IA y ERP para presupuestos complejos",
   "Défis de l'automatisation des devis": "Límites y retos de la automatización de presupuestos",
-  "Checklist : Évaluation des solutions IA": "Checklist para elegir una solución de automatización de presupuestos"
+  "Checklist : Évaluation des solutions IA": "Checklist para elegir una solución de automatización de presupuestos",
+  "ContextualCTA": {
+    "Title": "¿Una pregunta sobre este tema?",
+    "Description": "Hablemos de su situación. Una primera conversación es posible sin compromiso.",
+    "PrimaryCTA": "Contáctenos",
+    "Services": {
+      "ai-consulting": {
+        "Title": "¿Quiere avanzar con la IA en su empresa?",
+        "Description": "Estrategia, gobernanza, seguridad: le ayudamos a definir y desplegar la IA de forma sencilla y controlada.",
+        "ServiceCTA": "Ver la consultoría en IA"
+      },
+      "microsoft-consulting": {
+        "Title": "¿Automatizar con Microsoft 365 y Power Platform?",
+        "Description": "Documentos, correos, aprobaciones, paneles: ponemos en marcha soluciones concretas en su entorno Microsoft.",
+        "ServiceCTA": "Ver la consultoría Microsoft"
+      }
+    }
+  }
 }

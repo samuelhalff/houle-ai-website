@@ -17,6 +17,9 @@ import {
   type ArticleReference,
 } from "@/src/lib/articles";
 import RelatedArticles from "../components/RelatedArticles";
+import ArticleContextualCTA from "@/src/components/ui/article-contextual-cta";
+import { getCategoryService, splitArticleAtMidpoint } from "@/src/lib/articleCta";
+import { buildInternalUrl } from "@/src/lib/paths";
 import Breadcrumbs from "@/src/components/navigation/Breadcrumbs";
 import { estimateReadingTime } from "@/src/lib/readingTime";
 import Defer from "@/src/components/Defer";
@@ -101,6 +104,8 @@ export default async function ArticlePage(props: Params) {
     ? `${baseUrl}/assets/${article.image.replace(/^\/?assets\//, "")}`
     : `${baseUrl}/assets/og/og-${locale}.webp`;
   const reading = estimateReadingTime(article.content || "");
+  const { first: articleFirstHalf, second: articleSecondHalf } =
+    splitArticleAtMidpoint(article.content ?? "");
   const categoryLabel = getResourceCategoryLabel(article.category);
   const tags = Array.isArray(article.tags) ? article.tags : [];
 
@@ -227,8 +232,46 @@ export default async function ArticlePage(props: Params) {
         className="prose prose-lg dark:prose-invert max-w-none"
       >
         <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
-          {article.content ?? ""}
+          {articleFirstHalf}
         </ReactMarkdown>
+
+        {/* Mid-article contextual CTA: category-specific service link when one
+            exists, otherwise the generic contact prompt. */}
+        {articleSecondHalf &&
+          (() => {
+            type CtaCopy = { Title?: string; Description?: string; ServiceCTA?: string };
+            const cta = (ressources.ContextualCTA ?? {}) as {
+              Title?: string;
+              Description?: string;
+              PrimaryCTA?: string;
+              Services?: Record<string, CtaCopy>;
+            };
+            const service = getCategoryService(article.category);
+            const serviceCopy = service ? cta.Services?.[service] : undefined;
+            const hasService = Boolean(serviceCopy?.ServiceCTA);
+            return (
+              <ArticleContextualCTA
+                title={(hasService && serviceCopy?.Title) || cta.Title || ""}
+                description={
+                  (hasService && serviceCopy?.Description) || cta.Description || ""
+                }
+                primaryText={cta.PrimaryCTA || ""}
+                primaryHref={buildInternalUrl("/contact", locale)}
+                secondaryText={hasService ? serviceCopy?.ServiceCTA : undefined}
+                secondaryHref={
+                  hasService && service
+                    ? buildInternalUrl(`/services/${service}`, locale)
+                    : undefined
+                }
+              />
+            );
+          })()}
+
+        {articleSecondHalf && (
+          <ReactMarkdown remarkPlugins={[remarkGfm]} components={markdownComponents}>
+            {articleSecondHalf}
+          </ReactMarkdown>
+        )}
       </article>
 
       {references.length > 0 && (

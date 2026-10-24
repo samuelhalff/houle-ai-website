@@ -12,6 +12,7 @@ import ThemeToggleMobile from "@/src/components/navigation/ThemeToggleMobile";
 import { useState } from "react";
 import Link from "next/link";
 import { cn } from "@/src/lib/utils";
+import { trackEvent } from "@/src/lib/analytics";
 import type { NavData } from "@/src/components/navigation/types";
 
 const MobileMenuToggleIcon = ({
@@ -198,6 +199,12 @@ const MobileMenu = ({
               </Link>
               <a
                 href="mailto:contact@houle.ai"
+                onClick={() =>
+                  trackEvent("contact_channel_click", {
+                    channel: "email",
+                    location: "mobile_menu",
+                  })
+                }
                 className="block px-2 pt-0.5 font-mono text-[11px] uppercase tracking-[0.14em] text-muted-foreground"
               >
                 contact@houle.ai

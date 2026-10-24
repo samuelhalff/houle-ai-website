@@ -3,6 +3,7 @@ import { headers } from "next/headers";
 import { getTranslations, type Locale } from "@/src/lib/i18n";
 import fs from "fs";
 import path from "path";
+import { filterRedirectedArticles } from "@/src/lib/redirectedArticles";
 
 interface Article {
   slug: string;
@@ -24,7 +25,7 @@ async function getRecentArticles(locale: Locale): Promise<Article[]> {
       return [];
     }
     const data = JSON.parse(fs.readFileSync(filePath, "utf8"));
-    return (data.Articles || []).slice(0, 3);
+    return filterRedirectedArticles<Article>(locale, data.Articles || []).slice(0, 3);
   } catch {
     return [];
   }

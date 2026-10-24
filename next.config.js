@@ -36,8 +36,19 @@ const baseConfig = {
   },
   async redirects() {
     // Locale prefixing + trailing-slash normalization is handled in middleware.
-    // Keeping redirects empty here avoids conflicts and redirect chains.
-    return [];
+    // Only the articles that moved to ark-fid.ch are redirected here (config
+    // redirects run before middleware, so there is a single hop). The final
+    // ark destination is stored per locale; skipTrailingSlashRedirect is on,
+    // so both slash forms are emitted.
+    const toArk = require("./src/data/articles-redirected-to-ark.json");
+    return Object.entries(toArk).flatMap(([key, destination]) => {
+      const [locale, slug] = key.split("/");
+      const source = `/${locale}/ressources/articles/${slug}`;
+      return [
+        { source, destination, permanent: true },
+        { source: `${source}/`, destination, permanent: true },
+      ];
+    });
   },
   async rewrites() {
     // No rewrites needed for houle.ai - all routes use their canonical paths

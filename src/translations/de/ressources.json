@@ -4732,5 +4732,22 @@
   "FAQ : Questions supplémentaires sur l’automatisation des devis": "Antworten auf häufige Fragen zum KI-Einsatz für Offerten",
   "Intégration IA et ERP : Étude de cas suisse": "KI- und ERP-Integration für komplexe Offerten",
   "Défis de l'automatisation des devis": "Grenzen und Herausforderungen der Offertautomatisierung",
-  "Checklist : Évaluation des solutions IA": "Checkliste zur Auswahl einer Offertenautomatisierungslösung"
+  "Checklist : Évaluation des solutions IA": "Checkliste zur Auswahl einer Offertenautomatisierungslösung",
+  "ContextualCTA": {
+    "Title": "Eine Frage zu diesem Thema?",
+    "Description": "Sprechen wir über Ihre Situation. Ein erstes Gespräch ist unverbindlich möglich.",
+    "PrimaryCTA": "Kontakt aufnehmen",
+    "Services": {
+      "ai-consulting": {
+        "Title": "KI in Ihrem Unternehmen voranbringen?",
+        "Description": "Strategie, Governance, Sicherheit: Wir helfen Ihnen, KI einfach und kontrolliert einzuführen.",
+        "ServiceCTA": "KI-Beratung ansehen"
+      },
+      "microsoft-consulting": {
+        "Title": "Mit Microsoft 365 und Power Platform automatisieren?",
+        "Description": "Dokumente, E-Mails, Freigaben, Dashboards: Wir setzen konkrete Lösungen in Ihrer Microsoft-Umgebung um.",
+        "ServiceCTA": "Microsoft-Beratung ansehen"
+      }
+    }
+  }
 }

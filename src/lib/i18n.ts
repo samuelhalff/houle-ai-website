@@ -4,6 +4,7 @@ import { fileURLToPath } from "url";
 import { headers } from "next/headers";
 import { locales } from "./i18n-locales";
 import type { Locale } from "./i18n-locales";
+import { filterRedirectedArticles } from "./redirectedArticles";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -57,6 +58,10 @@ function loadNamespace(locale: string, namespace: string): Record<string, unknow
   try {
     const fileContent = fs.readFileSync(filePath, "utf8");
     const data = JSON.parse(fileContent);
+    // Articles redirected to ark-fid.ch are not carried on houle.ai any more.
+    if (namespace === "ressources" && data && Array.isArray(data.Articles)) {
+      data.Articles = filterRedirectedArticles(locale, data.Articles);
+    }
     cache.set(cacheKey, data);
     return data;
   } catch {

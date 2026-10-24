@@ -18,6 +18,7 @@ import { Button } from "@/src/components/ui/button";
 import { Checkbox } from "@/src/components/ui/checkbox";
 import { Textarea } from "@/src/components/ui/textarea";
 import { toast, Toaster } from "sonner";
+import { trackEvent } from "@/src/lib/analytics";
 import React from "react";
 
 // We keep the types and defaults outside the component
@@ -97,6 +98,13 @@ const ContactForm: FC<ContactFormProps> = ({
   strings,
 }) => {
   const [sending, setSending] = React.useState(false);
+  const startedRef = React.useRef(false);
+
+  const handleFormStart = () => {
+    if (startedRef.current) return;
+    startedRef.current = true;
+    trackEvent("contact_form_start", { form_location: window.location.pathname });
+  };
 
   // Memoize schema based on provided error strings
   const formSchema = useMemo(
@@ -128,12 +136,20 @@ const ContactForm: FC<ContactFormProps> = ({
         throw new Error("Form submission failed");
       }
 
+      trackEvent("generate_lead", {
+        method: "contact_form",
+        form_location: window.location.pathname,
+      });
       form.reset(defaultValues);
       toast.success(strings.toasts.success, {
         duration: 5000,
       });
     } catch (error) {
       console.error("Contact form submission error:", error);
+      trackEvent("form_submit_error", {
+        method: "contact_form",
+        form_location: window.location.pathname,
+      });
       toast.error(strings.toasts.error);
     } finally {
       setSending(false);
@@ -157,6 +173,7 @@ const ContactForm: FC<ContactFormProps> = ({
                 className="flex flex-col gap-6"
                 id="contact-form"
                 onSubmit={form.handleSubmit(onSubmit)}
+                onFocusCapture={handleFormStart}
                 aria-busy={sending}
               >
                 <div className="flex flex-col md:flex-row justify-between gap-4">

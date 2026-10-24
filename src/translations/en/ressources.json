@@ -4738,5 +4738,22 @@
   "FAQ : Questions supplémentaires sur l’automatisation des devis": "Answers to Common Questions About Using AI for Quotes",
   "Intégration IA et ERP : Étude de cas suisse": "AI and ERP Integration for Complex Quotes",
   "Défis de l'automatisation des devis": "The Limits and Challenges of Quote Automation",
-  "Checklist : Évaluation des solutions IA": "Checklist for Choosing a Quote Automation Solution"
+  "Checklist : Évaluation des solutions IA": "Checklist for Choosing a Quote Automation Solution",
+  "ContextualCTA": {
+    "Title": "A question about this topic?",
+    "Description": "Let's talk about your situation. A first conversation is possible with no commitment.",
+    "PrimaryCTA": "Contact us",
+    "Services": {
+      "ai-consulting": {
+        "Title": "Want to move forward with AI in your company?",
+        "Description": "Strategy, governance, security: we help you frame and roll out AI in a simple, controlled way.",
+        "ServiceCTA": "See our AI consulting"
+      },
+      "microsoft-consulting": {
+        "Title": "Automate with Microsoft 365 and Power Platform?",
+        "Description": "Documents, emails, approvals, dashboards: we build practical solutions inside your Microsoft environment.",
+        "ServiceCTA": "See our Microsoft consulting"
+      }
+    }
+  }
 }

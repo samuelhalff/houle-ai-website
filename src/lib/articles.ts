@@ -2,6 +2,7 @@ import { cache } from "react";
 import fs from "fs";
 import path from "path";
 import { locales, type Locale } from "./i18n-locales";
+import { filterRedirectedArticles } from "./redirectedArticles";
 
 export type ArticleReference = {
   labelKey: string;
@@ -73,9 +74,12 @@ function ressourcesPath(locale: Locale) {
   return path.join(process.cwd(), "src", "translations", locale, "ressources.json");
 }
 
-function normalizeRessources(input: Partial<RessourcesDictionary>): RessourcesDictionary {
+function normalizeRessources(
+  input: Partial<RessourcesDictionary>,
+  locale: Locale,
+): RessourcesDictionary {
   const articles = Array.isArray(input.Articles)
-    ? input.Articles.filter((article): article is ResourceArticle => {
+    ? filterRedirectedArticles(locale, input.Articles).filter((article): article is ResourceArticle => {
         if (!article || typeof article !== "object") return false;
         return Boolean(article.slug && article.title);
       })
@@ -96,7 +100,7 @@ export function readRessources(locale: Locale): RessourcesDictionary {
 
   const file = ressourcesPath(locale);
   const raw = fs.existsSync(file) ? fs.readFileSync(file, "utf8") : "{}";
-  const data = normalizeRessources(JSON.parse(raw) as Partial<RessourcesDictionary>);
+  const data = normalizeRessources(JSON.parse(raw) as Partial<RessourcesDictionary>, locale);
   ressourcesCache.set(locale, { data, expiresAt: now + TTL_MS });
   return data;
 }

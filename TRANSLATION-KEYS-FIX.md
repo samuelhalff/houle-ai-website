@@ -170,3 +170,15 @@ Keys added or changed for the vendor-neutral positioning (2026-10). `Presentatio
 | `Question25` / `Answer25` | When an open-source model hosted in Switzerland beats a US AI subscription |
 
 The home page reads `Question1`–`Question25` (see `app/[locale]/page.tsx`).
+
+---
+
+## Namespace: resources, mid-article CTA (ressources.json)
+
+| Key | Description |
+|-----|-------------|
+| `ContextualCTA.Title` / `Description` / `PrimaryCTA` | Generic mid-article CTA (links to contact) |
+| `ContextualCTA.Services.ai-consulting.{Title,Description,ServiceCTA}` | CTA for AI strategy, governance, security articles |
+| `ContextualCTA.Services.microsoft-consulting.{Title,Description,ServiceCTA}` | CTA for automation, Power Platform, data articles |
+
+Category to service mapping lives in `src/lib/articleCta.ts`; categories without a service (business-operations) use the generic copy.

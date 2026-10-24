@@ -4,6 +4,7 @@ import { buildBreadcrumbList } from "@/src/lib/structuredData";
 import ProgressiveArticlesList from "./components/ProgressiveArticlesList";
 import { getTranslations, isValidLocale, type Locale } from "@/src/lib/i18n";
 import { getCspNonce } from "@/src/lib/csp";
+import { filterRedirectedArticles } from "@/src/lib/redirectedArticles";
 
 type ArticlesSearchParams = Record<string, string | string[] | undefined>;
 
@@ -44,7 +45,7 @@ async function loadRessources(locale: Locale): Promise<RessourcesContent> {
         )
       : [];
     return {
-      Articles: normalizedArticles,
+      Articles: filterRedirectedArticles(locale, normalizedArticles),
       IntroTitle,
       ArticlesTitle,
       IntroShort,

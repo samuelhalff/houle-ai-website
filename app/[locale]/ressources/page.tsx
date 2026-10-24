@@ -8,6 +8,7 @@ import { notFound } from "next/navigation";
 import { getPageMetadata } from "@/src/lib/metadata";
 import { getCspNonce } from "@/src/lib/csp";
 import { getTranslations, isValidLocale, type Locale } from "@/src/lib/i18n";
+import { filterRedirectedArticles } from "@/src/lib/redirectedArticles";
 import PageHero from "@/src/components/site/page-hero";
 import { buildInternalUrl } from "@/src/lib/paths";
 import { buildResourceCategories } from "@/src/lib/resourceCategories";
@@ -105,7 +106,7 @@ async function loadRessources(locale: Locale): Promise<RessourcesData> {
       ReadArticle: data.ReadArticle,
       By: data.By,
       Published: data.Published,
-      Articles: normalizeArticles(data.Articles),
+      Articles: filterRedirectedArticles(locale, normalizeArticles(data.Articles)),
       FAQ: normalizeFaq(data.FAQ),
       Links: data.Links,
       Contact: data.Contact,
