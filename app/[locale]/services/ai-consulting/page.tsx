@@ -1,5 +1,8 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import TrackedLink from "@/src/components/ui/tracked-link";
+import ServicePillarCard from "@/src/components/ui/service-pillar-card";
+import ServiceTypicalSituations from "@/src/components/ui/service-typical-situations";
 import { getTranslations, type Locale } from "@/src/lib/i18n";
 import { getCspNonce } from "@/src/lib/csp";
 import { generateMetadataForPage } from "@/src/lib/metadata";
@@ -260,6 +263,8 @@ const AIConsultingPage = async (props: { params: Promise<{ locale: string }> }) 
           </Reveal>
         ) : null}
 
+        <ServicePillarCard locale={params.locale} servicePath="/services/ai-consulting" ns="ai-consulting" />
+
         {/* Use Cases */}
         {tService("Presentation.UseCases.Title") ? (
           <Reveal>
@@ -298,17 +303,19 @@ const AIConsultingPage = async (props: { params: Promise<{ locale: string }> }) 
           </Reveal>
         ) : null}
 
+        <ServiceTypicalSituations locale={params.locale} ns="ai-consulting" />
+
         {/* CTA */}
         <Reveal>
           <div className="rounded-2xl border border-brand/15 bg-brand-soft px-8 py-10 text-center sm:px-12">
             <h2 className="text-2xl font-semibold tracking-tight text-foreground">{ctaTitle}</h2>
             <p className="mx-auto mt-3 max-w-[48ch] text-sm leading-7 text-foreground/70">{ctaBody}</p>
             <div className="mt-8 flex justify-center">
-              <Link href={`${localePrefix}/contact/`} prefetch={false}>
+              <TrackedLink cta="service_bottom_contact_ai" href={`${localePrefix}/contact/`} prefetch={false}>
                 <Button size="lg" className="btn-main-cta rounded-full bg-foreground px-8 text-base text-background">
                   <span>{ctaBtn}</span>
                 </Button>
-              </Link>
+              </TrackedLink>
             </div>
           </div>
         </Reveal>

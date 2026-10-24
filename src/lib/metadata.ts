@@ -341,7 +341,8 @@ export function generateOrganizationStructuredData() {
     "@type": "Organization",
     "@id": `${siteUrl}/#organization`,
     name: brand,
-    legalName: "West-Bay SA",
+    legalName: "West Bay SA",
+    taxID: "CHE-107.892.984",
     alternateName: ["Houle", "houle"],
     description:
       "Independent AI consulting and integration firm in Geneva. Vendor-neutral model selection (Microsoft, OpenAI, Anthropic, Mistral, open-source models such as Llama, Qwen and Gemma), open-source models hosted in Switzerland when data residency or professional secrecy matter, plus Microsoft 365 expertise and Office add-ins with AI.",
@@ -370,7 +371,7 @@ export function generateOrganizationStructuredData() {
     },
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Chemin Pré-Roset",
+      streetAddress: "Chemin du Pré-Roset 19",
       addressLocality: "Genthod",
       addressRegion: "Geneva",
       postalCode: "1294",
@@ -418,8 +419,8 @@ export function generateOrganizationStructuredData() {
     ],
     parentOrganization: {
       "@type": "Corporation",
-      name: "West-Bay SA",
-      legalName: "West-Bay SA",
+      name: "West Bay SA",
+      legalName: "West Bay SA",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Genthod",
@@ -453,7 +454,7 @@ export function generateEnterpriseGPTServiceStructuredData() {
       "@type": "Organization",
       "@id": `${siteUrl}/#organization`,
       name: "houle.ai",
-      legalName: "West-Bay SA",
+      legalName: "West Bay SA",
     },
     areaServed: {
       "@type": "Country",
@@ -497,7 +498,7 @@ export function generateSwissAIIntegrationStructuredData() {
       "@type": "Organization",
       "@id": `${siteUrl}/#organization`,
       name: "houle.ai",
-      legalName: "West-Bay SA",
+      legalName: "West Bay SA",
     },
     areaServed: [
       { "@type": "Country", name: "Switzerland" },

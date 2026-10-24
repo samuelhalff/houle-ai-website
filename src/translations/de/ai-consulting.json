@@ -87,8 +87,8 @@
             }
         },
         "UseCases": {
-            "Title": "Beispiele und Anwendungsfälle",
-            "Intro": "Kundenfälle und typische Szenarien, die in unseren Ressourcen veröffentlicht sind. Die typischen Szenarien beschreiben repräsentative Projekte, ohne genannten Kunden und ohne bezifferte Ergebnisse.",
+            "Title": "Typische Szenarien",
+            "Intro": "Repräsentative Projekte, beschrieben ohne genannten Kunden und ohne bezifferte Ergebnisse.",
             "Cases": [
                 {
                     "Title": "Haftpflicht-Bagatellfälle in einer medizinischen Einrichtung",
@@ -118,44 +118,45 @@
                 {
                     "Title": "Post- und E-Mail-Automatisierung",
                     "Slug": "automatisation-courrier-entrant-ia",
-                    "Summary": "Eine Genfer Anwaltskanzlei reduzierte die Bearbeitungszeit eingehender Post und E-Mails um 83% dank eines KI-Systems, das jedes Dokument und jede Nachricht automatisch nach Art klassifiziert. Das System extrahiert Schlüsselinformationen, leitet an die richtigen Akten weiter und warnt bei dringenden Fällen. Anwälte finden jede Kommunikation sofort über semantische Suche."
+                    "Summary": "Typisches Szenario. Ein KI-System ordnet jede eingehende Post und jede E-Mail nach Art ein, extrahiert die wichtigsten Angaben, leitet sie in die richtige Akte und markiert dringende Fälle. Mitarbeitende finden danach jede Mitteilung per semantischer Suche; unsichere Fälle prüft eine Person."
                 },
                 {
                     "Title": "Automatische Fristenerkennung",
                     "Slug": "detection-delais-SPFx-calendriers",
-                    "Summary": "Ein Notariat verpasst keine Frist mehr dank einer SharePoint-Anwendung, die Dokumente automatisch analysiert, um alle rechtlichen und vertraglichen Fristen zu identifizieren. Das System erstellt Kalendereinträge in Teams mit progressiven Warnungen und eliminiert das Risiko von Versäumnissen, die schwerwiegende Folgen für die Berufshaftung haben könnten."
+                    "Summary": "Typisches Szenario. Eine SharePoint-Anwendung analysiert Dokumente, um gesetzliche und vertragliche Fristen zu erkennen, und legt in Teams Kalendereinträge mit gestaffelten Erinnerungen an. Die erkannten Fristen müssen von der zuständigen Person bestätigt werden."
                 },
                 {
                     "Title": "Intelligente Rechnungserinnerungen",
                     "Slug": "relance-factures-impayees-power-automate",
-                    "Summary": "Ein Finanzberatungsunternehmen reduzierte seine durchschnittliche Zahlungszeit um 40% durch automatisierte und personalisierte, von KI generierte Mahnungen. Das System passt Ton und Inhalt basierend auf Verzugsdauer und Beziehungsverlauf an und generiert höfliche und effektive E-Mails. Die für Mahnungen aufgewendete Zeit sank um 85%."
+                    "Summary": "Typisches Szenario. Mahnungen für unbezahlte Rechnungen werden von der KI entworfen, mit Ton und Inhalt abgestimmt auf die Dauer des Verzugs und die Geschichte der Geschäftsbeziehung. Jede Nachricht kann vor dem Versand geprüft werden."
                 },
                 {
                     "Title": "Automatische Zusammenfassung juristischer Dokumente",
                     "Slug": "resume-documents-juridiques-azure-ai",
-                    "Summary": "Ein Vermögensverwaltungsunternehmen verarbeitet jetzt zehnmal mehr Berichte und Verträge dank KI-Dokumentensynthese. Das System generiert zwei Ebenen strukturierter Zusammenfassungen, die es Managern ermöglichen, schnell zu entscheiden, ob eine eingehende Lektüre erforderlich ist. Die für Dokumentenprüfung aufgewendete Zeit sank um 70%."
+                    "Summary": "Typisches Szenario. Ein Zusammenfassungswerkzeug erstellt für Berichte und Verträge zwei Stufen strukturierter Zusammenfassungen, damit schnell entschieden werden kann, ob eine vertiefte Lektüre nötig ist. Die Zusammenfassung ersetzt nicht das Lesen der entscheidenden Passagen."
                 },
                 {
                     "Title": "Vertragsgestaltungsassistent",
                     "Slug": "assistant-redaction-contrats-ia",
-                    "Summary": "Ein internationales Handelsunternehmen drittelte seine Zeit für die Erstellung von Handelsverträgen dank eines KI-gestützten Word-Add-Ins. Der Assistent wählt automatisch geeignete Klauseln aus einer validierten Basis aus, generiert den personalisierten Vertrag und prüft die Konsistenz. Juristen konzentrieren sich jetzt auf Anpassung und Verhandlung statt auf mechanisches Verfassen."
+                    "Summary": "Typisches Szenario. Ein Word-Add-in schlägt Klauseln aus einer geprüften Bibliothek vor, stellt einen individuellen Vertragsentwurf zusammen und prüft dessen Konsistenz. Die Juristinnen und Juristen behalten Anpassung, Verhandlung und finale Freigabe in der Hand."
                 },
                 {
                     "Title": "Prädiktive Verkaufs- und Bestandsanalyse",
                     "Slug": "analyse-predictive-ventes-azure-ml",
-                    "Summary": "Ein Pharmagroßhändler reduzierte Lagerausfälle um 70% und Ablaufverluste um 65% durch KI-Prognosemodelle, die fünf Jahre Historie mit Kontextdaten analysieren. Prognosen antizipieren saisonale Spitzen genau und optimieren Bestellungen, wodurch 120.000 CHF Betriebskapital freigesetzt werden."
+                    "Summary": "Typisches Szenario. Prädiktive Modelle analysieren die Verkaufs- und Bestandshistorie, ergänzt um Kontextdaten, um saisonale Spitzen vorherzusehen und Bestellungen vorzubereiten. Die Prognosen bleiben eine Entscheidungshilfe und werden mit den tatsächlichen Ergebnissen verglichen."
                 },
                 {
                     "Title": "Wissensdatenbank mit semantischer Suche",
                     "Slug": "base-connaissances-recherche-semantique-ai",
-                    "Summary": "Ein Softwarehersteller reduzierte die Lösungszeiten für Support-Tickets um 55% durch eine KI-erweiterte Wissensdatenbank. Die semantische Suche versteht die Absicht hinter Fragen, und ein GPT-4-Modell generiert synthetische Antworten unter Angabe von Quellen. Neue Techniker werden doppelt so schnell einsatzfähig."
+                    "Summary": "Typisches Szenario. Eine Wissensdatenbank mit semantischer Suche versteht die Absicht hinter den Fragen, und ein Modell erzeugt knappe Antworten mit Quellenangaben. Sie hilft vor allem neuen Mitarbeitenden, Informationen zu finden."
                 },
                 {
                     "Title": "Besprechungstranskription und Aktionsextraktion",
                     "Slug": "transcription-reunions-extraction-actions",
-                    "Summary": "Ein Wirtschaftsprüfungsunternehmen hat die manuelle Protokollierung eliminiert und spart 12 Stunden pro Woche durch KI-Transkription von Kundenbesprechungen. Das System generiert automatisch strukturierte Protokolle, erstellt Planner-Aufgaben für jede vereinbarte Aktion und erkennt die Kundenstimmung. Protokolle werden innerhalb einer Stunde nach der Besprechung versendet."
+                    "Summary": "Typisches Szenario. Die KI-Transkription von Besprechungen erstellt ein strukturiertes Protokoll und legt in Planner für jede vereinbarte Aktion eine Aufgabe an. Ein Teilnehmender prüft das Protokoll vor der Weitergabe."
                 }
-            ]
+            ],
+            "PillarLabel": "Referenzleitfaden"
         },
         "Benefits": {
             "Title": "Vorteile für Ihr Unternehmen",
@@ -175,6 +176,26 @@
                 {
                     "Title": "Wettbewerbsvorteil",
                     "Desc": "Übernehmen Sie die Technologien, die in den kommenden Jahren den Unterschied gegenüber Ihren Wettbewerbern ausmachen werden."
+                }
+            ]
+        },
+        "TypicalSituations": {
+            "Title": "Typische Situationen",
+            "Disclaimer": "Fiktive, vereinfachte Beispiele für Situationen, die wir übernehmen können. Sie beschreiben weder konkrete Kundenprojekte noch garantierte Ergebnisse.",
+            "SituationLabel": "Situation",
+            "WhatWeDoLabel": "Was wir tun",
+            "Cases": [
+                {
+                    "Situation": "Ein Schadenbereich oder ein Compliance-Team erhält viele Dossiers, von denen die meisten demselben Ablauf folgen, doch alles wird von Hand gelesen.",
+                    "WhatWeDo": "Workshop zur Formulierung Ihrer Triage-Regeln, Pilot mit menschlicher Prüfung an Testdossiers, dann Produktivbetrieb mit Entscheidungsprotokoll; in der Schweiz gehostetes Modell, wenn die Daten es verlangen."
+                },
+                {
+                    "Situation": "Ein KMU möchte einen Assistenten, der aus seinen Verfahren und Verträgen antwortet, ohne dass diese Dokumente die Schweiz verlassen.",
+                    "WhatWeDo": "Kostenvergleich zwischen einem US-Abonnement und einem in der Schweiz gehosteten Open-Source-Modell, Modellwahl, Anbindung der Dokumente mit den bestehenden Zugriffsrechten, Qualitätstests vor der Öffnung für die Teams."
+                },
+                {
+                    "Situation": "Eine Geschäftsleitung hat mehrere Angebote von «KI-Agenturen» erhalten und weiss nicht, welche seriös sind.",
+                    "WhatWeDo": "Prüfung der Angebote, nach Nutzen und Risiko geordnete Anwendungsfälle, schrittweise Roadmap mit Abbruchkriterien."
                 }
             ]
         }

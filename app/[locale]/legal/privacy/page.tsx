@@ -43,7 +43,7 @@ export default async function PrivacyPage(
           <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
           <div className="space-y-4">
             <p>
-              At houle.ai (West-Bay SA), we are committed to protecting your privacy and personal data in accordance with Swiss Federal Data Protection Act (FADP) and applicable EU regulations.
+              At houle.ai (West Bay SA), we are committed to protecting your privacy and personal data in accordance with Swiss Federal Data Protection Act (FADP) and applicable EU regulations.
             </p>
             <p>
               This Privacy Policy explains how we collect, use, and protect your information when you use our AI services integrated into Microsoft tools.
@@ -56,13 +56,13 @@ export default async function PrivacyPage(
           <h2 className="text-2xl font-semibold mb-4">Data Controller</h2>
           <div className="space-y-4">
             <p>
-              West-Bay SA (operating as houle.ai) acts as the data controller for personal data collected and processed in connection with our AI services.
+              West Bay SA (operating as houle.ai) acts as the data controller for personal data collected and processed in connection with our AI services.
             </p>
             <div className="bg-muted/50 p-6 rounded-lg">
               <p className="font-semibold">Contact details:</p>
-              <p>houle.ai (West-Bay SA)</p>
+              <p>houle.ai (West Bay SA)</p>
               <p>Email: contact@houle.ai</p>
-              <p>Address: 19 Pré-Roset, 1294 Genthod, Switzerland</p>
+              <p>Address: Chemin du Pré-Roset 19, 1294 Genthod, Switzerland</p>
             </div>
           </div>
         </section>
@@ -251,8 +251,8 @@ export default async function PrivacyPage(
               If you have questions about this Privacy Policy or wish to exercise your rights, please contact us:
             </p>
             <div className="bg-muted/50 p-6 rounded-lg">
-              <p className="font-semibold">houle.ai (West-Bay SA)</p>
-              <p>19 Pré-Roset, 1294 Genthod, Switzerland</p>
+              <p className="font-semibold">houle.ai (West Bay SA)</p>
+              <p>Chemin du Pré-Roset 19, 1294 Genthod, Switzerland</p>
               <p>Email: contact@houle.ai</p>
             </div>
           </div>

@@ -1,153 +1,174 @@
 {
-  "Hero": {
-    "Title": "Consultoria Microsoft",
-    "Description": "Otimize sua produtividade com o ecossistema Microsoft. Ajudamos você a tirar o máximo proveito do Power Automate, SharePoint, Power BI e SPFx para automatizar seus processos e melhorar a colaboração."
-  },
-  "Presentation": {
-    "Intro": "As empresas que utilizam o Microsoft 365 geralmente aproveitam apenas uma fração das possibilidades oferecidas por esta plataforma. Entre Power Automate para automatização, SharePoint para gestão documental, Power BI para análise de dados e SPFx para desenvolvimento de aplicações, o ecossistema Microsoft oferece ferramentas poderosas que permanecem subutilizadas. Acompanhamos você para explorar plenamente essas tecnologias e transformar sua forma de trabalhar.",
-    "Why": {
-      "Title": "Por que otimizar seu ambiente Microsoft",
-      "Text": "Se sua empresa já utiliza o Microsoft 365, você provavelmente possui uma licença que inclui muitas ferramentas cujo potencial não está sendo explorado. O Power Automate pode automatizar centenas de tarefas repetitivas, o SharePoint pode estruturar e proteger todas as suas informações empresariais, o Power BI pode transformar seus dados em painéis interativos, e o SPFx permite criar aplicações personalizadas perfeitamente integradas. O retorno sobre o investimento é rápido porque você está usando ferramentas que já possui."
+    "Hero": {
+        "Title": "Consultoria Microsoft",
+        "Description": "Otimize sua produtividade com o ecossistema Microsoft. Ajudamos você a tirar o máximo proveito do Power Automate, SharePoint, Power BI e SPFx para automatizar seus processos e melhorar a colaboração."
     },
-    "Services": {
-      "Title": "Nossos serviços Microsoft",
-      "PowerAutomate": {
-        "Title": "Automatização com Power Automate",
-        "Text": "O Power Automate permite criar fluxos de trabalho automatizados entre suas aplicações Microsoft e centenas de serviços de terceiros. Concebemos automatizações que eliminam tarefas manuais e repetitivas como coleta de dados, envio de notificações, criação de relatórios ou sincronização entre sistemas. Cada fluxo é documentado e pode ser facilmente modificado por suas equipes internas uma vez configurado."
-      },
-      "SharePoint": {
-        "Title": "Soluções SharePoint",
-        "Text": "O SharePoint é muito mais do que um simples espaço de armazenamento de arquivos. Criamos sites SharePoint que estruturam suas informações, automatizam seus processos de negócio e facilitam a colaboração entre equipes. Seja para gerenciar projetos, centralizar conhecimentos ou criar intranets modernas, configuramos o SharePoint segundo suas necessidades específicas respeitando as melhores práticas de governança."
-      },
-      "PowerBI": {
-        "Title": "Painéis Power BI",
-        "Text": "O Power BI transforma seus dados em visualizações interativas que facilitam a tomada de decisão. Conectamos suas fontes de dados existentes, sejam no Excel, SharePoint, seu CRM ou seu sistema de gestão, e criamos painéis que atualizam automaticamente seus indicadores-chave. Esses relatórios podem ser consultados de qualquer dispositivo e compartilhados com segurança com as pessoas certas."
-      },
-      "SPFx": {
-        "Title": "Desenvolvimento SPFx",
-        "Text": "O SharePoint Framework permite criar aplicações web modernas que se integram perfeitamente em seu ambiente Microsoft 365. Desenvolvemos web parts personalizados, extensões e aplicações que ampliam as funcionalidades nativas do SharePoint. Essas soluções são projetadas para serem mantíveis, seguras e escaláveis segundo os padrões da Microsoft."
-      }
-    },
-    "Integration": {
-      "Title": "Integração e ecossistema",
-      "Text": "A força do ecossistema Microsoft reside na integração entre suas diferentes ferramentas. Concebemos soluções que combinam Power Automate, SharePoint, Power BI e Teams para criar ambientes de trabalho coerentes. Por exemplo, um fluxo do Power Automate pode desencadear ações no SharePoint, atualizar dados no Power BI e enviar notificações no Teams, tudo de maneira transparente para o usuário."
-    },
-    "Training": {
-      "Title": "Formação e acompanhamento",
-      "Text": "Não nos contentamos em implementar soluções, também formamos suas equipes para que possam mantê-las e fazê-las evoluir. Nossas sessões de formação são adaptadas ao nível de cada um e incluem documentação clara. O objetivo é tornar sua empresa autônoma sabendo que permanecemos disponíveis para as necessidades mais complexas."
-    },
-    "Azure": {
-      "Title": "Infraestrutura e serviços em nuvem Azure",
-      "Intro": "Além das ferramentas de produtividade do Microsoft 365, o Azure oferece uma plataforma em nuvem completa para hospedar suas aplicações, gerenciar seus dados e automatizar seus processos empresariais. Nossas soluções Azure estão hospedadas em centros de dados suíços (Switzerland North), garantindo a conformidade com a LPD suíça e o RGPD para empresas de Genebra que requerem residência de dados na Suíça.",
-      "Functions": {
-        "Title": "Azure Functions: computação sem servidor",
-        "Text": "Azure Functions permite executar código baseado em eventos sem gerenciar infraestrutura de servidor. Utilizamos este serviço para criar microsserviços reativos que são acionados em resposta a eventos: upload de arquivos no SharePoint, mensagens em filas, requisições HTTP ou gatilhos do Power Automate. Esta arquitetura sem servidor reduz os custos, pois você paga apenas pelo tempo de execução real, e ela escala automaticamente de acordo com a carga. É ideal para processamento de dados, integrações de API e fluxos de trabalho de automação empresarial."
-      },
-      "LogicApps": {
-        "Title": "Logic Apps: orquestração empresarial",
-        "Text": "Azure Logic Apps oferece um designer visual para criar fluxos de trabalho de integração complexos entre sistemas em nuvem e locais. Com mais de 400 conectores integrados (SAP, Salesforce, SQL Server, SharePoint, etc.), construímos pontes entre suas aplicações empresariais sem codificar integrações personalizadas. Logic Apps gerenciam automaticamente novas tentativas, monitoramento e escalabilidade, permitindo que você se concentre na lógica empresarial em vez da infraestrutura técnica."
-      },
-      "Storage": {
-        "Title": "Armazenamento Azure: dados estruturados e não estruturados",
-        "Text": "Azure Storage fornece quatro tipos de armazenamento em nuvem: Blob (arquivos e objetos), File (compartilhamentos SMB), Table (NoSQL chave-valor) e Queue (mensagens assíncronas). Projetamos arquiteturas que aproveitam esses serviços para armazenar documentos, gerenciar dados de aplicações, implementar filas de processamento e arquivar com estratégias de ciclo de vida automáticas. Tudo é criptografado em repouso e em trânsito, com opções de replicação geográfica dentro dos centros de dados suíços."
-      },
-      "SQL": {
-        "Title": "Bancos de dados Azure SQL e análise",
-        "Text": "Azure oferece uma gama completa de serviços de dados: Azure SQL Database para bancos de dados relacionais gerenciados, Azure Synapse Analytics para data warehousing e análise em grande escala, e Azure Data Lake para armazenar volumes massivos de dados brutos. Implementamos essas soluções para empresas de Genebra que necessitam desempenho, alta disponibilidade e residência de dados na Suíça. Backups automáticos, replicação e escalabilidade elástica são gerenciados pelo Azure."
-      },
-      "Security": {
-        "Title": "Segurança e identidade Azure",
-        "Text": "Azure Active Directory (Azure AD) é a base de identidade para todos os seus serviços em nuvem e aplicações. Configuramos autenticação multifator, acesso condicional baseado em riscos e governança de identidades. Azure Key Vault protege seus segredos, certificados e chaves de criptografia. Azure Security Center monitora continuamente seus recursos para detectar ameaças e recomendar melhorias de segurança. Esses serviços garantem a conformidade com os requisitos regulatórios suíços."
-      },
-      "DevOps": {
-        "Title": "Azure DevOps e automação",
-        "Text": "Azure DevOps fornece um conjunto completo de ferramentas para o desenvolvimento de software: repositórios Git, pipelines CI/CD, gestão de artefatos e quadros de acompanhamento. Automatizamos a implantação de suas aplicações com pipelines que testam, validam e implementam seu código através de múltiplos ambientes. A integração com GitHub Actions também permite orquestrar fluxos de trabalho complexos. Esta automação reduz erros humanos e acelera a colocação em produção."
-      }
-    },
-    "IntegrationFlows": {
-      "Title": "Fluxos de integração entre ferramentas Microsoft",
-      "Intro": "A verdadeira força do ecossistema Microsoft reside na capacidade de conectar diferentes ferramentas para criar fluxos de trabalho inteligentes. Aqui estão alguns padrões de integração comuns que implantamos para nossos clientes em Genebra:",
-      "SharePointPowerBI": {
-        "Title": "SharePoint → Power BI",
-        "Text": "Suas listas e bibliotecas do SharePoint alimentam painéis do Power BI em tempo real. Perfeito para acompanhar o status de projetos, gestão de inventários ou análise de dados de clientes sem exportações manuais. Filtros e visuais interativos permitem a todos encontrar rapidamente a informação necessária."
-      },
-      "PowerAutomateSPFx": {
-        "Title": "Power Automate → SPFx",
-        "Text": "Um fluxo de trabalho do Power Automate pode ser acionado diretamente a partir de um botão personalizado no SharePoint (via SPFx). Por exemplo: clique em um documento para lançar um processo de aprovação, enviar uma notificação para o Teams ou arquivar arquivos em pastas específicas com base em metadados. Tudo acontece sem sair da página."
-      },
-      "TeamsSharePoint": {
-        "Title": "Teams ↔ SharePoint",
-        "Text": "Cada canal do Teams pode ser conectado a uma biblioteca de documentos do SharePoint. Adicionamos abas personalizadas para exibir formulários, painéis ou listas diretamente no Teams. Isso permite colaboração em projetos sem alternar entre aplicativos: tudo está centralizado em uma interface."
-      },
-      "SPFxAzureFunctions": {
-        "Title": "SPFx → Azure Functions",
-        "Text": "Seus componentes personalizados do SharePoint podem chamar Azure Functions para integrar sistemas externos (ERP, CRM, APIs de pagamento, etc.). Isso permite enriquecer formulários do SharePoint com dados de outras fontes ou acionar cálculos complexos sem sobrecarregar o SharePoint. A segurança é garantida através de tokens de autenticação."
-      },
-      "PowerBIEmbedded": {
-        "Title": "Power BI Embedded",
-        "Text": "Integramos relatórios do Power BI diretamente em páginas do SharePoint ou aplicativos personalizados (SPFx ou aplicativos web externos). Os usuários acessam análises contextualizadas sem sair de seu ambiente de trabalho. As permissões são sincronizadas para que cada pessoa veja apenas os dados aos quais tem direito."
-      }
-    },
-    "RealCases": {
-      "Title": "Casos de uso reais de nossos clientes em Genebra",
-      "Intro": "Aqui estão exemplos concretos de projetos Microsoft que realizamos para empresas em Genebra. Cada solução atende a uma necessidade operacional específica:",
-      "Cases": [
-        {
-          "Title": "Atribuição automática de tarefas entre SharePoint e Teams",
-          "Slug": "allocation-taches-dynamique-teams-planner",
-          "Summary": "Uma empresa de Genebra precisava distribuir tarefas entre várias equipes com base na urgência e tipo de projeto. Criamos uma lista do SharePoint que atribui automaticamente tarefas aos canais corretos do Teams e notifica as pessoas responsáveis. Cada equipe rastreia suas atribuições em um painel personalizado, e o Power Automate atualiza os status em tempo real."
+    "Presentation": {
+        "Intro": "As empresas que utilizam o Microsoft 365 geralmente aproveitam apenas uma fração das possibilidades oferecidas por esta plataforma. Entre Power Automate para automatização, SharePoint para gestão documental, Power BI para análise de dados e SPFx para desenvolvimento de aplicações, o ecossistema Microsoft oferece ferramentas poderosas que permanecem subutilizadas. Acompanhamos você para explorar plenamente essas tecnologias e transformar sua forma de trabalhar.",
+        "Why": {
+            "Title": "Por que otimizar seu ambiente Microsoft",
+            "Text": "Se sua empresa já utiliza o Microsoft 365, você provavelmente possui uma licença que inclui muitas ferramentas cujo potencial não está sendo explorado. O Power Automate pode automatizar centenas de tarefas repetitivas, o SharePoint pode estruturar e proteger todas as suas informações empresariais, o Power BI pode transformar seus dados em painéis interativos, e o SPFx permite criar aplicações personalizadas perfeitamente integradas. O retorno sobre o investimento é rápido porque você está usando ferramentas que já possui."
         },
-        {
-          "Title": "Fluxo de aprovação multinível de despesas",
-          "Slug": "validation-notes-frais-power-automate-approvals",
-          "Summary": "A gestão de notas de despesas em uma PME de Genebra era feita por e-mail e Excel, causando atrasos e erros. Implantamos um fluxo de trabalho do Power Automate com aprovações condicionais multiníveis, notificações automáticas e arquivamento no SharePoint. O tempo de aprovação caiu de 5 dias para menos de 24 horas."
+        "Services": {
+            "Title": "Nossos serviços Microsoft",
+            "PowerAutomate": {
+                "Title": "Automatização com Power Automate",
+                "Text": "O Power Automate permite criar fluxos de trabalho automatizados entre suas aplicações Microsoft e centenas de serviços de terceiros. Concebemos automatizações que eliminam tarefas manuais e repetitivas como coleta de dados, envio de notificações, criação de relatórios ou sincronização entre sistemas. Cada fluxo é documentado e pode ser facilmente modificado por suas equipes internas uma vez configurado."
+            },
+            "SharePoint": {
+                "Title": "Soluções SharePoint",
+                "Text": "O SharePoint é muito mais do que um simples espaço de armazenamento de arquivos. Criamos sites SharePoint que estruturam suas informações, automatizam seus processos de negócio e facilitam a colaboração entre equipes. Seja para gerenciar projetos, centralizar conhecimentos ou criar intranets modernas, configuramos o SharePoint segundo suas necessidades específicas respeitando as melhores práticas de governança."
+            },
+            "PowerBI": {
+                "Title": "Painéis Power BI",
+                "Text": "O Power BI transforma seus dados em visualizações interativas que facilitam a tomada de decisão. Conectamos suas fontes de dados existentes, sejam no Excel, SharePoint, seu CRM ou seu sistema de gestão, e criamos painéis que atualizam automaticamente seus indicadores-chave. Esses relatórios podem ser consultados de qualquer dispositivo e compartilhados com segurança com as pessoas certas."
+            },
+            "SPFx": {
+                "Title": "Desenvolvimento SPFx",
+                "Text": "O SharePoint Framework permite criar aplicações web modernas que se integram perfeitamente em seu ambiente Microsoft 365. Desenvolvemos web parts personalizados, extensões e aplicações que ampliam as funcionalidades nativas do SharePoint. Essas soluções são projetadas para serem mantíveis, seguras e escaláveis segundo os padrões da Microsoft."
+            }
         },
-        {
-          "Title": "Portal de integração de clientes no SharePoint",
-          "Slug": "onboarding-clients-automatise-sharepoint-forms",
-          "Summary": "Uma firma de consultoria queria digitalizar seu processo de integração de clientes. Criamos um portal seguro do SharePoint com formulários personalizados (PowerApps), gestão automatizada de documentos e um painel do Power BI para acompanhamento do progresso. Os clientes preenchem suas informações online, e a equipe recebe notificações instantâneas."
+        "Integration": {
+            "Title": "Integração e ecossistema",
+            "Text": "A força do ecossistema Microsoft reside na integração entre suas diferentes ferramentas. Concebemos soluções que combinam Power Automate, SharePoint, Power BI e Teams para criar ambientes de trabalho coerentes. Por exemplo, um fluxo do Power Automate pode desencadear ações no SharePoint, atualizar dados no Power BI e enviar notificações no Teams, tudo de maneira transparente para o usuário."
         },
-        {
-          "Title": "Painel de projetos em tempo real no Power BI",
-          "Slug": "tableau-bord-projets-power-bi-project",
-          "Summary": "Uma empresa industrial de Genebra rastreava seus projetos através de arquivos Excel dispersos. Centralizamos tudo no SharePoint com um painel do Power BI que exibe prioridades, atrasos e orçamentos em tempo real. Os chefes de departamento podem filtrar por projeto, cliente ou gerente para tomar decisões rápidas."
+        "Training": {
+            "Title": "Formação e acompanhamento",
+            "Text": "Não nos contentamos em implementar soluções, também formamos suas equipes para que possam mantê-las e fazê-las evoluir. Nossas sessões de formação são adaptadas ao nível de cada um e incluem documentação clara. O objetivo é tornar sua empresa autônoma sabendo que permanecemos disponíveis para as necessidades mais complexas."
         },
-        {
-          "Title": "Gestão de contratos no SharePoint com SPFx",
-          "Slug": "gestion-contrats-SPFx-alertes-metadata",
-          "Summary": "Uma empresa de serviços precisava de uma solução central para gerenciar seus contratos (prazos, renovações, assinaturas). Construímos um aplicativo do SharePoint com interfaces personalizadas (SPFx) para buscas, alertas automáticos antes de vencimentos de prazos e integração com DocuSign para assinaturas eletrônicas. Tudo é acessível a partir do Teams."
+        "Azure": {
+            "Title": "Infraestrutura e serviços em nuvem Azure",
+            "Intro": "Além das ferramentas de produtividade do Microsoft 365, o Azure oferece uma plataforma em nuvem completa para hospedar suas aplicações, gerenciar seus dados e automatizar seus processos empresariais. Nossas soluções Azure estão hospedadas em centros de dados suíços (Switzerland North), garantindo a conformidade com a LPD suíça e o RGPD para empresas de Genebra que requerem residência de dados na Suíça.",
+            "Functions": {
+                "Title": "Azure Functions: computação sem servidor",
+                "Text": "Azure Functions permite executar código baseado em eventos sem gerenciar infraestrutura de servidor. Utilizamos este serviço para criar microsserviços reativos que são acionados em resposta a eventos: upload de arquivos no SharePoint, mensagens em filas, requisições HTTP ou gatilhos do Power Automate. Esta arquitetura sem servidor reduz os custos, pois você paga apenas pelo tempo de execução real, e ela escala automaticamente de acordo com a carga. É ideal para processamento de dados, integrações de API e fluxos de trabalho de automação empresarial."
+            },
+            "LogicApps": {
+                "Title": "Logic Apps: orquestração empresarial",
+                "Text": "Azure Logic Apps oferece um designer visual para criar fluxos de trabalho de integração complexos entre sistemas em nuvem e locais. Com mais de 400 conectores integrados (SAP, Salesforce, SQL Server, SharePoint, etc.), construímos pontes entre suas aplicações empresariais sem codificar integrações personalizadas. Logic Apps gerenciam automaticamente novas tentativas, monitoramento e escalabilidade, permitindo que você se concentre na lógica empresarial em vez da infraestrutura técnica."
+            },
+            "Storage": {
+                "Title": "Armazenamento Azure: dados estruturados e não estruturados",
+                "Text": "Azure Storage fornece quatro tipos de armazenamento em nuvem: Blob (arquivos e objetos), File (compartilhamentos SMB), Table (NoSQL chave-valor) e Queue (mensagens assíncronas). Projetamos arquiteturas que aproveitam esses serviços para armazenar documentos, gerenciar dados de aplicações, implementar filas de processamento e arquivar com estratégias de ciclo de vida automáticas. Tudo é criptografado em repouso e em trânsito, com opções de replicação geográfica dentro dos centros de dados suíços."
+            },
+            "SQL": {
+                "Title": "Bancos de dados Azure SQL e análise",
+                "Text": "Azure oferece uma gama completa de serviços de dados: Azure SQL Database para bancos de dados relacionais gerenciados, Azure Synapse Analytics para data warehousing e análise em grande escala, e Azure Data Lake para armazenar volumes massivos de dados brutos. Implementamos essas soluções para empresas de Genebra que necessitam desempenho, alta disponibilidade e residência de dados na Suíça. Backups automáticos, replicação e escalabilidade elástica são gerenciados pelo Azure."
+            },
+            "Security": {
+                "Title": "Segurança e identidade Azure",
+                "Text": "Azure Active Directory (Azure AD) é a base de identidade para todos os seus serviços em nuvem e aplicações. Configuramos autenticação multifator, acesso condicional baseado em riscos e governança de identidades. Azure Key Vault protege seus segredos, certificados e chaves de criptografia. Azure Security Center monitora continuamente seus recursos para detectar ameaças e recomendar melhorias de segurança. Esses serviços garantem a conformidade com os requisitos regulatórios suíços."
+            },
+            "DevOps": {
+                "Title": "Azure DevOps e automação",
+                "Text": "Azure DevOps fornece um conjunto completo de ferramentas para o desenvolvimento de software: repositórios Git, pipelines CI/CD, gestão de artefatos e quadros de acompanhamento. Automatizamos a implantação de suas aplicações com pipelines que testam, validam e implementam seu código através de múltiplos ambientes. A integração com GitHub Actions também permite orquestrar fluxos de trabalho complexos. Esta automação reduz erros humanos e acelera a colocação em produção."
+            }
         },
-        {
-          "Title": "Fluxo de aprovação com Adaptive Cards no Teams",
-          "Slug": "workflows-approbation-multi-niveaux-adaptive-cards",
-          "Summary": "Uma empresa de logística de Genebra validava seus pedidos de suprimentos por e-mail. Automatizamos todo o processo com o Power Automate: quando uma solicitação é criada no SharePoint, um Adaptive Card é enviado ao Teams para validação. Os aprovadores podem aceitar ou recusar diretamente do Teams, com comentários e notificações automáticas."
+        "IntegrationFlows": {
+            "Title": "Fluxos de integração entre ferramentas Microsoft",
+            "Intro": "A verdadeira força do ecossistema Microsoft reside na capacidade de conectar diferentes ferramentas para criar fluxos de trabalho inteligentes. Aqui estão alguns padrões de integração comuns que implantamos para nossos clientes em Genebra:",
+            "SharePointPowerBI": {
+                "Title": "SharePoint → Power BI",
+                "Text": "Suas listas e bibliotecas do SharePoint alimentam painéis do Power BI em tempo real. Perfeito para acompanhar o status de projetos, gestão de inventários ou análise de dados de clientes sem exportações manuais. Filtros e visuais interativos permitem a todos encontrar rapidamente a informação necessária."
+            },
+            "PowerAutomateSPFx": {
+                "Title": "Power Automate → SPFx",
+                "Text": "Um fluxo de trabalho do Power Automate pode ser acionado diretamente a partir de um botão personalizado no SharePoint (via SPFx). Por exemplo: clique em um documento para lançar um processo de aprovação, enviar uma notificação para o Teams ou arquivar arquivos em pastas específicas com base em metadados. Tudo acontece sem sair da página."
+            },
+            "TeamsSharePoint": {
+                "Title": "Teams ↔ SharePoint",
+                "Text": "Cada canal do Teams pode ser conectado a uma biblioteca de documentos do SharePoint. Adicionamos abas personalizadas para exibir formulários, painéis ou listas diretamente no Teams. Isso permite colaboração em projetos sem alternar entre aplicativos: tudo está centralizado em uma interface."
+            },
+            "SPFxAzureFunctions": {
+                "Title": "SPFx → Azure Functions",
+                "Text": "Seus componentes personalizados do SharePoint podem chamar Azure Functions para integrar sistemas externos (ERP, CRM, APIs de pagamento, etc.). Isso permite enriquecer formulários do SharePoint com dados de outras fontes ou acionar cálculos complexos sem sobrecarregar o SharePoint. A segurança é garantida através de tokens de autenticação."
+            },
+            "PowerBIEmbedded": {
+                "Title": "Power BI Embedded",
+                "Text": "Integramos relatórios do Power BI diretamente em páginas do SharePoint ou aplicativos personalizados (SPFx ou aplicativos web externos). Os usuários acessam análises contextualizadas sem sair de seu ambiente de trabalho. As permissões são sincronizadas para que cada pessoa veja apenas os dados aos quais tem direito."
+            }
+        },
+        "RealCases": {
+            "Title": "Cenários típicos",
+            "Intro": "Projetos representativos, descritos sem cliente nomeado nem resultado numérico.",
+            "Cases": [
+                {
+                    "Title": "Atribuição automática de tarefas entre SharePoint e Teams",
+                    "Slug": "allocation-taches-dynamique-teams-planner",
+                    "Summary": "Cenário típico. Um sistema que combina Teams, Planner e Power Automate propõe a quem atribuir uma tarefa, tendo em conta as competências, a carga atual e os idiomas de trabalho. O responsável mantém a decisão final."
+                },
+                {
+                    "Title": "Fluxo de aprovação multinível de despesas",
+                    "Slug": "validation-notes-frais-power-automate-approvals",
+                    "Summary": "Cenário típico. Uma aplicação móvel Power Apps preenche previamente o relatório de despesas a partir da foto do recibo, verifica o cumprimento da política interna e encaminha o pedido conforme o montante e o risco, num fluxo de aprovação automatizado."
+                },
+                {
+                    "Title": "Portal de integração de clientes no SharePoint",
+                    "Slug": "onboarding-clients-automatise-sharepoint-forms",
+                    "Summary": "Cenário típico. A abertura de um processo de cliente é orquestrada com SharePoint, Forms, Teams e Power Automate: criação do espaço de equipa estruturado, recolha segura de documentos, verificações de conformidade em paralelo e coordenação entre departamentos."
+                },
+                {
+                    "Title": "Painel de projetos em tempo real no Power BI",
+                    "Slug": "tableau-bord-projets-power-bi-project",
+                    "Summary": "Cenário típico. Painéis Power BI alimentados a partir do Project e do Teams consolidam planeamento, orçamento e carga de recursos para acompanhar vários projetos em simultâneo e detetar mais cedo os desvios."
+                },
+                {
+                    "Title": "Gestão de contratos no SharePoint com SPFx",
+                    "Slug": "gestion-contrats-SPFx-alertes-metadata",
+                    "Summary": "Cenário típico. Uma aplicação SPFx gere uma carteira de contratos com metadados automáticos e alertas progressivos: a IA extrai as datas críticas, calculam-se as janelas de rescisão e uma pessoa confirma os vencimentos."
+                },
+                {
+                    "Title": "Fluxo de aprovação com Adaptive Cards no Teams",
+                    "Slug": "workflows-approbation-multi-niveaux-adaptive-cards",
+                    "Summary": "Cenário típico. Fluxos com cartões adaptáveis do Teams determinam o circuito de aprovação conforme o nível de risco, gerem os substitutos em caso de ausência e escalam o pedido quando necessário. Os aprovadores tratam os pedidos a partir do smartphone."
+                }
+            ]
+        },
+        "UseCases": {
+            "Title": "Casos de uso comuns",
+            "Text": "Automação de processos de aprovação, bases de conhecimento internas, portais de clientes no SharePoint, painéis financeiros no Power BI e muito mais. Cada projeto começa com uma análise das suas necessidades e procura uma solução que se integre naturalmente no seu quotidiano.",
+            "PillarLabel": "Guia de referência"
+        },
+        "Benefits": {
+            "Title": "Benefícios para sua organização",
+            "Items": [
+                {
+                    "Title": "Melhor utilização de licenças",
+                    "Desc": "Explore plenamente as ferramentas incluídas em suas assinaturas Microsoft 365 sem custos adicionais."
+                },
+                {
+                    "Title": "Processos automatizados",
+                    "Desc": "Elimine as tarefas manuais e reduza os riscos de erro graças à automatização."
+                },
+                {
+                    "Title": "Colaboração melhorada",
+                    "Desc": "Facilite o trabalho em equipe com ferramentas modernas e integradas."
+                },
+                {
+                    "Title": "Dados acionáveis",
+                    "Desc": "Transforme seus dados em insights acionáveis com painéis claros e atualizados."
+                }
+            ]
+        },
+        "TypicalSituations": {
+            "Title": "Situações típicas",
+            "Disclaimer": "Exemplos fictícios e simplificados de situações que podemos assumir. Não descrevem projetos concretos de clientes nem resultados garantidos.",
+            "SituationLabel": "Situação",
+            "WhatWeDoLabel": "O que fazemos",
+            "Cases": [
+                {
+                    "Situation": "As aprovações de despesas e faturas circulam por e-mail e ninguém sabe em que ponto está um processo.",
+                    "WhatWeDo": "Fluxo de aprovação Power Automate com cartões do Teams, limites por montante, pista de auditoria no SharePoint e um quadro de acompanhamento; documentação do fluxo para a sua equipa de TI."
+                },
+                {
+                    "Situation": "Os números da direção são copiados todos os meses do Excel e do CRM para uma apresentação.",
+                    "WhatWeDo": "Modelo de dados Power BI ligado às fontes existentes, painel atualizado automaticamente, permissões por função e acompanhamento no arranque."
+                },
+                {
+                    "Situation": "Existe uma intranet SharePoint, mas os contratos e os seus prazos perdem-se em pastas.",
+                    "WhatWeDo": "Biblioteca estruturada com metadados, alertas de prazo, web part SPFx para a visão geral e migração guiada dos documentos existentes."
+                }
+            ]
         }
-      ]
-    },
-    "UseCases": {
-      "Title": "Casos de uso comuns",
-      "Text": "Ajudamos empresas a automatizar seus processos de aprovação, criar bases de conhecimento internas, desenvolver portais de clientes no SharePoint, implementar painéis financeiros no Power BI, e muito mais. Cada projeto começa com uma análise de suas necessidades e termina com uma solução que se integra naturalmente em seu cotidiano."
-    },
-    "Benefits": {
-      "Title": "Benefícios para sua organização",
-      "Items": [
-        {
-          "Title": "Melhor utilização de licenças",
-          "Desc": "Explore plenamente as ferramentas incluídas em suas assinaturas Microsoft 365 sem custos adicionais."
-        },
-        {
-          "Title": "Processos automatizados",
-          "Desc": "Elimine as tarefas manuais e reduza os riscos de erro graças à automatização."
-        },
-        {
-          "Title": "Colaboração melhorada",
-          "Desc": "Facilite o trabalho em equipe com ferramentas modernas e integradas."
-        },
-        {
-          "Title": "Dados acionáveis",
-          "Desc": "Transforme seus dados em insights acionáveis com painéis claros e atualizados."
-        }
-      ]
     }
-  }
 }

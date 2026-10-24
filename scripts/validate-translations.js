@@ -68,7 +68,6 @@ function validateTranslations() {
     // Contact namespace
     { ns: "contact", key: "Contact.CompanyName" },
     { ns: "contact", key: "Contact.Email" },
-    { ns: "contact", key: "Contact.Phone" },
     { ns: "contact", key: "Contact.Address" },
     { ns: "contact", key: "Title" },
     { ns: "contact", key: "Form.Name" },

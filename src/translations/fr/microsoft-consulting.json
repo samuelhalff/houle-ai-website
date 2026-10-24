@@ -75,7 +75,7 @@
                 "Title": "Power Automate → SPFx : déclenchement d'actions depuis les applications",
                 "Text": "Les applications SPFx que nous développons peuvent déclencher des workflows Power Automate sophistiqués en réponse aux actions utilisateur. Par exemple, lorsqu'un collaborateur clique sur un bouton dans une application SPFx de gestion de contrats, un flux Power Automate peut se déclencher pour envoyer le contrat en circuit d'approbation, créer des tâches Planner pour les parties prenantes, archiver une copie dans OneDrive, et notifier les responsables dans Teams. Cette orchestration transforme une simple interface utilisateur en système de gestion métier complet sans nécessiter de backend complexe."
             },
-            "TeamsSharePointApprovals": {
+            "TeamsSharePoint": {
                 "Title": "Teams ↔ SharePoint : collaboration et approbations fluides",
                 "Text": "Teams et SharePoint fonctionnent en symbiose. Chaque canal Teams dispose d'une bibliothèque SharePoint sous-jacente où sont stockés tous les fichiers partagés. Nous structurons cette architecture pour que la collaboration documentaire soit transparente. Les workflows d'approbation Power Automate peuvent être déclenchés depuis Teams via des cartes adaptatives interactives, les approbateurs répondant directement dans Teams sans jamais devoir ouvrir SharePoint. Les décisions sont enregistrées dans SharePoint pour traçabilité et conformité. Cette intégration native élimine les allers-retours par email et accélère drastiquement les processus de validation."
             },
@@ -89,44 +89,45 @@
             }
         },
         "RealCases": {
-            "Title": "Réalisations concrètes",
-            "Intro": "Découvrez comment nous avons aidé des entreprises genevoises à optimiser leurs processus avec l'écosystème Microsoft. Ces projets réels illustrent les gains mesurables obtenus grâce à une utilisation intelligente des outils Microsoft 365.",
+            "Title": "Scénarios types",
+            "Intro": "Projets représentatifs, décrits sans client nommé ni résultat chiffré.",
             "Cases": [
                 {
                     "Title": "Allocation dynamique des tâches",
                     "Slug": "allocation-taches-dynamique-teams-planner",
-                    "Summary": "Une fiduciaire genevoise a optimisé la répartition de charge entre 25 comptables grâce à un système intelligent combinant Teams, Planner et Power Automate. L'algorithme d'allocation considère les compétences, la charge actuelle et les langues de travail pour proposer automatiquement les meilleurs candidats. Le temps d'allocation a chuté de 83% et l'équilibre de charge entre collaborateurs s'est amélioré de 65%."
+                    "Summary": "Scénario type. Un système combinant Teams, Planner et Power Automate propose à qui attribuer une tâche en tenant compte des compétences, de la charge actuelle et des langues de travail. Le responsable garde la décision finale."
                 },
                 {
                     "Title": "Circuit d'approbation intelligent des notes de frais",
                     "Slug": "validation-notes-frais-power-automate-approvals",
-                    "Summary": "Un cabinet de conseil a réduit de 75% le temps de traitement des notes de frais grâce à Power Apps mobile avec reconnaissance IA des reçus et workflows d'approbation automatisés. L'application pré-remplit les formulaires par analyse des photos, vérifie la conformité aux politiques, et route intelligemment selon le montant et le risque. Le délai de remboursement est passé de 38 à 8 jours."
+                    "Summary": "Scénario type. Une application Power Apps mobile pré-remplit la note de frais à partir de la photo du reçu, vérifie la conformité à la politique interne et achemine la demande selon le montant et le risque, dans un circuit d'approbation automatisé."
                 },
                 {
                     "Title": "Onboarding client automatisé",
                     "Slug": "onboarding-clients-automatise-sharepoint-forms",
-                    "Summary": "Une banque privée genevoise a réduit de 60% le délai d'ouverture de compte grâce à l'automatisation du parcours client orchestrant SharePoint, Forms, Teams et Power Automate. Le système crée automatiquement le site d'équipe structuré, collecte les documents via Forms sécurisés, exécute les vérifications compliance en parallèle, et coordonne tous les départements. Le délai moyen est passé de 18 à 7 jours."
+                    "Summary": "Scénario type. L'ouverture d'un dossier client est orchestrée avec SharePoint, Forms, Teams et Power Automate : création de l'espace d'équipe structuré, collecte sécurisée des documents, vérifications de conformité menées en parallèle et coordination entre les services."
                 },
                 {
                     "Title": "Tableau de bord projets temps réel",
                     "Slug": "tableau-bord-projets-power-bi-project",
-                    "Summary": "Un bureau d'ingénieurs pilote 40 projets simultanés grâce à des dashboards Power BI alimentés automatiquement depuis Project et Teams. Les données de planning, budget, charge des ressources et activité conversationnelle sont consolidées en temps réel. Les séances de reporting ont été réduites de 3 heures à 1 heure hebdomadaire, le délai de détection des dérapages est passé de 2 semaines à 3 jours."
+                    "Summary": "Scénario type. Des tableaux de bord Power BI alimentés depuis Project et Teams consolident planning, budget et charge des ressources pour suivre plusieurs projets à la fois et repérer plus tôt les écarts."
                 },
                 {
                     "Title": "Gestion de contrats avec SPFx et alertes",
                     "Slug": "gestion-contrats-SPFx-alertes-metadata",
-                    "Summary": "Une société immobilière ne manque plus aucune échéance contractuelle grâce à une application SPFx gérant 800 contrats avec métadonnées automatiques et alertes intelligentes. Le système extrait les dates critiques par IA, calcule les fenêtres de résiliation, et génère des alertes progressives. Aucune échéance n'a été manquée depuis le déploiement, évitant plusieurs dizaines de milliers de francs de pénalités annuelles."
+                    "Summary": "Scénario type. Une application SPFx gère un portefeuille de contrats avec métadonnées automatiques et alertes progressives : les dates critiques sont extraites par IA, les fenêtres de résiliation calculées, et les échéances confirmées par un humain."
                 },
                 {
                     "Title": "Workflows d'approbation multi-niveaux",
                     "Slug": "workflows-approbation-multi-niveaux-adaptive-cards",
-                    "Summary": "Une compagnie d'assurances a réduit de 70% les délais d'approbation des polices grâce à des workflows intelligents avec cartes adaptatives Teams. Le système calcule dynamiquement les circuits d'approbation selon le risque, gère automatiquement les suppléants en cas d'absence, et escalade si nécessaire. Les approbateurs traitent les demandes depuis leur smartphone, et le délai moyen est passé de 8,5 à 2,6 jours."
+                    "Summary": "Scénario type. Des workflows avec cartes adaptatives Teams déterminent le circuit d'approbation selon le niveau de risque, gèrent les suppléants en cas d'absence et font remonter la demande si nécessaire. Les approbateurs traitent les demandes depuis leur smartphone."
                 }
             ]
         },
         "UseCases": {
             "Title": "Cas d'usage courants",
-            "Text": "Nous avons aidé des entreprises à automatiser leurs processus d'approbation, créer des bases de connaissances internes, développer des portails clients dans SharePoint, mettre en place des tableaux de bord financiers dans Power BI, et bien plus encore. Chaque projet commence par une analyse de vos besoins et se termine par une solution qui s'intègre naturellement dans votre quotidien."
+            "Text": "Automatisation de processus d'approbation, bases de connaissances internes, portails clients dans SharePoint, tableaux de bord financiers dans Power BI, et bien plus. Chaque projet commence par une analyse de vos besoins et vise une solution qui s'intègre naturellement dans votre quotidien.",
+            "PillarLabel": "Guide de référence"
         },
         "Benefits": {
             "Title": "Bénéfices pour votre organisation",
@@ -146,6 +147,26 @@
                 {
                     "Title": "Données exploitables",
                     "Desc": "Transformez vos données en insights actionnables avec des tableaux de bord clairs et actualisés."
+                }
+            ]
+        },
+        "TypicalSituations": {
+            "Title": "Situations typiques",
+            "Disclaimer": "Exemples fictifs et simplifiés de situations que nous pouvons prendre en charge. Ils ne décrivent pas des projets clients précis ni des résultats garantis.",
+            "SituationLabel": "Situation",
+            "WhatWeDoLabel": "Ce que nous faisons",
+            "Cases": [
+                {
+                    "Situation": "Les validations de notes de frais et de factures passent par e-mail et personne ne sait où en est un dossier.",
+                    "WhatWeDo": "Circuit d'approbation Power Automate avec cartes Teams, seuils par montant, piste d'audit dans SharePoint et tableau de suivi ; documentation du circuit pour votre service informatique."
+                },
+                {
+                    "Situation": "Les chiffres de direction sont recopiés chaque mois depuis Excel et le CRM dans une présentation.",
+                    "WhatWeDo": "Modèle de données Power BI connecté aux sources existantes, tableau de bord actualisé automatiquement, droits par rôle et accompagnement à la prise en main."
+                },
+                {
+                    "Situation": "Un intranet SharePoint existe, mais les contrats et leurs échéances se perdent dans des dossiers.",
+                    "WhatWeDo": "Bibliothèque structurée avec métadonnées, alertes d'échéance, web part SPFx pour la vue d'ensemble et migration guidée des documents existants."
                 }
             ]
         }

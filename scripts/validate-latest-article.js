@@ -5,6 +5,12 @@ const fs = require("fs");
 const path = require("path");
 
 const topicScope = require("./lib/topicScope");
+const { titleSimilarity } = require("./lib/articleBacklog");
+const { validateArticleMetadata } = require("./lib/articleRefresh");
+
+// A new article may not paraphrase the title of a live one (the duplicate cluster
+// must never regrow outside the backlog path).
+const MAX_TITLE_SIMILARITY = 0.6;
 
 const MIN_WORDS = 700;
 const file = path.join(process.cwd(), "src", "translations", "fr", "ressources.json");
@@ -51,6 +57,54 @@ if (scopeProblems.length) {
     console.error(
       `Latest article "${latest.slug}" is out of houle.ai scope in translations:\n- ${localeProblems.join("\n- ")}`,
     );
+    process.exit(1);
+  }
+}
+
+// Titles of articles that are really live (not consolidated duplicates, not moved to ark-fid.ch).
+{
+  let consolidated = new Set();
+  try {
+    consolidated = new Set(
+      Object.keys(
+        JSON.parse(
+          fs.readFileSync(path.join(process.cwd(), "src", "data", "articles-consolidated.json"), "utf8"),
+        ),
+      ),
+    );
+  } catch {
+    // no consolidation map in this tree: every article is live
+  }
+  const redirectedKeys = topicScope.loadRedirectedKeys(process.cwd());
+  const clashes = [];
+  for (const other of articles) {
+    if (!other.slug || other.slug === latest.slug || !other.title) continue;
+    if (consolidated.has(other.slug)) continue;
+    if (topicScope.isRedirectedToArk(other.slug, redirectedKeys)) continue;
+    const similarity = titleSimilarity(latest.title, other.title);
+    if (similarity >= MAX_TITLE_SIMILARITY) {
+      clashes.push(`"${other.title}" (${other.slug}, Jaccard ${similarity.toFixed(2)})`);
+    }
+  }
+  if (clashes.length) {
+    console.error(
+      `Latest FR article "${latest.slug}" ("${latest.title}") is too close to live articles (Jaccard >= ${MAX_TITLE_SIMILARITY}):\n- ${clashes.join("\n- ")}`,
+    );
+    process.exit(1);
+  }
+}
+
+// `updated`, when present, must be a valid date on or after `date` in every locale.
+{
+  const problems = validateArticleMetadata(articles).map((p) => `fr: ${p}`);
+  for (const locale of ["en", "de", "es", "pt"]) {
+    const localeFile = path.join(process.cwd(), "src", "translations", locale, "ressources.json");
+    if (!fs.existsSync(localeFile)) continue;
+    const localized = JSON.parse(fs.readFileSync(localeFile, "utf8")).Articles || [];
+    for (const p of validateArticleMetadata(localized)) problems.push(`${locale}: ${p}`);
+  }
+  if (problems.length) {
+    console.error(`Invalid article metadata:\n- ${problems.join("\n- ")}`);
     process.exit(1);
   }
 }

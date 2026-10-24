@@ -274,7 +274,8 @@ export function buildOrganizationSchema() {
     "@type": "Organization",
     "@id": "https://houle.ai/#organization",
     name: "houle.ai",
-    legalName: "West-Bay SA",
+    legalName: "West Bay SA",
+    taxID: "CHE-107.892.984",
     alternateName: ["Houle", "houle"],
     url: "https://houle.ai",
     logo: {
@@ -290,7 +291,7 @@ export function buildOrganizationSchema() {
     foundingDate: "2024",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Chemin Pré-Roset",
+      streetAddress: "Chemin du Pré-Roset 19",
       addressLocality: "Genthod",
       addressRegion: "Geneva",
       postalCode: "1294",
@@ -417,8 +418,8 @@ export function buildOrganizationSchema() {
     },
     parentOrganization: {
       "@type": "Corporation",
-      name: "West-Bay SA",
-      legalName: "West-Bay SA",
+      name: "West Bay SA",
+      legalName: "West Bay SA",
       address: {
         "@type": "PostalAddress",
         addressLocality: "Genthod",
@@ -452,7 +453,7 @@ export function buildEnterpriseGPTServiceSchema() {
       "@type": "Organization",
       "@id": "https://houle.ai/#organization",
       name: "houle.ai",
-      legalName: "West-Bay SA",
+      legalName: "West Bay SA",
     },
     areaServed: {
       "@type": "Country",
@@ -518,7 +519,7 @@ export function buildSwissAIIntegrationServiceSchema() {
       "@type": "Organization",
       "@id": "https://houle.ai/#organization",
       name: "houle.ai",
-      legalName: "West-Bay SA",
+      legalName: "West Bay SA",
     },
     areaServed: [
       { "@type": "Country", name: "Switzerland" },

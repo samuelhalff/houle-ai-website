@@ -128,7 +128,7 @@ export default async function RootLayout({
     email: "contact@houle.ai",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Chemin Pré-Roset",
+      streetAddress: "Chemin du Pré-Roset 19",
       addressLocality: "Genthod",
       addressRegion: "Geneva",
       postalCode: "1294",
@@ -184,9 +184,12 @@ export default async function RootLayout({
     sameAs: ["https://www.linkedin.com/company/houle-ai/"],
     parentOrganization: {
       "@type": "Corporation",
-      name: "West-Bay SA",
+      name: "West Bay SA",
+      legalName: "West Bay SA",
+      taxID: "CHE-107.892.984",
       address: {
         "@type": "PostalAddress",
+        streetAddress: "Chemin du Pré-Roset 19",
         addressLocality: "Genthod",
         addressRegion: "Geneva",
         postalCode: "1294",

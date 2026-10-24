@@ -41,7 +41,7 @@ const baseConfig = {
     // ark destination is stored per locale; skipTrailingSlashRedirect is on,
     // so both slash forms are emitted.
     const toArk = require("./src/data/articles-redirected-to-ark.json");
-    return Object.entries(toArk).flatMap(([key, destination]) => {
+    const arkRules = Object.entries(toArk).flatMap(([key, destination]) => {
       const [locale, slug] = key.split("/");
       const source = `/${locale}/ressources/articles/${slug}`;
       return [
@@ -49,6 +49,20 @@ const baseConfig = {
         { source: `${source}/`, destination, permanent: true },
       ];
     });
+    // Duplicate articles consolidated into their strongest twin (same locale,
+    // one hop: targets are never sources, see scripts/articles-consolidated.test.js).
+    const consolidated = require("./src/data/articles-consolidated.json");
+    const consolidatedRules = ["fr", "en", "de", "es", "pt"].flatMap((locale) =>
+      Object.entries(consolidated).flatMap(([from, to]) => {
+        const source = `/${locale}/ressources/articles/${from}`;
+        const destination = `/${locale}/ressources/articles/${to}/`;
+        return [
+          { source, destination, permanent: true },
+          { source: `${source}/`, destination, permanent: true },
+        ];
+      }),
+    );
+    return [...arkRules, ...consolidatedRules];
   },
   async rewrites() {
     // No rewrites needed for houle.ai - all routes use their canonical paths

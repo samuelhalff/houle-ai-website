@@ -66,6 +66,15 @@ const {
   isTrustedDomain,
 } = require("./lib/referenceValidator");
 const { applyArticleTaxonomy } = require("./lib/article-taxonomy");
+const {
+  buildStructureRules,
+  buildNoFabricationRules,
+  buildOriginalityRule,
+  buildPractitionerRule,
+  buildRefreshResearchPrompt,
+  refreshArticles,
+  validateArticleMetadata,
+} = require("./lib/articleRefresh");
 
 const rawArgs = process.argv.slice(2);
 const args = new Set(rawArgs);
@@ -73,10 +82,18 @@ const APPLY = args.has("--apply");
 const DRY = args.has("--dry-run");
 const TRANSLATE_EXISTING = args.has("--translate-existing");
 let MOCK_PATH = null;
+let REFRESH_SLUGS = [];
 
 for (const arg of rawArgs) {
   if (arg.startsWith("--mock=")) {
     MOCK_PATH = arg.slice("--mock=".length);
+  }
+  if (arg.startsWith("--refresh=")) {
+    REFRESH_SLUGS = arg
+      .slice("--refresh=".length)
+      .split(",")
+      .map((entry) => entry.trim())
+      .filter(Boolean);
   }
 }
 
@@ -203,7 +220,19 @@ function copilotRule() {
     : "- Ne fais pas de Microsoft Copilot le sujet de l'article: au plus une mention factuelle si la comparaison l'exige.";
 }
 
-const EDITORIAL_RULES = [
+// Built lazily: the practitioner paragraph points at the service page of the
+// topic of this run (CURRENT_TOPIC is only known once main() has selected it).
+function editorialRules() {
+  return EDITORIAL_RULES_BASE.concat([
+    "=== STRUCTURE ET ORIGINALITÉ (OBLIGATOIRE) ===",
+    ...buildStructureRules(),
+    ...buildNoFabricationRules(),
+    buildOriginalityRule(),
+    buildPractitionerRule(CURRENT_TOPIC ? CURRENT_TOPIC.service : ""),
+  ]);
+}
+
+const EDITORIAL_RULES_BASE = [
   ...topicScope.SCOPE_PROMPT_LINES,
   "=== POSITIONNEMENT (OBLIGATOIRE) ===",
   "- houle est un cabinet de conseil en IA indépendant des éditeurs, basé à Genève. Ne le présente jamais comme un partenaire ou revendeur d'un éditeur en particulier.",
@@ -211,8 +240,8 @@ const EDITORIAL_RULES = [
   "- Microsoft 365 est une option parmi d'autres, pas le cadre de l'article (sauf si le sujet imposé porte dessus).",
   "- Lecteur visé: dirigeant ou responsable métier d'une PME, fiduciaire, étude d'avocats, family office ou institution en Suisse romande, qui évalue un projet et un prestataire. Écris pour l'aider à décider, pas pour un public d'ingénieurs ni de juristes.",
   "=== EXEMPLES ET CHIFFRES (OBLIGATOIRE) ===",
-  "- Tout exemple d'entreprise est un scénario illustratif, annoncé comme tel. N'invente jamais de client nommé, de témoignage ni de citation.",
-  "- N'invente aucune statistique. Un chiffre est soit tiré d'une référence fournie (source citée), soit une hypothèse de calcul présentée explicitement comme hypothèse.",
+  "- Tout exemple d'entreprise est un scénario illustratif, annoncé comme tel. N'invente jamais de client nommé, de témoignage, de citation, d'anecdote ni d'observation de terrain.",
+  "- N'invente aucune statistique. Un chiffre est soit tiré d'une référence fournie (source citée), soit un seuil légal, soit une hypothèse de calcul présentée explicitement (« Exemple fictif: … »).",
   "- Ne promets ni prix ni gain garanti au nom de houle.",
 ];
 
@@ -238,7 +267,7 @@ function buildTopicBrief(topic) {
       : "",
     `Slug suggéré: ${topic.id}`,
     "Le titre peut être reformulé mais le sujet, l'angle et le mot-clé principal sont imposés. N'en choisis pas un autre.",
-    "Termine l'article par une section « prochaines étapes » concrète, sans URL (le lien vers la page de service et le contact est ajouté automatiquement).",
+    "Termine l'article par la section « Comment houle intervient » (voir PARAGRAPHE PRATICIEN), sans URL (le lien vers la page de service et le contact est ajouté automatiquement).",
   ];
   if (topic.category === "ai-triage") {
     lines.push(
@@ -732,17 +761,11 @@ function buildSystemPrompt(frJson, trendData = null) {
   const lastArticle = getLastArticle(frJson);
   const lastTopic = detectTopic(lastArticle);
   const minWords = parseInt(process.env.SEO_MIN_WORDS || "800", 10);
-  const maxWords = parseInt(process.env.SEO_MAX_WORDS || "3000", 10);
+  const maxWords = parseInt(process.env.SEO_MAX_WORDS || "2500", 10);
   const lengthGuidance = process.env.SEO_MIN_WORDS
-    ? `- Longueur MINIMALE: ${minWords} mots (objectif ${Math.max(minWords, 1500)} à ${Math.max(Math.max(minWords, 1500), maxWords)}). Si tu es en dessous, ajoute des sections (checklist, FAQ, exemples chiffrés, cas cantonaux, cas pratiques).`
-    : "- Article format pratique (800 à 1500 mots), structuré avec sections claires, listes, exemples chiffrés.";
-  const longFormRequirements =
-    process.env.SEO_MIN_WORDS && minWords >= 1500
-      ? [
-          "- OBLIGATOIRE (pour atteindre la longueur): au moins 10 sections H2, plusieurs H3, 2 checklists, 2 tableaux, 1 cas pratique chiffré (CHF) et une FAQ de 6 questions.",
-          "- OBLIGATOIRE: inclure une section 'processus étape-par-étape' et une section 'erreurs fréquentes + corrections'.",
-        ]
-      : [];
+    ? `- Longueur MINIMALE: ${minWords} mots (objectif ${minWords} à ${Math.max(minWords, maxWords)}). Atteins-la par la substance du sujet (arbitrages, étapes, points de vigilance), pas par du remplissage.`
+    : "- Article format pratique (800 à 1500 mots), structuré selon le sujet.";
+  const longFormRequirements = [];
   const recentSlugs = (Array.isArray(frJson.Articles) ? frJson.Articles : [])
     .slice(-12)
     .map((a) => a.slug)
@@ -827,12 +850,12 @@ function buildSystemPrompt(frJson, trendData = null) {
       ? buildTopicBrief(CURRENT_TOPIC)
       : ["=== DIVERSITÉ THÉMATIQUE (CRITIQUE) ===", ...diversityGuidance, ...trendGuidance]),
     "",
-    ...EDITORIAL_RULES,
+    ...editorialRules(),
     "",
     "Objectif: proposer EXACTEMENT 1 nouvel article (section « Articles ») en français, utile pour des dirigeants et responsables métier en Suisse qui évaluent un projet d'IA.",
     "",
     "Contraintes impératives:",
-    "- FOCUS sur du concret: checklists, erreurs fréquentes + correctifs, étapes de mise en œuvre, matrices de décision, ordres de grandeur présentés comme hypothèses.",
+    "- FOCUS sur du concret: arbitrages, étapes de mise en œuvre, erreurs fréquentes et correctifs quand le sujet les justifie; aucun ordre de grandeur ni chiffre sans source.",
     copilotRule(),
     `- La marque doit être en minuscules: écris toujours \"${BRAND_NAME}\" (jamais \"Houle\").`,
     "- Sujet cohérent avec nos services (liste ci-dessous) et différent des articles récents.",
@@ -894,7 +917,7 @@ function buildTranslatePrompt(newArticle, newLabels, topic = null) {
     `La marque doit être en minuscules: écris toujours "${BRAND_NAME}" (jamais "Houle").`,
     "Fourni uniquement le JSON demandé, sans commentaire.",
     "IMPORTANT: Chaque locale (en, de, es, pt) doit être traduite. Ne retourne jamais le texte français pour une autre langue.",
-    "IMPORTANT: traduction complète. Conserve exactement le même nombre de sections (titres ##), tableaux, listes et questions de FAQ que la source; ne résume pas, ne supprime rien.",
+    "IMPORTANT: traduction complète. Conserve exactement le même nombre de sections (titres ##), tableaux, listes et questions éventuelles que la source; ne résume pas, ne supprime rien.",
     ...(keywordLines.length
       ? [
           "Mots-clés cibles par langue (à placer naturellement dans le titre, la description et au moins un sous-titre):",
@@ -937,8 +960,8 @@ function buildResearchPrompt(frJson, trendData, seoSuggestions) {
     .map((a) => a.slug)
     .filter(Boolean);
 
-  const minWords = parseInt(process.env.SEO_MIN_WORDS || "800", 10);
-  const maxWords = parseInt(process.env.SEO_MAX_WORDS || "3000", 10);
+  const minWords = parseInt(process.env.SEO_MIN_WORDS || "1200", 10);
+  const maxWords = parseInt(process.env.SEO_MAX_WORDS || "2500", 10);
 
   const trendGuidance = [];
   if (trendData && trendData.selectedTopic) {
@@ -975,7 +998,7 @@ function buildResearchPrompt(frJson, trendData, seoSuggestions) {
           ...trendGuidance,
         ]),
     "",
-    ...EDITORIAL_RULES,
+    ...editorialRules(),
     "",
     "Objectif: préparer le titre, le plan et des références vérifiables pour le sujet imposé (PAS l'article complet).",
     "",
@@ -990,12 +1013,12 @@ function buildResearchPrompt(frJson, trendData, seoSuggestions) {
     "✅ Le sujet DOIT rester clairement lié à l'IA: modèles de langage (propriétaires ou open source), agents, triage et automatisation de processus, assistants sur documents internes, hébergement, intégrations (Microsoft 365, Odoo…).",
     "✅ Si un processus métier (ex: comptabilité) est mentionné, il DOIT être dans le contexte de son automatisation par IA.",
     "",
-    `- L'article final fera ${Math.max(minWords, 1500)} à ${Math.max(Math.max(minWords, 1500), maxWords)} mots.`,
-    "- Références: fournir 8 à 12 liens vérifiables (HTTP 200, pas de login), sans URL inventée.",
+    `- L'article final fera ${minWords} à ${Math.max(minWords, maxWords)} mots.`,
+    "- Références: fournir 6 à 10 liens vérifiables (HTTP 200, pas de login), sans URL inventée.",
     "- Références: inclure au moins 1 source officielle ou institutionnelle (admin.ch, kmu.admin.ch, bfs.admin.ch, edoeb.admin.ch, nist.gov) — 2 si le sujet est réglementaire.",
     "- Références: inclure au moins 2 documentations techniques d'éditeurs ou de projets différents (learn.microsoft.com, docs.mistral.ai, huggingface.co, github.com, docs officiels), sans privilégier un éditeur.",
     "- Références: compléter avec des sources institutionnelles (associations, standards, universités) et éventuellement médias économiques si accessible sans paywall.",
-    "- STRICT: chaque référence doit provenir d'un domaine différent (1 domaine = 1 lien). Si tu donnes 12 références, ce sont 12 domaines distincts, sinon la réponse est rejetée.",
+    "- STRICT: chaque référence doit provenir d'un domaine différent (1 domaine = 1 lien). Si tu donnes 8 références, ce sont 8 domaines distincts, sinon la réponse est rejetée.",
     `Slugs récents à éviter: ${recentSlugs.join(", ") || "aucun"}.`,
     `Services à promouvoir: ${SERVICES.join(", ")}.`,
     "",
@@ -1012,7 +1035,7 @@ function buildResearchPrompt(frJson, trendData, seoSuggestions) {
     `    "category": ${JSON.stringify(CURRENT_TOPIC ? CURRENT_TOPIC.category : "general")},`,
     '    "primaryKeyword": "<mot-clé principal>",',
     '    "secondaryKeywords": ["..."],',
-    '    "outline": ["H2 ...", "H2 ...", "FAQ ..."],',
+    '    "outline": ["H2 ...", "H2 ..."],',
     '    "references": [ { "labelKey": "Libellé FR", "url": "https://..." }, ... ]',
     "  }",
     "}",
@@ -1022,19 +1045,18 @@ function buildResearchPrompt(frJson, trendData, seoSuggestions) {
 }
 
 function buildDraftPromptFromResearch(research, validatedReferences) {
-  const minWords = parseInt(process.env.SEO_MIN_WORDS || "1500", 10);
-  const maxWords = parseInt(process.env.SEO_MAX_WORDS || "3000", 10);
+  const minWords = parseInt(process.env.SEO_MIN_WORDS || "1200", 10);
+  const maxWords = parseInt(process.env.SEO_MAX_WORDS || "2500", 10);
   return [
     `Tu es un rédacteur SEO senior pour ${BRAND_NAME}.ai (Suisse).`,
-    "Rédige un article long, utile et concret, sans blabla.",
+    "Rédige un article utile et concret, sans blabla.",
     "",
-    `CONTRAINTE DE LONGUEUR (STRICTE): entre ${Math.max(minWords, 1500)} et ${Math.max(maxWords, Math.max(minWords, 1500))} mots (viser ~2200).`,
-    "Si tu es en dessous du minimum, tu DOIS ajouter du contenu (plus de H2/H3, plus d'exemples). Ne termine pas tôt.",
-    "Structure obligatoire: 10+ sections H2, plusieurs H3, 2 tableaux, 2 checklists, 1 scénario illustratif chiffré en CHF (hypothèses explicites, entreprise non nommée), une section étape-par-étape, une section erreurs fréquentes + corrections, et une FAQ de 6 questions.",
+    `CONTRAINTE DE LONGUEUR (STRICTE): entre ${minWords} et ${Math.max(maxWords, minWords)} mots (viser ~${Math.round((minWords + Math.max(maxWords, minWords)) / 2)}).`,
+    "Si tu es en dessous du minimum, approfondis la substance du sujet (arbitrages, étapes, points de vigilance). Pas de remplissage.",
     "",
     ...buildTopicBrief(CURRENT_TOPIC),
     "",
-    ...EDITORIAL_RULES,
+    ...editorialRules(),
     "",
     "=== FOCUS IA (OBLIGATOIRE) ===",
     "✅ L'article DOIT clairement concerner l'IA ou l'automatisation appliquée à un besoin d'entreprise.",
@@ -1048,7 +1070,7 @@ function buildDraftPromptFromResearch(research, validatedReferences) {
     "- Quand tu cites une source, écris simplement (source: <labelKey>).",
     "- Utilise exactement le slug, titre et description fournis.",
     "",
-    "Plan à suivre:",
+    "Plan indicatif (adapte-le au sujet; pas de FAQ si elle n'apporte rien, au plus 3 questions):",
     JSON.stringify(research.outline || [], null, 2),
     "",
     "Références disponibles (ne pas modifier, ne pas ajouter):",
@@ -1073,13 +1095,13 @@ function buildDraftPromptFromResearch(research, validatedReferences) {
 }
 
 function buildDraftRepairPromptFromExistingArticle(article, { mode, minWords, maxWords }) {
-  const targetMin = Math.max(parseInt(minWords || "1500", 10) || 1500, 1500);
-  const targetMax = Math.max(parseInt(maxWords || "3000", 10) || 3000, targetMin);
+  const targetMin = parseInt(minWords || "1200", 10) || 1200;
+  const targetMax = Math.max(parseInt(maxWords || "2500", 10) || 2500, targetMin);
   const currentWords = countWords(article?.content || "");
   const action =
     mode === "expand"
-      ? `Allonge le contenu pour dépasser ${targetMin} mots (objectif ~2200).`
-      : `Raccourcis le contenu pour être sous ${targetMax} mots (objectif ~2200).`;
+      ? `Allonge le contenu pour dépasser ${targetMin} mots (objectif: milieu de la fourchette).`
+      : `Raccourcis le contenu pour être sous ${targetMax} mots (objectif: milieu de la fourchette).`;
 
   return [
     `Tu es un rédacteur SEO senior pour ${BRAND_NAME}.ai (Suisse).`,
@@ -1089,10 +1111,11 @@ function buildDraftRepairPromptFromExistingArticle(article, { mode, minWords, ma
     "- Ne change PAS les références; garde exactement la même liste.",
     "- N'inclus AUCUNE URL dans le texte (pas de http/https).",
     copilotRule(),
-    "- Exemples = scénarios illustratifs annoncés comme tels; aucun client nommé, aucune statistique inventée (chiffre sourcé ou hypothèse explicite).",
+    "- Exemples = scénarios illustratifs annoncés comme tels; aucun client nommé, aucune statistique inventée (chiffre sourcé ou « Exemple fictif: … » explicite).",
     "- houle est un cabinet de conseil en IA indépendant des éditeurs: reste neutre entre fournisseurs.",
     `- La marque doit être en minuscules: écris toujours \"${BRAND_NAME}\" (jamais \"Houle\").`,
-    " - Conserve la structure (H2/H3) et les éléments obligatoires (2 tableaux, 2 checklists, 1 cas pratique chiffré CHF, étape-par-étape, erreurs fréquentes + corrections, FAQ 6 questions).",
+    "- Conserve la structure (H2/H3) et la section « Comment houle intervient » (sans lien dedans).",
+    "- Ne crée aucune anecdote, aucun cas client, aucun chiffre non sourcé.",
     `- Longueur STRICTE: ${targetMin} à ${targetMax} mots. Le texte actuel fait ~${currentWords} mots.`,
     "",
     "Voici l'article actuel (JSON):",
@@ -1128,7 +1151,7 @@ function buildDraftRepairPromptFromExistingArticle(article, { mode, minWords, ma
 }
 
 function buildDraftAppendPromptFromExistingArticle(article, { minWords }) {
-  const targetMin = Math.max(parseInt(minWords || "1500", 10) || 1500, 1500);
+  const targetMin = parseInt(minWords || "1200", 10) || 1200;
   const currentWords = countWords(article?.content || "");
   const missing = Math.max(0, targetMin - currentWords);
   const safetyBuffer = 250;
@@ -1140,9 +1163,9 @@ function buildDraftAppendPromptFromExistingArticle(article, { minWords }) {
     `Contrainte: ajoute au moins ${addAtLeast} mots (l'article actuel est ~${currentWords} mots, minimum requis: ${targetMin}).`,
     "IMPORTANT:",
     "- Ne modifie pas le texte existant: tu ajoutes uniquement de nouvelles sections à la fin.",
-    "- Ajoute 2 à 4 nouvelles sections H2, avec des sous-sections H3 si utile.",
-    "- Ajoute 1 checklist et 1 tableau dans les nouvelles sections.",
-    "- Ajoute 3 à 5 questions de FAQ supplémentaires (si une FAQ existe déjà, continue-la).",
+    "- Ajoute les sections H2 que le sujet exige encore (H3 si utile), sans remplissage.",
+    "- Tableau ou checklist uniquement s'ils apportent une information que le texte n'exprime pas mieux. Pas de FAQ ajoutée pour faire du volume (3 questions réelles au plus au total).",
+    "- Aucune anecdote, aucun cas client, aucun chiffre qui ne soit pas sourcé (références de l'article) ou légal.",
     "- N'inclus AUCUNE URL dans le texte (pas de http/https).",
     copilotRule(),
     "- Exemples = scénarios illustratifs annoncés comme tels; aucun client nommé, aucune statistique inventée (chiffre sourcé ou hypothèse explicite).",
@@ -2223,13 +2246,13 @@ function buildRetryPrompt(basePrompt, error, frData) {
     hint = [
       `⚠️ L'article est trop court (${error.words || "?"} mots).`,
       `Vise une longueur nette de ${error.minWords || "800"}+ mots (objectif +25%).`,
-      "OBLIGATOIRE: ajoute 10+ sections H2, plusieurs H3, 2 checklists, 2 tableaux, 1 cas pratique chiffré (CHF), 1 section étape-par-étape et une FAQ de 6 questions.",
+      "Approfondis la substance du sujet (arbitrages, étapes, points de vigilance), sans remplissage, sans anecdote ni cas client inventé, sans chiffre non sourcé.",
     ].join(" ");
   } else if (error.code === "TOO_LONG") {
     hint = [
       `⚠️ L'article est trop long (${error.words || "?"} mots).`,
-      `Réduis à ${error.maxWords || "3000"} mots max sans perdre en utilité.`,
-      "Supprime les répétitions, garde les tableaux/checklists/cas pratique et condense les sections redondantes.",
+      `Réduis à ${error.maxWords || "2500"} mots max sans perdre en utilité.`,
+      "Supprime les répétitions et condense les sections redondantes; garde la section « Comment houle intervient ».",
     ].join(" ");
   } else if (error.code === "MISSING_FIELD" && error.field) {
     hint = `⚠️ Le champ ${error.field} est manquant. Fournis un article complet avec ce champ rempli.`;
@@ -2727,7 +2750,7 @@ async function draftArticleFromResearch(frData, research, validatedReferences) {
           draftArticle && lastError && lastError.code === "TOO_LONG"
             ? buildDraftRepairPromptFromExistingArticle(draftArticle, {
                 mode: "condense",
-                minWords: process.env.SEO_MIN_WORDS || "1500",
+                minWords: process.env.SEO_MIN_WORDS || "1200",
                 maxWords: lastError.maxWords,
               })
             : basePrompt;
@@ -2809,9 +2832,181 @@ function assertTranslationPayload(translations, locales) {
   }
 }
 
+// Service page used for the closing CTA block (and the practitioner paragraph)
+// of each refresh target. Other slugs fall back to the service of their backlog
+// topic, then to the default service of their topic family.
+const REFRESH_SERVICE_PATHS = {
+  "conducteurs-securite-azure-openai-securisation-reseau-contenu": "/services/microsoft-consulting",
+  "evaluer-qualite-assistants-ia-tests-scoring-regression": "/services/ai-consulting",
+  "automatisation-processus-rh-finance-conformite-power-automate": "/services/microsoft-consulting",
+  "outlook-add-in-automatiser-tri-securite-suivi-mails": "/products/outlook-addin",
+  "comment-mesurer-roi-ia-kpi-pilotage": "/services/ai-consulting",
+  "adoption-ia-roi-gouvernance-risques-feuille-route": "/services/ai-consulting",
+  "construire-solution-rag-entreprise": "/services/ai-consulting",
+};
+
+function resolveRefreshService(article) {
+  if (REFRESH_SERVICE_PATHS[article.slug]) return REFRESH_SERVICE_PATHS[article.slug];
+  const topic = (ARTICLE_BACKLOG.topics || []).find((t) => t.id === article.topicId);
+  if (topic && topic.service) return topic.service;
+  const category = (ARTICLE_BACKLOG.categories || []).find((c) => c.id === article.topicFamily);
+  return (category && category.defaultService) || "/services/ai-consulting";
+}
+
+const REFERENCES_TAIL_RE = /\n+---\s*\n#{2,3} [^\n]*\n(?:- \[[^\n]*\n?)+\s*$/;
+
+/** Content as the model should see it: no references section, no CTA block (both regenerated by code). */
+function stripGeneratedTail(content, service) {
+  let text = String(content || "").trimEnd();
+  text = text.replace(REFERENCES_TAIL_RE, "").trimEnd();
+  const block = articleBacklog.buildLeadBlock({
+    locale: "fr",
+    service,
+    serviceLabel: articleBacklog.resolveServiceLabel(ROOT, "fr", service),
+  });
+  if (text.includes(block)) text = text.replace(block, "").replace(/\n{3,}/g, "\n\n").trimEnd();
+  return `${text}\n`;
+}
+
+/** FR content without the CTA block (what translators receive). */
+function stripLeadBlock(content, service) {
+  const block = articleBacklog.buildLeadBlock({
+    locale: "fr",
+    service,
+    serviceLabel: articleBacklog.resolveServiceLabel(ROOT, "fr", service),
+  });
+  return String(content || "").replace(block, "").replace(/\n{3,}/g, "\n\n");
+}
+
+/**
+ * Local-only, transactional refresh of existing FR articles + 4 translations.
+ * Usage: node scripts/ai-ressources-update.js --refresh=<slug>[,<slug>] [--apply] [--mock=file]
+ * Nothing is written unless --apply is given AND every step succeeded.
+ */
+async function runRefresh() {
+  const today = isoDateToday();
+  const redirectedKeys = topicScope.loadRedirectedKeys(ROOT);
+  const blockedSlugs = new Set([
+    ...Object.keys(require("../src/data/articles-consolidated.json")),
+    ...Array.from(redirectedKeys, (key) => String(key).split("/")[1]),
+  ]);
+  const frData = loadJSON(FR_PATH);
+  const servicePaths = {};
+  const articlesBySlug = new Map((frData.Articles || []).map((a) => [a.slug, a]));
+  for (const slug of REFRESH_SLUGS) {
+    const art = articlesBySlug.get(slug);
+    if (art) servicePaths[slug] = resolveRefreshService(art);
+  }
+  const mock = MOCK_DATA?.refresh || null;
+  const deps = {
+    research: async (article) => {
+      if (mock) return mock.references;
+      ensureAzureEnv();
+      const payload = await requestAgentJson(
+        buildRefreshResearchPrompt(article, { today }),
+        { agentName: AZURE_AGENT_RESEARCH_NAME },
+      );
+      const carrier = {
+        title: article.title,
+        slug: article.slug,
+        content: "",
+        references: Array.isArray(payload?.references) ? payload.references : [],
+      };
+      await repairReferences(carrier, detectTopic(article) || "general");
+      return carrier.references;
+    },
+    promptView: (article) => ({
+      ...article,
+      content: stripGeneratedTail(article.content, servicePaths[article.slug]),
+    }),
+    draft: async (prompt) => {
+      if (mock) return mock.draft;
+      ensureOpenAIEnv();
+      return azureOpenAIJson(prompt, {
+        endpoint: AZURE_OPENAI_DRAFT_ENDPOINT,
+        deployment: AZURE_OPENAI_DRAFT_DEPLOYMENT,
+        apiVersion: AZURE_OPENAI_DRAFT_API_VERSION,
+        temperature: 0.3,
+        topP: 0.9,
+        maxTokens: AZURE_OPENAI_DRAFT_MAX_TOKENS,
+        system: "You are an expert French writer. Output ONLY a JSON object.",
+      });
+    },
+    postProcess: async (article) => {
+      const service = servicePaths[article.slug];
+      normalizeBrandCaseInArticle(article);
+      assertNoForbiddenTermsInArticle(article, "fr");
+      const problems = topicScope.articleScopeProblems(article, { redirectedKeys });
+      if (problems.length) {
+        throw new Error(`refresh: ${article.slug}: out of scope: ${problems.join("; ")}`);
+      }
+      syncContentReferencesSection(article);
+      sanitizeContentExternalLinks(article);
+      article.content = articleBacklog.insertLeadPath(article.content, {
+        locale: "fr",
+        service,
+        serviceLabel: articleBacklog.resolveServiceLabel(ROOT, "fr", service),
+      });
+      articleBacklog.assertLeadPath(article, "fr", service);
+    },
+    translate: async (article, labels) => {
+      if (mock) return mock.translations;
+      ensureOpenAIEnv();
+      const service = servicePaths[article.slug];
+      return azureOpenAITranslateJson(
+        buildTranslatePrompt(
+          { ...article, content: stripLeadBlock(article.content, service) },
+          labels,
+        ),
+      );
+    },
+    localize: async (entry, locale, article) => {
+      const service = servicePaths[article.slug];
+      normalizeBrandCaseInArticle(entry);
+      assertNoForbiddenTermsInArticle(entry, locale);
+      const scope = topicScope.checkTopicScope({ title: entry.title, slug: entry.slug });
+      if (!scope.ok) {
+        throw new Error(`refresh: ${locale}:${entry.slug} "${entry.title}" rejected: ${scope.reason}`);
+      }
+      const frWithoutCta = { ...article, content: stripLeadBlock(article.content, service) };
+      const parity = articleBacklog.translationParityIssues(frWithoutCta, entry);
+      if (parity.length) throw new Error(`refresh: [parity] ${locale}:${entry.slug}: ${parity.join("; ")}`);
+      entry.content = articleBacklog.insertLeadPath(
+        articleBacklog.localizeLeadLinks(entry.content, locale),
+        { locale, service, serviceLabel: articleBacklog.resolveServiceLabel(ROOT, locale, service) },
+      );
+      articleBacklog.assertLeadPath(entry, locale, service);
+    },
+    validateFinal: async (article, locale) => {
+      const errors = validateArticleMetadata([article]);
+      if (errors.length) throw new Error(`refresh: ${locale}: ${errors.join("; ")}`);
+    },
+  };
+  const results = await refreshArticles({
+    slugs: REFRESH_SLUGS,
+    today,
+    translationsDir: TRANSLATIONS_DIR,
+    locales: LOCALES,
+    servicePaths,
+    blockedSlugs,
+    apply: APPLY && !DRY,
+    deps,
+  });
+  for (const r of results) {
+    console.log(`\n${r.slug}: ${r.wordsBefore} -> ${r.wordsAfter} words`);
+    for (const line of r.changeSummary) console.log(`  - ${line}`);
+  }
+  console.log(
+    "\nReview `git diff src/translations/*/ressources.json`, run the validators, then commit.",
+  );
+}
+
 async function main() {
   if (!fs.existsSync(FR_PATH)) {
     throw new Error(`Canonical FR ressources file not found: ${FR_PATH}`);
+  }
+  if (REFRESH_SLUGS.length) {
+    return runRefresh();
   }
   if (!MOCK_DATA) {
     ensureAzureEnv();
@@ -3122,7 +3317,24 @@ async function main() {
   console.log("Done.");
 }
 
-main().catch((error) => {
-  console.error(error.message || error);
-  process.exit(1);
-});
+if (require.main === module) {
+  main().catch((error) => {
+    console.error(error.message || error);
+    process.exit(1);
+  });
+}
+
+module.exports = {
+  buildSystemPrompt,
+  buildDraftPromptFromResearch,
+  buildDraftRepairPromptFromExistingArticle,
+  buildDraftAppendPromptFromExistingArticle,
+  buildRetryPrompt,
+  buildResearchPrompt,
+  buildTranslatePrompt,
+  editorialRules,
+  resolveRefreshService,
+  stripGeneratedTail,
+  stripLeadBlock,
+  REFRESH_SERVICE_PATHS,
+};

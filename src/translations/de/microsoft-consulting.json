@@ -89,44 +89,45 @@
             }
         },
         "RealCases": {
-            "Title": "Reale Anwendungsfälle von unseren Genfer Kunden",
-            "Intro": "Hier sind konkrete Beispiele von Microsoft-Projekten, die wir für Unternehmen in Genf durchgeführt haben. Jede Lösung adressiert einen spezifischen operativen Bedarf:",
+            "Title": "Typische Szenarien",
+            "Intro": "Repräsentative Projekte, beschrieben ohne genannten Kunden und ohne bezifferte Ergebnisse.",
             "Cases": [
                 {
                     "Title": "Automatische Aufgabenzuweisung zwischen SharePoint und Teams",
                     "Slug": "allocation-taches-dynamique-teams-planner",
-                    "Summary": "Ein Genfer Unternehmen musste Aufgaben basierend auf Projektdringlichkeit und -typ auf mehrere Teams verteilen. Wir haben eine SharePoint-Liste erstellt, die automatisch Aufgaben den richtigen Teams-Kanälen zuweist und verantwortliche Personen benachrichtigt. Jedes Team verfolgt seine Zuweisungen in einem benutzerdefinierten Dashboard, und Power Automate aktualisiert Status in Echtzeit."
+                    "Summary": "Typisches Szenario. Ein System aus Teams, Planner und Power Automate schlägt vor, wem eine Aufgabe zugewiesen wird, unter Berücksichtigung von Kompetenzen, aktueller Auslastung und Arbeitssprachen. Die Führungsperson trifft die endgültige Entscheidung."
                 },
                 {
                     "Title": "Mehrstufiger Workflow zur Spesengenehmigung",
                     "Slug": "validation-notes-frais-power-automate-approvals",
-                    "Summary": "Die Verwaltung von Spesennotizen in einem Genfer KMU erfolgte per E-Mail und Excel, was zu Verzögerungen und Fehlern führte. Wir haben einen Power Automate-Workflow mit mehrstufigen bedingten Genehmigungen, automatischen Benachrichtigungen und Archivierung in SharePoint bereitgestellt. Die Genehmigungszeit ist von 5 Tagen auf weniger als 24 Stunden gesunken."
+                    "Summary": "Typisches Szenario. Eine mobile Power-Apps-Anwendung füllt die Spesenabrechnung anhand eines Belegfotos vor, prüft die Einhaltung der internen Richtlinie und leitet den Antrag je nach Betrag und Risiko durch einen automatisierten Genehmigungsworkflow."
                 },
                 {
                     "Title": "Kundenonboarding-Portal in SharePoint",
                     "Slug": "onboarding-clients-automatise-sharepoint-forms",
-                    "Summary": "Eine Beratungsfirma wollte ihren Kundenonboarding-Prozess digitalisieren. Wir haben ein sicheres SharePoint-Portal mit benutzerdefinierten Formularen (PowerApps), automatisierter Dokumentenverwaltung und einem Power BI-Dashboard zur Fortschrittsverfolgung erstellt. Kunden füllen ihre Informationen online aus, und das Team erhält sofortige Benachrichtigungen."
+                    "Summary": "Typisches Szenario. Die Eröffnung einer Kundenakte wird mit SharePoint, Forms, Teams und Power Automate orchestriert: Anlegen eines strukturierten Team-Bereichs, sichere Erfassung der Dokumente, parallel laufende Compliance-Prüfungen und Koordination zwischen den Abteilungen."
                 },
                 {
                     "Title": "Echtzeit-Projekt-Dashboard in Power BI",
                     "Slug": "tableau-bord-projets-power-bi-project",
-                    "Summary": "Ein Genfer Industrieunternehmen verfolgte seine Projekte über verstreute Excel-Dateien. Wir haben alles in SharePoint mit einem Power BI-Dashboard zentralisiert, das Prioritäten, Verzögerungen und Budgets in Echtzeit anzeigt. Abteilungsleiter können nach Projekt, Kunde oder Manager filtern, um schnelle Entscheidungen zu treffen."
+                    "Summary": "Typisches Szenario. Power-BI-Dashboards, die aus Project und Teams gespeist werden, bündeln Terminplan, Budget und Ressourcenauslastung, um mehrere Projekte gleichzeitig zu steuern und Abweichungen früher zu erkennen."
                 },
                 {
                     "Title": "Vertragsverwaltung in SharePoint mit SPFx",
                     "Slug": "gestion-contrats-SPFx-alertes-metadata",
-                    "Summary": "Ein Dienstleistungsunternehmen benötigte eine zentrale Lösung zur Verwaltung seiner Verträge (Fristen, Verlängerungen, Unterschriften). Wir haben eine SharePoint-Anwendung mit benutzerdefinierten Oberflächen (SPFx) für Suchen, automatische Warnungen vor Fristablauf und Integration mit DocuSign für elektronische Unterschriften erstellt. Alles ist über Teams zugänglich."
+                    "Summary": "Typisches Szenario. Eine SPFx-Anwendung verwaltet ein Vertragsportfolio mit automatischen Metadaten und gestaffelten Warnungen: Kritische Daten werden per KI extrahiert, Kündigungsfenster berechnet und Fristen von einer Person bestätigt."
                 },
                 {
                     "Title": "Genehmigungsworkflow mit Adaptive Cards in Teams",
                     "Slug": "workflows-approbation-multi-niveaux-adaptive-cards",
-                    "Summary": "Ein Genfer Logistikunternehmen validierte seine Lieferbestellungen per E-Mail. Wir haben den gesamten Prozess mit Power Automate automatisiert: Wenn eine Anfrage in SharePoint erstellt wird, wird eine Adaptive Card zur Validierung an Teams gesendet. Genehmiger können direkt aus Teams akzeptieren oder ablehnen, mit Kommentaren und automatischen Benachrichtigungen."
+                    "Summary": "Typisches Szenario. Workflows mit adaptiven Karten in Teams bestimmen den Genehmigungsweg nach Risikostufe, berücksichtigen Stellvertretungen bei Abwesenheit und eskalieren bei Bedarf. Genehmigende können Anträge per Smartphone bearbeiten."
                 }
             ]
         },
         "UseCases": {
             "Title": "Häufige Anwendungsfälle",
-            "Text": "Wir haben Unternehmen geholfen, ihre Genehmigungsprozesse zu automatisieren, interne Wissensdatenbanken zu erstellen, Kundenportale in SharePoint zu entwickeln, Finanz-Dashboards in Power BI einzurichten und vieles mehr. Jedes Projekt beginnt mit einer Analyse Ihrer Bedürfnisse und endet mit einer Lösung, die sich natürlich in Ihren Alltag integriert."
+            "Text": "Automatisierung von Genehmigungsprozessen, interne Wissensdatenbanken, Kundenportale in SharePoint, Finanz-Dashboards in Power BI und vieles mehr. Jedes Projekt beginnt mit einer Analyse Ihrer Bedürfnisse und zielt auf eine Lösung, die sich natürlich in Ihren Alltag einfügt.",
+            "PillarLabel": "Referenzleitfaden"
         },
         "Benefits": {
             "Title": "Vorteile für Ihre Organisation",
@@ -146,6 +147,26 @@
                 {
                     "Title": "Umsetzbare Daten",
                     "Desc": "Verwandeln Sie Ihre Daten in umsetzbare Erkenntnisse mit klaren und aktualisierten Dashboards."
+                }
+            ]
+        },
+        "TypicalSituations": {
+            "Title": "Typische Situationen",
+            "Disclaimer": "Fiktive, vereinfachte Beispiele für Situationen, die wir übernehmen können. Sie beschreiben weder konkrete Kundenprojekte noch garantierte Ergebnisse.",
+            "SituationLabel": "Situation",
+            "WhatWeDoLabel": "Was wir tun",
+            "Cases": [
+                {
+                    "Situation": "Genehmigungen von Spesen und Rechnungen laufen per E-Mail, und niemand weiss, wo ein Vorgang steht.",
+                    "WhatWeDo": "Power-Automate-Genehmigungsworkflow mit Teams-Karten, Betragsschwellen, Prüfspur in SharePoint und einer Übersichtstafel; Dokumentation des Workflows für Ihre IT."
+                },
+                {
+                    "Situation": "Kennzahlen für die Geschäftsleitung werden jeden Monat aus Excel und dem CRM in eine Präsentation kopiert.",
+                    "WhatWeDo": "Power-BI-Datenmodell, angebunden an die bestehenden Quellen, automatisch aktualisiertes Dashboard, rollenbasierte Zugriffe und Begleitung beim Einstieg."
+                },
+                {
+                    "Situation": "Ein SharePoint-Intranet existiert, aber Verträge und ihre Fristen gehen in Ordnern verloren.",
+                    "WhatWeDo": "Strukturierte Bibliothek mit Metadaten, Fristenwarnungen, SPFx-Webpart für die Übersicht und begleitete Migration der bestehenden Dokumente."
                 }
             ]
         }

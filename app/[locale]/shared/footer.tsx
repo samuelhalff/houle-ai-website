@@ -4,6 +4,7 @@ import { Separator } from "@/src/components/ui/separator";
 import { WhatsAppIcon } from "@/src/components/icons/WhatsAppIcon";
 import { getWhatsAppContent, getWhatsAppLink } from "@/src/lib/whatsapp";
 import { isLocale, type Locale } from "@/src/lib/i18n-locales";
+import ContactChannelLink from "@/src/components/ui/contact-channel-link";
 import CookieSettingsLink from "@/src/components/CookieSettingsLink";
 
 export default function Footer({ locale }: { locale?: string }) {
@@ -128,14 +129,18 @@ export default function Footer({ locale }: { locale?: string }) {
           </p>
           <p className="max-w-[22ch] text-sm text-muted-foreground leading-relaxed">{t.tagline}</p>
           <div className="space-y-2">
-            <a
+            <ContactChannelLink
               href="mailto:contact@houle.ai"
+              channel="email"
+              placement="footer"
               className={linkClass + " block hover:text-brand"}
             >
               contact@houle.ai
-            </a>
-            <a
+            </ContactChannelLink>
+            <ContactChannelLink
               href={whatsappLink}
+              channel="whatsapp"
+              placement="footer"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
@@ -143,7 +148,7 @@ export default function Footer({ locale }: { locale?: string }) {
             >
               <WhatsAppIcon className="size-4 text-[#25d366]" />
               {whatsapp.footerLabel}
-            </a>
+            </ContactChannelLink>
             <a
               href="https://www.linkedin.com/company/houle-ai/"
               target="_blank"
@@ -252,7 +257,7 @@ export default function Footer({ locale }: { locale?: string }) {
       <div className="mx-auto flex max-w-[1200px] flex-col-reverse items-center justify-between gap-x-2 gap-y-5 px-5 py-8 sm:flex-row sm:px-8">
         <span className="w-full text-center text-sm text-muted-foreground xs:text-start">
           © <span suppressHydrationWarning>{new Date().getFullYear()}</span>{" "}
-          houle — A brand of West-Bay SA, Genthod (Genève)
+          houle — A brand of West Bay SA, Genthod (Genève)
         </span>
       </div>
     </footer>

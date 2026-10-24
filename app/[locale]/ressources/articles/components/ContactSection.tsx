@@ -1,6 +1,7 @@
 import React from "react";
 import { Button } from "@/src/components/ui/button";
-import Link from "next/link";
+import TrackedLink from "@/src/components/ui/tracked-link";
+import ContactChannelLink from "@/src/components/ui/contact-channel-link";
 
 function MessageCircleIcon({
   className = "",
@@ -34,11 +35,17 @@ const ContactSection = ({
   title,
   description,
   buttonText,
+  primaryCta,
+  secondary,
 }: {
   locale?: string;
   title: string;
   description: string;
   buttonText: string;
+  /** GA4 cta name for the primary (contact page) button. */
+  primaryCta?: string;
+  /** Optional outbound channel (for example WhatsApp) shown next to the primary button. */
+  secondary?: { href: string; label: string; channel: string; placement: string };
 }) => {
   const localePrefix = locale ? `/${locale}` : "/fr";
 
@@ -48,11 +55,30 @@ const ContactSection = ({
         <MessageCircleIcon className="w-10 h-10 text-brand mx-auto mb-5" />
         <h3 className="text-xl font-semibold tracking-tight text-foreground mb-3">{title}</h3>
         <p className="mb-7 text-sm leading-7 text-foreground/70">{description}</p>
-        <Link href={`${localePrefix}/contact/`} prefetch={false}>
-          <Button size="lg" className="btn-main-cta rounded-full bg-foreground px-8 text-background">
-            <span>{buttonText}</span>
-          </Button>
-        </Link>
+        <div className="flex flex-col items-center justify-center gap-3 sm:flex-row">
+          <TrackedLink
+            href={`${localePrefix}/contact/`}
+            prefetch={false}
+            cta={primaryCta}
+          >
+            <Button size="lg" className="btn-main-cta rounded-full bg-foreground px-8 text-background">
+              <span>{buttonText}</span>
+            </Button>
+          </TrackedLink>
+          {secondary?.href && secondary.label ? (
+            <ContactChannelLink
+              href={secondary.href}
+              channel={secondary.channel}
+              placement={secondary.placement}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Button size="lg" variant="outline" className="rounded-full px-8">
+                <span>{secondary.label}</span>
+              </Button>
+            </ContactChannelLink>
+          ) : null}
+        </div>
       </div>
     </section>
   );

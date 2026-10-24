@@ -1,4 +1,5 @@
 import Link from "next/link";
+import TrackedLink from "@/src/components/ui/tracked-link";
 import FAQ from "@/src/components/FAQ";
 import { getTranslations, type Locale } from "@/src/lib/i18n";
 import { getPageMetadata } from "@/src/lib/metadata";
@@ -494,15 +495,15 @@ export default async function HomePage(
               {t.subtext}
             </p>
             <div className="mt-10 flex w-full flex-col items-stretch gap-3 sm:w-auto sm:flex-row sm:items-center">
-              <Link href={`${localePrefix}/contact/`} className="w-full sm:w-auto" prefetch={false}>
+              <TrackedLink cta="home_hero_contact" href={`${localePrefix}/contact/`} className="w-full sm:w-auto" prefetch={false}>
                 <Button
                   size="lg"
                   className="btn-main-cta w-full rounded-full bg-foreground px-6 text-base text-background sm:w-auto"
                 >
                   <span>{t.ctaPrimary}</span>
                 </Button>
-              </Link>
-              <Link href={`${localePrefix}/services/ai-consulting/`} className="w-full sm:w-auto" prefetch={false}>
+              </TrackedLink>
+              <TrackedLink cta="home_hero_ai_consulting" href={`${localePrefix}/services/ai-consulting/`} className="w-full sm:w-auto" prefetch={false}>
                 <Button
                   size="lg"
                   variant="secondary"
@@ -510,7 +511,7 @@ export default async function HomePage(
                 >
                   <span>{t.ctaSecondary}</span>
                 </Button>
-              </Link>
+              </TrackedLink>
             </div>
 
             {/* Facts band */}
@@ -714,14 +715,14 @@ export default async function HomePage(
                 {t.ctaBody}
               </p>
               <div className="mt-8 flex justify-center">
-                <Link href={`${localePrefix}/contact/`} prefetch={false}>
+                <TrackedLink cta="home_bottom_contact" href={`${localePrefix}/contact/`} prefetch={false}>
                   <Button
                     size="lg"
                     className="btn-main-cta rounded-full bg-foreground px-8 text-base text-background"
                   >
                     <span>{t.ctaPrimary}</span>
                   </Button>
-                </Link>
+                </TrackedLink>
               </div>
             </div>
           </Reveal>

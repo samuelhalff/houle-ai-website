@@ -43,7 +43,7 @@ export default async function CookiesPage(
           <h2 className="text-2xl font-semibold mb-4">Introduction</h2>
           <div className="space-y-4">
             <p>
-              This Cookies Policy explains how houle.ai (West-Bay SA) uses cookies and similar tracking technologies on our website. It provides information about what cookies are, how we use them, and your choices regarding their use.
+              This Cookies Policy explains how houle.ai (West Bay SA) uses cookies and similar tracking technologies on our website. It provides information about what cookies are, how we use them, and your choices regarding their use.
             </p>
             <p>
               By using our website, you consent to the use of cookies in accordance with this policy and our Privacy Policy.
@@ -258,8 +258,8 @@ export default async function CookiesPage(
               If you have any questions about this policy, please contact us:
             </p>
             <div className="bg-muted/50 p-6 rounded-lg">
-              <p className="font-semibold">houle.ai (West-Bay SA)</p>
-              <p>19 Pré-Roset, 1294 Genthod, Switzerland</p>
+              <p className="font-semibold">houle.ai (West Bay SA)</p>
+              <p>Chemin du Pré-Roset 19, 1294 Genthod, Switzerland</p>
               <p className="font-semibold">Email: contact@houle.ai</p>
             </div>
           </div>

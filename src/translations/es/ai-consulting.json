@@ -87,8 +87,8 @@
             }
         },
         "UseCases": {
-            "Title": "Ejemplos y casos de uso",
-            "Intro": "Casos de clientes y escenarios tipo publicados en nuestros recursos. Los escenarios tipo describen proyectos representativos, sin cliente nombrado ni resultado cifrado.",
+            "Title": "Escenarios tipo",
+            "Intro": "Proyectos representativos, descritos sin cliente nombrado ni resultado cifrado.",
             "Cases": [
                 {
                     "Title": "Siniestros menores de responsabilidad civil en una institución médica",
@@ -118,44 +118,45 @@
                 {
                     "Title": "Automatización de correo postal y electrónico",
                     "Slug": "automatisation-courrier-entrant-ia",
-                    "Summary": "Un bufete de abogados ginebrino redujo el tiempo de procesamiento de correo entrante y correos electrónicos en un 83% gracias a un sistema de IA que clasifica automáticamente cada documento y mensaje por naturaleza. El sistema extrae información clave, dirige a los archivos correctos y alerta sobre urgencias. Los abogados encuentran cualquier comunicación al instante mediante búsqueda semántica."
+                    "Summary": "Escenario tipo. Un sistema de IA clasifica cada carta y correo electrónico entrante según su naturaleza, extrae la información clave, lo dirige al expediente correcto y señala las urgencias. Después, el equipo encuentra cualquier comunicación mediante búsqueda semántica y una persona valida los casos dudosos."
                 },
                 {
                     "Title": "Detección automática de plazos",
                     "Slug": "detection-delais-SPFx-calendriers",
-                    "Summary": "Una notaría nunca pierde ningún plazo gracias a una aplicación SharePoint que analiza automáticamente documentos para identificar todos los plazos legales y contractuales. El sistema crea eventos de calendario en Teams con alertas progresivas, eliminando completamente el riesgo de olvido que podría tener graves consecuencias en la responsabilidad profesional."
+                    "Summary": "Escenario tipo. Una aplicación de SharePoint analiza los documentos para detectar plazos legales y contractuales y crea eventos de calendario en Teams con recordatorios progresivos. Los plazos detectados deben ser confirmados por la persona responsable del expediente."
                 },
                 {
                     "Title": "Recordatorios inteligentes de facturas",
                     "Slug": "relance-factures-impayees-power-automate",
-                    "Summary": "Una firma de consultoría financiera redujo su tiempo promedio de pago en un 40% mediante recordatorios automatizados y personalizados generados por IA. El sistema adapta el tono y el contenido según la duración del retraso y el historial de relación, generando correos corteses y efectivos. El tiempo dedicado a recordatorios cayó un 85%."
+                    "Summary": "Escenario tipo. Los recordatorios de facturas impagadas los redacta la IA, con un tono y un contenido adaptados al retraso y al historial de la relación. Cada mensaje puede revisarse antes de enviarse."
                 },
                 {
                     "Title": "Resumen automático de documentos legales",
                     "Slug": "resume-documents-juridiques-azure-ai",
-                    "Summary": "Una empresa de gestión patrimonial ahora procesa 10 veces más informes y contratos gracias a la síntesis de documentos por IA. El sistema genera dos niveles de resúmenes estructurados que permiten a los gestores decidir rápidamente si es necesaria una lectura profunda. El tiempo dedicado a la revisión de documentos disminuyó un 70%."
+                    "Summary": "Escenario tipo. Una herramienta de síntesis genera dos niveles de resumen estructurado para informes y contratos, para decidir rápidamente si hace falta una lectura detallada. El resumen no sustituye la lectura de los pasajes decisivos."
                 },
                 {
                     "Title": "Asistente de redacción de contratos",
                     "Slug": "assistant-redaction-contrats-ia",
-                    "Summary": "Una empresa comercial internacional dividió por tres su tiempo de redacción de contratos comerciales gracias a un complemento de Word impulsado por IA. El asistente selecciona automáticamente cláusulas apropiadas de una base validada, genera el contrato personalizado y verifica la coherencia. Los profesionales legales ahora se centran en la personalización y negociación en lugar de la redacción mecánica."
+                    "Summary": "Escenario tipo. Un complemento de Word propone cláusulas de una base validada, ensambla un borrador de contrato personalizado y comprueba su coherencia. Los juristas conservan el control de la personalización, la negociación y la validación final."
                 },
                 {
                     "Title": "Análisis predictivo de ventas e inventario",
                     "Slug": "analyse-predictive-ventes-azure-ml",
-                    "Summary": "Un distribuidor farmacéutico redujo las roturas de stock en un 70% y las pérdidas por caducidad en un 65% mediante modelos predictivos de IA que analizan cinco años de historial enriquecido con datos contextuales. Las predicciones anticipan con precisión los picos estacionales y optimizan los pedidos, liberando 120.000 CHF de capital de trabajo."
+                    "Summary": "Escenario tipo. Unos modelos predictivos analizan el historial de ventas y de existencias, enriquecido con datos contextuales, para anticipar los picos estacionales y preparar los pedidos. Las previsiones siguen siendo una ayuda a la decisión y se comparan con los resultados reales."
                 },
                 {
                     "Title": "Base de conocimiento con búsqueda semántica",
                     "Slug": "base-connaissances-recherche-semantique-ai",
-                    "Summary": "Un editor de software redujo los tiempos de resolución de tickets de soporte en un 55% mediante una base de conocimiento potenciada por IA. La búsqueda semántica comprende la intención detrás de las preguntas, y un modelo GPT-4 genera respuestas sintéticas citando fuentes. Los nuevos técnicos se vuelven operativos dos veces más rápido."
+                    "Summary": "Escenario tipo. Una base de conocimiento con búsqueda semántica entiende la intención de las preguntas, y un modelo genera respuestas sintéticas citando sus fuentes. Ayuda sobre todo a los nuevos empleados a encontrar la información."
                 },
                 {
                     "Title": "Transcripción de reuniones y extracción de acciones",
                     "Slug": "transcription-reunions-extraction-actions",
-                    "Summary": "Una firma de auditoría eliminó la toma de notas manual y ahorra 12 horas por semana mediante la transcripción por IA de reuniones con clientes. El sistema genera automáticamente actas estructuradas, crea tareas de Planner para cada acción acordada y detecta el sentimiento del cliente. Las actas se envían dentro de la hora siguiente a la reunión."
+                    "Summary": "Escenario tipo. La transcripción con IA de las reuniones genera un acta estructurada y crea en Planner una tarea por cada acción acordada. Un participante revisa el acta antes de difundirla."
                 }
-            ]
+            ],
+            "PillarLabel": "Guía de referencia"
         },
         "Benefits": {
             "Title": "Ventajas para su empresa",
@@ -175,6 +176,26 @@
                 {
                     "Title": "Ventaja competitiva",
                     "Desc": "Adopte las tecnologías que marcarán la diferencia frente a sus competidores en los próximos años."
+                }
+            ]
+        },
+        "TypicalSituations": {
+            "Title": "Situaciones típicas",
+            "Disclaimer": "Ejemplos ficticios y simplificados de situaciones que podemos asumir. No describen proyectos concretos de clientes ni resultados garantizados.",
+            "SituationLabel": "Situación",
+            "WhatWeDoLabel": "Qué hacemos",
+            "Cases": [
+                {
+                    "Situation": "Un servicio de siniestros o un equipo de cumplimiento recibe muchos expedientes, la mayoría con el mismo recorrido, pero todo se lee a mano.",
+                    "WhatWeDo": "Taller para redactar sus reglas de clasificación, piloto con validación humana sobre expedientes de prueba y puesta en producción con un registro de decisiones; modelo alojado en Suiza si los datos lo exigen."
+                },
+                {
+                    "Situation": "Una pyme quiere un asistente que responda a partir de sus procedimientos y contratos sin que esos documentos salgan de Suiza.",
+                    "WhatWeDo": "Comparación de costes entre una suscripción estadounidense y un modelo de código abierto alojado en Suiza, elección del modelo, conexión con los documentos respetando los derechos de acceso existentes y pruebas de calidad antes de abrirlo a los equipos."
+                },
+                {
+                    "Situation": "Una dirección ha recibido varias ofertas de «agencias de IA» y no sabe cuáles son serias.",
+                    "WhatWeDo": "Revisión de las ofertas, casos de uso ordenados por valor y riesgo, hoja de ruta por etapas con criterios de parada."
                 }
             ]
         }

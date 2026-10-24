@@ -89,44 +89,45 @@
             }
         },
         "RealCases": {
-            "Title": "Real use cases from our Geneva clients",
-            "Intro": "Here are concrete examples of Microsoft projects we have carried out for companies in Geneva. Each solution addresses a specific operational need:",
+            "Title": "Typical scenarios",
+            "Intro": "Representative projects, described without a named client or quantified result.",
             "Cases": [
                 {
                     "Title": "Automatic task assignment between SharePoint and Teams",
                     "Slug": "allocation-taches-dynamique-teams-planner",
-                    "Summary": "A Geneva company needed to distribute tasks among multiple teams based on project urgency and type. We created a SharePoint list that automatically assigns tasks to the right Teams channels and notifies responsible persons. Each team tracks its assignments in a custom dashboard, and Power Automate updates statuses in real time."
+                    "Summary": "Illustrative scenario. A system combining Teams, Planner and Power Automate suggests who should take a task, based on skills, current workload and working languages. The manager keeps the final decision."
                 },
                 {
                     "Title": "Multi-level expense approval workflow",
                     "Slug": "validation-notes-frais-power-automate-approvals",
-                    "Summary": "Expense note management in a Geneva SME was done via email and Excel, causing delays and errors. We deployed a Power Automate workflow with multi-level conditional approvals, automatic notifications, and archiving in SharePoint. The approval time has dropped from 5 days to less than 24 hours."
+                    "Summary": "Illustrative scenario. A mobile Power Apps application pre-fills the expense report from a photo of the receipt, checks compliance with the internal policy and routes the request by amount and risk through an automated approval flow."
                 },
                 {
                     "Title": "Client onboarding portal in SharePoint",
                     "Slug": "onboarding-clients-automatise-sharepoint-forms",
-                    "Summary": "A consulting firm wanted to digitize its client onboarding process. We created a secure SharePoint portal with custom forms (PowerApps), automated document management, and a Power BI dashboard for tracking progress. Clients fill out their information online, and the team receives instant notifications."
+                    "Summary": "Illustrative scenario. Opening a client file is orchestrated with SharePoint, Forms, Teams and Power Automate: creation of a structured team space, secure collection of documents, compliance checks run in parallel and coordination between departments."
                 },
                 {
                     "Title": "Real-time project dashboard in Power BI",
                     "Slug": "tableau-bord-projets-power-bi-project",
-                    "Summary": "A Geneva industrial company was tracking its projects via scattered Excel files. We centralized everything in SharePoint with a Power BI dashboard that displays priorities, delays, and budgets in real time. Department heads can filter by project, client, or manager to make quick decisions."
+                    "Summary": "Illustrative scenario. Power BI dashboards fed from Project and Teams consolidate schedule, budget and resource load so that several projects can be followed at once and deviations spotted earlier."
                 },
                 {
                     "Title": "Contract management in SharePoint with SPFx",
                     "Slug": "gestion-contrats-SPFx-alertes-metadata",
-                    "Summary": "A service company needed a central solution to manage its contracts (deadlines, renewals, signatures). We built a SharePoint application with custom interfaces (SPFx) for searches, automatic alerts before deadline expirations, and integration with DocuSign for electronic signatures. Everything is accessible from Teams."
+                    "Summary": "Illustrative scenario. An SPFx application manages a portfolio of contracts with automatic metadata and progressive alerts: critical dates are extracted by AI, termination windows are calculated, and deadlines are confirmed by a person."
                 },
                 {
                     "Title": "Approval workflow with Adaptive Cards in Teams",
                     "Slug": "workflows-approbation-multi-niveaux-adaptive-cards",
-                    "Summary": "A Geneva logistics company was validating its supply orders via email. We automated the entire process with Power Automate: when a request is created in SharePoint, an Adaptive Card is sent to Teams for validation. Approvers can accept or refuse directly from Teams, with comments and automatic notifications."
+                    "Summary": "Illustrative scenario. Workflows with Teams adaptive cards determine the approval path according to the level of risk, handle deputies during absences and escalate the request when needed. Approvers can process requests from their smartphone."
                 }
             ]
         },
         "UseCases": {
             "Title": "Common use cases",
-            "Text": "We have helped companies automate their approval processes, create internal knowledge bases, develop customer portals in SharePoint, set up financial dashboards in Power BI, and much more. Each project starts with an analysis of your needs and ends with a solution that naturally integrates into your daily routine."
+            "Text": "Automation of approval processes, internal knowledge bases, customer portals in SharePoint, financial dashboards in Power BI, and much more. Each project starts with an analysis of your needs and aims for a solution that fits naturally into your daily routine.",
+            "PillarLabel": "Reference guide"
         },
         "Benefits": {
             "Title": "Benefits for your organization",
@@ -146,6 +147,26 @@
                 {
                     "Title": "Actionable data",
                     "Desc": "Transform your data into actionable insights with clear and updated dashboards."
+                }
+            ]
+        },
+        "TypicalSituations": {
+            "Title": "Typical situations",
+            "Disclaimer": "Fictional, simplified examples of situations we can handle. They do not describe specific client projects or guaranteed results.",
+            "SituationLabel": "Situation",
+            "WhatWeDoLabel": "What we do",
+            "Cases": [
+                {
+                    "Situation": "Expense and invoice approvals run over email and nobody knows where a file stands.",
+                    "WhatWeDo": "Power Automate approval flow with Teams cards, amount thresholds, an audit trail in SharePoint and a tracking board; documentation of the flow for your IT team."
+                },
+                {
+                    "Situation": "Management figures are copied every month from Excel and the CRM into a slide deck.",
+                    "WhatWeDo": "Power BI data model connected to the existing sources, automatically refreshed dashboard, role-based access and support for getting started."
+                },
+                {
+                    "Situation": "A SharePoint intranet exists, but contracts and their deadlines get lost in folders.",
+                    "WhatWeDo": "Structured library with metadata, deadline alerts, an SPFx web part for the overview and guided migration of the existing documents."
                 }
             ]
         }

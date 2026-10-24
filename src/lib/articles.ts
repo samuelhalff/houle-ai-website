@@ -57,6 +57,7 @@ export type RessourcesDictionary = {
     questions_about_article?: string;
     banner_body?: string;
     contact_button?: string;
+    whatsapp_button?: string;
   };
   [key: string]: unknown;
 };

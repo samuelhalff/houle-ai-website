@@ -1,6 +1,6 @@
 # houle.ai
 
-> houle is an independent, vendor-neutral AI consulting and integration firm based in Geneva, Switzerland (a brand of West-Bay SA). It helps organisations choose the use cases worth automating and the right model for each of them: Microsoft or OpenAI where it fits, Anthropic or Mistral, or open-source models (Llama, Mistral, Qwen, Gemma) hosted in Switzerland when data residency, professional or medical secrecy, cost or independence matter.
+> houle is an independent, vendor-neutral AI consulting and integration firm based in Geneva, Switzerland (a brand of West Bay SA). It helps organisations choose the use cases worth automating and the right model for each of them: Microsoft or OpenAI where it fits, Anthropic or Mistral, or open-source models (Llama, Mistral, Qwen, Gemma) hosted in Switzerland when data residency, professional or medical secrecy, cost or independence matter.
 
 The site is available in French (master), English, German, Spanish and Portuguese under /fr/, /en/, /de/, /es/ and /pt/.
 
@@ -41,6 +41,6 @@ Illustrative scenarios (no named client, no invented figures) and a decision gui
 
 ## Company
 
-- Legal entity: West-Bay SA, Chemin Pré-Roset, 1294 Genthod (Geneva), Switzerland
+- Legal entity: West Bay SA, Chemin du Pré-Roset 19, 1294 Genthod (Geneva), Switzerland
 - Email: contact@houle.ai
 - Areas served: Geneva, Lausanne and the rest of Switzerland

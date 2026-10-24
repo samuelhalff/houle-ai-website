@@ -2,6 +2,7 @@
 
 import Logo from "@/src/components/site/Logo";
 import Link from "next/link";
+import TrackedLink from "@/src/components/ui/tracked-link";
 import { useEffect, useState } from "react";
 import { usePathname } from "next/navigation";
 import type { NavData } from "@/src/components/navigation/types";
@@ -108,7 +109,7 @@ export default function NavbarClient({
                   </Link>
                 </li>
                 <li>
-                  <Link
+                  <TrackedLink cta="nav_contact"
                     href={`${localePrefix}/contact/`}
                     prefetch={false}
                     aria-current={
@@ -119,7 +120,7 @@ export default function NavbarClient({
                     }`}
                   >
                     {navData.labels.contact}
-                  </Link>
+                  </TrackedLink>
                 </li>
                 {/* HeaderControls (theme + lang) only on client — avoids theme/searchParams hydration mismatch */}
                 <li className="site-header-controls ml-1" suppressHydrationWarning>

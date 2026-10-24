@@ -17,6 +17,8 @@ const ArticleContextualCTA = ({
   primaryHref,
   secondaryText,
   secondaryHref,
+  primaryCta = "article_contextual",
+  secondaryCta = "article_contextual",
 }: {
   title: string;
   description: string;
@@ -24,9 +26,12 @@ const ArticleContextualCTA = ({
   primaryHref: string;
   secondaryText?: string;
   secondaryHref?: string;
+  /** GA4 cta names for the two buttons (defaults keep the historical name). */
+  primaryCta?: string;
+  secondaryCta?: string;
 }) => {
-  const track = (destination: string) =>
-    trackEvent("cta_click", { cta: "article_contextual", destination });
+  const track = (cta: string, destination: string) =>
+    trackEvent("cta_click", { cta, destination });
 
   return (
     <aside className="not-prose my-12 rounded-2xl border border-border bg-muted/40 px-6 py-8 text-center sm:px-10 sm:py-10">
@@ -48,7 +53,7 @@ const ArticleContextualCTA = ({
           <Link
             href={primaryHref}
             prefetch={false}
-            onClick={() => track(primaryHref)}
+            onClick={() => track(primaryCta, primaryHref)}
           >
             {primaryText}
           </Link>
@@ -63,7 +68,7 @@ const ArticleContextualCTA = ({
             <Link
               href={secondaryHref}
               prefetch={false}
-              onClick={() => track(secondaryHref)}
+              onClick={() => track(secondaryCta, secondaryHref)}
             >
               {secondaryText}
             </Link>

@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import TrackedLink from "@/src/components/ui/tracked-link";
 import { getTranslations, type Locale } from "@/src/lib/i18n";
 import { getCspNonce } from "@/src/lib/csp";
 import { generateMetadataForPage } from "@/src/lib/metadata";
@@ -63,7 +64,7 @@ const SwissGPTPage = async (props: { params: Promise<{ locale: string }> }) => {
             description={(t("Hero.Description") as string) || ""}
           >
             <div className="flex justify-start">
-              <Link href={`${localePrefix}/contact/`} prefetch={false}>
+              <TrackedLink cta="product_hero_contact" href={`${localePrefix}/contact/`} prefetch={false}>
                 <Button size="lg" className="btn-main-cta rounded-full bg-foreground px-8 text-base text-background">
                   <span>
                     {params.locale === "fr" ? "Demander une démo"
@@ -73,7 +74,7 @@ const SwissGPTPage = async (props: { params: Promise<{ locale: string }> }) => {
                     : "Request Demo"}
                   </span>
                 </Button>
-              </Link>
+              </TrackedLink>
             </div>
           </PageHero>
         </div>
@@ -196,11 +197,11 @@ const SwissGPTPage = async (props: { params: Promise<{ locale: string }> }) => {
               {(t("CTA.Description") as string) || ""}
             </p>
             <div className="mt-8 flex justify-center">
-              <Link href={`${localePrefix}/contact/`} prefetch={false}>
+              <TrackedLink cta="product_bottom_contact" href={`${localePrefix}/contact/`} prefetch={false}>
                 <Button size="lg" className="btn-main-cta rounded-full bg-foreground px-8 text-base text-background">
                   <span>{ctaBtn}</span>
                 </Button>
-              </Link>
+              </TrackedLink>
             </div>
           </div>
         </Reveal>

@@ -20,6 +20,7 @@ import RelatedArticles from "../components/RelatedArticles";
 import ArticleContextualCTA from "@/src/components/ui/article-contextual-cta";
 import { getCategoryService, splitArticleAtMidpoint } from "@/src/lib/articleCta";
 import { buildInternalUrl } from "@/src/lib/paths";
+import { getWhatsAppLink } from "@/src/lib/whatsapp";
 import Breadcrumbs from "@/src/components/navigation/Breadcrumbs";
 import { estimateReadingTime } from "@/src/lib/readingTime";
 import Defer from "@/src/components/Defer";
@@ -115,9 +116,9 @@ export default async function ArticlePage(props: Params) {
     headline: article.title,
     description: article.description,
     author: {
-      "@type": "Person",
-      name: article.author,
-      ...(article.authorUrl ? { url: article.authorUrl } : {}),
+      "@type": "Organization",
+      "@id": `${baseUrl}/#organization`,
+      name: "houle",
     },
     datePublished: article.date,
     url: articleUrl,
@@ -257,6 +258,8 @@ export default async function ArticlePage(props: Params) {
                 }
                 primaryText={cta.PrimaryCTA || ""}
                 primaryHref={buildInternalUrl("/contact", locale)}
+                primaryCta="article_mid_contact"
+                secondaryCta="article_mid_service"
                 secondaryText={hasService ? serviceCopy?.ServiceCTA : undefined}
                 secondaryHref={
                   hasService && service
@@ -312,12 +315,26 @@ export default async function ArticlePage(props: Params) {
           "Our experts are here to help you understand the details and implications for your business. Get personalized advice tailored to your situation.";
         const buttonText =
           ressources.banner?.contact_button || "Contact our team";
+        const whatsappRaw = ressources.banner?.whatsapp_button;
+        const whatsappLabel =
+          whatsappRaw && whatsappRaw !== "banner.whatsapp_button" ? whatsappRaw : "";
         return (
           <ContactSection
             locale={locale}
             title={title}
             description={description}
             buttonText={buttonText}
+            primaryCta="article_end_contact"
+            secondary={
+              whatsappLabel
+                ? {
+                    href: getWhatsAppLink(locale),
+                    label: whatsappLabel,
+                    channel: "whatsapp",
+                    placement: "article_end",
+                  }
+                : undefined
+            }
           />
         );
       })()}

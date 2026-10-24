@@ -1,0 +1,20 @@
+{
+  "checklist-deploiement-securise-azure-openai": "conducteurs-securite-azure-openai-securisation-reseau-contenu",
+  "azure-openai-checklist-securite-reseau": "conducteurs-securite-azure-openai-securisation-reseau-contenu",
+  "azure-openai-checklist-securite-monitoring": "conducteurs-securite-azure-openai-securisation-reseau-contenu",
+  "azure-openai-securite-checklist-reseau-monitoring": "conducteurs-securite-azure-openai-securisation-reseau-contenu",
+  "azure-openai-checklist-securite-reseau-monitoring": "conducteurs-securite-azure-openai-securisation-reseau-contenu",
+  "evaluer-qualite-assistant-ia-tests-scoring-regression": "evaluer-qualite-assistants-ia-tests-scoring-regression",
+  "scoring-qualite-ia-prompt-regression-tests": "evaluer-qualite-assistants-ia-tests-scoring-regression",
+  "qualite-assistant-ia-jeux-tests-scoring-regression": "evaluer-qualite-assistants-ia-tests-scoring-regression",
+  "evaluation-ia-jeux-de-tests-regression": "evaluer-qualite-assistants-ia-tests-scoring-regression",
+  "power-automate-automatisez-rh-finance": "automatisation-processus-rh-finance-conformite-power-automate",
+  "power-automate-ia-automatiser-rh-finance": "automatisation-processus-rh-finance-conformite-power-automate",
+  "automatisation-power-automate-rh-finance-conformite": "automatisation-processus-rh-finance-conformite-power-automate",
+  "automatisation-intelligente-power-automate": "automatisation-processus-rh-finance-conformite-power-automate",
+  "optimiser-outlook-add-in-automatisation-securite": "outlook-add-in-automatiser-tri-securite-suivi-mails",
+  "outlook-add-in-automatisez-reponses-suivi": "outlook-add-in-automatiser-tri-securite-suivi-mails",
+  "mesurer-roi-ia-pilotage-tableaux-de-bord": "comment-mesurer-roi-ia-kpi-pilotage",
+  "adoption-ia-roi-gouvernance-risques-entreprises": "adoption-ia-roi-gouvernance-risques-feuille-route",
+  "concevoir-architecture-rag-pour-applications-entreprises": "construire-solution-rag-entreprise"
+}

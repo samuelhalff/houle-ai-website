@@ -182,3 +182,15 @@ The home page reads `Question1`–`Question25` (see `app/[locale]/page.tsx`).
 | `ContextualCTA.Services.microsoft-consulting.{Title,Description,ServiceCTA}` | CTA for automation, Power Platform, data articles |
 
 Category to service mapping lives in `src/lib/articleCta.ts`; categories without a service (business-operations) use the generic copy.
+
+## Article end WhatsApp, service pillar and typical situations (Oct 2026)
+
+Added in all locales (`fr`, `en`, `de`, `es`, `pt`):
+
+| Key | Usage |
+| --- | --- |
+| `ressources:banner.whatsapp_button` | WhatsApp button in the end-of-article block (`contact_channel_click`, placement `article_end`) |
+| `ai-consulting:Presentation.UseCases.PillarLabel`, `microsoft-consulting:Presentation.UseCases.PillarLabel` | Label of the reference guide card (`src/lib/serviceArticles.ts`, `service-pillar-card.tsx`) |
+| `<service>:Presentation.TypicalSituations.{Title,Disclaimer,SituationLabel,WhatWeDoLabel,Cases[].Situation,Cases[].WhatWeDo}` | Fictional typical situations block (`service-typical-situations.tsx`) on both service pages |
+
+Reworded: `Presentation.UseCases` / `Presentation.RealCases` titles, intros and summaries (typical scenarios, no client names or figures). Removed: `contact:Contact.Phone` (unused placeholder). Renamed (fr): `microsoft-consulting:IntegrationFlows.TeamsSharePointApprovals` → `TeamsSharePoint`.

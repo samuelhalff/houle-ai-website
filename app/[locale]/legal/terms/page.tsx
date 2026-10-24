@@ -54,7 +54,7 @@ export default async function TermsPage(
           <h2 className="text-2xl font-semibold mb-4">Our Services</h2>
           <div className="space-y-4">
             <p>
-              houle.ai (operated by West-Bay SA) provides private AI services built into Microsoft tools including Outlook, Word, and other Microsoft applications.
+              houle.ai (operated by West Bay SA) provides private AI services built into Microsoft tools including Outlook, Word, and other Microsoft applications.
             </p>
             <p>
               All services are provided in accordance with Swiss law and applicable data protection regulations.
@@ -132,7 +132,7 @@ export default async function TermsPage(
           <h2 className="text-2xl font-semibold mb-4">Intellectual Property</h2>
           <div className="space-y-4">
             <p>
-              The houle.ai service, including all AI models, software, and content, is owned by West-Bay SA and protected by intellectual property laws.
+              The houle.ai service, including all AI models, software, and content, is owned by West Bay SA and protected by intellectual property laws.
             </p>
             <p>
               You retain all rights to your data and content. By using our service, you grant us a limited license to process your data solely to provide the agreed services.
@@ -240,9 +240,9 @@ export default async function TermsPage(
               For questions regarding these Terms of Service, please contact us:
             </p>
             <div className="bg-muted/50 p-6 rounded-lg">
-              <p className="font-semibold">houle.ai (West-Bay SA)</p>
+              <p className="font-semibold">houle.ai (West Bay SA)</p>
               <p>Email: contact@houle.ai</p>
-              <p>Address: 19 Pré-Roset, 1294 Genthod, Switzerland</p>
+              <p>Address: Chemin du Pré-Roset 19, 1294 Genthod, Switzerland</p>
             </div>
             <p>
               We are committed to maintaining the highest standards of service and customer satisfaction.

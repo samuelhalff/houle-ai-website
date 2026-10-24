@@ -3,6 +3,10 @@
 try { require("dotenv").config(); } catch {}
 const topicScope = require("./lib/topicScope");
 const REDIRECTED_TO_ARK = topicScope.loadRedirectedKeys(process.cwd());
+// Duplicates consolidated into a surviving article (src/data/articles-consolidated.json).
+const CONSOLIDATED_SOURCES = new Set(
+  Object.keys(require("../src/data/articles-consolidated.json")),
+);
 
 /**
  * Translate FR articles to other locales (EN/DE/ES/PT) using Azure OpenAI (GPT-4.1) while preserving slugs and links.
@@ -273,6 +277,8 @@ async function main() {
       if (!needsTranslation(frA, locA)) continue;
       // Articles moved to ark-fid.ch are never (re)translated.
       if (topicScope.isRedirectedToArk(frA.slug, REDIRECTED_TO_ARK)) continue;
+      // Consolidated duplicates redirect to their survivor and are never retranslated.
+      if (CONSOLIDATED_SOURCES.has(frA.slug)) continue;
 
       processed++;
       if (MAX && processed > MAX) break;

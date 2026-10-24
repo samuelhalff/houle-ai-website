@@ -11,6 +11,7 @@ import LangSwitchMobile from "@/src/components/navigation/LangSwitchMobile";
 import ThemeToggleMobile from "@/src/components/navigation/ThemeToggleMobile";
 import { useState } from "react";
 import Link from "next/link";
+import TrackedLink from "@/src/components/ui/tracked-link";
 import { cn } from "@/src/lib/utils";
 import { trackEvent } from "@/src/lib/analytics";
 import type { NavData } from "@/src/components/navigation/types";
@@ -189,14 +190,14 @@ const MobileMenu = ({
             {/* Contact: final entry — hairline separator then accent-coloured
                 label with a mono email line beneath. */}
             <div className="mt-5 border-t border-border pt-6">
-              <Link
+              <TrackedLink cta="nav_mobile_contact"
                 href={`${localePrefix}/contact/`}
                 onClick={handleLinkClick}
                 prefetch={false}
                 className="flex items-center px-2 py-2 text-md font-bold text-brand transition-opacity hover:opacity-80"
               >
                 <span>{navData.labels.contact}</span>
-              </Link>
+              </TrackedLink>
               <a
                 href="mailto:contact@houle.ai"
                 onClick={() =>
