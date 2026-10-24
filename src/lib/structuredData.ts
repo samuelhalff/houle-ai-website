@@ -275,6 +275,13 @@ export function buildOrganizationSchema() {
     "@id": "https://houle.ai/#organization",
     name: "houle.ai",
     legalName: "West Bay SA",
+    founder: {
+      "@type": "Person",
+      "@id": "https://ark-fid.ch/fr/team/samuel-halff/#person",
+      name: "Samuel Halff",
+      url: "https://ark-fid.ch/fr/team/samuel-halff/",
+      sameAs: ["https://www.linkedin.com/in/samuelhalff"],
+    },
     taxID: "CHE-107.892.984",
     alternateName: ["Houle", "houle"],
     url: "https://houle.ai",

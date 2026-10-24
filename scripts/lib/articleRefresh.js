@@ -229,6 +229,11 @@ function writeJsonFilesAtomically(files) {
   }
 }
 
+function envInt(name) {
+  const n = parseInt(process.env[name] || "", 10);
+  return Number.isFinite(n) && n > 0 ? n : 0;
+}
+
 function loadJson(file) {
   return JSON.parse(fs.readFileSync(file, "utf8"));
 }
@@ -253,9 +258,10 @@ async function refreshArticles({
   locales = ["en", "de", "es", "pt"],
   servicePaths = {},
   blockedSlugs = new Set(),
-  minWords = 700,
-  draftMinWords = 1200,
-  draftMaxWords = 2500,
+  minWords = envInt("SEO_MIN_WORDS") || 700,
+  maxWords = envInt("SEO_MAX_WORDS") || Infinity,
+  draftMinWords = envInt("SEO_MIN_WORDS") || 1200,
+  draftMaxWords = envInt("SEO_MAX_WORDS") || 2500,
   apply = false,
   deps,
   log = console.log,
@@ -304,6 +310,9 @@ async function refreshArticles({
     const words = countWords(candidate.content);
     if (words < minWords) {
       throw new Error(`refresh: ${slug}: refreshed article too short (${words} < ${minWords} words)`);
+    }
+    if (words > maxWords) {
+      throw new Error(`refresh: ${slug}: refreshed article too long (${words} > ${maxWords} words)`);
     }
     if (candidate.slug !== existing.slug) throw new Error(`refresh: ${slug}: slug changed`);
     if (candidate.category !== existing.category) throw new Error(`refresh: ${slug}: category changed`);

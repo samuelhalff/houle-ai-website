@@ -7,6 +7,8 @@ function parseArgs(argv) {
   return {
     apply: argv.includes("--apply"),
     check: argv.includes("--check") || argv.includes("--ci"),
+    // Restrict the fix to one article so unrelated articles never change.
+    slug: (argv.find((a) => a.startsWith("--slug=")) || "").slice("--slug=".length) || null,
   };
 }
 
@@ -66,11 +68,12 @@ function fixMalformedInternalMarkdownLinks(text) {
   return out === before ? text : out;
 }
 
-function fixRessourcesJson(json) {
+function fixRessourcesJson(json, slug = null) {
   if (!json || !Array.isArray(json.Articles)) return { json, changes: 0 };
   let changes = 0;
 
   for (const article of json.Articles) {
+    if (slug && article.slug !== slug) continue;
     for (const key of ["title", "description", "content"]) {
       if (typeof article[key] !== "string") continue;
       const fixed = fixMalformedInternalMarkdownLinks(article[key]);
@@ -85,7 +88,7 @@ function fixRessourcesJson(json) {
 }
 
 function main() {
-  const { apply, check } = parseArgs(process.argv.slice(2));
+  const { apply, check, slug } = parseArgs(process.argv.slice(2));
   if (apply && check) {
     console.error("Use either --apply or --check, not both.");
     process.exit(2);
@@ -99,7 +102,7 @@ function main() {
     const filePath = path.join(ROOT, locale, "ressources.json");
     if (!fs.existsSync(filePath)) continue;
     const json = loadJson(filePath);
-    const { json: fixedJson, changes } = fixRessourcesJson(json);
+    const { json: fixedJson, changes } = fixRessourcesJson(json, slug);
     if (changes > 0) {
       totalChanges += changes;
       changedFiles.push(`src/translations/${locale}/ressources.json`);

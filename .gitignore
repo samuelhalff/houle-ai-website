@@ -21,3 +21,5 @@ quick-deploy.tar.gz
 *.out
 .server_pid*
 .venv*
+.refresh-run.json
+.refresh-validate.log

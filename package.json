@@ -21,7 +21,7 @@
     "test:article-rotation": "node --test scripts/lib/articleBacklog.test.js scripts/lib/topicScope.test.js",
     "test:ark-redirects": "node --test scripts/articles-redirected-to-ark.test.js",
     "test:consolidated": "node --test scripts/articles-consolidated.test.js",
-    "test:article-refresh": "node --test scripts/lib/articleRefresh.test.js scripts/validate-latest-article.test.js",
+    "test:article-refresh": "node --test scripts/lib/articleRefresh.test.js scripts/validate-latest-article.test.js scripts/refresh-next-article.test.js scripts/validate-refreshed-article.test.js",
     "articles:plan": "node scripts/article-topic-plan.js --check --diagnose --next 12",
     "lint:translations": "node scripts/lint-translations.js",
     "validate:translations": "node scripts/validate-translations.js",

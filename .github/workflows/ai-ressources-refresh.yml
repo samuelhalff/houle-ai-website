@@ -1,0 +1,122 @@
+name: AI Resources Refresh (twice monthly)
+
+on:
+  schedule:
+    # 12th and 27th of the month, 07:00 UTC (avoids validate-ressources on the 1st/22nd;
+    # article workflow runs Thursday 05:00 UTC).
+    - cron: "0 7 12,27 * *"
+  workflow_dispatch:
+
+# Shared with the article workflow so the two never push translations concurrently.
+concurrency:
+  group: ai-content-update
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          token: ${{ secrets.PAT_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci --prefer-offline --no-audit --no-fund
+
+      # Commits + pushes a queue-only claim ("[skip ci]") before any model call. If the claim
+      # cannot be pushed the run ends here (exit 0) and the model is never called.
+      - name: Claim next article
+        id: claim
+        run: node scripts/refresh-next-article.js --claim
+
+      - name: Refresh next article (FR + translations via Azure OpenAI)
+        id: refresh
+        if: steps.claim.outputs.status == 'claimed'
+        timeout-minutes: 25
+        env:
+          AZURE_AGENT_ENDPOINT: ${{ secrets.AZURE_AGENT_ENDPOINT }}
+          AZURE_AGENT_NAME: ${{ secrets.AZURE_AGENT_NAME }}
+          AZURE_AGENT_API_KEY: ${{ secrets.AZURE_AGENT_API_KEY }}
+          AZURE_AGENT_FORCE_RESPONSES: "1"
+          AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT || 'https://pbmch8303697696.cognitiveservices.azure.com/' }}
+          AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
+          AZURE_OPENAI_API_VERSION: "2024-05-01-preview"
+          AZURE_OPENAI_DEPLOYMENT: "gpt-4.1"
+          AZURE_OPENAI_DRAFT_DEPLOYMENT: "gpt-4o"
+          AZURE_OPENAI_RESEARCH_ENDPOINT: ${{ secrets.AZURE_OPENAI_RESEARCH_ENDPOINT }}
+          AZURE_OPENAI_RESEARCH_API_KEY: ${{ secrets.AZURE_OPENAI_RESEARCH_API_KEY }}
+          AZURE_OPENAI_RESEARCH_API_VERSION: ${{ vars.AZURE_OPENAI_RESEARCH_API_VERSION || '2024-05-01-preview' }}
+          AZURE_OPENAI_RESEARCH_DEPLOYMENT: ${{ vars.AZURE_OPENAI_RESEARCH_DEPLOYMENT }}
+          AZURE_OPENAI_DRAFT_MAX_TOKENS: "6144"
+          AZURE_TENANT_ID: ${{ fromJson(secrets.AZURE_CREDENTIALS).tenantId }}
+          AZURE_CLIENT_ID: ${{ fromJson(secrets.AZURE_CREDENTIALS).clientId }}
+          AZURE_CLIENT_SECRET: ${{ fromJson(secrets.AZURE_CREDENTIALS).clientSecret }}
+          AZURE_AGENT_RUN_TIMEOUT_MS: 180000
+          AZURE_AGENT_RESPONSES_RETRIES: "8"
+          AZURE_AGENT_RESPONSES_BACKOFF_MS: "30000"
+          AZURE_AGENT_RESPONSES_BACKOFF_MAX_MS: "300000"
+          AZURE_AGENT_RESPONSES_BACKOFF_JITTER_MS: "2000"
+          AZURE_AGENT_RESPONSES_TIMEOUT_MS: "180000"
+          AZURE_AGENT_RESPONSES_COOLDOWN_MS: "15000"
+          AZURE_AGENT_RESPONSES_MAX_OUTPUT_TOKENS: "0"
+          AZURE_AGENT_FALLBACK_TO_OPENAI: "1"
+          AI_RESEARCH_RETRIES: "3"
+          TRENDS_PROVIDER: ${{ vars.TRENDS_PROVIDER || 'hybrid' }}
+          TRENDS_GEO: ${{ vars.TRENDS_GEO }}
+          TRENDS_LANGUAGE: ${{ vars.TRENDS_LANGUAGE }}
+          TRENDS_MAX_TOPICS: ${{ vars.TRENDS_MAX_TOPICS }}
+          REFERENCE_REQUIRE_TRUSTED_DOMAINS: "0"
+          REFERENCE_MIN_TRUSTED_DOMAINS: "1"
+          REFERENCE_MIN_COUNT: "4"
+          REFERENCE_MAX_COUNT: "6"
+          SEO_MIN_WORDS: "1200"
+          SEO_MAX_WORDS: "2500"
+        run: node scripts/refresh-next-article.js --refresh
+
+      - name: Fix malformed internal markdown links (refreshed slug only)
+        id: fix
+        if: steps.refresh.outputs.status == 'started'
+        env:
+          REFRESH_SLUG: ${{ steps.refresh.outputs.slug }}
+        run: node scripts/fix-article-internal-links.js --apply --slug="$REFRESH_SLUG"
+
+      - name: Validate refreshed article
+        id: validate
+        if: steps.refresh.outputs.status == 'started' && steps.fix.outcome == 'success'
+        env:
+          REFRESH_SLUG: ${{ steps.refresh.outputs.slug }}
+          REFERENCE_MIN_COUNT: "4"
+          SEO_MIN_WORDS: "1200"
+          SEO_MAX_WORDS: "2500"
+        run: |
+          set -o pipefail
+          {
+            node scripts/validate-refreshed-article.js --slug="$REFRESH_SLUG" &&
+            node scripts/validate-article-translations.js &&
+            npm run lint:links
+          } 2>&1 | tee .refresh-validate.log
+
+      # Always runs: success -> slug done + translations committed; anything else (refresh error,
+      # step timeout, link fixer, validation) -> translations restored, slug failed, queue-only commit.
+      - name: Finalize queue, commit and push
+        id: finalize
+        if: always()
+        env:
+          JOB_OK: ${{ steps.refresh.outcome == 'success' && steps.refresh.outputs.status == 'started' && steps.fix.outcome == 'success' && steps.validate.outcome == 'success' }}
+          FAIL_REASON: ${{ (steps.refresh.outcome != 'success' && format('refresh step {0}', steps.refresh.outcome)) || (steps.fix.outcome != 'success' && format('link fixer {0}', steps.fix.outcome)) || format('validation {0}', steps.validate.outcome) }}
+        run: node scripts/refresh-next-article.js --finalize
+
+      - name: Ping sitemaps
+        if: always() && steps.finalize.outputs.status == 'done'
+        continue-on-error: true
+        run: node scripts/ping-sitemaps.js
