@@ -56,7 +56,7 @@ export default async function CookiesPage(
           <h2 className="text-2xl font-semibold mb-4">How We Measure Visits</h2>
           <div className="space-y-4">
             <p>
-              We use Google Analytics 4 (Google Ireland Limited and Google LLC) with Google Consent Mode. The Google tag loads on every visit. What it may store depends on where you are, as estimated by Google from your IP address, and on your choice in the cookie banner.
+              We use Google Analytics 4 (Google Ireland Limited and Google LLC) with Google Consent Mode. The Google tag loads on every visit. What it may store depends on where you are, as estimated by Google from your IP address, and on your choice in the cookie banner. Like any Google Analytics setup, each measurement includes the address of the page viewed, with campaign parameters such as utm_source or gclid when they are in the link you followed.
             </p>
             <ul className="list-disc pl-6 space-y-2">
               <li>

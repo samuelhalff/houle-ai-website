@@ -103,7 +103,7 @@ export default async function PrivacyPage(
               We measure the use of our website with Google Analytics 4 and Google Consent Mode. What is collected depends on your region and your choice in the cookie banner: in Switzerland analytics run unless you refuse, in the EU, the EEA and the UK nothing is stored before you accept. The cookies used and how to refuse are described in our cookies policy.
             </p>
             <p>
-              When you send a message through our contact form, we add how you reached our site: the first page you visited, the referring website (domain only), campaign parameters (utm_source, utm_medium, utm_campaign, utm_term, utm_content), the Google Ads click identifier (gclid) if present, and up to 20 pages viewed during the visit. We never record full addresses or other URL parameters.
+              When you send a message through our contact form, we add how you reached our site: the first page you visited, the referring website (domain only), campaign parameters (utm_source, utm_medium, utm_campaign, utm_term, utm_content), the Google Ads click identifier (gclid) if present, and up to 20 pages viewed during the visit. For this attribution we never keep full addresses or other URL parameters.
             </p>
             <p>
               This information stays in your browser&apos;s memory during the visit (and, if you accepted cookies, in session storage, which is cleared when you close the tab). It is only sent with your message, through our form provider Formspark, and kept with it. We use it, on the basis of our legitimate interest, to understand which channels bring us enquiries. Refusing cookies does not prevent you from contacting us.
