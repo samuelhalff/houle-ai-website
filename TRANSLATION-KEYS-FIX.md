@@ -198,3 +198,17 @@ Reworded: `Presentation.UseCases` / `Presentation.RealCases` titles, intros and 
 ## Cookie banner translated, Consent Mode regional defaults (Oct 2026)
 
 The cookie banner now reads the `cookie` namespace (`app/layout.tsx`) instead of hard-coded English. Changed values in all locales (`fr`, `en`, `de`, `es`, `pt`): `cookie:Title`, `cookie:Text`, `cookie:Accept`, `cookie:Decline` (now "Refuse": it denies analytics and ad signals), `cookie:LearnMore` (links to the cookies policy). The contact form attribution notice (`attributionNotice`) is hard-coded per locale in `app/[locale]/contact/page.tsx`, like the other form labels.
+
+## Namespace: legal (legal.json) — privacy and cookies policies translated (Oct 2026)
+
+New namespace in all locales (`fr`, `en`, `de`, `es`, `pt`), rendered by `app/[locale]/legal/LegalDocument.tsx` for `/legal/privacy` and `/legal/cookies` (previously hard-coded English).
+
+| Key | Description |
+|-----|-------------|
+| `LastUpdated` | "Last updated: {date}" label; the date comes from `PRIVACY_LAST_UPDATED` in `app/[locale]/legal/constants.ts` |
+| `Privacy.{MetaTitle,MetaDescription,Title,Subtitle}` | Privacy policy metadata and header |
+| `Privacy.Sections[].{Title,Blocks[]}` | Privacy policy sections |
+| `Cookies.{MetaTitle,MetaDescription,Title,Subtitle}` | Cookies policy metadata and header |
+| `Cookies.Sections[].{Title,Blocks[]}` | Cookies policy sections |
+
+Block types: `p` (`text`), `h3` (`text`), `ul` (`items[]`), `box` (`heading?`, `lines?[]`, `items?[]`, `note?`), `rights` (`items[].{label,text}`), `links` (`heading`, `items[].{label,href}`). `scripts/validate-translations.js` fails the build when a locale's `legal.json` structure (sections, block types, list lengths, `href`s) differs from `en`. The privacy policy states that the Google Analytics identifier is added to a message unless the visitor refused analytics.

@@ -1,0 +1,303 @@
+{
+  "LastUpdated": "Última atualização: {date}",
+  "Privacy": {
+    "MetaTitle": "Política de privacidade - houle.ai",
+    "MetaDescription": "Política de privacidade e aviso de proteção de dados dos serviços da houle.ai",
+    "Title": "Política de privacidade",
+    "Subtitle": "Aviso de proteção de dados e privacidade",
+    "Sections": [
+      {
+        "Title": "Introdução",
+        "Blocks": [
+          { "type": "p", "text": "Na houle.ai (West Bay SA), comprometemo-nos a proteger a sua privacidade e os seus dados pessoais, em conformidade com a Lei Federal Suíça de Proteção de Dados (LPD) e com os regulamentos da UE aplicáveis." },
+          { "type": "p", "text": "Esta política de privacidade explica como recolhemos, utilizamos e protegemos as suas informações quando você usa os nossos serviços de IA integrados nas ferramentas Microsoft." }
+        ]
+      },
+      {
+        "Title": "Responsável pelo tratamento",
+        "Blocks": [
+          { "type": "p", "text": "A West Bay SA (que opera como houle.ai) atua como responsável pelo tratamento dos dados pessoais recolhidos e tratados no âmbito dos nossos serviços de IA." },
+          { "type": "box", "heading": "Dados de contacto:", "lines": ["houle.ai (West Bay SA)", "Email: contact@houle.ai", "Endereço: Chemin du Pré-Roset 19, 1294 Genthod, Suíça"] }
+        ]
+      },
+      {
+        "Title": "Dados que recolhemos",
+        "Blocks": [
+          { "type": "h3", "text": "Dados do serviço:" },
+          { "type": "ul", "items": [
+            "Informações de identificação pessoal (nome, endereço de e-mail)",
+            "Informações da conta Microsoft para autenticação",
+            "Conteúdo dos documentos tratados pelos nossos serviços de IA",
+            "Padrões de utilização e preferências relativas às funcionalidades de IA",
+            "Dados técnicos (endereço IP, tipo de navegador, informações do dispositivo)"
+          ] },
+          { "type": "h3", "text": "Dados do site:" },
+          { "type": "ul", "items": [
+            "Informações técnicas (endereço IP, tipo de navegador, informações do dispositivo)",
+            "Dados de utilização (páginas visitadas, tempo passado, fontes de referência)",
+            "Cookies e tecnologias de rastreamento semelhantes",
+            "Mensagens enviadas pelo formulário de contacto e comunicações",
+            "Como você encontrou o nosso site (primeira página visitada, domínio de origem, parâmetros de campanha e páginas vistas durante a visita), enviado apenas com a sua mensagem"
+          ] }
+        ]
+      },
+      {
+        "Title": "Análise web e como você nos encontrou",
+        "Blocks": [
+          { "type": "p", "text": "Medimos a utilização do nosso site com o Google Analytics 4 e o Google Consent Mode. O que é recolhido depende da sua região e da sua escolha no banner de cookies: na Suíça, a análise fica ativa, a menos que você a recuse; na UE, no EEE e no Reino Unido, nada é armazenado antes de você aceitar. Os cookies utilizados e a forma de os recusar são descritos na nossa política de cookies." },
+          { "type": "p", "text": "Quando você envia uma mensagem pelo nosso formulário de contacto, acrescentamos a forma como chegou ao nosso site: a primeira página que visitou, o site de origem (apenas o domínio), os parâmetros de campanha (utm_source, utm_medium, utm_campaign, utm_term, utm_content), o identificador de clique do Google Ads (gclid), se existir, e até 20 páginas vistas durante a visita. Para esta atribuição, nunca guardamos endereços completos nem outros parâmetros de URL." },
+          { "type": "p", "text": "Estas informações permanecem na memória do seu navegador durante a visita (e, se você aceitou os cookies, no armazenamento de sessão, que é apagado quando fecha o separador). São enviadas apenas com a sua mensagem, através do nosso fornecedor de formulários Formspark, e guardadas junto com ela. Utilizamo-las, com base no nosso interesse legítimo, para compreender quais os canais que nos trazem pedidos de contacto." },
+          { "type": "p", "text": "Salvo se você tiver recusado a análise, acrescentamos também o identificador do Google Analytics armazenado no seu navegador a uma mensagem que nos envie, para a associar às nossas estatísticas de visitas. Recusar não o impede de nos contactar." }
+        ]
+      },
+      {
+        "Title": "Base legal do tratamento",
+        "Blocks": [
+          { "type": "p", "text": "Tratamos os seus dados pessoais com base nos seguintes fundamentos legais:" },
+          { "type": "ul", "items": [
+            "Execução de contrato: para prestar os serviços de IA integrados nas ferramentas Microsoft",
+            "Cumprimento legal: para satisfazer as exigências regulamentares e de comunicação da Suíça",
+            "Interesses legítimos: para a atividade da empresa, a prevenção de fraudes e a melhoria dos serviços",
+            "Consentimento: para comunicações de marketing e cookies não essenciais (quando exigido)"
+          ] }
+        ]
+      },
+      {
+        "Title": "Como usamos os seus dados",
+        "Blocks": [
+          { "type": "h3", "text": "Prestação do serviço:" },
+          { "type": "ul", "items": [
+            "Fornecer assistência de IA no Outlook, no Word e noutras ferramentas Microsoft",
+            "Tratar e analisar documentos para funcionalidades baseadas em IA",
+            "Manter e melhorar os modelos e serviços de IA",
+            "Comunicar sobre os seus serviços e a sua conta"
+          ] },
+          { "type": "h3", "text": "Atividade da empresa:" },
+          { "type": "ul", "items": [
+            "Gestão da relação com os clientes",
+            "Garantia de qualidade e melhoria do serviço",
+            "Gestão de riscos e prevenção de fraudes",
+            "Cumprimento legal e regulamentar"
+          ] }
+        ]
+      },
+      {
+        "Title": "Partilha de dados",
+        "Blocks": [
+          { "type": "p", "text": "Podemos partilhar os seus dados pessoais com:" },
+          { "type": "ul", "items": [
+            "Microsoft Corporation (para serviços de autenticação e integração)",
+            "Serviços de nuvem Azure (para tratamento e armazenamento seguros dos dados)",
+            "Prestadores de serviços profissionais (suporte informático, serviços de segurança)",
+            "Autoridades suíças (quando exigido por lei)"
+          ] },
+          { "type": "p", "text": "Não vendemos dados pessoais a terceiros. Toda a partilha é feita com acordos de confidencialidade e medidas de proteção de dados adequados." }
+        ]
+      },
+      {
+        "Title": "Segurança dos dados",
+        "Blocks": [
+          { "type": "p", "text": "Aplicamos medidas de segurança abrangentes, incluindo:" },
+          { "type": "ul", "items": [
+            "Encriptação dos dados em trânsito e em repouso",
+            "Autenticação multifator e controlos de acesso",
+            "Avaliações de segurança e atualizações regulares",
+            "Formação da equipa em proteção de dados",
+            "Procedimentos seguros de cópia de segurança e de recuperação em caso de desastre"
+          ] },
+          { "type": "h3", "text": "Conservação dos dados:" },
+          { "type": "ul", "items": [
+            "Registos do serviço: durante a vigência da sua subscrição, acrescida dos prazos legais de conservação",
+            "Dados do site: durante o tempo necessário para cumprir as finalidades indicadas",
+            "Dados de marketing: até o consentimento ser retirado ou os dados deixarem de ser necessários"
+          ] }
+        ]
+      },
+      {
+        "Title": "Os seus direitos",
+        "Blocks": [
+          { "type": "p", "text": "Ao abrigo da lei suíça de proteção de dados, você tem o direito de:" },
+          { "type": "rights", "items": [
+            { "label": "Acesso:", "text": "solicitar informações sobre os dados pessoais que detemos a seu respeito" },
+            { "label": "Retificação:", "text": "corrigir dados pessoais inexatos ou incompletos" },
+            { "label": "Apagamento:", "text": "solicitar a eliminação dos dados pessoais (sujeito a obrigações legais)" },
+            { "label": "Limitação:", "text": "limitar o tratamento em determinadas circunstâncias" },
+            { "label": "Portabilidade dos dados:", "text": "receber os seus dados num formato estruturado e de leitura automática" },
+            { "label": "Oposição:", "text": "opor-se ao tratamento baseado em interesses legítimos" },
+            { "label": "Retirar o consentimento:", "text": "para o tratamento baseado no consentimento" }
+          ] },
+          { "type": "p", "text": "Para exercer estes direitos, contacte-nos em contact@houle.ai. Responderemos no prazo de 30 dias." }
+        ]
+      },
+      {
+        "Title": "Transferências internacionais de dados",
+        "Blocks": [
+          { "type": "p", "text": "Podemos transferir dados pessoais para fora da Suíça, para:" },
+          { "type": "ul", "items": [
+            "Países da UE/EEE com proteção de dados adequada",
+            "Centros de dados Microsoft Azure com garantias adequadas",
+            "Países terceiros com garantias adequadas (cláusulas contratuais-tipo)"
+          ] },
+          { "type": "p", "text": "Todas as transferências internacionais são feitas com garantias jurídicas adequadas, para assegurar que os seus dados permanecem protegidos segundo os padrões suíços." }
+        ]
+      },
+      {
+        "Title": "Alterações a esta política",
+        "Blocks": [
+          { "type": "p", "text": "Podemos atualizar esta política de privacidade para refletir alterações nas nossas práticas, nos nossos serviços ou nas exigências legais. As alterações substanciais serão comunicadas por:" },
+          { "type": "ul", "items": [
+            "Notificação por email aos utilizadores registados",
+            "Um aviso em destaque no nosso site",
+            "Comunicação direta durante as interações relativas ao serviço"
+          ] },
+          { "type": "p", "text": "A política atualizada produz efeitos a partir da data indicada na versão revista." }
+        ]
+      },
+      {
+        "Title": "Fale connosco",
+        "Blocks": [
+          { "type": "p", "text": "Se tiver dúvidas sobre esta política de privacidade ou quiser exercer os seus direitos, contacte-nos:" },
+          { "type": "box", "heading": "houle.ai (West Bay SA)", "lines": ["Chemin du Pré-Roset 19, 1294 Genthod, Suíça", "Email: contact@houle.ai"] }
+        ]
+      }
+    ]
+  },
+  "Cookies": {
+    "MetaTitle": "Política de cookies - houle.ai",
+    "MetaDescription": "Informações sobre a nossa utilização de cookies e tecnologias de rastreamento",
+    "Title": "Política de cookies",
+    "Subtitle": "Informações sobre a nossa utilização de cookies e tecnologias de rastreamento",
+    "Sections": [
+      {
+        "Title": "Introdução",
+        "Blocks": [
+          { "type": "p", "text": "Esta política de cookies explica como a houle.ai (West Bay SA) utiliza cookies e tecnologias de rastreamento semelhantes no nosso site. Explica o que são os cookies, como os utilizamos e quais as suas opções quanto à sua utilização." },
+          { "type": "p", "text": "Consoante o local onde você se encontra, algumas destas tecnologias funcionam por predefinição e outras apenas com o seu consentimento. A secção abaixo explica o que se aplica a você e como recusar ou alterar a sua escolha." }
+        ]
+      },
+      {
+        "Title": "Como medimos as visitas",
+        "Blocks": [
+          { "type": "p", "text": "Utilizamos o Google Analytics 4 (Google Ireland Limited e Google LLC) com o Google Consent Mode. A tag do Google carrega em todas as visitas. O que ela pode armazenar depende do local onde você se encontra, estimado pela Google a partir do seu endereço IP, e da sua escolha no banner de cookies. Como em qualquer configuração do Google Analytics, cada medição inclui o endereço da página visualizada, com parâmetros de campanha como utm_source ou gclid quando constam do link que você seguiu." },
+          { "type": "ul", "items": [
+            "Suíça: os cookies de análise (_ga, _ga_*) são utilizados, a menos que você clique em \"Recusar\". Os sinais publicitários (cookies publicitários, dados de utilizador para anúncios e personalização de anúncios) permanecem desativados até você clicar em \"Aceitar\".",
+            "União Europeia, EEE e Reino Unido: nenhum cookie de análise ou publicitário é definido até você clicar em \"Aceitar\". Até lá, a tag envia apenas pings de medição sem cookies (por exemplo, uma visualização de página ou um formulário enviado), sem um identificador que o reconheça de uma visita para a seguinte. A Google recebe os dados técnicos contidos em qualquer pedido web, como o seu endereço IP e o tipo de navegador, e utiliza estes pings para estatísticas agregadas.",
+            "Outros países: a análise e os sinais publicitários estão ativados por predefinição. Você pode desativá-los com \"Recusar\"."
+          ] },
+          { "type": "p", "text": "O Google Tag Manager só carrega depois de você clicar em \"Aceitar\", independentemente do local onde se encontre." },
+          { "type": "p", "text": "O banner de cookies oferece duas opções. \"Aceitar\" permite os cookies e sinais de análise e publicitários e o Google Tag Manager. \"Recusar\" desativa os cookies e sinais de análise e publicitários; a tag passa então a enviar apenas os pings sem cookies descritos acima. A sua escolha é guardada no seu navegador (cookie e entrada de armazenamento local \"cookieConsent\", 12 meses) e você pode alterá-la a qualquer momento com o botão de cookies no fundo da página." }
+        ]
+      },
+      {
+        "Title": "O que são cookies?",
+        "Blocks": [
+          { "type": "p", "text": "Os cookies são pequenos ficheiros de texto armazenados no seu dispositivo (computador, tablet ou telemóvel) quando você visita um site. Permitem ao site reconhecer o seu dispositivo e guardar informações sobre as suas preferências ou ações anteriores." },
+          { "type": "p", "text": "Os cookies contêm normalmente:" },
+          { "type": "ul", "items": [
+            "O nome do servidor que colocou o cookie",
+            "Um identificador sob a forma de um número único",
+            "Uma data de expiração (alguns cookies duram apenas o tempo da sua sessão)"
+          ] }
+        ]
+      },
+      {
+        "Title": "Tipos de cookies que utilizamos",
+        "Blocks": [
+          { "type": "h3", "text": "1. Cookies essenciais" },
+          { "type": "p", "text": "Estes cookies são necessários para o bom funcionamento do site e não podem ser desativados." },
+          { "type": "box", "heading": "Finalidade:", "items": [
+            "Navegação no site e funcionalidades básicas",
+            "Segurança e autenticação",
+            "Preferências de idioma e de acessibilidade",
+            "Envio de formulários e gestão de sessões"
+          ] },
+          { "type": "h3", "text": "2. Cookies de análise" },
+          { "type": "p", "text": "Estes cookies ajudam-nos a compreender como os visitantes utilizam o nosso site (páginas vistas, duração da visita, fontes de tráfego). Os resultados são-nos comunicados de forma agregada." },
+          { "type": "box", "heading": "Finalidade:", "items": [
+            "Análise do tráfego do site",
+            "Monitorização do desempenho das páginas",
+            "Padrões de comportamento dos utilizadores",
+            "Otimização e melhoria do site"
+          ], "note": "Fornecedor: Google Analytics 4 (Google)" },
+          { "type": "h3", "text": "3. Cookies funcionais" },
+          { "type": "p", "text": "Estes cookies permitem funcionalidades avançadas e de personalização." },
+          { "type": "box", "heading": "Finalidade:", "items": [
+            "Memorizar as preferências de idioma e de tema",
+            "Guardar os dados e o progresso dos formulários",
+            "Personalizar o conteúdo e a disposição",
+            "Proporcionar uma experiência de utilização melhorada"
+          ] },
+          { "type": "h3", "text": "4. Sinais publicitários" },
+          { "type": "p", "text": "Os sinais publicitários da Google medem a eficácia da publicidade. Onde se aplicam por predefinição e onde precisam do seu consentimento é explicado em \"Como medimos as visitas\", acima." },
+          { "type": "box", "note": "Fornecedor: Google (sinais publicitários, Google Tag Manager)" }
+        ]
+      },
+      {
+        "Title": "Duração dos cookies",
+        "Blocks": [
+          { "type": "p", "text": "Os cookies são classificados por duração da seguinte forma:" },
+          { "type": "ul", "items": [
+            "Cookies de sessão: cookies temporários que são apagados quando você fecha o navegador",
+            "Cookies persistentes: permanecem no seu dispositivo durante um período definido ou até serem apagados manualmente"
+          ] },
+          { "type": "h3", "text": "Durações típicas dos cookies:" },
+          { "type": "ul", "items": [
+            "Cookies essenciais: duração da sessão ou até 1 ano",
+            "Cookies de análise: 2 anos no máximo",
+            "Cookies funcionais: 1 ano no máximo"
+          ] }
+        ]
+      },
+      {
+        "Title": "Gestão dos cookies",
+        "Blocks": [
+          { "type": "h3", "text": "Definições do navegador" },
+          { "type": "p", "text": "Você pode controlar os cookies através das definições do seu navegador. A maioria dos navegadores permite:" },
+          { "type": "ul", "items": [
+            "Ver e apagar cookies",
+            "Bloquear cookies de sites específicos",
+            "Bloquear cookies de terceiros",
+            "Apagar todos os cookies quando fecha o navegador"
+          ] },
+          { "type": "links", "heading": "Instruções para cada navegador:", "items": [
+            { "label": "Gerir cookies no Chrome", "href": "https://support.google.com/chrome/answer/95647" },
+            { "label": "Gerir cookies no Firefox", "href": "https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer" },
+            { "label": "Gerir cookies no Safari", "href": "https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac" },
+            { "label": "Gerir cookies no Edge", "href": "https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" }
+          ] },
+          { "type": "h3", "text": "Impacto da desativação dos cookies" },
+          { "type": "p", "text": "Tenha em conta que desativar certos cookies pode afetar a sua experiência no nosso site:" },
+          { "type": "ul", "items": [
+            "Cookies essenciais: o site pode não funcionar corretamente",
+            "Cookies de análise: não podemos melhorar o nosso site com base nos dados de utilização",
+            "Cookies funcionais: as funcionalidades de personalização ficarão desativadas"
+          ] }
+        ]
+      },
+      {
+        "Title": "Conservação dos dados",
+        "Blocks": [
+          { "type": "p", "text": "Conservamos os dados dos cookies durante o período limitado necessário para as finalidades descritas nesta política." }
+        ]
+      },
+      {
+        "Title": "Atualizações desta política",
+        "Blocks": [
+          { "type": "p", "text": "Podemos atualizar esta política de tempos a tempos para refletir alterações na tecnologia, na regulamentação ou nas nossas práticas. Quando o fizermos, iremos:" },
+          { "type": "ul", "items": [
+            "Atualizar esta página com a data de entrada em vigor mais recente",
+            "Notificar os utilizadores através do nosso site (em caso de alterações significativas)",
+            "Pedir novo consentimento quando a lei o exigir"
+          ] }
+        ]
+      },
+      {
+        "Title": "Contacto",
+        "Blocks": [
+          { "type": "p", "text": "Se tiver alguma dúvida sobre esta política, contacte-nos:" },
+          { "type": "box", "heading": "houle.ai (West Bay SA)", "lines": ["Chemin du Pré-Roset 19, 1294 Genthod, Suíça", "Email: contact@houle.ai"] }
+        ]
+      }
+    ]
+  }
+}

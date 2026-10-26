@@ -1,0 +1,303 @@
+{
+  "LastUpdated": "Dernière mise à jour : {date}",
+  "Privacy": {
+    "MetaTitle": "Politique de confidentialité - houle.ai",
+    "MetaDescription": "Politique de confidentialité et information sur la protection des données pour les services de houle.ai",
+    "Title": "Politique de confidentialité",
+    "Subtitle": "Protection des données et vie privée",
+    "Sections": [
+      {
+        "Title": "Introduction",
+        "Blocks": [
+          { "type": "p", "text": "Chez houle.ai (West Bay SA), nous nous engageons à protéger votre vie privée et vos données personnelles conformément à la loi fédérale sur la protection des données (LPD) et à la réglementation européenne applicable." },
+          { "type": "p", "text": "Cette politique de confidentialité explique comment nous collectons, utilisons et protégeons vos informations lorsque vous utilisez nos services d'IA intégrés aux outils Microsoft." }
+        ]
+      },
+      {
+        "Title": "Responsable du traitement",
+        "Blocks": [
+          { "type": "p", "text": "West Bay SA (exploitant houle.ai) est le responsable du traitement des données personnelles collectées et traitées dans le cadre de nos services d'IA." },
+          { "type": "box", "heading": "Coordonnées :", "lines": ["houle.ai (West Bay SA)", "E-mail : contact@houle.ai", "Adresse : Chemin du Pré-Roset 19, 1294 Genthod, Suisse"] }
+        ]
+      },
+      {
+        "Title": "Données que nous collectons",
+        "Blocks": [
+          { "type": "h3", "text": "Données liées au service :" },
+          { "type": "ul", "items": [
+            "Informations d'identification personnelle (nom, adresse e-mail)",
+            "Informations du compte Microsoft pour l'authentification",
+            "Contenu des documents traités par nos services d'IA",
+            "Habitudes d'utilisation et préférences pour les fonctions d'IA",
+            "Données techniques (adresse IP, type de navigateur, informations sur l'appareil)"
+          ] },
+          { "type": "h3", "text": "Données liées au site web :" },
+          { "type": "ul", "items": [
+            "Informations techniques (adresse IP, type de navigateur, informations sur l'appareil)",
+            "Données d'utilisation (pages consultées, temps passé, sources de provenance)",
+            "Cookies et technologies de suivi similaires",
+            "Messages envoyés via le formulaire de contact et échanges qui s'ensuivent",
+            "La manière dont vous avez trouvé notre site (première page consultée, domaine d'origine, paramètres de campagne et pages vues pendant la visite), transmise uniquement avec votre message"
+          ] }
+        ]
+      },
+      {
+        "Title": "Mesure d'audience et provenance des visiteurs",
+        "Blocks": [
+          { "type": "p", "text": "Nous mesurons l'utilisation de notre site avec Google Analytics 4 et Google Consent Mode. Ce qui est collecté dépend de votre région et de votre choix dans la bannière de cookies : en Suisse, la mesure d'audience est active sauf si vous la refusez ; dans l'UE, l'EEE et au Royaume-Uni, rien n'est enregistré avant votre accord. Les cookies utilisés et la manière de les refuser sont décrits dans notre politique de cookies." },
+          { "type": "p", "text": "Lorsque vous nous écrivez via notre formulaire de contact, nous ajoutons la façon dont vous êtes arrivé sur notre site : la première page consultée, le site d'origine (domaine uniquement), les paramètres de campagne (utm_source, utm_medium, utm_campaign, utm_term, utm_content), l'identifiant de clic Google Ads (gclid) s'il est présent, et jusqu'à 20 pages vues pendant la visite. Pour cette attribution, nous ne conservons jamais les adresses complètes ni les autres paramètres d'URL." },
+          { "type": "p", "text": "Ces informations restent dans la mémoire de votre navigateur pendant la visite (et, si vous avez accepté les cookies, dans le stockage de session, qui est vidé à la fermeture de l'onglet). Elles ne sont transmises qu'avec votre message, par l'intermédiaire de notre prestataire de formulaire Formspark, et conservées avec lui. Nous les utilisons, sur la base de notre intérêt légitime, pour comprendre quels canaux nous amènent des demandes." },
+          { "type": "p", "text": "Sauf si vous avez refusé la mesure d'audience, nous ajoutons également à un message que vous nous envoyez l'identifiant Google Analytics enregistré dans votre navigateur, afin de le relier à nos statistiques de visite. Un refus ne vous empêche pas de nous contacter." }
+        ]
+      },
+      {
+        "Title": "Bases légales du traitement",
+        "Blocks": [
+          { "type": "p", "text": "Nous traitons vos données personnelles sur les bases légales suivantes :" },
+          { "type": "ul", "items": [
+            "Exécution du contrat : pour fournir les services d'IA intégrés aux outils Microsoft",
+            "Respect des obligations légales : pour satisfaire aux exigences réglementaires et de déclaration en Suisse",
+            "Intérêts légitimes : pour l'exploitation de l'entreprise, la prévention de la fraude et l'amélioration du service",
+            "Consentement : pour les communications marketing et les cookies non essentiels (lorsque la loi l'exige)"
+          ] }
+        ]
+      },
+      {
+        "Title": "Comment nous utilisons vos données",
+        "Blocks": [
+          { "type": "h3", "text": "Fourniture du service :" },
+          { "type": "ul", "items": [
+            "Fournir une assistance par IA dans Outlook, Word et d'autres outils Microsoft",
+            "Traiter et analyser des documents pour les fonctions fondées sur l'IA",
+            "Maintenir et améliorer les modèles et les services d'IA",
+            "Communiquer au sujet de vos services et de votre compte"
+          ] },
+          { "type": "h3", "text": "Activités de l'entreprise :" },
+          { "type": "ul", "items": [
+            "Gestion de la relation client",
+            "Assurance qualité et amélioration du service",
+            "Gestion des risques et prévention de la fraude",
+            "Conformité légale et réglementaire"
+          ] }
+        ]
+      },
+      {
+        "Title": "Partage des données",
+        "Blocks": [
+          { "type": "p", "text": "Nous pouvons partager vos données personnelles avec :" },
+          { "type": "ul", "items": [
+            "Microsoft Corporation (pour l'authentification et les services d'intégration)",
+            "Les services cloud Azure (pour le traitement et le stockage sécurisés des données)",
+            "Des prestataires de services professionnels (support informatique, services de sécurité)",
+            "Les autorités suisses (lorsque la loi l'exige)"
+          ] },
+          { "type": "p", "text": "Nous ne vendons pas de données personnelles à des tiers. Tout partage s'effectue dans le cadre d'accords de confidentialité et de mesures de protection des données appropriés." }
+        ]
+      },
+      {
+        "Title": "Sécurité des données",
+        "Blocks": [
+          { "type": "p", "text": "Nous mettons en place des mesures de sécurité complètes, notamment :" },
+          { "type": "ul", "items": [
+            "Chiffrement des données en transit et au repos",
+            "Authentification multifacteur et contrôles d'accès",
+            "Évaluations et mises à jour de sécurité régulières",
+            "Formation du personnel à la protection des données",
+            "Procédures de sauvegarde et de reprise après sinistre sécurisées"
+          ] },
+          { "type": "h3", "text": "Durée de conservation :" },
+          { "type": "ul", "items": [
+            "Dossiers de service : pendant la durée de votre abonnement, plus les durées de conservation légales",
+            "Données du site web : le temps nécessaire pour atteindre les finalités indiquées",
+            "Données marketing : jusqu'au retrait du consentement ou tant que les données sont nécessaires"
+          ] }
+        ]
+      },
+      {
+        "Title": "Vos droits",
+        "Blocks": [
+          { "type": "p", "text": "En vertu du droit suisse de la protection des données, vous avez le droit de :" },
+          { "type": "rights", "items": [
+            { "label": "Accès :", "text": "demander des informations sur les données personnelles que nous détenons à votre sujet" },
+            { "label": "Rectification :", "text": "faire corriger des données personnelles inexactes ou incomplètes" },
+            { "label": "Effacement :", "text": "demander la suppression de vos données personnelles (sous réserve des obligations légales)" },
+            { "label": "Limitation :", "text": "restreindre le traitement dans certaines circonstances" },
+            { "label": "Portabilité des données :", "text": "recevoir vos données dans un format structuré et lisible par machine" },
+            { "label": "Opposition :", "text": "vous opposer à un traitement fondé sur des intérêts légitimes" },
+            { "label": "Retrait du consentement :", "text": "pour les traitements fondés sur le consentement" }
+          ] },
+          { "type": "p", "text": "Pour exercer ces droits, écrivez-nous à contact@houle.ai. Nous vous répondrons dans un délai de 30 jours." }
+        ]
+      },
+      {
+        "Title": "Transferts internationaux de données",
+        "Blocks": [
+          { "type": "p", "text": "Nous pouvons transférer des données personnelles hors de Suisse vers :" },
+          { "type": "ul", "items": [
+            "Des pays de l'UE/EEE offrant un niveau de protection des données adéquat",
+            "Des centres de données Microsoft Azure bénéficiant de garanties appropriées",
+            "Des pays tiers bénéficiant de garanties appropriées (clauses contractuelles types)"
+          ] },
+          { "type": "p", "text": "Tous les transferts internationaux sont assortis de garanties juridiques appropriées afin que vos données restent protégées selon les standards suisses." }
+        ]
+      },
+      {
+        "Title": "Modifications de cette politique",
+        "Blocks": [
+          { "type": "p", "text": "Nous pouvons mettre à jour cette politique de confidentialité pour tenir compte de l'évolution de nos pratiques, de nos services ou des exigences légales. Les modifications importantes vous seront communiquées par :" },
+          { "type": "ul", "items": [
+            "Un e-mail aux utilisateurs enregistrés",
+            "Un avis bien visible sur notre site web",
+            "Une communication directe lors de nos échanges liés au service"
+          ] },
+          { "type": "p", "text": "La politique mise à jour s'applique à partir de la date indiquée dans la version révisée." }
+        ]
+      },
+      {
+        "Title": "Nous contacter",
+        "Blocks": [
+          { "type": "p", "text": "Pour toute question sur cette politique de confidentialité ou pour exercer vos droits, vous pouvez nous contacter :" },
+          { "type": "box", "heading": "houle.ai (West Bay SA)", "lines": ["Chemin du Pré-Roset 19, 1294 Genthod, Suisse", "E-mail : contact@houle.ai"] }
+        ]
+      }
+    ]
+  },
+  "Cookies": {
+    "MetaTitle": "Politique de cookies - houle.ai",
+    "MetaDescription": "Informations sur notre utilisation des cookies et des technologies de suivi",
+    "Title": "Politique de cookies",
+    "Subtitle": "Informations sur notre utilisation des cookies et des technologies de suivi",
+    "Sections": [
+      {
+        "Title": "Introduction",
+        "Blocks": [
+          { "type": "p", "text": "Cette politique de cookies explique comment houle.ai (West Bay SA) utilise les cookies et les technologies de suivi similaires sur son site web. Elle indique ce qu'est un cookie, comment nous les utilisons et quels choix vous avez à leur sujet." },
+          { "type": "p", "text": "Selon l'endroit où vous vous trouvez, certaines de ces technologies sont actives par défaut et d'autres seulement avec votre consentement. La section ci-dessous explique ce qui s'applique à vous et comment refuser ou modifier votre choix." }
+        ]
+      },
+      {
+        "Title": "Comment nous mesurons les visites",
+        "Blocks": [
+          { "type": "p", "text": "Nous utilisons Google Analytics 4 (Google Ireland Limited et Google LLC) avec Google Consent Mode. La balise Google se charge à chaque visite. Ce qu'elle peut enregistrer dépend de l'endroit où vous vous trouvez, tel qu'estimé par Google à partir de votre adresse IP, et de votre choix dans la bannière de cookies. Comme dans toute configuration Google Analytics, chaque mesure comprend l'adresse de la page consultée, avec les paramètres de campagne tels que utm_source ou gclid lorsqu'ils figurent dans le lien que vous avez suivi." },
+          { "type": "ul", "items": [
+            "Suisse : les cookies de mesure d'audience (_ga, _ga_*) sont utilisés sauf si vous cliquez sur « Refuser ». Les signaux publicitaires (cookies publicitaires, données utilisateur pour la publicité et personnalisation des annonces) restent désactivés tant que vous ne cliquez pas sur « Accepter ».",
+            "Union européenne, EEE et Royaume-Uni : aucun cookie de mesure d'audience ou de publicité n'est déposé tant que vous ne cliquez pas sur « Accepter ». D'ici là, la balise envoie uniquement des signaux de mesure sans cookie (par exemple une page vue ou un formulaire envoyé), sans identifiant permettant de vous reconnaître d'une visite à l'autre. Google reçoit les données techniques contenues dans toute requête web, comme votre adresse IP et le type de navigateur, et utilise ces signaux pour des statistiques agrégées.",
+            "Autres pays : la mesure d'audience et les signaux publicitaires sont activés par défaut. Vous pouvez les désactiver avec « Refuser »."
+          ] },
+          { "type": "p", "text": "Google Tag Manager ne se charge qu'après un clic sur « Accepter », où que vous soyez." },
+          { "type": "p", "text": "La bannière de cookies propose deux choix. « Accepter » autorise les cookies et signaux de mesure d'audience et de publicité ainsi que Google Tag Manager. « Refuser » désactive les cookies et signaux de mesure d'audience et de publicité ; la balise n'envoie alors que les signaux sans cookie décrits ci-dessus. Votre choix est enregistré dans votre navigateur (cookie et entrée de stockage local « cookieConsent », 12 mois) et vous pouvez le modifier à tout moment avec le bouton cookies en bas de page." }
+        ]
+      },
+      {
+        "Title": "Qu'est-ce qu'un cookie ?",
+        "Blocks": [
+          { "type": "p", "text": "Les cookies sont de petits fichiers texte enregistrés sur votre appareil (ordinateur, tablette ou mobile) lorsque vous visitez un site web. Ils permettent au site de reconnaître votre appareil et de mémoriser des informations sur vos préférences ou vos actions passées." },
+          { "type": "p", "text": "Un cookie contient généralement :" },
+          { "type": "ul", "items": [
+            "Le nom du serveur qui a déposé le cookie",
+            "Un identifiant sous la forme d'un numéro unique",
+            "Une date d'expiration (certains cookies ne durent que le temps de votre session)"
+          ] }
+        ]
+      },
+      {
+        "Title": "Types de cookies que nous utilisons",
+        "Blocks": [
+          { "type": "h3", "text": "1. Cookies essentiels" },
+          { "type": "p", "text": "Ces cookies sont nécessaires au bon fonctionnement du site et ne peuvent pas être désactivés." },
+          { "type": "box", "heading": "Finalité :", "items": [
+            "Navigation sur le site et fonctionnalités de base",
+            "Sécurité et authentification",
+            "Préférences de langue et d'accessibilité",
+            "Envoi de formulaires et gestion de session"
+          ] },
+          { "type": "h3", "text": "2. Cookies de mesure d'audience" },
+          { "type": "p", "text": "Ces cookies nous aident à comprendre comment les visiteurs utilisent notre site (pages vues, durée des visites, sources de trafic). Les résultats nous sont communiqués sous forme agrégée." },
+          { "type": "box", "heading": "Finalité :", "items": [
+            "Analyse du trafic du site",
+            "Suivi des performances des pages",
+            "Comportements des utilisateurs",
+            "Optimisation et amélioration du site"
+          ], "note": "Fournisseur : Google Analytics 4 (Google)" },
+          { "type": "h3", "text": "3. Cookies fonctionnels" },
+          { "type": "p", "text": "Ces cookies activent des fonctionnalités avancées et de personnalisation." },
+          { "type": "box", "heading": "Finalité :", "items": [
+            "Mémoriser les préférences de langue et de thème",
+            "Enregistrer les données et l'avancement des formulaires",
+            "Personnaliser le contenu et la mise en page",
+            "Offrir une meilleure expérience utilisateur"
+          ] },
+          { "type": "h3", "text": "4. Signaux publicitaires" },
+          { "type": "p", "text": "Les signaux publicitaires de Google mesurent l'efficacité de la publicité. Les cas où ils s'appliquent par défaut et ceux où ils nécessitent votre consentement sont expliqués dans « Comment nous mesurons les visites » ci-dessus." },
+          { "type": "box", "note": "Fournisseur : Google (signaux publicitaires, Google Tag Manager)" }
+        ]
+      },
+      {
+        "Title": "Durée de vie des cookies",
+        "Blocks": [
+          { "type": "p", "text": "Les cookies se classent selon leur durée de la manière suivante :" },
+          { "type": "ul", "items": [
+            "Cookies de session : cookies temporaires supprimés à la fermeture de votre navigateur",
+            "Cookies persistants : restent sur votre appareil pendant une durée définie ou jusqu'à leur suppression manuelle"
+          ] },
+          { "type": "h3", "text": "Durées de vie habituelles :" },
+          { "type": "ul", "items": [
+            "Cookies essentiels : durée de la session ou jusqu'à 1 an",
+            "Cookies de mesure d'audience : 2 ans au maximum",
+            "Cookies fonctionnels : 1 an au maximum"
+          ] }
+        ]
+      },
+      {
+        "Title": "Gérer les cookies",
+        "Blocks": [
+          { "type": "h3", "text": "Paramètres du navigateur" },
+          { "type": "p", "text": "Vous pouvez contrôler les cookies dans les paramètres de votre navigateur. La plupart des navigateurs permettent de :" },
+          { "type": "ul", "items": [
+            "Consulter et supprimer les cookies",
+            "Bloquer les cookies de certains sites web",
+            "Bloquer les cookies tiers",
+            "Supprimer tous les cookies à la fermeture du navigateur"
+          ] },
+          { "type": "links", "heading": "Instructions par navigateur :", "items": [
+            { "label": "Gérer les cookies dans Chrome", "href": "https://support.google.com/chrome/answer/95647" },
+            { "label": "Gérer les cookies dans Firefox", "href": "https://support.mozilla.org/en-US/kb/cookies-information-websites-store-on-your-computer" },
+            { "label": "Gérer les cookies dans Safari", "href": "https://support.apple.com/guide/safari/manage-cookies-and-website-data-sfri11471/mac" },
+            { "label": "Gérer les cookies dans Edge", "href": "https://support.microsoft.com/en-us/microsoft-edge/delete-cookies-in-microsoft-edge-63947406-40ac-c3b8-57b9-2a946a29ae09" }
+          ] },
+          { "type": "h3", "text": "Conséquences de la désactivation des cookies" },
+          { "type": "p", "text": "Veuillez noter que la désactivation de certains cookies peut altérer votre expérience sur notre site :" },
+          { "type": "ul", "items": [
+            "Cookies essentiels : le site peut ne pas fonctionner correctement",
+            "Cookies de mesure d'audience : nous ne pouvons pas améliorer notre site à partir des données d'utilisation",
+            "Cookies fonctionnels : les fonctions de personnalisation seront désactivées"
+          ] }
+        ]
+      },
+      {
+        "Title": "Conservation des données",
+        "Blocks": [
+          { "type": "p", "text": "Nous conservons les données des cookies pendant la durée limitée nécessaire aux finalités décrites dans cette politique." }
+        ]
+      },
+      {
+        "Title": "Mises à jour de cette politique",
+        "Blocks": [
+          { "type": "p", "text": "Nous pouvons mettre à jour cette politique de temps à autre pour tenir compte de l'évolution des technologies, de la réglementation ou de nos pratiques. Dans ce cas, nous :" },
+          { "type": "ul", "items": [
+            "Mettrons à jour cette page avec la dernière date d'entrée en vigueur",
+            "Informerons les utilisateurs sur notre site web (pour les changements importants)",
+            "Demanderons un nouveau consentement lorsque la loi l'exige"
+          ] }
+        ]
+      },
+      {
+        "Title": "Contact",
+        "Blocks": [
+          { "type": "p", "text": "Pour toute question sur cette politique, vous pouvez nous contacter :" },
+          { "type": "box", "heading": "houle.ai (West Bay SA)", "lines": ["Chemin du Pré-Roset 19, 1294 Genthod, Suisse", "E-mail : contact@houle.ai"] }
+        ]
+      }
+    ]
+  }
+}

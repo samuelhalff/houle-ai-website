@@ -93,6 +93,13 @@ function validateTranslations() {
     { ns: "cookie", key: "Text" },
     { ns: "cookie", key: "Accept" },
     { ns: "cookie", key: "Decline" },
+
+    // Privacy and cookies policies (app/[locale]/legal/LegalDocument.tsx)
+    { ns: "legal", key: "LastUpdated" },
+    { ns: "legal", key: "Privacy.Title" },
+    { ns: "legal", key: "Privacy.Sections" },
+    { ns: "legal", key: "Cookies.Title" },
+    { ns: "legal", key: "Cookies.Sections" },
   ];
   
   for (const locale of LOCALES) {
@@ -108,6 +115,26 @@ function validateTranslations() {
     }
   }
   
+  // Legal documents are rendered from structured blocks: every locale must
+  // keep the English structure (same sections, block types and list lengths).
+  const shape = (value) => {
+    if (Array.isArray(value)) return value.map(shape);
+    if (value && typeof value === "object") {
+      return Object.fromEntries(
+        Object.keys(value)
+          .sort()
+          .map((k) => [k, k === "type" || k === "href" ? value[k] : shape(value[k])])
+      );
+    }
+    return typeof value;
+  };
+  const legalShape = JSON.stringify(shape(translations.en.legal));
+  for (const locale of LOCALES) {
+    if (translations[locale].legal && JSON.stringify(shape(translations[locale].legal)) !== legalShape) {
+      errors.push(`${locale}: legal.json structure differs from en/legal.json`);
+    }
+  }
+
   if (errors.length > 0) {
     console.error("❌ Translation validation failed:\n");
     errors.forEach(err => console.error(`  - ${err}`));

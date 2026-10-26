@@ -18,7 +18,7 @@ import { Button } from "@/src/components/ui/button";
 import { Checkbox } from "@/src/components/ui/checkbox";
 import { Textarea } from "@/src/components/ui/textarea";
 import { toast, Toaster } from "sonner";
-import { trackEvent } from "@/src/lib/analytics";
+import { getGaClientId, trackEvent } from "@/src/lib/analytics";
 import { currentPageUrl, getAttributionPayload } from "@/src/lib/attribution";
 import { flattenAttribution } from "@/src/lib/attribution-schema";
 import React from "react";
@@ -127,6 +127,7 @@ const ContactForm: FC<ContactFormProps> = ({
     setSending(true);
     
     try {
+      const gaClientId = getGaClientId();
       const response = await fetch(FORMSPARK_ACTION_URL, {
         method: "POST",
         headers: {
@@ -138,6 +139,7 @@ const ContactForm: FC<ContactFormProps> = ({
           ...data,
           pageUrl: currentPageUrl(),
           ...flattenAttribution(getAttributionPayload()),
+          ...(gaClientId ? { gaClientId } : {}),
         }),
       });
 

@@ -1,6 +1,6 @@
 "use client";
 
-import { readConsentChoice } from "@/src/lib/consent-mode";
+import { gaClientIdFromCookies, readConsentChoice } from "@/src/lib/consent-mode";
 
 /**
  * Safe GA4 event helper.
@@ -38,5 +38,18 @@ function mirrorToGtm(name: string, params?: AnalyticsParams) {
     layer.push({ event: name, ...params });
   } catch {
     // Analytics must never surface errors to users.
+  }
+}
+
+/**
+ * GA client id for lead submissions: sent whenever a _ga cookie exists and
+ * the visitor has not refused (see gaClientIdFromCookies).
+ */
+export function getGaClientId(): string | undefined {
+  try {
+    if (typeof document === "undefined") return undefined;
+    return gaClientIdFromCookies(document.cookie, readConsentChoice());
+  } catch {
+    return undefined;
   }
 }
