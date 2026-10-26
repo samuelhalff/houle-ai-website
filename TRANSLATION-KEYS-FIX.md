@@ -194,3 +194,7 @@ Added in all locales (`fr`, `en`, `de`, `es`, `pt`):
 | `<service>:Presentation.TypicalSituations.{Title,Disclaimer,SituationLabel,WhatWeDoLabel,Cases[].Situation,Cases[].WhatWeDo}` | Fictional typical situations block (`service-typical-situations.tsx`) on both service pages |
 
 Reworded: `Presentation.UseCases` / `Presentation.RealCases` titles, intros and summaries (typical scenarios, no client names or figures). Removed: `contact:Contact.Phone` (unused placeholder). Renamed (fr): `microsoft-consulting:IntegrationFlows.TeamsSharePointApprovals` → `TeamsSharePoint`.
+
+## Cookie banner translated, Consent Mode regional defaults (Oct 2026)
+
+The cookie banner now reads the `cookie` namespace (`app/layout.tsx`) instead of hard-coded English. Changed values in all locales (`fr`, `en`, `de`, `es`, `pt`): `cookie:Title`, `cookie:Text`, `cookie:Accept`, `cookie:Decline` (now "Refuse": it denies analytics and ad signals), `cookie:LearnMore` (links to the cookies policy). The contact form attribution notice (`attributionNotice`) is hard-coded per locale in `app/[locale]/contact/page.tsx`, like the other form labels.

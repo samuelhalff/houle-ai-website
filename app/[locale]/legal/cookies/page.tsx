@@ -1,6 +1,6 @@
 import { type Metadata } from "next";
 import { Separator } from "@/src/components/ui/separator";
-import { LEGAL_LAST_UPDATED } from "../constants";
+import { PRIVACY_LAST_UPDATED } from "../constants";
 
 export const metadata: Metadata = {
   title: "Cookies Policy - houle.ai",
@@ -32,7 +32,7 @@ export default async function CookiesPage(
           Information about our use of cookies and tracking technologies
         </p>
         <p className="text-xs text-muted-foreground/70">
-          Last updated: {formatDate(LEGAL_LAST_UPDATED, locale)}
+          Last updated: {formatDate(PRIVACY_LAST_UPDATED, locale)}
         </p>
         <Separator className="mt-8" />
       </div>
@@ -46,7 +46,34 @@ export default async function CookiesPage(
               This Cookies Policy explains how houle.ai (West Bay SA) uses cookies and similar tracking technologies on our website. It provides information about what cookies are, how we use them, and your choices regarding their use.
             </p>
             <p>
-              By using our website, you consent to the use of cookies in accordance with this policy and our Privacy Policy.
+              Depending on where you are, some of these technologies run by default and others only with your consent. The section below explains what applies to you and how to refuse or change your choice.
+            </p>
+          </div>
+        </section>
+
+        {/* How we measure visits (Consent Mode, regional defaults) */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold mb-4">How We Measure Visits</h2>
+          <div className="space-y-4">
+            <p>
+              We use Google Analytics 4 (Google Ireland Limited and Google LLC) with Google Consent Mode. The Google tag loads on every visit. What it may store depends on where you are, as estimated by Google from your IP address, and on your choice in the cookie banner.
+            </p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li>
+                Switzerland: analytics cookies (_ga, _ga_*) are used unless you click &quot;Refuse&quot;. Advertising signals (advertising cookies, ad user data and ad personalisation) stay off until you click &quot;Accept&quot;.
+              </li>
+              <li>
+                European Union, EEA and United Kingdom: no analytics or advertising cookies are set until you click &quot;Accept&quot;. Until then the tag only sends cookieless measurement pings (for example a page view or a form sent), without an identifier that recognises you from one visit to the next. Google receives the technical data contained in any web request, such as your IP address and browser type, and uses these pings for aggregated statistics.
+              </li>
+              <li>
+                Other countries: analytics and advertising signals are on by default. You can turn them off with &quot;Refuse&quot;.
+              </li>
+            </ul>
+            <p>
+              Google Tag Manager only loads after you click &quot;Accept&quot;, wherever you are.
+            </p>
+            <p>
+              The cookie banner offers two choices. &quot;Accept&quot; allows analytics and advertising cookies and signals and Google Tag Manager. &quot;Refuse&quot; turns off analytics and advertising cookies and signals; the tag then only sends the cookieless pings described above. Your choice is saved in your browser (cookie and local storage entry &quot;cookieConsent&quot;, 12 months) and you can change it at any time with the cookie button at the bottom of the page.
             </p>
           </div>
         </section>
@@ -92,7 +119,7 @@ export default async function CookiesPage(
             <div>
               <h3 className="text-lg font-semibold mb-3">2. Analytics Cookies</h3>
               <p className="mb-3">
-                These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously.
+                These cookies help us understand how visitors use our website (pages viewed, visit duration, traffic sources). The results are reported to us in aggregated form.
               </p>
               <div className="bg-muted/50 p-6 rounded-lg">
                 <p className="font-semibold mb-2">Purpose:</p>
@@ -103,7 +130,7 @@ export default async function CookiesPage(
                   <li>Website optimization and improvement</li>
                 </ul>
                 <p className="mt-2 text-sm">
-                  <strong>Providers: Analytics tools</strong>
+                  <strong>Provider: Google Analytics 4 (Google)</strong>
                 </p>
               </div>
             </div>
@@ -122,6 +149,19 @@ export default async function CookiesPage(
                   <li>Customizing content and layout</li>
                   <li>Providing enhanced user experience</li>
                 </ul>
+              </div>
+            </div>
+
+            {/* Advertising signals */}
+            <div>
+              <h3 className="text-lg font-semibold mb-3">4. Advertising Signals</h3>
+              <p className="mb-3">
+                Google advertising signals measure the effectiveness of advertising. Where they apply by default and where they need your consent is explained in &quot;How We Measure Visits&quot; above.
+              </p>
+              <div className="bg-muted/50 p-6 rounded-lg">
+                <p className="mt-2 text-sm">
+                  <strong>Provider: Google (advertising signals, Google Tag Manager)</strong>
+                </p>
               </div>
             </div>
           </div>

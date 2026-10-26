@@ -17,6 +17,7 @@
     "lint": "eslint .",
     "typecheck": "tsc -p tsconfig.json --noEmit --incremental false",
     "test": "npm run typecheck && npm run test:structured-data && npm run test:article-rotation && npm run test:ark-redirects && npm run test:consolidated && npm run test:article-refresh",
+    "test:unit": "node --test src/lib/consent-mode.test.ts src/lib/attribution.test.ts src/lib/attribution-schema.test.ts",
     "test:structured-data": "node --test scripts/structured-data.test.js",
     "test:article-rotation": "node --test scripts/lib/articleBacklog.test.js scripts/lib/topicScope.test.js",
     "test:ark-redirects": "node --test scripts/articles-redirected-to-ark.test.js",

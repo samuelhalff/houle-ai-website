@@ -19,6 +19,8 @@ import { Checkbox } from "@/src/components/ui/checkbox";
 import { Textarea } from "@/src/components/ui/textarea";
 import { toast, Toaster } from "sonner";
 import { trackEvent } from "@/src/lib/analytics";
+import { currentPageUrl, getAttributionPayload } from "@/src/lib/attribution";
+import { flattenAttribution } from "@/src/lib/attribution-schema";
 import React from "react";
 
 // We keep the types and defaults outside the component
@@ -71,6 +73,8 @@ interface ContactFormProps {
       consent: string;
       submit: string;
       sending: string;
+      /** One-line notice about the attribution sent with the message. */
+      attributionNotice?: string;
     };
     placeholders: {
       name: string;
@@ -129,7 +133,12 @@ const ContactForm: FC<ContactFormProps> = ({
           "Content-Type": "application/json",
           Accept: "application/json",
         },
-        body: JSON.stringify(data),
+        // First-party attribution: pathnames/origins only (lib/attribution).
+        body: JSON.stringify({
+          ...data,
+          pageUrl: currentPageUrl(),
+          ...flattenAttribution(getAttributionPayload()),
+        }),
       });
 
       if (!response.ok) {
@@ -318,6 +327,11 @@ const ContactForm: FC<ContactFormProps> = ({
                     </FormItem>
                   )}
                 />
+                {strings.labels.attributionNotice ? (
+                  <p className="text-xs text-muted-foreground">
+                    {strings.labels.attributionNotice}
+                  </p>
+                ) : null}
                 <Button
                   type="submit"
                   disabled={sending}

@@ -43,6 +43,8 @@ const copy = {
       consent: "I consent to being contacted by houle",
       submit: "Send",
       sending: "Sending...",
+      attributionNotice:
+        "With your message we also send how you found our site (referring site, campaign, pages viewed during this visit). Details in our privacy policy.",
     },
     placeholders: {
       name: "Your name",
@@ -86,6 +88,8 @@ const copy = {
       consent: "J’accepte d’être contacté par houle",
       submit: "Envoyer",
       sending: "Envoi...",
+      attributionNotice:
+        "Avec votre message, nous transmettons aussi la façon dont vous avez trouvé notre site (site d'origine, campagne, pages consultées pendant cette visite). Détails dans notre politique de confidentialité.",
     },
     placeholders: {
       name: "Votre nom",
@@ -130,6 +134,8 @@ const copy = {
       consent: "Ich stimme zu, von houle kontaktiert zu werden",
       submit: "Senden",
       sending: "Wird gesendet...",
+      attributionNotice:
+        "Mit Ihrer Nachricht übermitteln wir auch, wie Sie auf unsere Website gekommen sind (verweisende Website, Kampagne, während dieses Besuchs angesehene Seiten). Details in unserer Datenschutzerklärung.",
     },
     placeholders: {
       name: "Ihr Name",
@@ -174,6 +180,8 @@ const copy = {
       consent: "Acepto ser contactado por houle",
       submit: "Enviar",
       sending: "Enviando...",
+      attributionNotice:
+        "Junto con su mensaje enviamos también cómo llegó a nuestro sitio (sitio de origen, campaña, páginas vistas durante esta visita). Más detalles en nuestra política de privacidad.",
     },
     placeholders: {
       name: "Tu nombre",
@@ -218,6 +226,8 @@ const copy = {
       consent: "Concordo em ser contatado pela houle",
       submit: "Enviar",
       sending: "Enviando...",
+      attributionNotice:
+        "Junto com sua mensagem, enviamos também como você chegou ao nosso site (site de origem, campanha, páginas vistas durante esta visita). Detalhes na nossa política de privacidade.",
     },
     placeholders: {
       name: "Seu nome",

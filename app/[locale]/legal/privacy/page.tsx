@@ -1,6 +1,6 @@
 import { type Metadata } from "next";
 import { Separator } from "@/src/components/ui/separator";
-import { LEGAL_LAST_UPDATED } from "../constants";
+import { PRIVACY_LAST_UPDATED } from "../constants";
 
 export const metadata: Metadata = {
   title: "Privacy Policy - houle.ai",
@@ -32,7 +32,7 @@ export default async function PrivacyPage(
           Data Protection and Privacy Notice
         </p>
         <p className="text-xs text-muted-foreground/70">
-          Last updated: {formatDate(LEGAL_LAST_UPDATED, locale)}
+          Last updated: {formatDate(PRIVACY_LAST_UPDATED, locale)}
         </p>
         <Separator className="mt-8" />
       </div>
@@ -89,8 +89,25 @@ export default async function PrivacyPage(
                 <li>Usage data (pages visited, time spent, referral sources)</li>
                 <li>Cookies and similar tracking technologies</li>
                 <li>Contact form submissions and communications</li>
+                <li>How you found our website (first page visited, referring domain, campaign parameters and pages viewed during the visit), sent only with your message</li>
               </ul>
             </div>
+          </div>
+        </section>
+
+        {/* Web analytics and lead attribution */}
+        <section className="mb-12">
+          <h2 className="text-2xl font-semibold mb-4">Web Analytics and How You Found Us</h2>
+          <div className="space-y-4">
+            <p>
+              We measure the use of our website with Google Analytics 4 and Google Consent Mode. What is collected depends on your region and your choice in the cookie banner: in Switzerland analytics run unless you refuse, in the EU, the EEA and the UK nothing is stored before you accept. The cookies used and how to refuse are described in our cookies policy.
+            </p>
+            <p>
+              When you send a message through our contact form, we add how you reached our site: the first page you visited, the referring website (domain only), campaign parameters (utm_source, utm_medium, utm_campaign, utm_term, utm_content), the Google Ads click identifier (gclid) if present, and up to 20 pages viewed during the visit. We never record full addresses or other URL parameters.
+            </p>
+            <p>
+              This information stays in your browser&apos;s memory during the visit (and, if you accepted cookies, in session storage, which is cleared when you close the tab). It is only sent with your message, through our form provider Formspark, and kept with it. We use it, on the basis of our legitimate interest, to understand which channels bring us enquiries. Refusing cookies does not prevent you from contacting us.
+            </p>
           </div>
         </section>
 

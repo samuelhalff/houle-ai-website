@@ -1,7 +1,7 @@
 {
-  "Title": "Cookies",
-  "Text": "Usamos cookies para análisis y una mejor experiencia.",
-  "LearnMore": "Configuración de cookies",
+  "Title": "Cookies y medición",
+  "Text": "Usamos Google Analytics para medir las visitas. En Suiza la medición está activa salvo que la rechace. En la UE, el EEE y el Reino Unido no se guarda nada hasta que acepte. Al aceptar, también permite la medición publicitaria.",
+  "LearnMore": "Política de cookies",
   "Accept": "Aceptar",
   "Decline": "Rechazar",
   "Manage": "Gestionar cookies"

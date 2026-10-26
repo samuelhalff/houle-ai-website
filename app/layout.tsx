@@ -10,7 +10,12 @@ import { inter } from "./fonts";
 import { headers } from "next/headers";
 import ErrorBoundary from "@/src/components/ErrorBoundary";
 import ClientOnlyProviders from "@/src/components/ClientOnlyProviders";
-import { getCurrentLocale } from "@/src/lib/i18n";
+import { getCurrentLocale, getTranslations } from "@/src/lib/i18n";
+import AttributionTracker from "@/src/components/AttributionTracker";
+import {
+  buildConsentBootstrap,
+  isValidMeasurementId,
+} from "@/src/lib/consent-mode";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -68,28 +73,27 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  // ✅ read nonce and UA headers from the middleware
+  // ✅ read nonce from the middleware
   const hdrs = await headers();
   const nonce =
     process.env.NODE_ENV === "production"
       ? hdrs.get("x-nonce") || undefined
       : undefined;
-  const userAgent = hdrs.get("user-agent") || "";
-  const isIOS = /iPad|iPhone|iPod/.test(userAgent);
-  const isAndroid = /Android/.test(userAgent);
-  const gaId =
-    process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID ||
-    process.env.NEXT_PUBLIC_GA_ID ||
-    "G-H6EBEK7685";
+  const configuredGaId =
+    process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || process.env.NEXT_PUBLIC_GA_ID;
+  const gaId = isValidMeasurementId(configuredGaId)
+    ? configuredGaId
+    : "G-H6EBEK7685";
   const currentLocale = await getCurrentLocale();
 
+  const tCookie = await getTranslations(currentLocale, "cookie");
   const cookieLabels = {
-    Title: "Cookies",
-    Text: "We use cookies for analytics and a smoother experience.",
-    LearnMore: "Cookie settings",
-    Accept: "Accept",
-    Decline: "Decline",
-    Manage: "Manage cookies",
+    Title: tCookie("Title") as string,
+    Text: tCookie("Text") as string,
+    LearnMore: tCookie("LearnMore") as string,
+    Accept: tCookie("Accept") as string,
+    Decline: tCookie("Decline") as string,
+    Manage: tCookie("Manage") as string,
   } as const;
 
   const orgJsonLd = generateOrganizationStructuredData();
@@ -205,6 +209,12 @@ export default async function RootLayout({
       className={inter.variable}
     >
       <head>
+        {/* Consent Mode v2 bootstrap: regional defaults + stored choice, then
+            gtag.js. Must run before any other gtag call. */}
+        <script
+          nonce={nonce}
+          dangerouslySetInnerHTML={{ __html: buildConsentBootstrap(gaId) }}
+        />
         {nonce ? <meta name="csp-nonce" content={nonce} /> : null}
         <meta httpEquiv="Accept-CH" content="Sec-CH-Prefers-Color-Scheme" />
       </head>
@@ -257,10 +267,10 @@ export default async function RootLayout({
             <div className="pt-6 text-foreground bg-gradient-to-b from-background via-background to-background/60 min-h-screen">
               {children}
 
+              <AttributionTracker />
               <ClientOnlyProviders
                 nonce={nonce}
                 locale={currentLocale}
-                gaId={gaId}
                 gtmId="GTM-P6QT792D"
                 cookieLabels={cookieLabels}
               />

@@ -16,13 +16,11 @@ type CookieLabels = {
 export default function ClientOnlyProviders({
   nonce,
   locale,
-  gaId,
   gtmId,
   cookieLabels,
 }: {
   nonce?: string;
   locale?: string;
-  gaId: string;
   gtmId: string;
   cookieLabels: CookieLabels;
 }) {
@@ -34,7 +32,7 @@ export default function ClientOnlyProviders({
   return (
     <>
       <CookieConsent nonce={nonce} locale={locale} labels={cookieLabels} />
-      <ConsentAnalytics gaId={gaId} gtmId={gtmId} nonce={nonce} />
+      <ConsentAnalytics gtmId={gtmId} nonce={nonce} />
     </>
   );
 }

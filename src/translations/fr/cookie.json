@@ -1,7 +1,7 @@
 {
-  "Title": "Cookies",
-  "Text": "Nous utilisons des cookies pour l'analyse et une meilleure expérience.",
-  "LearnMore": "Paramètres des cookies",
+  "Title": "Cookies et mesure d'audience",
+  "Text": "Nous utilisons Google Analytics pour mesurer les visites. En Suisse, la mesure est active sauf si vous la refusez. Dans l'UE, l'EEE et au Royaume-Uni, rien n'est enregistré avant votre accord. En acceptant, vous autorisez aussi la mesure publicitaire.",
+  "LearnMore": "Politique cookies",
   "Accept": "Accepter",
   "Decline": "Refuser",
   "Manage": "Gérer les cookies"

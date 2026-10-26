@@ -1,8 +1,8 @@
 {
-  "Title": "Cookies",
-  "Text": "We use cookies for analytics and a smoother experience.",
-  "LearnMore": "Cookie settings",
+  "Title": "Cookies and measurement",
+  "Text": "We use Google Analytics to measure visits. In Switzerland it runs unless you refuse. In the EU, the EEA and the UK nothing is stored until you accept. Accepting also allows advertising measurement.",
+  "LearnMore": "Cookie policy",
   "Accept": "Accept",
-  "Decline": "Decline",
+  "Decline": "Refuse",
   "Manage": "Manage cookies"
 }
