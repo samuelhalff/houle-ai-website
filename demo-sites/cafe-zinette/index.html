@@ -7,17 +7,17 @@
 <meta name="description" content="Ancienne auberge de la place du Grand-Lancy, le Café Zinette sert une carte courte qui change souvent. Du lundi midi au vendredi soir. Réservation : 022 743 12 00.">
 <!-- Maquette non publiée : retirer cette ligne à la mise en ligne -->
 <meta name="robots" content="noindex">
-<meta name="theme-color" content="#efeeea" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#141716" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7efe2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#1d140f" media="(prefers-color-scheme: dark)">
 <meta property="og:title" content="Café Zinette – bistrot au Grand-Lancy">
 <meta property="og:description" content="Ancienne auberge de la place du Grand-Lancy. Carte courte qui change souvent. Réservation : 022 743 12 00.">
-<meta property="og:image" content="img/facade.webp">
+<meta property="og:image" content="img/salle.webp">
 <meta property="og:locale" content="fr_CH">
 <link rel="icon" href="img/zinette-logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Young+Serif&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="img/facade.webp">
+<link rel="preload" as="image" href="img/salle.webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -26,7 +26,7 @@
   "url": "https://www.cafezinette.ch/",
   "telephone": "+41 22 743 12 00",
   "email": "info@cafezinette.ch",
-  "image": "img/facade.webp",
+  "image": "img/salle.webp",
   "logo": "img/zinette-logo.png",
   "address": {
     "@type": "PostalAddress",
@@ -48,28 +48,31 @@
   DIRECTION (fresh-web-design)
   Artefacts de la maison : l'ardoise de la salle, les bons de commande aimantés au passe, le losange ◊
   qui ponctue leur carte, le « 19.- » suisse, l'auberge du XIXe et ses boiseries.
-  Couleurs : papier de bon de commande (fond), ardoise (surface de la carte), encre (texte),
-  laiton des lampes de la salle (losange, liens), craie (texte sur ardoise).
+  Couleurs : papier chaud (fond), ardoise brun-noir (carte), encre brune, rouge brique du mur de la salle
+  (boutons, liens), laiton des bougies (losange sur l'ardoise), craie crème.
+  Exception assumée au « crème + terracotta » : le rouge vient du mur de briques de leur salle, demandé chaud par Sam.
   Typo : Young Serif (enseigne de bistrot, chiffres pleins pour les prix) + Alegreya Sans (texte, vraies italiques).
   Mise en page : bord gauche fort, la carte en pleine largeur sur ardoise, l'histoire en vraie chronologie.
   Détail signature : le ◊ de leur carte et les « / » des intitulés en laiton ; le numéro de réservation
   en très grand, comme sur l'ancien site.
-  Photo : leurs propres photos noir et blanc ; une seule en couleur (la salle le soir) pour la lumière.
+  Photo : la salle aux bougies (couleur) en ouverture ; leurs photos noir et blanc virées sépia chaud.
   Mouvement : aucun.
 -->
 <style>
 :root{
-  --paper:#efeeea; --ink:#1d211f; --muted:#4b514d; --line:#cfcdc6;
-  --brass:#865710; --slate:#232826; --chalk:#ebe9e2; --chalk-muted:#b9bcb5; --brass-chalk:#d9a54f;
-  --ribbon-bg:#1d211f; --ribbon-ink:#efeeea;
+  --paper:#f7efe2; --ink:#2b1c13; --muted:#5e4838; --line:#e2d2bb;
+  --brass:#9c3a22; --accent:#a3361f; --on-accent:#fff7ec;
+  --slate:#2e2119; --chalk:#f5ead8; --chalk-muted:#d6c6ad; --brass-chalk:#e8b25e; --rule:#57443a;
+  --ribbon-bg:#2b1c13; --ribbon-ink:#f7efe2;
   --measure:62ch;
   --fs-0:1.0625rem; --fs-1:1.25rem; --fs-2:1.6rem; --fs-3:clamp(2rem,6.2vw,3.6rem); --fs-4:clamp(2.6rem,11vw,6.5rem);
 }
 @media (prefers-color-scheme:dark){
   :root{
-    --paper:#141716; --ink:#e7e5de; --muted:#a8aca6; --line:#2e3431;
-    --brass:#d9a54f; --slate:#1e2422; --chalk:#ebe9e2; --chalk-muted:#b2b6af; --brass-chalk:#e0b062;
-    --ribbon-bg:#e7e5de; --ribbon-ink:#141716;
+    --paper:#1d140f; --ink:#f3e7d3; --muted:#cbb79b; --line:#3d2c21;
+    --brass:#ef8f6f; --accent:#e5785a; --on-accent:#1d140f;
+    --slate:#2a1d15; --chalk:#f5ead8; --chalk-muted:#d2c1a7; --brass-chalk:#ebb866; --rule:#5a4536;
+    --ribbon-bg:#f3e7d3; --ribbon-ink:#1d140f;
   }
 }
 *{box-sizing:border-box}
@@ -82,8 +85,8 @@ p{margin:0 0 1em;max-width:var(--measure)}
 .wrap{max-width:74rem;margin:0 auto;padding:0 1.25rem}
 @media (min-width:56rem){.wrap{padding:0 2.5rem}}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.mark{display:block;object-fit:contain;filter:brightness(0)}
-@media (prefers-color-scheme:dark){.mark{filter:none;opacity:.92}}
+.mark{display:block;object-fit:contain;filter:brightness(0);opacity:.85}
+@media (prefers-color-scheme:dark){.mark{filter:sepia(.35);opacity:.95}}
 .loz{color:var(--brass);font-family:"Young Serif",serif}
 :focus-visible{outline:2px solid var(--brass);outline-offset:3px}
 
@@ -95,8 +98,8 @@ p{margin:0 0 1em;max-width:var(--measure)}
 .top nav::-webkit-scrollbar{display:none}
 .top nav a{text-decoration:none;white-space:nowrap;padding:.3rem 0}
 .top nav a:hover{color:var(--brass)}
-.call{flex:none;text-decoration:none;font-weight:700;color:var(--paper);background:var(--ink);padding:.45rem .8rem;border-radius:2px;white-space:nowrap}
-.call:hover{background:var(--brass)}
+.call{flex:none;text-decoration:none;font-weight:700;color:var(--on-accent);background:var(--accent);padding:.45rem .8rem;border-radius:2px;white-space:nowrap}
+.call:hover{background:var(--ink);color:var(--paper)}
 .call .long{display:none}
 @media (min-width:40rem){.call .long{display:inline}.call .short{display:none}}
 @media (max-width:37.5rem){.top nav{visibility:hidden}}
@@ -104,14 +107,14 @@ p{margin:0 0 1em;max-width:var(--measure)}
 /* Ouverture */
 .hero{display:grid;gap:0}
 .hero figure{margin:0}
-.hero img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 40%}
+.hero img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:62% 50%}
 .hero-text{padding:2rem 1.25rem 2.75rem}
 .hero .mark{width:7.5rem;height:9.5rem;color:var(--ink);margin:0 0 1.25rem -.4rem}
 .hero h1{font-size:var(--fs-3);max-width:13ch;letter-spacing:-.01em}
 .hero .lede{font-size:var(--fs-1);margin:1.1rem 0 1.75rem;color:var(--muted)}
 .actions{display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;align-items:center}
-.btn{display:inline-block;text-decoration:none;font-weight:700;background:var(--ink);color:var(--paper);padding:.8rem 1.1rem;border-radius:2px}
-.btn:hover{background:var(--brass)}
+.btn{display:inline-block;text-decoration:none;font-weight:700;background:var(--accent);color:var(--on-accent);padding:.8rem 1.1rem;border-radius:2px}
+.btn:hover{background:var(--ink);color:var(--paper)}
 .textlink{font-weight:500;text-decoration-color:var(--brass);text-underline-offset:.25em;text-decoration-thickness:2px}
 @media (min-width:56rem){
   .hero{grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:stretch;min-height:min(42rem,calc(100vh - 3.75rem))}
@@ -123,22 +126,22 @@ p{margin:0 0 1em;max-width:var(--measure)}
 
 /* La carte, sur ardoise */
 .carte{background:var(--slate);color:var(--chalk)}
-.carte .board{height:9rem;width:100%;object-fit:cover;object-position:0 30%;opacity:.85}
+.carte .board{height:9rem;width:100%;object-fit:cover;object-position:0 30%}
 .carte .wrap{padding-top:3rem;padding-bottom:3.5rem}
 .carte h2{font-size:var(--fs-3)}
 .carte .intro{color:var(--chalk-muted);font-size:var(--fs-1);margin:1rem 0 2.5rem}
 .carte .loz{color:var(--brass-chalk)}
 .courses{display:grid;gap:2.5rem}
 @media (min-width:56rem){.courses{grid-template-columns:repeat(3,minmax(0,1fr));gap:3rem}}
-.courses h3{font-size:var(--fs-2);border-bottom:1px solid #4a514d;padding-bottom:.5rem;margin-bottom:.4rem}
+.courses h3{font-size:var(--fs-2);border-bottom:1px solid var(--rule);padding-bottom:.5rem;margin-bottom:.4rem}
 .courses ul{list-style:none;margin:0;padding:0}
-.courses li{display:grid;grid-template-columns:1.1rem 1fr auto;gap:.5rem;padding:.75rem 0;border-bottom:1px dotted #4a514d;align-items:baseline}
+.courses li{display:grid;grid-template-columns:1.1rem 1fr auto;gap:.5rem;padding:.75rem 0;border-bottom:1px dotted var(--rule);align-items:baseline}
 .courses li .loz{font-size:.9rem}
 .dish .sl{color:var(--brass-chalk);padding:0 .15em}
 .price{font-family:"Young Serif",serif;font-size:1.05rem;white-space:nowrap}
 .carte-foot{margin-top:2.25rem;display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:baseline;color:var(--chalk-muted);font-size:.98rem}
 .carte-foot a{color:var(--chalk);font-weight:700;text-decoration-color:var(--brass-chalk);text-underline-offset:.25em;text-decoration-thickness:2px}
-.cave{margin-top:3rem;padding-top:2rem;border-top:1px solid #4a514d;display:grid;gap:1rem}
+.cave{margin-top:3rem;padding-top:2rem;border-top:1px solid var(--rule);display:grid;gap:1rem}
 .cave h3{font-size:var(--fs-2)}
 .cave p{color:var(--chalk-muted)}
 @media (min-width:56rem){.cave{grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:3rem}}
@@ -194,7 +197,7 @@ p{margin:0 0 1em;max-width:var(--measure)}
 .bigtel{display:inline-block;font-family:"Young Serif",serif;font-size:var(--fs-4);line-height:1;text-decoration:none;color:var(--chalk);letter-spacing:-.02em;margin:.4rem 0 .6rem;white-space:nowrap}
 .bigtel:hover{color:var(--brass-chalk)}
 .infos .intl{color:var(--chalk-muted)}
-.facts{display:grid;gap:1.75rem;margin-top:2.75rem;padding-top:2rem;border-top:1px solid #4a514d}
+.facts{display:grid;gap:1.75rem;margin-top:2.75rem;padding-top:2rem;border-top:1px solid var(--rule)}
 .facts h3{font-size:1.3rem;margin-bottom:.5rem}
 .facts p{color:var(--chalk-muted);margin:0 0 .35rem}
 .facts a{color:var(--chalk);text-decoration-color:var(--brass-chalk);text-underline-offset:.25em;text-decoration-thickness:2px}
@@ -229,7 +232,7 @@ p{margin:0 0 1em;max-width:var(--measure)}
 <main>
   <section class="hero">
     <figure>
-      <img src="img/facade.webp" width="1280" height="853" alt="La façade du Café Zinette et son enseigne, derrière les bambous de la terrasse" fetchpriority="high">
+      <img src="img/salle.webp" width="1280" height="851" alt="La salle du Café Zinette le soir, bougies allumées devant le mur de briques" fetchpriority="high">
     </figure>
     <div class="hero-text">
       <img class="mark" src="img/zinette-logo.png" width="200" height="254" alt="">
@@ -320,7 +323,7 @@ p{margin:0 0 1em;max-width:var(--measure)}
         </div>
         <div class="gallery">
           <figure class="wide">
-            <img src="img/salle.webp" width="1200" height="798" alt="La salle le soir, bougies allumées, mur de briques et arcades" loading="lazy">
+            <img src="img/facade.webp" width="1280" height="853" alt="La façade de l’ancienne auberge et son enseigne, derrière les bambous de la terrasse" loading="lazy">
           </figure>
           <figure>
             <img src="img/terrasse.webp" width="1000" height="666" alt="La terrasse couverte, tables dressées" loading="lazy">

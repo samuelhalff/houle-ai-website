@@ -9,19 +9,19 @@
         "Title": "So funktioniert ein KI-Agent",
         "Description": "Vier Schritte, vom Eingangssignal bis zur menschlichen Freigabe.",
         "Perceive": {
-            "Title": "1. Wahrnehmen",
+            "Title": "Wahrnehmen",
             "Description": "Der Agent erhält eine Eingabe – eine E-Mail, ein PDF-Dokument, eine Zeile in einer Tabelle, eine Anfrage im Chat – und extrahiert daraus die relevanten Informationen dank Sprachverständnis und Dokumentenlesung."
         },
         "Reason": {
-            "Title": "2. Überlegen und planen",
+            "Title": "Überlegen und planen",
             "Description": "Er zerlegt das Ziel in Schritte, entscheidet über die Reihenfolge der Aktionen und wählt die erforderlichen Daten und Werkzeuge aus. Er stützt sich auf Ihre Geschäftsregeln und Ihre internen Quellen, um in Ihrem Kontext verankert zu bleiben."
         },
         "Act": {
-            "Title": "3. Über Werkzeuge handeln",
+            "Title": "Über Werkzeuge handeln",
             "Description": "Der Agent führt die Aktionen aus, indem er angebundene Werkzeuge aufruft: in SharePoint suchen, in Ihr ERP schreiben, ein Word-Dokument erstellen, einen E-Mail-Entwurf versenden. Er erfindet nichts: Er nutzt Ihre realen Systeme."
         },
         "Review": {
-            "Title": "4. Menschliche Freigabe",
+            "Title": "Menschliche Freigabe",
             "Description": "Vor jeder Aktion mit realer Wirkung prüft und bestätigt ein Mitarbeitender. Der Agent schlägt vor, der Mensch entscheidet. Sie behalten die Kontrolle, die Nachvollziehbarkeit und die letzte Verantwortung."
         }
     },

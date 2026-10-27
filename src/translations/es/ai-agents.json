@@ -9,19 +9,19 @@
         "Title": "Cómo funciona un agente de IA",
         "Description": "Cuatro etapas, desde la señal de entrada hasta la validación humana.",
         "Perceive": {
-            "Title": "1. Percibir",
+            "Title": "Percibir",
             "Description": "El agente recibe una entrada — un correo, un documento PDF, una fila de una tabla, una solicitud en un chat — y extrae la información relevante gracias a la comprensión del lenguaje y a la lectura de documentos."
         },
         "Reason": {
-            "Title": "2. Razonar y planificar",
+            "Title": "Razonar y planificar",
             "Description": "Descompone el objetivo en pasos, decide el orden de las acciones y selecciona los datos y las herramientas necesarias. Se apoya en sus reglas de negocio y en sus fuentes internas para mantenerse anclado en su contexto."
         },
         "Act": {
-            "Title": "3. Actuar mediante herramientas",
+            "Title": "Actuar mediante herramientas",
             "Description": "El agente ejecuta las acciones invocando herramientas conectadas: buscar en SharePoint, escribir en su ERP, generar un documento Word, redactar un borrador de correo. No inventa nada: utiliza sus sistemas reales."
         },
         "Review": {
-            "Title": "4. Validación humana",
+            "Title": "Validación humana",
             "Description": "Antes de cualquier acción con efecto real, un empleado revisa y valida. El agente propone, la persona decide. Usted conserva el control, la trazabilidad y la responsabilidad final."
         }
     },

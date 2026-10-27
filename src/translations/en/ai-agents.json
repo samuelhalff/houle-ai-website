@@ -9,19 +9,19 @@
         "Title": "How an AI agent works",
         "Description": "Four steps, from the input signal through to human validation.",
         "Perceive": {
-            "Title": "1. Perceive",
+            "Title": "Perceive",
             "Description": "The agent receives an input — an email, a PDF document, a row in a spreadsheet, a request in a chat — and extracts the relevant information from it through language understanding and document reading."
         },
         "Reason": {
-            "Title": "2. Reason and plan",
+            "Title": "Reason and plan",
             "Description": "It breaks the goal down into steps, decides the order of actions and selects the data and tools required. It draws on your business rules and internal sources to stay grounded in your context."
         },
         "Act": {
-            "Title": "3. Act through tools",
+            "Title": "Act through tools",
             "Description": "The agent carries out actions by calling connected tools: searching SharePoint, writing to your ERP, generating a Word document, drafting an email. It invents nothing: it works through your actual systems."
         },
         "Review": {
-            "Title": "4. Human validation",
+            "Title": "Human validation",
             "Description": "Before any action with a real-world effect, a member of your team reviews and approves it. The agent proposes, the human decides. You retain control, traceability and ultimate responsibility."
         }
     },
