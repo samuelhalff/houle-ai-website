@@ -1,6 +1,5 @@
 {
   "queue": [
-    "politique-usage-ia-clauses-gouvernance",
     "evaluer-qualite-assistants-ia-tests-scoring-regression",
     "automatisation-processus-rh-finance-conformite-power-automate",
     "outlook-add-in-automatiser-tri-securite-suivi-mails",
@@ -15,8 +14,11 @@
     "cout-agent-ia-pme-suisse"
   ],
   "done": [],
-  "failed": [],
-  "attempts": {
-    "politique-usage-ia-clauses-gouvernance": 1
-  }
+  "failed": [
+    {
+      "slug": "politique-usage-ia-clauses-gouvernance",
+      "date": "2026-10-27",
+      "reason": "refresh: [refresh] politique-usage-ia-clauses-gouvernance: research"
+    }
+  ]
 }
