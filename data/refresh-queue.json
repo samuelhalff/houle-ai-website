@@ -15,5 +15,8 @@
     "cout-agent-ia-pme-suisse"
   ],
   "done": [],
-  "failed": []
+  "failed": [],
+  "attempts": {
+    "politique-usage-ia-clauses-gouvernance": 1
+  }
 }
