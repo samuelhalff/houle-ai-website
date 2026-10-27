@@ -1,0 +1,123 @@
+{
+  "Name": "Website mit Chat-Pflege",
+  "Hero": {
+    "Badge": "Website für KMU",
+    "Title": "Eine Website, die Sie selbst ändern, einfach per Chat",
+    "Description": "Wir erstellen Ihre neue Website. Danach ändern Sie Texte, Farben und Fotos, indem Sie ChatGPT oder Claude auf dem Handy schreiben, in Ihren eigenen Worten. Jede Änderung wird geprüft, bevor sie online geht."
+  },
+  "Answer": "Das ist eine schlüsselfertige Website für KMU, Geschäfte, Restaurants, Selbständige und Praxen. Wir gestalten und bauen sie, hosten sie in der Schweiz und richten einen KI-Assistenten ein, der ihre Regeln kennt. Wenn Sie etwas ändern möchten, sagen Sie es dem Assistenten so, wie Sie es einer Kollegin sagen würden. Er schlägt vor, wie es geht, wartet auf Ihr Okay und veröffentlicht erst dann. Kein Wix oder WordPress zu lernen und keine Agenturrechnung für jede kleine Anpassung.",
+  "How": {
+    "Eyebrow": "So funktioniert es",
+    "Title": "Von Ihrer Anfrage zur Website online",
+    "Description": "Vier Schritte, und Sie sind nur beim ersten und beim letzten dabei.",
+    "Ask": {
+      "Title": "1. Sie fragen",
+      "Description": "Sie schreiben, was Sie möchten, in Ihren Worten: „Ändere die Öffnungszeiten“, „Setz dieses Foto auf die Startseite“, „Mach die Speisekarte besser lesbar“."
+    },
+    "Clarify": {
+      "Title": "2. Der Assistent fragt nach",
+      "Description": "Er formuliert Ihre Anfrage neu, um sicher zu sein, dass er sie verstanden hat, stellt bei Unklarheiten eine Frage nach der anderen und schlägt zwei bis vier Varianten vor, mit einer Empfehlung."
+    },
+    "Check": {
+      "Title": "3. Automatische Prüfungen",
+      "Description": "Vor jeder Veröffentlichung durchläuft die Änderung automatische Prüfungen: Codequalität, Tests, Titellängen, defekte Links und Mindestinhalt auf jeder Seite."
+    },
+    "Publish": {
+      "Title": "4. Sie entscheiden",
+      "Description": "Der Assistent fragt immer: „Soll ich veröffentlichen?“ Erst Ihr Ja bringt die Änderung online, und wenn eine Prüfung fehlschlägt, wird nichts veröffentlicht."
+    }
+  },
+  "Assistant": {
+    "Title": "Ein Assistent, der die Regeln Ihrer Website kennt",
+    "Description": "Wir richten den Assistenten mit den Regeln Ihrer Website ein, bevor wir ihn Ihnen übergeben. Er arbeitet für Sie, aber er macht nicht einfach irgendetwas.",
+    "Design": {
+      "Title": "Er schützt das Design",
+      "Description": "Farben, Schriften und Layout bleiben von Seite zu Seite einheitlich. Eine Farbänderung gilt überall, wo sie hingehört, nicht nur in einer Ecke der Website."
+    },
+    "Readability": {
+      "Title": "Er hält die Website lesbar",
+      "Description": "Text bleibt auf jedem Hintergrund lesbar, im hellen wie im dunklen Modus, auf dem Handy wie am Computer."
+    },
+    "Seo": {
+      "Title": "Er achtet auf Ihre Sichtbarkeit bei Google",
+      "Description": "Seitenadressen bleiben gleich, Titel behalten eine sinnvolle Länge und jede Seite behält genug Inhalt, um gefunden zu werden."
+    },
+    "Limits": {
+      "Title": "Er weiss, wann Schluss ist",
+      "Description": "Alles, was über Texte, Farben und Fotos hinausgeht, etwa eine neue Seite, ein Formular oder eine andere Struktur, gibt er an uns weiter, statt zu improvisieren."
+    }
+  },
+  "Included": {
+    "Title": "Was Ihre Website mitbringt",
+    "Description": "Eine einfache, schnelle Website auf solider Grundlage, die Ihnen gehört.",
+    "Fast": {
+      "Title": "Statisch und schnell",
+      "Description": "Die Seiten werden im Voraus erstellt und laden schnell, auch bei schwacher mobiler Verbindung."
+    },
+    "Swiss": {
+      "Title": "In der Schweiz gehostet",
+      "Description": "Schweizer Hosting, HTTPS und Backups inklusive."
+    },
+    "Languages": {
+      "Title": "Zweisprachig, wenn nötig",
+      "Description": "Französisch, Deutsch, Englisch oder eine andere Sprache, mit einer echten Version jeder Seite statt eines automatischen Übersetzungsknopfs."
+    },
+    "Seo": {
+      "Title": "Bereit für Suchmaschinen",
+      "Description": "Klare Titel und Beschreibungen, strukturierte Daten und eine Sitemap, von Anfang an eingerichtet."
+    },
+    "Ownership": {
+      "Title": "Ihr Eigentum",
+      "Description": "Die Website und ihr Code gehören Ihnen. Wenn Sie eines Tages wechseln möchten, nehmen Sie alles mit."
+    }
+  },
+  "Audience": {
+    "Title": "Für wen?",
+    "Description": "Für KMU, Geschäfte, Restaurants, Selbständige und Praxen in der Westschweiz, deren Website in die Jahre gekommen ist, die weder Wix noch WordPress lernen wollen und nicht für jede Änderung eine Agentur bezahlen möchten."
+  },
+  "Pricing": {
+    "Title": "Preise",
+    "Description": "Zwei einfache Beträge, in Schweizer Franken, exkl. MWST.",
+    "Setup": {
+      "Name": "Einrichtung",
+      "Price": "ab CHF 1'900",
+      "Includes": "Individuelles Design, bis zu 5 Seiten in einer Sprache, technisches SEO, eingerichtetes Hosting, ein auf Ihre Website abgestimmter Assistent und eine Stunde Einführung.",
+      "Extra": "Jede weitere Sprache: CHF 400."
+    },
+    "Hosting": {
+      "Name": "Hosting und Support",
+      "Price": "CHF 49 pro Monat",
+      "Includes": "Schweizer Hosting, SSL-Zertifikat, Backups, automatische Prüfungen vor jeder Veröffentlichung, Updates und bis zu 30 Minuten Hilfe von uns pro Monat."
+    },
+    "Subscription": "Ihr ChatGPT- oder Claude-Abo ist separat: Sie bezahlen es direkt beim Anbieter."
+  },
+  "Faq": {
+    "Title": "Häufige Fragen",
+    "Q1": {
+      "Question": "Brauche ich technische Kenntnisse?",
+      "Answer": "Nein. Sie schreiben dem Assistenten wie eine Nachricht an eine Person. Er fragt nach, wenn ihm Details fehlen, und zeigt Ihnen die Varianten, bevor er etwas ändert."
+    },
+    "Q2": {
+      "Question": "Was, wenn ich etwas verlange, das die Website kaputt machen könnte?",
+      "Answer": "Der Assistent ist so eingerichtet, dass er Design, Lesbarkeit und SEO schützt, und er sagt Ihnen, wenn eine Anfrage über seine Rolle hinausgeht. Zusätzlich durchläuft jede Änderung automatische Prüfungen. Schlägt eine fehl, wird nichts veröffentlicht und die Website bleibt, wie sie war."
+    },
+    "Q3": {
+      "Question": "Welches KI-Abo brauche ich?",
+      "Answer": "Ihr eigenes ChatGPT- oder Claude-Abo. Es ist nicht in unseren Preisen enthalten: Sie bezahlen es direkt bei OpenAI oder Anthropic."
+    },
+    "Q4": {
+      "Question": "Was kann ich nicht selbst ändern?",
+      "Answer": "Neue Seiten, Formulare und Änderungen an der Struktur der Website. Der Assistent leitet solche Anfragen an uns weiter, und wir kümmern uns gemeinsam mit Ihnen darum."
+    },
+    "Q5": {
+      "Question": "Wem gehört die Website?",
+      "Answer": "Ihnen. Die Website und ihr Code gehören Ihnen, auch wenn Sie die Zusammenarbeit mit uns beenden."
+    }
+  },
+  "CTA": {
+    "Title": "Ist Ihre Website in die Jahre gekommen?",
+    "Description": "Erzählen Sie uns von Ihrem Geschäft und davon, was Ihre Website leisten soll. Wir sagen Ihnen, was dazu gehört, und machen Ihnen ein klares Angebot.",
+    "Button": "Über Ihre Website sprechen"
+  },
+  "Breadcrumb": "Produkte"
+}

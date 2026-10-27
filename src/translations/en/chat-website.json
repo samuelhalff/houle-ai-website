@@ -1,0 +1,123 @@
+{
+  "Name": "Chat-managed website",
+  "Hero": {
+    "Badge": "Website for small businesses",
+    "Title": "A website you update yourself, just by chatting",
+    "Description": "We build your new site. After that, you change texts, colours and photos by writing to ChatGPT or Claude on your phone, in plain language. Every change is checked before it goes live."
+  },
+  "Answer": "This is a done-for-you website for small businesses, shops, restaurants, independents and practices. We design and build it, host it in Switzerland and set up an AI assistant that knows its rules. When you want to change something, you tell the assistant what you need, the way you would tell a colleague. It suggests how to do it, waits for your go-ahead and only then publishes. No Wix or WordPress to learn, and no agency invoice for each small edit.",
+  "How": {
+    "Eyebrow": "How it works",
+    "Title": "From your request to the live site",
+    "Description": "Four steps, and you only take part in the first and the last.",
+    "Ask": {
+      "Title": "1. You ask",
+      "Description": "You write what you want, in your own words: \"change the opening hours\", \"put this photo on the home page\", \"make the menu easier to read\"."
+    },
+    "Clarify": {
+      "Title": "2. The assistant clarifies",
+      "Description": "It rephrases your request to make sure it understood, asks one question at a time if something is unclear, and offers two to four options with the one it recommends."
+    },
+    "Check": {
+      "Title": "3. Automatic checks",
+      "Description": "Before anything is published, the change goes through automatic checks: code quality, tests, title lengths, broken links and minimum content on each page."
+    },
+    "Publish": {
+      "Title": "4. You decide",
+      "Description": "The assistant always asks \"shall I publish?\". Only your yes puts the change online, and if a check failed, nothing is published."
+    }
+  },
+  "Assistant": {
+    "Title": "An assistant that knows the rules of your site",
+    "Description": "We configure the assistant with the rules of your website before handing it over. It works for you, but it does not do just anything.",
+    "Design": {
+      "Title": "It protects the design",
+      "Description": "Colours, fonts and layout stay consistent from page to page. A colour change is applied everywhere it belongs, not in one corner of the site."
+    },
+    "Readability": {
+      "Title": "It keeps the site readable",
+      "Description": "Text stays legible on every background, in light and dark mode, on a phone as on a computer."
+    },
+    "Seo": {
+      "Title": "It looks after your SEO",
+      "Description": "Page addresses stay the same, titles keep a sensible length and every page keeps enough content to be found on Google."
+    },
+    "Limits": {
+      "Title": "It knows when to stop",
+      "Description": "Anything beyond texts, colours and photos, such as a new page, a form or a change of structure, is passed on to us instead of being improvised."
+    }
+  },
+  "Included": {
+    "Title": "What your site comes with",
+    "Description": "A simple, fast website built on solid foundations, which belongs to you.",
+    "Fast": {
+      "Title": "Static and fast",
+      "Description": "Pages are prepared in advance and load quickly, even on a weak mobile connection."
+    },
+    "Swiss": {
+      "Title": "Hosted in Switzerland",
+      "Description": "Swiss hosting, HTTPS and backups included."
+    },
+    "Languages": {
+      "Title": "Bilingual if you need it",
+      "Description": "French, English or another language, with a proper version of each page rather than an automatic translation widget."
+    },
+    "Seo": {
+      "Title": "Ready for search engines",
+      "Description": "Clear titles and descriptions, structured data and a sitemap, set up from day one."
+    },
+    "Ownership": {
+      "Title": "Yours",
+      "Description": "You own the site and its code. If you ever want to leave, you take everything with you."
+    }
+  },
+  "Audience": {
+    "Title": "Who it is for",
+    "Description": "Small businesses, shops, restaurants, independents and practices in French-speaking Switzerland whose current site is out of date, who have no wish to learn Wix or WordPress and who would rather not pay an agency for every change."
+  },
+  "Pricing": {
+    "Title": "Pricing",
+    "Description": "Two simple amounts, in Swiss francs, excluding VAT.",
+    "Setup": {
+      "Name": "Setup",
+      "Price": "from CHF 1'900",
+      "Includes": "Custom design, up to 5 pages in one language, technical SEO, hosting set up, assistant configured for your site and a one-hour onboarding session.",
+      "Extra": "Each additional language: CHF 400."
+    },
+    "Hosting": {
+      "Name": "Hosting and support",
+      "Price": "CHF 49 per month",
+      "Includes": "Swiss hosting, SSL certificate, backups, automatic checks before each publication, updates and up to 30 minutes of help from us each month."
+    },
+    "Subscription": "Your ChatGPT or Claude subscription is separate: you pay it directly to the provider."
+  },
+  "Faq": {
+    "Title": "Frequently asked questions",
+    "Q1": {
+      "Question": "Do I need any technical knowledge?",
+      "Answer": "No. You write to the assistant as you would write a message to someone. It asks you questions when it needs more detail and shows you the options before changing anything."
+    },
+    "Q2": {
+      "Question": "What if I ask for something that could break the site?",
+      "Answer": "The assistant is set up to protect the design, readability and SEO, and it tells you when a request goes beyond what it should handle. On top of that, every change goes through automatic checks. If one fails, nothing is published and the live site stays as it was."
+    },
+    "Q3": {
+      "Question": "Which AI subscription do I need?",
+      "Answer": "Your own ChatGPT or Claude subscription. It is not included in our prices: you pay it directly to OpenAI or Anthropic."
+    },
+    "Q4": {
+      "Question": "What can I not change myself?",
+      "Answer": "New pages, forms and changes to the structure of the site. The assistant passes these requests on to us and we take care of them with you."
+    },
+    "Q5": {
+      "Question": "Who owns the website?",
+      "Answer": "You do. The site and its code belong to you, including if you decide to stop working with us."
+    }
+  },
+  "CTA": {
+    "Title": "Is your current site out of date?",
+    "Description": "Tell us about your business and what your site should do. We will tell you what it involves and give you a clear quote.",
+    "Button": "Talk about your website"
+  },
+  "Breadcrumb": "Products"
+}

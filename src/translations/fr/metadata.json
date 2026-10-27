@@ -34,6 +34,11 @@
             "description": "Des agents IA spécialisés qui perçoivent, raisonnent, agissent via des outils, avec validation humaine. Hébergés sur Azure en Suisse pour Microsoft 365.",
             "keywords": "agents ia suisse, agents ia hébergés suisse, azure ai foundry, ia agentique, ia validation humaine, automatisation processus métier"
         },
+        "/products/chat-website": {
+            "title": "Création de site internet PME, modifiable par chat",
+            "description": "Création de site internet pour PME, que vous modifiez ensuite en discutant avec ChatGPT ou Claude. Chaque changement est vérifié. Hébergé en Suisse.",
+            "keywords": "création site internet pme, création site web genève, site internet suisse romande, site web ia, site modifiable avec chatgpt, hébergement suisse"
+        },
         "/products/word-addin": {
             "title": "Add-in Word avec IA | houle - Assistant Hébergé en Suisse",
             "description": "Add-in Word avec IA pour rédiger, éditer et résumer des documents. S'intègre à votre GPT hébergé en Suisse pour un contrôle total des données.",

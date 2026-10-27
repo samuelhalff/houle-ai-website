@@ -1,0 +1,123 @@
+{
+  "Name": "Sitio web gestionado por chat",
+  "Hero": {
+    "Badge": "Sitio web para pymes",
+    "Title": "Un sitio web que usted mismo cambia, conversando",
+    "Description": "Creamos su nuevo sitio. Después, usted cambia textos, colores y fotos escribiendo a ChatGPT o Claude desde el móvil, con sus propias palabras. Cada cambio se comprueba antes de publicarse."
+  },
+  "Answer": "Es un sitio web llave en mano para pymes, tiendas, restaurantes, autónomos y consultas. Lo diseñamos y lo construimos, lo alojamos en Suiza y configuramos un asistente de IA que conoce sus reglas. Cuando quiere cambiar algo, se lo explica al asistente como se lo diría a un compañero. Le propone cómo hacerlo, espera su visto bueno y solo entonces publica. Sin tener que aprender Wix ni WordPress, y sin factura de agencia por cada pequeño cambio.",
+  "How": {
+    "Eyebrow": "Cómo funciona",
+    "Title": "De su petición al sitio publicado",
+    "Description": "Cuatro pasos, y usted solo participa en el primero y en el último.",
+    "Ask": {
+      "Title": "1. Usted pide",
+      "Description": "Escribe lo que quiere, con sus palabras: «cambia el horario de apertura», «pon esta foto en la portada», «haz que la carta se lea mejor»."
+    },
+    "Clarify": {
+      "Title": "2. El asistente aclara",
+      "Description": "Reformula su petición para asegurarse de que la ha entendido, hace una pregunta cada vez si algo no está claro y propone de dos a cuatro opciones, indicando la que recomienda."
+    },
+    "Check": {
+      "Title": "3. Comprobaciones automáticas",
+      "Description": "Antes de publicar nada, el cambio pasa por controles automáticos: calidad del código, pruebas, longitud de los títulos, enlaces rotos y contenido mínimo en cada página."
+    },
+    "Publish": {
+      "Title": "4. Usted decide",
+      "Description": "El asistente siempre pregunta «¿Lo publico?». Solo su sí pone el cambio en línea, y si un control falla, no se publica nada."
+    }
+  },
+  "Assistant": {
+    "Title": "Un asistente que conoce las reglas de su sitio",
+    "Description": "Configuramos el asistente con las reglas de su sitio antes de entregárselo. Trabaja para usted, pero no hace cualquier cosa.",
+    "Design": {
+      "Title": "Protege el diseño",
+      "Description": "Colores, tipografías y maquetación se mantienen coherentes de una página a otra. Un cambio de color se aplica en todos los sitios donde corresponde, no en un rincón de la web."
+    },
+    "Readability": {
+      "Title": "Mantiene el sitio legible",
+      "Description": "El texto se lee bien sobre cualquier fondo, en modo claro y en modo oscuro, en el móvil y en el ordenador."
+    },
+    "Seo": {
+      "Title": "Cuida su posicionamiento",
+      "Description": "Las direcciones de las páginas no cambian, los títulos mantienen una longitud razonable y cada página conserva contenido suficiente para aparecer en Google."
+    },
+    "Limits": {
+      "Title": "Sabe dónde parar",
+      "Description": "Todo lo que va más allá de textos, colores y fotos, como una página nueva, un formulario o un cambio de estructura, nos lo pasa a nosotros en lugar de improvisar."
+    }
+  },
+  "Included": {
+    "Title": "Lo que incluye su sitio",
+    "Description": "Un sitio sencillo y rápido, construido sobre una base sólida, que es suyo.",
+    "Fast": {
+      "Title": "Estático y rápido",
+      "Description": "Las páginas se preparan de antemano y cargan rápido, incluso con una conexión móvil débil."
+    },
+    "Swiss": {
+      "Title": "Alojado en Suiza",
+      "Description": "Alojamiento suizo, HTTPS y copias de seguridad incluidos."
+    },
+    "Languages": {
+      "Title": "Bilingüe si lo necesita",
+      "Description": "Francés, inglés u otro idioma, con una versión real de cada página en lugar de un botón de traducción automática."
+    },
+    "Seo": {
+      "Title": "Listo para los buscadores",
+      "Description": "Títulos y descripciones claros, datos estructurados y sitemap, desde el primer día."
+    },
+    "Ownership": {
+      "Title": "Es suyo",
+      "Description": "El sitio y su código le pertenecen. Si algún día quiere irse, se lo lleva todo."
+    }
+  },
+  "Audience": {
+    "Title": "¿Para quién?",
+    "Description": "Pymes, tiendas, restaurantes, autónomos y consultas de la Suiza francófona cuyo sitio actual se ha quedado anticuado, que no quieren aprender Wix ni WordPress y que prefieren no pagar a una agencia por cada cambio."
+  },
+  "Pricing": {
+    "Title": "Precios",
+    "Description": "Dos importes sencillos, en francos suizos, IVA no incluido.",
+    "Setup": {
+      "Name": "Puesta en marcha",
+      "Price": "desde CHF 1'900",
+      "Includes": "Diseño a medida, hasta 5 páginas en un idioma, SEO técnico, alojamiento configurado, asistente preparado para su sitio y una hora de formación inicial.",
+      "Extra": "Cada idioma adicional: CHF 400."
+    },
+    "Hosting": {
+      "Name": "Alojamiento y soporte",
+      "Price": "CHF 49 al mes",
+      "Includes": "Alojamiento en Suiza, certificado SSL, copias de seguridad, controles automáticos antes de cada publicación, actualizaciones y hasta 30 minutos de ayuda nuestra al mes."
+    },
+    "Subscription": "Su suscripción a ChatGPT o Claude va aparte: la paga directamente al proveedor."
+  },
+  "Faq": {
+    "Title": "Preguntas frecuentes",
+    "Q1": {
+      "Question": "¿Necesito conocimientos técnicos?",
+      "Answer": "No. Escribe al asistente como escribiría un mensaje a una persona. Le hace preguntas cuando le falta algún detalle y le muestra las opciones antes de cambiar nada."
+    },
+    "Q2": {
+      "Question": "¿Y si pido algo que podría romper el sitio?",
+      "Answer": "El asistente está configurado para proteger el diseño, la legibilidad y el SEO, y le avisa cuando una petición se sale de su papel. Además, cada cambio pasa por controles automáticos. Si alguno falla, no se publica nada y el sitio sigue como estaba."
+    },
+    "Q3": {
+      "Question": "¿Qué suscripción de IA necesito?",
+      "Answer": "Su propia suscripción a ChatGPT o Claude. No está incluida en nuestros precios: la paga directamente a OpenAI o a Anthropic."
+    },
+    "Q4": {
+      "Question": "¿Qué no puedo cambiar yo mismo?",
+      "Answer": "Páginas nuevas, formularios y cambios en la estructura del sitio. El asistente nos pasa esas peticiones y nos ocupamos de ellas con usted."
+    },
+    "Q5": {
+      "Question": "¿De quién es el sitio web?",
+      "Answer": "Suyo. El sitio y su código le pertenecen, también si decide dejar de trabajar con nosotros."
+    }
+  },
+  "CTA": {
+    "Title": "¿Su sitio actual se ha quedado anticuado?",
+    "Description": "Cuéntenos a qué se dedica y qué debe hacer su sitio. Le diremos lo que implica y le haremos una oferta clara.",
+    "Button": "Hablar de su sitio web"
+  },
+  "Breadcrumb": "Productos"
+}

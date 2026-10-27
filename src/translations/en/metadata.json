@@ -34,6 +34,11 @@
             "description": "Specialised AI agents that perceive, reason, act via tools and keep a human in the loop. Hosted on Azure in Switzerland for Microsoft 365 workflows.",
             "keywords": "ai agents switzerland, swiss ai agents, azure ai foundry, agentic ai, human-in-the-loop ai, business process automation"
         },
+        "/products/chat-website": {
+            "title": "Small business website you update by chat",
+            "description": "We build your small business website, then you change it by chatting with ChatGPT or Claude. Every change is checked before it goes live. Swiss hosting.",
+            "keywords": "small business website switzerland, website for smes, website creation geneva, ai website editing, website edited with chatgpt, swiss hosted website"
+        },
         "/products/word-addin": {
             "title": "Word Add-in with AI | houle - Swiss-hosted Assistant",
             "description": "AI-powered Word add-in for drafting, editing, and summarizing documents. Integrates with your Swiss-hosted GPT for complete data control.",

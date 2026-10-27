@@ -113,6 +113,26 @@ export default async function ProductsPage(props: { params: Promise<{ locale: st
           ? "Plataforma GPT empresarial hospedada na Suíça com soberania completa de dados. Acesse os modelos de IA mais recentes em total conformidade."
         : "Enterprise GPT platform hosted in Switzerland with complete data sovereignty. Access the latest AI models in full compliance.",
     },
+    {
+      href: `${localePrefix}/products/chat-website/`,
+      eyebrow: "Web",
+      title:
+        locale === "fr" ? "Site web géré par chat"
+        : locale === "de" ? "Website mit Chat-Pflege"
+        : locale === "es" ? "Sitio web gestionado por chat"
+        : locale === "pt" ? "Site gerido por chat"
+        : "Chat-managed website",
+      description:
+        locale === "fr"
+          ? "Nous créons votre site, puis vous le modifiez vous-même en écrivant à ChatGPT ou Claude depuis votre téléphone. Chaque changement est vérifié avant sa mise en ligne."
+        : locale === "de"
+          ? "Wir erstellen Ihre Website, danach ändern Sie sie selbst, indem Sie ChatGPT oder Claude auf dem Handy schreiben. Jede Änderung wird vor der Veröffentlichung geprüft."
+        : locale === "es"
+          ? "Creamos su sitio y después usted lo modifica escribiendo a ChatGPT o Claude desde el móvil. Cada cambio se comprueba antes de publicarse."
+        : locale === "pt"
+          ? "Criamos o seu site e depois é você que o altera, escrevendo ao ChatGPT ou ao Claude no telemóvel. Cada alteração é verificada antes de ser publicada."
+        : "We build your site, then you change it yourself by texting ChatGPT or Claude from your phone. Every change is checked before it goes live.",
+    },
   ];
 
   const breadcrumbJsonLd = buildBreadcrumbList([
@@ -135,7 +155,7 @@ export default async function ProductsPage(props: { params: Promise<{ locale: st
 
       <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
         <Reveal>
-          <div className="grid gap-5 pb-20 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-5 pb-20 sm:grid-cols-2">
             {products.map((product, i) => (
               <Link
                 key={product.href}

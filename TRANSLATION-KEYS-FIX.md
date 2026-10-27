@@ -212,3 +212,28 @@ New namespace in all locales (`fr`, `en`, `de`, `es`, `pt`), rendered by `app/[l
 | `Cookies.Sections[].{Title,Blocks[]}` | Cookies policy sections |
 
 Block types: `p` (`text`), `h3` (`text`), `ul` (`items[]`), `box` (`heading?`, `lines?[]`, `items?[]`, `note?`), `rights` (`items[].{label,text}`), `links` (`heading`, `items[].{label,href}`). `scripts/validate-translations.js` fails the build when a locale's `legal.json` structure (sections, block types, list lengths, `href`s) differs from `en`. The privacy policy states that the Google Analytics identifier is added to a message unless the visitor refused analytics.
+
+## Namespace: chat-website (chat-website.json) — chat-managed website product (Oct 2026)
+
+New namespace in all locales (`fr`, `en`, `de`, `es`, `pt`), rendered by `app/[locale]/products/chat-website/page.tsx` (`/products/chat-website/`, English slug shared by all locales).
+
+| Key | Description |
+|-----|-------------|
+| `Name` | Product name (breadcrumb, Service JSON-LD) |
+| `Breadcrumb` | "Products" breadcrumb label |
+| `Hero.{Badge,Title,Description}` | Hero eyebrow, H1 and intro |
+| `Answer` | Answer-first paragraph |
+| `How.{Eyebrow,Title,Description}` | "How it works" section header |
+| `How.{Ask,Clarify,Check,Publish}.{Title,Description}` | The four steps from request to publication |
+| `Assistant.{Title,Description}` | Assistant rules section header |
+| `Assistant.{Design,Readability,Seo,Limits}.{Title,Description}` | What the configured assistant protects and when it escalates |
+| `Included.{Title,Description}` | "What your site comes with" header |
+| `Included.{Fast,Swiss,Languages,Seo,Ownership}.{Title,Description}` | Site characteristics |
+| `Audience.{Title,Description}` | Target audience card |
+| `Pricing.{Title,Description,Subscription}` | Pricing header, VAT note, AI subscription note |
+| `Pricing.Setup.{Name,Price,Includes,Extra}` | Setup price (from CHF 1'900) and additional language (CHF 400) |
+| `Pricing.Hosting.{Name,Price,Includes}` | Hosting and support (CHF 49 per month) |
+| `Faq.Title`, `Faq.Q1`–`Faq.Q5`.`{Question,Answer}` | Visible FAQ, also emitted as FAQPage JSON-LD |
+| `CTA.{Title,Description,Button}` | Closing call to action (links to `/contact/`) |
+
+Also added: `metadata:pages./products/chat-website.{title,description,keywords}` in all locales. Navbar/mobile menu entries (`app/[locale]/layout.tsx`), the footer label `chatWebsite` (`app/[locale]/shared/footer.tsx`) and the products index card (`app/[locale]/products/page.tsx`) are hard-coded per locale like the other products.

@@ -46,6 +46,7 @@ const productPaths = [
   "/products/word-addin",
   "/products/outlook-addin",
   "/products/swiss-gpt",
+  "/products/chat-website",
 ];
 
 // Enumerate all solution slugs from the FR solutions.json (canonical), like articles.

@@ -7,6 +7,7 @@ const path = require("node:path");
 const ROOT = path.resolve(__dirname, "..");
 const productPages = [
   "app/[locale]/products/ai-agents/page.tsx",
+  "app/[locale]/products/chat-website/page.tsx",
   "app/[locale]/products/outlook-addin/page.tsx",
   "app/[locale]/products/swiss-gpt/page.tsx",
   "app/[locale]/products/word-addin/page.tsx",

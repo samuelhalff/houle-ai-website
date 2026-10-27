@@ -58,6 +58,11 @@ export default async function LocaleLayout({
               title: "GPT Suisse",
               description: "Plateforme GPT hébergée en Suisse",
             },
+            {
+              href: "/products/chat-website/",
+              title: "Site web géré par chat",
+              description: "Votre site, modifié en discutant avec l'IA",
+            },
           ],
           services: [
             {
@@ -107,6 +112,11 @@ export default async function LocaleLayout({
                 href: "/products/swiss-gpt/",
                 title: "Swiss GPT",
                 description: "Schweizer GPT-Plattform",
+              },
+              {
+                href: "/products/chat-website/",
+                title: "Website mit Chat-Pflege",
+                description: "Ihre Website, per Chat mit KI geändert",
               },
             ],
             services: [
@@ -158,6 +168,11 @@ export default async function LocaleLayout({
                   title: "Swiss GPT",
                   description: "Plataforma GPT alojada en Suiza",
                 },
+                {
+                  href: "/products/chat-website/",
+                  title: "Sitio web gestionado por chat",
+                  description: "Su web, modificada conversando con la IA",
+                },
               ],
               services: [
                 {
@@ -208,6 +223,11 @@ export default async function LocaleLayout({
                     title: "Swiss GPT",
                     description: "Plataforma GPT hospedada na Suíça",
                   },
+                  {
+                    href: "/products/chat-website/",
+                    title: "Site gerido por chat",
+                    description: "O seu site, alterado a conversar com a IA",
+                  },
                 ],
                 services: [
                   {
@@ -256,6 +276,11 @@ export default async function LocaleLayout({
                     href: "/products/swiss-gpt/",
                     title: "Swiss GPT",
                     description: "Swiss-hosted GPT platform",
+                  },
+                  {
+                    href: "/products/chat-website/",
+                    title: "Chat-managed website",
+                    description: "Your site, updated by chatting with AI",
                   },
                 ],
                 services: [

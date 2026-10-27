@@ -34,6 +34,11 @@
             "description": "Agentes de IA especializados que perciben, razonan y actúan con herramientas, con validación humana. Alojados en Azure en Suiza para Microsoft 365.",
             "keywords": "agentes ia suiza, agentes ia alojados suiza, azure ai foundry, ia agéntica, ia validación humana, automatización procesos de negocio"
         },
+        "/products/chat-website": {
+            "title": "Sitio web para pymes que usted edita por chat",
+            "description": "Creamos el sitio web de su pyme y luego usted lo cambia conversando con ChatGPT o Claude. Cada cambio se comprueba antes de publicarse. Alojado en Suiza.",
+            "keywords": "sitio web para pymes, crear sitio web suiza, editar web con ia, web con chatgpt, alojamiento en suiza"
+        },
         "/products/word-addin": {
             "title": "Complemento Word con IA | houle - Asistente Alojado en Suiza",
             "description": "Complemento Word con IA para redactar, editar y resumir documentos. Se integra con su GPT alojado en Suiza para control total de datos.",

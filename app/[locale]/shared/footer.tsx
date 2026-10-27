@@ -19,6 +19,7 @@ export default function Footer({ locale }: { locale?: string }) {
       outlookAddin: "AI for Outlook",
       wordAddin: "AI for Word",
       swissGpt: "Swiss GPT",
+      chatWebsite: "Chat-managed website",
       services: "Services",
       aiConsulting: "AI Consulting",
       microsoftConsulting: "Microsoft Consulting",
@@ -38,6 +39,7 @@ export default function Footer({ locale }: { locale?: string }) {
       outlookAddin: "IA pour Outlook",
       wordAddin: "IA pour Word",
       swissGpt: "Swiss GPT",
+      chatWebsite: "Site web géré par chat",
       services: "Services",
       aiConsulting: "Conseil IA",
       microsoftConsulting: "Conseil Microsoft",
@@ -57,6 +59,7 @@ export default function Footer({ locale }: { locale?: string }) {
       outlookAddin: "KI für Outlook",
       wordAddin: "KI für Word",
       swissGpt: "Swiss GPT",
+      chatWebsite: "Website mit Chat-Pflege",
       services: "Dienstleistungen",
       aiConsulting: "KI-Beratung",
       microsoftConsulting: "Microsoft-Beratung",
@@ -76,6 +79,7 @@ export default function Footer({ locale }: { locale?: string }) {
       outlookAddin: "IA para Outlook",
       wordAddin: "IA para Word",
       swissGpt: "Swiss GPT",
+      chatWebsite: "Sitio web por chat",
       services: "Servicios",
       aiConsulting: "Consultoría IA",
       microsoftConsulting: "Consultoría Microsoft",
@@ -95,6 +99,7 @@ export default function Footer({ locale }: { locale?: string }) {
       outlookAddin: "IA para Outlook",
       wordAddin: "IA para Word",
       swissGpt: "Swiss GPT",
+      chatWebsite: "Site gerido por chat",
       services: "Serviços",
       aiConsulting: "Consultoria IA",
       microsoftConsulting: "Consultoria Microsoft",
@@ -181,6 +186,11 @@ export default function Footer({ locale }: { locale?: string }) {
             <li>
               <Link href={`${localePrefix}/products/swiss-gpt/`} className={linkClass} prefetch={false}>
                 {t.swissGpt}
+              </Link>
+            </li>
+            <li>
+              <Link href={`${localePrefix}/products/chat-website/`} className={linkClass} prefetch={false}>
+                {t.chatWebsite}
               </Link>
             </li>
           </ul>
