@@ -62,7 +62,6 @@
   --paper:#f7efe2; --ink:#2b1c13; --muted:#5e4838; --line:#e2d2bb;
   --brass:#9c3a22; --accent:#a3361f; --on-accent:#fff7ec;
   --slate:#2e2119; --chalk:#f5ead8; --chalk-muted:#d6c6ad; --brass-chalk:#e8b25e; --rule:#57443a;
-  --ribbon-bg:#2b1c13; --ribbon-ink:#f7efe2;
   --measure:62ch;
   --fs-0:1.0625rem; --fs-1:1.25rem; --fs-2:1.6rem; --fs-3:clamp(2rem,6.2vw,3.6rem); --fs-4:clamp(2.6rem,11vw,6.5rem);
 }
@@ -71,7 +70,6 @@
     --paper:#1d140f; --ink:#f3e7d3; --muted:#cbb79b; --line:#3d2c21;
     --brass:#ef8f6f; --accent:#e5785a; --on-accent:#1d140f;
     --slate:#2a1d15; --chalk:#f5ead8; --chalk-muted:#d2c1a7; --brass-chalk:#ebb866; --rule:#5a4536;
-    --ribbon-bg:#f3e7d3; --ribbon-ink:#1d140f;
   }
 }
 *{box-sizing:border-box}
@@ -206,18 +204,53 @@ p{margin:0 0 1em;max-width:var(--measure)}
 .facts p{color:var(--chalk-muted);margin:0 0 .35rem}
 .facts a{color:var(--chalk);text-decoration-color:var(--brass-chalk);text-underline-offset:.25em;text-decoration-thickness:2px}
 @media (min-width:46rem){.facts{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media (min-width:64rem){.facts{grid-template-columns:5fr 4fr 4fr}}
+
+
+/* Semaine */
+.week-wrap{margin-top:2.75rem;padding-top:2rem;border-top:1px solid var(--rule)}
+.week-wrap h3{font-size:1.3rem;margin-bottom:.9rem}
+.week{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:.3rem}
+.week li{display:flex;flex-direction:column;gap:.25rem;padding:.6rem .35rem .7rem;border-top:3px solid var(--chalk-muted);font-size:.9rem;line-height:1.2;min-height:4.5rem}
+.week abbr{text-decoration:none;font-family:"Young Serif",serif;font-size:1.05rem;color:var(--chalk)}
+.week span{color:var(--chalk-muted)}
+.week .closed{border-top-color:var(--rule)}
+.week .closed span{font-style:italic}
+.week .today{background:var(--chalk);border-top-color:var(--brass-chalk)}
+.week .today abbr,.week .today span,.week .today em{color:var(--slate)}
+.week em{font-size:.78rem;font-style:normal;font-weight:700}
+@media (max-width:45.99rem){.week em{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
+.week-note{color:var(--chalk-muted);font-size:.95rem;margin:.9rem 0 0}
+@media (min-width:46rem){.week li{padding:.8rem .7rem;font-size:1rem}.week abbr{font-size:1.25rem}}
+
+/* Barre mobile */
+.mbar{display:none}
+@media (max-width:37.5rem){
+  .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--paper);border-top:1px solid var(--line);padding:.4rem .5rem calc(.4rem + env(safe-area-inset-bottom));gap:.5rem}
+  .mbar a{display:flex;align-items:center;justify-content:center;min-height:44px;font-weight:700;text-decoration:none;border-radius:2px}
+  .mbar a:first-child{background:var(--accent);color:var(--on-accent)}
+  .mbar a:last-child{border:2px solid var(--ink);color:var(--ink)}
+  body{padding-bottom:3.75rem}
+}
+
+/* Cibles tactiles */
+.top nav a{display:inline-flex;align-items:center;min-height:44px}
+.top .wrap>a:first-child{display:inline-flex;align-items:center;min-height:44px;min-width:44px}
+.call,.btn{display:inline-flex;align-items:center;min-height:44px}
+.actions .textlink,.carte-foot a,.cave a,.facts a{display:inline-flex;align-items:center;min-height:44px}
+
+/* Barre d'aperçu */
+.preview{display:block;min-height:40px;padding:11px 1rem;background:#0f172a;color:#f8fafc;font:400 14px/18px system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center}
+.preview a{color:#f8fafc;text-decoration:underline;text-underline-offset:2px}
 
 /* Pied */
 .foot{padding:2rem 0 4.5rem;font-size:.95rem;color:var(--muted)}
 .foot .wrap{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;align-items:center}
 .foot .mark{width:1.8rem;height:2.3rem;opacity:.7}
 
-/* Bandeau maquette */
-.ribbon{position:fixed;left:.6rem;bottom:.6rem;z-index:50;background:var(--ribbon-bg);color:var(--ribbon-ink);font-size:.75rem;line-height:1.2;padding:.35rem .6rem;border-radius:2px;opacity:.92;pointer-events:none;max-width:calc(100vw - 1.2rem)}
 </style>
 </head>
 <body>
+<div class="preview" role="note">Aperçu de votre nouveau site, préparé par&nbsp;<a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
 
 <header class="top">
   <div class="wrap">
@@ -379,16 +412,24 @@ p{margin:0 0 1em;max-width:var(--measure)}
       <h2 id="infos-t" class="label">Réservation</h2>
       <a class="bigtel" href="tel:+41227431200">022 743 12 00</a>
       <p class="intl">Depuis l’étranger&nbsp;: +41 22 743 12 00</p>
+      <div class="week-wrap">
+        <h3>Ouverture</h3>
+        <ol class="week" aria-label="Jours d’ouverture">
+          <li data-d="1"><abbr title="lundi">Lun</abbr><span>midi &amp; soir</span></li>
+          <li data-d="2"><abbr title="mardi">Mar</abbr><span>midi &amp; soir</span></li>
+          <li data-d="3"><abbr title="mercredi">Mer</abbr><span>midi &amp; soir</span></li>
+          <li data-d="4"><abbr title="jeudi">Jeu</abbr><span>midi &amp; soir</span></li>
+          <li data-d="5"><abbr title="vendredi">Ven</abbr><span>midi &amp; soir</span></li>
+          <li data-d="6" class="closed"><abbr title="samedi">Sam</abbr><span>fermé</span></li>
+          <li data-d="0" class="closed"><abbr title="dimanche">Dim</abbr><span>fermé</span></li>
+        </ol>
+        <p class="week-note">Du lundi midi au vendredi soir. Fermé le samedi et le dimanche.</p>
+      </div>
       <div class="facts">
         <div>
           <h3>Adresse</h3>
           <p>Café Zinette<br>Route du Grand-Lancy 45<br>Lancy, Genève</p>
           <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Caf%C3%A9+Zinette+Route+du+Grand-Lancy+45+Lancy" rel="noopener">Ouvrir dans Google Maps</a></p>
-        </div>
-        <div>
-          <h3>Ouverture</h3>
-          <p>Du lundi midi au vendredi soir.</p>
-          <p>Fermé le samedi et le dimanche.</p>
         </div>
         <div>
           <h3>Nous écrire</h3>
@@ -407,6 +448,18 @@ p{margin:0 0 1em;max-width:var(--measure)}
   </div>
 </footer>
 
-<div class="ribbon" role="note">Maquette proposée par houle.ai — non publiée</div>
+<nav class="mbar" aria-label="Contact rapide">
+  <a href="tel:+41227431200">Appeler</a>
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Caf%C3%A9+Zinette+Route+du+Grand-Lancy+45+Lancy" rel="noopener">Itinéraire</a>
+</nav>
+<script>
+(function(){try{
+  var d=new Intl.DateTimeFormat('en-US',{weekday:'short',timeZone:'Europe/Zurich'}).format(new Date());
+  var i={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[d];
+  var li=document.querySelector('.week li[data-d="'+i+'"]');
+  if(li){li.classList.add('today');li.setAttribute('aria-current','date');
+    var t=document.createElement('em');t.textContent='aujourd’hui';li.appendChild(t);}
+}catch(e){}})();
+</script>
 </body>
 </html>
