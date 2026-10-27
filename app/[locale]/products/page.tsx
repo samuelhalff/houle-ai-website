@@ -41,14 +41,14 @@ export default async function ProductsPage(props: { params: Promise<{ locale: st
 
   const pageIntro =
     locale === "fr"
-      ? "Découvrez nos solutions IA prêtes à l'emploi pour Microsoft 365, conçues pour améliorer votre productivité tout en garantissant la souveraineté de vos données."
+      ? "Des produits IA prêts à l'emploi : add-ins pour Microsoft 365, modèles d'IA exécutés chez des fournisseurs de cloud suisses pour que vos données restent en Suisse (par exemple le tri des petits sinistres RC d'une grande institution médicale suisse), et sites web que vous modifiez vous-même par chat."
     : locale === "de"
-      ? "Entdecken Sie unsere einsatzbereiten KI-Lösungen für Microsoft 365, die Ihre Produktivität steigern und gleichzeitig die Souveränität Ihrer Daten gewährleisten."
+      ? "Einsatzbereite KI-Produkte: Add-Ins für Microsoft 365, KI-Modelle bei Schweizer Cloud-Anbietern, damit Ihre Daten in der Schweiz bleiben (zum Beispiel die Triage kleiner Haftpflichtfälle für eine grosse Schweizer Gesundheitsinstitution), und Websites, die Sie selbst per Chat ändern."
     : locale === "es"
-      ? "Descubra nuestras soluciones de IA listas para usar para Microsoft 365, diseñadas para mejorar su productividad mientras garantizan la soberanía de sus datos."
+      ? "Productos de IA listos para usar: complementos para Microsoft 365, modelos de IA en proveedores de nube suizos para que sus datos se queden en Suiza (por ejemplo, el triaje de pequeños siniestros de responsabilidad civil de una gran institución médica suiza) y sitios web que usted mismo edita por chat."
     : locale === "pt"
-      ? "Descubra nossas soluções de IA prontas para uso para Microsoft 365, projetadas para melhorar sua produtividade enquanto garantem a soberania de seus dados."
-    : "Discover our ready-to-use AI solutions for Microsoft 365, designed to enhance your productivity while ensuring your data sovereignty.";
+      ? "Produtos de IA prontos a usar: complementos para Microsoft 365, modelos de IA em fornecedores de cloud suíços para que os seus dados fiquem na Suíça (por exemplo, a triagem de pequenos sinistros de responsabilidade civil de uma grande instituição médica suíça) e sites que altera por chat."
+    : "Ready-to-use AI products: add-ins for Microsoft 365, AI models run on Swiss cloud providers so your data stays in Switzerland (for example, triage of minor liability claims for a large Swiss medical institution), and websites you update yourself by chat.";
 
   const learnMore =
     locale === "fr" ? "En savoir plus"
