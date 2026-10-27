@@ -11,6 +11,7 @@ import LangSwitchMobile from "@/src/components/navigation/LangSwitchMobile";
 import ThemeToggleMobile from "@/src/components/navigation/ThemeToggleMobile";
 import { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import TrackedLink from "@/src/components/ui/tracked-link";
 import { cn } from "@/src/lib/utils";
 import { trackEvent } from "@/src/lib/analytics";
@@ -51,6 +52,90 @@ const MobileMenuToggleIcon = ({
   </span>
 );
 
+// Locale- and trailing-slash-insensitive path: "/fr/services/ai-consulting/" -> "/services/ai-consulting".
+const LOCALES = ["en", "fr", "de", "es", "pt"];
+const toSectionPath = (p: string) => {
+  const parts = p.split(/[?#]/)[0].split("/").filter(Boolean);
+  if (parts.length && LOCALES.includes(parts[0])) parts.shift();
+  return "/" + parts.join("/");
+};
+
+// Shared by plain rows and disclosure summaries so every top-level entry has the same size.
+// Plain `border-b` picks up the global --border colour (the `border-border` utility breaks in dark mode).
+const rowBase =
+  "flex min-h-12 w-full items-center justify-between border-b py-3 text-lg font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring";
+const rowClass = `${rowBase} text-foreground hover:text-brand-hover aria-[current=page]:text-brand-hover dark:hover:text-brand dark:aria-[current=page]:text-brand`;
+
+type MenuItem = { href: string; title: string };
+
+const MenuSection = ({
+  label,
+  items,
+  hub,
+  localePrefix,
+  path,
+  onNavigate,
+}: {
+  label: string;
+  items: MenuItem[];
+  hub: { href: string; label?: string };
+  localePrefix: string;
+  path: string;
+  onNavigate: () => void;
+}) => {
+  const hubPath = toSectionPath(hub.href);
+  const inSection = path === hubPath || path.startsWith(hubPath + "/");
+  return (
+    // Native disclosure: keyboard and screen-reader accessible; closed links stay in the DOM.
+    <details className="group" open={inSection}>
+      <summary
+        className={cn(
+          rowClass,
+          "cursor-pointer list-none group-open:border-transparent [&::-webkit-details-marker]:hidden"
+        )}
+      >
+        {label}
+        <span
+          aria-hidden
+          className="text-2xl font-light leading-none text-brand-hover transition-transform duration-200 group-open:rotate-45 dark:text-brand"
+        >
+          +
+        </span>
+      </summary>
+      <ul className="border-b py-1">
+        {items.map((item) => (
+          <li key={item.href}>
+            <Link
+              href={`${localePrefix}${item.href}`}
+              onClick={onNavigate}
+              prefetch={false}
+              aria-current={
+                path === toSectionPath(item.href) ? "page" : undefined
+              }
+              className="flex min-h-11 items-center pl-4 text-base text-foreground transition-colors hover:text-brand-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring aria-[current=page]:text-brand-hover dark:hover:text-brand dark:aria-[current=page]:text-brand"
+            >
+              {item.title}
+            </Link>
+          </li>
+        ))}
+        {hub.label && (
+          <li>
+            <Link
+              href={`${localePrefix}${hub.href}`}
+              onClick={onNavigate}
+              prefetch={false}
+              aria-current={path === hubPath ? "page" : undefined}
+              className="flex min-h-11 items-center pl-4 text-sm text-muted-foreground underline underline-offset-4 transition-colors hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring aria-[current=page]:text-brand-hover dark:aria-[current=page]:text-brand"
+            >
+              {hub.label}
+            </Link>
+          </li>
+        )}
+      </ul>
+    </details>
+  );
+};
+
 const MobileMenu = ({
   locale,
   navData,
@@ -61,6 +146,8 @@ const MobileMenu = ({
   const [open, setOpen] = useState(false);
   const handleLinkClick = () => setOpen(false);
   const localePrefix = locale ? `/${locale}` : "/en";
+  const path = toSectionPath(usePathname() || "/");
+  const isCurrent = (href: string) => path === toSectionPath(href);
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -114,102 +201,82 @@ const MobileMenu = ({
   dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500"
           style={{ paddingBottom: "max(1.5rem, env(safe-area-inset-bottom))" }}
         >
-          <nav className="flex flex-col gap-3 px-4 mt-3 pb-10 pt-2">
-            <ThemeToggleMobile />
-            <Suspense fallback={null}>
-              <LangSwitchMobile onLocaleChange={handleLinkClick} />
-            </Suspense>
-            <div>
-              <Link
-                href={`${localePrefix}/`}
-                onClick={handleLinkClick}
-                prefetch={false}
-                className="flex items-center gap-3 text-md px-2 py-2 rounded hover:bg-accent active:scale-[0.99] transition-all font-bold"
-              >
-                <span>{navData.labels.home}</span>
-              </Link>
-            </div>
-            {!navData.hideProducts && (
-              <div>
-                <div className="px-2 py-2 text-xs font-semibold text-muted-foreground uppercase tracking-wide">
-                  {navData.labels.products}
-                </div>
-                {navData.products.map((product) => (
-                  <Link
-                    key={product.href}
-                    href={`${localePrefix}${product.href}`}
-                    onClick={handleLinkClick}
-                    prefetch={false}
-                    className="flex items-start gap-3 text-md px-4 py-2 rounded hover:bg-accent active:scale-[0.99] transition-all"
-                  >
-                    <div className="flex-1">
-                      <div className="font-medium">{product.title}</div>
-                      {product.description && (
-                        <div className="text-xs text-muted-foreground mt-0.5">
-                          {product.description}
-                        </div>
-                      )}
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            )}
-            <div>
-              <div className="px-2 py-2 text-xs font-semibold text-muted-foreground uppercase tracking-wide">
-                {navData.labels.services}
-              </div>
-              {navData.services.map((service) => (
+          <nav aria-label={navData.labels.mobileNavigation} className="px-4 pb-10 pt-2">
+            <ul className="flex flex-col">
+              <li>
                 <Link
-                  key={service.href}
-                  href={`${localePrefix}${service.href}`}
+                  href={`${localePrefix}/`}
                   onClick={handleLinkClick}
                   prefetch={false}
-                  className="flex items-start gap-3 text-md px-4 py-2 rounded hover:bg-accent active:scale-[0.99] transition-all"
+                  aria-current={isCurrent("/") ? "page" : undefined}
+                  className={rowClass}
                 >
-                  <div className="flex-1">
-                    <div className="font-medium">{service.title}</div>
-                    {service.description && (
-                      <div className="text-xs text-muted-foreground mt-0.5">
-                        {service.description}
-                      </div>
-                    )}
-                  </div>
+                  {navData.labels.home}
                 </Link>
-              ))}
-            </div>
-            <div>
-              <Link
-                href={`${localePrefix}/ressources/`}
-                onClick={handleLinkClick}
-                prefetch={false}
-                className="flex items-center gap-3 text-md px-2 py-2 rounded hover:bg-accent active:scale-[0.99] transition-all"
-              >
-                <span>{navData.labels.ressources}</span>
-              </Link>
-            </div>
-            {/* Contact: final entry — hairline separator then accent-coloured
-                label with a mono email line beneath. */}
-            <div className="mt-5 border-t border-border pt-6">
-              <TrackedLink cta="nav_mobile_contact"
-                href={`${localePrefix}/contact/`}
-                onClick={handleLinkClick}
-                prefetch={false}
-                className="flex items-center px-2 py-2 text-md font-bold text-brand transition-opacity hover:opacity-80"
-              >
-                <span>{navData.labels.contact}</span>
-              </TrackedLink>
-              <a
-                href="mailto:contact@houle.ai"
-                onClick={() =>
-                  trackEvent("contact_channel_click", {
-                    channel: "email",
-                    location: "mobile_menu",
-                  })
-                }
-                className="block px-2 pt-0.5 font-mono text-[11px] uppercase tracking-[0.14em] text-muted-foreground"
-              >
-                contact@houle.ai
-              </a>
+              </li>
+              {!navData.hideProducts && (
+                <li>
+                  <MenuSection
+                    label={navData.labels.products}
+                    items={navData.products}
+                    hub={{ href: "/products/", label: navData.labels.allProducts }}
+                    localePrefix={localePrefix}
+                    path={path}
+                    onNavigate={handleLinkClick}
+                  />
+                </li>
+              )}
+              <li>
+                <MenuSection
+                  label={navData.labels.services}
+                  items={navData.services}
+                  hub={{ href: "/services/", label: navData.labels.allServices }}
+                  localePrefix={localePrefix}
+                  path={path}
+                  onNavigate={handleLinkClick}
+                />
+              </li>
+              <li>
+                <Link
+                  href={`${localePrefix}/ressources/`}
+                  onClick={handleLinkClick}
+                  prefetch={false}
+                  aria-current={isCurrent("/ressources") ? "page" : undefined}
+                  className={rowClass}
+                >
+                  {navData.labels.ressources}
+                </Link>
+              </li>
+              <li>
+                <TrackedLink
+                  cta="nav_mobile_contact"
+                  href={`${localePrefix}/contact/`}
+                  onClick={handleLinkClick}
+                  prefetch={false}
+                  aria-current={isCurrent("/contact") ? "page" : undefined}
+                  className={`${rowBase} text-brand-hover hover:opacity-80 dark:text-brand`}
+                >
+                  {navData.labels.contact}
+                </TrackedLink>
+              </li>
+            </ul>
+            <a
+              href="mailto:contact@houle.ai"
+              onClick={() =>
+                trackEvent("contact_channel_click", {
+                  channel: "email",
+                  location: "mobile_menu",
+                })
+              }
+              className="flex min-h-11 items-center text-sm text-muted-foreground transition-colors hover:text-foreground"
+            >
+              contact@houle.ai
+            </a>
+            <div className="mt-3 flex flex-col gap-1 border-t pt-3 [&>div>span:first-child]:pl-0">
+              <ThemeToggleMobile />
+              <Suspense fallback={null}>
+                <LangSwitchMobile onLocaleChange={handleLinkClick} />
+              </Suspense>
             </div>
           </nav>
         </div>

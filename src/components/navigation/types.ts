@@ -6,6 +6,8 @@ export type NavData = {
     ressources: string;
     contact: string;
     mobileNavigation: string;
+    allProducts?: string;
+    allServices?: string;
   };
   products: Array<{
     href: string;
