@@ -1,0 +1,405 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Café Zinette – bistrot au Grand-Lancy, Genève</title>
+<meta name="description" content="Ancienne auberge de la place du Grand-Lancy, le Café Zinette sert une carte courte qui change souvent. Du lundi midi au vendredi soir. Réservation : 022 743 12 00.">
+<!-- Maquette non publiée : retirer cette ligne à la mise en ligne -->
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#efeeea" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#141716" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="Café Zinette – bistrot au Grand-Lancy">
+<meta property="og:description" content="Ancienne auberge de la place du Grand-Lancy. Carte courte qui change souvent. Réservation : 022 743 12 00.">
+<meta property="og:image" content="img/facade.webp">
+<meta property="og:locale" content="fr_CH">
+<link rel="icon" href="img/zinette-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Young+Serif&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="img/facade.webp">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Café Zinette",
+  "url": "https://www.cafezinette.ch/",
+  "telephone": "+41 22 743 12 00",
+  "email": "info@cafezinette.ch",
+  "image": "img/facade.webp",
+  "logo": "img/zinette-logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Route du Grand-Lancy 45",
+    "addressLocality": "Lancy",
+    "addressRegion": "GE",
+    "addressCountry": "CH"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 46.187259, "longitude": 6.12359 },
+  "hasMenu": "carte-des-mets.pdf",
+  "acceptsReservations": true,
+  "sameAs": [
+    "https://www.instagram.com/cafezinette/",
+    "https://www.facebook.com/Caf%C3%A9-Zinette-519511478097476/"
+  ]
+}
+</script>
+<!--
+  DIRECTION (fresh-web-design)
+  Artefacts de la maison : l'ardoise de la salle, les bons de commande aimantés au passe, le losange ◊
+  qui ponctue leur carte, le « 19.- » suisse, l'auberge du XIXe et ses boiseries.
+  Couleurs : papier de bon de commande (fond), ardoise (surface de la carte), encre (texte),
+  laiton des lampes de la salle (losange, liens), craie (texte sur ardoise).
+  Typo : Young Serif (enseigne de bistrot, chiffres pleins pour les prix) + Alegreya Sans (texte, vraies italiques).
+  Mise en page : bord gauche fort, la carte en pleine largeur sur ardoise, l'histoire en vraie chronologie.
+  Détail signature : le ◊ de leur carte et les « / » des intitulés en laiton ; le numéro de réservation
+  en très grand, comme sur l'ancien site.
+  Photo : leurs propres photos noir et blanc ; une seule en couleur (la salle le soir) pour la lumière.
+  Mouvement : aucun.
+-->
+<style>
+:root{
+  --paper:#efeeea; --ink:#1d211f; --muted:#4b514d; --line:#cfcdc6;
+  --brass:#865710; --slate:#232826; --chalk:#ebe9e2; --chalk-muted:#b9bcb5; --brass-chalk:#d9a54f;
+  --ribbon-bg:#1d211f; --ribbon-ink:#efeeea;
+  --measure:62ch;
+  --fs-0:1.0625rem; --fs-1:1.25rem; --fs-2:1.6rem; --fs-3:clamp(2rem,6.2vw,3.6rem); --fs-4:clamp(2.6rem,11vw,6.5rem);
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --paper:#141716; --ink:#e7e5de; --muted:#a8aca6; --line:#2e3431;
+    --brass:#d9a54f; --slate:#1e2422; --chalk:#ebe9e2; --chalk-muted:#b2b6af; --brass-chalk:#e0b062;
+    --ribbon-bg:#e7e5de; --ribbon-ink:#141716;
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:4.5rem}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 var(--fs-0)/1.6 "Alegreya Sans",sans-serif;font-kerning:normal;hanging-punctuation:first}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:"Young Serif",serif;font-weight:400;line-height:1.08;margin:0}
+p{margin:0 0 1em;max-width:var(--measure)}
+.wrap{max-width:74rem;margin:0 auto;padding:0 1.25rem}
+@media (min-width:56rem){.wrap{padding:0 2.5rem}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.mark{display:block;object-fit:contain;filter:brightness(0)}
+@media (prefers-color-scheme:dark){.mark{filter:none;opacity:.92}}
+.loz{color:var(--brass);font-family:"Young Serif",serif}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+
+/* En-tête */
+.top{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:1.25rem;height:3.75rem}
+.top .mark{width:2.4rem;height:3rem;color:var(--ink);flex:none}
+.top nav{display:flex;gap:1.1rem;overflow-x:auto;scrollbar-width:none;flex:1;font-weight:500}
+.top nav::-webkit-scrollbar{display:none}
+.top nav a{text-decoration:none;white-space:nowrap;padding:.3rem 0}
+.top nav a:hover{color:var(--brass)}
+.call{flex:none;text-decoration:none;font-weight:700;color:var(--paper);background:var(--ink);padding:.45rem .8rem;border-radius:2px;white-space:nowrap}
+.call:hover{background:var(--brass)}
+.call .long{display:none}
+@media (min-width:40rem){.call .long{display:inline}.call .short{display:none}}
+@media (max-width:37.5rem){.top nav{visibility:hidden}}
+
+/* Ouverture */
+.hero{display:grid;gap:0}
+.hero figure{margin:0}
+.hero img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 40%}
+.hero-text{padding:2rem 1.25rem 2.75rem}
+.hero .mark{width:7.5rem;height:9.5rem;color:var(--ink);margin:0 0 1.25rem -.4rem}
+.hero h1{font-size:var(--fs-3);max-width:13ch;letter-spacing:-.01em}
+.hero .lede{font-size:var(--fs-1);margin:1.1rem 0 1.75rem;color:var(--muted)}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;align-items:center}
+.btn{display:inline-block;text-decoration:none;font-weight:700;background:var(--ink);color:var(--paper);padding:.8rem 1.1rem;border-radius:2px}
+.btn:hover{background:var(--brass)}
+.textlink{font-weight:500;text-decoration-color:var(--brass);text-underline-offset:.25em;text-decoration-thickness:2px}
+@media (min-width:56rem){
+  .hero{grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:stretch;min-height:min(42rem,calc(100vh - 3.75rem))}
+  .hero figure{order:2}
+  .hero img{height:100%;aspect-ratio:auto}
+  .hero-text{padding:3.5rem 3rem 3.5rem max(2.5rem,calc((100vw - 74rem)/2 + 2.5rem));align-self:center}
+}
+.where{font-style:italic;color:var(--muted);margin-top:1.75rem;font-size:1rem}
+
+/* La carte, sur ardoise */
+.carte{background:var(--slate);color:var(--chalk)}
+.carte .board{height:9rem;width:100%;object-fit:cover;object-position:0 30%;opacity:.85}
+.carte .wrap{padding-top:3rem;padding-bottom:3.5rem}
+.carte h2{font-size:var(--fs-3)}
+.carte .intro{color:var(--chalk-muted);font-size:var(--fs-1);margin:1rem 0 2.5rem}
+.carte .loz{color:var(--brass-chalk)}
+.courses{display:grid;gap:2.5rem}
+@media (min-width:56rem){.courses{grid-template-columns:repeat(3,minmax(0,1fr));gap:3rem}}
+.courses h3{font-size:var(--fs-2);border-bottom:1px solid #4a514d;padding-bottom:.5rem;margin-bottom:.4rem}
+.courses ul{list-style:none;margin:0;padding:0}
+.courses li{display:grid;grid-template-columns:1.1rem 1fr auto;gap:.5rem;padding:.75rem 0;border-bottom:1px dotted #4a514d;align-items:baseline}
+.courses li .loz{font-size:.9rem}
+.dish .sl{color:var(--brass-chalk);padding:0 .15em}
+.price{font-family:"Young Serif",serif;font-size:1.05rem;white-space:nowrap}
+.carte-foot{margin-top:2.25rem;display:flex;flex-wrap:wrap;gap:1rem 2rem;align-items:baseline;color:var(--chalk-muted);font-size:.98rem}
+.carte-foot a{color:var(--chalk);font-weight:700;text-decoration-color:var(--brass-chalk);text-underline-offset:.25em;text-decoration-thickness:2px}
+.cave{margin-top:3rem;padding-top:2rem;border-top:1px solid #4a514d;display:grid;gap:1rem}
+.cave h3{font-size:var(--fs-2)}
+.cave p{color:var(--chalk-muted)}
+@media (min-width:56rem){.cave{grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:3rem}}
+
+/* Cuisine : deux photos décalées */
+.kitchen{padding:3.5rem 0 1rem}
+.kitchen .wrap{display:grid;gap:1rem}
+.kitchen figure{margin:0}
+.kitchen figcaption,.places figcaption{font-size:.92rem;color:var(--muted);margin-top:.4rem}
+@media (min-width:56rem){
+  .kitchen .wrap{grid-template-columns:7fr 5fr;align-items:end}
+  .kitchen figure:last-child{margin-bottom:-4rem}
+}
+
+/* Les lieux */
+.places{padding:4.5rem 0 3.5rem}
+.places h2,.story h2,.shop h2,.infos h2{font-size:var(--fs-3)}
+.places .cols{display:grid;gap:2rem;margin-top:1.75rem}
+.spaces{list-style:none;margin:0;padding:0;font-size:var(--fs-1)}
+.spaces li{display:grid;grid-template-columns:1.4rem 1fr;padding:.6rem 0;border-bottom:1px solid var(--line)}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:.6rem}
+.gallery figure{margin:0}
+.gallery .wide{grid-column:1/-1}
+.gallery img{width:100%;aspect-ratio:3/2;object-fit:cover}
+@media (min-width:56rem){
+  .places .cols{grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:3rem}
+  .gallery{grid-template-columns:2fr 1fr}
+  .gallery .wide{grid-column:auto;grid-row:span 2}
+  .gallery .wide img{aspect-ratio:auto;height:100%}
+}
+
+/* Histoire */
+.story{padding:3.5rem 0;border-top:1px solid var(--line)}
+.quote{margin:1.75rem 0 2.5rem;padding:0;max-width:40rem}
+.quote p{font-family:"Young Serif",serif;font-size:clamp(1.35rem,3.6vw,1.9rem);line-height:1.3;max-width:none;text-indent:-.45em}
+.quote footer{color:var(--muted);font-style:italic}
+.timeline{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.timeline li{display:grid;grid-template-columns:5.5rem 1fr;gap:1rem;padding:1.1rem 0;border-top:1px solid var(--line)}
+.timeline .y{font-family:"Young Serif",serif;font-size:1.5rem;line-height:1.2;color:var(--brass)}
+.timeline p{margin:0}
+@media (min-width:56rem){.story .cols{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:3rem}.timeline li{grid-template-columns:8rem 1fr}.timeline .y{font-size:2rem}}
+
+/* Épicerie */
+.shop{padding:3.5rem 0;border-top:1px solid var(--line)}
+.shop .shout{font-family:"Young Serif",serif;font-size:var(--fs-2);line-height:1.25;margin:1.25rem 0 .4rem;max-width:30ch}
+.shop .shout-by{color:var(--muted);font-style:italic;font-size:1rem}
+.shop .cols{display:grid;gap:1.5rem;margin-top:1.75rem}
+@media (min-width:56rem){.shop .cols{grid-template-columns:1fr 1fr;gap:3rem}}
+
+/* Infos et réservation */
+.infos{background:var(--slate);color:var(--chalk);padding:3.5rem 0 4.5rem}
+.infos .label{color:var(--chalk-muted);font-size:1rem;margin:0 0 .3rem}
+.bigtel{display:inline-block;font-family:"Young Serif",serif;font-size:var(--fs-4);line-height:1;text-decoration:none;color:var(--chalk);letter-spacing:-.02em;margin:.4rem 0 .6rem;white-space:nowrap}
+.bigtel:hover{color:var(--brass-chalk)}
+.infos .intl{color:var(--chalk-muted)}
+.facts{display:grid;gap:1.75rem;margin-top:2.75rem;padding-top:2rem;border-top:1px solid #4a514d}
+.facts h3{font-size:1.3rem;margin-bottom:.5rem}
+.facts p{color:var(--chalk-muted);margin:0 0 .35rem}
+.facts a{color:var(--chalk);text-decoration-color:var(--brass-chalk);text-underline-offset:.25em;text-decoration-thickness:2px}
+@media (min-width:46rem){.facts{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:64rem){.facts{grid-template-columns:5fr 4fr 4fr}}
+
+/* Pied */
+.foot{padding:2rem 0 4.5rem;font-size:.95rem;color:var(--muted)}
+.foot .wrap{display:flex;flex-wrap:wrap;gap:.5rem 1.5rem;align-items:center}
+.foot .mark{width:1.8rem;height:2.3rem;opacity:.7}
+
+/* Bandeau maquette */
+.ribbon{position:fixed;left:.6rem;bottom:.6rem;z-index:50;background:var(--ribbon-bg);color:var(--ribbon-ink);font-size:.75rem;line-height:1.2;padding:.35rem .6rem;border-radius:2px;opacity:.92;pointer-events:none;max-width:calc(100vw - 1.2rem)}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a href="#" aria-label="Café Zinette, accueil"><img class="mark" src="img/zinette-logo.png" width="200" height="254" alt=""></a>
+    <nav aria-label="Sections">
+      <a href="#carte">La carte</a>
+      <a href="#lieux">Les lieux</a>
+      <a href="#zinette">Zinette</a>
+      <a href="#epicerie">L’épicerie</a>
+      <a href="#infos">Infos</a>
+    </nav>
+    <a class="call" href="tel:+41227431200"><span class="short">Appeler</span><span class="long">Réserver · 022 743 12 00</span></a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <figure>
+      <img src="img/facade.webp" width="1280" height="853" alt="La façade du Café Zinette et son enseigne, derrière les bambous de la terrasse" fetchpriority="high">
+    </figure>
+    <div class="hero-text">
+      <img class="mark" src="img/zinette-logo.png" width="200" height="254" alt="">
+      <h1><span class="sr">Café Zinette – </span>L’ancienne auberge de la place du Grand&#8209;Lancy</h1>
+      <p class="lede">Une carte courte qui change souvent, des saveurs simples et vraies. Au bistrot, au premier, à la table d’hôte ou en terrasse.</p>
+      <div class="actions">
+        <a class="btn" href="tel:+41227431200">Réserver au 022 743 12 00</a>
+        <a class="textlink" href="#carte">La carte du moment</a>
+      </div>
+      <p class="where">« Situé juste après la mairie sur la gauche, vous ne pourrez pas vous tromper&nbsp;; enfin cela dépend d’où vous venez. »</p>
+    </div>
+  </section>
+
+  <section class="carte" id="carte" aria-labelledby="carte-t">
+    <img class="board" src="img/ardoise.webp" width="1280" height="853" alt="" loading="lazy">
+    <div class="wrap">
+      <h2 id="carte-t">La carte</h2>
+      <p class="intro">Ludique et maline, la carte change souvent mais ne fait jamais de long discours. Créativité ou tradition&nbsp;? Et pourquoi pas les deux à la fois.</p>
+
+      <div class="courses">
+        <div>
+          <h3>Entrées</h3>
+          <ul>
+            <li><span class="loz" aria-hidden="true">◊</span><span class="dish">Poireaux<span class="sl">/</span>Hollandaise<span class="sl">/</span>Beurre noisette<span class="sl">/</span>Poutargue</span><span class="price">19.-</span></li>
+            <li><span class="loz" aria-hidden="true">◊</span><span class="dish">Fondue et viande séchée du Café Zinette</span><span class="price">20.-</span></li>
+            <li><span class="loz" aria-hidden="true">◊</span><span class="dish">Crevettes siciliennes<span class="sl">/</span>Jus de têtes<span class="sl">/</span>Fenouil<span class="sl">/</span>Nduja</span><span class="price">20.-</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Plats</h3>
+          <ul>
+            <li><span class="loz" aria-hidden="true">◊</span><span class="dish">Gnocchis de potimarron<span class="sl">/</span>Épinards<span class="sl">/</span>Curry vert<span class="sl">/</span>Sauge croustillante</span><span class="price">33.-</span></li>
+            <li><span class="loz" aria-hidden="true">◊</span><span class="dish">Agneau confit<span class="sl">/</span>Jus réduit<span class="sl">/</span>Choux rouges<span class="sl">/</span>Raifort<span class="sl">/</span>Yaourt<span class="sl">/</span>Focaccia</span><span class="price">42.-</span></li>
+            <li><span class="loz" aria-hidden="true">◊</span><span class="dish">Chevreuil<span class="sl">/</span>Jus échalotes<span class="sl">/</span>Endive<span class="sl">/</span>PDT<span class="sl">/</span>Coing</span><span class="price">39.-</span></li>
+            <li><span class="loz" aria-hidden="true">◊</span><span class="dish">Pêche du moment</span><span class="price"></span></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Desserts</h3>
+          <ul>
+            <li><span class="loz" aria-hidden="true">◊</span><span class="dish">Assiette de fromages</span><span class="price">17.-</span></li>
+            <li><span class="loz" aria-hidden="true">◊</span><span class="dish">Poire<span class="sl">/</span>Sarrasin<span class="sl">/</span>Miel fumé</span><span class="price">14.-</span></li>
+            <li><span class="loz" aria-hidden="true">◊</span><span class="dish">Pommes Tatin<span class="sl">/</span>Glace cardamome<span class="sl">/</span>Arlette</span><span class="price">14.-</span></li>
+            <li><span class="loz" aria-hidden="true">◊</span><span class="dish">Riz au lait<span class="sl">/</span>Safran<span class="sl">/</span>Comme une crème brûlée</span><span class="price">14.-</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="carte-foot">
+        <span>Prix en francs suisses. Provenances&nbsp;: chevreuil AUT, bœuf et agneau CH, poisson Atlantique, Méditerranée, CH.</span>
+        <a href="carte-des-mets.pdf">Carte des mets (PDF)</a>
+      </div>
+
+      <div class="cave">
+        <h3>La cave</h3>
+        <div>
+          <p>Une carte des vins qui part de Genève, chez les vignerons de Lully, Bernex et Soral, passe par le Valais, le Jura et Schaffhouse, puis file vers la Loire, l’Auvergne, le Jura français, l’Italie, l’Autriche ou la Hongrie. Avec ses bulles, ses rosés, ses oranges, ses oxydatifs et ses magnums.</p>
+          <p><a class="textlink" style="color:var(--chalk)" href="carte-des-vins.pdf">Carte des vins (PDF)</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="kitchen" aria-label="En cuisine">
+    <div class="wrap">
+      <figure>
+        <img src="img/assiettes.webp" width="1000" height="666" alt="Assiettes dressées sur le passe" loading="lazy">
+        <figcaption>Sur le passe.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/bons.webp" width="1000" height="667" alt="Bons de commande manuscrits tenus par des aimants" loading="lazy">
+        <figcaption>Les bons du service.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="places" id="lieux" aria-labelledby="lieux-t">
+    <div class="wrap">
+      <h2 id="lieux-t">Les lieux</h2>
+      <div class="cols">
+        <div>
+          <ul class="spaces">
+            <li><span class="loz" aria-hidden="true">◊</span><span>Au bistrot, au milieu des boiseries d’un autre âge.</span></li>
+            <li><span class="loz" aria-hidden="true">◊</span><span>Au premier, dans une ambiance cosy et tamisée.</span></li>
+            <li><span class="loz" aria-hidden="true">◊</span><span>À la table d’hôte, pour un souper en petit comité.</span></li>
+            <li><span class="loz" aria-hidden="true">◊</span><span>Et aux beaux jours, la terrasse.</span></li>
+          </ul>
+        </div>
+        <div class="gallery">
+          <figure class="wide">
+            <img src="img/salle.webp" width="1200" height="798" alt="La salle le soir, bougies allumées, mur de briques et arcades" loading="lazy">
+          </figure>
+          <figure>
+            <img src="img/terrasse.webp" width="1000" height="666" alt="La terrasse couverte, tables dressées" loading="lazy">
+          </figure>
+          <figure>
+            <img src="img/terrasse-nuit.webp" width="1000" height="665" alt="Fauteuils sur la terrasse, le soir" loading="lazy">
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="story" id="zinette" aria-labelledby="zinette-t">
+    <div class="wrap">
+      <div class="cols">
+        <div>
+          <h2 id="zinette-t">Zinette, c’est qui&nbsp;?</h2>
+          <blockquote class="quote">
+            <p>« Franchir le seuil de chez Zinette, c’est comme si l’on pénétrait dans le sanctuaire, où l’on vient rechercher et trouver fraîcheur, amitié sincère et réconfort, détente et joie de vivre. »</p>
+            <footer>Louis Froideveaux, à l’intention de Zinette qui fêtait ses 80 ans</footer>
+          </blockquote>
+          <p>On venait chez Zinette pour suivre les élections municipales ou pour y grignoter des œufs durs et des salamettis. Ici, pas de chichis ni de langue de bois&nbsp;: le caractère bien trempé de la maîtresse des lieux ne laissait place qu’à la franchise, à la tendresse et à la poésie de comptoir.</p>
+        </div>
+        <ol class="timeline">
+          <li><span class="y">av. 1895</span><p>Le café-boulangerie voit le jour à l’angle de l’avenue Eugène-Lance.</p></li>
+          <li><span class="y">1911</span><p>Le 9 novembre, naissance de Marie-Louise Déthiollaz, dite Zinette, dans la maison familiale&nbsp;: le café des Communes Réunies, tenu par ses parents.</p></li>
+          <li><span class="y">1945</span><p>Zinette reprend le café et en fait un endroit chéri, incontournable et emblématique du Grand-Lancy.</p></li>
+          <li><span class="y">1995</span><p>Zinette devient céleste. Le café est rénové et mis en concours.</p></li>
+          <li><span class="y">1999</span><p>Matthieu Mayor et Olivier Fioux reprennent la maison, et en gardent toute l’âme.</p></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="shop" id="epicerie" aria-labelledby="epicerie-t">
+    <div class="wrap">
+      <h2 id="epicerie-t">L’épicerie</h2>
+      <p class="shout">« On veut du bon, on veut du bon&nbsp;! »</p>
+      <p class="shout-by">un client, l’autre jour, en hurlant au rayon surgelé d’une grande surface</p>
+      <div class="cols">
+        <p>Les produits de saison sont à emporter directement à la réception du café. Séchés, cuits, étiquetés, conditionnés, épicés, goûtés, et même fumés par nos chefs de cuisine. Il y a aussi nos t-shirts et nos affiches sérigraphiées, sans oublier le fameux panier garni de fin d’année.</p>
+        <p>Réservez vos produits par téléphone au <a class="textlink" href="tel:+41227431200">022 743 12 00</a> ou par e-mail à <a class="textlink" href="mailto:info@cafezinette.ch">info@cafezinette.ch</a>&nbsp;: ils sont préparés et gardés pendant les trois jours ouvrables qui suivent votre commande.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="infos" id="infos" aria-labelledby="infos-t">
+    <div class="wrap">
+      <h2 id="infos-t" class="label">Réservation</h2>
+      <a class="bigtel" href="tel:+41227431200">022 743 12 00</a>
+      <p class="intl">Depuis l’étranger&nbsp;: +41 22 743 12 00</p>
+      <div class="facts">
+        <div>
+          <h3>Adresse</h3>
+          <p>Café Zinette<br>Route du Grand-Lancy 45<br>Lancy, Genève</p>
+          <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Caf%C3%A9+Zinette+Route+du+Grand-Lancy+45+Lancy" rel="noopener">Ouvrir dans Google Maps</a></p>
+        </div>
+        <div>
+          <h3>Ouverture</h3>
+          <p>Du lundi midi au vendredi soir.</p>
+          <p>Fermé le samedi et le dimanche.</p>
+        </div>
+        <div>
+          <h3>Nous écrire</h3>
+          <p><a href="mailto:info@cafezinette.ch">info@cafezinette.ch</a></p>
+          <p><a href="https://www.instagram.com/cafezinette/" rel="noopener">Instagram</a> · <a href="https://www.facebook.com/Caf%C3%A9-Zinette-519511478097476/" rel="noopener">Facebook</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <img class="mark" src="img/zinette-logo.png" width="200" height="254" alt="">
+    <span>Café Zinette, Route du Grand-Lancy 45, Lancy</span>
+  </div>
+</footer>
+
+<div class="ribbon" role="note">Maquette proposée par houle.ai — non publiée</div>
+</body>
+</html>

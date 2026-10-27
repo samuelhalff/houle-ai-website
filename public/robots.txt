@@ -4,6 +4,7 @@ Allow: /
 
 # Disallow internal/API routes
 Disallow: /api/
+Disallow: /demo/
 Disallow: /_next/
 Disallow: /_next/static/
 Disallow: /_next/image

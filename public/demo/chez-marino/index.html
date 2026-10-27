@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chez Marino – Pizzeria et trattoria, rue Muzy, Genève</title>
+<meta name="description" content="Restaurant italien et pizzeria au 22, rue Muzy à Genève : pizzas, pâtes, viandes et poissons. La carte complète, les horaires, et la réservation au 022 736 45 16.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f2f4ee" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16120e" media="(prefers-color-scheme: dark)">
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="Chez Marino – Pizzeria et trattoria, rue Muzy, Genève">
+<meta property="og:description" content="Toutes les saveurs de l’Italie, au 22, rue Muzy à Genève. Réservation au 022 736 45 16.">
+<meta property="og:image" content="facade-og.jpg">
+<meta property="og:locale" content="fr_CH">
+<link rel="icon" href="logo.webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Big+Shoulders+Display:wght@700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="facade-900.webp" imagesrcset="facade-900.webp 900w, facade-1600.webp 1600w" imagesizes="100vw">
+<!--
+  DESIGN NOTES (houle.ai mock-up, 2026-10-27)
+  Artefacts: the corner facade at night (blade sign "Marino", red awning, "PIZZERIA" letters),
+  the enamel plaque on the wall ("Ici le possible est déjà fait…"), the printed carte
+  (Italian name, French line, Swiss price "24.–", allergen codes).
+  Colours from the logo and the facade: logo green (accent, links), awning red (full-bleed
+  info band and call buttons), enamel white with a green-grey tint (page), night brown-black
+  (dark mode, the facade photo). The red/green/white is the logo's own tricolore border.
+  Type: Big Shoulders Display (condensed, like the shop-front lettering) + Alegreya
+  (calligraphic serif, true italics, close to the hand-lettered logo).
+  Signature: enamel plaques (slogan, hours). Motion: none. Exceptions: a dark scrim on the
+  hero photo exists only for text contrast.
+-->
+<style>
+:root{
+  --bg:#f2f4ee; --surface:#e7ebe0; --ink:#1c2116; --muted:#4f5946; --rule:#c9d0bd;
+  --green:#3a7417; --green-ink:#2e5f11; --red:#a8231b; --on-red:#fdf1ec; --on-red-muted:#f3cfc6;
+  --enamel:#f7f8f4; --enamel-ink:#1f2b3a; --enamel-edge:#1f2b3a;
+  --ribbon-bg:#1c2116; --ribbon-ink:#eef1e8;
+  --display:"Big Shoulders Display","Arial Narrow",sans-serif;
+  --text:"Alegreya",Georgia,serif;
+  --gutter:clamp(16px,5vw,64px);
+}
+@media (prefers-color-scheme:dark){
+  :root{
+    --bg:#16120e; --surface:#211b15; --ink:#f1ebe0; --muted:#bfb4a2; --rule:#3a3128;
+    --green:#93cc5e; --green-ink:#a9d97c; --red:#7f1a14; --on-red:#fbe9e3; --on-red-muted:#efc4ba;
+    --enamel:#ece9e1; --enamel-ink:#1f2b3a; --enamel-edge:#1f2b3a;
+    --ribbon-bg:#f1ebe0; --ribbon-ink:#16120e;
+  }
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--text);font-size:1.125rem;line-height:1.55;padding-bottom:44px}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--green-ink);text-underline-offset:.18em;text-decoration-thickness:1px}
+a:hover{text-decoration-thickness:2px}
+:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+.wrap{padding-inline:var(--gutter);max-width:1240px;margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-weight:800;line-height:.92;letter-spacing:.005em;margin:0}
+
+/* Header */
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:10px}
+.top img{width:112px}
+.top .tel{font-family:var(--display);font-weight:700;font-size:1.5rem;color:var(--ink);text-decoration:none;white-space:nowrap}
+.top .tel span{color:var(--muted);font-family:var(--text);font-weight:400;font-size:.95rem;margin-right:.4em}
+
+/* Hero */
+.hero{position:relative;min-height:min(88svh,820px);display:flex;align-items:flex-end;color:#f7f1e6;background:#1b1510;overflow:hidden}
+.hero picture,.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:38% 45%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(18,13,9,.9) 0%,rgba(18,13,9,.55) 38%,rgba(18,13,9,0) 70%)}
+.hero .wrap{position:relative;z-index:1;width:100%;padding-block:0 clamp(28px,6vw,64px)}
+.hero h1{font-size:clamp(4.2rem,19vw,11rem);text-transform:none}
+.hero p{font-size:clamp(1.2rem,3.6vw,1.6rem);font-style:italic;max-width:30ch;margin:.5rem 0 1.4rem;color:#f2e7d6}
+.actions{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center}
+.btn{display:inline-block;background:var(--red);color:var(--on-red);font-family:var(--display);font-weight:700;font-size:1.35rem;letter-spacing:.02em;padding:.55em .9em .5em;text-decoration:none;border-radius:3px}
+.btn:hover{filter:brightness(1.08)}
+.hero .more{color:#f7f1e6;font-size:1.1rem}
+
+/* Story */
+.story{display:grid;gap:40px;padding-block:clamp(56px,10vw,120px)}
+.story .lede{font-size:clamp(1.35rem,3.4vw,1.85rem);line-height:1.4;max-width:34ch;margin:0}
+.story .lede strong{font-weight:700}
+.story .people{margin:1.2rem 0 0;max-width:52ch;color:var(--muted)}
+@media (min-width:860px){.story{grid-template-columns:1.35fr 1fr;align-items:center}}
+
+/* Enamel plaque (signature) */
+.plaque{background:var(--enamel);color:var(--enamel-ink);border:3px solid var(--enamel-edge);border-radius:12px;padding:30px 26px;position:relative;text-align:center;font-family:var(--display);font-weight:800;line-height:1.02;max-width:340px;margin-inline:auto;box-shadow:inset 0 0 0 5px var(--enamel),inset 0 0 0 7px var(--enamel-edge)}
+.plaque::before,.plaque::after{content:"";position:absolute;top:10px;width:7px;height:7px;border-radius:50%;background:#9aa3ab;}
+.plaque::before{left:12px}.plaque::after{right:12px}
+.plaque .big{font-size:2.3rem;display:block}
+.plaque .mid{font-size:1.55rem;display:block}
+.plaque .small{font-size:1.05rem;display:block;font-weight:700;letter-spacing:.03em}
+.plaque .gap{display:block;height:.7em}
+.plaque-cap{text-align:center;font-style:italic;color:var(--muted);font-size:.95rem;margin:.8rem 0 0}
+
+/* Photo strip */
+.strip-head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 24px;margin-bottom:18px}
+.strip-head h2{font-size:clamp(2.4rem,8vw,4rem)}
+.strip-head p{margin:0;max-width:44ch;color:var(--muted)}
+.strip{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--gutter) 14px;margin:0;list-style:none;scrollbar-width:thin}
+.strip li{flex:0 0 auto;scroll-snap-align:start}
+.strip img{width:200px;height:222px;object-fit:cover;border-radius:2px}
+.strip li.oven img{width:200px}
+
+/* Carte */
+.carte{padding-block:clamp(64px,10vw,120px) 40px}
+.carte > .wrap > h2{font-size:clamp(3.2rem,12vw,6.5rem)}
+.carte .intro{max-width:56ch;margin:.8rem 0 2rem;color:var(--muted)}
+.sec{border-top:2px solid var(--ink)}
+.sec:last-of-type{border-bottom:2px solid var(--ink)}
+.sec summary{list-style:none;cursor:pointer;display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:16px 0 14px}
+.sec summary::-webkit-details-marker{display:none}
+.sec summary h3{font-size:clamp(2rem,7vw,3rem)}
+.sec summary .fr{font-style:italic;color:var(--muted);font-size:1.05rem;margin-left:.5rem;font-family:var(--text);font-weight:400}
+.sec summary .tog{font-family:var(--display);font-weight:700;font-size:1.8rem;line-height:1;color:var(--green)}
+.sec summary .tog::before{content:"+"}
+.sec[open] summary .tog::before{content:"–"}
+.items{list-style:none;margin:0 0 28px;padding:0;display:grid;gap:0 56px}
+@media (min-width:900px){.items{grid-template-columns:1fr 1fr}}
+.item{display:grid;grid-template-columns:1fr auto;column-gap:16px;padding:11px 0;border-bottom:1px solid var(--rule);break-inside:avoid}
+.item b{font-weight:700;font-size:1.13rem}
+.item .al{font-size:.72rem;color:var(--muted);margin-left:.45em;font-variant-numeric:lining-nums;white-space:nowrap;vertical-align:.12em}
+.item .d{grid-column:1;font-style:italic;color:var(--muted);font-size:1rem;line-height:1.4}
+.item .p{grid-row:1;grid-column:2;font-variant-numeric:lining-nums tabular-nums;font-weight:600;text-align:right;white-space:nowrap}
+.item .p small{font-weight:400;color:var(--muted);font-size:.8rem}
+.note{font-style:italic;color:var(--muted);margin:-12px 0 28px;font-size:1rem}
+.wine-group{margin:6px 0 2px;font-family:var(--display);font-weight:700;font-size:1.35rem;color:var(--green-ink)}
+.legend{display:grid;gap:28px;padding-block:28px 0;font-size:.98rem;color:var(--muted)}
+.legend h4{font-family:var(--display);font-weight:700;font-size:1.3rem;color:var(--ink);margin:0 0 6px}
+.legend dl{display:grid;grid-template-columns:auto 1fr;gap:2px 12px;margin:0}
+.legend dt{font-weight:700;color:var(--ink)}
+.legend dd{margin:0}
+.legend p{margin:0 0 6px}
+@media (min-width:860px){.legend{grid-template-columns:1.2fr 1fr 1fr}}
+
+/* Info band (awning red) */
+.info{background:var(--red);color:var(--on-red);margin-top:clamp(48px,8vw,96px)}
+.info + .carte{padding-top:clamp(56px,9vw,104px)}
+.info .wrap{display:grid;gap:44px;padding-block:clamp(56px,9vw,104px)}
+@media (min-width:900px){.info .wrap{grid-template-columns:1fr 1fr;align-items:start}}
+.info h2{font-size:clamp(3rem,11vw,5.5rem)}
+.info a{color:var(--on-red)}
+.info address{font-style:normal;font-size:1.35rem;line-height:1.4;margin:1rem 0 .6rem}
+.info .muted{color:var(--on-red-muted)}
+.info .phone{display:block;font-family:var(--display);font-weight:800;font-size:clamp(2.6rem,10vw,4rem);line-height:1;text-decoration:none;margin:1.6rem 0 .3rem}
+.info .phone:hover{text-decoration:underline;text-decoration-thickness:3px}
+.hours{margin-inline:0;max-width:400px;text-align:left;padding:26px 26px 22px}
+.hours h3{font-size:2rem;margin-bottom:12px;text-align:center}
+.hours dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:6px 14px;font-family:var(--text);font-weight:600;font-size:1.05rem;line-height:1.3}
+.hours dt{font-family:var(--display);font-weight:800;font-size:1.2rem}
+.hours dd{margin:0;font-variant-numeric:lining-nums}
+.hours .s{border-top:1px solid color-mix(in srgb,var(--enamel-edge) 35%,transparent);padding-top:10px;margin-top:4px}
+
+/* Footer */
+footer{padding-block:40px 28px;font-size:1rem;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:20px 40px;align-items:center;justify-content:space-between}
+footer img{width:96px}
+footer ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 22px}
+
+/* Mock-up ribbon */
+.ribbon{position:fixed;left:0;right:0;bottom:0;z-index:50;background:var(--ribbon-bg);color:var(--ribbon-ink);font:600 .82rem/1 var(--text);text-align:center;padding:9px 12px;letter-spacing:.01em}
+.ribbon a{color:inherit}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Restaurant",
+ "name": "Chez Marino",
+ "description": "Ristorante – pizzeria. Toutes les saveurs de l’Italie.",
+ "servesCuisine": [
+  "Italienne",
+  "Pizza"
+ ],
+ "address": {
+  "@type": "PostalAddress",
+  "streetAddress": "Rue Muzy 22",
+  "postalCode": "1207",
+  "addressLocality": "Genève",
+  "addressCountry": "CH"
+ },
+ "telephone": "+41 22 736 45 16",
+ "image": "facade-og.jpg",
+ "logo": "logo.webp",
+ "menu": "https://www.chez-marino.ch/images/menu_fr.pdf",
+ "url": "https://www.chez-marino.ch/",
+ "sameAs": [
+  "https://www.facebook.com/www.chezmarino.ch",
+  "https://fr.tripadvisor.ch/Restaurant_Review-g188057-d3686876-Reviews-Chez_Marino-Geneva.html"
+ ],
+ "openingHoursSpecification": [
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday"
+   ],
+   "opens": "11:30",
+   "closes": "14:30"
+  },
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Sunday"
+   ],
+   "opens": "18:30",
+   "closes": "01:00"
+  },
+  {
+   "@type": "OpeningHoursSpecification",
+   "dayOfWeek": [
+    "Friday",
+    "Saturday"
+   ],
+   "opens": "18:30",
+   "closes": "02:00"
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<header class="wrap top">
+  <a href="#"><img src="logo.webp" width="403" height="268" alt="Chez Marino, ristorante – pizzeria"></a>
+  <a class="tel" href="tel:+41227364516"><span>Réserver</span>022 736 45 16</a>
+</header>
+
+<main>
+<section class="hero" aria-labelledby="titre">
+  <picture>
+    <source type="image/webp" srcset="facade-900.webp 900w, facade-1600.webp 1600w" sizes="100vw">
+    <img src="facade-900.webp" width="1600" height="1200" alt="La façade de Chez Marino le soir, à l’angle de la rue Muzy : l’enseigne Marino, le store rouge et le four au fond de la salle" fetchpriority="high">
+  </picture>
+  <div class="wrap">
+    <h1 id="titre">Chez Marino</h1>
+    <p>Toutes les saveurs de l’Italie, au 22, rue Muzy à Genève.</p>
+    <div class="actions">
+      <a class="btn" href="tel:+41227364516">Réserver une table : 022 736 45 16</a>
+      <a class="more" href="#carte">Lire la carte</a>
+    </div>
+  </div>
+</section>
+
+<section class="wrap story" aria-label="La maison">
+  <div>
+    <p class="lede">Un restaurant chaleureux et amical, dont l’esprit rappelle <strong>un air de famille</strong>. Un hommage au père fondateur, Marino, originaire des Pouilles, qui a été un modèle et une muse.</p>
+    <p class="people">C’est avec bonne humeur, simplicité et humilité que Veronica, Giuseppe et la squadra vous accueillent.</p>
+  </div>
+  <figure style="margin:0">
+    <div class="plaque" role="img" aria-label="Plaque émaillée : Ici le possible est déjà fait. L’impossible est en cours. Pour les miracles, prévoir 48 h de délai.">
+      <span class="big">ICI</span>
+      <span class="small">LE</span><span class="mid">POSSIBLE</span><span class="small">EST DÉJÀ FAIT</span>
+      <span class="gap"></span>
+      <span class="small">L’</span><span class="mid">IMPOSSIBLE</span><span class="small">EST EN COURS</span>
+      <span class="gap"></span>
+      <span class="small">POUR LES</span><span class="mid">MIRACLES</span><span class="small">PRÉVOIR 48 H DE DÉLAI</span>
+    </div>
+    <figcaption class="plaque-cap">Le mot de la maison.</figcaption>
+  </figure>
+</section>
+
+<section aria-labelledby="four">
+  <div class="wrap strip-head">
+    <h2 id="four">Sortis du four</h2>
+    <p>Quelques assiettes de la maison. Le pain aussi sort du four : il est élaboré par nos pizzaioli.</p>
+  </div>
+  <ul class="strip">
+    <li><img src="plat-1.webp" width="242" height="270" loading="lazy" alt="Pizza aux tomates fraîches, roquette et mozzarella"></li>
+    <li><img src="plat-3.webp" width="242" height="270" loading="lazy" alt="Pizza au salami"></li>
+    <li class="oven"><img src="plat-4.webp" width="242" height="270" loading="lazy" alt="Pains en train de cuire dans le four"></li>
+    <li><img src="plat-7.webp" width="242" height="270" loading="lazy" alt="Pizza au jambon cru"></li>
+    <li><img src="plat-5.webp" width="242" height="270" loading="lazy" alt="Pizza aux fruits de mer et basilic"></li>
+    <li><img src="plat-6.webp" width="242" height="270" loading="lazy" alt="Ravioli en sauce sur assiette noire"></li>
+    <li><img src="plat-8.webp" width="242" height="270" loading="lazy" alt="Pizza aux aubergines grillées et jambon"></li>
+    <li><img src="plat-2.webp" width="242" height="270" loading="lazy" alt="Pizza à la roquette et mozzarella"></li>
+    <li><img src="plat-9.webp" width="242" height="270" loading="lazy" alt="Pizza au salami et mozzarella"></li>
+  </ul>
+</section>
+
+<section class="info" id="infos" aria-labelledby="infos-t">
+  <div class="wrap">
+    <div>
+      <h2 id="infos-t">Rue Muzy 22</h2>
+      <address>Chez Marino<br>22, rue Muzy<br>1207 Genève</address>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Chez%20Marino%2C%20Rue%20Muzy%2022%2C%201207%20Gen%C3%A8ve">Ouvrir l’itinéraire dans Google Maps</a>
+      <a class="phone" href="tel:+41227364516">022 736 45 16</a>
+      <p class="muted" style="margin:0">Pour réserver une table, appelez-nous.</p>
+    </div>
+    <div class="plaque hours">
+      <h3>Horaires</h3>
+      <dl>
+        <dt>Midi</dt><dd>tous les jours<br>11 h 30 – 14 h 30</dd>
+        <dt class="s">Soir</dt><dd class="s">lundi au jeudi<br>18 h 30 – 1 h</dd>
+        <dt></dt><dd>vendredi et samedi<br>18 h 30 – 2 h</dd>
+        <dt></dt><dd>dimanche<br>18 h 30 – 1 h</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="carte" id="carte" aria-labelledby="carte-t">
+  <div class="wrap">
+    <h2 id="carte-t">La carte</h2>
+    <p class="intro">Toute la carte, lisible sur téléphone. Prix en francs suisses, TVA 8.1 % incluse. Les lettres après chaque plat indiquent les allergènes (légende en bas).</p>
+    <details class="sec" open>
+      <summary><h3><span lang="it">Pizze</span><span class="fr">pizzas</span></h3><span class="tog" aria-hidden="true"></span></summary>
+      <ul class="items">
+<li class="item"><span><b lang="it">Focaccia</b><span class="al" title="Allergènes">G</span></span><span class="p">9.–</span></li>
+<li class="item"><span><b lang="it">Margherita</b><span class="al" title="Allergènes">G-L</span></span><span class="p">16.–</span><span class="d">Sauce tomate, mozzarella, origan</span></li>
+<li class="item"><span><b lang="it">Tricolore</b><span class="al" title="Allergènes">G-L</span></span><span class="p">24.–</span><span class="d">Sauce tomate, mozzarella, tomates fraîches, roquette, mozzarella di bufala</span></li>
+<li class="item"><span><b lang="it">Quattro formaggi</b><span class="al" title="Allergènes">G-L</span></span><span class="p">23.–</span><span class="d">Sauce tomate, mozzarella, gorgonzola, ricotta, parmesan</span></li>
+<li class="item"><span><b lang="it">Prosciutto</b><span class="al" title="Allergènes">G-L</span></span><span class="p">19.–</span><span class="d">Sauce tomate, mozzarella, jambon cuit</span></li>
+<li class="item"><span><b lang="it">Funghi</b><span class="al" title="Allergènes">G-L</span></span><span class="p">18.–</span><span class="d">Sauce tomate, mozzarella, champignons</span></li>
+<li class="item"><span><b lang="it">Campagnola</b><span class="al" title="Allergènes">G-L</span></span><span class="p">21.–</span><span class="d">Sauce tomate, mozzarella, oignons, ail, tomates fraîches, basilic</span></li>
+<li class="item"><span><b lang="it">Prosciutto e funghi</b><span class="al" title="Allergènes">G-L</span></span><span class="p">21.–</span><span class="d">Sauce tomate, mozzarella, jambon cuit, champignons</span></li>
+<li class="item"><span><b lang="it">Capricciosa</b><span class="al" title="Allergènes">G-L-O</span></span><span class="p">22.–</span><span class="d">Sauce tomate, mozzarella, jambon cuit, champignons, œuf</span></li>
+<li class="item"><span><b lang="it">Quattro stagioni</b><span class="al" title="Allergènes">G-L</span></span><span class="p">23.–</span><span class="d">Sauce tomate, mozzarella, jambon cuit, champignons, artichauts, olives</span></li>
+<li class="item"><span><b lang="it">Parmigiana</b><span class="al" title="Allergènes">G-L</span></span><span class="p">24.–</span><span class="d">Sauce tomate, mozzarella, jambon cuit, aubergines grillées, parmesan</span></li>
+<li class="item"><span><b lang="it">Calzone</b><span class="al" title="Allergènes">G-L</span></span><span class="p">22.–</span><span class="d">Sauce tomate, mozzarella, jambon cuit, artichauts</span></li>
+<li class="item"><span><b lang="it">Parma</b><span class="al" title="Allergènes">G-L</span></span><span class="p">25.–</span><span class="d">Sauce tomate, mozzarella, jambon de Parme</span></li>
+<li class="item"><span><b lang="it">Italia</b><span class="al" title="Allergènes">G-L</span></span><span class="p">29.–</span><span class="d">Sauce tomate, mozzarella, jambon de Parme, mozzarella di bufala, roquette, parmesan</span></li>
+<li class="item"><span><b lang="it">Calabrese</b><span class="al" title="Allergènes">G-L</span></span><span class="p">24.–</span><span class="d">Sauce tomate, mozzarella, salami piquant</span></li>
+<li class="item"><span><b lang="it">Bufalotta</b><span class="al" title="Allergènes">G-L</span></span><span class="p">29.–</span><span class="d">Sauce tomate, mozzarella, salami piquant, salade de trévise et mozzarella di bufala</span></li>
+<li class="item"><span><b lang="it">Alpina</b><span class="al" title="Allergènes">G-L</span></span><span class="p">25.–</span><span class="d">Tomates cerises, mozzarella, roquette, fromage de chèvre et miel</span></li>
+<li class="item"><span><b lang="it">Paesana</b><span class="al" title="Allergènes">G-L</span></span><span class="p">26.–</span><span class="d">Sauce tomate, mozzarella, salami piquant, ricotta, aubergines grillées</span></li>
+<li class="item"><span><b lang="it">Tirrenica</b><span class="al" title="Allergènes">G-L</span></span><span class="p">29.–</span><span class="d">Sauce tomate, mozzarella, bresaola, roquette, mozzarella di bufala, parmesan, huile aromatisée à la truffe</span></li>
+<li class="item"><span><b lang="it">Primavera</b><span class="al" title="Allergènes">G-L</span></span><span class="p">23.–</span><span class="d">Sauce tomate, mozzarella, courgettes, aubergines grillées et poivrons</span></li>
+<li class="item"><span><b lang="it">Napoletana</b><span class="al" title="Allergènes">G-L-P</span></span><span class="p">20.–</span><span class="d">Sauce tomate, mozzarella, anchois, olives, câpres</span></li>
+<li class="item"><span><b lang="it">Siciliana</b><span class="al" title="Allergènes">G-L-P</span></span><span class="p">22.–</span><span class="d">Sauce tomate, mozzarella, thon, olives, champignons</span></li>
+<li class="item"><span><b lang="it">Scozzese</b><span class="al" title="Allergènes">G-L-P</span></span><span class="p">28.–</span><span class="d">Mozzarella, saumon fumé, ricotta et ciboulette</span></li>
+<li class="item"><span><b lang="it">Frutti di mare</b><span class="al" title="Allergènes">G-L-Cr-M</span></span><span class="p">25.–</span><span class="d">Sauce tomate, mozzarella, fruits de mer, ail</span></li>
+      </ul><p class="note">Le jambon cuit est un jambon d’épaule.</p>
+    </details>
+    <details class="sec">
+      <summary><h3><span lang="it">Antipasti</span><span class="fr">entrées</span></h3><span class="tog" aria-hidden="true"></span></summary>
+      <ul class="items">
+<li class="item"><span><b lang="it">Tricolore</b><span class="al" title="Allergènes">L</span></span><span class="p"><small>entrée</small> 17.–<br><small>plat</small> 23.–</span><span class="d">Mozzarella di bufala, tomates et roquette</span></li>
+<li class="item"><span><b lang="it">Antipasto Marino</b><span class="al" title="Allergènes">P-M-C-Su</span></span><span class="p"><small>entrée</small> 20.–<br><small>plat</small> 27.–</span><span class="d">Fines tranches de veau nappées de sauce au thon, fines tranches de bœuf cru, salade de calamars et champignons</span></li>
+<li class="item"><span><b lang="it">Carpaccio de bœuf</b><span class="al" title="Allergènes">L</span></span><span class="p"><small>entrée</small> 18.–<br><small>plat</small> 27.–</span><span class="d">Fines tranches de bœuf cru garnies de copeaux de parmesan, roquette et champignons</span></li>
+<li class="item"><span><b lang="it">Vitello tonnato</b><span class="al" title="Allergènes">P</span></span><span class="p"><small>entrée</small> 19.–<br><small>plat</small> 27.–</span><span class="d">Fines tranches de veau nappées de sauce au thon</span></li>
+<li class="item"><span><b lang="it">Calamari in salsa piccante</b><span class="al" title="Allergènes">M-Su</span></span><span class="p">22.–</span><span class="d">Calamars servis avec une sauce au vin blanc, tomate et piment</span></li>
+<li class="item"><span><b lang="it">Fantasia di mare</b><span class="al" title="Allergènes">M-P-Cr</span></span><span class="p"><small>entrée</small> 19.–<br><small>plat</small> 28.–</span><span class="d">Salade de fruits de mer</span></li>
+<li class="item"><span><b lang="it">Gamberi aglio, olio e pepe</b><span class="al" title="Allergènes">Cr</span></span><span class="p">27.–</span><span class="d">Gambas servis avec ail, huile et piment</span></li>
+      </ul>
+    </details>
+    <details class="sec">
+      <summary><h3><span lang="it">Insalate</span><span class="fr">salades</span></h3><span class="tog" aria-hidden="true"></span></summary>
+      <ul class="items">
+<li class="item"><span><b lang="it">Insalata verde</b></span><span class="p">7.–</span><span class="d">Salade verte</span></li>
+<li class="item"><span><b lang="it">Insalata mista</b></span><span class="p">9.–</span><span class="d">Salade mêlée</span></li>
+<li class="item"><span><b lang="it">Insalata di rucola e parmigiano</b><span class="al" title="Allergènes">L</span></span><span class="p">12.–</span><span class="d">Salade de roquette avec copeaux de parmesan</span></li>
+<li class="item"><span><b lang="it">Insalata delle Alpi</b><span class="al" title="Allergènes">L-G</span></span><span class="p">23.–</span><span class="d">Salade de chèvre chaud servie avec des fines tranches de jambon de Parme et croûtons</span></li>
+<li class="item"><span><b lang="it">Insalata nizzarda</b><span class="al" title="Allergènes">O-P</span></span><span class="p">24.–</span><span class="d">Salade mêlée servie avec pommes de terre, œufs, thon, anchois</span></li>
+<li class="item"><span><b lang="it">Insalata mediterranea</b><span class="al" title="Allergènes">L</span></span><span class="p">25.–</span><span class="d">Aubergines, courgettes et poivrons grillés avec de la mozzarella de bufala servis sur un lit de roquette et salade verte</span></li>
+      </ul>
+    </details>
+    <details class="sec">
+      <summary><h3><span lang="it">Pasta e risotti</span><span class="fr">pâtes et risotto</span></h3><span class="tog" aria-hidden="true"></span></summary>
+      <ul class="items">
+<li class="item"><span><b lang="it">Rigatoni alla giancaleone</b><span class="al" title="Allergènes">G-L-Su</span></span><span class="p">24.–</span><span class="d">Sauce tomate, crème, lardons et scamorza fumée</span></li>
+<li class="item"><span><b lang="it">Penne alla carbonara</b><span class="al" title="Allergènes">G-L-O</span></span><span class="p">23.–</span><span class="d">Sauce crème, lardons et jaune d’œuf</span></li>
+<li class="item"><span><b lang="it">Penne all’arrabbiata</b><span class="al" title="Allergènes">G</span></span><span class="p">21.–</span><span class="d">Sauce tomate, piment et olives</span></li>
+<li class="item"><span><b lang="it">Penne gamberi e zucchine</b><span class="al" title="Allergènes">G-Cr-Su</span></span><span class="p">28.–</span><span class="d">Tomates fraîches, gambas et julienne de courgettes</span></li>
+<li class="item"><span><b lang="it">Penne alla carrettiera</b><span class="al" title="Allergènes">G-L</span></span><span class="p">26.–</span><span class="d">Sauce tomate, aubergines, courgettes et mozzarelle gratinée</span></li>
+<li class="item"><span><b lang="it">Penne alla siciliana</b><span class="al" title="Allergènes">G-L</span></span><span class="p">25.–</span><span class="d">Sauce tomate, aubergines et mozzarella gratinée</span></li>
+<li class="item"><span><b lang="it">Penne ai gamberi</b><span class="al" title="Allergènes">G-L-Cr-Su</span></span><span class="p">26.–</span><span class="d">Sauce tomate, crème et gambas</span></li>
+<li class="item"><span><b lang="it">Fettucine alla bolognese</b><span class="al" title="Allergènes">G-C</span></span><span class="p">23.–</span><span class="d">Sauce tomate et viande hachée</span></li>
+<li class="item"><span><b lang="it">Fettucine al salmone</b><span class="al" title="Allergènes">G-L-P-Su</span></span><span class="p">28.–</span><span class="d">Sauce tomate, crème et saumon fumé</span></li>
+<li class="item"><span><b lang="it">Linguine alle vongole</b><span class="al" title="Allergènes">G-Su-M</span></span><span class="p">29.–</span><span class="d">Vongole, ail et persil</span></li>
+<li class="item"><span><b lang="it">Linguine allo scoglio</b><span class="al" title="Allergènes">G-Su-M-Cr</span></span><span class="p">30.–</span><span class="d">Tomates fraîches et fruits de mer</span></li>
+<li class="item"><span><b lang="it">Spaghetti aglio, olio e peperoncino</b><span class="al" title="Allergènes">G</span></span><span class="p">20.–</span><span class="d">Ail, huile et piment</span></li>
+<li class="item"><span><b lang="it">Spaghetti mafioso</b><span class="al" title="Allergènes">G-L-P</span></span><span class="p">24.–</span><span class="d">Anchois, olives, ail, piment, poivrons, pecorino et citron râpés</span></li>
+<li class="item"><span><b lang="it">Spaghetti al pomodoro</b><span class="al" title="Allergènes">G</span></span><span class="p">20.–</span><span class="d">Sauce tomate et basilic</span></li>
+<li class="item"><span><b lang="it">Spaghetti al pesto</b><span class="al" title="Allergènes">G-FC</span></span><span class="p">24.–</span><span class="d">Sauce au basilic</span></li>
+<li class="item"><span><b lang="it">Tagliatelle alla ciociara</b><span class="al" title="Allergènes">G-L</span></span><span class="p">25.–</span><span class="d">Sauce tomate, crème, petits pois, jambon et champignons</span></li>
+<li class="item"><span><b lang="it">Gnocchi al gorgonzola</b><span class="al" title="Allergènes">G-L</span></span><span class="p">24.–</span><span class="d">Sauce crème et gorgonzola</span></li>
+<li class="item"><span><b lang="it">Gnocchi aurora</b><span class="al" title="Allergènes">G-L</span></span><span class="p">24.–</span><span class="d">Sauce crème tomate</span></li>
+<li class="item"><span><b lang="it">Lasagne</b><span class="al" title="Allergènes">G-L-C</span></span><span class="p">25.–</span><span class="d">Lasagne à la viande hachée de bœuf</span></li>
+<li class="item"><span><b lang="it">Fagottini</b><span class="al" title="Allergènes">G-L</span></span><span class="p">28.–</span><span class="d">Fagottini farcis à la ricotta et truffe blanche</span></li>
+<li class="item"><span><b lang="it">Tortellini « Grand-Mère »</b><span class="al" title="Allergènes">G-L-C</span></span><span class="p">25.–</span><span class="d">Tortellini à la viande avec crème, petits pois et jambon</span></li>
+<li class="item"><span><b lang="it">Ravioli della nonna</b><span class="al" title="Allergènes">G-L</span></span><span class="p">25.–</span><span class="d">Ravioli farcis aux épinards et ricotta servis au beurre et à la sauge</span></li>
+<li class="item"><span><b lang="it">Risotto ai frutti di mare</b><span class="al" title="Allergènes">Cr-M-Su-C-L</span></span><span class="p">32.–</span><span class="d">Risotto aux fruits de mer</span></li>
+      </ul><p class="note">Spaghetti et penne sans gluten sur demande.</p>
+    </details>
+    <details class="sec">
+      <summary><h3><span lang="it">Carne</span><span class="fr">viandes</span></h3><span class="tog" aria-hidden="true"></span></summary>
+      <ul class="items">
+<li class="item"><span><b lang="it">Entrecôte alla griglia</b></span><span class="p">40.–</span><span class="d">Entrecôte grillée</span></li>
+<li class="item"><span><b lang="it">Entrecôte al pepe</b><span class="al" title="Allergènes">L-Su</span></span><span class="p">43.–</span><span class="d">Entrecôte au poivre concassé</span></li>
+<li class="item"><span><b lang="it">Finissima impanata</b><span class="al" title="Allergènes">O-G</span></span><span class="p">42.–</span><span class="d">Escalope de veau panée</span></li>
+<li class="item"><span><b lang="it">Scaloppine al limone</b><span class="al" title="Allergènes">L-Su-G</span></span><span class="p">42.–</span><span class="d">Escalopes de veau servies avec une sauce au citron</span></li>
+<li class="item"><span><b lang="it">Tagliata di manzo con rucola e parmigiano</b><span class="al" title="Allergènes">L</span></span><span class="p">42.–</span><span class="d">Tranches de faux-filet de bœuf sur un lit de roquette et copeaux de parmesan</span></li>
+<li class="item"><span><b lang="it">Piccata milanese</b><span class="al" title="Allergènes">O-G-L</span></span><span class="p">42.–</span><span class="d">Escalopes de veau panées à l’œuf et au parmesan</span></li>
+<li class="item"><span><b lang="it">Tartara di manzo</b></span><span class="p">42.–</span><span class="d">Tartare de bœuf</span></li>
+      </ul><p class="note">Servies avec une garniture au choix comprise : pâtes, riz, légumes ou frites.</p>
+    </details>
+    <details class="sec">
+      <summary><h3><span lang="it">Pesce</span><span class="fr">poissons</span></h3><span class="tog" aria-hidden="true"></span></summary>
+      <ul class="items">
+<li class="item"><span><b lang="it">Calamari ai ferri</b><span class="al" title="Allergènes">M</span></span><span class="p">30.–</span><span class="d">Calamars grillés</span></li>
+<li class="item"><span><b lang="it">Calamari fritti</b><span class="al" title="Allergènes">M</span></span><span class="p">30.–</span><span class="d">Calamars frits</span></li>
+<li class="item"><span><b lang="it">Polpo ai ferri</b><span class="al" title="Allergènes">M</span></span><span class="p">30.–</span><span class="d">Poulpe grillé servi avec des pommes de terre écrasées</span></li>
+<li class="item"><span><b lang="it">Branzino in umido con pomodorini</b><span class="al" title="Allergènes">P-Su</span></span><span class="p">33.–</span><span class="d">Filet de loup servi avec câpres, olives et tomates fraîches</span></li>
+<li class="item"><span><b lang="it">Salmone alla griglia</b><span class="al" title="Allergènes">P</span></span><span class="p">28.–</span><span class="d">Saumon grillé</span></li>
+<li class="item"><span><b lang="it">Cozze alla diavola</b><span class="al" title="Allergènes">M-Su</span></span><span class="p">24.–</span><span class="d">Moules servies avec une sauce au vin blanc, tomate et piment</span></li>
+<li class="item"><span><b lang="it">Cozze alla marinara</b><span class="al" title="Allergènes">M-Su</span></span><span class="p">24.–</span><span class="d">Moules marinières</span></li>
+      </ul><p class="note">Servis avec une garniture au choix comprise : pâtes, riz, légumes ou frites.</p>
+    </details>
+    <details class="sec">
+      <summary><h3><span lang="it">Dolci</span><span class="fr">desserts</span></h3><span class="tog" aria-hidden="true"></span></summary>
+      <ul class="items">
+<li class="item"><span><b lang="it">Panna cotta</b><span class="al" title="Allergènes">L</span></span><span class="p">9.–</span></li>
+<li class="item"><span><b lang="it">Mousse ai lamponi</b><span class="al" title="Allergènes">L</span></span><span class="p">10.–</span><span class="d">Mousse aux framboises</span></li>
+<li class="item"><span><b lang="it">Tiramisù</b><span class="al" title="Allergènes">L-G-O</span></span><span class="p">10.–</span></li>
+<li class="item"><span><b lang="it">Ananas</b></span><span class="p">10.–</span></li>
+<li class="item"><span><b lang="it">Pezzo di torta</b><span class="al" title="Allergènes">G</span></span><span class="p">9.–</span><span class="d">Part de gâteau</span></li>
+<li class="item"><span><b lang="it">Affogato al caffè</b><span class="al" title="Allergènes">L</span></span><span class="p">10.–</span><span class="d">2 boules de glace vanille servies avec du café espresso</span></li>
+<li class="item"><span><b lang="it">Colonnello</b></span><span class="p">13.–</span><span class="d">2 boules de sorbet au citron servies avec vodka</span></li>
+<li class="item"><span><b lang="it">Pallina di gelato</b></span><span class="p">4.50</span><span class="d">Boule de glace</span></li>
+<li class="item"><span><b lang="it">Zabaglione</b><span class="al" title="Allergènes">Su-O</span></span><span class="p">13.–</span><span class="d">Sucre, marsala, vin blanc, œuf</span></li>
+      </ul>
+    </details>
+    <details class="sec">
+      <summary><h3><span lang="it">Vini</span><span class="fr">vins en bouteille, 75 cl</span></h3><span class="tog" aria-hidden="true"></span></summary>
+      <ul class="items">
+<li class="wine-group" style="grid-column:1/-1;border:0">Suisse</li>
+<li class="item"><span><b lang="it">Œil-de-Perdrix AOC</b></span><span class="p">45.–</span><span class="d">Neuchâtel, rosé</span></li>
+<li class="item"><span><b lang="it">Côtes de Russin AOC</b></span><span class="p">49.–</span><span class="d">Genève, rouge</span></li>
+<li class="wine-group" style="grid-column:1/-1;border:0">Italie</li>
+<li class="item"><span><b lang="it">Pinot Grigio DOC</b></span><span class="p">45.–</span><span class="d">Friuli, blanc</span></li>
+<li class="item"><span><b lang="it">Corvina IGT</b></span><span class="p">45.–</span><span class="d">Veneto, rouge</span></li>
+<li class="item"><span><b lang="it">Palazzo della Torre IGT, Allegrini</b></span><span class="p">55.–</span><span class="d">Veneto, rouge</span></li>
+<li class="item"><span><b lang="it">Amarone De’Roari DOC, Righetti</b></span><span class="p">90.–</span><span class="d">Veneto, rouge</span></li>
+<li class="item"><span><b lang="it">Primitivo IGP Bio</b></span><span class="p">49.–</span><span class="d">Puglia, rouge</span></li>
+<li class="item"><span><b lang="it">Montepulciano DOC</b></span><span class="p">42.–</span><span class="d">Abruzzo, rouge</span></li>
+<li class="item"><span><b lang="it">La Segreta IGT</b></span><span class="p">49.–</span><span class="d">Sicilia, rouge</span></li>
+<li class="item"><span><b lang="it">Rigoleto Montecucco DOC, ColleMassari</b></span><span class="p">49.–</span><span class="d">Toscana, rouge</span></li>
+<li class="item"><span><b lang="it">ColleMassari Riserva Montecucco DOC</b></span><span class="p">55.–</span><span class="d">Toscana, rouge</span></li>
+<li class="item"><span><b lang="it">Chianti DOC</b></span><span class="p">45.–</span><span class="d">Toscana, rouge</span></li>
+<li class="item"><span><b lang="it">Brunello di Montalcino DOCG</b></span><span class="p">90.–</span><span class="d">Toscana, rouge</span></li>
+<li class="item"><span><b lang="it">Tignanello IGT, Antinori</b></span><span class="p">190.–</span><span class="d">Toscana, rouge</span></li>
+<li class="wine-group" style="grid-column:1/-1;border:0">France</li>
+<li class="item"><span><b lang="it">Côtes de Provence AOC</b></span><span class="p">45.–</span><span class="d">Provence, rosé</span></li>
+<li class="wine-group" style="grid-column:1/-1;border:0">Mousseux et champagne</li>
+<li class="item"><span><b lang="it">Prosecco</b></span><span class="p">50.–</span></li>
+<li class="item"><span><b lang="it">Mumm Cordon Rouge</b></span><span class="p">90.–</span></li>
+      </ul><p class="note">Vins ouverts dès 5.– le décilitre, pots de 5 dl à 25.–.</p>
+    </details>
+    <div class="legend">
+      <div>
+        <h4>Allergènes</h4>
+        <dl>
+          <dt>G</dt><dd>gluten</dd><dt>L</dt><dd>lactose</dd><dt>O</dt><dd>œufs</dd>
+          <dt>P</dt><dd>poisson</dd><dt>M</dt><dd>mollusques</dd><dt>Cr</dt><dd>crustacés</dd>
+          <dt>C</dt><dd>céleri</dd><dt>FC</dt><dd>fruits à coque</dd><dt>Mou</dt><dd>moutarde</dd>
+          <dt>Su</dt><dd>anhydride sulfureux et sulfites</dd>
+        </dl>
+        <p style="margin-top:10px">En cas d’allergie ou d’intolérance, adressez-vous à notre personnel.</p>
+      </div>
+      <div>
+        <h4>Provenance</h4>
+        <p>Veau et bœuf : Suisse.<br>Filet de loup : Turquie (élevage).<br>Saumon : Norvège (élevage).<br>Saumon fumé : Norvège (FAO 27).<br>Pain : Suisse, élaboré par nos pizzaioli.</p>
+      </div>
+      <div>
+        <h4>À savoir</h4>
+        <p>Spaghetti et penne sans gluten sur demande.</p>
+        <p>Le jambon cuit est un jambon d’épaule.</p>
+        <p>Boissons et vins au verre : <a href="https://www.chez-marino.ch/images/menu_fr.pdf">carte complète (PDF)</a>, <a href="https://www.chez-marino.ch/images/menu_us.pdf" hreflang="en">English menu (PDF)</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="logo.webp" width="403" height="268" alt="Chez Marino" loading="lazy">
+    <ul>
+      <li><a href="tel:+41227364516">022 736 45 16</a></li>
+      <li><a href="https://www.facebook.com/www.chezmarino.ch">Facebook</a></li>
+      <li><a href="https://fr.tripadvisor.ch/Restaurant_Review-g188057-d3686876-Reviews-Chez_Marino-Geneva.html">Tripadvisor</a></li>
+    </ul>
+    <p style="margin:0">© Chez Marino, Genève</p>
+  </div>
+</footer>
+
+<div class="ribbon" role="note">Maquette proposée par houle.ai — non publiée</div>
+</body>
+</html>
