@@ -17,7 +17,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Young+Serif&display=swap" rel="stylesheet">
-<link rel="preload" as="image" href="img/salle.webp">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -55,7 +54,7 @@
   Mise en page : bord gauche fort, la carte en pleine largeur sur ardoise, l'histoire en vraie chronologie.
   Détail signature : le ◊ de leur carte et les « / » des intitulés en laiton ; le numéro de réservation
   en très grand, comme sur l'ancien site.
-  Photo : la salle aux bougies (couleur) en ouverture ; leurs photos noir et blanc virées sépia chaud.
+  Ouverture typographique (logo, titre, appel) : leurs photos sont petites ; l'ardoise suit comme première image. Photos virées sépia chaud.
   Mouvement : aucun.
 -->
 <style>
@@ -107,6 +106,7 @@ p{margin:0 0 1em;max-width:var(--measure)}
 /* Ouverture */
 .hero{display:grid;gap:0}
 .hero figure{margin:0}
+.hero .hero-photo{display:none}
 .hero img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:62% 50%}
 .hero-text{padding:2rem 1.25rem 2.75rem}
 .hero .mark{width:7.5rem;height:9.5rem;color:var(--ink);margin:0 0 1.25rem -.4rem}
@@ -117,7 +117,9 @@ p{margin:0 0 1em;max-width:var(--measure)}
 .btn:hover{background:var(--ink);color:var(--paper)}
 .textlink{font-weight:500;text-decoration-color:var(--brass);text-underline-offset:.25em;text-decoration-thickness:2px}
 @media (min-width:56rem){
-  .hero{grid-template-columns:minmax(0,5fr) minmax(0,7fr);align-items:stretch;min-height:min(42rem,calc(100vh - 3.75rem))}
+  .hero{grid-template-columns:minmax(0,6fr) minmax(0,6fr);align-items:center}
+  .hero .hero-photo{display:block;order:2;padding:2.5rem max(2.5rem,calc((100vw - 74rem)/2 + 2.5rem)) 2.5rem 0}
+  .hero .hero-photo img{aspect-ratio:4/5;height:auto}
   .hero figure{order:2}
   .hero img{height:100%;aspect-ratio:auto}
   .hero-text{padding:3.5rem 3rem 3.5rem max(2.5rem,calc((100vw - 74rem)/2 + 2.5rem));align-self:center}
@@ -231,8 +233,8 @@ p{margin:0 0 1em;max-width:var(--measure)}
 
 <main>
   <section class="hero">
-    <figure>
-      <img src="img/salle.webp" width="1280" height="851" alt="La salle du Café Zinette le soir, bougies allumées devant le mur de briques" fetchpriority="high">
+    <figure class="hero-photo">
+      <img src="img/facade.webp" width="1280" height="853" alt="La façade de l’ancienne auberge, place du Grand-Lancy" fetchpriority="high">
     </figure>
     <div class="hero-text">
       <img class="mark" src="img/zinette-logo.png" width="200" height="254" alt="">
