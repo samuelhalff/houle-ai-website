@@ -34,6 +34,8 @@ export default async function LocaleLayout({
             ressources: "Ressources",
             contact: "Contact",
             mobileNavigation: "Menu",
+            allProducts: "Tous les produits",
+            allServices: "Tous les services",
           },
           products: [
             {
@@ -82,6 +84,8 @@ export default async function LocaleLayout({
               ressources: "Ressourcen",
               contact: "Kontakt",
               mobileNavigation: "Menü",
+              allProducts: "Alle Produkte",
+              allServices: "Alle Dienstleistungen",
             },
             products: [
               {
@@ -130,6 +134,8 @@ export default async function LocaleLayout({
                 ressources: "Recursos",
                 contact: "Contacto",
                 mobileNavigation: "Menú",
+                allProducts: "Todos los productos",
+                allServices: "Todos los servicios",
               },
               products: [
                 {
@@ -178,6 +184,8 @@ export default async function LocaleLayout({
                   ressources: "Recursos",
                   contact: "Contato",
                   mobileNavigation: "Menu",
+                  allProducts: "Todos os produtos",
+                  allServices: "Todos os serviços",
                 },
                 products: [
                   {
@@ -225,6 +233,8 @@ export default async function LocaleLayout({
                   ressources: "Resources",
                   contact: "Contact",
                   mobileNavigation: "Menu",
+                  allProducts: "All products",
+                  allServices: "All services",
                 },
                 products: [
                   {

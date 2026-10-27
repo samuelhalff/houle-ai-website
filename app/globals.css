@@ -56,8 +56,8 @@
     --accent: 0.30 0.04 250;
     --accent-foreground: 0.985 0 0;
     --destructive: 0.704 0.191 22.216;
-    --border: 1 0 0 / 0.1;
-    --input: 1 0 0 / 0.15;
+    --border: 0.269 0 0; /* opaque: Tailwind appends its own alpha, so a token with "/ a" breaks border-border */
+    --input: 0.32 0 0;
     --ring: 0.70 0.16 250;
     --brand: 0.70 0.16 250;
     --brand-hover: 0.80 0.14 250;
