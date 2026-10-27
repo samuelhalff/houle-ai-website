@@ -84,7 +84,10 @@ export function middleware(request: NextRequest) {
     const target = isDemoHost && !pathname.startsWith("/demo/") ? `/demo${pathname}` : pathname;
     const isFile = /\.[a-zA-Z0-9]+$/.test(target);
     let response: NextResponse;
-    if (host.split(":")[0] === "houle.ai") {
+    if (isDemoHost && pathname === "/") {
+      // No index of prospects: the bare subdomain leads to the product page.
+      response = NextResponse.redirect("https://houle.ai/fr/products/chat-website/", 302);
+    } else if (host.split(":")[0] === "houle.ai") {
       // The public address of the mock-ups is demo.houle.ai/<slug>/.
       const url = new URL(`https://demo.houle.ai${pathname.replace(/^\/demo/, "") || "/"}`);
       url.search = request.nextUrl.search;
