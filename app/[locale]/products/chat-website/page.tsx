@@ -124,11 +124,11 @@ const ChatWebsitePage = async (props: { params: Promise<{ locale: string }> }) =
 
       {/* Hero */}
       <div className="abstract-background">
-        <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
+        <div className="mx-auto max-w-[1200px] px-5 sm:px-8 lg:grid lg:grid-cols-2 lg:items-center lg:gap-8">
           <PageHero eyebrow={s("Hero.Badge")} title={s("Hero.Title")} description={s("Hero.Description")}>
             <div className="flex justify-start">{ctaButton(s("CTA.Button"))}</div>
           </PageHero>
-          <div className="pb-16">
+          <div className="pb-14 lg:pb-0">
             <ChatSiteDemo labels={demoLabels} />
           </div>
         </div>

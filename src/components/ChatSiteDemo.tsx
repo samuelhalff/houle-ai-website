@@ -62,7 +62,7 @@ export default function ChatSiteDemo({ labels: l }: { labels: ChatSiteDemoLabels
     <p
       aria-hidden="true"
       className={`max-w-[85%] rounded-2xl px-3 py-2 text-xs leading-5 transition-all duration-300 sm:text-[13px] ${
-        mine ? "self-end rounded-br-sm bg-brand text-white" : "self-start rounded-bl-sm bg-muted text-foreground"
+        mine ? "self-end rounded-br-sm bg-brand-hover text-white dark:bg-brand dark:text-background" : "self-start rounded-bl-sm bg-muted text-foreground"
       } ${shown ? "translate-y-0 opacity-100" : "hidden translate-y-1 opacity-0"}`}
     >
       {text}
@@ -81,7 +81,7 @@ export default function ChatSiteDemo({ labels: l }: { labels: ChatSiteDemoLabels
   );
 
   return (
-    <div ref={ref} role="img" aria-label={l.Label} className="relative mx-auto mt-10 w-full max-w-[560px] md:pb-20">
+    <div ref={ref} role="img" aria-label={l.Label} className="relative mx-auto mt-4 w-full max-w-[560px] lg:mt-0 md:pb-20">
       {/* Mini website (fictional) */}
       <div aria-hidden="true" className="overflow-hidden rounded-2xl border bg-card shadow-sm md:mr-16">
         <div className="flex items-center gap-1.5 border-b bg-muted px-3 py-2">
