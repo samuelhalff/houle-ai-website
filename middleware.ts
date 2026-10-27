@@ -48,6 +48,15 @@ function applySecurityHeaders(
   return response;
 }
 
+// Rewrite target on the app's own listener. Behind the production proxy request.url carries the
+// forwarded https scheme while Next listens on plain http, so a rewrite to that URL fails (EPROTO).
+const internalUrl = (request: NextRequest, pathname: string): URL => {
+  const url = request.nextUrl.clone();
+  url.pathname = pathname;
+  url.protocol = "http:";
+  return url;
+};
+
 // Article slugs that were renamed after publication (old -> new).
 const RENAMED_ARTICLE_SLUGS: Record<string, string> = {
   "tri-ia-cas-bagatelle-rc-hopital": "tri-ia-cas-bagatelle-rc-institution-medicale",
@@ -68,20 +77,23 @@ export function middleware(request: NextRequest) {
     pathname.includes("/opengraph-image") ||
     pathname.includes("/twitter-image");
 
-  // Prospect mock-ups (app/demo route, files in demo-sites/), also served at demo.houle.ai/<slug>/:
+  // Prospect mock-ups (app/demo route, files in demo-sites/), public address demo.houle.ai/<slug>/:
   // private (noindex), no locale routing, no site CSP (they load their own Google Fonts).
   const isDemoHost = host.split(":")[0] === "demo.houle.ai";
   if (isDemoHost || pathname === "/demo" || pathname.startsWith("/demo/")) {
     const target = isDemoHost && !pathname.startsWith("/demo/") ? `/demo${pathname}` : pathname;
     const isFile = /\.[a-zA-Z0-9]+$/.test(target);
     let response: NextResponse;
-    if (!isFile && !pathname.endsWith("/")) {
+    if (host.split(":")[0] === "houle.ai") {
+      // The public address of the mock-ups is demo.houle.ai/<slug>/.
+      const url = new URL(`https://demo.houle.ai${pathname.replace(/^\/demo/, "") || "/"}`);
+      url.search = request.nextUrl.search;
+      response = NextResponse.redirect(url, 308);
+    } else if (!isFile && !pathname.endsWith("/")) {
       // Directory URLs need the trailing slash so the pages' relative image paths resolve.
       response = NextResponse.redirect(toPublicOrigin(new URL(`${pathname}/`, request.url), request), 308);
     } else if (target !== pathname) {
-      const url = request.nextUrl.clone();
-      url.pathname = target;
-      response = NextResponse.rewrite(url);
+      response = NextResponse.rewrite(internalUrl(request, target));
     } else {
       response = NextResponse.next();
     }
@@ -107,7 +119,7 @@ export function middleware(request: NextRequest) {
   );
   if (staticRootAsset) {
     const target = "/" + staticRootAsset[1];
-    return NextResponse.rewrite(new URL(target, request.url));
+    return NextResponse.rewrite(internalUrl(request, target));
   }
 
   // CSP: strict in production, relaxed in development for Next.js dev client
