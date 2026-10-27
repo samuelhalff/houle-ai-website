@@ -77,17 +77,37 @@
   },
   "Pricing": {
     "Title": "Preise",
-    "Description": "Zwei einfache Beträge, in Schweizer Franken, exkl. MWST.",
-    "Setup": {
-      "Name": "Einrichtung",
-      "Price": "ab CHF 1'900",
-      "Includes": "Individuelles Design, bis zu 5 Seiten in einer Sprache, technisches SEO, eingerichtetes Hosting, ein auf Ihre Website abgestimmter Assistent und eine Stunde Einführung.",
-      "Extra": "Jede weitere Sprache: CHF 400."
+    "Description": "Drei Pakete, in Schweizer Franken, exkl. MWST. Eine einmalige Einrichtung, danach ein Monatsabo.",
+    "Recommended": "Empfohlen",
+    "Essential": {
+      "Name": "Essential",
+      "Setup": "CHF 990 Einrichtung",
+      "Monthly": "danach CHF 29 pro Monat",
+      "Includes": "Bis zu 3 Seiten, ein Design auf Basis einer unserer Vorlagen, eine Sprache und Änderungen per Chat.",
+      "Alt": "Oder ohne Einrichtungsgebühr: CHF 79 pro Monat bei 24 Monaten Laufzeit."
     },
-    "Hosting": {
-      "Name": "Hosting und Support",
-      "Price": "CHF 49 pro Monat",
-      "Includes": "Schweizer Hosting, SSL-Zertifikat, Backups, automatische Prüfungen vor jeder Veröffentlichung, Updates und bis zu 30 Minuten Hilfe von uns pro Monat."
+    "Pro": {
+      "Name": "Pro",
+      "Setup": "CHF 1'900 Einrichtung",
+      "Monthly": "danach CHF 49 pro Monat",
+      "Includes": "Individuelles Design, bis zu 5 Seiten, sorgfältiges SEO und Änderungen per Chat.",
+      "MonthlyIncludes": "Das Monatsabo umfasst Schweizer Hosting, SSL-Zertifikat, Backups, automatische Prüfungen vor jeder Veröffentlichung, Updates und bis zu 30 Minuten Hilfe von uns pro Monat."
+    },
+    "Premium": {
+      "Name": "Premium",
+      "Setup": "CHF 3'900 Einrichtung",
+      "Monthly": "danach CHF 149 pro Monat",
+      "Includes": "Alles aus Pro, dazu die Einrichtung Ihres Google-Unternehmensprofils, ein SEO-Artikel pro Monat und ein monatlicher Bericht. Auf Wunsch nehmen wir Änderungen auch für Sie vor."
+    },
+    "Options": {
+      "Title": "Optionen",
+      "Text": "Jede weitere Sprache: CHF 400. Online-Speisekarte oder -Reservierung, Einrichtung des Google-Unternehmensprofils, Logo: auf Anfrage."
+    },
+    "Preview": "Kostenlose Vorschau: Wir zeigen Ihnen einen Entwurf Ihrer neuen Website, bevor Sie sich festlegen.",
+    "Ark": {
+      "Before": "Mit einem Buchhaltungsmandat bei ",
+      "Link": "Ark Fiduciaire",
+      "After": " ist die Einrichtung kostenlos und die ersten 6 Monate Abo sind geschenkt."
     },
     "Subscription": "Ihr ChatGPT- oder Claude-Abo ist separat: Sie bezahlen es direkt beim Anbieter."
   },
@@ -112,6 +132,10 @@
     "Q5": {
       "Question": "Wem gehört die Website?",
       "Answer": "Ihnen. Die Website und ihr Code gehören Ihnen, auch wenn Sie die Zusammenarbeit mit uns beenden."
+    },
+    "Q6": {
+      "Question": "Gibt es ein Angebot für Kunden von Ark Fiduciaire?",
+      "Answer": "Ja. Mit einem Buchhaltungsmandat bei Ark Fiduciaire ist die Einrichtung kostenlos und die ersten 6 Monate Abo sind geschenkt."
     }
   },
   "CTA": {

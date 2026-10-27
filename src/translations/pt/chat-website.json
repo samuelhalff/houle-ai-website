@@ -77,17 +77,37 @@
   },
   "Pricing": {
     "Title": "Preços",
-    "Description": "Dois valores simples, em francos suíços, sem IVA.",
-    "Setup": {
-      "Name": "Criação",
-      "Price": "a partir de CHF 1'900",
-      "Includes": "Design à medida, até 5 páginas numa língua, SEO técnico, alojamento configurado, assistente preparado para o seu site e uma hora de formação inicial.",
-      "Extra": "Cada língua adicional: CHF 400."
+    "Description": "Três planos, em francos suíços, sem IVA. Uma criação única e depois uma assinatura mensal.",
+    "Recommended": "Recomendado",
+    "Essential": {
+      "Name": "Essencial",
+      "Setup": "CHF 990 de criação",
+      "Monthly": "depois CHF 29 por mês",
+      "Includes": "Até 3 páginas, um design adaptado de um dos nossos modelos, uma língua e alterações por chat.",
+      "Alt": "Ou sem custo de criação: CHF 79 por mês com um compromisso de 24 meses."
     },
-    "Hosting": {
-      "Name": "Alojamento e suporte",
-      "Price": "CHF 49 por mês",
-      "Includes": "Alojamento na Suíça, certificado SSL, cópias de segurança, controlos automáticos antes de cada publicação, atualizações e até 30 minutos de ajuda nossa por mês."
+    "Pro": {
+      "Name": "Pro",
+      "Setup": "CHF 1'900 de criação",
+      "Monthly": "depois CHF 49 por mês",
+      "Includes": "Design à medida, até 5 páginas, SEO cuidado e alterações por chat.",
+      "MonthlyIncludes": "A mensalidade cobre alojamento na Suíça, certificado SSL, cópias de segurança, controlos automáticos antes de cada publicação, atualizações e até 30 minutos de ajuda nossa por mês."
+    },
+    "Premium": {
+      "Name": "Premium",
+      "Setup": "CHF 3'900 de criação",
+      "Monthly": "depois CHF 149 por mês",
+      "Includes": "Tudo o que o Pro inclui, mais a configuração do seu Perfil da Empresa no Google, um artigo SEO por mês e um relatório mensal. Também pode pedir-nos que façamos as alterações por si."
+    },
+    "Options": {
+      "Title": "Opções",
+      "Text": "Cada língua adicional: CHF 400. Menu ou reservas online, configuração do Perfil da Empresa no Google, logótipo: sob orçamento."
+    },
+    "Preview": "Pré-visualização gratuita: mostramos-lhe uma maqueta do seu novo site antes de se comprometer.",
+    "Ark": {
+      "Before": "Com um mandato de contabilidade na ",
+      "Link": "Ark Fiduciaire",
+      "After": ", a criação é gratuita e os primeiros 6 meses de assinatura são oferecidos."
     },
     "Subscription": "A sua assinatura do ChatGPT ou do Claude é à parte: paga-a diretamente ao fornecedor."
   },
@@ -112,6 +132,10 @@
     "Q5": {
       "Question": "A quem pertence o site?",
       "Answer": "A si. O site e o código pertencem-lhe, mesmo que decida deixar de trabalhar connosco."
+    },
+    "Q6": {
+      "Question": "Há uma oferta para clientes da Ark Fiduciaire?",
+      "Answer": "Sim. Com um mandato de contabilidade na Ark Fiduciaire, a criação é gratuita e os primeiros 6 meses de assinatura são oferecidos."
     }
   },
   "CTA": {

@@ -77,17 +77,37 @@
   },
   "Pricing": {
     "Title": "Tarifs",
-    "Description": "Deux montants simples, en francs suisses, hors TVA.",
-    "Setup": {
-      "Name": "Mise en place",
-      "Price": "dès CHF 1'900",
-      "Includes": "Design sur mesure, jusqu'à 5 pages dans une langue, référencement technique, hébergement mis en place, assistant configuré pour votre site et une heure de prise en main.",
-      "Extra": "Chaque langue supplémentaire : CHF 400."
+    "Description": "Trois formules, en francs suisses, hors TVA. Une mise en place unique, puis un abonnement mensuel.",
+    "Recommended": "Recommandé",
+    "Essential": {
+      "Name": "Essentiel",
+      "Setup": "CHF 990 de mise en place",
+      "Monthly": "puis CHF 29 par mois",
+      "Includes": "Jusqu'à 3 pages, un design adapté de l'un de nos modèles, une langue, et les modifications par chat.",
+      "Alt": "Ou sans frais de mise en place : CHF 79 par mois avec un engagement de 24 mois."
     },
-    "Hosting": {
-      "Name": "Hébergement et support",
-      "Price": "CHF 49 par mois",
-      "Includes": "Hébergement suisse, certificat SSL, sauvegardes, contrôles automatiques avant chaque publication, mises à jour et jusqu'à 30 minutes d'aide de notre part chaque mois."
+    "Pro": {
+      "Name": "Pro",
+      "Setup": "CHF 1'900 de mise en place",
+      "Monthly": "puis CHF 49 par mois",
+      "Includes": "Design sur mesure, jusqu'à 5 pages, référencement soigné, et les modifications par chat.",
+      "MonthlyIncludes": "L'abonnement couvre l'hébergement suisse, le certificat SSL, les sauvegardes, les contrôles automatiques avant chaque publication, les mises à jour et jusqu'à 30 minutes d'aide de notre part chaque mois."
+    },
+    "Premium": {
+      "Name": "Premium",
+      "Setup": "CHF 3'900 de mise en place",
+      "Monthly": "puis CHF 149 par mois",
+      "Includes": "Tout ce que comprend Pro, plus la mise en place de votre fiche Google Business Profile, un article SEO par mois et un rapport mensuel. Vous pouvez aussi nous demander de faire les modifications à votre place."
+    },
+    "Options": {
+      "Title": "Options",
+      "Text": "Chaque langue supplémentaire : CHF 400. Carte ou réservation en ligne, mise en place de la fiche Google Business Profile, logo : sur devis."
+    },
+    "Preview": "Aperçu gratuit : nous vous montrons une maquette de votre nouveau site avant que vous vous engagiez.",
+    "Ark": {
+      "Before": "Avec un mandat comptable chez ",
+      "Link": "Ark Fiduciaire",
+      "After": ", la mise en place est gratuite et les 6 premiers mois d'abonnement sont offerts."
     },
     "Subscription": "Votre abonnement ChatGPT ou Claude est à part : vous le payez directement au fournisseur."
   },
@@ -112,6 +132,10 @@
     "Q5": {
       "Question": "À qui appartient le site ?",
       "Answer": "À vous. Le site et son code vous appartiennent, y compris si vous décidez d'arrêter de travailler avec nous."
+    },
+    "Q6": {
+      "Question": "Y a-t-il une offre pour les clients d'Ark Fiduciaire ?",
+      "Answer": "Oui. Avec un mandat comptable chez Ark Fiduciaire, la mise en place est gratuite et les 6 premiers mois d'abonnement sont offerts."
     }
   },
   "CTA": {

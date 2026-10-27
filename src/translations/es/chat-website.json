@@ -77,17 +77,37 @@
   },
   "Pricing": {
     "Title": "Precios",
-    "Description": "Dos importes sencillos, en francos suizos, IVA no incluido.",
-    "Setup": {
-      "Name": "Puesta en marcha",
-      "Price": "desde CHF 1'900",
-      "Includes": "Diseño a medida, hasta 5 páginas en un idioma, SEO técnico, alojamiento configurado, asistente preparado para su sitio y una hora de formación inicial.",
-      "Extra": "Cada idioma adicional: CHF 400."
+    "Description": "Tres planes, en francos suizos, IVA no incluido. Una puesta en marcha única y luego una suscripción mensual.",
+    "Recommended": "Recomendado",
+    "Essential": {
+      "Name": "Esencial",
+      "Setup": "CHF 990 de puesta en marcha",
+      "Monthly": "luego CHF 29 al mes",
+      "Includes": "Hasta 3 páginas, un diseño adaptado de una de nuestras plantillas, un idioma y cambios por chat.",
+      "Alt": "O sin gastos de puesta en marcha: CHF 79 al mes con un compromiso de 24 meses."
     },
-    "Hosting": {
-      "Name": "Alojamiento y soporte",
-      "Price": "CHF 49 al mes",
-      "Includes": "Alojamiento en Suiza, certificado SSL, copias de seguridad, controles automáticos antes de cada publicación, actualizaciones y hasta 30 minutos de ayuda nuestra al mes."
+    "Pro": {
+      "Name": "Pro",
+      "Setup": "CHF 1'900 de puesta en marcha",
+      "Monthly": "luego CHF 49 al mes",
+      "Includes": "Diseño a medida, hasta 5 páginas, SEO cuidado y cambios por chat.",
+      "MonthlyIncludes": "La cuota mensual cubre alojamiento en Suiza, certificado SSL, copias de seguridad, controles automáticos antes de cada publicación, actualizaciones y hasta 30 minutos de ayuda nuestra al mes."
+    },
+    "Premium": {
+      "Name": "Premium",
+      "Setup": "CHF 3'900 de puesta en marcha",
+      "Monthly": "luego CHF 149 al mes",
+      "Includes": "Todo lo de Pro, más la configuración de su perfil de empresa en Google, un artículo SEO al mes y un informe mensual. También puede pedirnos que hagamos los cambios por usted."
+    },
+    "Options": {
+      "Title": "Opciones",
+      "Text": "Cada idioma adicional: CHF 400. Carta o reservas en línea, configuración del perfil de empresa en Google, logotipo: bajo presupuesto."
+    },
+    "Preview": "Vista previa gratuita: le mostramos una maqueta de su nuevo sitio antes de que se comprometa.",
+    "Ark": {
+      "Before": "Con un mandato contable en ",
+      "Link": "Ark Fiduciaire",
+      "After": ", la puesta en marcha es gratuita y los 6 primeros meses de suscripción le salen gratis."
     },
     "Subscription": "Su suscripción a ChatGPT o Claude va aparte: la paga directamente al proveedor."
   },
@@ -112,6 +132,10 @@
     "Q5": {
       "Question": "¿De quién es el sitio web?",
       "Answer": "Suyo. El sitio y su código le pertenecen, también si decide dejar de trabajar con nosotros."
+    },
+    "Q6": {
+      "Question": "¿Hay una oferta para los clientes de Ark Fiduciaire?",
+      "Answer": "Sí. Con un mandato contable en Ark Fiduciaire, la puesta en marcha es gratuita y los 6 primeros meses de suscripción le salen gratis."
     }
   },
   "CTA": {

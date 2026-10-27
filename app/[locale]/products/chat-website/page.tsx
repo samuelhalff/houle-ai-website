@@ -31,7 +31,15 @@ export async function generateMetadata(props: {
 const HOW_STEPS = ["Ask", "Clarify", "Check", "Publish"] as const;
 const ASSISTANT_RULES = ["Design", "Readability", "Seo", "Limits"] as const;
 const INCLUDED = ["Fast", "Swiss", "Languages", "Seo", "Ownership"] as const;
-const FAQ_KEYS = ["Q1", "Q2", "Q3", "Q4", "Q5"] as const;
+const FAQ_KEYS = ["Q1", "Q2", "Q3", "Q4", "Q5", "Q6"] as const;
+const ARK_URL = "https://ark-fid.ch";
+
+// Published prices, CHF excl. VAT. Keep in sync with the Pricing copy in chat-website.json.
+const TIERS = [
+  { key: "Essential", setup: 990, monthly: 29, recommended: false },
+  { key: "Pro", setup: 1900, monthly: 49, recommended: true },
+  { key: "Premium", setup: 3900, monthly: 149, recommended: false },
+] as const;
 
 const ChatWebsitePage = async (props: { params: Promise<{ locale: string }> }) => {
   const params = await props.params;
@@ -65,33 +73,30 @@ const ChatWebsitePage = async (props: { params: Promise<{ locale: string }> }) =
       areaServed: ["Geneva", "Lausanne", "Switzerland"],
       provider: { name: "houle.ai", url: baseUrl, logo: `${baseUrl}/assets/logo.svg` },
     }),
-    offers: [
-      {
-        "@type": "Offer",
-        name: s("Pricing.Setup.Name"),
-        description: s("Pricing.Setup.Includes"),
-        url: pageUrl,
-        priceSpecification: {
+    offers: TIERS.map((tier) => ({
+      "@type": "Offer",
+      name: `${name}: ${s(`Pricing.${tier.key}.Name`)}`,
+      description: s(`Pricing.${tier.key}.Includes`),
+      url: pageUrl,
+      priceCurrency: "CHF",
+      priceSpecification: [
+        {
           "@type": "PriceSpecification",
-          minPrice: 1900,
+          name: s(`Pricing.${tier.key}.Setup`),
+          price: tier.setup,
           priceCurrency: "CHF",
           valueAddedTaxIncluded: false,
         },
-      },
-      {
-        "@type": "Offer",
-        name: s("Pricing.Hosting.Name"),
-        description: s("Pricing.Hosting.Includes"),
-        url: pageUrl,
-        priceSpecification: {
+        {
           "@type": "UnitPriceSpecification",
-          price: 49,
+          name: s(`Pricing.${tier.key}.Monthly`),
+          price: tier.monthly,
           priceCurrency: "CHF",
           unitCode: "MON",
           valueAddedTaxIncluded: false,
         },
-      },
-    ],
+      ],
+    })),
   };
 
   const ctaButton = (label: string) => (
@@ -206,23 +211,56 @@ const ChatWebsitePage = async (props: { params: Promise<{ locale: string }> }) =
             align="center"
             className="mb-12"
           />
-          <div className="mx-auto grid max-w-[960px] gap-5 md:grid-cols-2">
-            {(["Setup", "Hosting"] as const).map((key) => (
-              <div key={key} className="flex flex-col rounded-2xl border bg-card p-8 shadow-sm">
-                <h3 className="text-lg font-semibold text-foreground">{s(`Pricing.${key}.Name`)}</h3>
+          <div className="grid gap-5 md:grid-cols-3">
+            {TIERS.map((tier) => (
+              <div
+                key={tier.key}
+                className={`relative flex flex-col rounded-2xl border bg-card p-8 shadow-sm ${
+                  tier.recommended ? "border-brand/40 ring-1 ring-brand/30" : ""
+                }`}
+              >
+                {tier.recommended && (
+                  <p className="mb-3 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-brand-hover dark:text-brand">
+                    {s("Pricing.Recommended")}
+                  </p>
+                )}
+                <h3 className="text-lg font-semibold text-foreground">{s(`Pricing.${tier.key}.Name`)}</h3>
                 <p className="mt-2 text-2xl font-semibold tracking-tight text-brand-hover dark:text-brand">
-                  {s(`Pricing.${key}.Price`)}
+                  {s(`Pricing.${tier.key}.Setup`)}
                 </p>
-                <p className="mt-4 text-sm leading-7 text-muted-foreground">{s(`Pricing.${key}.Includes`)}</p>
-                {key === "Setup" && (
-                  <p className="mt-3 text-sm font-medium text-foreground/80">{s("Pricing.Setup.Extra")}</p>
+                <p className="mt-1 text-base font-medium text-foreground/80">{s(`Pricing.${tier.key}.Monthly`)}</p>
+                <p className="mt-4 text-sm leading-7 text-muted-foreground">{s(`Pricing.${tier.key}.Includes`)}</p>
+                {tier.key === "Essential" && (
+                  <p className="mt-3 text-sm leading-7 text-foreground/80">{s("Pricing.Essential.Alt")}</p>
+                )}
+                {tier.key === "Pro" && (
+                  <p className="mt-3 text-sm leading-7 text-foreground/80">{s("Pricing.Pro.MonthlyIncludes")}</p>
                 )}
               </div>
             ))}
           </div>
-          <p className="mx-auto mt-6 max-w-[60ch] text-center text-sm leading-7 text-muted-foreground">
-            {s("Pricing.Subscription")}
-          </p>
+
+          <div className="mx-auto mt-8 max-w-[760px] rounded-2xl border border-brand/15 bg-brand-soft px-6 py-5 text-center">
+            <p className="text-sm font-medium leading-7 text-foreground">
+              {s("Pricing.Ark.Before")}
+              <a
+                href={ARK_URL}
+                className="font-semibold text-brand-hover underline underline-offset-4 dark:text-brand"
+              >
+                {s("Pricing.Ark.Link")}
+              </a>
+              {s("Pricing.Ark.After")}
+            </p>
+          </div>
+
+          <div className="mx-auto mt-8 max-w-[760px] space-y-3 text-center text-sm leading-7 text-muted-foreground">
+            <p className="font-medium text-foreground/80">{s("Pricing.Preview")}</p>
+            <p>
+              <span className="font-medium text-foreground/80">{s("Pricing.Options.Title")}. </span>
+              {s("Pricing.Options.Text")}
+            </p>
+            <p>{s("Pricing.Subscription")}</p>
+          </div>
         </Reveal>
       </section>
 

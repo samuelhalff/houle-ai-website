@@ -77,17 +77,37 @@
   },
   "Pricing": {
     "Title": "Pricing",
-    "Description": "Two simple amounts, in Swiss francs, excluding VAT.",
-    "Setup": {
-      "Name": "Setup",
-      "Price": "from CHF 1'900",
-      "Includes": "Custom design, up to 5 pages in one language, technical SEO, hosting set up, assistant configured for your site and a one-hour onboarding session.",
-      "Extra": "Each additional language: CHF 400."
+    "Description": "Three plans, in Swiss francs, excluding VAT. A one-off setup, then a monthly subscription.",
+    "Recommended": "Recommended",
+    "Essential": {
+      "Name": "Essential",
+      "Setup": "CHF 990 setup",
+      "Monthly": "then CHF 29 per month",
+      "Includes": "Up to 3 pages, a design adapted from one of our templates, one language, and changes by chat.",
+      "Alt": "Or no setup fee: CHF 79 per month with a 24-month commitment."
     },
-    "Hosting": {
-      "Name": "Hosting and support",
-      "Price": "CHF 49 per month",
-      "Includes": "Swiss hosting, SSL certificate, backups, automatic checks before each publication, updates and up to 30 minutes of help from us each month."
+    "Pro": {
+      "Name": "Pro",
+      "Setup": "CHF 1'900 setup",
+      "Monthly": "then CHF 49 per month",
+      "Includes": "Custom design, up to 5 pages, careful SEO, and changes by chat.",
+      "MonthlyIncludes": "The monthly fee covers Swiss hosting, SSL certificate, backups, automatic checks before each publication, updates and up to 30 minutes of help from us each month."
+    },
+    "Premium": {
+      "Name": "Premium",
+      "Setup": "CHF 3'900 setup",
+      "Monthly": "then CHF 149 per month",
+      "Includes": "Everything in Pro, plus your Google Business Profile set up, one SEO article per month and a monthly report. You can also ask us to make changes for you."
+    },
+    "Options": {
+      "Title": "Options",
+      "Text": "Each additional language: CHF 400. Online menu or booking, Google Business Profile setup, logo: on request."
+    },
+    "Preview": "Free preview: we show you a mock-up of your new site before you commit.",
+    "Ark": {
+      "Before": "With an accounting mandate at ",
+      "Link": "Ark Fiduciaire",
+      "After": ", the setup is free and the first 6 months of subscription are offered."
     },
     "Subscription": "Your ChatGPT or Claude subscription is separate: you pay it directly to the provider."
   },
@@ -112,6 +132,10 @@
     "Q5": {
       "Question": "Who owns the website?",
       "Answer": "You do. The site and its code belong to you, including if you decide to stop working with us."
+    },
+    "Q6": {
+      "Question": "Is there an offer for Ark Fiduciaire clients?",
+      "Answer": "Yes. With an accounting mandate at Ark Fiduciaire, the setup is free and the first 6 months of subscription are offered."
     }
   },
   "CTA": {

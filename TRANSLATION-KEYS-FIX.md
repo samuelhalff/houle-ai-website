@@ -230,10 +230,13 @@ New namespace in all locales (`fr`, `en`, `de`, `es`, `pt`), rendered by `app/[l
 | `Included.{Title,Description}` | "What your site comes with" header |
 | `Included.{Fast,Swiss,Languages,Seo,Ownership}.{Title,Description}` | Site characteristics |
 | `Audience.{Title,Description}` | Target audience card |
-| `Pricing.{Title,Description,Subscription}` | Pricing header, VAT note, AI subscription note |
-| `Pricing.Setup.{Name,Price,Includes,Extra}` | Setup price (from CHF 1'900) and additional language (CHF 400) |
-| `Pricing.Hosting.{Name,Price,Includes}` | Hosting and support (CHF 49 per month) |
-| `Faq.Title`, `Faq.Q1`–`Faq.Q5`.`{Question,Answer}` | Visible FAQ, also emitted as FAQPage JSON-LD |
+| `Pricing.{Title,Description,Recommended,Preview,Subscription}` | Pricing header (CHF excl. VAT), "recommended" badge, free mock-up note, AI subscription note |
+| `Pricing.{Essential,Pro,Premium}.{Name,Setup,Monthly,Includes}` | The three tiers (CHF 990 + 29/month, 1'900 + 49/month, 3'900 + 149/month) |
+| `Pricing.Essential.Alt` | No-setup-fee alternative (CHF 79/month, 24-month commitment) |
+| `Pricing.Pro.MonthlyIncludes` | What the monthly subscription covers |
+| `Pricing.Options.{Title,Text}` | Extra language CHF 400; menu/booking, Google Business Profile, logo on request |
+| `Pricing.Ark.{Before,Link,After}` | Ark Fiduciaire package note; `Link` is the anchor to https://ark-fid.ch |
+| `Faq.Title`, `Faq.Q1`–`Faq.Q6`.`{Question,Answer}` | Visible FAQ, also emitted as FAQPage JSON-LD |
 | `CTA.{Title,Description,Button}` | Closing call to action (links to `/contact/`) |
 
 Also added: `metadata:pages./products/chat-website.{title,description,keywords}` in all locales. Navbar/mobile menu entries (`app/[locale]/layout.tsx`), the footer label `chatWebsite` (`app/[locale]/shared/footer.tsx`) and the products index card (`app/[locale]/products/page.tsx`) are hard-coded per locale like the other products.
