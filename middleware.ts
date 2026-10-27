@@ -68,22 +68,22 @@ export function middleware(request: NextRequest) {
     pathname.includes("/opengraph-image") ||
     pathname.includes("/twitter-image");
 
-  // Prospect mock-ups (public/demo/<slug>/), served at demo.houle.ai/<slug>/ and
-  // houle.ai/demo/<slug>/: plain static pages, private (noindex), no locale routing and no site
-  // CSP (they load their own Google Fonts).
+  // Prospect mock-ups (app/demo route, files in demo-sites/), also served at demo.houle.ai/<slug>/:
+  // private (noindex), no locale routing, no site CSP (they load their own Google Fonts).
   const isDemoHost = host.split(":")[0] === "demo.houle.ai";
   if (isDemoHost || pathname === "/demo" || pathname.startsWith("/demo/")) {
-    const file = isDemoHost && !pathname.startsWith("/demo/") ? `/demo${pathname}` : pathname;
+    const target = isDemoHost && !pathname.startsWith("/demo/") ? `/demo${pathname}` : pathname;
+    const isFile = /\.[a-zA-Z0-9]+$/.test(target);
     let response: NextResponse;
-    if (/\.[a-zA-Z0-9]+$/.test(file)) {
-      response = isDemoHost ? NextResponse.rewrite(new URL(file, request.url)) : NextResponse.next();
-    } else if (!file.endsWith("/")) {
-      response = NextResponse.redirect(
-        toPublicOrigin(new URL(`${pathname}/`, request.url), request),
-        308,
-      );
+    if (!isFile && !pathname.endsWith("/")) {
+      // Directory URLs need the trailing slash so the pages' relative image paths resolve.
+      response = NextResponse.redirect(toPublicOrigin(new URL(`${pathname}/`, request.url), request), 308);
+    } else if (target !== pathname) {
+      const url = request.nextUrl.clone();
+      url.pathname = target;
+      response = NextResponse.rewrite(url);
     } else {
-      response = NextResponse.rewrite(new URL(`${file}index.html`, request.url));
+      response = NextResponse.next();
     }
     response.headers.set("X-Robots-Tag", "noindex, nofollow");
     return response;

@@ -18,6 +18,7 @@ const baseConfig = {
   // Ensure runtime access to JSON translation files in standalone/serverless outputs
   outputFileTracingIncludes: {
     "/**/*": ["src/translations/**/*"],
+    "/demo/[[...path]]": ["demo-sites/**/*"],
   },
   ...(process.env.NODE_ENV === "production" ? { output: "standalone" } : {}),
   images: {
