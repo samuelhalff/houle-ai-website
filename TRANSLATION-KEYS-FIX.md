@@ -255,3 +255,4 @@ Used by `src/components/ChatSiteDemo.tsx` (strings passed as props from `app/[lo
 | `Demo.{HMon,HTueFri,HSatSun}` | Hours per day group |
 | `Demo.Closed` | Replaces Monday hours after publishing |
 | `Demo.{User1,Assistant1,User2,Assistant2}` | Chat messages in order (request, check question, "Yes", "Published ✓") |
+| `Demo.{Pause,Play}` | `aria-label` of the pause/play toggle button (WCAG 2.2.2) |

@@ -159,6 +159,8 @@
     "User1": "Fecha às segundas a partir da próxima semana, por favor.",
     "Assistant1": "Se percebi bem: fechado às segundas, horário igual nos outros dias. Estou a verificar a página… Queres que publique?",
     "User2": "Sim",
-    "Assistant2": "Publicado ✓"
+    "Assistant2": "Publicado ✓",
+    "Pause": "Pausar a animação",
+    "Play": "Reproduzir a animação"
   }
 }

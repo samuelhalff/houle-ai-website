@@ -159,6 +159,8 @@
     "User1": "Close on Mondays starting next week, please.",
     "Assistant1": "If I understand correctly: closed on Mondays, hours unchanged on the other days. I'm checking the page… Shall I publish?",
     "User2": "Yes",
-    "Assistant2": "Published ✓"
+    "Assistant2": "Published ✓",
+    "Pause": "Pause animation",
+    "Play": "Play animation"
   }
 }

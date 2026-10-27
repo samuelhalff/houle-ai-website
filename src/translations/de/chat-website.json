@@ -159,6 +159,8 @@
     "User1": "Schliess ab nächster Woche bitte am Montag.",
     "Assistant1": "Wenn ich richtig verstehe: montags geschlossen, die Zeiten an den anderen Tagen bleiben. Ich prüfe die Seite… Soll ich veröffentlichen?",
     "User2": "Ja",
-    "Assistant2": "Veröffentlicht ✓"
+    "Assistant2": "Veröffentlicht ✓",
+    "Pause": "Animation anhalten",
+    "Play": "Animation abspielen"
   }
 }

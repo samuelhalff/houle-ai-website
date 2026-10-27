@@ -159,6 +159,8 @@
     "User1": "Cierra los lunes a partir de la semana que viene, por favor.",
     "Assistant1": "Si lo entiendo bien: cerrado los lunes, horario sin cambios el resto de días. Reviso la página… ¿Quieres que la publique?",
     "User2": "Sí",
-    "Assistant2": "Publicado ✓"
+    "Assistant2": "Publicado ✓",
+    "Pause": "Pausar la animación",
+    "Play": "Reproducir la animación"
   }
 }

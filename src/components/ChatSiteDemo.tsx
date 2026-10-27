@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 
 export type ChatSiteDemoLabels = Record<
-  | "Label" | "Fiction" | "Tagline" | "HoursTitle" | "Mon" | "TueFri" | "SatSun"
+  | "Label" | "Pause" | "Play" | "Fiction" | "Tagline" | "HoursTitle" | "Mon" | "TueFri" | "SatSun"
   | "HMon" | "HTueFri" | "HSatSun" | "Closed" | "User1" | "Assistant1" | "User2" | "Assistant2",
   string
 >;
@@ -24,6 +24,7 @@ export default function ChatSiteDemo({ labels: l }: { labels: ChatSiteDemoLabels
   const [t, setT] = useState(0);
   const [visible, setVisible] = useState(false);
   const [reduced, setReduced] = useState(false);
+  const [paused, setPaused] = useState(false);
 
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
@@ -42,10 +43,10 @@ export default function ChatSiteDemo({ labels: l }: { labels: ChatSiteDemoLabels
   }, []);
 
   useEffect(() => {
-    if (reduced || !visible) return;
+    if (reduced || !visible || paused) return;
     const id = setTimeout(() => setT((p) => (p + TICK >= T_LOOP ? 0 : p + TICK)), TICK);
     return () => clearTimeout(id);
-  }, [t, reduced, visible]);
+  }, [t, reduced, visible, paused]);
 
   // Reduced motion: show the final state statically.
   const now = reduced ? T_FLASH_END + 1000 : t;
@@ -56,22 +57,23 @@ export default function ChatSiteDemo({ labels: l }: { labels: ChatSiteDemoLabels
   const showU2 = now >= T_U2;
   const showA2 = now >= T_A2;
   const flash = !reduced && now >= T_A2 && now < T_FLASH_END;
-  const userText = reduced ? l.User1 : l.User1.slice(0, typed);
+  const shown = reduced ? l.User1.length : typed;
 
-  const bubble = (mine: boolean, shown: boolean, text: string) => (
+  const bubble = (mine: boolean, on: boolean, text: string, typedLen = text.length) => (
     <p
       aria-hidden="true"
-      className={`max-w-[85%] rounded-2xl px-3 py-2 text-xs leading-5 transition-all duration-300 sm:text-[13px] ${
+      className={`max-w-[85%] rounded-2xl px-3 py-2 text-xs leading-5 transition-all duration-300 motion-reduce:transition-none sm:text-[13px] ${
         mine ? "self-end rounded-br-sm bg-brand-hover text-white dark:bg-brand dark:text-background" : "self-start rounded-bl-sm bg-muted text-foreground"
-      } ${shown ? "translate-y-0 opacity-100" : "hidden translate-y-1 opacity-0"}`}
+      } ${on ? "translate-y-0 opacity-100" : "invisible translate-y-1 opacity-0"}`}
     >
-      {text}
+      {text.slice(0, typedLen)}
+      <span className="invisible">{text.slice(typedLen)}</span>
     </p>
   );
 
   const row = (day: string, hours: string, closed?: boolean) => (
     <div
-      className={`flex justify-between rounded-md px-2 py-1 transition-colors duration-700 ${
+      className={`flex justify-between rounded-md px-2 py-1 transition-colors duration-700 motion-reduce:transition-none ${
         closed && flash ? "bg-brand-soft dark:bg-accent" : "bg-transparent"
       }`}
     >
@@ -81,13 +83,19 @@ export default function ChatSiteDemo({ labels: l }: { labels: ChatSiteDemoLabels
   );
 
   return (
-    <div ref={ref} role="img" aria-label={l.Label} className="relative mx-auto mt-4 w-full max-w-[560px] lg:mt-0 md:pb-20">
+    <div ref={ref} className="relative mx-auto mt-4 w-full max-w-[560px] lg:mt-0 md:pb-20">
+      <button
+        type="button"
+        aria-pressed={paused}
+        aria-label={paused ? l.Play : l.Pause}
+        onClick={() => setPaused((p) => !p)}
+        className="absolute left-2 top-[7px] z-10 flex h-5 w-5 items-center justify-center rounded-full text-[9px] text-muted-foreground hover:bg-foreground/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand"
+      >
+        <span aria-hidden="true">{paused ? "▶" : "❚❚"}</span>
+      </button>
       {/* Mini website (fictional) */}
-      <div aria-hidden="true" className="overflow-hidden rounded-2xl border bg-card shadow-sm md:mr-16">
-        <div className="flex items-center gap-1.5 border-b bg-muted px-3 py-2">
-          <span className="h-2 w-2 rounded-full bg-foreground/20" />
-          <span className="h-2 w-2 rounded-full bg-foreground/20" />
-          <span className="h-2 w-2 rounded-full bg-foreground/20" />
+      <div role="img" aria-label={l.Label} className="overflow-hidden rounded-2xl border bg-card shadow-sm md:mr-16">
+        <div className="flex h-8 items-center border-b bg-muted px-3 py-2">
           <span className="ml-auto text-[10px] uppercase tracking-wider text-muted-foreground">{l.Fiction}</span>
         </div>
         <div className="px-5 pb-12 pt-5 md:pb-6">
@@ -108,15 +116,13 @@ export default function ChatSiteDemo({ labels: l }: { labels: ChatSiteDemoLabels
         className="relative -mt-10 ml-auto mr-2 w-[86%] max-w-[300px] rounded-[1.75rem] border-[5px] border-foreground/80 bg-background p-3 shadow-lg md:absolute md:bottom-0 md:right-0 md:mr-0 md:mt-0 md:w-[290px]"
       >
         <div className="mx-auto mb-2 h-1 w-10 rounded-full bg-foreground/20" />
-        <div className="flex h-[290px] flex-col justify-end gap-2 overflow-hidden">
-          {bubble(true, showU1, userText)}
-          {dots && (
-            <span className="flex gap-1 self-start rounded-2xl rounded-bl-sm bg-muted px-3 py-2.5">
+        <div className="flex min-h-[290px] flex-col justify-end gap-2">
+          {bubble(true, showU1, l.User1, shown)}
+          <span className={`flex gap-1 self-start rounded-2xl rounded-bl-sm bg-muted px-3 py-2.5 ${dots ? "" : "invisible"}`}>
               {[0, 150, 300].map((d) => (
-                <span key={d} className="h-1.5 w-1.5 animate-pulse rounded-full bg-muted-foreground" style={{ animationDelay: `${d}ms` }} />
+                <span key={d} className="h-1.5 w-1.5 animate-pulse motion-reduce:animate-none rounded-full bg-muted-foreground" style={{ animationDelay: `${d}ms` }} />
               ))}
-            </span>
-          )}
+          </span>
           {bubble(false, showA1, l.Assistant1)}
           {bubble(true, showU2, l.User2)}
           {bubble(false, showA2, l.Assistant2)}
