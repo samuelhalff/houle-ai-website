@@ -90,8 +90,7 @@
       "Name": "Pro",
       "Setup": "CHF 1'900 de mise en place",
       "Monthly": "puis CHF 49 par mois",
-      "Includes": "Design sur mesure, jusqu'à 5 pages, référencement soigné, et les modifications par chat.",
-      "MonthlyIncludes": "L'abonnement couvre l'hébergement suisse, le certificat SSL, les sauvegardes, les contrôles automatiques avant chaque publication, les mises à jour et jusqu'à 30 minutes d'aide de notre part chaque mois."
+      "Includes": "Design sur mesure, jusqu'à 5 pages, référencement soigné, et les modifications par chat."
     },
     "Premium": {
       "Name": "Premium",
@@ -101,7 +100,7 @@
     },
     "Options": {
       "Title": "Options",
-      "Text": "Chaque langue supplémentaire : CHF 400. Carte ou réservation en ligne, mise en place de la fiche Google Business Profile, logo : sur devis."
+      "Text": "Chaque langue supplémentaire : CHF 400. Carte ou réservation en ligne, logo : sur devis."
     },
     "Preview": "Aperçu gratuit : nous vous montrons une maquette de votre nouveau site avant que vous vous engagiez.",
     "Ark": {
@@ -109,7 +108,8 @@
       "Link": "Ark Fiduciaire",
       "After": ", la mise en place est gratuite et les 6 premiers mois d'abonnement sont offerts."
     },
-    "Subscription": "Votre abonnement ChatGPT ou Claude est à part : vous le payez directement au fournisseur."
+    "Subscription": "Votre abonnement ChatGPT ou Claude est à part : vous le payez directement au fournisseur.",
+    "MonthlyIncludes": "Chaque abonnement mensuel comprend l'hébergement suisse, le certificat SSL, les sauvegardes, les contrôles automatiques avant chaque publication, les mises à jour et jusqu'à 30 minutes d'aide de notre part chaque mois."
   },
   "Faq": {
     "Title": "Questions fréquentes",

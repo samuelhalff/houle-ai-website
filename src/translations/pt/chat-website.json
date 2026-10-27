@@ -90,8 +90,7 @@
       "Name": "Pro",
       "Setup": "CHF 1'900 de criação",
       "Monthly": "depois CHF 49 por mês",
-      "Includes": "Design à medida, até 5 páginas, SEO cuidado e alterações por chat.",
-      "MonthlyIncludes": "A mensalidade cobre alojamento na Suíça, certificado SSL, cópias de segurança, controlos automáticos antes de cada publicação, atualizações e até 30 minutos de ajuda nossa por mês."
+      "Includes": "Design à medida, até 5 páginas, SEO cuidado e alterações por chat."
     },
     "Premium": {
       "Name": "Premium",
@@ -101,7 +100,7 @@
     },
     "Options": {
       "Title": "Opções",
-      "Text": "Cada língua adicional: CHF 400. Menu ou reservas online, configuração do Perfil da Empresa no Google, logótipo: sob orçamento."
+      "Text": "Cada língua adicional: CHF 400. Menu ou reservas online, logótipo: sob orçamento."
     },
     "Preview": "Pré-visualização gratuita: mostramos-lhe uma maqueta do seu novo site antes de se comprometer.",
     "Ark": {
@@ -109,7 +108,8 @@
       "Link": "Ark Fiduciaire",
       "After": ", a criação é gratuita e os primeiros 6 meses de assinatura são oferecidos."
     },
-    "Subscription": "A sua assinatura do ChatGPT ou do Claude é à parte: paga-a diretamente ao fornecedor."
+    "Subscription": "A sua assinatura do ChatGPT ou do Claude é à parte: paga-a diretamente ao fornecedor.",
+    "MonthlyIncludes": "Todas as mensalidades incluem alojamento na Suíça, certificado SSL, cópias de segurança, controlos automáticos antes de cada publicação, atualizações e até 30 minutos de ajuda nossa por mês."
   },
   "Faq": {
     "Title": "Perguntas frequentes",

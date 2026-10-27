@@ -233,9 +233,6 @@ const ChatWebsitePage = async (props: { params: Promise<{ locale: string }> }) =
                 {tier.key === "Essential" && (
                   <p className="mt-3 text-sm leading-7 text-foreground/80">{s("Pricing.Essential.Alt")}</p>
                 )}
-                {tier.key === "Pro" && (
-                  <p className="mt-3 text-sm leading-7 text-foreground/80">{s("Pricing.Pro.MonthlyIncludes")}</p>
-                )}
               </div>
             ))}
           </div>
@@ -254,6 +251,7 @@ const ChatWebsitePage = async (props: { params: Promise<{ locale: string }> }) =
           </div>
 
           <div className="mx-auto mt-8 max-w-[760px] space-y-3 text-center text-sm leading-7 text-muted-foreground">
+            <p>{s("Pricing.MonthlyIncludes")}</p>
             <p className="font-medium text-foreground/80">{s("Pricing.Preview")}</p>
             <p>
               <span className="font-medium text-foreground/80">{s("Pricing.Options.Title")}. </span>

@@ -233,8 +233,8 @@ New namespace in all locales (`fr`, `en`, `de`, `es`, `pt`), rendered by `app/[l
 | `Pricing.{Title,Description,Recommended,Preview,Subscription}` | Pricing header (CHF excl. VAT), "recommended" badge, free mock-up note, AI subscription note |
 | `Pricing.{Essential,Pro,Premium}.{Name,Setup,Monthly,Includes}` | The three tiers (CHF 990 + 29/month, 1'900 + 49/month, 3'900 + 149/month) |
 | `Pricing.Essential.Alt` | No-setup-fee alternative (CHF 79/month, 24-month commitment) |
-| `Pricing.Pro.MonthlyIncludes` | What the monthly subscription covers |
-| `Pricing.Options.{Title,Text}` | Extra language CHF 400; menu/booking, Google Business Profile, logo on request |
+| `Pricing.MonthlyIncludes` | Shared line: what every monthly fee covers |
+| `Pricing.Options.{Title,Text}` | Extra language CHF 400; menu/booking and logo on request |
 | `Pricing.Ark.{Before,Link,After}` | Ark Fiduciaire package note; `Link` is the anchor to https://ark-fid.ch |
 | `Faq.Title`, `Faq.Q1`–`Faq.Q6`.`{Question,Answer}` | Visible FAQ, also emitted as FAQPage JSON-LD |
 | `CTA.{Title,Description,Button}` | Closing call to action (links to `/contact/`) |

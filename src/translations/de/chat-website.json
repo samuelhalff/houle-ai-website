@@ -90,8 +90,7 @@
       "Name": "Pro",
       "Setup": "CHF 1'900 Einrichtung",
       "Monthly": "danach CHF 49 pro Monat",
-      "Includes": "Individuelles Design, bis zu 5 Seiten, sorgfältiges SEO und Änderungen per Chat.",
-      "MonthlyIncludes": "Das Monatsabo umfasst Schweizer Hosting, SSL-Zertifikat, Backups, automatische Prüfungen vor jeder Veröffentlichung, Updates und bis zu 30 Minuten Hilfe von uns pro Monat."
+      "Includes": "Individuelles Design, bis zu 5 Seiten, sorgfältiges SEO und Änderungen per Chat."
     },
     "Premium": {
       "Name": "Premium",
@@ -101,7 +100,7 @@
     },
     "Options": {
       "Title": "Optionen",
-      "Text": "Jede weitere Sprache: CHF 400. Online-Speisekarte oder -Reservierung, Einrichtung des Google-Unternehmensprofils, Logo: auf Anfrage."
+      "Text": "Jede weitere Sprache: CHF 400. Online-Speisekarte oder -Reservierung, Logo: auf Anfrage."
     },
     "Preview": "Kostenlose Vorschau: Wir zeigen Ihnen einen Entwurf Ihrer neuen Website, bevor Sie sich festlegen.",
     "Ark": {
@@ -109,7 +108,8 @@
       "Link": "Ark Fiduciaire",
       "After": " ist die Einrichtung kostenlos und die ersten 6 Monate Abo sind geschenkt."
     },
-    "Subscription": "Ihr ChatGPT- oder Claude-Abo ist separat: Sie bezahlen es direkt beim Anbieter."
+    "Subscription": "Ihr ChatGPT- oder Claude-Abo ist separat: Sie bezahlen es direkt beim Anbieter.",
+    "MonthlyIncludes": "Jedes Monatsabo umfasst Schweizer Hosting, SSL-Zertifikat, Backups, automatische Prüfungen vor jeder Veröffentlichung, Updates und bis zu 30 Minuten Hilfe von uns pro Monat."
   },
   "Faq": {
     "Title": "Häufige Fragen",

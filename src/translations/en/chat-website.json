@@ -90,8 +90,7 @@
       "Name": "Pro",
       "Setup": "CHF 1'900 setup",
       "Monthly": "then CHF 49 per month",
-      "Includes": "Custom design, up to 5 pages, careful SEO, and changes by chat.",
-      "MonthlyIncludes": "The monthly fee covers Swiss hosting, SSL certificate, backups, automatic checks before each publication, updates and up to 30 minutes of help from us each month."
+      "Includes": "Custom design, up to 5 pages, careful SEO, and changes by chat."
     },
     "Premium": {
       "Name": "Premium",
@@ -101,7 +100,7 @@
     },
     "Options": {
       "Title": "Options",
-      "Text": "Each additional language: CHF 400. Online menu or booking, Google Business Profile setup, logo: on request."
+      "Text": "Each additional language: CHF 400. Online menu or booking, logo: on request."
     },
     "Preview": "Free preview: we show you a mock-up of your new site before you commit.",
     "Ark": {
@@ -109,7 +108,8 @@
       "Link": "Ark Fiduciaire",
       "After": ", the setup is free and the first 6 months of subscription are offered."
     },
-    "Subscription": "Your ChatGPT or Claude subscription is separate: you pay it directly to the provider."
+    "Subscription": "Your ChatGPT or Claude subscription is separate: you pay it directly to the provider.",
+    "MonthlyIncludes": "Every monthly fee includes Swiss hosting, SSL certificate, backups, automatic checks before each publication, updates and up to 30 minutes of help from us each month."
   },
   "Faq": {
     "Title": "Frequently asked questions",
