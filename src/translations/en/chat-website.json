@@ -11,19 +11,19 @@
     "Title": "From your request to the live site",
     "Description": "Four steps, and you only take part in the first and the last.",
     "Ask": {
-      "Title": "1. You ask",
+      "Title": "You ask",
       "Description": "You write what you want, in your own words: \"change the opening hours\", \"put this photo on the home page\", \"make the menu easier to read\"."
     },
     "Clarify": {
-      "Title": "2. The assistant clarifies",
+      "Title": "The assistant clarifies",
       "Description": "It rephrases your request to make sure it understood, asks one question at a time if something is unclear, and offers two to four options with the one it recommends."
     },
     "Check": {
-      "Title": "3. Automatic checks",
+      "Title": "Automatic checks",
       "Description": "Before anything is published, the change goes through automatic checks: code quality, tests, title lengths, broken links and minimum content on each page."
     },
     "Publish": {
-      "Title": "4. You decide",
+      "Title": "You decide",
       "Description": "The assistant always asks \"shall I publish?\". Only your yes puts the change online, and if a check failed, nothing is published."
     }
   },

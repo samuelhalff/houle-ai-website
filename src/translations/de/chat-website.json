@@ -11,19 +11,19 @@
     "Title": "Von Ihrer Anfrage zur Website online",
     "Description": "Vier Schritte, und Sie sind nur beim ersten und beim letzten dabei.",
     "Ask": {
-      "Title": "1. Sie fragen",
+      "Title": "Sie fragen",
       "Description": "Sie schreiben, was Sie möchten, in Ihren Worten: „Ändere die Öffnungszeiten“, „Setz dieses Foto auf die Startseite“, „Mach die Speisekarte besser lesbar“."
     },
     "Clarify": {
-      "Title": "2. Der Assistent fragt nach",
+      "Title": "Der Assistent fragt nach",
       "Description": "Er formuliert Ihre Anfrage neu, um sicher zu sein, dass er sie verstanden hat, stellt bei Unklarheiten eine Frage nach der anderen und schlägt zwei bis vier Varianten vor, mit einer Empfehlung."
     },
     "Check": {
-      "Title": "3. Automatische Prüfungen",
+      "Title": "Automatische Prüfungen",
       "Description": "Vor jeder Veröffentlichung durchläuft die Änderung automatische Prüfungen: Codequalität, Tests, Titellängen, defekte Links und Mindestinhalt auf jeder Seite."
     },
     "Publish": {
-      "Title": "4. Sie entscheiden",
+      "Title": "Sie entscheiden",
       "Description": "Der Assistent fragt immer: „Soll ich veröffentlichen?“ Erst Ihr Ja bringt die Änderung online, und wenn eine Prüfung fehlschlägt, wird nichts veröffentlicht."
     }
   },

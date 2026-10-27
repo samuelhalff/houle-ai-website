@@ -11,19 +11,19 @@
     "Title": "De su petición al sitio publicado",
     "Description": "Cuatro pasos, y usted solo participa en el primero y en el último.",
     "Ask": {
-      "Title": "1. Usted pide",
+      "Title": "Usted pide",
       "Description": "Escribe lo que quiere, con sus palabras: «cambia el horario de apertura», «pon esta foto en la portada», «haz que la carta se lea mejor»."
     },
     "Clarify": {
-      "Title": "2. El asistente aclara",
+      "Title": "El asistente aclara",
       "Description": "Reformula su petición para asegurarse de que la ha entendido, hace una pregunta cada vez si algo no está claro y propone de dos a cuatro opciones, indicando la que recomienda."
     },
     "Check": {
-      "Title": "3. Comprobaciones automáticas",
+      "Title": "Comprobaciones automáticas",
       "Description": "Antes de publicar nada, el cambio pasa por controles automáticos: calidad del código, pruebas, longitud de los títulos, enlaces rotos y contenido mínimo en cada página."
     },
     "Publish": {
-      "Title": "4. Usted decide",
+      "Title": "Usted decide",
       "Description": "El asistente siempre pregunta «¿Lo publico?». Solo su sí pone el cambio en línea, y si un control falla, no se publica nada."
     }
   },

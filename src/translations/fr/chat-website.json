@@ -11,19 +11,19 @@
     "Title": "De votre demande au site en ligne",
     "Description": "Quatre étapes, et vous n'intervenez qu'à la première et à la dernière.",
     "Ask": {
-      "Title": "1. Vous demandez",
+      "Title": "Vous demandez",
       "Description": "Vous écrivez ce que vous voulez, avec vos mots : « change les horaires d'ouverture », « mets cette photo sur la page d'accueil », « rends la carte plus lisible »."
     },
     "Clarify": {
-      "Title": "2. L'assistant précise",
+      "Title": "L'assistant précise",
       "Description": "Il reformule votre demande pour être sûr d'avoir compris, pose une question à la fois si quelque chose n'est pas clair, et propose deux à quatre options en indiquant celle qu'il recommande."
     },
     "Check": {
-      "Title": "3. Vérifications automatiques",
+      "Title": "Vérifications automatiques",
       "Description": "Avant toute publication, le changement passe des contrôles automatiques : qualité du code, tests, longueur des titres, liens cassés et contenu minimum sur chaque page."
     },
     "Publish": {
-      "Title": "4. Vous décidez",
+      "Title": "Vous décidez",
       "Description": "L'assistant demande toujours « Je publie ? ». Seul votre oui met le changement en ligne, et si un contrôle échoue, rien n'est publié."
     }
   },
