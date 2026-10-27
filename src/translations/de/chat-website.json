@@ -143,5 +143,22 @@
     "Description": "Erzählen Sie uns von Ihrem Geschäft und davon, was Ihre Website leisten soll. Wir sagen Ihnen, was dazu gehört, und machen Ihnen ein klares Angebot.",
     "Button": "Über Ihre Website sprechen"
   },
-  "Breadcrumb": "Produkte"
+  "Breadcrumb": "Produkte",
+  "Demo": {
+    "Label": "Illustration: Der Inhaber eines Restaurants bittet im Chat darum, montags zu schliessen, bestätigt, und die Öffnungszeiten auf der Website zeigen montags «Geschlossen».",
+    "Tagline": "Saisonale Küche, kurze Karte, gemütliche Stube.",
+    "HoursTitle": "Öffnungszeiten",
+    "Mon": "Mo",
+    "TueFri": "Di–Fr",
+    "SatSun": "Sa–So",
+    "HMon": "11.30–22 Uhr",
+    "HTueFri": "11.30–22 Uhr",
+    "HSatSun": "11.30–23 Uhr",
+    "Closed": "Geschlossen",
+    "Fiction": "Beispielseite",
+    "User1": "Schliess ab nächster Woche bitte am Montag.",
+    "Assistant1": "Wenn ich richtig verstehe: montags geschlossen, die Zeiten an den anderen Tagen bleiben. Ich prüfe die Seite… Soll ich veröffentlichen?",
+    "User2": "Ja",
+    "Assistant2": "Veröffentlicht ✓"
+  }
 }

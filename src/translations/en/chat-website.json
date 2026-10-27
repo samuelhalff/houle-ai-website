@@ -143,5 +143,22 @@
     "Description": "Tell us about your business and what your site should do. We will tell you what it involves and give you a clear quote.",
     "Button": "Talk about your website"
   },
-  "Breadcrumb": "Products"
+  "Breadcrumb": "Products",
+  "Demo": {
+    "Label": "Illustration: a restaurant owner asks in a chat to close on Mondays, confirms, and the opening hours on the website switch to closed on Monday.",
+    "Tagline": "Seasonal cooking, a short menu, a warm room.",
+    "HoursTitle": "Opening hours",
+    "Mon": "Mon",
+    "TueFri": "Tue–Fri",
+    "SatSun": "Sat–Sun",
+    "HMon": "11:30–22:00",
+    "HTueFri": "11:30–22:00",
+    "HSatSun": "11:30–23:00",
+    "Closed": "Closed",
+    "Fiction": "Example site",
+    "User1": "Close on Mondays starting next week, please.",
+    "Assistant1": "If I understand correctly: closed on Mondays, hours unchanged on the other days. I'm checking the page… Shall I publish?",
+    "User2": "Yes",
+    "Assistant2": "Published ✓"
+  }
 }

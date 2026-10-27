@@ -143,5 +143,22 @@
     "Description": "Cuéntenos a qué se dedica y qué debe hacer su sitio. Le diremos lo que implica y le haremos una oferta clara.",
     "Button": "Hablar de su sitio web"
   },
-  "Breadcrumb": "Productos"
+  "Breadcrumb": "Productos",
+  "Demo": {
+    "Label": "Ilustración: el dueño de un restaurante pide por chat cerrar los lunes, confirma, y el horario de la web pasa a «Cerrado» el lunes.",
+    "Tagline": "Cocina de temporada, carta corta, sala acogedora.",
+    "HoursTitle": "Horario",
+    "Mon": "Lun",
+    "TueFri": "Mar–Vie",
+    "SatSun": "Sáb–Dom",
+    "HMon": "11:30–22:00",
+    "HTueFri": "11:30–22:00",
+    "HSatSun": "11:30–23:00",
+    "Closed": "Cerrado",
+    "Fiction": "Web de ejemplo",
+    "User1": "Cierra los lunes a partir de la semana que viene, por favor.",
+    "Assistant1": "Si lo entiendo bien: cerrado los lunes, horario sin cambios el resto de días. Reviso la página… ¿Quieres que la publique?",
+    "User2": "Sí",
+    "Assistant2": "Publicado ✓"
+  }
 }

@@ -240,3 +240,18 @@ New namespace in all locales (`fr`, `en`, `de`, `es`, `pt`), rendered by `app/[l
 | `CTA.{Title,Description,Button}` | Closing call to action (links to `/contact/`) |
 
 Also added: `metadata:pages./products/chat-website.{title,description,keywords}` in all locales. Navbar/mobile menu entries (`app/[locale]/layout.tsx`), the footer label `chatWebsite` (`app/[locale]/shared/footer.tsx`) and the products index card (`app/[locale]/products/page.tsx`) are hard-coded per locale like the other products.
+
+### chat-website: `Demo` (animated chat/site illustration)
+
+Used by `src/components/ChatSiteDemo.tsx` (strings passed as props from `app/[locale]/products/chat-website/page.tsx`). All 5 locales. The restaurant "Le Petit Comptoir" is fictional and not translated.
+
+| Key | Description |
+|-----|-------------|
+| `Demo.Label` | `aria-label` of the whole illustration (scene summary) |
+| `Demo.Fiction` | Small badge marking the mini site as an example |
+| `Demo.Tagline` | One-line text on the mini site |
+| `Demo.HoursTitle` | "Opening hours" heading on the mini site |
+| `Demo.{Mon,TueFri,SatSun}` | Day labels |
+| `Demo.{HMon,HTueFri,HSatSun}` | Hours per day group |
+| `Demo.Closed` | Replaces Monday hours after publishing |
+| `Demo.{User1,Assistant1,User2,Assistant2}` | Chat messages in order (request, check question, "Yes", "Published ✓") |

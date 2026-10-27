@@ -143,5 +143,22 @@
     "Description": "Fale-nos da sua atividade e do que o seu site deve fazer. Dizemos-lhe o que isso implica e fazemos-lhe uma proposta clara.",
     "Button": "Falar sobre o seu site"
   },
-  "Breadcrumb": "Produtos"
+  "Breadcrumb": "Produtos",
+  "Demo": {
+    "Label": "Ilustração: o dono de um restaurante pede por chat para fechar às segundas, confirma, e o horário do site passa a «Fechado» à segunda.",
+    "Tagline": "Cozinha sazonal, ementa curta, sala acolhedora.",
+    "HoursTitle": "Horário",
+    "Mon": "Seg",
+    "TueFri": "Ter–Sex",
+    "SatSun": "Sáb–Dom",
+    "HMon": "11h30–22h",
+    "HTueFri": "11h30–22h",
+    "HSatSun": "11h30–23h",
+    "Closed": "Fechado",
+    "Fiction": "Site de exemplo",
+    "User1": "Fecha às segundas a partir da próxima semana, por favor.",
+    "Assistant1": "Se percebi bem: fechado às segundas, horário igual nos outros dias. Estou a verificar a página… Queres que publique?",
+    "User2": "Sim",
+    "Assistant2": "Publicado ✓"
+  }
 }
