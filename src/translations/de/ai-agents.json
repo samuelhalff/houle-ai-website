@@ -53,5 +53,23 @@
     "CTA": {
         "Title": "Setzen Sie einen KI-Agenten ein",
         "Description": "Sprechen wir über Ihre zeitaufwendigsten Prozesse. Gemeinsam bestimmen wir den ersten Agenten, den Sie einsetzen, und seinen Rahmen für die menschliche Freigabe."
+    },
+    "Demo": {
+        "Label": "Illustration: Ein KI-Agent sortiert eingehende Anfragen nach schriftlichen Regeln und gibt die unsichere Anfrage zur Freigabe an eine Person weiter.",
+        "InboxTitle": "Eingehende Anfragen",
+        "Req1": "Rechnung von Dupraz SA",
+        "Req2": "Neue Adresse, Hr. Keller",
+        "Req3": "Ist diese Klausel verhandelbar?",
+        "Tag1": "Buchhaltung",
+        "Tag2": "Kundenakte",
+        "Tag3": "Mensch entscheidet",
+        "RulesTitle": "Regeln",
+        "Rule1": "Rechnung: an die Buchhaltung",
+        "Rule2": "Adressänderung: Kundenakte aktualisieren",
+        "Rule3": "Unsicher: eine Person fragen",
+        "Review": "Wartet auf Freigabe durch Ihr Team",
+        "Pause": "Animation anhalten",
+        "Play": "Animation abspielen",
+        "Fiction": "Beispiel"
     }
 }

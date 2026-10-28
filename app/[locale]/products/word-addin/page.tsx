@@ -6,6 +6,9 @@ import { generateMetadataForPage } from "@/src/lib/metadata";
 import StructuredData from "@/src/components/seo/StructuredData";
 import { buildBreadcrumbList, buildOrganizationSchema } from "@/src/lib/structuredData";
 import { localizePath } from "@/src/lib/paths";
+import HeroWithDemo from "@/src/components/demo/HeroWithDemo";
+import { WordDemo } from "@/src/components/demo/scenes";
+import { DEMO_KEYS, demoLabels } from "@/src/components/demo/keys";
 import PageHero from "@/src/components/site/page-hero";
 import SectionHeading from "@/src/components/site/section-heading";
 import Reveal from "@/src/components/motion/reveal";
@@ -52,13 +55,16 @@ const WordAddinPage = async (props: { params: Promise<{ locale: string }> }) => 
 
       {/* Hero */}
       <div className="abstract-background">
-        <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
+        <HeroWithDemo
+          hero={
           <PageHero
             eyebrow={productsLabel}
             title={(t("Hero.Title") as string) || "AI Assistant for Word"}
             description={(t("Hero.Description") as string) || ""}
           />
-        </div>
+          }
+          demo={<WordDemo labels={demoLabels((k) => (t(k) as string) || "", DEMO_KEYS.word)} />}
+        />
       </div>
 
       {/* Features */}

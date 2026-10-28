@@ -14,6 +14,8 @@ import PageHero from "@/src/components/site/page-hero";
 import SectionHeading from "@/src/components/site/section-heading";
 import Reveal from "@/src/components/motion/reveal";
 import ChatSiteDemo, { type ChatSiteDemoLabels } from "@/src/components/ChatSiteDemo";
+import HeroWithDemo from "@/src/components/demo/HeroWithDemo";
+import { DEMO_KEYS, demoLabels } from "@/src/components/demo/keys";
 import { Button } from "@/src/components/ui/button";
 
 export const runtime = "nodejs";
@@ -100,13 +102,6 @@ const ChatWebsitePage = async (props: { params: Promise<{ locale: string }> }) =
     })),
   };
 
-  const demoLabels = Object.fromEntries(
-    [
-      "Label", "Fiction", "Tagline", "HoursTitle", "Mon", "TueFri", "SatSun", "HMon", "HTueFri", "HSatSun",
-      "Closed", "User1", "Assistant1", "User2", "Assistant2",
-    ].map((k) => [k, s(`Demo.${k}`)]),
-  ) as ChatSiteDemoLabels;
-
   const ctaButton = (label: string) => (
     <Link href={`${localePrefix}/contact/`} prefetch={false}>
       <Button size="lg" className="btn-main-cta rounded-full bg-foreground px-8 text-base text-background">
@@ -124,14 +119,14 @@ const ChatWebsitePage = async (props: { params: Promise<{ locale: string }> }) =
 
       {/* Hero */}
       <div className="abstract-background">
-        <div className="mx-auto max-w-[1200px] px-5 sm:px-8 lg:grid lg:grid-cols-2 lg:items-center lg:gap-8">
+        <HeroWithDemo
+          hero={
           <PageHero eyebrow={s("Hero.Badge")} title={s("Hero.Title")} description={s("Hero.Description")}>
             <div className="flex justify-start">{ctaButton(s("CTA.Button"))}</div>
           </PageHero>
-          <div className="pb-14 lg:pb-0">
-            <ChatSiteDemo labels={demoLabels} />
-          </div>
-        </div>
+          }
+          demo={<ChatSiteDemo labels={demoLabels(s, DEMO_KEYS.chat) as ChatSiteDemoLabels} />}
+        />
       </div>
 
       {/* Answer-first paragraph */}

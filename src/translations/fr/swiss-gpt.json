@@ -92,5 +92,19 @@
         "Description": "Contactez-nous pour découvrir comment l'IA d'entreprise fonctionne avec une souveraineté complète des données.",
         "Demo": "Demander une Démo",
         "Contact": "Commencer"
+    },
+    "Demo": {
+        "Label": "Illustration : un collaborateur pose une question dans un chat ; l'assistant répond à partir des documents de l'entreprise et cite la source, hébergé en Suisse.",
+        "Question": "Puis-je travailler quelques jours depuis l'étranger ?",
+        "Answer": "Oui, avec l'accord de votre responsable, comme le prévoit la directive sur le télétravail.",
+        "SourceLabel": "Source",
+        "SourcesTitle": "Documents internes",
+        "Doc1": "Directive télétravail",
+        "Doc2": "Règles de frais",
+        "Doc3": "Guide d'accueil",
+        "Tag": "Hébergé en Suisse",
+        "Pause": "Mettre l'animation en pause",
+        "Play": "Lancer l'animation",
+        "Fiction": "Exemple"
     }
 }

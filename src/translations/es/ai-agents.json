@@ -53,5 +53,23 @@
     "CTA": {
         "Title": "Ponga un agente de IA a trabajar",
         "Description": "Hablemos de sus procesos más costosos en tiempo. Identificamos juntos el primer agente que desplegar y su marco de validación humana."
+    },
+    "Demo": {
+        "Label": "Ilustración: un agente de IA clasifica las solicitudes recibidas según reglas escritas y pasa a una persona, para su validación, la que le genera dudas.",
+        "InboxTitle": "Solicitudes recibidas",
+        "Req1": "Factura de Dupraz SA",
+        "Req2": "Nueva dirección, Sr. Keller",
+        "Req3": "¿Es negociable esta cláusula?",
+        "Tag1": "Contabilidad",
+        "Tag2": "Ficha de cliente",
+        "Tag3": "Decide una persona",
+        "RulesTitle": "Reglas",
+        "Rule1": "Factura: a contabilidad",
+        "Rule2": "Cambio de dirección: actualizar la ficha de cliente",
+        "Rule3": "Dudoso: preguntar a una persona",
+        "Review": "Pendiente de validación por su equipo",
+        "Pause": "Pausar la animación",
+        "Play": "Reproducir la animación",
+        "Fiction": "Ejemplo"
     }
 }

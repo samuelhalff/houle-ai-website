@@ -203,5 +203,22 @@
                 }
             ]
         }
+    },
+    "Demo": {
+        "Label": "Illustration : un projet de conseil en IA va de l'atelier de découverte à la mise en production ; les cas d'usage sont examinés un à un, et l'un d'eux est écarté car l'IA n'est pas nécessaire.",
+        "Step1": "Atelier de découverte",
+        "Step2": "Cas d'usage",
+        "Step3": "Choix du modèle",
+        "Step4": "Pilote",
+        "Step5": "Mise en production",
+        "ShortTitle": "Cas d'usage examinés",
+        "Use1": "Tri des factures fournisseurs",
+        "Use2": "Résumés de contrats longs",
+        "Use3": "Planning hebdomadaire du personnel",
+        "Keep": "À retenir",
+        "Skip": "Un tableur suffit",
+        "Pause": "Mettre l'animation en pause",
+        "Play": "Lancer l'animation",
+        "Fiction": "Exemple"
     }
 }

@@ -92,5 +92,19 @@
         "Description": "Entre em contato para descobrir como a IA empresarial funciona com soberania completa de dados.",
         "Demo": "Solicitar Demonstração",
         "Contact": "Começar"
+    },
+    "Demo": {
+        "Label": "Ilustração: um colaborador faz uma pergunta num chat; o assistente responde com os documentos da própria empresa e cita a fonte, alojado na Suíça.",
+        "Question": "Posso trabalhar alguns dias a partir do estrangeiro?",
+        "Answer": "Sim, com a aprovação do seu responsável, conforme a política de teletrabalho.",
+        "SourceLabel": "Fonte",
+        "SourcesTitle": "Documentos internos",
+        "Doc1": "Política de teletrabalho",
+        "Doc2": "Regras de despesas",
+        "Doc3": "Guia de acolhimento",
+        "Tag": "Alojado na Suíça",
+        "Pause": "Pausar a animação",
+        "Play": "Reproduzir a animação",
+        "Fiction": "Exemplo"
     }
 }

@@ -92,5 +92,19 @@
         "Description": "Kontaktieren Sie uns, um zu erfahren, wie Unternehmens-KI mit vollständiger Datensouveränität funktioniert.",
         "Demo": "Demo Anfordern",
         "Contact": "Loslegen"
+    },
+    "Demo": {
+        "Label": "Illustration: Ein Mitarbeiter stellt im Chat eine Frage; der Assistent antwortet aus den eigenen Dokumenten des Unternehmens und nennt die Quelle, gehostet in der Schweiz.",
+        "Question": "Darf ich ein paar Tage aus dem Ausland arbeiten?",
+        "Answer": "Ja, mit Zustimmung Ihrer Vorgesetzten, wie in der Homeoffice-Richtlinie geregelt.",
+        "SourceLabel": "Quelle",
+        "SourcesTitle": "Interne Dokumente",
+        "Doc1": "Homeoffice-Richtlinie",
+        "Doc2": "Spesenreglement",
+        "Doc3": "Einführungsleitfaden",
+        "Tag": "In der Schweiz gehostet",
+        "Pause": "Animation anhalten",
+        "Play": "Animation abspielen",
+        "Fiction": "Beispiel"
     }
 }

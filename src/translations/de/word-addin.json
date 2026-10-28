@@ -69,5 +69,18 @@
         "Description": "Kontaktieren Sie uns, um zu erfahren, wie unser KI-Assistent Ihren Dokumentenerstellungsprozess verbessern kann.",
         "Demo": "Demo anfordern",
         "Contact": "Loslegen"
+    },
+    "Demo": {
+        "Label": "Illustration: In einem Word-Dokument vereinfacht das Add-in eine Klausel; der Vorschlag wird übernommen und ersetzt den Text.",
+        "DocTitle": "Liefervertrag",
+        "Clause": "Die erstgenannte Partei hat die zweitgenannte Partei unverzüglich von jeglicher Verzögerung in Kenntnis zu setzen.",
+        "Rewrite": "Jede Partei informiert die andere umgehend über Verzögerungen.",
+        "PaneTitle": "Assistent",
+        "Action": "Formulierung vereinfachen",
+        "Hint": "Vorgeschlagene Formulierung",
+        "Apply": "Übernehmen",
+        "Pause": "Animation anhalten",
+        "Play": "Animation abspielen",
+        "Fiction": "Beispiel"
     }
 }

@@ -203,5 +203,22 @@
                 }
             ]
         }
+    },
+    "Demo": {
+        "Label": "Ilustração: um projeto de consultoria em IA vai do workshop de descoberta à produção; os casos de uso são analisados um a um e um é posto de lado porque não é preciso IA.",
+        "Step1": "Workshop de descoberta",
+        "Step2": "Casos de uso",
+        "Step3": "Escolha do modelo",
+        "Step4": "Piloto",
+        "Step5": "Produção",
+        "ShortTitle": "Casos de uso analisados",
+        "Use1": "Triagem de faturas de fornecedores",
+        "Use2": "Resumos de contratos longos",
+        "Use3": "Escala semanal do pessoal",
+        "Keep": "Vale a pena",
+        "Skip": "Uma folha de cálculo basta",
+        "Pause": "Pausar a animação",
+        "Play": "Reproduzir a animação",
+        "Fiction": "Exemplo"
     }
 }

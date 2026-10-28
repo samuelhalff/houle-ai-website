@@ -170,5 +170,19 @@
                 }
             ]
         }
+    },
+    "Demo": {
+        "Label": "Illustration: Ein automatisierter Ablauf reagiert auf ein neues Dokument in SharePoint, holt die Genehmigung einer Führungskraft ein, legt das Dokument ab und informiert das Team.",
+        "FlowTitle": "Automatisierter Ablauf",
+        "Step1": "Neues Dokument in SharePoint",
+        "Step2": "Genehmigungsanfrage an die Führungskraft",
+        "Step3": "Ablegen und Team informieren",
+        "LibTitle": "Dokumente",
+        "Pending": "Wartet auf Genehmigung",
+        "Approved": "Genehmigt ✓",
+        "Notified": "Team informiert",
+        "Pause": "Animation anhalten",
+        "Play": "Animation abspielen",
+        "Fiction": "Beispiel"
     }
 }

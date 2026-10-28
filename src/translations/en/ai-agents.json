@@ -53,5 +53,23 @@
     "CTA": {
         "Title": "Put an AI agent to work",
         "Description": "Let's talk about your most time-consuming processes. Together we identify the first agent to deploy and its human validation framework."
+    },
+    "Demo": {
+        "Label": "Illustration: an AI agent sorts incoming requests according to written rules and passes the one it is unsure about to a person for validation.",
+        "InboxTitle": "Incoming requests",
+        "Req1": "Invoice from Dupraz SA",
+        "Req2": "New address, Mr Keller",
+        "Req3": "Is this clause negotiable?",
+        "Tag1": "Accounting",
+        "Tag2": "Customer file",
+        "Tag3": "A person decides",
+        "RulesTitle": "Rules",
+        "Rule1": "Invoice: send to accounting",
+        "Rule2": "Change of address: update the customer file",
+        "Rule3": "Unsure: ask a person",
+        "Review": "Waiting for validation by your team",
+        "Pause": "Pause animation",
+        "Play": "Play animation",
+        "Fiction": "Example"
     }
 }

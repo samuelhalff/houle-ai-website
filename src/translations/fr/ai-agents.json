@@ -53,5 +53,23 @@
     "CTA": {
         "Title": "Mettez un agent IA au travail",
         "Description": "Parlons de vos processus les plus chronophages. Nous identifions ensemble le premier agent à déployer et son cadre de validation humaine."
+    },
+    "Demo": {
+        "Label": "Illustration : un agent IA trie des demandes reçues selon des règles écrites et transmet à une personne, pour validation, celle dont il n'est pas sûr.",
+        "InboxTitle": "Demandes reçues",
+        "Req1": "Facture de Dupraz SA",
+        "Req2": "Nouvelle adresse, M. Keller",
+        "Req3": "Cette clause est-elle négociable ?",
+        "Tag1": "Comptabilité",
+        "Tag2": "Dossier client",
+        "Tag3": "Une personne décide",
+        "RulesTitle": "Règles",
+        "Rule1": "Facture : vers la comptabilité",
+        "Rule2": "Changement d'adresse : mise à jour du dossier client",
+        "Rule3": "Incertain : demander à une personne",
+        "Review": "En attente de validation par votre équipe",
+        "Pause": "Mettre l'animation en pause",
+        "Play": "Lancer l'animation",
+        "Fiction": "Exemple"
     }
 }

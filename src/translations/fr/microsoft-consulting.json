@@ -170,5 +170,19 @@
                 }
             ]
         }
+    },
+    "Demo": {
+        "Label": "Illustration : un flux automatisé réagit à un nouveau document dans SharePoint, demande l'approbation d'un responsable, puis classe le document et informe l'équipe.",
+        "FlowTitle": "Flux automatisé",
+        "Step1": "Nouveau document dans SharePoint",
+        "Step2": "Demande d'approbation au responsable",
+        "Step3": "Classement et information de l'équipe",
+        "LibTitle": "Documents",
+        "Pending": "En attente d'approbation",
+        "Approved": "Approuvé ✓",
+        "Notified": "Équipe informée",
+        "Pause": "Mettre l'animation en pause",
+        "Play": "Lancer l'animation",
+        "Fiction": "Exemple"
     }
 }

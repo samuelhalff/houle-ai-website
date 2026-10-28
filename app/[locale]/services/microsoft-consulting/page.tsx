@@ -15,6 +15,9 @@ import {
 } from "@/src/lib/structuredData";
 import { localizePath } from "@/src/lib/paths";
 import ResponsiveImage from "@/src/components/media/ResponsiveImage";
+import HeroWithDemo from "@/src/components/demo/HeroWithDemo";
+import { MicrosoftDemo } from "@/src/components/demo/scenes";
+import { DEMO_KEYS, demoLabels } from "@/src/components/demo/keys";
 import PageHero from "@/src/components/site/page-hero";
 import Reveal from "@/src/components/motion/reveal";
 import { Button } from "@/src/components/ui/button";
@@ -103,7 +106,8 @@ const MicrosoftConsultingPage = async (props: { params: Promise<{ locale: string
 
       {/* Hero */}
       <div className="abstract-background">
-        <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
+        <HeroWithDemo
+          hero={
           <PageHero
             eyebrow={servicesLabel}
             title={(tService("Hero.Title") as string) || "Microsoft consulting"}
@@ -122,7 +126,9 @@ const MicrosoftConsultingPage = async (props: { params: Promise<{ locale: string
               />
             </div>
           </PageHero>
-        </div>
+          }
+          demo={<MicrosoftDemo labels={demoLabels((k) => (tService(k) as string) || "", DEMO_KEYS.microsoft)} />}
+        />
       </div>
 
       {/* Content */}

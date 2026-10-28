@@ -170,5 +170,19 @@
                 }
             ]
         }
+    },
+    "Demo": {
+        "Label": "Illustration: an automated flow reacts to a new document in SharePoint, asks a manager for approval, then files the document and notifies the team.",
+        "FlowTitle": "Automated flow",
+        "Step1": "New document in SharePoint",
+        "Step2": "Approval request to the manager",
+        "Step3": "File it and notify the team",
+        "LibTitle": "Documents",
+        "Pending": "Awaiting approval",
+        "Approved": "Approved ✓",
+        "Notified": "Team notified",
+        "Pause": "Pause animation",
+        "Play": "Play animation",
+        "Fiction": "Example"
     }
 }

@@ -69,5 +69,18 @@
         "Description": "Entre em contato para saber como nosso assistente de IA pode melhorar seu processo de criação de documentos.",
         "Demo": "Solicitar demonstração",
         "Contact": "Começar"
+    },
+    "Demo": {
+        "Label": "Ilustração: num documento Word, o suplemento simplifica uma cláusula; a sugestão é aplicada e substitui o texto.",
+        "DocTitle": "Contrato de fornecimento",
+        "Clause": "A parte primeira notificará sem demora a parte segunda de qualquer atraso que ocorra.",
+        "Rewrite": "Cada parte avisa rapidamente a outra de qualquer atraso.",
+        "PaneTitle": "Assistente",
+        "Action": "Simplificar a redação",
+        "Hint": "Redação sugerida",
+        "Apply": "Aplicar",
+        "Pause": "Pausar a animação",
+        "Play": "Reproduzir a animação",
+        "Fiction": "Exemplo"
     }
 }

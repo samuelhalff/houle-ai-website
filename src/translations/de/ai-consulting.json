@@ -203,5 +203,22 @@
                 }
             ]
         }
+    },
+    "Demo": {
+        "Label": "Illustration: Ein KI-Beratungsprojekt führt vom Discovery-Workshop zur Produktion; die Anwendungsfälle werden einzeln geprüft, einer wird zurückgestellt, weil keine KI nötig ist.",
+        "Step1": "Discovery-Workshop",
+        "Step2": "Anwendungsfälle",
+        "Step3": "Modellwahl",
+        "Step4": "Pilot",
+        "Step5": "Produktion",
+        "ShortTitle": "Geprüfte Anwendungsfälle",
+        "Use1": "Lieferantenrechnungen sortieren",
+        "Use2": "Zusammenfassungen langer Verträge",
+        "Use3": "Wochenplan des Personals",
+        "Keep": "Lohnt sich",
+        "Skip": "Eine Tabelle genügt",
+        "Pause": "Animation anhalten",
+        "Play": "Animation abspielen",
+        "Fiction": "Beispiel"
     }
 }

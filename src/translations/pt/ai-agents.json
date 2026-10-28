@@ -53,5 +53,23 @@
     "CTA": {
         "Title": "Coloque um agente de IA a trabalhar",
         "Description": "Falemos dos seus processos mais morosos. Identificamos consigo o primeiro agente a implementar e o seu enquadramento de validação humana."
+    },
+    "Demo": {
+        "Label": "Ilustração: um agente de IA ordena os pedidos recebidos segundo regras escritas e passa a uma pessoa, para validação, o que lhe levanta dúvidas.",
+        "InboxTitle": "Pedidos recebidos",
+        "Req1": "Fatura da Dupraz SA",
+        "Req2": "Nova morada, Sr. Keller",
+        "Req3": "Esta cláusula é negociável?",
+        "Tag1": "Contabilidade",
+        "Tag2": "Ficha do cliente",
+        "Tag3": "Uma pessoa decide",
+        "RulesTitle": "Regras",
+        "Rule1": "Fatura: para a contabilidade",
+        "Rule2": "Mudança de morada: atualizar a ficha do cliente",
+        "Rule3": "Em dúvida: perguntar a uma pessoa",
+        "Review": "A aguardar validação pela sua equipa",
+        "Pause": "Pausar a animação",
+        "Play": "Reproduzir a animação",
+        "Fiction": "Exemplo"
     }
 }

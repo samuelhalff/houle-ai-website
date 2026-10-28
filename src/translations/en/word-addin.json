@@ -69,5 +69,18 @@
         "Description": "Contact us to learn how our AI assistant can enhance your document creation process.",
         "Demo": "Request Demo",
         "Contact": "Get Started"
+    },
+    "Demo": {
+        "Label": "Illustration: in a Word document, the add-in simplifies a clause; the suggestion is applied and replaces the text.",
+        "DocTitle": "Supply agreement",
+        "Clause": "The party of the first part shall forthwith notify the party of the second part of any delay.",
+        "Rewrite": "Each party must tell the other promptly about any delay.",
+        "PaneTitle": "Assistant",
+        "Action": "Simplify wording",
+        "Hint": "Suggested rewording",
+        "Apply": "Apply",
+        "Pause": "Pause animation",
+        "Play": "Play animation",
+        "Fiction": "Example"
     }
 }

@@ -203,5 +203,22 @@
                 }
             ]
         }
+    },
+    "Demo": {
+        "Label": "Illustration: an AI consulting project moves from discovery workshop to production; use cases are reviewed one by one, and one is set aside because AI is not needed.",
+        "Step1": "Discovery workshop",
+        "Step2": "Use cases",
+        "Step3": "Model choice",
+        "Step4": "Pilot",
+        "Step5": "Production",
+        "ShortTitle": "Use cases reviewed",
+        "Use1": "Sorting supplier invoices",
+        "Use2": "Summaries of long contracts",
+        "Use3": "Weekly staff rota",
+        "Keep": "Worth pursuing",
+        "Skip": "A spreadsheet is enough",
+        "Pause": "Pause animation",
+        "Play": "Play animation",
+        "Fiction": "Example"
     }
 }

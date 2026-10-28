@@ -69,5 +69,18 @@
         "Description": "Contact us to learn how our AI assistant can enhance your email productivity.",
         "Demo": "Request Demo",
         "Contact": "Get Started"
+    },
+    "Demo": {
+        "Label": "Illustration: an email from a client asks for a delivery date; the add-in drafts a reply, and the draft is inserted into the reply box.",
+        "MailSubject": "Delivery date for our order",
+        "MailBody": "Hello, could you confirm when our order will be delivered? Thank you, Claire",
+        "PaneTitle": "Assistant",
+        "Action": "Draft a reply",
+        "Draft": "Hello Claire, thank you for your message. I am checking the date with the workshop and will confirm it by tomorrow. Best regards, Marc",
+        "Insert": "Insert in reply",
+        "ReplyTitle": "Reply",
+        "Pause": "Pause animation",
+        "Play": "Play animation",
+        "Fiction": "Example"
     }
 }

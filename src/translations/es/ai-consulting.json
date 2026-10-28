@@ -203,5 +203,22 @@
                 }
             ]
         }
+    },
+    "Demo": {
+        "Label": "Ilustración: un proyecto de consultoría de IA avanza del taller de descubrimiento a la producción; los casos de uso se revisan uno a uno y uno se descarta porque no hace falta IA.",
+        "Step1": "Taller de descubrimiento",
+        "Step2": "Casos de uso",
+        "Step3": "Elección del modelo",
+        "Step4": "Piloto",
+        "Step5": "Producción",
+        "ShortTitle": "Casos de uso revisados",
+        "Use1": "Clasificar facturas de proveedores",
+        "Use2": "Resúmenes de contratos largos",
+        "Use3": "Turnos semanales del personal",
+        "Keep": "Merece la pena",
+        "Skip": "Basta una hoja de cálculo",
+        "Pause": "Pausar la animación",
+        "Play": "Reproducir la animación",
+        "Fiction": "Ejemplo"
     }
 }

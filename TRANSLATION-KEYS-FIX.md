@@ -256,3 +256,19 @@ Used by `src/components/ChatSiteDemo.tsx` (strings passed as props from `app/[lo
 | `Demo.Closed` | Replaces Monday hours after publishing |
 | `Demo.{User1,Assistant1,User2,Assistant2}` | Chat messages in order (request, check question, "Yes", "Published ✓") |
 | `Demo.{Pause,Play}` | `aria-label` of the pause/play toggle button (WCAG 2.2.2) |
+
+### Hero demos (`Demo` keys) on product and service pages
+
+Shared frame: `src/components/demo/DemoFrame.tsx` (window chrome, timing, pause/play, reduced motion), scenes in `src/components/demo/scenes.tsx`, key lists in `src/components/demo/keys.ts`. Every namespace below has `Demo.{Label,Pause,Play,Fiction}` (aria summary, pause and play button labels, "Example" badge) plus scene text. All names in the scenes are fictional; texts contain no figures.
+
+| Namespace | Scene | Keys under `Demo` |
+|-----------|-------|-------------------|
+| `chat-website` | chat edits a restaurant site | see above (`Tagline`, `Closed`, `User1`... ) |
+| `outlook-addin` | draft a reply in a mail | `MailSubject, MailBody, PaneTitle, Action, Draft, Insert, ReplyTitle` |
+| `word-addin` | simplify a clause | `DocTitle, Clause, Rewrite, PaneTitle, Action, Hint, Apply` |
+| `swiss-gpt` | answer from internal documents with a source | `Question, Answer, SourceLabel, SourcesTitle, Doc1-3, Tag` |
+| `ai-agents` | requests sorted by rules, uncertain one to a person | `InboxTitle, Req1-3, Tag1-3, RulesTitle, Rule1-3, Review` |
+| `ai-consulting` | workshop to production, use cases reviewed | `Step1-5, ShortTitle, Use1-3, Keep, Skip` |
+| `microsoft-consulting` | automated approval flow | `FlowTitle, Step1-3, LibTitle, Pending, Approved, Notified` |
+
+Not covered: products hub, services hub, solutions hub and `solutions/[useCase]` (catalogue pages or 21 use-case pages without one scene each could honestly show).

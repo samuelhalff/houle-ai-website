@@ -170,5 +170,19 @@
                 }
             ]
         }
+    },
+    "Demo": {
+        "Label": "Ilustração: um fluxo automatizado reage a um novo documento no SharePoint, pede a aprovação de um responsável, arquiva o documento e informa a equipa.",
+        "FlowTitle": "Fluxo automatizado",
+        "Step1": "Novo documento no SharePoint",
+        "Step2": "Pedido de aprovação ao responsável",
+        "Step3": "Arquivar e informar a equipa",
+        "LibTitle": "Documentos",
+        "Pending": "A aguardar aprovação",
+        "Approved": "Aprovado ✓",
+        "Notified": "Equipa informada",
+        "Pause": "Pausar a animação",
+        "Play": "Reproduzir a animação",
+        "Fiction": "Exemplo"
     }
 }

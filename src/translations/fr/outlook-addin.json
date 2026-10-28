@@ -69,5 +69,18 @@
         "Description": "Contactez-nous pour découvrir comment notre assistant IA peut améliorer votre productivité email.",
         "Demo": "Demander une Démo",
         "Contact": "Commencer"
+    },
+    "Demo": {
+        "Label": "Illustration : un client demande une date de livraison par e-mail ; le complément rédige une réponse, qui est insérée dans le message.",
+        "MailSubject": "Date de livraison de notre commande",
+        "MailBody": "Bonjour, pourriez-vous me confirmer la date de livraison de notre commande ? Merci, Claire",
+        "PaneTitle": "Assistant",
+        "Action": "Rédiger une réponse",
+        "Draft": "Bonjour Claire, merci pour votre message. Je vérifie la date avec l'atelier et je vous la confirme demain. Cordialement, Marc",
+        "Insert": "Insérer dans la réponse",
+        "ReplyTitle": "Réponse",
+        "Pause": "Mettre l'animation en pause",
+        "Play": "Lancer l'animation",
+        "Fiction": "Exemple"
     }
 }

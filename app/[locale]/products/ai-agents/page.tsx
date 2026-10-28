@@ -8,6 +8,9 @@ import {
   buildBreadcrumbList,
   buildOrganizationSchema,
 } from "@/src/lib/structuredData";
+import HeroWithDemo from "@/src/components/demo/HeroWithDemo";
+import { AgentsDemo } from "@/src/components/demo/scenes";
+import { DEMO_KEYS, demoLabels } from "@/src/components/demo/keys";
 import PageHero from "@/src/components/site/page-hero";
 import SectionHeading from "@/src/components/site/section-heading";
 import Reveal from "@/src/components/motion/reveal";
@@ -77,7 +80,8 @@ const AIAgentsPage = async (props: { params: Promise<{ locale: string }> }) => {
 
       {/* Hero */}
       <div className="abstract-background">
-        <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
+        <HeroWithDemo
+          hero={
           <PageHero
             eyebrow={t("Hero.Badge") as string}
             title={(t("Hero.Title") as string) || "Swiss-Hosted AI Agents"}
@@ -97,7 +101,9 @@ const AIAgentsPage = async (props: { params: Promise<{ locale: string }> }) => {
               </Link>
             </div>
           </PageHero>
-        </div>
+          }
+          demo={<AgentsDemo labels={demoLabels((k) => (t(k) as string) || "", DEMO_KEYS.agents)} />}
+        />
       </div>
 
       {/* Answer-first paragraph */}

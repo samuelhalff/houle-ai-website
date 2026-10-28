@@ -92,5 +92,19 @@
         "Description": "Contact us to discover how enterprise AI works with complete data sovereignty.",
         "Demo": "Request Demo",
         "Contact": "Get Started"
+    },
+    "Demo": {
+        "Label": "Illustration: an employee asks a question in a chat; the assistant answers from the company's own documents and cites the source, hosted in Switzerland.",
+        "Question": "Can I work from abroad for a few days?",
+        "Answer": "Yes, with your manager's approval, as set out in the remote work policy.",
+        "SourceLabel": "Source",
+        "SourcesTitle": "Internal documents",
+        "Doc1": "Remote work policy",
+        "Doc2": "Expense guidelines",
+        "Doc3": "Onboarding guide",
+        "Tag": "Hosted in Switzerland",
+        "Pause": "Pause animation",
+        "Play": "Play animation",
+        "Fiction": "Example"
     }
 }

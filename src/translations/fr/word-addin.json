@@ -69,5 +69,18 @@
     "Description": "Contactez-nous pour découvrir comment notre assistant IA peut améliorer votre processus de création de documents.",
     "Demo": "Demander une Démo",
     "Contact": "Commencer"
+  },
+  "Demo": {
+    "Label": "Illustration : dans un document Word, le complément simplifie une clause ; la proposition est appliquée et remplace le texte.",
+    "DocTitle": "Contrat de fourniture",
+    "Clause": "La partie de première part notifiera sans délai à la partie de seconde part tout retard éventuel.",
+    "Rewrite": "Chaque partie informe rapidement l'autre de tout retard.",
+    "PaneTitle": "Assistant",
+    "Action": "Simplifier la formulation",
+    "Hint": "Reformulation proposée",
+    "Apply": "Appliquer",
+    "Pause": "Mettre l'animation en pause",
+    "Play": "Lancer l'animation",
+    "Fiction": "Exemple"
   }
 }
