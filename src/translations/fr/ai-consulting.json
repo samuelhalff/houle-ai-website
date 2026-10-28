@@ -121,12 +121,12 @@
                 },
                 {
                     "Title": "Automatisation du courrier et des emails",
-                    "Slug": "automatisation-courrier-entrant-ia",
+                    "Slug": "automatisation-salle-courrier-ia-entreprise-services",
                     "Summary": "Scénario type. Un système d'IA classe chaque courrier et e-mail entrant selon sa nature, en extrait les informations clés, l'oriente vers le bon dossier et signale les urgences. Les collaborateurs retrouvent ensuite une communication par recherche sémantique ; un humain valide les cas incertains."
                 },
                 {
                     "Title": "Détection automatique des délais critiques",
-                    "Slug": "detection-delais-SPFx-calendriers",
+                    "Slug": "gestion-contrats-SPFx-alertes-metadata",
                     "Summary": "Scénario type. Une application SharePoint analyse les documents pour repérer les délais légaux et contractuels, puis crée des événements de calendrier dans Teams avec des rappels progressifs. Les échéances détectées restent à confirmer par la personne en charge du dossier."
                 },
                 {
@@ -140,18 +140,8 @@
                     "Summary": "Scénario type. Un outil de synthèse produit deux niveaux de résumé structuré pour des rapports et des contrats, afin de décider rapidement si une lecture approfondie est nécessaire. Le résumé ne remplace pas la lecture des passages déterminants."
                 },
                 {
-                    "Title": "Assistant de rédaction de contrats",
-                    "Slug": "assistant-redaction-contrats-ia",
-                    "Summary": "Scénario type. Un add-in Word propose des clauses issues d'une base validée, assemble un projet de contrat personnalisé et en contrôle la cohérence. Les juristes gardent la main sur la personnalisation, la négociation et la validation finale."
-                },
-                {
-                    "Title": "Analyse prédictive des ventes et stocks",
-                    "Slug": "analyse-predictive-ventes-azure-ml",
-                    "Summary": "Scénario type. Des modèles prédictifs analysent l'historique des ventes et des stocks, enrichi de données contextuelles, pour anticiper les pics saisonniers et préparer les commandes. Les prévisions restent une aide à la décision, comparée aux résultats réels."
-                },
-                {
                     "Title": "Base de connaissances avec recherche sémantique",
-                    "Slug": "base-connaissances-recherche-semantique-ai",
+                    "Slug": "construire-solution-rag-entreprise",
                     "Summary": "Scénario type. Une base de connaissances avec recherche sémantique comprend l'intention derrière les questions, et un modèle génère des réponses synthétiques en citant ses sources. Elle aide notamment les nouveaux collaborateurs à retrouver l'information."
                 },
                 {

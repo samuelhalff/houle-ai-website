@@ -121,12 +121,12 @@
                 },
                 {
                     "Title": "Mail and email automation",
-                    "Slug": "automatisation-courrier-entrant-ia",
+                    "Slug": "automatisation-salle-courrier-ia-entreprise-services",
                     "Summary": "Illustrative scenario. An AI system classifies each incoming letter and email by type, extracts the key information, routes it to the right file and flags urgent items. Staff can then find any communication through semantic search, and a person validates the uncertain cases."
                 },
                 {
                     "Title": "Automatic deadline detection",
-                    "Slug": "detection-delais-SPFx-calendriers",
+                    "Slug": "gestion-contrats-SPFx-alertes-metadata",
                     "Summary": "Illustrative scenario. A SharePoint application analyses documents to spot legal and contractual deadlines, then creates calendar events in Teams with progressive reminders. The detected deadlines remain to be confirmed by the person handling the file."
                 },
                 {
@@ -140,18 +140,8 @@
                     "Summary": "Illustrative scenario. A summarisation tool produces two levels of structured summary for reports and contracts, so that readers can quickly decide whether a full reading is needed. The summary does not replace reading the decisive passages."
                 },
                 {
-                    "Title": "Contract drafting assistant",
-                    "Slug": "assistant-redaction-contrats-ia",
-                    "Summary": "Illustrative scenario. A Word add-in suggests clauses from a validated library, assembles a tailored draft contract and checks its consistency. Lawyers stay in control of the tailoring, the negotiation and the final approval."
-                },
-                {
-                    "Title": "Predictive sales and inventory analysis",
-                    "Slug": "analyse-predictive-ventes-azure-ml",
-                    "Summary": "Illustrative scenario. Predictive models analyse sales and stock history, enriched with contextual data, to anticipate seasonal peaks and prepare orders. The forecasts remain a decision aid and are compared with actual results."
-                },
-                {
                     "Title": "Knowledge base with semantic search",
-                    "Slug": "base-connaissances-recherche-semantique-ai",
+                    "Slug": "construire-solution-rag-entreprise",
                     "Summary": "Illustrative scenario. A knowledge base with semantic search understands the intent behind questions, and a model generates concise answers that cite their sources. It helps new team members in particular to find information."
                 },
                 {

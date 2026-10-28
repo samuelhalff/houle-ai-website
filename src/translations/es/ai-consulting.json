@@ -121,12 +121,12 @@
                 },
                 {
                     "Title": "Automatización de correo postal y electrónico",
-                    "Slug": "automatisation-courrier-entrant-ia",
+                    "Slug": "automatisation-salle-courrier-ia-entreprise-services",
                     "Summary": "Escenario tipo. Un sistema de IA clasifica cada carta y correo electrónico entrante según su naturaleza, extrae la información clave, lo dirige al expediente correcto y señala las urgencias. Después, el equipo encuentra cualquier comunicación mediante búsqueda semántica y una persona valida los casos dudosos."
                 },
                 {
                     "Title": "Detección automática de plazos",
-                    "Slug": "detection-delais-SPFx-calendriers",
+                    "Slug": "gestion-contrats-SPFx-alertes-metadata",
                     "Summary": "Escenario tipo. Una aplicación de SharePoint analiza los documentos para detectar plazos legales y contractuales y crea eventos de calendario en Teams con recordatorios progresivos. Los plazos detectados deben ser confirmados por la persona responsable del expediente."
                 },
                 {
@@ -140,18 +140,8 @@
                     "Summary": "Escenario tipo. Una herramienta de síntesis genera dos niveles de resumen estructurado para informes y contratos, para decidir rápidamente si hace falta una lectura detallada. El resumen no sustituye la lectura de los pasajes decisivos."
                 },
                 {
-                    "Title": "Asistente de redacción de contratos",
-                    "Slug": "assistant-redaction-contrats-ia",
-                    "Summary": "Escenario tipo. Un complemento de Word propone cláusulas de una base validada, ensambla un borrador de contrato personalizado y comprueba su coherencia. Los juristas conservan el control de la personalización, la negociación y la validación final."
-                },
-                {
-                    "Title": "Análisis predictivo de ventas e inventario",
-                    "Slug": "analyse-predictive-ventes-azure-ml",
-                    "Summary": "Escenario tipo. Unos modelos predictivos analizan el historial de ventas y de existencias, enriquecido con datos contextuales, para anticipar los picos estacionales y preparar los pedidos. Las previsiones siguen siendo una ayuda a la decisión y se comparan con los resultados reales."
-                },
-                {
                     "Title": "Base de conocimiento con búsqueda semántica",
-                    "Slug": "base-connaissances-recherche-semantique-ai",
+                    "Slug": "construire-solution-rag-entreprise",
                     "Summary": "Escenario tipo. Una base de conocimiento con búsqueda semántica entiende la intención de las preguntas, y un modelo genera respuestas sintéticas citando sus fuentes. Ayuda sobre todo a los nuevos empleados a encontrar la información."
                 },
                 {

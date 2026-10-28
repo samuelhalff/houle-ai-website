@@ -99,7 +99,7 @@
                 },
                 {
                     "Title": "Flujo de aprobación multinivel de gastos",
-                    "Slug": "validation-notes-frais-power-automate-approvals",
+                    "Slug": "workflows-approbation-multi-niveaux-adaptive-cards",
                     "Summary": "Escenario tipo. Una aplicación móvil de Power Apps rellena previamente la nota de gastos a partir de la foto del recibo, comprueba el cumplimiento de la política interna y encamina la solicitud según el importe y el riesgo mediante un flujo de aprobación automatizado."
                 },
                 {
@@ -116,11 +116,6 @@
                     "Title": "Gestión de contratos en SharePoint con SPFx",
                     "Slug": "gestion-contrats-SPFx-alertes-metadata",
                     "Summary": "Escenario tipo. Una aplicación SPFx gestiona una cartera de contratos con metadatos automáticos y alertas progresivas: la IA extrae las fechas críticas, se calculan las ventanas de rescisión y una persona confirma los vencimientos."
-                },
-                {
-                    "Title": "Flujo de aprobación con Adaptive Cards en Teams",
-                    "Slug": "workflows-approbation-multi-niveaux-adaptive-cards",
-                    "Summary": "Escenario tipo. Unos flujos con tarjetas adaptables de Teams determinan el circuito de aprobación según el nivel de riesgo, gestionan los suplentes en caso de ausencia y escalan la solicitud cuando hace falta. Los aprobadores tramitan las solicitudes desde el móvil."
                 }
             ]
         },

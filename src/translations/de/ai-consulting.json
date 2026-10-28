@@ -121,12 +121,12 @@
                 },
                 {
                     "Title": "Post- und E-Mail-Automatisierung",
-                    "Slug": "automatisation-courrier-entrant-ia",
+                    "Slug": "automatisation-salle-courrier-ia-entreprise-services",
                     "Summary": "Typisches Szenario. Ein KI-System ordnet jede eingehende Post und jede E-Mail nach Art ein, extrahiert die wichtigsten Angaben, leitet sie in die richtige Akte und markiert dringende Fälle. Mitarbeitende finden danach jede Mitteilung per semantischer Suche; unsichere Fälle prüft eine Person."
                 },
                 {
                     "Title": "Automatische Fristenerkennung",
-                    "Slug": "detection-delais-SPFx-calendriers",
+                    "Slug": "gestion-contrats-SPFx-alertes-metadata",
                     "Summary": "Typisches Szenario. Eine SharePoint-Anwendung analysiert Dokumente, um gesetzliche und vertragliche Fristen zu erkennen, und legt in Teams Kalendereinträge mit gestaffelten Erinnerungen an. Die erkannten Fristen müssen von der zuständigen Person bestätigt werden."
                 },
                 {
@@ -140,18 +140,8 @@
                     "Summary": "Typisches Szenario. Ein Zusammenfassungswerkzeug erstellt für Berichte und Verträge zwei Stufen strukturierter Zusammenfassungen, damit schnell entschieden werden kann, ob eine vertiefte Lektüre nötig ist. Die Zusammenfassung ersetzt nicht das Lesen der entscheidenden Passagen."
                 },
                 {
-                    "Title": "Vertragsgestaltungsassistent",
-                    "Slug": "assistant-redaction-contrats-ia",
-                    "Summary": "Typisches Szenario. Ein Word-Add-in schlägt Klauseln aus einer geprüften Bibliothek vor, stellt einen individuellen Vertragsentwurf zusammen und prüft dessen Konsistenz. Die Juristinnen und Juristen behalten Anpassung, Verhandlung und finale Freigabe in der Hand."
-                },
-                {
-                    "Title": "Prädiktive Verkaufs- und Bestandsanalyse",
-                    "Slug": "analyse-predictive-ventes-azure-ml",
-                    "Summary": "Typisches Szenario. Prädiktive Modelle analysieren die Verkaufs- und Bestandshistorie, ergänzt um Kontextdaten, um saisonale Spitzen vorherzusehen und Bestellungen vorzubereiten. Die Prognosen bleiben eine Entscheidungshilfe und werden mit den tatsächlichen Ergebnissen verglichen."
-                },
-                {
                     "Title": "Wissensdatenbank mit semantischer Suche",
-                    "Slug": "base-connaissances-recherche-semantique-ai",
+                    "Slug": "construire-solution-rag-entreprise",
                     "Summary": "Typisches Szenario. Eine Wissensdatenbank mit semantischer Suche versteht die Absicht hinter den Fragen, und ein Modell erzeugt knappe Antworten mit Quellenangaben. Sie hilft vor allem neuen Mitarbeitenden, Informationen zu finden."
                 },
                 {

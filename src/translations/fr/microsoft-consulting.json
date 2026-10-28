@@ -99,7 +99,7 @@
                 },
                 {
                     "Title": "Circuit d'approbation intelligent des notes de frais",
-                    "Slug": "validation-notes-frais-power-automate-approvals",
+                    "Slug": "workflows-approbation-multi-niveaux-adaptive-cards",
                     "Summary": "Scénario type. Une application Power Apps mobile pré-remplit la note de frais à partir de la photo du reçu, vérifie la conformité à la politique interne et achemine la demande selon le montant et le risque, dans un circuit d'approbation automatisé."
                 },
                 {
@@ -116,11 +116,6 @@
                     "Title": "Gestion de contrats avec SPFx et alertes",
                     "Slug": "gestion-contrats-SPFx-alertes-metadata",
                     "Summary": "Scénario type. Une application SPFx gère un portefeuille de contrats avec métadonnées automatiques et alertes progressives : les dates critiques sont extraites par IA, les fenêtres de résiliation calculées, et les échéances confirmées par un humain."
-                },
-                {
-                    "Title": "Workflows d'approbation multi-niveaux",
-                    "Slug": "workflows-approbation-multi-niveaux-adaptive-cards",
-                    "Summary": "Scénario type. Des workflows avec cartes adaptatives Teams déterminent le circuit d'approbation selon le niveau de risque, gèrent les suppléants en cas d'absence et font remonter la demande si nécessaire. Les approbateurs traitent les demandes depuis leur smartphone."
                 }
             ]
         },

@@ -99,7 +99,7 @@
                 },
                 {
                     "Title": "Fluxo de aprovação multinível de despesas",
-                    "Slug": "validation-notes-frais-power-automate-approvals",
+                    "Slug": "workflows-approbation-multi-niveaux-adaptive-cards",
                     "Summary": "Cenário típico. Uma aplicação móvel Power Apps preenche previamente o relatório de despesas a partir da foto do recibo, verifica o cumprimento da política interna e encaminha o pedido conforme o montante e o risco, num fluxo de aprovação automatizado."
                 },
                 {
@@ -116,11 +116,6 @@
                     "Title": "Gestão de contratos no SharePoint com SPFx",
                     "Slug": "gestion-contrats-SPFx-alertes-metadata",
                     "Summary": "Cenário típico. Uma aplicação SPFx gere uma carteira de contratos com metadados automáticos e alertas progressivos: a IA extrai as datas críticas, calculam-se as janelas de rescisão e uma pessoa confirma os vencimentos."
-                },
-                {
-                    "Title": "Fluxo de aprovação com Adaptive Cards no Teams",
-                    "Slug": "workflows-approbation-multi-niveaux-adaptive-cards",
-                    "Summary": "Cenário típico. Fluxos com cartões adaptáveis do Teams determinam o circuito de aprovação conforme o nível de risco, gerem os substitutos em caso de ausência e escalam o pedido quando necessário. Os aprovadores tratam os pedidos a partir do smartphone."
                 }
             ]
         },

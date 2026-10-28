@@ -26,14 +26,11 @@ const SURVIVORS = {
   powerAutomate: "automatisation-processus-rh-finance-conformite-power-automate",
   outlook: "outlook-add-in-automatiser-tri-securite-suivi-mails",
   roi: "comment-mesurer-roi-ia-kpi-pilotage",
-  adoption: "adoption-ia-roi-gouvernance-risques-feuille-route",
+  adoption: "adoption-ia-entreprise-defis-piloter-transformation-suisse-2026",
   rag: "construire-solution-rag-entreprise",
 };
-const KEPT_RUNNERS_UP = [
-  "utilisation-power-automate-automatisation-processus-rh-finance",
-  "automatisation-processus-power-automate-rh-finance",
-  "automatiser-tri-reponses-outlook-add-in",
-];
+// Second pass (2026-10-28): the former runners-up were merged too, so none is kept live.
+const KEPT_RUNNERS_UP = [];
 
 const slugsFor = (locale) => {
   const data = JSON.parse(
@@ -57,7 +54,7 @@ describe("consolidated articles", () => {
     assert.ok(Object.keys(mapping).length > 0);
     for (const [from, to] of Object.entries(mapping)) {
       assert.match(from, /^[\p{L}0-9-]+$/u);
-      assert.match(to, /^[a-z0-9-]+$/);
+      assert.match(to, /^[A-Za-z0-9-]+$/);
       assert.notEqual(from, to);
     }
   });
@@ -92,13 +89,13 @@ describe("consolidated articles", () => {
     const POLICY = "politique-usage-ia-clauses-gouvernance";
     assert.equal(mapping["rediger-politique-utilisation-ia-entreprise"], POLICY);
     assert.equal(Object.prototype.hasOwnProperty.call(mapping, POLICY), false);
-    for (const slug of [
-      "mise-a-jour-politique-ia-gouvernance-bonnes-pratiques",
-      "elaborer-cadre-efficace-gouvernance-ia",
-      "creer-charte-gouvernance-ia-entreprise",
-    ]) {
-      assert.equal(Object.prototype.hasOwnProperty.call(mapping, slug), false, `${slug} must stay live`);
-    }
+    // Audit merges (2026-10-28): the remaining policy/governance siblings now point at the survivors.
+    assert.equal(mapping["creer-charte-gouvernance-ia-entreprise"], POLICY);
+    assert.equal(mapping["mise-a-jour-politique-ia-gouvernance-bonnes-pratiques"], POLICY);
+    assert.equal(
+      mapping["elaborer-cadre-efficace-gouvernance-ia"],
+      "les-defis-et-solutions-de-la-gouvernance-intelligence-artificielle-entreprises",
+    );
   });
 
   it("hides every source from listings and valid-locale helpers", async () => {

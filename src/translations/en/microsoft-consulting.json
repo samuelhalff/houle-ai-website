@@ -99,7 +99,7 @@
                 },
                 {
                     "Title": "Multi-level expense approval workflow",
-                    "Slug": "validation-notes-frais-power-automate-approvals",
+                    "Slug": "workflows-approbation-multi-niveaux-adaptive-cards",
                     "Summary": "Illustrative scenario. A mobile Power Apps application pre-fills the expense report from a photo of the receipt, checks compliance with the internal policy and routes the request by amount and risk through an automated approval flow."
                 },
                 {
@@ -116,11 +116,6 @@
                     "Title": "Contract management in SharePoint with SPFx",
                     "Slug": "gestion-contrats-SPFx-alertes-metadata",
                     "Summary": "Illustrative scenario. An SPFx application manages a portfolio of contracts with automatic metadata and progressive alerts: critical dates are extracted by AI, termination windows are calculated, and deadlines are confirmed by a person."
-                },
-                {
-                    "Title": "Approval workflow with Adaptive Cards in Teams",
-                    "Slug": "workflows-approbation-multi-niveaux-adaptive-cards",
-                    "Summary": "Illustrative scenario. Workflows with Teams adaptive cards determine the approval path according to the level of risk, handle deputies during absences and escalate the request when needed. Approvers can process requests from their smartphone."
                 }
             ]
         },

@@ -99,7 +99,7 @@
                 },
                 {
                     "Title": "Mehrstufiger Workflow zur Spesengenehmigung",
-                    "Slug": "validation-notes-frais-power-automate-approvals",
+                    "Slug": "workflows-approbation-multi-niveaux-adaptive-cards",
                     "Summary": "Typisches Szenario. Eine mobile Power-Apps-Anwendung füllt die Spesenabrechnung anhand eines Belegfotos vor, prüft die Einhaltung der internen Richtlinie und leitet den Antrag je nach Betrag und Risiko durch einen automatisierten Genehmigungsworkflow."
                 },
                 {
@@ -116,11 +116,6 @@
                     "Title": "Vertragsverwaltung in SharePoint mit SPFx",
                     "Slug": "gestion-contrats-SPFx-alertes-metadata",
                     "Summary": "Typisches Szenario. Eine SPFx-Anwendung verwaltet ein Vertragsportfolio mit automatischen Metadaten und gestaffelten Warnungen: Kritische Daten werden per KI extrahiert, Kündigungsfenster berechnet und Fristen von einer Person bestätigt."
-                },
-                {
-                    "Title": "Genehmigungsworkflow mit Adaptive Cards in Teams",
-                    "Slug": "workflows-approbation-multi-niveaux-adaptive-cards",
-                    "Summary": "Typisches Szenario. Workflows mit adaptiven Karten in Teams bestimmen den Genehmigungsweg nach Risikostufe, berücksichtigen Stellvertretungen bei Abwesenheit und eskalieren bei Bedarf. Genehmigende können Anträge per Smartphone bearbeiten."
                 }
             ]
         },

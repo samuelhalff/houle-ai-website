@@ -121,12 +121,12 @@
                 },
                 {
                     "Title": "Automação de correio postal e eletrônico",
-                    "Slug": "automatisation-courrier-entrant-ia",
+                    "Slug": "automatisation-salle-courrier-ia-entreprise-services",
                     "Summary": "Cenário típico. Um sistema de IA classifica cada carta e e-mail recebido conforme a sua natureza, extrai as informações-chave, encaminha para o processo certo e sinaliza as urgências. Depois, a equipa encontra qualquer comunicação por pesquisa semântica e uma pessoa valida os casos duvidosos."
                 },
                 {
                     "Title": "Detecção automática de prazos",
-                    "Slug": "detection-delais-SPFx-calendriers",
+                    "Slug": "gestion-contrats-SPFx-alertes-metadata",
                     "Summary": "Cenário típico. Uma aplicação SharePoint analisa os documentos para identificar prazos legais e contratuais e cria eventos de calendário no Teams com lembretes progressivos. Os prazos detetados devem ser confirmados pela pessoa responsável pelo processo."
                 },
                 {
@@ -140,18 +140,8 @@
                     "Summary": "Cenário típico. Uma ferramenta de síntese produz dois níveis de resumo estruturado para relatórios e contratos, para decidir rapidamente se é necessária uma leitura aprofundada. O resumo não substitui a leitura das passagens decisivas."
                 },
                 {
-                    "Title": "Assistente de redação de contratos",
-                    "Slug": "assistant-redaction-contrats-ia",
-                    "Summary": "Cenário típico. Um suplemento do Word propõe cláusulas de uma base validada, monta um rascunho de contrato personalizado e verifica a sua coerência. Os juristas mantêm o controlo da personalização, da negociação e da validação final."
-                },
-                {
-                    "Title": "Análise preditiva de vendas e estoque",
-                    "Slug": "analyse-predictive-ventes-azure-ml",
-                    "Summary": "Cenário típico. Modelos preditivos analisam o histórico de vendas e de stock, enriquecido com dados contextuais, para antecipar picos sazonais e preparar encomendas. As previsões continuam a ser um apoio à decisão e são comparadas com os resultados reais."
-                },
-                {
                     "Title": "Base de conhecimento com busca semântica",
-                    "Slug": "base-connaissances-recherche-semantique-ai",
+                    "Slug": "construire-solution-rag-entreprise",
                     "Summary": "Cenário típico. Uma base de conhecimento com pesquisa semântica compreende a intenção das perguntas, e um modelo gera respostas sintéticas citando as fontes. Ajuda sobretudo os novos colaboradores a encontrar a informação."
                 },
                 {
