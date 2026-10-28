@@ -7,7 +7,9 @@ import { getTranslationsRecord } from "@/src/lib/i18n";
 
 const BASE = "https://houle.ai";
 const canonicalLocale: Locale = "fr";
-const STATIC_LASTMOD = "2026-06-10";
+// Static/product pages carry no <lastmod>: CI checks out with the default
+// shallow clone (actions/checkout, depth 1), so git dates are not reliable and
+// no truthful date is available. Articles use their own `updated` or `date`.
 
 function getPlaceholderLocales(): Set<string> {
   const raw = process.env.PLACEHOLDER_LOCALES || "";
@@ -119,9 +121,12 @@ export async function GET() {
       const basePath = p === "/" ? "" : p;
       const localized = basePath ? localizePath(basePath, locale) : "";
       const loc = `${BASE}/${locale}${localized}/`;
-      const lastmod = p.startsWith("/ressources/articles/")
-        ? pObj.updated || pObj.date || STATIC_LASTMOD
-        : STATIC_LASTMOD;
+      const lastmodValue = p.startsWith("/ressources/articles/")
+        ? pObj.updated || pObj.date
+        : undefined;
+      const lastmodTag = lastmodValue
+        ? `\n    <lastmod>${escapeXml(lastmodValue)}</lastmod>`
+        : "";
       const isHome = p === "/";
       const isArticle = p.startsWith("/ressources/articles/");
       const isResources = p.startsWith("/ressources") && !isArticle;
@@ -176,8 +181,7 @@ export async function GET() {
       ].join("\n");
 
       return `  <url>
-    <loc>${escapeXml(loc)}</loc>
-    <lastmod>${lastmod}</lastmod>
+    <loc>${escapeXml(loc)}</loc>${lastmodTag}
     <changefreq>${changefreq}</changefreq>
     <priority>${priority}</priority>
 ${alternates}

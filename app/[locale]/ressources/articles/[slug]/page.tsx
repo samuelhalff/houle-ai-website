@@ -104,9 +104,14 @@ export default async function ArticlePage(props: Params) {
   const imageUrl = article.image
     ? `${baseUrl}/assets/${article.image.replace(/^\/?assets\//, "")}`
     : `${baseUrl}/assets/og/og-${locale}.webp`;
-  const reading = estimateReadingTime(article.content || "");
+  // The page renders its own H1; drop a leading "# Title" from the Markdown.
+  const articleBody = (article.content ?? "").replace(
+    /^\s*#[ \t]+[^\n]*(\n+|$)/,
+    "",
+  );
+  const reading = estimateReadingTime(articleBody);
   const { first: articleFirstHalf, second: articleSecondHalf } =
-    splitArticleAtMidpoint(article.content ?? "");
+    splitArticleAtMidpoint(articleBody);
   const categoryLabel = getResourceCategoryLabel(article.category);
   const tags = Array.isArray(article.tags) ? article.tags : [];
 

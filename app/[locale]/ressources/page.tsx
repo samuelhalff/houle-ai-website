@@ -146,6 +146,17 @@ export default async function RessourcesPage(
     .sort((a, b) => (b.date || "").localeCompare(a.date || ""))
     .map((article) => articlesMap.get(article.slug) ?? article);
   const articleGroups = buildResourceCategories(articlesCanonical);
+  // Cards only need these fields; never ship full article bodies to the client.
+  const gridArticles = articlesCanonical.map(
+    ({ slug, title, description, author, date, category }) => ({
+      slug,
+      title,
+      description,
+      author,
+      date,
+      category,
+    }),
+  );
 
   const labels = {
     ReadArticle: ressources.ReadArticle || "Read Article",
@@ -217,7 +228,7 @@ export default async function RessourcesPage(
           }
         >
           <ProgressiveResourceGrid
-            articles={articlesCanonical}
+            articles={gridArticles}
             locale={locale}
             labels={labels}
             step={12}

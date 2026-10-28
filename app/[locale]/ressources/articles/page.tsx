@@ -85,7 +85,14 @@ export default async function ArticlesIndex(
   );
   const articlesAll = [...frArticles]
     .sort((a, b) => (b.date || "").localeCompare(a.date || ""))
-    .map((article) => localizedMap.get(article.slug) ?? article);
+    .map((article) => localizedMap.get(article.slug) ?? article)
+    // Summary projection: do not ship full article bodies to the client.
+    .map(({ slug, title, description, date }) => ({
+      slug,
+      title,
+      description,
+      date,
+    }));
 
   const breadcrumb = buildBreadcrumbList([
     {

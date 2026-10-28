@@ -272,3 +272,15 @@ Shared frame: `src/components/demo/DemoFrame.tsx` (window chrome, timing, pause/
 | `microsoft-consulting` | automated approval flow | `FlowTitle, Step1-3, LibTitle, Pending, Approved, Notified` |
 
 Not covered: products hub, services hub, solutions hub and `solutions/[useCase]` (catalogue pages or 21 use-case pages without one scene each could honestly show).
+
+### Related articles heading (`RelatedArticles` key)
+
+Top-level key `RelatedArticles` in `src/translations/<locale>/ressources.json`, used by `app/[locale]/ressources/articles/components/RelatedArticles.tsx` (previously fell back to English on every locale).
+
+| Locale | Value |
+|--------|-------|
+| en | Related articles |
+| fr | Articles liés |
+| de | Verwandte Artikel |
+| es | Artículos relacionados |
+| pt (Brazilian) | Artigos relacionados |
