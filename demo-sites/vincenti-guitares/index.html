@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vincenti Guitares – guitares classiques et atelier, Genève</title>
+<meta name="description" content="Magasin et atelier de guitares classiques à Genève depuis 1979 : guitares de concert, guitares romantiques, restauration d’instruments anciens. Nouvelle adresse dès novembre 2026 : 3, sentier des Saules.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#4a1d0e">
+<meta property="og:title" content="Vincenti Guitares – guitares classiques, Genève">
+<meta property="og:description" content="Guitares de concert, guitares romantiques et restauration d’instruments anciens. Nouvelle adresse dès novembre 2026 : 3, sentier des Saules.">
+<meta property="og:image" content="img/santos-1936.webp">
+<meta property="og:locale" content="fr_CH">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MusicStore","name":"Vincenti Guitares","telephone":"+41 22 328 99 94","email":"info@vincenti-guitares.com","address":{"@type":"PostalAddress","streetAddress":"3, sentier des Saules","postalCode":"1205","addressLocality":"Genève","addressCountry":"CH"},"sameAs":["https://www.facebook.com/vincentiguitares"]}
+</script>
+<!--
+  DIRECTION (fresh-web-design)
+  Artefact : l'étiquette de luthier collée à l'intérieur de la caisse (nom, année, pays), et la guitare vue de face et de dos.
+  Couleurs : palissandre (logo, surfaces sombres), pierre grise froide (fond, pour que les photos à fond blanc s'y fondent en multiply),
+  laiton de rosace (filets et chiffres sur palissandre), encre brun-noir (texte). Pas de crème/terracotta : le papier est froid, le chaud vient du bois.
+  Typo : Newsreader (texte et titres, vraies italiques, optical size) + Montserrat pour les étiquettes (c'est la lettre de leur logo).
+  Mise en page : bandeau palissandre ; la guitare de face + dos en grand, fiche d'instrument sur le côté ; rangée horizontale d'étiquettes ;
+  liste de références en texte courant (leur vraie force).
+  Détail signature : la fiche « étiquette de luthier » sous chaque instrument.
+  Photos : les leurs, détourées sur fond blanc, fondues au fond par multiply. Mouvement : aucun.
+-->
+<style>
+:root{
+  --paper:#eceeea; --ink:#26150d; --muted:#5a4a42; --line:#cfd2cb;
+  --wood:#4a1d0e; --wood-2:#6d2c15; --brass:#d9b25f; --on-wood:#f3efe4; --on-wood-muted:#d8c7bb;
+  --serif:'Newsreader',Georgia,serif; --lab:'Montserrat',system-ui,sans-serif;
+  --fs-0:1.1rem; --fs-1:1.3rem; --fs-2:clamp(1.7rem,5.5vw,2.5rem); --fs-3:clamp(2.3rem,9vw,4.6rem);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 var(--fs-0)/1.6 var(--serif);font-optical-sizing:auto}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--wood-2);text-decoration-thickness:1px;text-underline-offset:3px}
+a:hover{color:var(--wood)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+.lab{font:500 .72rem/1.3 var(--lab);letter-spacing:.06em;text-transform:uppercase}
+.preview{background:#160905;color:#e9ddd2;font:400 .78rem/1.4 var(--lab);text-align:center;padding:7px 12px}
+.preview a{color:#fff}
+
+/* bandeau */
+.band{background:var(--wood);color:var(--on-wood)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0}
+.logo{display:flex;align-items:center;gap:12px;color:var(--on-wood);text-decoration:none}
+.logo svg{width:38px;height:auto;flex:none}
+.logo b{font:500 .86rem/1 var(--lab);letter-spacing:.06em;font-weight:500;white-space:nowrap}
+.top nav{display:none}
+.top nav a{color:var(--on-wood);text-decoration:none;margin-left:26px;font:500 .78rem var(--lab);letter-spacing:.05em}
+.top nav a:hover{text-decoration:underline}
+.call{color:var(--on-wood);font:500 .78rem var(--lab);text-decoration:none;border:1px solid var(--brass);padding:8px 9px;white-space:nowrap}
+@media(min-width:900px){.top nav{display:block}}
+
+.move{background:var(--brass);color:#2a1606;font:500 .95rem/1.4 var(--lab);padding:12px 0}
+.move .wrap{display:flex;gap:6px 14px;flex-wrap:wrap;align-items:baseline}
+.move strong{font-weight:600}
+
+/* hero */
+.hero{padding:34px 0 0;overflow:hidden}
+.hero .wrap{display:grid;gap:26px}
+h1{font:400 var(--fs-3)/1.02 var(--serif);margin:0;letter-spacing:-.015em;max-width:14ch}
+.hero p.lead{font-size:var(--fs-1);line-height:1.5;color:var(--on-wood-muted);margin:0;max-width:34ch}
+.hero .plate{background:var(--paper);margin:0 -20px;padding:26px 20px 0;display:grid;grid-template-columns:1fr;justify-items:center}
+.plate img{mix-blend-mode:multiply;max-height:460px;width:auto;max-width:100%}
+@media(min-width:900px){.plate img{max-height:620px}}
+.tag{background:#f8f6ee;color:var(--ink);border:1px solid #c9c2ac;padding:14px 16px 16px;margin:0 0 24px;max-width:300px;box-shadow:2px 3px 0 rgba(0,0,0,.12)}
+.tag dl{margin:10px 0 0;display:grid;grid-template-columns:auto 1fr;gap:3px 12px;font-size:.95rem;line-height:1.35}
+.tag dt{color:var(--muted);font:500 .68rem/1.9 var(--lab);text-transform:uppercase;letter-spacing:.05em}
+.tag dd{margin:0}
+.tag h3{margin:0;font:italic 400 1.45rem/1.1 var(--serif)}
+.tag .lab{color:var(--wood-2)}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:6px}
+.btn{display:inline-block;font:500 .85rem var(--lab);letter-spacing:.04em;padding:13px 18px;text-decoration:none;border:1px solid currentColor}
+.btn.solid{background:var(--brass);color:#2a1606;border-color:var(--brass)}
+.btn.solid:hover{background:#e6c47c;color:#2a1606}
+.btn.line{color:var(--on-wood)}
+.btn.line:hover{background:#ffffff14;color:var(--on-wood)}
+@media(min-width:900px){
+  .hero{padding-top:56px}
+  .hero .wrap{grid-template-columns:1fr 1.05fr;align-items:end;gap:0 56px}
+  .hero .intro{padding-bottom:56px;align-self:center}
+  .hero .plate{margin:0;padding:34px 34px 0;grid-template-columns:auto auto;align-items:end;gap:0 30px}
+  .tag{margin-bottom:34px}
+}
+
+section{padding:64px 0}
+h2{font:400 var(--fs-2)/1.1 var(--serif);margin:0 0 14px;letter-spacing:-.01em}
+.sec-head{display:flex;justify-content:space-between;align-items:end;flex-wrap:wrap;gap:8px 24px;margin-bottom:26px}
+.sec-head p{margin:0;max-width:48ch;color:var(--muted)}
+
+/* collection */
+.row{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(210px,1fr);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-padding-left:20px;align-items:start;padding:0 20px 14px;margin:0 -20px}
+.inst{scroll-snap-align:start;display:grid;grid-template-rows:330px auto;align-content:start}
+.inst .pic{background:var(--paper);display:flex;justify-content:center;align-items:flex-end;border-bottom:3px solid var(--wood)}
+.inst img{mix-blend-mode:multiply;max-height:320px;width:auto}
+.inst .tag{box-shadow:none;margin:0;max-width:none;border-top:0}
+.status{display:inline-block;margin-top:10px;font:600 .68rem var(--lab);letter-spacing:.06em;text-transform:uppercase;padding:4px 8px;background:var(--wood);color:var(--on-wood)}
+.status.sold{background:transparent;color:var(--muted);border:1px solid var(--muted)}
+.more{margin-top:20px;display:flex;flex-wrap:wrap;gap:8px 26px}
+@media(min-width:1000px){.row{grid-auto-flow:row;grid-template-columns:repeat(4,1fr);overflow:visible;padding:0;margin:0}}
+
+/* atelier */
+.atelier{background:var(--wood);color:var(--on-wood)}
+.atelier .wrap{display:grid;gap:30px}
+.atelier h2{color:var(--on-wood)}
+.atelier p{color:var(--on-wood-muted);max-width:56ch}
+.atelier img{width:100%;max-height:420px;object-fit:cover}
+.team{list-style:none;margin:22px 0 0;padding:0;border-top:1px solid #ffffff33}
+.team li{padding:14px 0;border-bottom:1px solid #ffffff33;display:grid;grid-template-columns:7.5rem 1fr;gap:4px 16px;align-items:baseline}
+.team .lab{color:var(--brass)}
+.team strong{font-weight:500;font-size:1.2rem}
+.team span.d{color:var(--on-wood-muted);font-size:.98rem;grid-column:2}
+@media(min-width:900px){.atelier .wrap{grid-template-columns:1.1fr 1fr;gap:56px;align-items:center}.atelier img{max-height:none;height:100%;min-height:460px}}
+
+/* références */
+.refs{columns:2 140px;column-gap:28px;margin:0;padding:0;list-style:none;font-size:1.02rem}
+.refs li{break-inside:avoid;padding:3px 0;border-bottom:1px solid var(--line)}
+.refs-note{margin-top:14px;color:var(--muted)}
+
+/* étude / livres */
+.two{display:grid;gap:44px}
+@media(min-width:900px){.two{grid-template-columns:1fr 1fr;gap:64px}}
+.rate{list-style:none;padding:0;margin:18px 0 0}
+.rate li{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--line)}
+.rate b{font-weight:500;white-space:nowrap}
+.books{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+.books figure{margin:0}
+.books img{mix-blend-mode:multiply;width:100%;aspect-ratio:3/4;object-fit:contain;object-position:bottom}
+.books figcaption{font-size:.92rem;line-height:1.35;margin-top:6px}
+.books figcaption b{display:block;font:600 .8rem var(--lab)}
+.fine{color:var(--muted);font-size:.98rem}
+
+/* contact */
+.visit{background:#dfe2dc}
+.visit .wrap{display:grid;gap:30px}
+.addr{font:400 var(--fs-2)/1.15 var(--serif);margin:0}
+.addr em{display:block;font-size:var(--fs-0);color:var(--muted);margin-top:10px}
+.big-tel{display:block;font:400 clamp(1.9rem,8vw,3rem)/1.1 var(--serif);color:var(--wood);text-decoration:none;margin:4px 0 6px}
+@media(min-width:900px){.visit .wrap{grid-template-columns:1.2fr 1fr;align-items:end}}
+footer{background:#160905;color:var(--on-wood-muted);padding:22px 0;font:400 .8rem/1.6 var(--lab)}
+footer a{color:#fff}
+@media(prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+:focus-visible{outline:3px solid var(--brass);outline-offset:2px}
+</style>
+</head>
+<body>
+<div class="preview" role="note">Aperçu de votre nouveau site, préparé par&nbsp;<a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
+
+<div class="band">
+  <div class="wrap top">
+    <a class="logo" href="#" aria-label="Vincenti Guitares, accueil">
+      <svg viewBox="0 0 64 34" aria-hidden="true"><path d="M3 32C7 17 12 4 24 4c8 0 8 8 18 8 8 0 12 4 19 20" fill="none" stroke="#f3efe4" stroke-width="2" stroke-linecap="round"/></svg>
+      <b>VINCENTI&nbsp;GUITARES</b>
+    </a>
+    <nav aria-label="Sections">
+      <a href="#collection">Collection</a><a href="#atelier">Atelier</a><a href="#references">Références</a><a href="#etude">Étude &amp; livres</a><a href="#contact">Contact</a>
+    </nav>
+    <a class="call" href="tel:+41223289994">022&nbsp;328&nbsp;99&nbsp;94</a>
+  </div>
+</div>
+
+<div class="move"><div class="wrap"><strong>Nous déménageons.</strong><span>Dès novembre 2026&nbsp;: 3, sentier des Saules, 1205 Genève.</span></div></div>
+
+<header class="band hero">
+  <div class="wrap">
+    <div class="intro">
+      <h1>Guitares classiques, anciennes et de&nbsp;concert.</h1>
+      <p class="lead">Magasin et atelier de lutherie à Genève depuis 1979, spécialisé dans la restauration d’instruments anciens.</p>
+      <div class="hero-cta">
+        <a class="btn solid" href="#collection">Voir la collection</a>
+        <a class="btn line" href="#contact">Nous trouver</a>
+      </div>
+    </div>
+    <div class="plate">
+      <img src="img/santos-1936.webp" width="560" height="933" alt="Guitare Santos Hernandez de 1936, vue de face et de dos" fetchpriority="high">
+      <div class="tag">
+        <span class="lab">Guitare de concert</span>
+        <h3>Santos Hernandez</h3>
+        <dl><dt>Année</dt><dd>1936</dd><dt>Pays</dt><dd>Espagne</dd><dt>Table</dt><dd>Épicéa</dd><dt>Dos, éclisses</dt><dd>Cyprès</dd><dt>Sillet</dt><dd>51&nbsp;mm</dd><dt>Diapason</dt><dd>654&nbsp;mm</dd></dl>
+        <span class="status sold">Vendue</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="collection">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Quelques instruments de la collection</h2>
+      <p>Guitares de concert et guitares romantiques. Prix sur demande, par téléphone ou par courriel.</p>
+    </div>
+    <div class="row">
+      <article class="inst">
+        <div class="pic"><img src="img/ramirez.webp" width="460" height="767" alt="Guitare Viuda de Manuel Ramirez, face et dos"></div>
+        <div class="tag"><span class="lab">Guitare de concert</span><h3>Viuda de Manuel Ramirez</h3><span class="status">Réservée</span></div>
+      </article>
+      <article class="inst">
+        <div class="pic"><img src="img/bottelli-2017.webp" width="460" height="767" alt="Guitare Enrico Bottelli 2017, face et dos"></div>
+        <div class="tag"><span class="lab">Guitare de concert</span><h3>Enrico Bottelli</h3><dl><dt>Année</dt><dd>2017</dd></dl><span class="status">Réservée</span></div>
+      </article>
+      <article class="inst">
+        <div class="pic"><img src="img/hauser-1999.webp" width="460" height="767" alt="Guitare Hermann Hauser III 1999, face et dos"></div>
+        <div class="tag"><span class="lab">Guitare de concert</span><h3>Hermann Hauser III</h3><dl><dt>Année</dt><dd>1999</dd><dt>Pays</dt><dd>Allemagne</dd><dt>Table</dt><dd>Épicéa</dd><dt>Dos</dt><dd>Palissandre</dd><dt>Sillet</dt><dd>52&nbsp;mm</dd><dt>Diapason</dt><dd>645&nbsp;mm</dd></dl></div>
+      </article>
+      <article class="inst">
+        <div class="pic"><img src="img/anonyme-1840.webp" width="460" height="767" alt="Guitare romantique anonyme vers 1840, face et dos"></div>
+        <div class="tag"><span class="lab">Guitare romantique</span><h3>Anonyme</h3><dl><dt>Année</dt><dd>vers&nbsp;1840</dd></dl></div>
+      </article>
+    </div>
+    <p class="more"><a href="https://www.vincenti-guitares.com/guitares-de-concert">Toutes les guitares de concert</a><a href="https://www.vincenti-guitares.com/guitares-romantiques">Guitares romantiques</a><a href="https://www.vincenti-guitares.com/guitares-d-etude">Guitares d’étude</a></p>
+  </div>
+</section>
+
+<section class="atelier" id="atelier">
+  <div class="wrap">
+    <div>
+      <h2>L’atelier restaure les instruments anciens.</h2>
+      <p>À trois, nous évaluons, réfléchissons et étudions chaque instrument afin d’intervenir de la manière la plus adaptée et pertinente.</p>
+      <p>Nous travaillons toujours en respectant les méthodes de construction propres aux instruments ainsi que les matériaux originaux (bois, colles, vernis), dans un esprit de réversibilité.</p>
+      <ul class="team">
+        <li><span class="lab">Direction</span><strong>Jacques Vincenti</strong></li>
+        <li><span class="lab">Depuis 1994</span><strong>Mariann Burri</strong><span class="d">diplômée de la «&nbsp;Civica Scuola di Liuteria de Milano&nbsp;»</span></li>
+        <li><span class="lab">Depuis 2012</span><strong>Guillaume Dayer</strong></li>
+      </ul>
+    </div>
+    <img src="img/rosette.webp" width="1100" height="619" alt="Rosace d’une guitare classique, détail">
+  </div>
+</section>
+
+<section id="references">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Les luthiers dont nous avons soigné les guitares</h2>
+      <p>Au cours des dernières années, nous sommes intervenus sur des instruments de&nbsp;:</p>
+    </div>
+    <ul class="refs">
+      <li>Antonio de Torres</li><li>Santos Hernandez</li><li>Manuel Ramirez</li><li>José Ramirez</li><li>Domingo Esteso</li><li>Ignacio Fleta</li><li>Vicente Arias</li><li>Francisco Simplicio</li><li>Miguel Simplicio</li><li>Robert Bouchet</li><li>Marcelo Barbero</li><li>Enrique Garcia</li><li>Daniel Friedrich</li><li>Hermanos Conde</li><li>Hermanos Yagüe</li><li>David Rubio</li><li>Thomas Humphrey</li><li>Greg Smallman</li><li>John Gilbert</li><li>Walter Vogt</li><li>René Lacôte</li><li>Louis Panormo</li><li>Giovanni Battista Fabricatore</li><li>Luigi Embergher</li><li>Alfred Vidoudez</li><li>Andres Marin</li><li>Rafael Galàn</li><li>Manuel Dominguez</li>
+    </ul>
+    <p class="refs-note">Et bien d’autres, des guitares romantiques du XIXe siècle aux instruments de concert contemporains.</p>
+  </div>
+</section>
+
+<section id="etude" style="background:#e1e4de">
+  <div class="wrap two">
+    <div>
+      <h2>Guitares d’étude et accessoires</h2>
+      <p>Des modèles Alhambra, Cuenca, Almansa et Picado, des guitares d’enfants et des ukulélés. Housses, coffres, accordeurs, cordes&nbsp;: tous les accessoires pour guitare.</p>
+      <ul class="rate">
+        <li><span>Guitares d’étude neuves</span><b>dès 495&nbsp;CHF</b></li>
+        <li><span>Guitares d’occasion, selon disponibilité</span><b>dès 280&nbsp;CHF</b></li>
+      </ul>
+      <p class="fine">Pour toute commande d’accessoires&nbsp;: <a href="mailto:info@vincenti-guitares.com">info@vincenti-guitares.com</a></p>
+    </div>
+    <div>
+      <h2>Livres en vente</h2>
+      <div class="books">
+        <figure><img src="img/livre-arias.webp" width="360" height="480" alt="Livre Vicente Arias, le luthier oublié"><figcaption><b>90&nbsp;CHF</b>Vicente Arias, le luthier oublié</figcaption></figure>
+        <figure><img src="img/livre-santos.webp" width="420" height="312" alt="Livre Santos Hernández, maestro guitarrero"><figcaption><b>90&nbsp;CHF</b>Santos Hernández, maestro guitarrero</figcaption></figure>
+        <figure><img src="img/livre-lacote.webp" width="420" height="425" alt="Livre René Lacote, luthier à Paris"><figcaption><b>90&nbsp;CHF</b>René Lacote, luthier à Paris</figcaption></figure>
+      </div>
+      <p class="fine">Également&nbsp;: «&nbsp;Une Guitare à Genève en 1929, J.&nbsp;Vincenti&nbsp;», 30&nbsp;CHF.</p>
+    </div>
+  </div>
+</section>
+
+<section class="visit" id="contact">
+  <div class="wrap">
+    <div>
+      <p class="lab" style="color:var(--wood-2)">Dès novembre 2026</p>
+      <p class="addr">3, sentier des Saules<br>1205 Genève<em>Après 47 ans au boulevard Saint-Georges.</em></p>
+      <p><a href="https://www.google.com/maps/search/?api=1&amp;query=3+sentier+des+Saules+1205+Gen%C3%A8ve">Voir sur la carte</a></p>
+    </div>
+    <div>
+      <a class="big-tel" href="tel:+41223289994">022&nbsp;328&nbsp;99&nbsp;94</a>
+      <p><a href="mailto:info@vincenti-guitares.com">info@vincenti-guitares.com</a><br><a href="https://www.facebook.com/vincentiguitares">Facebook</a></p>
+      <p class="fine">Les horaires du nouveau lieu seront communiqués par téléphone.</p>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">Vincenti Guitares, Genève. Maquette gratuite proposée par <a href="https://houle.ai/fr/products/chat-website/">houle.ai</a> — ce site n’est pas en ligne. Textes et photos&nbsp;: site actuel de Vincenti Guitares.</div></footer>
+</body>
+</html>

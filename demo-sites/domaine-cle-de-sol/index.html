@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Domaine la Clé de Sol – vigneron à Satigny</title>
+<meta name="description" content="Vigneron et musicien à Choully (Satigny) : les vins du domaine la Clé de Sol, dégustations, Jeudis musicaux de mai à septembre. Commande en ligne.">
+<!-- Maquette non publiée : retirer cette ligne à la mise en ligne -->
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#4d0f22">
+<meta property="og:title" content="Domaine la Clé de Sol – Choully, Satigny">
+<meta property="og:description" content="Vigneron et musicien : des vins qui portent des noms de musique, des Jeudis musicaux dans le jardin du domaine.">
+<meta property="og:image" content="img/og.png">
+<meta property="og:locale" content="fr_CH">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%234d0f22'/%3E%3Cg stroke='%23d9a7b0' stroke-width='1'%3E%3Cpath d='M3 9h26M3 13h26M3 17h26M3 21h26M3 25h26'/%3E%3C/g%3E%3Cellipse cx='16' cy='17' rx='5' ry='3.6' fill='%23f7f6f3' transform='rotate(-20 16 17)'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;0,6..96,700;1,6..96,400;1,6..96,500&family=Schibsted+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Winery","name":"Domaine la Clé de Sol","url":"https://cledesol.ch/","telephone":"+41 79 206 97 59","email":"daniel.sulliger@bluewin.ch","address":{"@type":"PostalAddress","streetAddress":"Route du Crêt-de-Choully 18","postalCode":"1242","addressLocality":"Satigny","addressRegion":"GE","addressCountry":"CH"}}
+</script>
+<!--
+  DIRECTION (fresh-web-design)
+  Artefact : la partition. Daniel Sulliger est vigneron et musicien ; ses vins portent des noms de musique
+  (Vocalise, Fugue, Cadence, Adagio, Crescendo, Quatuor…). Pas de photo exploitable : la typographie fait l'image.
+  Lecteur : quelqu'un qui hésite entre deux bouteilles, ou qui veut réserver un Jeudi musical.
+  Couleurs : grenat profond (surface du haut et du bas), papier de partition gris-blanc, encre bordeaux-noir,
+  rose de portée (lignes), + têtes de note : creuse = blanc, rose = rosé, pleine grenat = rouge.
+  Typo : Bodoni Moda (gravure de partition, vraies italiques pour les noms de cuvées) + Schibsted Grotesk (texte).
+  Mise en page : bord gauche fort, portée de cinq lignes en séparateur et en fond du haut de page, cuvées en liste de partition.
+  Détail signature : la tête de note devant chaque cuvée (creuse / rose / pleine) et le programme de la soirée comme une partition.
+  Mouvement : aucun.
+-->
+<style>
+:root{--garnet:#4d0f22;--garnet2:#6b1a33;--paper:#f7f6f3;--ink:#2a1519;--muted:#5d4a4f;--staff:#d6c6c9;--staffd:#8a4a5d;--rosé:#e8a9bf;--on-g:#f3e4e7}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 "Schibsted Grotesk",system-ui,sans-serif}
+a{color:var(--garnet)}
+.preview{display:block;min-height:40px;padding:11px 1rem;background:#0f172a;color:#f8fafc;font:400 14px/18px system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center}
+.preview a{color:#f8fafc;text-decoration:underline;text-underline-offset:2px}
+h1,h2,h3{font-family:"Bodoni Moda",Georgia,serif;font-weight:500;margin:0;line-height:1.05}
+.hero{position:relative;background:var(--garnet);color:var(--on-g);padding:1.2rem 1.25rem 3.2rem;overflow:hidden}
+.hero::before{content:"";position:absolute;left:0;right:0;top:7.7rem;height:6.4rem;background:repeating-linear-gradient(to bottom,var(--staffd) 0 1px,transparent 1px 1.6rem);opacity:.75;pointer-events:none}
+.hero nav{position:relative;display:flex;gap:.9rem;font-size:.9rem;align-items:center}
+.hero nav a{color:var(--on-g);text-decoration:none;padding:.5rem 0}
+.hero nav .cmd{margin-left:auto;border:1px solid var(--rosé);padding:.5rem .8rem;border-radius:2px}
+.hero h1{position:relative;margin-top:3.6rem;font-style:italic;font-weight:400;font-size:clamp(2.9rem,14vw,7rem);letter-spacing:-.01em;line-height:.98;max-width:12ch}
+.hero .sub{position:relative;margin:1.1rem 0 0;font-size:1.05rem;color:#e6cdd3}
+.hero blockquote{position:relative;margin:2.2rem 0 0;max-width:34ch;font:italic 400 1.35rem/1.35 "Bodoni Moda",serif}
+.hero blockquote cite{display:block;margin-top:.7rem;font:500 .95rem "Schibsted Grotesk",sans-serif;font-style:normal;color:#e6cdd3}
+.note{position:absolute;right:1.6rem;top:11.6rem;width:2.6rem;height:1.8rem;border-radius:50%;background:var(--paper);transform:rotate(-20deg)}
+section{padding:2.6rem 1.25rem}
+h2{font-size:clamp(2rem,8vw,3.2rem);margin-bottom:1rem}
+.portee{height:2.4rem;margin:0 0 1rem;background:repeating-linear-gradient(to bottom,var(--staff) 0 1px,transparent 1px .6rem);height:2.5rem}
+.accueil p{max-width:54ch;margin:.7rem 0 0}
+.accueil ul{margin:.8rem 0 0;padding:0;list-style:none;max-width:54ch}
+.accueil li{padding:.45rem 0 .45rem 1.6rem;position:relative;border-bottom:1px solid var(--staff)}
+.accueil li::before{content:"";position:absolute;left:0;top:1rem;width:.9rem;height:.62rem;border-radius:50%;border:2px solid var(--garnet);transform:rotate(-20deg)}
+.horaires{margin-top:1.4rem;padding:1rem 1.2rem;background:#efe9ea;border-left:4px solid var(--garnet);max-width:34rem}
+.horaires b{font-family:"Bodoni Moda",serif;font-weight:700}
+.musique{background:var(--garnet);color:var(--on-g)}
+.musique h2{color:#fff}
+.musique p{max-width:52ch;margin:.6rem 0 0}
+.prog{list-style:none;margin:1.6rem 0 0;padding:0;max-width:40rem}
+.prog li{display:grid;grid-template-columns:4.6rem 1fr;gap:1rem;padding:.7rem 0;border-top:1px solid var(--staffd)}
+.prog li:last-child{border-bottom:1px solid var(--staffd)}
+.prog time{font:italic 500 1.5rem/1.2 "Bodoni Moda",serif;color:var(--rosé);font-variant-numeric:lining-nums}
+.prix{margin-top:1.3rem;font:italic 500 1.5rem/1.2 "Bodoni Moda",serif}
+.prix small{font:400 1rem "Schibsted Grotesk",sans-serif;display:block;margin-top:.2rem;color:#e6cdd3}
+.b{display:inline-flex;align-items:center;min-height:46px;margin:1.2rem .6rem 0 0;padding:.6rem 1.2rem;font-weight:700;text-decoration:none;border-radius:2px;background:var(--paper);color:var(--garnet)}
+.b.o{background:none;color:inherit;border:2px solid currentColor}
+.b.g{background:var(--garnet);color:#fff}
+.vins .intro{max-width:52ch;margin:0 0 1.4rem;color:var(--muted)}
+.vins h3{font-size:1.15rem;font-style:italic;font-weight:400;color:var(--muted);margin:2rem 0 .3rem;display:flex;align-items:center;gap:.8rem}
+.vins h3::after{content:"";flex:1;height:5px;background:repeating-linear-gradient(to bottom,var(--staff) 0 1px,transparent 1px 1.1ch)}
+.cuvee{display:grid;grid-template-columns:2rem 1fr auto;gap:0 .8rem;align-items:baseline;padding:.9rem 0;border-bottom:1px solid var(--staff)}
+.cuvee .n{width:1.35rem;height:.95rem;border-radius:50%;border:2.5px solid var(--garnet);transform:rotate(-20deg);align-self:center;justify-self:center}
+.cuvee.ro .n{background:var(--rosé);border-color:#b8566f}
+.cuvee.rg .n{background:var(--garnet)}
+.cuvee h4{margin:0;font:italic 500 1.65rem/1.1 "Bodoni Moda",serif}
+.cuvee .g{display:block;font-weight:500;font-size:.95rem;margin-top:.15rem}
+.cuvee p{grid-column:2/4;margin:.35rem 0 0;color:var(--muted);font-size:.97rem;max-width:56ch}
+.cuvee .p{font:700 1.2rem "Schibsted Grotesk",sans-serif;font-variant-numeric:tabular-nums;white-space:nowrap}
+.cuvee .p small{font-weight:400;font-size:.8rem;display:block;text-align:right;color:var(--muted)}
+.contact{background:var(--garnet);color:var(--on-g)}
+.contact h2{color:#fff}
+.contact a{color:#fff}
+.contact .b{color:var(--garnet)}
+.contact .b.o{color:#fff}
+.contact .tel{display:block;font:italic 500 clamp(1.8rem,8vw,2.6rem)/1.15 "Bodoni Moda",serif;text-decoration:none;margin:.3rem 0}
+.contact address{font-style:normal;margin:.8rem 0 0}
+footer{padding:1.2rem 1.25rem 1.6rem;font-size:.9rem;color:var(--muted)}
+@media (min-width:900px){
+ .hero{padding:1.5rem 3rem 5rem}
+ .hero::before{top:12rem;height:8rem;background:repeating-linear-gradient(to bottom,var(--staffd) 0 1px,transparent 1px 2rem)}
+ .hero h1{margin-top:4.5rem;max-width:11ch}
+ .hero blockquote{position:absolute;right:3rem;bottom:5rem;margin:0;max-width:26ch}
+ .note{right:auto;left:46%;top:16rem;width:3.4rem;height:2.4rem}
+ section{padding:4.5rem 3rem}
+ .accueil .wrap{display:grid;grid-template-columns:1fr 1fr;gap:4rem;max-width:1100px}
+ .musique .wrap{display:grid;grid-template-columns:1fr 1fr;gap:4rem;max-width:1100px}
+ .musique .prog{margin-top:0}
+ .vins .gr{display:grid;grid-template-columns:1fr 1fr;column-gap:4rem;max-width:1160px}
+ .vins h3{max-width:1160px}
+ .contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:4rem;max-width:1100px}
+ footer{padding:1.4rem 3rem 2rem}
+}
+</style>
+</head>
+<body>
+<div class="preview" role="note">Aperçu de votre nouveau site, préparé par&nbsp;<a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
+<header class="hero">
+  <nav aria-label="Principal"><a href="#jeudis">Jeudis musicaux</a><a href="#vins">Les vins</a><a class="cmd" href="https://cledesol.ch/">Commander</a></nav>
+  <h1>Domaine la Clé de Sol</h1>
+  <p class="sub">Choully · Satigny · Genève</p>
+  <blockquote>«&nbsp;Vigneron et musicien, j’ai toujours été sensible au charme de l’Harmonie.&nbsp;»<cite>Daniel Sulliger</cite></blockquote>
+  <span class="note" aria-hidden="true"></span>
+</header>
+<main>
+<section class="accueil" id="accueil">
+  <div class="wrap">
+    <div>
+      <h2>Bienvenue au domaine</h2>
+      <p>Au cœur du village viticole de Choully, Daniel Sulliger, l’un des pionniers de la viticulture indépendante genevoise, transmet progressivement son savoir-faire à ses filles. Chaque année est un nouveau défi&nbsp;: récolter des raisins sains et mûrs, comme on compose une nouvelle partition.</p>
+    </div>
+    <div>
+      <p>Le domaine vous accueille pour&nbsp;:</p>
+      <ul>
+        <li>des dégustations entre amis ou en famille</li>
+        <li>des événements privés, jusqu’à 40&nbsp;personnes</li>
+        <li>des événements d’entreprise dans le carnotzet, jusqu’à 20&nbsp;personnes</li>
+        <li>des soirées musique, dégustation et repas dans le jardin</li>
+      </ul>
+      <div class="horaires"><b>Dégustation et vente au domaine</b><br>Du lundi au vendredi de 17h à 19h, le samedi de 10h à 13h, ou sur rendez-vous.</div>
+    </div>
+  </div>
+</section>
+
+<section class="musique" id="jeudis">
+  <div class="wrap">
+    <div>
+      <h2>Les Jeudis musicaux</h2>
+      <p>De mai à septembre, des soirées où se mêlent vin, nature et musique&nbsp;: les vins du domaine dans le jardin, la visite du chai à barriques et un concert privé, en toute simplicité. Les places sont limitées&nbsp;: inscription au moins quatre jours avant.</p>
+      <div class="prix">CHF&nbsp;60 par personne<small>Dégustation · concert · repas</small></div>
+      <a class="b" href="tel:+41792069759">Réserver : 079&nbsp;206&nbsp;97&nbsp;59</a>
+    </div>
+    <ol class="prog" aria-label="Déroulement de la soirée">
+      <li><time>19h00</time><span>Dégustation des vins blancs et rosé</span></li>
+      <li><time>19h30</time><span>Première partie du concert</span></li>
+      <li><time>20h00</time><span>Dégustation des vins rouges, visite du chai et de la culture de la vigne</span></li>
+      <li><time>20h30</time><span>Deuxième partie du concert</span></li>
+      <li><time>21h00</time><span>Buffet campagnard</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="vins" id="vins">
+  <h2>Les vins du domaine</h2>
+  <p class="intro">Chaque cuvée porte un nom de musique. Commande en ligne sur cledesol.ch ; Daniel préfère toujours vous rencontrer et vous faire déguster.</p>
+
+  <h3>Blancs</h3>
+  <div class="gr">
+    <article class="cuvee"><span class="n"></span><div><h4>Vocalise</h4><span class="g">Chasselas</span></div><span class="p">12.–</span><p>L’incontournable vedette de l’apéro à la genevoise : sec et frais.</p></article>
+    <article class="cuvee"><span class="n"></span><div><h4>Fugue</h4><span class="g">Pinot blanc</span></div><span class="p">14.–</span><p>Léger et finement aromatique, pour les apéritifs, fromages ou viandes blanches.</p></article>
+    <article class="cuvee"><span class="n"></span><div><h4>Nuance</h4><span class="g">Sauvignon blanc</span></div><span class="p">18.–</span><p>Un Sauvignon très aromatique.</p></article>
+    <article class="cuvee"><span class="n"></span><div><h4>Brio</h4><span class="g">Sauvignon «&nbsp;boisé&nbsp;»</span></div><span class="p">22.–</span><p>Élevé en fût de chêne à la chauffe «&nbsp;forte&nbsp;».</p></article>
+    <article class="cuvee"><span class="n"></span><div><h4>Nobilmente</h4><span class="g">Sauvignon doux</span></div><span class="p">25.–</span><p>À mi-chemin entre le fromage et le dessert.</p></article>
+    <article class="cuvee"><span class="n"></span><div><h4>Dolce</h4><span class="g">Sauvignon vendanges tardives</span></div><span class="p">25.–<small>50&nbsp;cl</small></span><p>Plus petit en taille, d’une douceur inégalée.</p></article>
+  </div>
+
+  <h3>Rosé</h3>
+  <div class="gr">
+    <article class="cuvee ro"><span class="n"></span><div><h4>Fantaisie</h4><span class="g">Gamay · Garanoir</span></div><span class="p">12.–</span><p>Pas un rosé « à la mode » : un rosé bien de chez nous, au caractère étonnant.</p></article>
+  </div>
+
+  <h3>Rouges</h3>
+  <div class="gr">
+    <article class="cuvee rg"><span class="n"></span><div><h4>Cadence</h4><span class="g">Gamay</span></div><span class="p">12.–</span><p>Le local de l’étape, implanté depuis plusieurs siècles dans la région.</p></article>
+    <article class="cuvee rg"><span class="n"></span><div><h4>Giusto</h4><span class="g">Pinot noir</span></div><span class="p">14.–</span><p>Un cépage exigeant qui s’offre légèrement mais avec assurance.</p></article>
+    <article class="cuvee rg"><span class="n"></span><div><h4>Harmonie</h4><span class="g">Gamay · Pinot noir · Garanoir</span></div><span class="p">15.–</span><p>Un assemblage d’origine accidentelle, devenu le coup de cœur de Daniel.</p></article>
+    <article class="cuvee rg"><span class="n"></span><div><h4>Cantabile</h4><span class="g">Garanoir</span></div><span class="p">16.–</span><p>Une spécialité de nos régions.</p></article>
+    <article class="cuvee rg"><span class="n"></span><div><h4>Arpeggio</h4><span class="g">Garanoir · Merlot</span></div><span class="p">18.–</span><p>Un assemblage puissant et subtil à la fois.</p></article>
+    <article class="cuvee rg"><span class="n"></span><div><h4>Adagio</h4><span class="g">Gamaret</span></div><span class="p">18.–</span><p>Une spécialité de nos régions, frère du Garanoir.</p></article>
+    <article class="cuvee rg"><span class="n"></span><div><h4>Crescendo</h4><span class="g">Merlot</span></div><span class="p">20.–</span><p>Un cépage exigeant qui s’exprime bien chez nous. Existe en magnum&nbsp;: 42.–</p></article>
+    <article class="cuvee rg"><span class="n"></span><div><h4>Quatuor</h4><span class="g">Gamay · Pinot noir · Gamaret · Garanoir</span></div><span class="p">22.–</span><p>L’assemblage le plus élaboré du domaine. Existe en magnum&nbsp;: 46.–</p></article>
+  </div>
+
+  <h3>Coffrets de trois bouteilles</h3>
+  <div class="gr">
+    <article class="cuvee"><span class="n"></span><div><h4>3 Couleurs</h4><span class="g">Vocalise · Fantaisie · Cadence</span></div><span class="p">36.–</span></article>
+    <article class="cuvee"><span class="n"></span><div><h4>3 Variations</h4><span class="g">Fugue · Fantaisie · Adagio</span></div><span class="p">42.–</span></article>
+    <article class="cuvee"><span class="n"></span><div><h4>3 Accords</h4><span class="g">Harmonie · Arpeggio · Quatuor</span></div><span class="p">54.–</span></article>
+  </div>
+  <a class="b g" href="https://cledesol.ch/">Commander en ligne</a>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>Venir, écrire, appeler</h2>
+      <a class="tel" href="tel:+41792069759">079&nbsp;206&nbsp;97&nbsp;59</a>
+      <a href="mailto:daniel.sulliger@bluewin.ch">daniel.sulliger@bluewin.ch</a>
+    </div>
+    <div>
+      <address>Domaine la Clé de Sol<br>Route du Crêt-de-Choully 18<br>1242&nbsp;Satigny</address>
+      <a class="b" href="https://www.google.com/maps/search/?api=1&amp;query=Domaine+la+Cl%C3%A9+de+Sol+Route+du+Cr%C3%AAt+de+Choully+18+1242+Satigny">Itinéraire</a><a class="b o" href="tel:+41792069759">Appeler</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer>Maquette gratuite proposée par <a href="https://houle.ai/fr/products/chat-website/">houle.ai</a> — ce site n’est pas en ligne. Textes et prix&nbsp;: Domaine la Clé de Sol.</footer>
+</body>
+</html>

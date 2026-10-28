@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cabinet Médical des Vergers – médecine interne, Meyrin</title>
+<meta name="description" content="Cabinet de médecine interne générale à Meyrin, avec les Drs Jacquier, Martinelli et Schrumpf. Rendez-vous au 022 782 24 00, ordonnances par e-mail, vaccination contre la grippe le 20 novembre 2026.">
+<!-- Maquette non publiée : retirer cette ligne à la mise en ligne -->
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f6f8f2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121a12" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="Cabinet Médical des Vergers – Meyrin">
+<meta property="og:description" content="Médecine interne générale. Rendez-vous au 022 782 24 00. Ordonnances par e-mail.">
+<meta property="og:image" content="img/arbre.webp">
+<meta property="og:locale" content="fr_CH">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Literata:opsz,wght@7..72,500;7..72,700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "name": "Cabinet Médical des Vergers",
+  "telephone": "+41 22 782 24 00",
+  "email": "secretariatvergers@amge.ch",
+  "image": "img/arbre.webp",
+  "medicalSpecialty": "InternalMedicine",
+  "address": { "@type": "PostalAddress", "streetAddress": "Esplanade des Récréations 17", "postalCode": "1217", "addressLocality": "Meyrin", "addressCountry": "CH" }
+}
+</script>
+<!--
+  DIRECTION (fresh-web-design)
+  Artefacts du cabinet : le téléphone du secrétariat (le vrai point d'entrée), la demande d'ordonnance par e-mail,
+  l'arbre de points verts et rouges du logo (une « mosaïque » qui tient debout), les panneaux d'affichage de la salle d'attente.
+  Le lecteur : un patient qui ne sait pas par quel canal passer (téléphone ? e-mail ?) ou à quelle heure joindre le secrétariat,
+  parfois inquiet, parfois âgé. L'ancien site est un mur de texte : les mêmes règles sont ici rangées par besoin.
+  Couleurs : vert et rouge du logo. Le vert (#2f6f26) porte l'identité (surfaces, titres de besoin) ; le rouge (#b8101f)
+  est réservé à ce qui est daté ou urgent (vaccination, urgence). Papier vert très pâle. Aplats, pas de dégradés.
+  Typo : Atkinson Hyperlegible pour le texte (conçue pour la lisibilité, utile à des patients âgés ou malvoyants),
+  Literata pour les titres (sérif de lecture sobre, ton médical sans cliché de « bleu clinique »).
+  Mise en page : un téléphone géant, puis une liste « Vous avez besoin de… » à gauche, la réponse à droite ;
+  l'arbre du logo, grand, rogné en bord de hero.
+  Détail signature : l'arbre du logo agrandi, et l'étiquette rouge pour tout ce qui a une date.
+  Mouvement : aucun. Photographie : aucune (pas de stock de blouses blanches) ; le logo suffit.
+  Exceptions : vert + blanc cassé est l'évidence « santé » ; assumé, car c'est la couleur de leur logo.
+-->
+<style>
+:root{
+  --paper:#f6f8f2; --ink:#18241a; --muted:#4b5a4d; --line:#d3dccf;
+  --green:#2f6f26; --green-deep:#1e4a18; --red:#b8101f; --on-green:#fff;
+  --tint:#e6efdf;
+  --measure:62ch;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#121a12; --ink:#eef3ea; --muted:#b4c2b2; --line:#2b3a2b; --green:#8ccf7a; --green-deep:#8ccf7a; --on-green:#0e1a0c; --red:#ff8a93; --tint:#1d2b1c}
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:4rem}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.125rem/1.65 "Atkinson Hyperlegible",sans-serif}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--green-deep)}
+h1,h2,h3{font-family:"Literata",serif;font-weight:700;line-height:1.12;margin:0}
+p{margin:0 0 1em;max-width:var(--measure)}
+.wrap{max-width:70rem;margin:0 auto;padding:0 1.25rem}
+@media(min-width:56rem){.wrap{padding:0 2.5rem}}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.preview{display:block;min-height:40px;padding:11px 1rem;background:#0f172a;color:#f8fafc;font:400 14px/18px system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center}
+.preview a{color:#f8fafc;text-decoration:underline;text-underline-offset:2px}
+
+.top{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:1rem;min-height:3.75rem}
+.brand{font-family:"Literata",serif;font-weight:700;font-size:.95rem;white-space:nowrap;text-decoration:none;display:inline-flex;align-items:center;gap:.6rem;min-height:44px;color:var(--ink);line-height:1.1}
+.brand img{width:2.2rem;height:auto}
+.top nav{display:flex;gap:1.4rem;margin-left:auto}
+.top nav a{text-decoration:none;display:inline-flex;align-items:center;min-height:44px;font-weight:700;color:var(--ink)}
+.top nav a:hover{text-decoration:underline;text-underline-offset:.25em}
+@media(max-width:46rem){.top nav{display:none}.call{margin-left:auto}}
+.call{display:inline-flex;align-items:center;min-height:44px;padding:.4rem .9rem;background:var(--green);color:var(--on-green);font-weight:700;text-decoration:none;border-radius:4px;white-space:nowrap}
+.call:hover{background:var(--green-deep)}
+
+/* Ouverture */
+.hero{position:relative;overflow:hidden;background:var(--tint)}
+.hero .tree{position:absolute;right:-3rem;top:1rem;width:15rem;opacity:.28}
+@media(min-width:56rem){.hero .tree{right:6%;top:50%;transform:translateY(-50%);width:23rem;opacity:1}}
+.hero .wrap{position:relative;padding-top:2.8rem;padding-bottom:3rem}
+.hero h1{font-size:clamp(2.3rem,9vw,4.4rem);max-width:12ch;letter-spacing:-.01em}
+.hero .what{font-size:1.25rem;margin:1rem 0 1.8rem;max-width:30ch}
+.bigtel{display:inline-block;font-family:"Literata",serif;font-weight:700;font-size:clamp(2.2rem,11vw,4.4rem);line-height:1;text-decoration:none;color:var(--green-deep);white-space:nowrap;letter-spacing:-.01em}
+.bigtel:hover{text-decoration:underline;text-underline-offset:.12em}
+.hours{margin:.8rem 0 0;max-width:40ch}
+.hours b{font-weight:700}
+
+.vaccin{background:var(--red);color:#fff;padding:1rem 0}
+@media(prefers-color-scheme:dark){.vaccin{background:#4a0f15;color:#ffe0e3}}
+.vaccin .wrap{display:grid;gap:.2rem}
+.vaccin strong{font-family:"Literata",serif;font-size:1.25rem}
+.vaccin span{max-width:70ch}
+@media(min-width:56rem){.vaccin .wrap{grid-template-columns:auto 1fr;gap:2rem;align-items:baseline}}
+
+/* Besoins */
+.besoins{padding:3.5rem 0 3rem}
+.besoins>.wrap>h2{font-size:clamp(1.9rem,6vw,3rem);margin-bottom:1.6rem}
+.need{display:grid;gap:.6rem 3rem;padding:1.6rem 0;border-top:2px solid var(--green)}
+.need:last-child{border-bottom:2px solid var(--green)}
+.need h3{font-size:1.5rem;color:var(--green-deep)}
+.need p{margin:0 0 .6rem}
+.need .ask{background:var(--tint);padding:.8rem 1rem;border-left:4px solid var(--green);max-width:var(--measure)}
+.need .ask b{display:block;margin-bottom:.2rem}
+.need ul{margin:.3rem 0 0;padding-left:1.2rem}
+.need li{margin:.2rem 0}
+.need .action{display:inline-flex;align-items:center;min-height:48px;font-weight:700;padding:.4rem 1rem;border:2px solid var(--green);border-radius:4px;text-decoration:none;color:var(--green-deep);margin-top:.4rem}
+.need .action:hover{background:var(--green);color:var(--on-green)}
+.need.urgent{border-top-color:var(--red)}
+.need.urgent h3{color:var(--red)}
+.tag{display:inline-block;background:var(--red);color:#fff;font-weight:700;font-size:.9rem;padding:.05rem .55rem;border-radius:3px;margin-bottom:.4rem}
+@media(prefers-color-scheme:dark){.tag{color:#2a0509;background:#ff8a93}}
+@media(min-width:56rem){.need{grid-template-columns:minmax(0,4fr) minmax(0,7fr)}.need h3{grid-row:1 / span 5}}
+
+/* Médecins */
+.docs{padding:3rem 0 3.5rem;background:var(--green);color:var(--on-green)}
+@media(prefers-color-scheme:dark){.docs{background:#1d2b1c;color:var(--ink)}}
+.docs h2{font-size:clamp(1.9rem,6vw,3rem);margin-bottom:1.4rem}
+.docs ul{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.docs li{padding:1rem 0;border-top:1px solid rgba(255,255,255,.4);font-family:"Literata",serif;font-weight:700;font-size:clamp(1.5rem,5vw,2.3rem)}
+.docs li:last-child{border-bottom:1px solid rgba(255,255,255,.4)}
+.docs p{margin:1.2rem 0 0}
+@media(min-width:56rem){.docs ul{grid-template-columns:repeat(3,1fr);gap:2rem}.docs li{border-bottom:0!important}}
+
+/* Venir */
+.venir{padding:3.5rem 0 4.5rem}
+.venir h2{font-size:clamp(1.9rem,6vw,3rem);margin-bottom:1.4rem}
+.venir .grid{display:grid;gap:1.8rem}
+.venir h3{font-size:1.3rem;margin-bottom:.4rem}
+.venir p{margin:0 0 .3rem}
+.venir a{display:inline-flex;align-items:center;min-height:44px}
+@media(min-width:46rem){.venir .grid{grid-template-columns:repeat(3,1fr);gap:3rem}}
+
+.foot{padding:1.5rem 0 5.2rem;font-size:.95rem;color:var(--muted);border-top:1px solid var(--line)}
+.mbar{display:none}
+@media(max-width:37.5rem){
+  .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--paper);border-top:1px solid var(--line);padding:.4rem .5rem calc(.4rem + env(safe-area-inset-bottom));gap:.5rem}
+  .mbar a{display:flex;align-items:center;justify-content:center;min-height:48px;font-weight:700;text-decoration:none;border-radius:4px}
+  .mbar a:first-child{background:var(--green);color:var(--on-green)}
+  .mbar a:last-child{border:2px solid var(--green);color:var(--green-deep)}
+}
+</style>
+</head>
+<body>
+<div class="preview" role="note">Aperçu de votre nouveau site, préparé par&nbsp;<a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#" aria-label="Cabinet Médical des Vergers, accueil"><img src="img/arbre.webp" width="392" height="400" alt=""><span>Cabinet Médical<br>des Vergers</span></a>
+    <nav aria-label="Sections">
+      <a href="#besoins">Que faire&nbsp;?</a>
+      <a href="#medecins">Les médecins</a>
+      <a href="#venir">Venir</a>
+    </nav>
+    <a class="call" href="tel:+41227822400">022 782 24 00</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <img class="tree" src="img/arbre.webp" width="392" height="400" alt="" fetchpriority="high">
+    <div class="wrap">
+      <h1>Cabinet Médical des Vergers</h1>
+      <p class="what">Médecine interne générale, à Meyrin. Trois médecins FMH.</p>
+      <a class="bigtel" href="tel:+41227822400">022 782 24 00</a>
+      <p class="hours">Pour un rendez-vous, le secrétariat répond de <b>9&nbsp;h à 11&nbsp;h&nbsp;30</b> et de <b>14&nbsp;h à 16&nbsp;h</b>&nbsp;; le mercredi, de <b>9&nbsp;h à 11&nbsp;h&nbsp;30</b>.</p>
+    </div>
+  </section>
+
+  <aside class="vaccin" aria-label="Vaccination contre la grippe">
+    <div class="wrap">
+      <strong>Grippe saisonnière</strong>
+      <span>Journée nationale de vaccination&nbsp;: <b>vendredi 20 novembre 2026</b>, au cabinet, <b>sans rendez-vous de 8&nbsp;h à 16&nbsp;h</b>. Un autre jour&nbsp;: téléphonez pour fixer un rendez-vous.</span>
+    </div>
+  </aside>
+
+  <section class="besoins" id="besoins" aria-labelledby="besoins-t">
+    <div class="wrap">
+      <h2 id="besoins-t">Vous avez besoin de…</h2>
+
+      <article class="need">
+        <h3>Un rendez-vous</h3>
+        <p>Par téléphone, auprès du secrétariat médical.</p>
+        <p><a class="action" href="tel:+41227822400">Appeler le 022 782 24 00</a></p>
+      </article>
+
+      <article class="need">
+        <h3>Une ordonnance ou un avis de délégation</h3>
+        <p>Uniquement par e-mail. La boîte est relevée une fois par jour.</p>
+        <p><a class="action" href="mailto:secretariatvergers@amge.ch?subject=Demande%20d%E2%80%99ordonnance">Écrire à secretariatvergers@amge.ch</a></p>
+        <div class="ask">
+          <b>Ordonnance de traitement en cours</b>
+          <ul>
+            <li>vos nom, prénom et date de naissance&nbsp;;</li>
+            <li>le nom, le dosage et la quantité des médicaments&nbsp;;</li>
+            <li>les coordonnées de votre pharmacie.</li>
+          </ul>
+          <p style="margin:.5rem 0 0">L’ordonnance est envoyée par e-mail à votre pharmacie dans un délai de 5 jours.</p>
+        </div>
+        <div class="ask">
+          <b>Avis de délégation de traitement (prévu et discuté avec nous)</b>
+          <ul>
+            <li>vos nom, prénom et date de naissance&nbsp;;</li>
+            <li>votre assurance&nbsp;;</li>
+            <li>le nom du médecin spécialiste et la date de consultation prévue.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="need">
+        <h3>Autre chose</h3>
+        <p>Pour toute autre demande, merci de téléphoner.</p>
+      </article>
+
+      <article class="need">
+        <h3>Vaccination Covid-19</h3>
+        <p>Pour des raisons logistiques, elle ne se réalise que dans des centres cantonaux dédiés. Explications et inscription&nbsp;: <a href="https://www.ge.ch/se-proteger-contre-virus-hiver/que-savoir-covid-19-son-vaccin" rel="noopener">Direction générale de la santé de Genève</a>.</p>
+      </article>
+
+      <article class="need urgent">
+        <h3>Une urgence non vitale, le cabinet étant injoignable</h3>
+        <p><span class="tag">24 h sur 24, 7 jours sur 7</span><br>La Centrale Santé Genève vous renseigne sur les possibilités de consultation ou de conseil.</p>
+        <p><a class="action" href="tel:0800116117" style="border-color:var(--red);color:var(--red)">Appeler le 0800 116 117</a></p>
+      </article>
+    </div>
+  </section>
+
+  <section class="docs" id="medecins" aria-labelledby="docs-t">
+    <div class="wrap">
+      <h2 id="docs-t">Les médecins</h2>
+      <ul>
+        <li>Dr Christophe Jacquier</li>
+        <li>Dr Pascal Martinelli</li>
+        <li>Dr David Schrumpf</li>
+      </ul>
+      <p>Médecine interne générale, spécialistes FMH.</p>
+    </div>
+  </section>
+
+  <section class="venir" id="venir" aria-labelledby="venir-t">
+    <div class="wrap">
+      <h2 id="venir-t">Venir au cabinet</h2>
+      <div class="grid">
+        <div>
+          <h3>Adresse</h3>
+          <p>Cabinet Médical des Vergers<br>Esplanade des Récréations 17<br>1217 Meyrin</p>
+          <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Cabinet+M%C3%A9dical+des+Vergers+Esplanade+des+R%C3%A9cr%C3%A9ations+17+1217+Meyrin" rel="noopener">Ouvrir dans Google Maps</a></p>
+        </div>
+        <div>
+          <h3>Téléphone</h3>
+          <p><a href="tel:+41227822400">022 782 24 00</a></p>
+        </div>
+        <div>
+          <h3>E-mail</h3>
+          <p>Ordonnances et avis de délégation uniquement&nbsp;:<br><a href="mailto:secretariatvergers@amge.ch">secretariatvergers@amge.ch</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot"><div class="wrap">Cabinet Médical des Vergers · Esplanade des Récréations 17, 1217 Meyrin</div></footer>
+
+<nav class="mbar" aria-label="Contact rapide">
+  <a href="tel:+41227822400">Appeler</a>
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Cabinet+M%C3%A9dical+des+Vergers+Esplanade+des+R%C3%A9cr%C3%A9ations+17+1217+Meyrin" rel="noopener">Itinéraire</a>
+</nav>
+</body>
+</html>

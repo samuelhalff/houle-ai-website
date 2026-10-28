@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Espace Musical – école de musique de 3 mois à 16 ans, Genève</title>
+<meta name="description" content="École de musique des Eaux-Vives, à Genève : éveil musical dès 3 mois, initiation, langage musical et cours d’instrument jusqu’à 16 ans. Aussi pour les enfants en difficulté ou handicapés. 022 700 17 90.">
+<!-- Maquette non publiée : retirer cette ligne à la mise en ligne -->
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#670067">
+<meta property="og:title" content="Espace Musical – école de musique de 3 mois à 16 ans, Genève">
+<meta property="og:description" content="L’école où la musique s’explore, s’improvise et se construit, du bébé dès trois mois jusqu’à l’adolescence.">
+<meta property="og:image" content="img/violoncelle.webp">
+<meta property="og:locale" content="fr_CH">
+<link rel="icon" href="img/logo-blanc.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,700;1,400&family=Gabarito:wght@500;700;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicSchool",
+  "name": "Espace Musical",
+  "telephone": "+41 22 700 17 90",
+  "email": "contact@espace-musical.com",
+  "image": "img/violoncelle.webp",
+  "address": { "@type": "PostalAddress", "streetAddress": "Avenue Pictet-de-Rochemont 33bis", "postalCode": "1207", "addressLocality": "Genève", "addressCountry": "CH" },
+  "sameAs": ["https://www.facebook.com/GE.espacemusical", "https://www.instagram.com/ge_espacemusical/"]
+}
+</script>
+<!--
+  DIRECTION (fresh-web-design)
+  Artefacts de l'école : la portée (cinq lignes) sur laquelle l'élève pose ses premières notes, l'objet sonore
+  (bol en inox, flûte, bûche, tambour), la devise du logo « explorer. créer. intégrer. », la spirale.
+  Le lecteur : des parents (et des grands-parents) qui se demandent « à quel âge, combien, et est-ce qu'il/elle
+  aura sa place ». Réponse : les cours rangés par âge, avec durée, effectif et tarif par mois.
+  Couleurs : le prune de leur propre feuille de style (#670067) en SURFACE (bandeaux, hero), jaune de leur
+  palette (#fcbd2d) comme « note » (repères d'âge, détails), papier lilas très clair ; orange de leurs photos
+  pour les liens. Pas de dégradé : aplats.
+  Typo : Gabarito (display rond et franc, lisible pour des parents pressés, proche de l'esprit manuscrit du logo)
+  + Figtree (texte). Exception assumée : le logo est déjà une machine à écrire abîmée, on ne le double pas par une 2e « fantaisie ».
+  Mise en page : les cours sont posés sur une portée (lignes en fond), l'âge en grand à gauche comme une clé ;
+  photos grandes, cadrées serré (le geste, pas le visage).
+  Détail signature : la portée en fond et les trois mots du logo (explorer, créer, intégrer) comme chapitres.
+  Mouvement : aucun. Photographie : les leurs (700 px : affichées petites ou cadrées, pas étirées).
+-->
+<style>
+:root{
+  --paper:#faf6fb; --ink:#26142b; --muted:#5d4a62; --line:#dccde0;
+  --plum:#670067; --plum-deep:#470047; --note:#fcbd2d; --link:#8a2f00;
+  --on-plum:#fff; --on-plum-muted:#ecd2ee;
+  --measure:62ch;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#1c0f20; --ink:#f4e8f6; --muted:#cdb6d2; --line:#3d2842; --link:#ffb27d}
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:4rem}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 "Figtree",sans-serif}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--link)}
+h1,h2,h3{font-family:"Gabarito",sans-serif;font-weight:700;line-height:1.08;margin:0}
+p{margin:0 0 1em;max-width:var(--measure)}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1.25rem}
+@media(min-width:56rem){.wrap{padding:0 2.5rem}}
+:focus-visible{outline:3px solid var(--note);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.preview{display:block;min-height:40px;padding:11px 1rem;background:#0f172a;color:#f8fafc;font:400 14px/18px system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center}
+.preview a{color:#f8fafc;text-decoration:underline;text-underline-offset:2px}
+
+.top{position:sticky;top:0;z-index:20;background:var(--plum);color:var(--on-plum)}
+.top .wrap{display:flex;align-items:center;gap:1.25rem;min-height:3.5rem}
+.top .logo{display:inline-flex;align-items:center;min-height:44px}
+.top .logo img{width:7.5rem;height:auto}
+.top nav{display:flex;gap:1.4rem;margin-left:auto;font-weight:500}
+.top nav a{color:var(--on-plum);text-decoration:none;display:inline-flex;align-items:center;min-height:44px}
+.top nav a:hover{text-decoration:underline;text-underline-offset:.25em}
+@media(max-width:46rem){.top nav{display:none}.call{margin-left:auto}}
+.call{display:inline-flex;align-items:center;min-height:44px;padding:.4rem .9rem;background:var(--note);color:#2b1700;font-weight:700;text-decoration:none;border-radius:999px;white-space:nowrap}
+.call:hover{background:#fff}
+
+/* Ouverture */
+.hero{background:var(--plum);color:var(--on-plum);position:relative;overflow:hidden}
+.staff{position:absolute;left:0;right:0;pointer-events:none;color:var(--on-plum);opacity:.1}
+.staff i{display:block;height:2px;background:currentColor;margin-bottom:1.1rem}
+.hero .staff{top:1.2rem}
+.hero .wrap{position:relative;display:grid;gap:2rem;padding-top:3.25rem;padding-bottom:0}
+.hero h1{font-size:clamp(2.2rem,8.6vw,4.4rem);font-weight:900;letter-spacing:-.01em;max-width:14ch}
+.hero .lede{font-size:1.2rem;color:var(--on-plum-muted);max-width:34ch;margin-top:1.1rem}
+.hero .actions{display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;align-items:center;margin-top:1.6rem}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:.7rem 1.3rem;background:var(--note);color:#2b1700;font-weight:700;text-decoration:none;border-radius:999px}
+.btn:hover{background:#fff}
+.hero .textlink{color:var(--on-plum);display:inline-flex;align-items:center;min-height:44px;font-weight:500;text-underline-offset:.25em;text-decoration-thickness:2px;text-decoration-color:var(--note)}
+.hero figure{margin:0 -1.25rem}
+.hero figure img{width:100%;aspect-ratio:7/4;object-fit:cover;object-position:60% 50%}
+@media(min-width:56rem){
+  .hero .wrap{grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:3rem;align-items:end;padding-top:4.5rem}
+  .hero figure{margin:0;align-self:end}
+  .hero figure img{aspect-ratio:4/5;object-position:75% 50%;border-radius:999px 999px 0 0}
+}
+
+/* Les trois temps */
+.phases{padding:3.5rem 0 1rem}
+.phases h2{font-size:clamp(1.8rem,5vw,2.8rem);max-width:20ch}
+.phases .lead{max-width:56ch;margin-top:1rem;color:var(--muted)}
+.three{list-style:none;margin:2rem 0 0;padding:0;display:grid;gap:0}
+.three li{display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;padding:1.1rem 0;border-top:2px solid var(--ink);align-items:baseline}
+.three li:last-child{border-bottom:2px solid var(--ink)}
+.three b{font-family:"Gabarito",sans-serif;font-size:1.5rem;font-weight:900}
+.three p{margin:0}
+@media(min-width:56rem){.three{grid-template-columns:repeat(3,1fr);gap:2rem}.three li{grid-template-columns:1fr;border-bottom:0!important;gap:.4rem}.three b{font-size:2rem}}
+
+/* Cours par âge, posés sur une portée */
+.cours{padding:3rem 0 4rem}
+.cours>.wrap>h2{font-size:clamp(1.9rem,5.5vw,3rem)}
+.cours .sub{color:var(--muted);margin:.7rem 0 2rem;max-width:58ch}
+.age{display:grid;gap:.6rem 1.75rem;padding:1.6rem 0;border-top:1px solid var(--line);position:relative}
+.age:last-of-type{border-bottom:1px solid var(--line)}
+.age .yrs{font-family:"Gabarito",sans-serif;font-weight:900;font-size:clamp(2.6rem,12vw,4.6rem);line-height:.95;color:var(--plum);white-space:nowrap}
+@media(prefers-color-scheme:dark){.age .yrs{color:#e9a4ec}}
+.age .yrs small{display:block;font-size:1rem;font-weight:700;color:var(--muted);letter-spacing:0}
+.age h3{font-size:1.5rem;margin-bottom:.3rem}
+.age p{margin:0 0 .6rem}
+.facts{list-style:none;margin:.6rem 0 0;padding:0;display:flex;flex-wrap:wrap;gap:.35rem .5rem}
+.facts li{background:var(--plum);color:var(--on-plum);padding:.15rem .65rem;border-radius:999px;font-size:.92rem;font-weight:500}
+.facts li.full{background:transparent;color:var(--muted);box-shadow:inset 0 0 0 1px var(--muted)}
+.slots{margin:.8rem 0 0;font-size:.98rem;color:var(--muted)}
+.age .pic{margin:.8rem 0 0}
+.age .pic img{width:100%;max-width:26rem;aspect-ratio:7/4;object-fit:cover;border-radius:2px}
+@media(min-width:56rem){
+  .age{grid-template-columns:15rem minmax(0,1fr) 18rem;padding:2rem 0;align-items:start}
+  .age .pic{margin:0;grid-column:3;grid-row:1 / span 3}
+  .age .yrs{grid-row:1 / span 3}
+  .age.nopic{grid-template-columns:15rem minmax(0,1fr)}
+}
+.tarifs{margin-top:2rem;background:var(--plum);color:var(--on-plum);padding:1.4rem 1.4rem 1.2rem;border-radius:2px;max-width:48rem}
+.tarifs h3{font-size:1.35rem;margin-bottom:.4rem;color:var(--note)}
+.tarifs p{margin:0 0 .5rem;color:var(--on-plum)}
+.tarifs p:last-child{margin:0}
+
+/* Lieux */
+.lieux{background:var(--plum);color:var(--on-plum);padding:3.5rem 0 4rem}
+.lieux h2{font-size:clamp(1.9rem,5.5vw,3rem);margin-bottom:1rem}
+.lieux .cols{display:grid;gap:2rem}
+.lieux ul{list-style:none;margin:0;padding:0}
+.lieux li{padding:.65rem 0;border-bottom:1px solid rgba(255,255,255,.3)}
+.lieux .main{font-family:"Gabarito",sans-serif;font-size:1.5rem;font-weight:700}
+.lieux .more{color:var(--on-plum-muted)}
+.lieux a{color:var(--on-plum);text-decoration-color:var(--note);text-underline-offset:.25em;text-decoration-thickness:2px;display:inline-flex;align-items:center;min-height:44px}
+@media(min-width:56rem){.lieux .cols{grid-template-columns:6fr 5fr;gap:4rem}}
+
+/* Contact */
+.contact{padding:3.5rem 0 4.5rem}
+.contact h2{font-size:clamp(1.9rem,5.5vw,3rem)}
+.bigtel{display:inline-block;font-family:"Gabarito",sans-serif;font-weight:900;font-size:clamp(2.2rem,11vw,4.6rem);line-height:1;color:var(--plum);text-decoration:none;white-space:nowrap;margin:.6rem 0 .3rem}
+@media(prefers-color-scheme:dark){.bigtel{color:#e9a4ec}}
+.bigtel:hover{text-decoration:underline;text-underline-offset:.12em}
+.contact .grid{display:grid;gap:1.5rem;margin-top:1.8rem}
+.contact h3{font-size:1.25rem;margin-bottom:.35rem}
+.contact p{margin:0 0 .3rem}
+.contact a{display:inline-flex;align-items:center;min-height:44px}
+@media(min-width:46rem){.contact .grid{grid-template-columns:repeat(3,1fr);gap:2.5rem}}
+.accred{margin-top:2rem;color:var(--muted);font-size:.98rem;max-width:62ch}
+
+.foot{padding:1.5rem 0 5rem;font-size:.95rem;color:var(--muted);border-top:1px solid var(--line)}
+.mbar{display:none}
+@media(max-width:37.5rem){
+  .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--paper);border-top:1px solid var(--line);padding:.4rem .5rem calc(.4rem + env(safe-area-inset-bottom));gap:.5rem}
+  .mbar a{display:flex;align-items:center;justify-content:center;min-height:44px;font-weight:700;text-decoration:none;border-radius:999px}
+  .mbar a:first-child{background:var(--plum);color:#fff}
+  .mbar a:last-child{border:2px solid var(--plum);color:var(--plum)}
+}
+@media(max-width:37.5rem) and (prefers-color-scheme:dark){.mbar a:last-child{border-color:var(--note);color:var(--note)}}
+</style>
+</head>
+<body>
+<div class="preview" role="note">Aperçu de votre nouveau site, préparé par&nbsp;<a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#" aria-label="Espace Musical, accueil"><img src="img/logo-blanc.webp" width="900" height="304" alt="Espace Musical"></a>
+    <nav aria-label="Sections">
+      <a href="#cours">Les cours</a>
+      <a href="#lieux">Les lieux</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="call" href="tel:+41227001790">Appeler</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="staff" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="wrap">
+      <div>
+        <h1>La musique s’explore, s’improvise, se construit</h1>
+        <p class="lede">L’école des Eaux-Vives, à Genève&nbsp;: du bébé dès trois mois jusqu’à l’adolescence.</p>
+        <div class="actions">
+          <a class="btn" href="#cours">Trouver le cours de son âge</a>
+          <a class="textlink" href="tel:+41227001790">022 700 17 90</a>
+        </div>
+      </div>
+      <figure><img src="img/violoncelle.webp" width="700" height="400" alt="Un jeune élève joue du violoncelle dans une salle claire" fetchpriority="high"></figure>
+    </div>
+  </section>
+
+  <section class="phases" aria-labelledby="phases-t">
+    <div class="wrap">
+      <h2 id="phases-t">Où être musicien·ne ne dépend ni de l’âge ni de pré-requis</h2>
+      <p class="lead">Quel que soit l’âge de l’élève, chaque étape de l’apprentissage passe par trois phases.</p>
+      <ol class="three">
+        <li><b>Explorer</b><p>L’élève découvre des sons nouveaux, apprivoise des gestes musicaux et construit son rapport à la musique.</p></li>
+        <li><b>Créer</b><p>Il utilise ses découvertes dans des improvisations et des jeux musicaux.</p></li>
+        <li><b>Intégrer</b><p>Il intègre ainsi savoir-faire et connaissances, à son rythme.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="cours" id="cours" aria-labelledby="cours-t">
+    <div class="wrap">
+      <h2 id="cours-t">Les cours, par âge</h2>
+      <p class="sub">Tarifs et horaires de l’année 2026-2027, tels qu’ils figurent aujourd’hui sur le site de l’école. Si aucun horaire ne convient, on peut indiquer ses disponibilités dans le bulletin d’inscription.</p>
+
+      <article class="age">
+        <div class="yrs">0–3<small>ans</small></div>
+        <div>
+          <h3>Oreilles en Tendresse</h3>
+          <p>Prolonger et enrichir la découverte du monde sonore des tout-petits&nbsp;: comptines, chansons, bruits de bouche, objets sonores et instruments. De 3&nbsp;mois à 1&nbsp;an révolu au 31&nbsp;juillet, avec un adulte.</p>
+          <ul class="facts"><li>45 min</li><li>8 enfants par cours</li><li>64 à 80 fr. par mois</li></ul>
+          <p class="slots">Eaux-Vives&nbsp;: lundi 11&nbsp;h (âges mixtes) et 15&nbsp;h, mardi 9&nbsp;h&nbsp;30 et 11&nbsp;h (âges mixtes), vendredi 13&nbsp;h&nbsp;30.</p>
+        </div>
+        <figure class="pic"><img src="img/oreilles.webp" width="838" height="441" alt="La main d’un enfant sur une bûche de bois, parmi des objets sonores" loading="lazy"></figure>
+      </article>
+
+      <article class="age">
+        <div class="yrs">3–4<small>ans</small></div>
+        <div>
+          <h3>Jardin Musical</h3>
+          <p>Entouré d’instruments traditionnels et ethniques ou de structures sonores étonnantes, l’enfant découvre librement le plaisir du geste et du son partagé. Cours sans les parents, dès 3&nbsp;ans révolus au 31&nbsp;juillet.</p>
+          <ul class="facts"><li>45 min</li><li>8 enfants par cours</li><li>64 à 80 fr. par mois</li></ul>
+          <p class="slots">Eaux-Vives&nbsp;: lundi 17&nbsp;h&nbsp;30, mercredi 10&nbsp;h, vendredi 11&nbsp;h.</p>
+        </div>
+        <figure class="pic"><img src="img/objets.webp" width="700" height="400" alt="Bol en inox, flûte et cymbale posés sur un plateau, tambour coloré en arrière-plan" loading="lazy"></figure>
+      </article>
+
+      <article class="age">
+        <div class="yrs">4–6<small>ans</small></div>
+        <div>
+          <h3>Initiation musicale, initiation aux cordes</h3>
+          <p>L’enfant explore les sons, improvise et intègre les notions musicales de base par le mouvement et le jeu instrumental. Pas de pré-requis. Cours individuels d’instrument possibles&nbsp;; 15&nbsp;% de réduction sur un cours collectif en complément d’un cours individuel.</p>
+          <ul class="facts"><li>45 min</li><li>8 enfants au maximum</li><li>64 à 80 fr. par mois</li></ul>
+          <p class="slots">Initiation musicale, Eaux-Vives&nbsp;: mardi 16&nbsp;h&nbsp;30 (complet), mercredi 9&nbsp;h&nbsp;30, 15&nbsp;h et 16&nbsp;h&nbsp;45.</p>
+        </div>
+        <figure class="pic"><img src="img/batterie.webp" width="700" height="400" alt="Un élève joue de la batterie, baguette en main" loading="lazy"></figure>
+      </article>
+
+      <article class="age nopic">
+        <div class="yrs">6–11<small>ans</small></div>
+        <div>
+          <h3>Langage musical, cours d’instrument</h3>
+          <p>Découvrir la lecture et l’écriture musicales avec plaisir, en abordant la composition. Le Langage Musical 1 (6 et 7&nbsp;ans) passe par la composition pour apprendre le solfège. Après cinq années, l’élève peut passer le certificat de formation musicale auprès d’un conservatoire.</p>
+          <ul class="facts"><li>45 ou 60 min</li><li>8 enfants au maximum</li><li>77 à 96 fr. par mois</li></ul>
+        </div>
+      </article>
+
+      <article class="age">
+        <div class="yrs">11–16<small>ans</small></div>
+        <div>
+          <h3>Cours individuels d’instrument</h3>
+          <p>Pour les adolescents, la même approche&nbsp;: partir du jeu et de la création pour construire la connaissance de l’instrument choisi.</p>
+        </div>
+        <figure class="pic"><img src="img/creation.webp" width="700" height="400" alt="Des adolescents travaillent ensemble autour d’un grand rouleau de papier dans une salle de cours" loading="lazy"></figure>
+      </article>
+
+      <article class="age nopic">
+        <div class="yrs">2–16<small>ans</small></div>
+        <div>
+          <h3>Pour les enfants en difficulté ou handicapés</h3>
+          <p>Le cours de musique comme outil d’expression des émotions, de socialisation et de progression. Cours en groupe ou individuels, selon les besoins définis lors d’une première rencontre. Entre 2 et 4&nbsp;ans, les enfants rejoignent Oreilles en Tendresse ou le Jardin Musical.</p>
+          <ul class="facts"><li>Individuel, 30 min</li><li>124 à 155 fr. par mois</li></ul>
+        </div>
+      </article>
+
+      <div class="tarifs">
+        <h3>Écolage selon le revenu</h3>
+        <p>Les tarifs ci-dessus sont payés sur 10&nbsp;mois, selon le revenu (+10&nbsp;% pour les élèves domiciliés hors du canton). Taxe annuelle d’inscription&nbsp;: 50&nbsp;francs. Bourses et réductions possibles.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="lieux" id="lieux" aria-labelledby="lieux-t">
+    <div class="wrap">
+      <h2 id="lieux-t">Les lieux</h2>
+      <div class="cols">
+        <div>
+          <p class="main">Espace Musical, Eaux-Vives</p>
+          <p>Avenue Pictet-de-Rochemont 33bis, 1207 Genève. Tram 12 et 17, arrêt Genève-Eaux-Vives Gare&nbsp;; bus 1 ou 9, arrêt XXXI-Décembre. Facilement accessible avec une poussette ou un fauteuil roulant. Salle d’accueil avec boissons (café, thé), jeux et livres.</p>
+          <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Espace+Musical+Avenue+Pictet-de-Rochemont+33bis+1207+Gen%C3%A8ve" rel="noopener">Ouvrir dans Google Maps</a></p>
+        </div>
+        <div>
+          <p class="more">Des cours ont aussi lieu à&nbsp;:</p>
+          <ul>
+            <li>École des Eaux-Vives</li>
+            <li>École des Allières, Eaux-Vives</li>
+            <li>École de Meyrin-Village</li>
+            <li>Salle communale de Satigny</li>
+            <li>Villa La Solitaire, Petit-Lancy</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-t">
+    <div class="wrap">
+      <h2 id="contact-t">Une question, une inscription&nbsp;?</h2>
+      <a class="bigtel" href="tel:+41227001790">022 700 17 90</a>
+      <p>Secrétariat, du lundi au vendredi sauf le mercredi, de 9&nbsp;h&nbsp;30 à 12&nbsp;h&nbsp;30.</p>
+      <div class="grid">
+        <div><h3>Écrire</h3><p><a href="mailto:contact@espace-musical.com">contact@espace-musical.com</a></p></div>
+        <div><h3>Adresse</h3><p>Espace Musical<br>Av. Pictet-de-Rochemont 33bis<br>1207 Genève</p></div>
+        <div><h3>Suivre l’école</h3><p><a href="https://www.facebook.com/GE.espacemusical" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/ge_espacemusical/" rel="noopener">Instagram</a></p></div>
+      </div>
+      <p class="accred">L’Espace Musical est une école accréditée par le Département de l’instruction publique, de la formation et de la jeunesse, et bénéficie du soutien de la République et canton de Genève.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="foot"><div class="wrap">Espace Musical, école de musique de 3&nbsp;mois à 16&nbsp;ans · Avenue Pictet-de-Rochemont 33bis, 1207 Genève</div></footer>
+
+<nav class="mbar" aria-label="Contact rapide">
+  <a href="tel:+41227001790">Appeler</a>
+  <a href="mailto:contact@espace-musical.com">Écrire</a>
+</nav>
+</body>
+</html>

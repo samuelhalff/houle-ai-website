@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BLISS – centre de beauté et de relaxation, rue de Lyon, Genève</title>
+<meta name="description" content="Soins du visage et du corps, épilation laser, beauté du regard : le centre BLISS vous reçoit sur rendez-vous au 42, rue de Lyon à Genève, du mardi au samedi. 022 557 43 03.">
+<!-- Maquette non publiée : retirer cette ligne à la mise en ligne -->
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#5b1f29">
+<meta property="og:title" content="BLISS – centre de beauté et de relaxation, Genève">
+<meta property="og:description" content="Soins du visage et du corps, épilation laser, beauté du regard. Sur rendez-vous au 022 557 43 03.">
+<meta property="og:image" content="img/bliss-mark.webp">
+<meta property="og:locale" content="fr_CH">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;700&family=Marcellus&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BeautySalon",
+  "name": "BLISS – centre de beauté et de relaxation",
+  "telephone": "+41 22 557 43 03",
+  "email": "info@spa-bliss.ch",
+  "image": "img/bliss-mark.webp",
+  "address": { "@type": "PostalAddress", "streetAddress": "Rue de Lyon 42", "postalCode": "1203", "addressLocality": "Genève", "addressCountry": "CH" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Tuesday","Wednesday","Friday"], "opens": "10:00", "closes": "21:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "19:00" }
+  ],
+  "sameAs": ["https://www.instagram.com/best_bliss_geneva/"]
+}
+</script>
+<!--
+  DIRECTION (fresh-web-design)
+  Artefacts du métier : la carte des soins posée en cabine (nom du soin, durée, points de conduite, prix),
+  le rendez-vous pris par téléphone, la serviette pliée. Le lecteur : une cliente (ou un client) qui veut
+  savoir quel soin, combien de temps, combien, et comment réserver, sans jargon.
+  Couleurs : le vin rosé du logo (#a6454a) comme SURFACE (hero, bandeau d'accueil), pas seulement comme lien ;
+  papier rosé très pâle ; encre aubergine-brune ; rose poudré pour le texte sur le vin.
+  Typo : Marcellus (capitales gravées proches du « BLISS » du logo, un seul graisse) + Albert Sans (texte).
+  Mise en page : le symbole du logo, énorme, rogné au bord du hero ; la carte des soins en pleine largeur,
+  avec points de conduite et prix à droite, comme une vraie carte de spa.
+  Détail signature : les points de conduite de la carte des soins et la « ligne de rendez-vous » (téléphone en grand).
+  Mouvement : aucun. Photographie : aucune (leurs bannières sont des photos de stock avec texte incrusté) : typographie et logo.
+  Exceptions assumées : fond rosé clair = couleur du logo, pas « crème + terracotta » ; Marcellus est choisi pour la parenté avec le logo.
+-->
+<style>
+:root{
+  --paper:#fbf5f3; --ink:#2b1a1d; --muted:#6a5256; --line:#e8d4d1;
+  --wine:#a6454a; --wine-deep:#5b1f29; --blush:#f2d9d6; --on-wine:#fff5f3;
+  --accent:#8e3340; --on-accent:#fff7f5;
+  --measure:60ch;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#1f1315; --ink:#f6e7e4; --muted:#d3b8b6; --line:#43292d; --accent:#e8909a; --on-accent:#2a1216}
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:4.2rem}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 "Albert Sans",sans-serif}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:"Marcellus",serif;font-weight:400;line-height:1.1;margin:0}
+p{margin:0 0 1em;max-width:var(--measure)}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1.25rem}
+@media(min-width:56rem){.wrap{padding:0 2.5rem}}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.preview{display:block;min-height:40px;padding:11px 1rem;background:#0f172a;color:#f8fafc;font:400 14px/18px system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center}
+.preview a{color:#f8fafc;text-decoration:underline;text-underline-offset:2px}
+
+.top{position:sticky;top:0;z-index:20;background:var(--paper);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:1.25rem;min-height:3.75rem}
+.brand{font-family:"Marcellus",serif;font-size:1.5rem;letter-spacing:.14em;text-decoration:none;display:inline-flex;align-items:center;min-height:44px;color:var(--ink)}
+.top nav{display:flex;gap:1.4rem;margin-left:auto;font-weight:500}
+.top nav a{text-decoration:none;display:inline-flex;align-items:center;min-height:44px}
+.top nav a:hover{color:var(--accent)}
+@media(max-width:44rem){.top nav{display:none}.call{margin-left:auto}}
+.call{text-decoration:none;font-weight:700;background:var(--accent);color:var(--on-accent);padding:.5rem .95rem;border-radius:2px;display:inline-flex;align-items:center;min-height:44px;white-space:nowrap}
+.call:hover{background:var(--ink);color:var(--paper)}
+
+/* Ouverture : surface vin, symbole rogné */
+.hero{position:relative;overflow:hidden;background:var(--wine-deep);color:var(--on-wine)}
+.hero .mark{position:absolute;right:-12%;top:-8%;width:min(78vw,34rem);height:auto;opacity:.5;filter:brightness(1.35) saturate(.8);pointer-events:none}
+@media(min-width:56rem){.hero .mark{right:2%;top:50%;transform:translateY(-50%);width:30rem;opacity:.85;filter:none}}
+.hero .wrap{position:relative;padding-top:4rem;padding-bottom:4.25rem}
+.hero h1{font-size:clamp(2.2rem,8.4vw,4.4rem);max-width:12ch;letter-spacing:-.005em;margin-bottom:1.25rem}
+.hero .lede{font-size:1.2rem;max-width:34ch;color:var(--blush)}
+.hero .actions{display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;align-items:center;margin-top:2rem}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:.75rem 1.2rem;background:var(--blush);color:var(--wine-deep);font-weight:700;text-decoration:none;border-radius:2px}
+.btn:hover{background:#fff}
+.textlink{display:inline-flex;align-items:center;min-height:44px;color:var(--on-wine);text-decoration-color:var(--blush);text-underline-offset:.25em;text-decoration-thickness:2px;font-weight:500}
+@media(min-width:56rem){.hero .wrap{padding-top:6.5rem;padding-bottom:6.5rem}}
+
+/* Intro */
+.intro{padding:3.5rem 0 1rem}
+.intro .cols{display:grid;gap:1.5rem}
+.intro h2{font-size:clamp(1.7rem,5vw,2.6rem);max-width:16ch}
+.since{color:var(--muted)}
+@media(min-width:56rem){.intro .cols{grid-template-columns:5fr 6fr;gap:4rem;align-items:start}}
+
+/* La carte des soins */
+.carte{padding:3rem 0 4rem}
+.carte>.wrap>h2{font-size:clamp(1.9rem,5.5vw,3rem)}
+.carte .sub{color:var(--muted);margin:.6rem 0 2.2rem}
+.soin{display:grid;gap:.4rem 2rem;padding:1.5rem 0;border-top:1px solid var(--line)}
+.soin:last-child{border-bottom:1px solid var(--line)}
+.soin h3{font-size:1.55rem}
+.soin .what{margin:0;color:var(--muted)}
+.prices{list-style:none;margin:.8rem 0 0;padding:0}
+.prices li{display:grid;grid-template-columns:auto 1fr auto;align-items:baseline;gap:.5rem;padding:.2rem 0}
+.prices li::after{content:"";order:2;border-bottom:2px dotted var(--wine);opacity:.45;transform:translateY(-.25em)}
+.prices .n{order:1}
+.prices .p{order:3;font-family:"Marcellus",serif;font-size:1.15rem;white-space:nowrap}
+.note{font-size:.95rem;color:var(--muted);margin:.8rem 0 0}
+@media(min-width:56rem){
+  .soin{grid-template-columns:minmax(0,4fr) minmax(0,7fr);grid-template-rows:auto 1fr;align-content:start;row-gap:.3rem;padding:2rem 0}
+  .soin .pw{grid-column:2;grid-row:1 / span 2}.soin .prices{margin-top:0}
+  .soin .what{grid-column:1}
+}
+.vip{margin-top:2.5rem;background:var(--blush);color:var(--wine-deep);padding:1.4rem 1.4rem 1.2rem;border-radius:2px}
+.vip h3{font-size:1.35rem;margin-bottom:.3rem}
+.vip p{margin:0;max-width:56ch}
+@media(prefers-color-scheme:dark){.vip{background:#3a2024;color:var(--blush)}}
+
+/* Rendez-vous : ligne de téléphone en grand */
+.rdv{background:var(--wine);color:var(--on-wine);padding:3.5rem 0 4rem}
+.rdv h2{font-size:clamp(1.5rem,4.5vw,2.2rem);color:var(--blush);font-family:"Albert Sans",sans-serif;font-weight:500;margin-bottom:.4rem}
+.bigtel{display:inline-block;font-family:"Marcellus",serif;font-size:clamp(2.3rem,11.5vw,5rem);line-height:1;text-decoration:none;white-space:nowrap;letter-spacing:-.01em;margin:.2rem 0 .8rem}
+.bigtel:hover{text-decoration:underline;text-underline-offset:.15em}
+.rdv .sms{color:var(--blush)}
+.hours{list-style:none;margin:2rem 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.4rem 1.5rem;max-width:26rem}
+.hours li{display:flex;justify-content:space-between;border-bottom:1px solid rgba(255,245,243,.35);padding:.35rem 0}
+.hours .off{opacity:.8}
+.hours .today{font-weight:700}
+.rules{display:grid;gap:1.5rem;margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(255,245,243,.35)}
+.rules h3{font-size:1.25rem;margin-bottom:.4rem;color:var(--on-wine)}
+.rules p{margin:0;color:var(--blush)}
+@media(min-width:56rem){.rules{grid-template-columns:repeat(3,1fr);gap:3rem}.hours{grid-template-columns:1fr;max-width:22rem}.rdv .grid{display:grid;grid-template-columns:7fr 5fr;gap:3rem;align-items:end}.hours{margin:0}}
+
+.infos{padding:3.5rem 0 4.5rem}
+.infos .cols{display:grid;gap:2rem}
+.infos h2{font-size:1.9rem;margin-bottom:.8rem}
+.infos p{margin:0 0 .4rem}
+.infos a{display:inline-flex;align-items:center;min-height:44px}
+@media(min-width:56rem){.infos .cols{grid-template-columns:repeat(2,1fr);gap:3rem}}
+
+.foot{padding:1.6rem 0 5.2rem;font-size:.95rem;color:var(--muted);border-top:1px solid var(--line)}
+
+.mbar{display:none}
+@media(max-width:37.5rem){
+  .mbar{display:grid;grid-template-columns:1fr 1fr;position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--paper);border-top:1px solid var(--line);padding:.4rem .5rem calc(.4rem + env(safe-area-inset-bottom));gap:.5rem}
+  .mbar a{display:flex;align-items:center;justify-content:center;min-height:44px;font-weight:700;text-decoration:none;border-radius:2px}
+  .mbar a:first-child{background:var(--accent);color:var(--on-accent)}
+  .mbar a:last-child{border:2px solid var(--ink)}
+}
+</style>
+</head>
+<body>
+<div class="preview" role="note">Aperçu de votre nouveau site, préparé par&nbsp;<a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#" aria-label="BLISS, accueil">BLISS</a>
+    <nav aria-label="Sections">
+      <a href="#soins">Les soins</a>
+      <a href="#rdv">Rendez-vous</a>
+      <a href="#venir">Nous trouver</a>
+    </nav>
+    <a class="call" href="tel:+41225574303">022 557 43 03</a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <img class="mark" src="img/bliss-mark.webp" width="282" height="483" alt="" fetchpriority="high">
+    <div class="wrap">
+      <h1><span class="sr">BLISS – </span>Un moment pour vous, rue de Lyon</h1>
+      <p class="lede">Centre de beauté et de relaxation à Genève. Soins du visage et du corps, épilation laser, beauté du regard.</p>
+      <div class="actions">
+        <a class="btn" href="tel:+41225574303">Prendre rendez-vous</a>
+        <a class="textlink" href="#soins">Voir les soins</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="intro" aria-labelledby="intro-t">
+    <div class="wrap cols">
+      <h2 id="intro-t">Un lieu calme, à deux arrêts de bus de la gare Cornavin</h2>
+      <div>
+        <p>Au BLISS, l’idée est simple&nbsp;: prendre le temps de vous occuper de vous, dans une atmosphère de confort et d’harmonie, avec des soins choisis ensemble.</p>
+        <p>Le centre est facile d’accès en transports publics (arrêt «&nbsp;Prairie&nbsp;», bus 6, 10, 19 et 27, deuxième arrêt après la gare Cornavin). On peut aussi se garer près du centre ou utiliser le parking souterrain.</p>
+        <p class="since">Le centre est ouvert depuis juin&nbsp;2010.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="carte" id="soins" aria-labelledby="carte-t">
+    <div class="wrap">
+      <h2 id="carte-t">La carte des soins</h2>
+      <p class="sub">Les prix sont en francs suisses, tels qu’ils figurent aujourd’hui sur le site du centre.</p>
+
+      <article class="soin">
+        <h3>Soin du visage</h3>
+        <p class="what">Purification, nutrition, protection&nbsp;: nettoyage, soins adaptés à chaque peau, masque LED, collagène marin à l’extrait de caviar noir.</p>
+        <div class="pw"><ul class="prices">
+          <li><span class="n">Nettoyage du visage, 50&nbsp;min</span><span class="p">150.-</span></li>
+          <li><span class="n">Nettoyage du visage, 90&nbsp;min</span><span class="p">180.-</span></li>
+          <li><span class="n">Soin MESOESTETIC (Espagne), 50&nbsp;min</span><span class="p">135.-</span></li>
+          <li><span class="n">Soins «&nbsp;Fraîcheur&nbsp;», «&nbsp;Cléopâtre&nbsp;» (+45 ans), 50&nbsp;min</span><span class="p">135.-</span></li>
+        </ul>
+        <p class="note">Offre spéciale&nbsp;: nettoyage du visage –20&nbsp;% pour les moins de 20&nbsp;ans.</p></div>
+      </article>
+
+      <article class="soin">
+        <h3>Épilation laser</h3>
+        <p class="what">Laser diode Soprano ICE (Alma Lasers, Israël), technologie SHR&nbsp;: sans douleur, toute l’année, pour toutes les couleurs de peau, y compris bronzée.</p>
+      </article>
+
+      <article class="soin">
+        <h3>Soin du corps</h3>
+        <p class="what">Endosphères Thérapie&nbsp;: un rouleau de 55 sphères en silicone qui tonifie, draine et lisse la peau d’orange.</p>
+      </article>
+
+      <article class="soin">
+        <h3>Beauté des yeux</h3>
+        <p class="what">Rehaussement des cils Yumi Lashes avec kératine, teinture et correction des sourcils.</p>
+        <div class="pw"><ul class="prices">
+          <li><span class="n">Yumi Lashes</span><span class="p">110.-</span></li>
+          <li><span class="n">Teinture des cils ou des sourcils</span><span class="p">25.-</span></li>
+          <li><span class="n">Teinture cils + sourcils</span><span class="p">45.-</span></li>
+          <li><span class="n">Correction des sourcils</span><span class="p">25.-</span></li>
+          <li><span class="n">Teinture et correction des sourcils</span><span class="p">45.-</span></li>
+        </ul></div>
+      </article>
+
+      <article class="soin">
+        <h3>Couperose et rosacée</h3>
+        <p class="what">ThermaVein plus&nbsp;: le traitement des capillaires dilatés du visage (télangiectasies).</p>
+      </article>
+
+      <article class="soin">
+        <h3>Mésothérapie fractionnée</h3>
+        <p class="what">Micro-needling et sérums&nbsp;: taches, pores, cicatrices d’acné, vergetures. Peeling PRX-T33 et peelings au lait (Lactic peel AL 30 et 40&nbsp;%) en complément.</p>
+      </article>
+
+      <div class="vip">
+        <h3>Carte de fidélité VIP</h3>
+        <p>100&nbsp;CHF par année, valable un an dès l’achat&nbsp;: 10&nbsp;% de réduction sur les soins et les produits du centre.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="rdv" id="rdv" aria-labelledby="rdv-t">
+    <div class="wrap">
+      <div class="grid">
+        <div>
+          <h2 id="rdv-t">Rendez-vous par téléphone</h2>
+          <a class="bigtel" href="tel:+41225574303">022 557 43 03</a>
+          <p class="sms">Ou au <a href="tel:+41795407688">079 540 76 88</a>. Par SMS&nbsp;: <a href="sms:+41763944304">076 394 43 04</a>.</p>
+        </div>
+        <ul class="hours" aria-label="Horaires, sur rendez-vous">
+          <li data-d="1" class="off"><span>Lundi</span><span>fermé</span></li>
+          <li data-d="2"><span>Mardi</span><span>10 h – 21 h</span></li>
+          <li data-d="3"><span>Mercredi</span><span>10 h – 21 h</span></li>
+          <li data-d="4" class="off"><span>Jeudi</span><span>fermé</span></li>
+          <li data-d="5"><span>Vendredi</span><span>10 h – 21 h</span></li>
+          <li data-d="6"><span>Samedi</span><span>10 h – 19 h</span></li>
+          <li data-d="0" class="off"><span>Dimanche</span><span>fermé</span></li>
+        </ul>
+      </div>
+      <div class="rules">
+        <div><h3>Réserver à l’avance</h3><p>Un à deux jours avant pour un rendez-vous en semaine, une à deux semaines avant pour le week-end.</p></div>
+        <div><h3>Arriver dix minutes avant</h3><p>Pour laisser le temps de la préparation. En cas de retard, le soin est raccourci pour ne pas décaler les autres rendez-vous.</p></div>
+        <div><h3>Annuler 24 heures avant</h3><p>Tout soin décommandé doit l’être au moins 24&nbsp;heures à l’avance.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="infos" id="venir" aria-labelledby="venir-t">
+    <div class="wrap">
+      <h2 id="venir-t" class="sr">Nous trouver</h2>
+      <div class="cols">
+        <div>
+          <h2>Adresse</h2>
+          <p>BLISS<br>Rue de Lyon 42<br>1203 Genève</p>
+          <p><a href="https://www.google.com/maps/search/?api=1&amp;query=BLISS+Rue+de+Lyon+42+1203+Gen%C3%A8ve" rel="noopener">Ouvrir dans Google Maps</a></p>
+        </div>
+        <div>
+          <h2>Écrire</h2>
+          <p><a href="mailto:info@spa-bliss.ch">info@spa-bliss.ch</a></p>
+          <p><a href="https://www.instagram.com/best_bliss_geneva/" rel="noopener">Instagram</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot"><div class="wrap">BLISS, centre de beauté et de relaxation · Rue de Lyon 42, 1203 Genève</div></footer>
+
+<nav class="mbar" aria-label="Contact rapide">
+  <a href="tel:+41225574303">Appeler</a>
+  <a href="https://www.google.com/maps/dir/?api=1&amp;destination=BLISS+Rue+de+Lyon+42+1203+Gen%C3%A8ve" rel="noopener">Itinéraire</a>
+</nav>
+<script>
+(function(){try{
+  var d=new Intl.DateTimeFormat('en-US',{weekday:'short',timeZone:'Europe/Zurich'}).format(new Date());
+  var i={Sun:0,Mon:1,Tue:2,Wed:3,Thu:4,Fri:5,Sat:6}[d];
+  var li=document.querySelector('.hours li[data-d="'+i+'"]');
+  if(li){li.classList.add('today');li.setAttribute('aria-current','date');}
+}catch(e){}})();
+</script>
+</body>
+</html>

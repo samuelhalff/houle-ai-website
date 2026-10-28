@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>École Montessori-Nations – école bilingue 3 à 12 ans, Genève</title>
+<meta name="description" content="École Montessori bilingue français-anglais pour les enfants de 3 à 12 ans, au Petit-Saconnex à Genève. Cycles 3–6 ans et 6–12 ans, parascolaire, conditions d’admission. Tél. 022 738 81 80.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#143a57">
+<meta property="og:type" content="website">
+<meta property="og:title" content="École Montessori-Nations – école bilingue 3 à 12 ans, Genève">
+<meta property="og:description" content="Pédagogie Montessori en français et en anglais, au Petit-Saconnex, depuis 1989.">
+<meta property="og:image" content="ecole-og.jpg">
+<meta property="og:locale" content="fr_CH">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..900&family=Public+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<!--
+  DESIGN NOTES (houle.ai mock-up, 2026-10-28)
+  Artefact: the school's own bilingual paperwork (admission form "Élève / Pupil", "Sexe / Sex"):
+  every label on this page that names a real thing is set FR over EN in the form-label style.
+  Colours come from the logo (laurel navy + tree orange) and the school's cookie banner blue:
+  navy = surfaces, blue = second cycle, orange = first cycle and the only accent. Orange never
+  carries text on light backgrounds (contrast); text on orange is navy.
+  Type: Archivo in its expanded width (confident, civic, institutional-but-young) + Public Sans
+  (named for public-service signage, very readable at small sizes).
+  Layout: modular tiles and big geometric shapes (quarter-circle, circle, arch) instead of cards
+  with shadows; hard left edge. Motion: none. Exceptions: none.
+-->
+<style>
+:root{
+  --navy:#143a57; --navy-2:#0e2c44; --blue:#266098; --orange:#f7941d; --orange-ink:#143a57;
+  --bg:#f3f6f9; --paper:#ffffff; --ink:#14283a; --muted:#46586a; --line:#c9d5e0; --tint:#e3ecf4;
+  --on-navy:#eaf1f7; --on-navy-muted:#b9cddd;
+  --display:"Archivo","Arial Black",system-ui,sans-serif; --text:"Public Sans",system-ui,sans-serif;
+  --gutter:clamp(16px,5vw,72px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 var(--text);padding-bottom:calc(64px + env(safe-area-inset-bottom))}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--blue);text-underline-offset:.18em}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px}
+.wrap{padding-inline:var(--gutter);max-width:1280px;margin-inline:auto}
+h1,h2,h3{font-family:var(--display);font-stretch:112%;font-weight:800;line-height:1;margin:0;letter-spacing:-.01em}
+h2{font-size:clamp(1.8rem,5.4vw,3.2rem)}
+h3{font-size:1.25rem;font-stretch:105%}
+p{margin:0 0 1em;max-width:62ch}
+.en{display:block;font:italic 400 .8em/1.3 var(--text);color:var(--muted);letter-spacing:0;margin-top:.25em;font-stretch:100%}
+.on-navy .en{color:var(--on-navy-muted)}
+.lab{font:700 .8rem/1.2 var(--text);text-transform:none;color:var(--muted);margin:0 0 .35rem}
+.lab i{font-weight:400;color:var(--muted)}
+
+/* preview bar */
+.preview{display:block;min-height:40px;padding:11px 16px;background:#0f172a;color:#f8fafc;font:400 14px/1.35 system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center}
+.preview a{color:#f8fafc;text-decoration:underline;padding:14px 2px}
+
+/* header */
+.top{background:var(--paper);border-bottom:4px solid var(--navy)}
+.top .wrap{display:flex;align-items:center;gap:14px;min-height:72px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--navy);margin-right:auto}
+.brand img{width:44px;height:auto}
+.brand b{font:800 1.05rem/1.05 var(--display);font-stretch:112%;display:block}
+.brand span{display:block;font:500 .72rem/1.2 var(--text);color:var(--muted)}
+.nav{display:none;gap:22px}
+.nav a{font:700 .95rem var(--text);color:var(--navy);text-decoration:none;padding:8px 0;border-bottom:3px solid transparent}
+.nav a:hover{border-color:var(--orange)}
+.tel{display:none;background:var(--navy);color:#fff;text-decoration:none;font:700 .95rem var(--text);padding:12px 18px}
+@media (min-width:900px){.nav{display:flex}.tel{display:block}}
+
+/* hero */
+.hero{background:var(--navy);color:var(--on-navy);position:relative;overflow:hidden}
+.hero .wrap{display:grid;gap:28px;padding-block:44px 0;position:relative}
+.hero h1{font-size:clamp(2.35rem,10.5vw,4.9rem);color:#fff;font-stretch:118%;letter-spacing:-.025em;max-width:12ch}
+.hero h1 em{font-style:normal;color:var(--orange)}
+.hero p.lead{font-size:1.15rem;color:var(--on-navy);max-width:44ch}
+.hero .en{font-size:.92rem;color:var(--on-navy-muted);margin-top:.6em}
+h2 .en{font-size:.46em;margin-top:.5em;font-weight:400}
+.cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:6px}
+.btn{display:inline-flex;align-items:center;min-height:50px;padding:0 22px;font:800 1rem var(--display);font-stretch:108%;text-decoration:none}
+.btn.o{background:var(--orange);color:var(--orange-ink)}
+.btn.l{border:2px solid #fff;color:#fff}
+.hero-pic{position:relative;margin-inline:calc(var(--gutter)*-1);margin-top:12px}
+.hero-pic img{width:100%;aspect-ratio:4/3;object-fit:cover;border-top-left-radius:46% 60%}
+.hero-pic::before{content:"";position:absolute;left:var(--gutter);top:-26px;width:76px;height:76px;border-radius:50%;background:var(--orange);z-index:1}
+.since{position:absolute;right:var(--gutter);bottom:18px;background:var(--paper);color:var(--navy);padding:10px 14px;font:800 1rem/1.05 var(--display);font-stretch:112%}
+.since small{display:block;font:500 .72rem var(--text);color:var(--muted);margin-top:3px}
+@media (min-width:900px){
+  .hero .wrap{grid-template-columns:1.1fr 1fr;align-items:end;padding-block:72px 0;gap:48px}
+  .hero-pic{margin:0 calc(var(--gutter)*-1) 0 0}
+  .hero-pic img{aspect-ratio:1/1;border-top-left-radius:55% 52%}
+  .hero-pic::before{left:-38px;top:12%;width:120px;height:120px}
+  .hero .copy{padding-bottom:72px}
+}
+
+/* sections */
+section{padding-block:clamp(48px,8vw,104px)}
+.head{display:grid;gap:10px;margin-bottom:32px}
+.head p{color:var(--muted)}
+
+/* cycles: two big tiles */
+.cycles{display:grid;gap:0}
+.tile{padding:30px 24px 34px;position:relative;overflow:hidden;min-height:340px;display:flex;flex-direction:column}
+.tile .age{font:900 clamp(4.2rem,17vw,8.5rem)/.82 var(--display);font-stretch:125%;letter-spacing:-.04em;margin-bottom:18px}
+.tile.a{background:var(--orange);color:var(--navy)}
+.tile.b{background:var(--blue);color:#fff}
+.tile.b .en{color:#d4e3f2}
+.tile.a .en{color:#3a3a2a}
+.tile ul{margin:14px 0 0;padding:0;list-style:none;font-weight:500}
+.tile li{padding:7px 0;border-top:2px solid currentColor}
+.tile li:first-child{border-top-width:2px}
+.tile::after{content:"";position:absolute;right:-60px;top:-60px;width:170px;height:170px;border-radius:50%;background:rgba(20,58,87,.14)}
+.tile.b::after{background:rgba(255,255,255,.12)}
+@media (min-width:800px){.cycles{grid-template-columns:1fr 1fr}.tile{padding:44px 44px 48px;min-height:420px}}
+
+/* values/split */
+.split{display:grid;gap:32px;align-items:start}
+.split img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.pic-wrap{position:relative}
+.pic-wrap::after{content:"";position:absolute;left:-12px;bottom:-12px;width:46%;height:46%;border:6px solid var(--orange);z-index:-1}
+.pic-wrap{margin-left:12px;margin-bottom:12px}
+.split blockquote{margin:22px 0 0;padding:0}
+@media (min-width:900px){.split{grid-template-columns:1fr 1.05fr;gap:72px}.split.rev .pic-wrap{order:2}}
+
+/* facts: modular grid */
+.facts{background:var(--paper);border-block:4px solid var(--navy)}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border-left:2px solid var(--navy);border-top:2px solid var(--navy)}
+.cell{padding:20px 16px 22px;border-right:2px solid var(--navy);border-bottom:2px solid var(--navy);min-height:150px;display:flex;flex-direction:column;justify-content:space-between}
+.cell strong{font:800 clamp(1.7rem,6.5vw,2.8rem)/1 var(--display);font-stretch:118%;color:var(--navy);letter-spacing:-.02em}
+.cell span{font-size:.92rem;color:var(--muted);margin-top:10px;line-height:1.35}
+.cell.o{background:var(--orange)}.cell.o span{color:var(--navy)}
+.cell.n{background:var(--navy)}.cell.n strong{color:#fff}.cell.n span{color:var(--on-navy-muted)}
+@media (min-width:900px){.grid{grid-template-columns:repeat(4,1fr)}.cell{padding:26px 24px;min-height:190px}}
+
+/* fees */
+.fees{display:grid;gap:36px}
+.price{background:var(--navy);color:#fff;padding:28px 24px}
+.price .big{font:900 clamp(2.4rem,9.5vw,4rem)/.95 var(--display);font-stretch:122%;letter-spacing:-.03em;color:var(--orange);margin:6px 0 2px}
+.price .lab i{color:var(--on-navy-muted)}
+.price small{color:var(--on-navy-muted);display:block}
+table{width:100%;border-collapse:collapse;font-size:.98rem}
+th,td{text-align:left;padding:11px 0;border-bottom:1px solid var(--line);vertical-align:top}
+td:last-child,th:last-child{text-align:right;white-space:nowrap;font-weight:700;padding-left:14px}
+caption{text-align:left;font:800 1.15rem var(--display);font-stretch:108%;padding-bottom:10px;color:var(--navy)}
+.price table{color:#fff}.price td,.price th{border-color:rgba(255,255,255,.22)}
+.note{font-size:.88rem;color:var(--muted);margin-top:14px}
+.price .note{color:var(--on-navy-muted)}
+@media (min-width:900px){.fees{grid-template-columns:1fr 1fr;gap:64px;align-items:start}}
+
+/* history timeline */
+.hist{background:var(--tint)}
+.tl{list-style:none;margin:0;padding:0;display:grid;gap:0;border-top:4px solid var(--navy)}
+.tl li{display:grid;grid-template-columns:104px 1fr;gap:14px;padding:20px 0;border-bottom:1px solid var(--line)}
+.tl b{font:900 2.3rem/1 var(--display);font-stretch:122%;color:var(--navy);letter-spacing:-.03em}
+.tl p{margin:0}
+@media (min-width:900px){.tl{grid-template-columns:repeat(3,1fr);gap:40px;border-top:0}.tl li{grid-template-columns:1fr;border:0;border-top:4px solid var(--navy);padding-top:22px}}
+
+/* admission */
+.adm{background:var(--navy);color:var(--on-navy)}
+.adm h2{color:#fff}
+.adm .wrap{display:grid;gap:34px}
+.form{background:var(--paper);color:var(--ink);padding:26px 22px;border-top:8px solid var(--orange)}
+.form dl{margin:0;display:grid;gap:0}
+.form dt{font:700 .8rem var(--text);color:var(--muted);margin-top:16px}
+.form dt i{font-weight:400}
+.form dd{margin:2px 0 0;padding-bottom:8px;border-bottom:2px solid var(--navy);font-weight:500}
+.form dd a{color:var(--navy);font-weight:700}
+.form .btn{margin-top:24px;width:100%;justify-content:center}
+@media (min-width:900px){.adm .wrap{grid-template-columns:1fr 1fr;gap:72px;align-items:start}.form{padding:36px}}
+
+/* footer */
+footer{background:var(--navy-2);color:var(--on-navy);padding-block:44px 28px}
+footer .wrap{display:grid;gap:28px}
+footer img{width:84px}
+footer h3{color:#fff;font-size:1rem;margin-bottom:8px}
+footer p,footer li{color:var(--on-navy-muted);font-size:.95rem;margin:0 0 .4em}
+footer ul{list-style:none;padding:0;margin:0}
+footer a{color:#fff}
+.legal{font-size:.8rem;color:var(--on-navy-muted)}
+@media (min-width:900px){footer .wrap{grid-template-columns:120px 1.2fr 1fr 1fr;gap:40px}}
+
+/* mobile call bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1.3fr 1fr;gap:8px;padding:8px 12px calc(8px + env(safe-area-inset-bottom));background:var(--paper);border-top:3px solid var(--navy)}
+.bar a{display:flex;align-items:center;justify-content:center;min-height:46px;font:800 1rem var(--display);font-stretch:108%;text-decoration:none}
+.bar .c{background:var(--orange);color:var(--navy)}
+.bar .m{border:2px solid var(--navy);color:var(--navy)}
+@media (min-width:900px){.bar{display:none}body{padding-bottom:0}}
+</style>
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"School",
+ "name":"École Montessori-Nations",
+ "telephone":"+41227388180",
+ "email":"secretariat@ecoledesnations.ch",
+ "address":{"@type":"PostalAddress","streetAddress":"Chemin Dr-Adolphe-Pasteur 13","postalCode":"1209","addressLocality":"Genève","addressCountry":"CH"}
+}
+</script>
+</head>
+<body>
+<div class="preview" role="note">Aperçu de votre nouveau site, préparé par&nbsp;<a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#">
+      <img src="logo.webp" alt="" width="44" height="41">
+      <span><b>Montessori-Nations</b><span>École bilingue · Genève</span></span>
+    </a>
+    <nav class="nav" aria-label="Navigation principale">
+      <a href="#cycles">Les deux cycles</a>
+      <a href="#valeurs">Valeurs</a>
+      <a href="#horaires">Horaires</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#admission">Admission</a>
+    </nav>
+    <a class="tel" href="tel:+41227388180">022&nbsp;738&nbsp;81&nbsp;80</a>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div class="wrap">
+    <div class="copy">
+      <h1>Montessori, en <em>français</em> et en <em>anglais</em>.</h1>
+      <p class="lead">L’École Montessori-Nations accueille les enfants de 3 à 12 ans au Petit-Saconnex, à Genève, dans un cadre verdoyant proche des organisations internationales.
+        <span class="en">A bilingual Montessori school for children aged 3 to 12, in Petit-Saconnex, Geneva.</span></p>
+      <div class="cta">
+        <a class="btn o" href="#admission">Demander une visite</a>
+        <a class="btn l" href="tel:+41227388180">Appeler l’école</a>
+      </div>
+    </div>
+    <div class="hero-pic">
+      <img src="ecole-1024.webp" width="1024" height="683" alt="Cour de l’école avec jeux pour enfants, sous les arbres" fetchpriority="high">
+      <div class="since">Depuis 1989<small>Petit-Saconnex, Genève</small></div>
+    </div>
+  </div>
+</div>
+
+<section id="cycles">
+  <div class="wrap">
+    <div class="head">
+      <h2>Deux cycles pour grandir sans être pressé<span class="en">Two cycles, so each child has the time to grow</span></h2>
+      <p>Grâce à deux cycles, les élèves disposent du temps nécessaire pour grandir, découvrir, expérimenter et comprendre pleinement.</p>
+    </div>
+  </div>
+  <div class="cycles">
+    <article class="tile a">
+      <div class="age">3–6<br>ans</div>
+      <h3>Section préparatoire<span class="en">Preparatory section</span></h3>
+      <ul>
+        <li>Classe bilingue français-anglais</li>
+        <li>Lecture et écriture en français dès 4&nbsp;ans</li>
+        <li>Anglais à l’oral dès 3&nbsp;ans</li>
+        <li>Motricité et sport dès 3&nbsp;ans, activités en plein air</li>
+      </ul>
+    </article>
+    <article class="tile b">
+      <div class="age">6–12<br>ans</div>
+      <h3>Primaire supérieur<span class="en">Upper primary</span></h3>
+      <ul>
+        <li>Classe multiâges, programme aligné sur le PER</li>
+        <li>Anglais chaque jour en petits groupes, lecture et écriture en anglais dès 6&nbsp;ans</li>
+        <li>Allemand dès la 4P</li>
+        <li>Préparation en option aux examens Cambridge Young Learners</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
+<section id="valeurs" style="padding-top:clamp(48px,8vw,104px)">
+  <div class="wrap split">
+    <div class="pic-wrap"><img src="classe-1200.webp" width="1200" height="675" alt="Deux élèves découvrent de petites éoliennes en classe" loading="lazy"></div>
+    <div>
+      <h2>Une école ouverte sur le monde<span class="en">A school open to the world</span></h2>
+      <p style="margin-top:20px">Des enfants de multiples nationalités se retrouvent à l’École Montessori-Nations&nbsp;: cette diversité culturelle est au cœur de son identité. Coopération, entraide et échanges interculturels y guident la vie de la classe.</p>
+      <p>Le plaisir d’apprendre, la possibilité de progresser à son propre rythme et de suivre ses centres d’intérêt en sont les piliers. L’école intègre aussi les nouvelles technologies, la pédagogie en plein air, la culture et le sport.</p>
+      <p>Les élèves participent aux évaluations communes cantonales, aux mêmes dates et dans les mêmes conditions que les écoles publiques genevoises, pour une transition fluide vers d’autres établissements suisses ou internationaux.</p>
+    </div>
+  </div>
+</section>
+
+<section id="horaires" class="facts">
+  <div class="wrap">
+    <div class="head">
+      <h2>La semaine à l’école<span class="en">The week at school</span></h2>
+    </div>
+    <div class="grid">
+      <div class="cell n"><strong>8h–18h</strong><span>Ouvert du lundi au vendredi<br><em>Monday to Friday</em></span></div>
+      <div class="cell"><strong>4,5 jours</strong><span>d’enseignement par semaine</span></div>
+      <div class="cell o"><strong>dès 16h</strong><span>Activités parascolaires, et le mercredi dès 13h</span></div>
+      <div class="cell"><strong>Ligne 3</strong><span>Accès par les TPG ; ascenseur et rampe d’accès</span></div>
+    </div>
+    <p class="note" style="max-width:none;margin-top:18px">Parascolaire&nbsp;: initiation musicale, poterie, peinture, cuisine, couture, motricité, théâtre, danse, pyrogravure, mosaïque, jardinage, et des jeux à l’intérieur comme à l’extérieur.</p>
+  </div>
+</section>
+
+<section id="tarifs">
+  <div class="wrap fees">
+    <div>
+      <h2>Des conditions claires<span class="en">Fees, stated plainly</span></h2>
+      <p style="margin-top:20px">Le texte complet des conditions financières est remis aux familles lors de l’inscription. La place de l’élève est confirmée après paiement des frais d’inscription et de l’avance.</p>
+      <table>
+        <caption>Parascolaire <span class="en" style="display:inline;font-size:.8rem">After-school</span></caption>
+        <tr><td>Forfait A · tous les après-midis, 16h–18h</td><td>CHF 3’000.–/an</td></tr>
+        <tr><td>Forfait B · mercredi après-midi, 13h–18h</td><td>CHF 2’160.–/an</td></tr>
+        <tr><td>Forfait C · A + B</td><td>CHF 4’680.–/an</td></tr>
+        <tr><td>Dépannage occasionnel, sur demande 24h à l’avance</td><td>CHF 20.–/h</td></tr>
+      </table>
+    </div>
+    <div class="price">
+      <p class="lab" style="color:var(--on-navy-muted)">Frais de scolarité annuels <i>· Annual tuition</i></p>
+      <div class="big">CHF 21’950.–</div>
+      <small>payés en trois trimestres</small>
+      <table style="margin-top:18px">
+        <tr><td>Écolage</td><td>19’500.–</td></tr>
+        <tr><td>Manuels et fournitures</td><td>250.–</td></tr>
+        <tr><td>Repas (5 jours)</td><td>1’900.–</td></tr>
+        <tr><td>Supervision des repas</td><td>150.–</td></tr>
+        <tr><td>Sorties culturelles</td><td>150.–</td></tr>
+        <tr><td>Frais d’inscription annuels</td><td>500.– en sus</td></tr>
+      </table>
+      <p class="note">L’écolage inclut le goûter du matin, la natation, le sport et la motricité. Les études surveillées, les examens Cambridge, le parascolaire et les excursions sont facturés séparément.</p>
+    </div>
+  </div>
+</section>
+
+<section class="hist" id="histoire">
+  <div class="wrap">
+    <div class="head"><h2>D’une crèche à une école<span class="en">From a nursery to a school</span></h2></div>
+    <ol class="tl">
+      <li><b>1976</b><p>Odette Cutullic, fonctionnaire des Nations Unies, fonde la Crèche des Nations, première crèche genevoise à appliquer la pédagogie Montessori.</p></li>
+      <li><b>1989</b><p>Face à la demande des parents, l’École Montessori-Nations ouvre pour les enfants de 3 à 9 ans, dans deux petites villas de la rue de Lausanne.</p></li>
+      <li><b>2007</b><p>L’école s’installe dans de nouveaux locaux et propose un cursus jusqu’à 12 ans.</p></li>
+    </ol>
+    <p class="note" style="max-width:none;margin-top:28px">Membre de l’AGEP, de la FSEP et de l’Association Montessori Suisse. Label School Impulse (école de qualité) et programme Eco-School.</p>
+  </div>
+</section>
+
+<section class="adm on-navy" id="admission">
+  <div class="wrap">
+    <div>
+      <h2>Venez voir les classes<span class="en">Come and see the classrooms</span></h2>
+      <p style="margin-top:20px">Les élèves sont admis tout au long de l’année, selon les places disponibles. Une première visite personnalisée est offerte pour découvrir les classes, l’équipe pédagogique et l’approche de l’école.</p>
+      <p>Les inscriptions sont ouvertes pour les rentrées 2026-2027 et 2027-2028.</p>
+      <p><a style="color:#fff" href="https://ecoledesnations.ch/visite-virtuelle-ecole-des-nations.html">Visite virtuelle de l’école</a></p>
+    </div>
+    <div class="form">
+      <dl>
+        <dt>Téléphone <i>· Phone</i></dt>
+        <dd><a href="tel:+41227388180">022&nbsp;738&nbsp;81&nbsp;80</a></dd>
+        <dt>Secrétariat <i>· Secretary’s office</i></dt>
+        <dd><a href="mailto:secretariat@ecoledesnations.ch">secretariat@ecoledesnations.ch</a></dd>
+        <dt>Adresse <i>· Address</i></dt>
+        <dd>Chemin Dr-Adolphe-Pasteur&nbsp;13, 1209&nbsp;Genève</dd>
+      </dl>
+      <a class="btn o" href="mailto:secretariat@ecoledesnations.ch?subject=Demande%20de%20visite">Écrire au secrétariat</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="logo-blanc.webp" alt="Logo de l’École Montessori-Nations" width="84" height="78" loading="lazy">
+    <div>
+      <h3>École Montessori-Nations</h3>
+      <p>Chemin Dr-Adolphe-Pasteur&nbsp;13<br>1209&nbsp;Genève<br><a href="https://www.google.com/maps/search/?api=1&amp;query=Chemin+Dr-Adolphe-Pasteur+13+1209+Gen%C3%A8ve">Voir sur la carte</a></p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <ul>
+        <li><a href="tel:+41227388180">022&nbsp;738&nbsp;81&nbsp;80</a></li>
+        <li><a href="mailto:secretariat@ecoledesnations.ch">secretariat@ecoledesnations.ch</a></li>
+        <li><a href="mailto:administration@ecoledesnations.ch">administration@ecoledesnations.ch</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Direction</h3>
+      <ul>
+        <li>Président&nbsp;: M.&nbsp;Pierre Torbey</li>
+        <li>Directrice pédagogique&nbsp;: Mme&nbsp;Myriam Cuisset</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap"><p class="legal" style="margin-top:28px;max-width:none">Maquette gratuite proposée par houle.ai — ce site n’est pas en ligne. Textes, tarifs et photos&nbsp;: ecoledesnations.ch.</p></div>
+</footer>
+
+<div class="bar"><a class="c" href="tel:+41227388180">Appeler l’école</a><a class="m" href="#admission">Visite</a></div>
+</body>
+</html>

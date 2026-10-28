@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Domaine Les Gondettes – vins de Satigny, Genève</title>
+<meta name="description" content="Domaine viticole de Satigny : 12 hectares, 7 cépages, des vins élevés et récoltés à la propriété. Cave ouverte du lundi au samedi, boutique en ligne. 022 753 11 23.">
+<!-- Maquette non publiée : retirer cette ligne à la mise en ligne -->
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#e8eae3">
+<meta property="og:title" content="Domaine Les Gondettes – Satigny, Genève">
+<meta property="og:description" content="De la nature au palais : des vins élevés et récoltés à la propriété. 12 hectares, 7 cépages.">
+<meta property="og:image" content="img/maison.webp">
+<meta property="og:locale" content="fr_CH">
+<meta property="og:type" content="website">
+<link rel="icon" href="img/logo.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Newsreader:ital,opsz,wght@1,6..72,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Winery","name":"Domaine viticole Les Gondettes","url":"https://lesgondettes.ch/","telephone":"+41 22 753 11 23","image":"img/maison.webp","address":{"@type":"PostalAddress","streetAddress":"Rampe de Choully 35","postalCode":"1242","addressLocality":"Satigny","addressRegion":"GE","addressCountry":"CH"}}
+</script>
+<!--
+  DIRECTION (fresh-web-design)
+  Artefact : l'étiquette. Chaque cuvée a sa tache de couleur sur l'étiquette (lime, rose, brun) ; la page l'utilise
+  comme surface : une bande pleine par cuvée, la bouteille détourée posée dessus.
+  Lecteur : un amateur qui veut savoir quelle bouteille, à quel prix, et si la cave est ouverte aujourd'hui.
+  Couleurs : pierre grisée (fond), encre vert-noir, vert de nuit de vigne (bande domaine), + 5 teintes tirées des étiquettes.
+  Typo : Jost (géométrique, de la famille du logo en capitales larges) + Newsreader italique pour la citation.
+  Mise en page : photo pleine largeur, bandes de couleur par cuvée (colonnes en bureau), bande sombre pour le domaine.
+  Détail signature : la bouteille dépasse de sa bande vers le haut.
+  Photos : les leurs (coucher de soleil sur les coteaux), telles quelles. Mouvement : aucun.
+-->
+<style>
+:root{--stone:#e8eae3;--paper:#f5f6f2;--ink:#1a1f19;--muted:#464f42;--dusk:#202b23;--on-dusk:#e6ead9;--lime:#a7c93a;--rule:#c4c9bb}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--stone);color:var(--ink);font:400 1.0625rem/1.6 "Jost",system-ui,sans-serif}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.preview{display:block;min-height:40px;padding:11px 1rem;background:#0f172a;color:#f8fafc;font:400 14px/18px system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center}
+.preview a{color:#f8fafc;text-decoration:underline;text-underline-offset:2px}
+header{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.9rem 1rem;background:var(--paper)}
+header img{width:112px}
+header nav{display:flex;gap:1.25rem;align-items:center;font-weight:500;font-size:.98rem}
+header nav a{text-decoration:none;padding:.5rem 0}
+header nav .shop{background:var(--ink);color:var(--paper);padding:.55rem 1rem;border-radius:2px}
+.hero{position:relative;background:var(--dusk)}
+.hero img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.hero .t{background:var(--dusk);color:var(--on-dusk);padding:1.6rem 1rem 2rem}
+.hero h1{margin:0;font-weight:300;font-size:clamp(2.1rem,9vw,4.6rem);line-height:1.02;letter-spacing:.01em}
+.hero h1 b{display:block;font-weight:600;letter-spacing:.14em;text-transform:uppercase;font-size:.42em;margin-bottom:.7rem;color:var(--lime)}
+.hero p{margin:1rem 0 0;max-width:34ch;font-size:1.1rem}
+.hero .go{display:inline-block;margin-top:1.3rem;padding:.8rem 1.3rem;background:var(--lime);color:var(--ink);font-weight:600;text-decoration:none;border-radius:2px}
+h2{font-weight:500;font-size:clamp(1.6rem,5vw,2.3rem);line-height:1.12;margin:0 0 .5rem}
+.cuvees{padding:2.6rem 0 0}
+.cuvees>.in{padding:0 1rem 1.4rem}
+.cuvees p.lead{margin:0;max-width:48ch;color:var(--muted)}
+.row{display:grid;grid-template-columns:38% 1fr;gap:0 1rem;align-items:center;padding:0 1rem;margin:0}
+.row img{width:100%;margin-top:-1.5rem;margin-bottom:.6rem}
+.row h3{font-weight:600;font-size:1.5rem;line-height:1.1;margin:0}
+.row p{margin:.3rem 0 0}
+.row .g{color:var(--muted);font-size:.95rem}
+.row .price{font-weight:600;font-size:1.15rem;margin-top:.5rem}
+.row a.buy{display:inline-block;margin-top:.5rem;font-weight:500;font-size:.95rem;padding:.4rem 0}
+.alt{background:#e4ea9c}.chs{background:#dccdb9}.sch{background:#bfe0a6}.pin{background:#d3bdb1}.ros{background:#f1c3d9}
+.cuvees .row:first-of-type{margin-top:0}
+.more{padding:1.4rem 1rem 2.4rem;color:var(--muted)}
+.more a{color:var(--ink);font-weight:500}
+.dom{background:var(--dusk);color:var(--on-dusk);padding:2.6rem 1rem}
+.dom h2{color:#fff}
+.dom .cols{display:grid;gap:1.6rem}
+.dom img{width:100%;border-radius:2px}
+.dom p{margin:.8rem 0 0;max-width:52ch}
+.dom q{display:block;margin-top:1.2rem;font:italic 400 1.35rem/1.4 "Newsreader",Georgia,serif;quotes:none;color:#fff}
+.dom .facts{display:flex;gap:2rem;margin:1.4rem 0 0}
+.dom .facts div{font-size:.95rem}
+.dom .facts strong{display:block;font-size:2.4rem;font-weight:300;line-height:1;color:var(--lime)}
+.expo{display:grid;gap:1.2rem;padding:2.6rem 1rem;background:var(--paper)}
+.expo img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.expo p{margin:.6rem 0 0;max-width:46ch}
+.visit{padding:2.6rem 1rem 3rem}
+.visit .box{display:grid;gap:1.6rem}
+.hours{margin:0;padding:0;list-style:none;max-width:22rem}
+.hours li{display:flex;justify-content:space-between;gap:1rem;padding:.35rem 0;border-bottom:1px solid var(--rule)}
+.hours li span:last-child{font-variant-numeric:tabular-nums}
+.tel{display:inline-block;font-size:1.7rem;font-weight:500;text-decoration:none;margin-top:.2rem}
+.btn{display:inline-block;margin:.6rem .6rem 0 0;padding:.75rem 1.2rem;border:2px solid var(--ink);font-weight:500;text-decoration:none;border-radius:2px}
+.btn.f{background:var(--ink);color:var(--paper)}
+footer{padding:1.4rem 1rem 2rem;background:var(--paper);font-size:.9rem;color:var(--muted)}
+@media (min-width:860px){
+ header{padding:1rem 2.5rem}header img{width:140px}
+ .hero{display:grid;grid-template-columns:5fr 4fr;min-height:620px}
+ .hero img{height:100%;aspect-ratio:auto;grid-column:1}
+ .hero .t{grid-column:2;grid-row:1;display:flex;flex-direction:column;justify-content:center;padding:3rem 3rem}
+ .cuvees{padding-top:3.5rem}
+ .cuvees>.in{padding:0 2.5rem 5rem}
+ .rows{display:grid;grid-template-columns:repeat(5,1fr)}
+ .row{grid-template-columns:1fr;gap:0;padding:0 1.5rem 2rem;align-content:start;height:100%;text-align:left}
+ .row img{width:62%;margin:-3.5rem auto 1.2rem}
+ .more{padding:1.6rem 2.5rem 3rem}
+ .dom{padding:4rem 2.5rem}
+ .dom .cols{grid-template-columns:5fr 6fr;gap:3.5rem;align-items:center;max-width:1180px;margin:0 auto}
+ .expo{grid-template-columns:1fr 1fr;gap:3rem;padding:4rem 2.5rem;align-items:center}
+ .visit{padding:4rem 2.5rem}
+ .visit .box{grid-template-columns:1fr 1fr;gap:3rem}
+ footer{padding:1.6rem 2.5rem 2rem}
+}
+</style>
+</head>
+<body>
+<div class="preview" role="note">Aperçu de votre nouveau site, préparé par&nbsp;<a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
+<header>
+  <a href="#"><img src="img/logo.webp" alt="Domaine Les Gondettes" width="140" height="81"></a>
+  <nav aria-label="Principal"><a href="#cuvees">Les vins</a><a href="#visite">Visite</a><a class="shop" href="https://boutique.lesgondettes.ch/boutique/">Boutique</a></nav>
+</header>
+<main>
+<section class="hero">
+  <img src="img/maison.webp" alt="La maison du domaine au milieu des vignes, à la lumière du soir" width="1500" height="1000" fetchpriority="high">
+  <div class="t">
+    <h1><b>Satigny · Genève</b>De la nature au palais</h1>
+    <p>Des vins élevés et récoltés à la propriété, pour le plaisir d’offrir.</p>
+    <a class="go" href="#cuvees">Voir les vins</a>
+  </div>
+</section>
+
+<section class="cuvees" id="cuvees">
+  <div class="in">
+    <h2>Chaque année, une nouveauté</h2>
+    <p class="lead">Cinq étiquettes du domaine, chacune avec sa couleur. Toute la gamme est dans la boutique en ligne.</p>
+  </div>
+  <div class="rows">
+    <article class="row alt">
+      <img src="img/altesse.webp" alt="Bouteille d’Altesse" width="520" height="693" loading="lazy">
+      <div><h3>Altesse</h3><p class="g">AOC Genève</p><p class="price">CHF&nbsp;15,00</p><a class="buy" href="https://lesgondettes.ch/boutique/vins-blancs/altesse-de-choully/">Voir ce vin</a></div>
+    </article>
+    <article class="row sch">
+      <img src="img/scheurebe.webp" alt="Bouteille de Scheurebe de Peney" width="520" height="680" loading="lazy">
+      <div><h3>Scheurebe de Peney</h3><p class="g">AOC Genève · notre nouveauté, agrumes et épices</p><p class="price">CHF&nbsp;18,00</p><a class="buy" href="https://lesgondettes.ch/boutique/vins-blancs/scheurebe-de-peney/">Voir ce vin</a></div>
+    </article>
+    <article class="row chs">
+      <img src="img/chasselas.webp" alt="Bouteille de Chasselas Vieilles Vignes" width="520" height="680" loading="lazy">
+      <div><h3>Chasselas Vieilles&nbsp;Vignes</h3><p class="g">AOC Genève</p><p class="price">dès CHF&nbsp;7,50</p><a class="buy" href="https://boutique.lesgondettes.ch/boutique/">Voir ce vin</a></div>
+    </article>
+    <article class="row ros">
+      <img src="img/rose-gamay.webp" alt="Bouteille de Rosé de Gamay" width="520" height="679" loading="lazy">
+      <div><h3>Rosé de Gamay</h3><p class="g">AOC Genève</p><p class="price">dès CHF&nbsp;7,50</p><a class="buy" href="https://lesgondettes.ch/boutique/vins-roses/rose-de-gamay/">Voir ce vin</a></div>
+    </article>
+    <article class="row pin">
+      <img src="img/pinot-noir.webp" alt="Bouteille de Pinot Noir Vieilles Vignes" width="520" height="696" loading="lazy">
+      <div><h3>Pinot Noir Vieilles&nbsp;Vignes</h3><p class="g">AOC Genève</p><p class="price">dès CHF&nbsp;9,50</p><a class="buy" href="https://lesgondettes.ch/boutique/vinsrouges/pinot-noir-choully/">Voir ce vin</a></div>
+    </article>
+  </div>
+  <p class="more">Et aussi : vins mousseux, bags in box et alcools forts. <a href="https://boutique.lesgondettes.ch/boutique/">Ouvrir la boutique en ligne</a>.</p>
+</section>
+
+<section class="dom" id="domaine">
+  <div class="cols">
+    <img src="img/raisin.webp" alt="Grappe de raisin bleu sur le cep" width="900" height="885" loading="lazy">
+    <div>
+      <h2>Un domaine, un chai voûté</h2>
+      <p>Les Gondettes, ce sont douze hectares de vigne partagés entre sept cépages, et un chai dont la cave aux larges voûtes a un cachet architectural unique.</p>
+      <p>Le domaine a été dirigé jusqu’en août&nbsp;2019 par Françoise Berguer, première femme vigneronne de Suisse. Son bras droit depuis plus d’un quart de siècle a repris le flambeau fin&nbsp;2019.</p>
+      <q>Nous sommes le maillon d’une chaîne d’artisans passionnés.</q>
+      <div class="facts"><div><strong>12&nbsp;ha</strong>de vigne</div><div><strong>7</strong>cépages</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="expo">
+  <img src="img/degustation.webp" alt="Bouteilles et verres posés dans les feuilles d’automne de la vigne" width="800" height="759" loading="lazy">
+  <div>
+    <h2>Des artistes à la cave</h2>
+    <p>Deux fois par an, le domaine accueille une exposition d’artistes : en juin au pressoir et dans les vignes, en novembre à la cave.</p>
+    <p>Les dates sont annoncées sur le site du domaine.</p>
+  </div>
+</section>
+
+<section class="visit" id="visite">
+  <div class="box">
+    <div>
+      <h2>Passer à la cave</h2>
+      <p>Domaine viticole Les Gondettes<br>Rampe de Choully 35, 1242&nbsp;Satigny</p>
+      <a class="tel" href="tel:+41227531123">022&nbsp;753&nbsp;11&nbsp;23</a><br>
+      <a class="btn f" href="tel:+41227531123">Appeler</a><a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Domaine+Les+Gondettes+Rampe+de+Choully+35+1242+Satigny">Itinéraire</a>
+    </div>
+    <div>
+      <ul class="hours" aria-label="Horaires">
+        <li><span>Lundi – vendredi</span><span>9h–12h · 14h–17h</span></li>
+        <li><span>Samedi</span><span>9h–17h</span></li>
+        <li><span>Dimanche</span><span>fermé</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+<footer>Maquette gratuite proposée par <a href="https://houle.ai/fr/products/chat-website/">houle.ai</a> — ce site n’est pas en ligne. Photos et logo&nbsp;: Domaine Les Gondettes.</footer>
+</body>
+</html>

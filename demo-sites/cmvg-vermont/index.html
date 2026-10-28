@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Centre médico-chirurgical Vermont–Grand-Pré, Genève</title>
+<meta name="description" content="Centre médical de quartier à Genève (Servette, Nations) : urgences médicales 7j/7, médecine générale, spécialistes, radiologie, laboratoire. 9a rue de Vermont, 022 734 51 50.">
+<!-- Maquette non publiée : retirer cette ligne à la mise en ligne -->
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#004d80">
+<meta property="og:title" content="Centre médico-chirurgical Vermont–Grand-Pré, Genève">
+<meta property="og:description" content="Urgences médicales 7j/7, médecine générale, spécialistes, radiologie, laboratoire. 022 734 51 50.">
+<meta property="og:image" content="img/og.png">
+<meta property="og:locale" content="fr_CH">
+<meta property="og:type" content="website">
+<link rel="icon" href="img/logo.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"MedicalClinic","name":"Centre médico-chirurgical Vermont - Grand-Pré","url":"http://cmvg.ch/","telephone":"+41 22 734 51 50","email":"info@cmvg.ch","image":"img/logo.png","address":{"@type":"PostalAddress","streetAddress":"Rue de Vermont 9a","postalCode":"1202","addressLocality":"Genève","addressRegion":"GE","addressCountry":"CH"}}
+</script>
+<!--
+  DIRECTION (fresh-web-design)
+  Artefact : le panneau d'orientation d'un centre médical (l'annuaire des services à l'entrée) et le numéro unique qu'on compose.
+  Lecteur : quelqu'un d'inquiet ou pressé, souvent sur mobile : « puis-je être vu aujourd'hui, à quelle heure, où me garer ? ».
+  Réponse en tête de page : le numéro, les horaires des urgences, comment prendre rendez-vous. Le reste est un annuaire.
+  Couleurs : bleu du logo #004d80 (panneau), blanc, bleu pâle (lignes d'annuaire), ambre de signalisation (urgences, une seule fois), encre bleu-noir.
+  Typo : Atkinson Hyperlegible (conçue par le Braille Institute pour la lisibilité : choix voulu pour un public mêlant tous âges), une seule famille, graisses 400/700.
+  Mise en page : bandeau d'accès immédiat, puis l'annuaire en deux colonnes (service / ce qu'on y fait), pas de cartes.
+  Détail signature : l'annuaire aux rangées bleues pleines, comme un panneau d'entrée. Pas de photo : leurs pages n'en ont pas.
+  Mouvement : aucun.
+-->
+<style>
+:root{--navy:#004d80;--navy-d:#00395f;--tint:#e3edf5;--ground:#f6f9fb;--ink:#0e2230;--muted:#41596a;--amber:#ffc21a;--rule:#bfd0dd}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ground);color:var(--ink);font:400 1.125rem/1.6 "Atkinson Hyperlegible",system-ui,sans-serif;padding-bottom:72px}
+a{color:var(--navy)}
+.preview{display:block;min-height:40px;padding:11px 1rem;background:#0f172a;color:#f8fafc;font:400 14px/18px system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center}
+.preview a{color:#f8fafc;text-decoration:underline;text-underline-offset:2px}
+h1,h2,h3{margin:0;font-weight:700;line-height:1.12}
+header.h{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem 1rem;background:#fff;border-bottom:1px solid var(--rule)}
+.brand{display:flex;align-items:center;gap:.7rem;text-decoration:none;color:var(--navy);font-weight:700;line-height:1.15}
+.brand img{width:48px;height:48px}
+.brand span{font-size:1rem;max-width:15ch}
+.h nav{display:none}
+.acces{background:var(--navy);color:#fff;padding:1.6rem 1rem 1.8rem}
+.acces h1{font-size:clamp(1.9rem,7.5vw,3.2rem);max-width:20ch}
+.acces .lead{margin:.7rem 0 0;max-width:46ch;color:#dbe9f4}
+.tel{display:inline-block;margin-top:1.1rem;font-size:clamp(2.1rem,10vw,3.4rem);font-weight:700;line-height:1;color:#fff;text-decoration:none;border-bottom:4px solid var(--amber);padding-bottom:.15rem;font-variant-numeric:tabular-nums}
+.infos{display:grid;gap:1px;margin-top:1.5rem;background:#3d79a3}
+.infos div{background:var(--navy);padding:.9rem 0}
+.infos div:first-child{padding-top:.2rem}
+.infos b{display:block;font-size:1.2rem}
+.infos .urg b::before{content:"";display:inline-block;width:.8rem;height:.8rem;background:var(--amber);border-radius:50%;margin-right:.55rem}
+.infos span{color:#dbe9f4}
+.infos a{color:#fff}
+.sec{padding:2.4rem 1rem}
+h2{font-size:clamp(1.7rem,6vw,2.4rem);margin-bottom:1rem}
+.annuaire{background:#fff}
+.annuaire dl{margin:0}
+.annuaire .r{display:block;border-top:1px solid var(--rule);padding:0}
+.annuaire dt{background:var(--navy);color:#fff;padding:.7rem 1rem;font-weight:700;font-size:1.15rem;margin-top:3px}
+.annuaire dd{margin:0;padding:.8rem 1rem 1rem;background:var(--tint)}
+.annuaire dt small{display:block;font-weight:400;font-size:.95rem;color:#cfe2f0}
+.annuaire dd ul{margin:0;padding-left:1.1rem}
+.annuaire dd p{margin:0}
+.annuaire dd p+ul,.annuaire dd p+p{margin-top:.4rem}
+.depist{background:var(--tint)}
+.depist .intro{max-width:56ch;margin:0 0 1.2rem}
+.d{padding:1.1rem 0;border-top:2px solid var(--navy)}
+.d h3{font-size:1.4rem}
+.d .age{display:inline-block;margin-top:.3rem;font-weight:700;color:var(--navy-d)}
+.d p{margin:.4rem 0 0;max-width:56ch}
+.d .k{color:var(--muted);font-size:1rem}
+.btn{display:inline-flex;align-items:center;min-height:48px;margin:.8rem .6rem 0 0;padding:.6rem 1.2rem;font:700 1.05rem "Atkinson Hyperlegible",sans-serif;text-decoration:none;border-radius:3px;background:var(--navy);color:#fff;border:2px solid var(--navy)}
+.btn.o{background:none;color:var(--navy)}
+.histoire p{max-width:60ch;margin:.6rem 0 0}
+.venir{background:#fff}
+.venir .g{display:grid;gap:1.4rem}
+.venir address{font-style:normal;font-size:1.25rem}
+.venir ul{margin:.3rem 0 0;padding-left:1.1rem}
+footer{padding:1.2rem 1rem 1.8rem;font-size:.95rem;color:var(--muted);border-top:1px solid var(--rule)}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:grid;grid-template-columns:1.5fr 1fr;gap:8px;padding:8px 12px calc(8px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--rule)}
+.bar a{display:flex;align-items:center;justify-content:center;min-height:48px;font-weight:700;font-size:1.1rem;text-decoration:none;border-radius:3px}
+.bar .c{background:var(--navy);color:#fff}.bar .g{border:2px solid var(--navy);color:var(--navy)}
+@media (min-width:900px){
+ body{padding-bottom:0}.bar{display:none}
+ header.h{padding:.8rem 3rem}
+ .h nav{display:flex;gap:1.8rem;font-weight:700}
+ .h nav a{text-decoration:none;color:var(--navy);padding:.5rem 0}
+ .acces{padding:3.2rem 3rem 3.4rem;display:grid;grid-template-columns:1.1fr 1fr;gap:4rem;align-items:center}
+ .infos{margin-top:0}
+ .infos div{padding:1.1rem 0}
+ .sec{padding:4rem 3rem}
+ .annuaire dl{max-width:1100px}
+ .annuaire .r{display:grid;grid-template-columns:20rem 1fr;gap:3px;margin-top:3px;border:0}
+ .annuaire dt{margin:0}
+ .annuaire dd{padding:.9rem 1.4rem}
+ .depist .row{display:grid;grid-template-columns:repeat(2,1fr);column-gap:4rem;max-width:1100px}
+ .histoire{display:grid;grid-template-columns:1fr 1.4fr;gap:4rem}
+ .histoire p{margin-top:0}
+ .venir .g{grid-template-columns:1fr 1fr;gap:4rem;max-width:1000px}
+ footer{padding:1.4rem 3rem 2rem}
+}
+</style>
+</head>
+<body>
+<div class="preview" role="note">Aperçu de votre nouveau site, préparé par&nbsp;<a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
+<header class="h">
+  <a class="brand" href="#"><img src="img/logo.png" alt="" width="48" height="48"><span>Centre médico-chirurgical Vermont–Grand-Pré</span></a>
+  <nav aria-label="Principal"><a href="#prestations">Prestations</a><a href="#depistages">Dépistages</a><a href="#acces">Contact et accès</a></nav>
+</header>
+<main>
+<section class="acces" aria-labelledby="t">
+  <div>
+    <h1 id="t">Un centre médical de quartier, ouvert 7 jours sur 7</h1>
+    <p class="lead">Médecine générale, urgences médicales, spécialistes, radiologie et laboratoire réunis au même endroit, à deux pas de la place des Nations.</p>
+    <a class="tel" href="tel:+41227345150">022&nbsp;734&nbsp;51&nbsp;50</a>
+  </div>
+  <div class="infos">
+    <div class="urg"><b>Urgences médicales</b><span>7j/7, de 7h30 à 22h00 (dès le 1<sup>er</sup>&nbsp;avril&nbsp;2026)</span></div>
+    <div><b>Rendez-vous</b><span>Uniquement par téléphone, ou en ligne&nbsp;: <a href="https://www.onedoc.ch/fr/cabinet-de-groupe/geneve/e2cn/centre-medico-chirurgical-vermont-grand-pre">prendre rendez-vous sur OneDoc</a></span></div>
+    <div><b>Adresse</b><span>9a, rue de Vermont, 1202&nbsp;Genève · parking rue Chandieu</span></div>
+  </div>
+</section>
+
+<section class="sec annuaire" id="prestations">
+  <h2>Les prestations</h2>
+  <dl>
+    <div class="r"><dt>Médecine générale</dt><dd>Médecins de premier recours, généralistes et médecins de famille. Prise en charge rapide de tous les cas de traumatologie et de la petite chirurgie.</dd></div>
+    <div class="r"><dt>Interventions ambulatoires</dt><dd>Prise en charge rapide par l’équipe d’urgentistes. Chirurgie dermatologique et orthopédique ambulatoire sur rendez-vous.</dd></div>
+    <div class="r"><dt>Pédiatrie<small>Drsse Léa Makoundou</small></dt><dd><ul><li>Examen pédiatrique complet</li><li>Urgences</li><li>Évaluations pédiatriques sur rendez-vous</li></ul></dd></div>
+    <div class="r"><dt>Gynécologie<small>Dr S. Finci</small></dt><dd><ul><li>Contrôle annuel, suivi de grossesse</li><li>Incontinence urinaire, ostéoporose, ménopause</li></ul></dd></div>
+    <div class="r"><dt>Cardiologie<small>Dr N. Popova</small></dt><dd>ECG, échocardiogramme, ultrasons, pour les cas aigus et le suivi des maladies chroniques.</dd></div>
+    <div class="r"><dt>Neurologie<small>Drsse J. Grujic</small></dt><dd><ul><li>Examen neurologique complet</li><li>EMG, Doppler, EEG (également pour les enfants)</li></ul></dd></div>
+    <div class="r"><dt>Orthopédie<small>Dr N. Polic</small></dt><dd>Traitements orthopédiques conservatifs, avec organisation rapide des examens et des interventions spécialisées.</dd></div>
+    <div class="r"><dt>Ophtalmologie<small>Drsse S. Andrei</small></dt><dd><ul><li>Contrôle de la vue (adultes et enfants), examen complet</li><li>Dépistage du glaucome, suivi de la rétinopathie diabétique</li><li>Examen pour le permis de conduire</li></ul></dd></div>
+    <div class="r"><dt>Radiologie</dt><dd>Radiologie conventionnelle, ultrasons (gynécologiques, urologiques, abdominaux et orthopédiques), Doppler.</dd></div>
+    <div class="r"><dt>Infirmerie</dt><dd>Perfusions (sous autorisation du médecin traitant), changement de pansements, vaccins.</dd></div>
+    <div class="r"><dt>Laboratoire</dt><dd>Laboratoire standard orienté vers l’urgence (Troponine-Test, D-Dimer…) et le suivi des maladies chroniques (glycémie, créatinine, quick, cholestérol…).</dd></div>
+    <div class="r"><dt>Acupuncture<small>Dr C. Sander</small></dt><dd>Bien-être, médecine préventive et intégrative&nbsp;: en curatif (stress, sommeil, douleurs…) comme en préventif.</dd></div>
+    <div class="r"><dt>Nutrition<small>Mme C. Di Marco</small></dt><dd>Bien-être.</dd></div>
+  </dl>
+</section>
+
+<section class="sec depist" id="depistages">
+  <h2>Dépistages gratuits de maladies chroniques</h2>
+  <p class="intro">Accessibles à tous. Prise de rendez-vous uniquement par téléphone au <a href="tel:+41227345150">022&nbsp;734&nbsp;51&nbsp;50</a>.</p>
+  <div class="row">
+    <div class="d"><h3>Diabète</h3><p class="k">Facteurs de risque&nbsp;: antécédents familiaux, obésité, sédentarité, consommation excessive d’alcool.</p><p>Aucune préparation nécessaire (analyse de laboratoire, HbA1c).</p></div>
+    <div class="d"><h3>Anévrisme de l’aorte abdominale</h3><span class="age">Dès 65&nbsp;ans pour les femmes, 60&nbsp;ans pour les hommes</span><p class="k">Facteurs de risque&nbsp;: antécédents familiaux, hypertension artérielle, tabagisme actif.</p><p>Aucune préparation. Échographie par un radiologue FMH ou un cardiologue FMH.</p></div>
+    <div class="d"><h3>Maladies rénales</h3><span class="age">Dès 40&nbsp;ans</span><p class="k">Facteurs de risque&nbsp;: antécédents familiaux, tabagisme actif, obésité, hypertension, prise prolongée de certains médicaments.</p><p>Aucune préparation (laboratoire).</p></div>
+    <div class="d"><h3>Fibrose du foie</h3><p class="k">Facteurs de risque&nbsp;: obésité, diabète, alcool, prise prolongée de certains médicaments.</p><p><b>À jeun&nbsp;:</b> ni manger ni boire pendant les 6&nbsp;heures qui précèdent. Examen par un radiologue FMH.</p></div>
+  </div>
+</section>
+
+<section class="sec histoire">
+  <h2>Pour la petite histoire</h2>
+  <p>Le centre a été fondé en 1985 par l’équipe de l’ancienne Permanence médicale de la Servette. Depuis, le nombre de services offerts aux patients ne cesse d’augmenter. Sa principale préoccupation reste d’offrir un centre de soins de proximité, accessible à tous. Situé entre la gare de Genève et l’aéroport de Cointrin, à deux pas de la place des Nations, il soutient plusieurs manifestations annuelles organisées par des associations du quartier.</p>
+</section>
+
+<section class="sec venir" id="acces">
+  <h2>Contact et accès</h2>
+  <div class="g">
+    <div>
+      <address>Centre médico-chirurgical Vermont–Grand-Pré<br>9a, rue de Vermont<br>1202&nbsp;Genève</address>
+      <a class="btn" href="tel:+41227345150">Appeler le 022&nbsp;734&nbsp;51&nbsp;50</a><a class="btn o" href="https://www.google.com/maps/search/?api=1&amp;query=Centre+m%C3%A9dical+Vermont+9a+rue+de+Vermont+1202+Gen%C3%A8ve">Itinéraire</a>
+    </div>
+    <div>
+      <p style="margin:0"><b>Comment venir</b></p>
+      <ul><li>En voiture&nbsp;: parking rue Chandieu&nbsp;9</li><li>En bus&nbsp;: depuis la gare Cornavin, bus&nbsp;8 direction «&nbsp;Nations&nbsp;», arrêt Cannonière</li></ul>
+      <p style="margin:1rem 0 0">E-mail&nbsp;: <a href="mailto:info@cmvg.ch">info@cmvg.ch</a></p>
+    </div>
+  </div>
+</section>
+</main>
+<footer>Maquette gratuite proposée par <a href="https://houle.ai/fr/products/chat-website/">houle.ai</a> — ce site n’est pas en ligne.</footer>
+<div class="bar"><a class="c" href="tel:+41227345150">Appeler</a><a class="g" href="https://www.google.com/maps/search/?api=1&amp;query=Centre+m%C3%A9dical+Vermont+9a+rue+de+Vermont+1202+Gen%C3%A8ve">Itinéraire</a></div>
+</body>
+</html>

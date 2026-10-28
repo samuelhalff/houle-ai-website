@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Pax Hôtel Genève – boutique hôtel aux Eaux-Vives</title>
+<meta name="description" content="Boutique hôtel familial de 34 chambres climatisées, en haut du quartier des Eaux-Vives, près du Jet d'Eau. Rue du 31-Décembre 68, Genève. Réception : +41 22 787 50 70.">
+<!-- Maquette non publiée : retirer cette ligne à la mise en ligne -->
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1b2430">
+<meta property="og:title" content="The Pax Hôtel Genève – boutique hôtel aux Eaux-Vives">
+<meta property="og:description" content="34 chambres climatisées, petit-déjeuner buffet, patio. Rue du 31-Décembre 68, Genève.">
+<meta property="og:image" content="img/accueil.webp">
+<meta property="og:locale" content="fr_CH">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=Hanken+Grotesk:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Hotel","name":"The Pax Hôtel Genève","url":"https://www.hotel-pax-geneva.ch/","telephone":"+41 22 787 50 70","email":"direction@hotel-pax-geneva.ch","image":"img/accueil.webp","starRating":{"@type":"Rating","ratingValue":"3"},"petsAllowed":true,"address":{"@type":"PostalAddress","streetAddress":"Rue du 31-Décembre 68","postalCode":"1207","addressLocality":"Genève","addressCountry":"CH"}}
+</script>
+<!--
+  DIRECTION (fresh-web-design)
+  Artefacts de la maison : la plaque de porte, la clé de chambre, le méandre grec du logo, le papier peint
+  à fleurs et les rayures de leurs chambres, la réception corail, l'escalier en colimaçon.
+  Couleurs : bleu-nuit des rayures (fond sombre, texte), vert sauge du papier peint (fond clair),
+  corail du mur de la réception (bandeaux et boutons), vert du logo (méandre, liens).
+  Typo : Bricolage Grotesque (titres, chiffres des horaires) + Hanken Grotesk (texte).
+  Mise en page : bord gauche fort, les chambres comme plaques de porte, la journée en frise horaire.
+  Détail signature : le méandre du logo répété en filet entre les sections.
+  Photos : celles de l'hôtel, sans filtre. Mouvement : aucun.
+-->
+<style>
+:root{
+  --nuit:#1b2430; --nuit-2:#27323f; --sauge:#dfe6d8; --sauge-2:#cbd6c1; --corail:#e98f74; --corail-fonce:#c9684b;
+  --vert:#0e9646; --vert-texte:#0b6a33; --texte:#1b2430; --clair:#f4f6f0;
+  --disp:"Bricolage Grotesque",system-ui,sans-serif; --txt:"Hanken Grotesk",system-ui,sans-serif;
+  --meandre:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='16' viewBox='0 0 32 16'%3E%3Cpath d='M0 15h8V1h16v10h-8V5h-4v10h20' fill='none' stroke='%230e9646' stroke-width='2'/%3E%3C/svg%3E");
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:17px/1.6 var(--txt);color:var(--texte);background:var(--sauge)}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.preview{background:#0d1219;color:#c8cfd6;font-size:13px;line-height:1.4;text-align:center;padding:8px 14px}
+.preview a{color:#fff}
+.top{background:var(--nuit);color:var(--clair)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:12px;padding-bottom:12px}
+.marque{display:flex;align-items:center;gap:12px;text-decoration:none}
+.marque img{width:46px}
+.marque b{font:800 19px/1.05 var(--disp);letter-spacing:-.01em}
+.marque span{display:block;font:400 13px/1.2 var(--txt);color:#b8c2cc}
+.top nav{display:flex;gap:10px;align-items:center}
+.top nav a.lien{display:none;text-decoration:none;padding:6px 8px;font-weight:500}
+.btn{display:inline-block;background:var(--corail);color:var(--nuit);text-decoration:none;font:700 16px/1 var(--txt);padding:14px 20px;border-radius:3px}
+.btn:hover{background:#f0a48c}
+.btn.contour{background:none;color:inherit;border:2px solid currentColor;padding:12px 18px}
+.top .btn{padding:11px 14px;font-size:15px}
+.tel{font-weight:700;text-decoration:none;white-space:nowrap}
+.hero{background:var(--nuit);color:var(--clair)}
+.hero figure img{width:100%;aspect-ratio:16/10;object-fit:cover}
+.hero .wrap{padding-top:28px;padding-bottom:40px}
+h1{font:800 clamp(2.3rem,9vw,4.6rem)/.98 var(--disp);letter-spacing:-.025em;max-width:13ch}
+.hero p{margin:18px 0 26px;max-width:36ch;font-size:19px;color:#d6dde3}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.filet{height:16px;background:var(--meandre) repeat-x left center;background-size:32px 16px}
+.intro{padding:56px 0}
+.intro .wrap{display:grid;gap:32px}
+h2{font:800 clamp(1.9rem,6vw,3rem)/1.02 var(--disp);letter-spacing:-.02em;margin-bottom:18px}
+.intro p+p{margin-top:14px}
+.intro figure img{width:100%;max-height:560px;object-fit:cover;object-position:center 30%}
+.note{margin-top:22px;padding:14px 16px;background:var(--corail);border-radius:3px;font-weight:500}
+.chambres{background:var(--nuit);color:var(--clair);padding:60px 0}
+.chambres h2{color:var(--clair)}
+.chambres .lead{max-width:60ch;color:#d1d9df}
+.plaques{list-style:none;padding:0;margin:28px 0;display:grid;gap:14px}
+.plaques li{background:var(--nuit-2);border:2px solid #3d4a59;border-radius:4px;padding:16px 18px 16px 22px;border-left:8px solid var(--corail)}
+.plaques h3{font:800 22px/1.1 var(--disp);margin-bottom:6px}
+.plaques p{font-size:16px;color:#cfd7de}
+.galerie{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.galerie img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.galerie .large{grid-column:1/-1;aspect-ratio:16/9}
+.equip{margin-top:26px;padding-top:20px;border-top:2px solid #3d4a59;display:grid;gap:6px;color:#d1d9df}
+.equip b{font:800 18px var(--disp);color:var(--clair)}
+.equip ul{display:flex;flex-wrap:wrap;gap:4px 18px;list-style:none;padding:0;font-size:16px}
+.equip ul li::before{content:"–";margin-right:6px;color:var(--corail)}
+.jour{background:var(--corail);padding:60px 0}
+.jour ol{list-style:none;padding:0;margin-top:26px;border-left:4px solid var(--nuit)}
+.jour li{position:relative;padding:0 0 26px 22px}
+.jour li::before{content:"";position:absolute;left:-11px;top:9px;width:18px;height:18px;background:var(--nuit);transform:rotate(45deg)}
+.jour time{display:block;font:800 clamp(2rem,8vw,3.2rem)/1 var(--disp);letter-spacing:-.02em}
+.jour li p{max-width:46ch;margin-top:4px}
+.petitdej{padding:60px 0 0}
+.petitdej .wrap{display:grid;gap:22px}
+.prix{font:800 28px/1.1 var(--disp)}
+.prix s{font-weight:400;opacity:.65;margin-left:6px;font-size:.75em}
+.bandeau{display:grid;gap:8px;margin-top:34px}
+.bandeau img{width:100%;height:170px;object-fit:cover}
+.bienetre{padding:56px 0;background:var(--sauge-2)}
+.bienetre ul{columns:1;list-style:none;padding:0;margin-top:14px}
+.bienetre li{padding:5px 0;border-bottom:1px solid #a9b89c}
+.quartier{padding:60px 0}
+.quartier .wrap{display:grid;gap:36px}
+.resto{list-style:none;padding:0}
+.resto li{padding:12px 0;border-bottom:2px solid var(--nuit);display:flex;flex-direction:column}
+.resto b{font:800 21px/1.15 var(--disp)}
+.acces dt{font:800 18px var(--disp);margin-top:14px}
+.acces dd{margin:2px 0 0}
+.contact{background:var(--nuit);color:var(--clair);padding:60px 0 40px}
+.contact .wrap{display:grid;gap:30px}
+.contact address{font-style:normal;font-size:20px;line-height:1.5}
+.contact a:not(.btn){color:#fff;text-underline-offset:3px}
+.gros-tel{display:block;font:800 clamp(2rem,9vw,3.4rem)/1 var(--disp);letter-spacing:-.02em;text-decoration:none;margin:10px 0 4px}
+.contact figure img{width:100%;max-width:420px;aspect-ratio:3/4;object-fit:cover}
+.pied{margin-top:36px;padding-top:18px;border-top:1px solid #3d4a59;font-size:14px;color:#aab4be}
+.pied img{width:56px;margin-bottom:10px}
+@media(min-width:760px){
+  body{font-size:18px}
+  .top nav a.lien{display:inline-block}
+  .hero{display:grid;grid-template-columns:1fr 1.15fr;align-items:stretch}
+  .hero figure{order:2}
+  .hero figure img{height:100%;aspect-ratio:auto;min-height:560px}
+  .hero .wrap{order:1;display:flex;flex-direction:column;justify-content:center;padding:60px 40px 60px max(20px,calc((100vw - 1180px)/2 + 20px))}
+  .intro .wrap{grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+  .plaques{grid-template-columns:1fr 1fr}
+  .chambres .wrap>div.grille{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+  .chambres .plaques{grid-template-columns:1fr;margin-top:0}
+  .petitdej .wrap{grid-template-columns:1fr 1fr;gap:56px}
+  .petitdej .wrap.bandeau{grid-template-columns:1fr 1fr 1fr;gap:8px}
+  .bandeau img{height:260px}
+  .bienetre ul{columns:2;column-gap:40px}
+  .quartier .wrap{grid-template-columns:1fr 1fr;gap:64px}
+  .contact .wrap{grid-template-columns:1.2fr .8fr;align-items:end}
+  .jour ol{display:grid;grid-template-columns:repeat(4,1fr);border-left:0;border-top:4px solid var(--nuit);margin-top:40px}
+  .jour li{padding:26px 20px 0 0}
+  .jour li::before{left:0;top:-12px}
+}
+</style>
+</head>
+<body>
+<div class="preview" role="note">Aperçu de votre nouveau site, préparé par&nbsp;<a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="marque" href="#">
+      <img src="img/logo-clair.png" alt="" width="46" height="29">
+      <span><b>The Pax Hôtel</b><span>Genève · Eaux-Vives</span></span>
+    </a>
+    <nav aria-label="Principal">
+      <a class="lien" href="#chambres">Chambres</a>
+      <a class="lien" href="#petit-dejeuner">Petit-déjeuner</a>
+      <a class="lien" href="#quartier">Quartier</a>
+      <a class="lien" href="#contact">Contact</a>
+      <a class="btn" href="https://bookingengine.mylighthouse.com/hotel-pax-geneva?language=fr-FR">Réserver</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <figure><img src="img/accueil.webp" alt="La réception de The Pax Hôtel, mur corail et aquarium" width="1600" height="667"></figure>
+  <div class="wrap">
+    <h1>Un hôtel de famille en haut des Eaux-Vives.</h1>
+    <p>34 chambres, un petit-déjeuner buffet et un patio, à deux pas du Jet d'Eau.</p>
+    <div class="actions">
+      <a class="btn" href="https://bookingengine.mylighthouse.com/hotel-pax-geneva?language=fr-FR">Réserver sur notre site</a>
+      <a class="btn contour" href="tel:+41227875070">+41&nbsp;22&nbsp;787&nbsp;50&nbsp;70</a>
+    </div>
+  </div>
+</section>
+<div class="filet" style="background-color:var(--nuit)" aria-hidden="true"></div>
+
+<section class="intro">
+  <div class="wrap">
+    <div>
+      <h2>Bienvenue au Pax.</h2>
+      <p>The Pax Hôtel est un boutique hôtel trois étoiles, familial, de 34 chambres avec douche/WC ou bain/WC. Il se trouve en plein centre-ville, dans un lieu résidentiel, tout en haut du quartier vivant et prisé des Eaux-Vives, près du Jet d'Eau.</p>
+      <p class="note">Réservez uniquement sur notre site&nbsp;: vous profitez de réductions auprès des restaurants partenaires proches de l'hôtel.</p>
+    </div>
+    <figure><img src="img/facade.webp" alt="La façade de l'hôtel, rue du 31-Décembre" width="815" height="1024"></figure>
+  </div>
+</section>
+
+<section class="chambres" id="chambres">
+  <div class="wrap">
+    <h2>Les chambres</h2>
+    <p class="lead">De 13 à 30&nbsp;m², décorées avec soin dans un style urban-chic, toutes climatisées et non-fumeur. Certaines donnent côté rue, avec cheminée ancienne et balcon&nbsp;; d'autres côté cour, au calme.</p>
+    <div class="grille" style="margin-top:28px">
+      <ul class="plaques">
+        <li><h3>Chambre simple</h3><p>Un lit pour une personne, salle de bain avec douche/WC, sur la rue ou la cour intérieure.</p></li>
+        <li><h3>Chambre double</h3><p>Un grand lit, salle de bain avec douche/WC, sur la rue ou la cour intérieure.</p></li>
+        <li><h3>Lits jumeaux</h3><p>Deux lits jumeaux, salle de bain avec douche/WC, côté rue.</p></li>
+        <li><h3>Chambre quadruple</h3><p>Quatre lits simples, salle de bain avec bain/WC, sur la cour intérieure.</p></li>
+        <li><h3>Studio</h3><p>Quatre lits simples, salle de bain avec bain/WC et kitchenette, sur la cour intérieure.</p></li>
+      </ul>
+      <div class="galerie">
+        <img class="large" src="img/chambre-fleurs.webp" alt="Chambre au papier peint à fleurs" width="1024" height="683" loading="lazy">
+        <img src="img/chambre-vert.webp" alt="Chambre à la tête de lit sombre" width="1024" height="683" loading="lazy">
+        <img src="img/chambre-rayures.webp" alt="Chambre aux rayures bleu nuit" width="1024" height="683" loading="lazy">
+        <img src="img/kitchenette.webp" alt="Kitchenette d'un studio" width="1024" height="683" loading="lazy">
+        <img src="img/bain.webp" alt="Salle de bain carrelée de blanc" width="1024" height="683" loading="lazy">
+      </div>
+    </div>
+    <div class="equip">
+      <b>Dans les chambres</b>
+      <ul>
+        <li>Télévision écran plat, 200 chaînes</li><li>Wi-Fi gratuit</li><li>Climatisation</li><li>Réveil automatique</li><li>Frigo</li><li>Coffre-fort</li><li>Machine à café et thé</li><li>Sèche-cheveux</li><li>Animaux bienvenus, sans supplément</li>
+      </ul>
+    </div>
+  </div>
+</section>
+<div class="filet" style="background-color:var(--nuit)" aria-hidden="true"></div>
+
+<section class="jour" id="reception">
+  <div class="wrap">
+    <h2>Une journée au Pax</h2>
+    <ol>
+      <li><time>7h</time><p>La réception ouvre. Le petit-déjeuner est servi de 7h à 10h (7h30 à 10h30 le dimanche).</p></li>
+      <li><time>10h</time><p>Fin du petit-déjeuner en semaine, dans les deux salles ou au patio.</p></li>
+      <li><time>22h</time><p>La réception ferme, et la porte d'entrée aussi&nbsp;: votre clé de chambre vous ouvre.</p></li>
+      <li><time>22h–minuit</time><p>Vous arrivez à ces heures&nbsp;? Dites-nous votre horaire d'arrivée, nous vous accueillerons.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="petitdej" id="petit-dejeuner">
+  <div class="wrap">
+    <div>
+      <h2>Petit-déjeuner continental</h2>
+      <p>Pains, croissants, fruits frais et salade de fruits, œufs à la coque, charcuterie, produits sans gluten, céréales, fromages, yogourt, confitures et miel, boissons chaudes, jus d'orange et multifruit. Le buffet peut changer selon l'arrivage.</p>
+    </div>
+    <div>
+      <p class="prix">CHF&nbsp;15.-<s>CHF&nbsp;20.-</s></p>
+      <p>par personne et par jour, pour une réservation directe sur notre site.</p>
+    </div>
+  </div>
+  <div class="wrap bandeau">
+    <img src="img/petitdej-salle.webp" alt="Une des salles du petit-déjeuner" width="1600" height="500" loading="lazy">
+    <img src="img/buffet.webp" alt="Le buffet" width="1600" height="500" loading="lazy">
+    <img src="img/patio.webp" alt="Le patio extérieur" width="1600" height="500" loading="lazy">
+  </div>
+</section>
+
+<section class="bienetre" style="margin-top:60px">
+  <div class="wrap">
+    <h2>Bien-être, dans votre chambre</h2>
+    <p>Un soin spa ou un coaching se réserve à la réception, avec notre institut partenaire. Une thérapeute professionnelle vient directement dans votre chambre.</p>
+    <ul>
+      <li>Massages&nbsp;: thérapeutique, sportif, détox, relaxant, anti-cellulite, des pieds</li>
+      <li>Soins du corps&nbsp;: gommage et massage, soin complet</li>
+      <li>Soins du visage</li>
+      <li>Manucure et pédicure, épilation</li>
+      <li>Coaching individuel, ou à deux personnes maximum</li>
+    </ul>
+  </div>
+</section>
+
+<section class="quartier" id="quartier">
+  <div class="wrap">
+    <div>
+      <h2>Le carré magique des Eaux-Vives</h2>
+      <p style="margin-bottom:14px">Autour de la rue Henri-Blanvalet, à 5 minutes à pied de l'hôtel, une jungle de bars et de restaurants innovants.</p>
+      <ul class="resto">
+        <li><b>L'Alma</b>Cuisine péruvienne</li>
+        <li><b>Chez Nonna</b>Piadina, la galette italienne</li>
+        <li><b>Inda Bar</b>Gastronomie indienne</li>
+        <li><b>Yvette de Marseille</b>Bar aux airs du Vieux-Port</li>
+        <li><b>Bottle Brothers et Grand Bottle</b>Burgers, cocktails et cuisine bistronomique</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Y accéder</h2>
+      <dl class="acces">
+        <dt>Depuis l'aéroport</dt><dd>30 à 35 minutes en train et tram.</dd>
+        <dt>Depuis la gare Cornavin</dt><dd>15 minutes en bus. Bus 9 direction Thônex, Belle-Terre-Place-de-l'Araire, arrêt 31-Décembre, à 100 mètres de l'hôtel.</dd>
+        <dt>Parking</dt><dd>Parking Villereuse, à 280 mètres&nbsp;: 20&nbsp;% de rabais en semaine. Stationnement possible dans les rues voisines.</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>Nous contacter</h2>
+      <a class="gros-tel" href="tel:+41227875070">+41&nbsp;22&nbsp;787&nbsp;50&nbsp;70</a>
+      <address>
+        The Pax Hôtel Genève<br>Rue du 31-Décembre 68<br>1207 Genève<br>
+        <a href="mailto:direction@hotel-pax-geneva.ch">direction@hotel-pax-geneva.ch</a>
+      </address>
+      <div class="actions" style="margin-top:24px">
+        <a class="btn" href="https://bookingengine.mylighthouse.com/hotel-pax-geneva?language=fr-FR">Réserver</a>
+        <a class="btn contour" href="https://www.google.com/maps/search/?api=1&amp;query=Rue+du+31-D%C3%A9cembre+68+1207+Gen%C3%A8ve">Voir sur la carte</a>
+      </div>
+    </div>
+    <figure><img src="img/escalier.webp" alt="L'escalier en colimaçon de l'hôtel" width="683" height="1024" loading="lazy"></figure>
+  </div>
+  <div class="wrap pied">
+    <img src="img/logo-vert.png" alt="" width="56" height="35">
+    <p>Maquette gratuite proposée par <a href="https://houle.ai/fr/products/chat-website/">houle.ai</a> — ce site n'est pas en ligne. Textes et photos&nbsp;: The Pax Hôtel.</p>
+  </div>
+</footer>
+</body>
+</html>
