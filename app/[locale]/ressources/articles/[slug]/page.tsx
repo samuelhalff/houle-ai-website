@@ -19,6 +19,7 @@ import {
 import RelatedArticles from "../components/RelatedArticles";
 import ArticleContextualCTA from "@/src/components/ui/article-contextual-cta";
 import { getCategoryService, splitArticleAtMidpoint } from "@/src/lib/articleCta";
+import { stripLeadingTitleH1 } from "@/src/lib/articleHeading";
 import { buildInternalUrl } from "@/src/lib/paths";
 import { getWhatsAppLink } from "@/src/lib/whatsapp";
 import Breadcrumbs from "@/src/components/navigation/Breadcrumbs";
@@ -105,10 +106,7 @@ export default async function ArticlePage(props: Params) {
     ? `${baseUrl}/assets/${article.image.replace(/^\/?assets\//, "")}`
     : `${baseUrl}/assets/og/og-${locale}.webp`;
   // The page renders its own H1; drop a leading "# Title" from the Markdown.
-  const articleBody = (article.content ?? "").replace(
-    /^\s*#[ \t]+[^\n]*(\n+|$)/,
-    "",
-  );
+  const articleBody = stripLeadingTitleH1(article.content ?? "", article.title);
   const reading = estimateReadingTime(articleBody);
   const { first: articleFirstHalf, second: articleSecondHalf } =
     splitArticleAtMidpoint(articleBody);
