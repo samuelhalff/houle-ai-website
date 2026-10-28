@@ -56,7 +56,7 @@ describe("consolidated articles", () => {
   it("is a non-empty slug -> slug map without self references", () => {
     assert.ok(Object.keys(mapping).length > 0);
     for (const [from, to] of Object.entries(mapping)) {
-      assert.match(from, /^[a-z0-9-]+$/);
+      assert.match(from, /^[\p{L}0-9-]+$/u);
       assert.match(to, /^[a-z0-9-]+$/);
       assert.notEqual(from, to);
     }
@@ -88,8 +88,17 @@ describe("consolidated articles", () => {
       assert.equal(Object.prototype.hasOwnProperty.call(mapping, slug), false, `${slug} must stay live`);
       assert.equal(redirected.isRedirectedSlug(slug), false);
     }
-    // Stage 1 only: the governance cluster is not consolidated yet.
-    for (const slug of Object.keys(mapping)) assert.doesNotMatch(slug, /gouvernance-ia|politique-usage/);
+    // AI usage policy cluster (2026-10-28): single survivor, distinct-intent siblings stay live.
+    const POLICY = "politique-usage-ia-clauses-gouvernance";
+    assert.equal(mapping["rediger-politique-utilisation-ia-entreprise"], POLICY);
+    assert.equal(Object.prototype.hasOwnProperty.call(mapping, POLICY), false);
+    for (const slug of [
+      "mise-a-jour-politique-ia-gouvernance-bonnes-pratiques",
+      "elaborer-cadre-efficace-gouvernance-ia",
+      "creer-charte-gouvernance-ia-entreprise",
+    ]) {
+      assert.equal(Object.prototype.hasOwnProperty.call(mapping, slug), false, `${slug} must stay live`);
+    }
   });
 
   it("hides every source from listings and valid-locale helpers", async () => {
@@ -108,7 +117,7 @@ describe("consolidated articles", () => {
   it("emits one permanent same-locale redirect per slash form, locale and source", () => {
     for (const locale of LOCALES) {
       for (const [from, to] of Object.entries(mapping)) {
-        const source = `/${locale}/ressources/articles/${from}`;
+        const source = encodeURI(`/${locale}/ressources/articles/${from}`);
         for (const form of [source, `${source}/`]) {
           const matches = rules.filter((r) => r.source === form);
           assert.equal(matches.length, 1, `exactly one rule for ${form}`);
@@ -118,7 +127,7 @@ describe("consolidated articles", () => {
       }
     }
     const consolidatedRules = rules.filter((r) =>
-      Object.keys(mapping).some((from) => r.source.replace(/\/$/, "").endsWith(`/${from}`)),
+      Object.keys(mapping).some((from) => r.source.replace(/\/$/, "").endsWith(`/${encodeURI(from)}`)),
     );
     assert.equal(consolidatedRules.length, Object.keys(mapping).length * LOCALES.length * 2);
   });

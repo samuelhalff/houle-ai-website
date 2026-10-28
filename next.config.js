@@ -55,7 +55,9 @@ const baseConfig = {
     const consolidated = require("./src/data/articles-consolidated.json");
     const consolidatedRules = ["fr", "en", "de", "es", "pt"].flatMap((locale) =>
       Object.entries(consolidated).flatMap(([from, to]) => {
-        const source = `/${locale}/ressources/articles/${from}`;
+        // Percent-encode: Next matches redirects against the encoded request path
+        // (matters for the one accented legacy slug).
+        const source = encodeURI(`/${locale}/ressources/articles/${from}`);
         const destination = `/${locale}/ressources/articles/${to}/`;
         return [
           { source, destination, permanent: true },
