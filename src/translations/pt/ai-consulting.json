@@ -205,7 +205,7 @@
         }
     },
     "Demo": {
-        "Label": "Ilustração: um projeto de consultoria em IA vai do workshop de descoberta à produção; os casos de uso são analisados um a um e um é posto de lado porque não é preciso IA.",
+        "Label": "Ilustração: um projeto de consultoria em IA vai do workshop de descoberta à produção; os casos de uso são analisados um a um e um deles é descartado porque não precisa de IA.",
         "Step1": "Workshop de descoberta",
         "Step2": "Casos de uso",
         "Step3": "Escolha do modelo",
@@ -214,11 +214,11 @@
         "ShortTitle": "Casos de uso analisados",
         "Use1": "Triagem de faturas de fornecedores",
         "Use2": "Resumos de contratos longos",
-        "Use3": "Escala semanal do pessoal",
+        "Use3": "Escala semanal da equipe",
         "Keep": "Vale a pena",
-        "Skip": "Uma folha de cálculo basta",
+        "Skip": "Uma planilha resolve",
         "Pause": "Pausar a animação",
-        "Play": "Reproduzir a animação",
+        "Play": "Iniciar a animação",
         "Fiction": "Exemplo"
     }
 }

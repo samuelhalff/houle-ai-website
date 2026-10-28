@@ -145,8 +145,8 @@
   },
   "Breadcrumb": "Produtos",
   "Demo": {
-    "Label": "Ilustração: o dono de um restaurante pede por chat para fechar às segundas, confirma, e o horário do site passa a «Fechado» à segunda.",
-    "Tagline": "Cozinha sazonal, ementa curta, sala acolhedora.",
+    "Label": "Ilustração: o dono de um restaurante pede por chat para fechar às segundas, confirma, e o horário do site passa a «Fechado» na segunda.",
+    "Tagline": "Cozinha sazonal, cardápio enxuto, ambiente acolhedor.",
     "HoursTitle": "Horário",
     "Mon": "Seg",
     "TueFri": "Ter–Sex",
@@ -156,11 +156,11 @@
     "HSatSun": "11h30–23h",
     "Closed": "Fechado",
     "Fiction": "Site de exemplo",
-    "User1": "Fecha às segundas a partir da próxima semana, por favor.",
-    "Assistant1": "Se percebi bem: fechado às segundas, horário igual nos outros dias. Estou a verificar a página… Queres que publique?",
+    "User1": "Feche às segundas a partir da semana que vem, por favor.",
+    "Assistant1": "Se entendi bem: fechado às segundas, horário igual nos outros dias. Estou verificando a página… Quer que eu publique?",
     "User2": "Sim",
     "Assistant2": "Publicado ✓",
     "Pause": "Pausar a animação",
-    "Play": "Reproduzir a animação"
+    "Play": "Iniciar a animação"
   }
 }

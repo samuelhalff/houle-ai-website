@@ -92,10 +92,9 @@ export default function DemoFrame({ labels: l, windowBody, panelBody, panelVaria
     <div ref={ref} className="relative mx-auto mt-4 w-full max-w-[560px] md:pb-20 lg:mt-0">
       <button
         type="button"
-        aria-pressed={paused}
         aria-label={paused ? l.Play : l.Pause}
         onClick={() => setPaused((p) => !p)}
-        className="absolute left-2 top-[7px] z-10 flex h-5 w-5 items-center justify-center rounded-full text-[9px] text-muted-foreground hover:bg-foreground/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand"
+        className="absolute left-2 top-[7px] z-10 flex motion-reduce:hidden after:absolute after:-inset-3 after:content-[''] h-5 w-5 items-center justify-center rounded-full text-[9px] text-muted-foreground hover:bg-foreground/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand"
       >
         <span aria-hidden="true">{paused ? "▶" : "❚❚"}</span>
       </button>

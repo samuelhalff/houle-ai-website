@@ -94,17 +94,17 @@
         "Contact": "Começar"
     },
     "Demo": {
-        "Label": "Ilustração: um colaborador faz uma pergunta num chat; o assistente responde com os documentos da própria empresa e cita a fonte, alojado na Suíça.",
-        "Question": "Posso trabalhar alguns dias a partir do estrangeiro?",
-        "Answer": "Sim, com a aprovação do seu responsável, conforme a política de teletrabalho.",
+        "Label": "Ilustração: um colaborador faz uma pergunta em um chat; o assistente responde com os documentos da própria empresa e cita a fonte, hospedado na Suíça.",
+        "Question": "Posso trabalhar alguns dias do exterior?",
+        "Answer": "Sim, com a aprovação do seu gestor, conforme a política de trabalho remoto.",
         "SourceLabel": "Fonte",
         "SourcesTitle": "Documentos internos",
-        "Doc1": "Política de teletrabalho",
-        "Doc2": "Regras de despesas",
-        "Doc3": "Guia de acolhimento",
-        "Tag": "Alojado na Suíça",
+        "Doc1": "Política de trabalho remoto",
+        "Doc2": "Regras de reembolso de despesas",
+        "Doc3": "Guia de integração",
+        "Tag": "Hospedado na Suíça",
         "Pause": "Pausar a animação",
-        "Play": "Reproduzir a animação",
+        "Play": "Iniciar a animação",
         "Fiction": "Exemplo"
     }
 }

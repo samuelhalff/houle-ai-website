@@ -71,16 +71,16 @@
         "Contact": "Começar"
     },
     "Demo": {
-        "Label": "Ilustração: uma cliente pede por e-mail uma data de entrega; o suplemento redige uma resposta, que é inserida na mensagem.",
-        "MailSubject": "Data de entrega da nossa encomenda",
-        "MailBody": "Olá, podem confirmar-me a data de entrega da nossa encomenda? Obrigada, Claire",
+        "Label": "Ilustração: uma cliente pede por e-mail uma data de entrega; o add-in redige uma resposta, que é inserida na mensagem.",
+        "MailSubject": "Data de entrega do nosso pedido",
+        "MailBody": "Olá, vocês podem confirmar a data de entrega do nosso pedido? Obrigada, Claire",
         "PaneTitle": "Assistente",
         "Action": "Redigir uma resposta",
-        "Draft": "Olá Claire, obrigado pela sua mensagem. Estou a confirmar a data com a oficina e indico-lha amanhã. Cumprimentos, Marc",
+        "Draft": "Olá Claire, obrigado pela sua mensagem. Estou confirmando a data com a oficina e retorno amanhã. Atenciosamente, Marc",
         "Insert": "Inserir na resposta",
         "ReplyTitle": "Resposta",
         "Pause": "Pausar a animação",
-        "Play": "Reproduzir a animação",
+        "Play": "Iniciar a animação",
         "Fiction": "Exemplo"
     }
 }
