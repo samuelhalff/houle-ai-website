@@ -46,7 +46,8 @@ header.h{display:flex;align-items:center;justify-content:space-between;gap:1rem;
 .brand span{font-size:1rem;max-width:15ch}
 .h nav{display:none}
 .acces{background:var(--navy);color:#fff;padding:1.6rem 1rem 1.8rem}
-.acces h1{font-size:clamp(1.9rem,7.5vw,3.2rem);max-width:20ch}
+.acces h1{font-size:clamp(1.25rem,6.1vw,3.2rem)}
+.acces h1 span{display:block;white-space:nowrap}
 .acces .lead{margin:.7rem 0 0;max-width:46ch;color:#dbe9f4}
 .tel{display:inline-block;margin-top:1.1rem;font-size:clamp(2.1rem,10vw,3.4rem);font-weight:700;line-height:1;color:#fff;text-decoration:none;border-bottom:4px solid var(--amber);padding-bottom:.15rem;font-variant-numeric:tabular-nums}
 .infos{display:grid;gap:1px;margin-top:1.5rem;background:#3d79a3}
@@ -115,7 +116,7 @@ footer{padding:1.2rem 1rem 1.8rem;font-size:.95rem;color:var(--muted);border-top
 <main>
 <section class="acces" aria-labelledby="t">
   <div>
-    <h1 id="t">Un centre médical de quartier, ouvert 7 jours sur 7</h1>
+    <h1 id="t"><span>Un centre médical de quartier,</span> <span>ouvert 7&nbsp;jours sur&nbsp;7</span></h1>
     <p class="lead">Médecine générale, urgences médicales, spécialistes, radiologie et laboratoire réunis au même endroit, à deux pas de la place des Nations.</p>
     <a class="tel" href="tel:+41227345150">022&nbsp;734&nbsp;51&nbsp;50</a>
   </div>
