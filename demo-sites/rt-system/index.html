@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RT System SA – articles de ventilation à Genève</title>
+<meta name="description" content="RT System SA, articles de ventilation à Genève depuis 1995 : grilles, diffuseurs, ventilateurs, soupapes, entrées d’air, filtres. Rue du Grand-Pré 59-61. 022 734 07 70.">
+<!-- Maquette non publiée : retirer cette ligne à la mise en ligne -->
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f07a1c">
+<meta property="og:title" content="RT System SA – articles de ventilation à Genève">
+<meta property="og:description" content="Grilles, ventilateurs, soupapes, entrées d’air et filtres. Au comptoir depuis 1995, rue du Grand-Pré.">
+<meta property="og:image" content="img/comptoir.webp">
+<meta property="og:locale" content="fr_CH">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23f07a1c'/%3E%3Ctext x='32' y='44' font-family='Arial Black,Arial' font-weight='900' font-size='30' text-anchor='middle' fill='%2312202b'%3ERT%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..900&display=swap" rel="stylesheet">
+<!--
+  DIRECTION (fresh-web-design)
+  Artefact : l'étiquette de rayon et le comptoir. Leur clientèle (installateurs, artisans) sait ce qu'elle cherche :
+  référence, diamètre, débit. La page est un rayon : libellés nets, caractéristiques en clair.
+  Couleurs : orange du logo RT (#f07a1c) en grande surface (bandeau d'ouverture), acier galvanisé pâle (fond),
+  bleu-acier très sombre (texte et bandeau contact). Texte sombre sur orange (contraste > 6).
+  Typo : Archivo à axe de largeur : très large et très gras pour le nom (comme leur logo), normal pour les fiches.
+  Mise en page : bord gauche fort, nom géant, panorama de leur vrai comptoir, index des rayons en liste dense.
+  Images : leur panorama du magasin et leurs fiches produits à taille native (pas d'agrandissement). Marques en texte :
+  leurs logos sont trop petits pour rester nets.
+  Mouvement : aucun.
+-->
+<style>
+:root{
+  --bg:#e9edef; --ink:#12202b; --muted:#43525e; --line:#c4ccd1; --white:#fff;
+  --orange:#f07a1c; --on-orange:#12202b; --link:#a64a00;
+  --measure:62ch;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#10181f; --ink:#e9edef; --muted:#aab6bf; --line:#2a3944; --link:#ff9a4d}
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.55 "Archivo",sans-serif;font-stretch:100%}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{margin:0;font-weight:800;font-stretch:112%;line-height:1;text-transform:uppercase;letter-spacing:.005em}
+p{margin:0 0 1em;max-width:var(--measure)}
+.wrap{max-width:74rem;margin:0 auto;padding:0 1.25rem}
+@media (min-width:56rem){.wrap{padding:0 2.5rem}}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+
+.strip{background:var(--ink);color:#e9edef;font-size:.95rem}
+.strip .wrap{display:flex;flex-wrap:wrap;gap:.2rem 1.5rem;justify-content:space-between;padding-top:.55rem;padding-bottom:.55rem}
+.strip a{font-weight:700;text-decoration:none;color:#ffb066}
+@media (prefers-color-scheme:dark){.strip{background:#1b2832}}
+
+.hero{background:var(--orange);color:var(--on-orange);padding:2.5rem 0 3rem}
+.hero .name{font-size:clamp(3rem,15vw,11rem);font-weight:900;font-stretch:125%;line-height:.88;letter-spacing:-.01em;margin:0 0 1.25rem}
+.hero .name span{display:block}
+.hero .tag{font-size:clamp(1.25rem,4.4vw,2rem);font-weight:800;font-stretch:112%;text-transform:uppercase;margin:0 0 1rem}
+.hero .lede{font-size:1.2rem;max-width:44ch}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem 1.25rem;align-items:center;margin-top:1.5rem}
+.btn{display:inline-block;text-decoration:none;font-weight:800;background:var(--ink);color:#fff;padding:.85rem 1.2rem}
+.btn:hover{background:#fff;color:var(--ink)}
+.hero .textlink{font-weight:700;text-underline-offset:.25em;text-decoration-thickness:2px}
+.anniv{margin-top:2rem;font-weight:700;font-stretch:112%;text-transform:uppercase;border-top:3px solid var(--ink);padding-top:.6rem;display:inline-block}
+
+figure.comptoir{margin:0 auto;max-width:81.25rem}
+.comptoir img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:30% 50%}
+@media (min-width:48rem){.comptoir img{aspect-ratio:21/9}}
+.comptoir figcaption{padding:.6rem 1.25rem;color:var(--muted);font-size:.95rem}
+
+section{padding:3.25rem 0}
+h2{font-size:clamp(1.8rem,6vw,3rem);margin-bottom:1.5rem}
+
+/* Rayons */
+.rayons{margin:0;border-top:3px solid var(--ink)}
+.rayons div{display:grid;gap:.15rem 2rem;padding:.9rem 0;border-bottom:1px solid var(--line)}
+.rayons dt{font-weight:800;font-stretch:112%;text-transform:uppercase;font-size:1.05rem}
+.rayons dd{margin:0;color:var(--muted)}
+@media (min-width:48rem){.rayons div{grid-template-columns:16rem 1fr}}
+
+/* Fiches */
+.fiches{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.fiches li{display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;padding:1.1rem 0;border-bottom:1px solid var(--line);align-items:center}
+.fiches .ph{background:#fff;padding:0}
+.fiches img{width:100%;height:auto}
+.fiches h3{font-size:1.05rem;font-stretch:100%;line-height:1.15;margin-bottom:.35rem}
+.fiches p{margin:0;color:var(--muted);font-size:.98rem}
+@media (min-width:48rem){.fiches{grid-template-columns:1fr 1fr;column-gap:3rem}}
+
+.brands{font-size:clamp(1.3rem,4vw,1.9rem);font-weight:800;font-stretch:100%;line-height:1.35}
+.brands span{white-space:nowrap}
+.brands span+span::before{content:"/";color:var(--link);margin:0 .55em}
+.occ{margin-top:1.5rem;color:var(--muted)}
+
+/* Contact */
+.contact{background:var(--ink);color:#e9edef}
+@media (prefers-color-scheme:dark){.contact{background:#1b2832}}
+.contact h2{color:var(--orange)}
+.contact .grid{display:grid;gap:2rem}
+@media (min-width:56rem){.contact .grid{grid-template-columns:1fr 1fr;gap:4rem}}
+.contact a{text-underline-offset:.2em}
+.tel{display:block;font-size:clamp(2rem,9vw,3.4rem);font-weight:900;font-stretch:118%;line-height:1;text-decoration:none;color:var(--orange);margin-bottom:1rem}
+.hours{border-collapse:collapse;width:100%;max-width:26rem}
+.hours th,.hours td{text-align:left;padding:.5rem 0;border-bottom:1px solid #3a4b58;font-weight:500}
+.hours th{padding-right:1rem;font-weight:800;white-space:nowrap}
+address{font-style:normal;margin-bottom:1.25rem}
+.contact .btn{background:var(--orange);color:var(--on-orange)}
+.contact .btn:hover{background:#fff}
+footer{padding:1.25rem 0;color:var(--muted);font-size:.95rem}
+.preview{display:block;min-height:40px;padding:11px 1rem;background:#0f172a;color:#f8fafc;font:400 14px/18px system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center}
+.preview a{color:#f8fafc;text-decoration:underline;text-underline-offset:2px}
+</style>
+</head>
+<body>
+<div class="strip"><div class="wrap">
+  <span>Lundi–jeudi 7h00–12h00 et 13h30–17h00 · vendredi 7h00–12h00</span>
+  <a href="tel:+41227340770">022&nbsp;734&nbsp;07&nbsp;70</a>
+</div></div>
+
+<header class="hero">
+  <div class="wrap">
+    <h1 class="name" aria-label="RT System SA"><span>RT</span> <span>System</span></h1>
+    <p class="tag">Articles de ventilation</p>
+    <p class="lede">Grilles, diffuseurs, ventilateurs, soupapes, entrées d’air et filtres. Au comptoir, rue du Grand-Pré, à Genève.</p>
+    <div class="actions">
+      <a class="btn" href="tel:+41227340770">Appeler le comptoir</a>
+      <a class="textlink" href="mailto:info@rtsystem.ch">info@rtsystem.ch</a>
+    </div>
+    <p class="anniv">1995 – 2025 : 30&nbsp;ans</p>
+  </div>
+</header>
+
+<figure class="comptoir">
+  <img src="img/comptoir.webp" width="2600" height="1123" alt="L’intérieur du magasin RT System : le comptoir, les étagères de grilles et de diffuseurs, les gaines et les ventilateurs exposés">
+  <figcaption>Le comptoir de la rue du Grand-Pré 59-61.</figcaption>
+</figure>
+
+<main>
+<section id="rayons">
+  <div class="wrap">
+    <h2>Les rayons</h2>
+    <dl class="rayons">
+      <div><dt>Grilles</dt><dd>Multi-usages, techniques, de diffusion, linéaires, de portes, de sécurité, de sol, pare-pluie, rondes.</dd></div>
+      <div><dt>Diffuseurs</dt><dd>Diffuseurs et diffuseurs à fentes.</dd></div>
+      <div><dt>Entrées d’air</dt><dd>Entrées d’air, dont des modèles filtrants.</dd></div>
+      <div><dt>Soupapes et bouches</dt><dd>Soupapes d’aspiration et bouches.</dd></div>
+      <div><dt>Ventilateurs</dt><dd>Domestiques, de cuisine, caissons, de toit, tubulaires, industriels, spéciaux.</dd></div>
+      <div><dt>Éléments électriques</dt><dd>Le matériel électrique du catalogue.</dd></div>
+      <div><dt>Flexibles et tôlerie</dt><dd>Gaines flexibles et pièces de tôlerie.</dd></div>
+      <div><dt>Fixation et visserie</dt><dd>Fixations et visserie.</dd></div>
+      <div><dt>Filtres</dt><dd>Filtres pour la ventilation.</dd></div>
+      <div><dt>Rénovation et divers</dt><dd>Articles pour la rénovation, et le reste du catalogue.</dd></div>
+    </dl>
+    <p class="occ">Un rayon d’occasions et de fins de séries complète le catalogue.</p>
+  </div>
+</section>
+
+<section id="nouveautes" style="padding-top:0">
+  <div class="wrap">
+    <h2>Nouveautés</h2>
+    <ul class="fiches">
+      <li><div class="ph"><img src="img/e100sensor.webp" width="458" height="240" alt="Miniturbinette E-100 SENSOR, face en verre blanc" loading="lazy"></div><div><h3>Miniturbinette E-100 SENSOR</h3><p>Face verre blanc, détecteur de présence. DM&nbsp;100&nbsp;mm.</p></div></li>
+      <li><div class="ph"><img src="img/e100gth.webp" width="240" height="244" alt="Miniturbinette E-100 GTH à face de verre noir" loading="lazy"></div><div><h3>Miniturbinette E-100 GTH</h3><p>230&nbsp;V, 2&nbsp;vitesses, détecteur d’humidité et timer. Verre blanc ou noir. DM&nbsp;100, 120 et 150&nbsp;mm.</p></div></li>
+      <li><div class="ph"><img src="img/lineo.webp" width="268" height="240" alt="Ventilateur tubulaire Lineo Quiet" loading="lazy"></div><div><h3>Ventilateur tubulaire LINEO QUIET</h3><p>230&nbsp;V, isolé phoniquement, moteur AC. 12&nbsp;modèles, DM&nbsp;100 à 315&nbsp;mm, de 150 à 2890&nbsp;m³/h.</p></div></li>
+      <li><div class="ph"><img src="img/hvls.webp" width="715" height="397" alt="Ventilateur plafonnier Nordik HVLS Super Blade" loading="lazy"></div><div><h3>Plafonnier NORDIK HVLS SUPER BLADE</h3><p>Pour grandes surfaces. 230/400&nbsp;V, moteur EC, IP65, DM&nbsp;3000 à 7000&nbsp;mm, de 280’000 à 850’000&nbsp;m³/h.</p></div></li>
+      <li><div class="ph"><img src="img/nordik.webp" width="400" height="240" alt="Ventilateur plafonnier Nordik Air Design" loading="lazy"></div><div><h3>Plafonnier NORDIK AIR DESIGN</h3><p>230&nbsp;V, 4&nbsp;diamètres, 4&nbsp;couleurs. Éclairage LED, télécommande.</p></div></li>
+      <li><div class="ph"><img src="img/shl.webp" width="681" height="638" alt="Grille ronde obturable SHL en inox brossé" loading="lazy"></div><div><h3>Grille ronde obturable SHL</h3><p>Inox brossé, moustiquaire incluse. DM&nbsp;100, 125 et 150&nbsp;mm.</p></div></li>
+      <li><div class="ph"><img src="img/filea.webp" width="567" height="227" alt="Entrée d’air filtrante Filea 30" loading="lazy"></div><div><h3>Entrée d’air filtrante FILEA 30</h3><p>30&nbsp;m³/h sous 20&nbsp;Pa, filtre à particules fines. ABS blanc, bronze, gris, anthracite ou noir.</p></div></li>
+      <li><div class="ph"><img src="img/b600.webp" width="400" height="265" alt="Grille linéaire murale B-600" loading="lazy"></div><div><h3>Grille linéaire murale B-600</h3><p>Mixte aluminium et acier, modèle économique. Finition standard RAL&nbsp;9010 ou RAL sur demande.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+<section id="marques" style="padding-top:0">
+  <div class="wrap">
+    <h2>Marques au catalogue</h2>
+    <p class="brands"><span>Anjos</span> <span>Airproduct</span> <span>ebm-papst</span> <span>FläktWoods</span> <span>Grada</span> <span>Helios</span> <span>Joventa</span> <span>Metu System</span> <span>Regel-air</span> <span>Renson</span> <span>Vortice</span> <span>Wernig</span> <span>Wolter</span></p>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap grid">
+    <div>
+      <h2>Passer au comptoir</h2>
+      <a class="tel" href="tel:+41227340770">022&nbsp;734&nbsp;07&nbsp;70</a>
+      <address>
+        <strong>RT System SA</strong><br>
+        Rue du Grand-Pré 59-61<br>
+        1202 Genève<br>
+        <a href="mailto:info@rtsystem.ch">info@rtsystem.ch</a>
+      </address>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Rue+du+Grand-Pr%C3%A9+59+1202+Gen%C3%A8ve">Voir sur la carte</a>
+    </div>
+    <div>
+      <table class="hours">
+        <caption class="sr" style="position:absolute;left:-9999px">Horaires</caption>
+        <tr><th>Lundi – jeudi</th><td>7h00 – 12h00<br>13h30 – 17h00</td></tr>
+        <tr><th>Vendredi</th><td>7h00 – 12h00</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">© RT System SA, Genève</div></footer>
+<div class="preview" role="note">Aperçu de votre nouveau site, préparé par&nbsp;<a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Store","name":"RT System SA","telephone":"+41 22 734 07 70","email":"info@rtsystem.ch","image":"img/comptoir.webp","address":{"@type":"PostalAddress","streetAddress":"Rue du Grand-Pré 59-61","postalCode":"1202","addressLocality":"Genève","addressRegion":"GE","addressCountry":"CH"},"openingHoursSpecification":[{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"07:00","closes":"12:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday"],"opens":"13:30","closes":"17:00"},{"@type":"OpeningHoursSpecification","dayOfWeek":"Friday","opens":"07:00","closes":"12:00"}]}
+</script>
+</body>
+</html>

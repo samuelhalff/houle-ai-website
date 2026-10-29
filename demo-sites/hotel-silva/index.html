@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hôtel-Pension Silva Genève – chambres dès CHF 125, près du lac et de la gare</title>
+<meta name="description" content="Hôtel-pension à Genève, à 10 minutes du lac et de la gare, géré par l'entreprise sociale T-Interactions. Chambres simples, doubles, triples et accessibles. Rue Jean-Robert-Chouet 7, +41 22 749 18 10.">
+<!-- Maquette non publiée : retirer cette ligne à la mise en ligne -->
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#f2b81c">
+<meta property="og:title" content="Hôtel-Pension Silva Genève – une pension à taille humaine">
+<meta property="og:description" content="À 10 minutes du lac et de la gare. Chambres dès CHF 125, dont des chambres accessibles. Une entreprise sociale de T-Interactions.">
+<meta property="og:image" content="img/reception.webp">
+<meta property="og:locale" content="fr_CH">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Young+Serif&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Hotel","name":"Hôtel-Pension Silva","telephone":"+41 22 749 18 10","email":"reservations@hotel-silva.ch","address":{"@type":"PostalAddress","streetAddress":"Rue Jean-Robert-Chouet 7","postalCode":"1211","addressLocality":"Genève 2","addressCountry":"CH"}}
+</script>
+<!--
+  DIRECTION (fresh-web-design)
+  Artefact : la pension. La couverture rayée jaune et blanc de leurs lits, le comptoir de réception bleu
+  pervenche, les nappes orange de la salle à manger, la fresque de la salle (fond bleu clair).
+  Lecteur : voyageur au budget serré, délégation d'ONG, personne à mobilité réduite : il veut un prix,
+  une chambre accessible, une adresse et un téléphone qui répond. Il a peur d'un site qui ne dit pas le prix.
+  Couleurs : jaune des rayures (surface de départ), bleu pervenche du comptoir (bandeaux et boutons),
+  orange des nappes (accent), bleu nuit (texte), blanc.
+  Typo : Young Serif (chaleureux, humain) pour les titres ; Atkinson Hyperlegible pour le texte, conçu pour la
+  lisibilité, cohérent avec une maison qui accueille des personnes en situation de handicap.
+  Mise en page : bord gauche franc, la CARTE DES TARIFS en grand (leurs prix sont publiés), rayures en frise.
+  Détail signature : la rayure jaune/blanche du couvre-lit en frise. Photos : les leurs, petites, jamais agrandies.
+  Mouvement : aucun.
+-->
+<style>
+:root{
+  --jaune:#f2b81c; --jaune-clair:#fde9a6; --perv:#4d5dc9; --perv-fonce:#38459f; --orange:#e4561f; --nuit:#1d2540;
+  --blanc:#fffdf7; --doux:#4e5575; --trait:#d9d6c9; --ciel:#dff0f4;
+  --disp:"Young Serif",Georgia,serif; --txt:"Atkinson Hyperlegible",system-ui,sans-serif;
+  --rayure:repeating-linear-gradient(90deg,var(--jaune) 0 22px,#fff 22px 44px);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:18px/1.6 var(--txt);color:var(--nuit);background:var(--blanc)}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--perv-fonce)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 20px}
+.preview{background:var(--nuit);color:#cfd3e6;font-size:13px;line-height:1.4;text-align:center;padding:8px 14px}
+.preview a{color:#fff}
+.rayure{height:20px;background:var(--rayure)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:14px;padding-bottom:14px}
+.marque{text-decoration:none;color:var(--nuit);line-height:1}
+.marque b{display:block;font:400 28px/1 var(--disp)}
+.marque span{display:block;margin-top:4px;font-size:14px;color:var(--doux)}
+.top nav{display:flex;align-items:center;gap:20px}
+.top nav a.lien{display:none;color:var(--nuit);text-decoration:none;font-weight:700;font-size:16px}
+.btn{display:inline-block;background:var(--perv);color:#fff;text-decoration:none;font:700 18px/1 var(--txt);padding:16px 24px;border-radius:999px}
+.btn:hover{background:var(--perv-fonce)}
+.btn.jaune{background:var(--jaune);color:var(--nuit)}
+.btn.jaune:hover{background:#f7c94b}
+.btn.contour{background:none;color:var(--nuit);border:2.5px solid var(--nuit);padding:13.5px 22px}
+.top .btn{padding:12px 18px;font-size:16px}
+/* hero */
+.hero{background:var(--jaune)}
+.hero .wrap{display:grid;gap:26px;padding-top:36px;padding-bottom:40px}
+.hero h1{font:400 clamp(36px,8.2vw,70px)/1.03 var(--disp)}
+.hero p.lead{font-size:20px;max-width:27em;margin-top:16px}
+.hero .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.hero .note{margin-top:14px;font-size:16px}
+.hero figure{width:min(300px,78%);aspect-ratio:2/3;overflow:hidden;border:4px solid var(--nuit);justify-self:start}
+.hero figure img{width:100%;height:100%;object-fit:cover}
+/* sections */
+section{padding:60px 0}
+h2{font:400 clamp(30px,5.5vw,48px)/1.08 var(--disp);margin-bottom:12px}
+.chapeau{max-width:34em;color:var(--doux);margin-bottom:30px}
+/* carte des tarifs */
+.carte{background:#fff;border:3px solid var(--nuit)}
+.carte .ligne{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:18px 20px;border-top:2px dashed var(--trait);align-items:baseline}
+.carte .ligne:first-child{border-top:0}
+.carte .nom{font:400 24px/1.15 var(--disp)}
+.carte .nom small{display:block;font:400 16px/1.3 var(--txt);color:var(--doux);margin-top:3px}
+.carte .prix{font:400 34px/1 var(--disp);color:var(--perv-fonce);text-align:right;white-space:nowrap}
+.carte .prix small{font:700 15px/1 var(--txt);color:var(--doux);margin-right:4px}
+.carte .bas{background:var(--jaune-clair);padding:14px 20px;font-size:16px;border-top:3px solid var(--nuit)}
+.equip{display:grid;gap:30px;margin-top:40px}
+.equip ul{list-style:none;padding:0;margin:0}
+.equip li{padding:11px 0 11px 28px;border-top:1px solid var(--trait);position:relative}
+.equip li:before{content:"";position:absolute;left:2px;top:19px;width:12px;height:12px;background:var(--jaune);border:2px solid var(--nuit)}
+.bandes{display:grid;gap:14px;margin-top:40px}
+.bandes figure{aspect-ratio:3/1;overflow:hidden;background:var(--trait);position:relative}
+.bandes img{width:100%;height:100%;object-fit:cover}
+.bandes figcaption{position:absolute;left:0;bottom:0;background:var(--blanc);font-size:15px;font-weight:700;padding:5px 12px;border-top:2px solid var(--nuit);border-right:2px solid var(--nuit)}
+/* social */
+.social{background:var(--perv);color:#fff}
+.social .wrap{display:grid;gap:30px}
+.social h2{color:#fff}
+.social p{max-width:34em;margin-bottom:12px}
+.social a{color:#fff}
+.lieux{display:grid;gap:12px}
+.lieux figure{aspect-ratio:4/3.2;overflow:hidden;border:3px solid #fff}
+.lieux img{width:100%;height:100%;object-fit:cover}
+/* contact */
+.resa{background:var(--ciel)}
+.resa .grid{display:grid;gap:28px}
+.resa address{font-style:normal;font-size:19px;line-height:1.7}
+.resa .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.fiche{background:#fff;border:3px solid var(--nuit);padding:22px}
+.fiche h3{font:400 24px/1.2 var(--disp);margin-bottom:8px}
+.fiche p{margin-bottom:12px}
+.fiche .tel{font:400 30px/1.1 var(--disp);display:block;color:var(--perv-fonce);text-decoration:none;margin:4px 0 14px}
+.pied{background:var(--nuit);color:#b7bcd6;font-size:13px;line-height:1.5;padding:20px 0}
+.pied a{color:#fff}
+@media (min-width:760px){
+  body{font-size:19px}
+  .wrap{padding:0 32px}
+  .top nav a.lien{display:inline}
+  .hero .wrap{grid-template-columns:1.25fr 1fr;gap:56px;align-items:center;padding-top:56px;padding-bottom:56px}
+  .hero figure{width:min(380px,100%);justify-self:end}
+  .carte .ligne{padding:22px 28px}
+  .carte .nom{font-size:28px}
+  .carte .prix{font-size:44px}
+  .equip{grid-template-columns:1fr 1fr;gap:56px}
+  .bandes{grid-template-columns:1fr 1fr}
+  .bandes figure{aspect-ratio:2.6/1}
+  .social .wrap{grid-template-columns:1fr 1.3fr;gap:56px;align-items:center}
+  .lieux{grid-template-columns:repeat(3,1fr)}
+  .resa .grid{grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+}
+</style>
+</head>
+<body>
+<div class="preview" role="note">Aperçu de votre nouveau site, préparé par&nbsp;<a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="marque" href="#"><b>Hôtel-Pension Silva</b><span>Genève · près du lac et de la gare</span></a>
+    <nav>
+      <a class="lien" href="#tarifs">Chambres et tarifs</a>
+      <a class="lien" href="#maison">La maison</a>
+      <a class="lien" href="#reserver">Contact</a>
+      <a class="btn" href="#reserver">Réserver</a>
+    </nav>
+  </div>
+</header>
+<div class="rayure" aria-hidden="true"></div>
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Une pension à taille humaine, à 10&nbsp;minutes du lac.</h1>
+      <p class="lead">Des chambres simples, doubles, triples et accessibles, en ville, près de la gare. Les prix sont affichés, et c'est une personne qui vous répond.</p>
+      <div class="actions">
+        <a class="btn" href="#reserver">Réserver</a>
+        <a class="btn contour" href="tel:+41227491810">+41 22 749 18 10</a>
+      </div>
+      <p class="note">Chambres dès <b>CHF 125</b> la nuit. Petit-déjeuner possible.</p>
+    </div>
+    <figure><img src="img/reception.webp" alt="La réception de l'hôtel-pension, comptoir bleu et fresque colorée" width="1400" height="2100"></figure>
+  </div>
+</div>
+<div class="rayure" aria-hidden="true"></div>
+
+<section id="tarifs">
+  <div class="wrap">
+    <h2>Chambres et tarifs</h2>
+    <p class="chapeau">Tarifs par nuit, tels que publiés par l'hôtel-pension.</p>
+    <div class="carte">
+      <div class="ligne"><div class="nom">Chambre simple<small>1&nbsp;personne</small></div><div class="prix"><small>CHF</small>125.–</div></div>
+      <div class="ligne"><div class="nom">Chambre double<small>2&nbsp;personnes</small></div><div class="prix"><small>CHF</small>155.–</div></div>
+      <div class="ligne"><div class="nom">Chambre triple<small>3&nbsp;personnes</small></div><div class="prix"><small>CHF</small>260.–</div></div>
+      <div class="ligne"><div class="nom">Chambre simple accessible<small>1&nbsp;personne · douche et WC adaptés</small></div><div class="prix"><small>CHF</small>130.–</div></div>
+      <div class="ligne"><div class="nom">Chambre accessible + accompagnant<small>2&nbsp;personnes · 2 lits simples · douche et WC adaptés</small></div><div class="prix"><small>CHF</small>180.–</div></div>
+      <div class="bas">Taxe de séjour&nbsp;: CHF 3.75 par personne et par jour. Petit-déjeuner&nbsp;: CHF 12.– par personne et par jour.</div>
+    </div>
+
+    <div class="equip">
+      <div>
+        <h2 style="font-size:28px">Dans chaque chambre</h2>
+        <ul><li>Télévision câblée</li><li>Wifi gratuit</li><li>Réfrigérateur et four à micro-ondes</li><li>Salle de bain avec WC</li></ul>
+      </div>
+      <div>
+        <h2 style="font-size:28px">Et aussi</h2>
+        <ul><li>Petit-déjeuner possible, en supplément</li><li>Salle de réunion à louer</li><li>Chambres avec douche et WC adaptés aux personnes à mobilité réduite</li></ul>
+      </div>
+    </div>
+
+    <div class="bandes">
+      <figure><img src="img/chambre-double.webp" alt="Chambre aux lits à rayures jaunes et blanches" width="1800" height="700" loading="lazy"><figcaption>Chambre double</figcaption></figure>
+      <figure><img src="img/chambre-simple.webp" alt="Chambre simple, lit en bois clair et table de chevet bleue" width="1800" height="700" loading="lazy"><figcaption>Chambre simple</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section id="maison" class="social">
+  <div class="wrap">
+    <div>
+      <h2>Une entreprise sociale</h2>
+      <p>L'hôtel-pension est une entreprise de l'association T-Interactions, dont la mission est l'intégration sociale, économique et professionnelle de personnes en situation d'exclusion ou de handicap.</p>
+      <p>Il accueille des personnes en situation de handicap, des touristes et des ONG. Chaque séjour est aussi une occasion de découvrir le monde du handicap.</p>
+    </div>
+    <div class="lieux">
+      <figure><img src="img/facade.webp" alt="L'entrée de l'hôtel-pension Silva" width="800" height="653" loading="lazy"></figure>
+      <figure><img src="img/escalier.webp" alt="L'escalier de l'hôtel, rampe bleue et fresque" width="800" height="653" loading="lazy"></figure>
+      <figure><img src="img/salle-manger.webp" alt="La salle à manger, tables à nappes orange et fresque murale" width="800" height="653" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section id="reserver" class="resa">
+  <div class="wrap grid">
+    <div>
+      <h2>Réserver</h2>
+      <address>Hôtel-Pension Silva<br>Rue Jean-Robert-Chouet 7<br>Case postale 2247<br>1211 Genève 2<br>
+        <a href="tel:+41227491810">+41 22 749 18 10</a><br>
+        <a href="mailto:reservations@hotel-silva.ch">reservations@hotel-silva.ch</a></address>
+      <div class="btns">
+        <a class="btn" href="https://hotel-silva.ch/contact/">Formulaire de réservation</a>
+        <a class="btn contour" href="https://www.google.com/maps/search/?api=1&amp;query=Rue+Jean-Robert-Chouet+7+1211+Gen%C3%A8ve">Voir sur la carte</a>
+      </div>
+    </div>
+    <div class="fiche">
+      <h3>Réserver par téléphone ou par e-mail</h3>
+      <a class="tel" href="tel:+41227491810">+41 22 749 18 10</a>
+      <p>Pendant les heures d'ouverture de la réception, nous sommes là pour vous accueillir personnellement.</p>
+      <a class="btn jaune" href="mailto:reservations@hotel-silva.ch?subject=R%C3%A9servation">Écrire à la réception</a>
+    </div>
+  </div>
+</section>
+
+<footer class="pied">
+  <div class="wrap">
+    <p>Maquette gratuite proposée par <a href="https://houle.ai/fr/products/chat-website/">houle.ai</a> — ce site n'est pas en ligne. Textes et photos&nbsp;: Hôtel-Pension Silva, entreprise sociale de T-Interactions.</p>
+  </div>
+</footer>
+</body>
+</html>

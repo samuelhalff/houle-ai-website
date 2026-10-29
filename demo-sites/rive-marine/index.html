@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rive Marine – accastillage et vêtements de mer à Nyon</title>
+<meta name="description" content="Rive Marine, magasin nautique de la rue de Rive à Nyon depuis 1969 : accastillage, cordages, amarres sur mesure, sertissage de câble, vêtements marins. 022 361 67 20.">
+<!-- Maquette non publiée : retirer cette ligne à la mise en ligne -->
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#14304f">
+<meta property="og:title" content="Rive Marine – accastillage et vêtements de mer à Nyon">
+<meta property="og:description" content="Accastillage, cordages, amarres sur mesure et vêtements marins, rue de Rive à Nyon depuis 1969.">
+<meta property="og:locale" content="fr_CH">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%2314304f'/%3E%3Cg fill='none' stroke='%23fff' stroke-width='5' stroke-linecap='round'%3E%3Ccircle cx='32' cy='13' r='5'/%3E%3Cpath d='M32 18v34M20 28h24M12 40c2 10 10 14 20 14s18-4 20-14'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700&family=Libre+Caslon+Display&display=swap" rel="stylesheet">
+<!--
+  DIRECTION (fresh-web-design)
+  Artefact : le panneau d'horaires en bois posé au bord de l'eau (leur affiche d'horaire d'hiver) et la bitte d'amarrage.
+  Lecteur : un plaisancier du lac qui cherche une pièce, une amarre à la bonne longueur, une marque précise ;
+  il veut savoir si c'est ouvert. L'horaire saisonnier est donc en tête, avec la saison en cours mise en avant.
+  Couleurs : bleu marine de leur affiche (surface d'ouverture et de contact), bleu-gris lac (fond), blanc de voile,
+  rouge de pavillon (#b3281a) seulement pour « ouvert / saison en cours », sable de cordage (#e3c68b) sur le marine.
+  Typo : Libre Caslon Display (capitales d'enseigne, comme l'affiche) + Karla (texte).
+  Mise en page : bord gauche fort, panneau d'horaires, assortiment en grandes lignes de texte plutôt qu'en cartes,
+  marques en listes par rayon. Ancre dessinée en SVG (leur logo est une ancre).
+  Images : pas de photo d'ambiance de magasin disponible ; une seule photo en mer, en inset à sa taille native. Le reste est typographique.
+  Mouvement : aucun.
+-->
+<style>
+:root{
+  --bg:#e5edf1; --ink:#10253d; --muted:#42566a; --line:#bccbd4; --white:#fbfdfe;
+  --navy:#14304f; --on-navy:#f2f6f8; --sand:#e3c68b; --flag:#b3281a;
+  --measure:62ch;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0d1b2b; --ink:#e8eff3; --muted:#a9bbc8; --line:#274055; --white:#13283d; --navy:#0a1625; --flag:#ff8a78}
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:4.5rem}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 "Karla",sans-serif}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:"Libre Caslon Display",serif;font-weight:400;line-height:1.08;margin:0}
+p{margin:0 0 1em;max-width:var(--measure)}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1.25rem}
+@media (min-width:56rem){.wrap{padding:0 2.5rem}}
+:focus-visible{outline:2px solid var(--flag);outline-offset:3px}
+
+.hero{background:var(--navy);color:var(--on-navy)}
+.hero .bar{display:flex;align-items:center;gap:.9rem;padding-top:1.1rem;padding-bottom:1.1rem;border-bottom:1px solid #2c4a6b}
+.mark{width:2.1rem;height:2.1rem;flex:none;color:var(--on-navy)}
+.word{font-family:"Libre Caslon Display",serif;font-size:1.35rem;letter-spacing:.14em;text-transform:uppercase;line-height:1;text-decoration:none}
+.word small{display:block;font-size:.7rem;letter-spacing:.5em;color:var(--sand);margin-top:.3rem}
+.hero .call{margin-left:auto;font-weight:700;text-decoration:none;border:1px solid var(--sand);color:var(--sand);padding:.45rem .8rem;white-space:nowrap}
+.hero .call:hover{background:var(--sand);color:var(--navy)}
+.hero .main{display:grid;gap:2.5rem;padding-top:2.75rem;padding-bottom:3.25rem}
+.hero h1{font-size:clamp(2.3rem,8.5vw,4.6rem);max-width:15ch}
+.hero .lede{font-size:1.2rem;color:#d3dfe6;margin:1.25rem 0 0;max-width:38ch}
+.hero .since{color:var(--sand);font-weight:700;margin:0 0 1rem}
+@media (min-width:56rem){.hero .main{grid-template-columns:minmax(0,7fr) minmax(0,4fr);align-items:end;gap:4rem;padding-top:4.5rem;padding-bottom:4.5rem}}
+
+/* Panneau d'horaires */
+.board{background:var(--white);color:var(--ink);padding:1.25rem 1.35rem 1.4rem;border:1px solid var(--line)}
+.board h2{font-size:1.5rem;margin-bottom:.9rem}
+.board .season{margin-bottom:.8rem;padding-bottom:.8rem;border-bottom:1px solid var(--line)}
+.board .season:last-of-type{border:0;margin-bottom:0;padding-bottom:0}
+.board h3{font-family:"Karla",sans-serif;font-size:1rem;font-weight:700;display:flex;gap:.6rem;align-items:center;margin-bottom:.3rem}
+.board .now{display:none;font-size:.82rem;background:var(--flag);color:#fff;padding:.05rem .5rem;font-weight:700}
+.board [data-on] .now{display:inline-block}
+.board dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:.1rem 1rem}
+.board dt{font-weight:500}
+.board dd{margin:0;text-align:right}
+.board .closed{margin:.9rem 0 0;color:var(--muted);font-size:.95rem}
+.board .inactive{opacity:.65}
+
+section{padding:3.5rem 0}
+h2{font-size:clamp(1.9rem,5.2vw,3rem);margin-bottom:1.25rem}
+.split{display:grid;gap:1.75rem}
+@media (min-width:56rem){.split{grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:4rem}.split>:first-child{position:sticky;top:2rem;align-self:start}}
+.intro{color:var(--muted)}
+
+.assort{list-style:none;margin:0;padding:0;font-family:"Libre Caslon Display",serif;font-size:clamp(1.5rem,5vw,2.2rem);line-height:1.2}
+.assort li{padding:.55rem 0;border-top:1px solid var(--line)}
+.assort li:last-child{border-bottom:1px solid var(--line)}
+
+.sm{background:var(--white)}
+.sm ul{margin:0;padding:0;list-style:none;display:grid;gap:.9rem}
+.sm li{padding-left:1.4rem;position:relative}
+.sm li::before{content:"";position:absolute;left:0;top:.62em;width:.6rem;height:.6rem;border:2px solid var(--flag);border-radius:50%}
+.sm strong{display:block}
+.sm span{color:var(--muted)}
+
+.brands{display:grid;gap:1.75rem}
+@media (min-width:48rem){.brands{grid-template-columns:1fr 1fr}}
+.brands h3{font-family:"Karla",sans-serif;font-weight:700;font-size:1rem;color:var(--muted);margin-bottom:.35rem}
+.brands p{margin:0;font-size:1.2rem;line-height:1.5}
+.brands p span{white-space:nowrap}
+.brands p span:not(:last-child)::after{content:"·";color:var(--flag);margin:0 .5em}
+
+.news{display:grid;gap:1.5rem}
+@media (min-width:48rem){.news{grid-template-columns:repeat(3,1fr);gap:2.5rem}}
+.news h3{font-size:1.5rem;margin-bottom:.4rem}
+.news p{color:var(--muted);margin:0}
+.news>div{border-top:2px solid var(--ink);padding-top:.9rem}
+
+.about{display:grid;gap:2rem}
+@media (min-width:56rem){.about{grid-template-columns:minmax(0,7fr) minmax(0,3fr);gap:4rem;align-items:start}}
+.about img{width:100%;max-width:13rem}
+
+.contact{background:var(--navy);color:var(--on-navy)}
+.contact h2{color:#fff}
+.contact .grid{display:grid;gap:2rem}
+@media (min-width:56rem){.contact .grid{grid-template-columns:1fr 1fr;gap:4rem}}
+.bigtel{display:block;font-family:"Libre Caslon Display",serif;font-size:clamp(2.2rem,9vw,3.6rem);color:var(--sand);text-decoration:none;line-height:1.1;margin-bottom:1rem}
+address{font-style:normal;margin-bottom:1.25rem}
+.contact a{text-underline-offset:.2em}
+.btn{display:inline-block;text-decoration:none;font-weight:700;background:var(--sand);color:var(--navy);padding:.8rem 1.2rem}
+.btn:hover{background:#fff}
+footer{padding:1.25rem 0;color:var(--muted);font-size:.95rem}
+.preview{display:block;min-height:40px;padding:11px 1rem;background:#0f172a;color:#f8fafc;font:400 14px/18px system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center}
+.preview a{color:#f8fafc;text-decoration:underline;text-underline-offset:2px}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap bar">
+    <svg class="mark" viewBox="0 0 64 64" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"><circle cx="32" cy="12" r="5"/><path d="M32 17v38M21 27h22M10 38c2 11 10 17 22 17s20-6 22-17"/></g></svg>
+    <a class="word" href="#">Rive Marine<small>Nyon</small></a>
+    <a class="call" href="tel:+41223616720">022&nbsp;361&nbsp;67&nbsp;20</a>
+  </div>
+  <div class="wrap main">
+    <div>
+      <p class="since">Rue de Rive, à Nyon, depuis 1969</p>
+      <h1>Accastillage, cordages et vêtements de mer.</h1>
+      <p class="lede">Un magasin nautique de quartier, des conseils fondés sur une longue expérience, des amarres et des câbles faits sur mesure.</p>
+    </div>
+    <aside class="board" aria-label="Horaires d’ouverture" id="horaires">
+      <h2>Horaires</h2>
+      <div class="season" id="s-hiver">
+        <h3>Horaire d’hiver <span class="now">en cours</span></h3>
+        <p style="margin:0 0 .3rem;color:var(--muted);font-size:.92rem">Du 1er octobre au 31 mars</p>
+        <dl><dt>Mardi – vendredi</dt><dd>11h – 18h</dd><dt>Samedi</dt><dd>10h – 16h</dd></dl>
+      </div>
+      <div class="season" id="s-ete">
+        <h3>Horaire d’été <span class="now">en cours</span></h3>
+        <p style="margin:0 0 .3rem;color:var(--muted);font-size:.92rem">Du 1er avril au 30 septembre</p>
+        <dl><dt>Mardi – vendredi</dt><dd>10h – 18h</dd><dt>Samedi</dt><dd>10h – 16h</dd></dl>
+      </div>
+      <p class="closed">Non-stop. Fermé le dimanche et le lundi.</p>
+    </aside>
+  </div>
+</header>
+
+<main>
+<section id="assortiment">
+  <div class="wrap split">
+    <div>
+      <h2>Au magasin</h2>
+      <p class="intro">Un vaste assortiment d’articles nautiques, et des textiles pour la mer comme pour tous les jours.</p>
+    </div>
+    <ul class="assort">
+      <li>Accastillage nautique</li>
+      <li>Cordages</li>
+      <li>Produits d’entretien pour bateaux</li>
+      <li>Vêtements techniques et de loisirs</li>
+      <li>Chaussures</li>
+      <li>Sacs, macramé</li>
+      <li>Couteaux suisses</li>
+      <li>Maquettes de bateaux</li>
+      <li>Wakeboard, wakesurf, ski nautique</li>
+    </ul>
+  </div>
+</section>
+
+<section id="services" class="sm">
+  <div class="wrap split">
+    <div>
+      <h2>Sur mesure</h2>
+      <p class="intro">Donnez-nous vos mesures : nous réalisons votre commande dans un délai rapide.</p>
+    </div>
+    <ul>
+      <li><strong>Amarres sur mesure</strong><span>Conseil pour mesurer vos amarres, puis fabrication.</span></li>
+      <li><strong>Sertissage de câble</strong><span>Haubans, dessertes d’escalier, filières, sécurité.</span></li>
+      <li><strong>Épissures et ligatures</strong><span>Épissures de cordes et de câbles, ligatures sur cordages.</span></li>
+      <li><strong>Mains courantes en corde</strong><span>Fabrication sur mesure.</span></li>
+      <li><strong>Conseils techniques et vestimentaires</strong><span>Au comptoir du magasin.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="marques">
+  <div class="wrap">
+    <h2>Les marques</h2>
+    <div class="brands">
+      <div><h3>Accastillage</h3><p><span>Ronstan</span> <span>Lewmar</span> <span>Plastimo</span> <span>Wichard</span> <span>Harken</span> <span>Seldén</span> <span>Jobe</span> <span>Spinlock</span> <span>Clamcleat</span> <span>Crewsaver</span> <span>Besto</span> <span>Danfender</span> <span>Polyform</span> <span>Andersen</span></p></div>
+      <div><h3>Cordages</h3><p><span>Lyros</span> <span>Robline</span> <span>Gleistein</span></p></div>
+      <div><h3>Entretien</h3><p><span>Starbrite</span> <span>NauticClean</span> <span>Veneziani</span> <span>Levis</span> <span>Epifanes</span> <span>International</span> <span>Nautico</span> <span>Nautix</span> <span>West System</span></p></div>
+      <div><h3>Vêtements</h3><p><span>Saint James</span> <span>TBS</span> <span>Musto</span> <span>Gill</span> <span>Zhik</span> <span>Dakine</span> <span>Prolimit</span> <span>Rip Curl</span></p></div>
+      <div><h3>Chaussures</h3><p><span>TBS</span> <span>Musto</span> <span>Zhik</span> <span>Aigle</span> <span>Rouchette</span> <span>Jobe</span> <span>Reef</span></p></div>
+      <div><h3>Accessoires</h3><p><span>Exped</span> <span>Guy Cotten</span> <span>Jobe</span> <span>Dakine</span> <span>Victorinox</span> <span>Swiza</span> <span>Deejo</span> <span>Opinel</span> <span>Julbo</span> <span>Petzl</span> <span>Fenix</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section id="nouveautes" class="sm">
+  <div class="wrap">
+    <h2>En ce moment</h2>
+    <div class="news">
+      <div><h3>L’automne en boutique</h3><p>Les nouvelles collections automne-hiver de Saint James et de TBS sont arrivées.</p></div>
+      <div><h3>Foil et pump</h3><p>Rive Marine est revendeur de la marque Indiana pour le matériel de pump.</p></div>
+      <div><h3>Sacs en macramé</h3><p>De petits sacs en macramé, faits main, en vente au magasin.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="histoire">
+  <div class="wrap about">
+    <div>
+      <h2>Une affaire de famille</h2>
+      <p>Établi dans le quartier de Rive, à Nyon, depuis 1969, Rive Marine propose un vaste assortiment d’articles nautiques et un grand choix de textiles, de l’habillement pour marin aux vêtements de tous les jours.</p>
+      <p>Depuis janvier 2023, Manon Seitz, fille de René Seitz, a repris l’entreprise familiale, tout en continuant à collaborer avec René. Leur politique : offrir le meilleur service et le meilleur assortiment possible.</p>
+    </div>
+    <img src="img/mer.webp" width="441" height="331" alt="Deux personnes en gilet de sauvetage à bord d’un voilier" loading="lazy">
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap grid">
+    <div>
+      <h2>Passez nous voir</h2>
+      <a class="bigtel" href="tel:+41223616720">022&nbsp;361&nbsp;67&nbsp;20</a>
+      <address>
+        <strong>Rive Marine</strong>, Manon Seitz<br>
+        Rue de Rive 19<br>
+        1260 Nyon<br>
+        <a href="mailto:rivemarine@bluewin.ch">rivemarine@bluewin.ch</a><br>
+        Instagram&nbsp;: <a href="https://www.instagram.com/rive.marine/">@rive.marine</a>
+      </address>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Rue+de+Rive+19+1260+Nyon">Voir sur la carte</a>
+    </div>
+    <div>
+      <p>Mardi au vendredi, samedi, non-stop. Fermé le dimanche et le lundi. L’horaire d’hiver s’applique du 1er octobre au 31 mars.</p>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">© Rive Marine, Nyon</div></footer>
+<div class="preview" role="note">Aperçu de votre nouveau site, préparé par&nbsp;<a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
+<script>
+(function(){var m=new Date().getMonth()+1,w=(m>=10||m<=3);
+var a=document.getElementById(w?'s-hiver':'s-ete'),b=document.getElementById(w?'s-ete':'s-hiver');
+a.setAttribute('data-on','');b.className+=' inactive';})();
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Store","name":"Rive Marine","telephone":"+41 22 361 67 20","email":"rivemarine@bluewin.ch","address":{"@type":"PostalAddress","streetAddress":"Rue de Rive 19","postalCode":"1260","addressLocality":"Nyon","addressRegion":"VD","addressCountry":"CH"},"sameAs":["https://www.instagram.com/rive.marine/"]}
+</script>
+</body>
+</html>

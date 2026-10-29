@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pneusengros – Touspneus SA, pneus à Genève, 4 ateliers</title>
+<meta name="description" content="Montage, équilibrage, stockage et pneus d'occasion à Genève : 4 ateliers aux Eaux-Vives, aux Grottes, à Wilson et à Saint-Jean. Rendez-vous express de 30 minutes.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#17181a">
+<meta property="og:title" content="Pneusengros – Touspneus SA, pneus à Genève">
+<meta property="og:description" content="4 ateliers à Genève : montage, équilibrage, stockage, pneus d'occasion, mécanique.">
+<meta property="og:locale" content="fr_CH">
+<meta property="og:type" content="website">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;800&family=Public+Sans:wght@400;600&display=swap" rel="stylesheet">
+<!--
+DIRECTION (fresh-web-design)
+Artefact : le flanc d'un pneu (marquage 205/55 R16) et l'étiquette de tarif de l'atelier.
+Lecteur : un automobiliste pressé qui veut savoir où aller, à quelle heure, et combien ça coûte.
+Couleurs : graphite caoutchouc #17181a (fond), rouge du logo PEG #e5174b (surface : bande d'horaires, pied), gris béton #e9e8e5 (papier), blanc cassé #f7f6f4.
+Typo : Barlow Condensed 800 (lettrage des flancs de pneus, serré) + Public Sans (texte courant, lisible).
+Mise en page : bord gauche fort, titres géants, 4 ateliers en lignes de tableau avec le téléphone en grand, tarifs en liste à points de conduite.
+Signature : bande de sculpture (chevrons CSS) et marquage de dimension sous le titre.
+Mouvement : aucun. Photos : aucune (typographie).
+-->
+<style>
+:root{--rub:#17181a;--rub2:#25272a;--red:#e5174b;--red-d:#b80f3a;--con:#e9e8e5;--paper:#f7f6f4;--ink:#17181a;--mut:#4a4d52;--mut-d:#c9cacc}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 17px/1.55 "Public Sans",sans-serif;overflow-x:hidden}
+a{color:inherit}
+.d{font-family:"Barlow Condensed",sans-serif;font-weight:800;text-transform:uppercase;line-height:.92;letter-spacing:.005em}
+.wrap{max-width:1180px;margin:0 auto;padding:0 16px}
+.ribbon{background:#0d0e0f;color:var(--mut-d);font-size:13px;text-align:center;padding:7px 12px}
+header{background:var(--rub);color:var(--paper)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 0}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.mark{font:800 30px/1 "Barlow Condensed",sans-serif;background:var(--red);color:#fff;padding:5px 9px 3px;border-radius:3px;letter-spacing:.04em}
+.name{font:800 18px/1 "Barlow Condensed",sans-serif;text-transform:uppercase;letter-spacing:.03em}
+.name small{display:block;font:600 12px/1.2 "Barlow Condensed",sans-serif;color:var(--mut-d);letter-spacing:.14em;margin-top:2px}
+nav{display:none;gap:22px;font:600 15px "Public Sans"}
+nav a{text-decoration:none;padding:6px 0}
+nav a:hover{color:var(--red)}
+.call{background:var(--red);color:#fff;text-decoration:none;font:800 17px/1 "Barlow Condensed";text-transform:uppercase;letter-spacing:.04em;padding:11px 14px;border-radius:3px;white-space:nowrap}
+.tread{height:18px;background:repeating-linear-gradient(115deg,var(--rub2) 0 14px,var(--rub) 14px 22px);}
+.hero{background:var(--rub);color:var(--paper);padding:34px 0 46px}
+.hero h1{font-size:clamp(58px,17vw,148px);margin:0 0 18px}
+.hero h1 span{color:var(--red)}
+.spec{display:inline-block;font:600 15px/1 "Barlow Condensed";letter-spacing:.2em;border:2px solid var(--mut-d);border-radius:40px;padding:7px 14px;color:var(--mut-d);margin-bottom:18px}
+.hero p{max-width:46ch;font-size:19px;margin:0 0 22px;color:#e4e5e6}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;font:800 20px/1 "Barlow Condensed";text-transform:uppercase;letter-spacing:.04em;padding:15px 20px;border-radius:3px}
+.btn.o{background:none;border:2px solid var(--paper)}
+.rdv{background:var(--red);color:#fff;padding:26px 0}
+.rdv .wrap{display:grid;gap:18px}
+.rdv h2{font-size:clamp(40px,9vw,72px);margin:0}
+.rdv p{margin:0;max-width:44ch}
+.hrs{border-collapse:collapse;width:100%;max-width:440px;font-size:16px}
+.hrs td,.hrs th{text-align:left;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.45);font-weight:400}
+.hrs th{font-weight:600}
+section{padding:54px 0}
+h2.d{font-size:clamp(40px,8vw,68px);margin:0 0 22px}
+.lead{max-width:62ch;color:var(--mut)}
+.srv{columns:1;column-gap:40px;list-style:none;padding:0;margin:0}
+.srv li{break-inside:avoid;padding:12px 0 12px 22px;border-bottom:2px solid var(--con);position:relative;font-weight:600}
+.srv li:before{content:"";position:absolute;left:0;top:19px;width:10px;height:10px;background:var(--red);transform:skewX(-20deg)}
+.centres{background:var(--con)}
+.ctr{display:grid;gap:4px;border-top:4px solid var(--ink);padding:18px 0 22px}
+.ctr h3{margin:0;font-size:clamp(38px,9vw,56px)}
+.ctr address{font-style:normal}
+.tel{font:800 34px/1 "Barlow Condensed";text-decoration:none;letter-spacing:.02em}
+.tel:hover{color:var(--red-d)}
+.fax{font-size:14px;color:var(--mut)}
+.map{font-weight:600;color:var(--red-d)}
+.note{font-size:14px;color:var(--mut);margin-top:6px}
+.price{display:grid;gap:34px}
+.board{background:var(--rub);color:var(--paper);padding:22px 18px;border-radius:3px}
+.board h3{margin:0 0 6px;font-size:34px;color:var(--paper)}
+.board .u{font-size:13px;color:var(--mut-d);margin:0 0 12px}
+.board ul{list-style:none;padding:0;margin:0}
+.board li{display:flex;align-items:baseline;gap:8px;padding:7px 0}
+.board li:after{content:none}
+.board li b{order:3;font:800 22px/1 "Barlow Condensed";white-space:nowrap}
+.board li i{order:2;flex:1;border-bottom:2px dotted #6c6f74;transform:translateY(-4px);min-width:10px}
+.board li span{order:1}
+.more{display:grid;gap:26px;margin-top:40px}
+.more h3{font-size:32px;margin:0 0 8px}
+.more p{margin:0;color:var(--mut);max-width:50ch}
+.brands{border-top:2px solid var(--ink);margin-top:40px;padding-top:14px;font:800 30px/1.1 "Barlow Condensed";text-transform:uppercase;color:var(--mut)}
+footer{background:var(--red);color:#fff;padding:40px 0 34px}
+footer h2{font-size:clamp(44px,10vw,90px);margin:0 0 16px}
+footer a{font-weight:600}
+.fine{font-size:13px;margin-top:22px;opacity:.95}
+@media(min-width:760px){
+ nav{display:flex}
+ .rdv .wrap{grid-template-columns:1.2fr 1fr;align-items:center}
+ .srv{columns:2}
+ .ctr{grid-template-columns:1fr 1.2fr 1fr auto;align-items:center;gap:24px}
+ .price{grid-template-columns:1fr 1fr 1fr}
+ .more{grid-template-columns:repeat(3,1fr)}
+ .hero{padding:60px 0 70px}
+}
+</style>
+</head>
+<body>
+<div class="ribbon">Aperçu de votre nouveau site, préparé par&nbsp;<a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
+<header>
+ <div class="wrap bar">
+  <a class="logo" href="#"><span class="mark">PEG</span><span class="name">Pneusengros<small>Touspneus SA · Genève</small></span></a>
+  <nav><a href="#prestations">Prestations</a><a href="#ateliers">Ateliers</a><a href="#tarifs">Tarifs</a><a href="#contact">Contact</a></nav>
+  <a class="call" href="tel:+41227362184">022&nbsp;736&nbsp;21&nbsp;84</a>
+ </div>
+ <div class="tread"></div>
+</header>
+
+<div class="hero">
+ <div class="wrap">
+  <span class="spec">4 ATELIERS · VOITURES · 4×4 · MOTOS · CAMIONNETTES</span>
+  <h1 class="d">Vos pneus montés en <span>30&nbsp;minutes</span></h1>
+  <p>Quatre ateliers au centre de Genève. Prenez rendez-vous par téléphone, nous montons vos pneus à l'une de nos quatre adresses.</p>
+  <div class="btns"><a class="btn" href="tel:+41227362184">Appeler les Eaux-Vives</a><a class="btn o" href="#ateliers">Choisir mon atelier</a></div>
+ </div>
+</div>
+<div class="tread"></div>
+
+<div class="rdv">
+ <div class="wrap">
+  <div><h2 class="d">RDV express</h2><p>Montage de vos pneus en 30&nbsp;minutes seulement, aux 4&nbsp;adresses. Rapidité et efficacité, sur rendez-vous téléphonique.</p></div>
+  <table class="hrs" aria-label="Horaires sur rendez-vous">
+   <tr><th>Lundi au jeudi</th><td>8h00–12h00</td><td>13h30–18h00</td></tr>
+   <tr><th>Vendredi</th><td>8h00–12h00</td><td>13h30–16h30</td></tr>
+   <tr><th>Samedi</th><td>8h00–12h00</td><td>fermé</td></tr>
+  </table>
+ </div>
+</div>
+
+<section id="prestations">
+ <div class="wrap">
+  <h2 class="d">Ce qu'on fait<br>sur vos roues</h2>
+  <p class="lead">Nos spécialistes, répartis dans 4&nbsp;ateliers au centre de Genève, interviennent sur voitures, 4×4, motos et camionnettes.</p>
+  <ul class="srv">
+   <li>Conseils sur l'achat de pneus et de jantes</li>
+   <li>Montage et démontage</li>
+   <li>Équilibrage</li>
+   <li>Gonflage à l'azote</li>
+   <li>Nettoyage des jantes par micro-billes</li>
+   <li>Stockage de vos pneus et roues</li>
+   <li>Géométrie</li>
+   <li>Chaînes à neige (track et traditionnelles)</li>
+   <li>Plaquettes de freins</li>
+   <li>Réparation de pneus</li>
+   <li>Pneus d'occasion été et hiver</li>
+   <li>Pneus moto et scooter</li>
+  </ul>
+  <div class="more">
+   <div><h3 class="d">Stockage</h3><p>Vos pneus et roues conservés dans des locaux sécurisés, à l'abri de l'humidité et de la lumière. Plus de 8&nbsp;000 clients utilisent ce service chaque saison.</p></div>
+   <div><h3 class="d">Mécanique</h3><p>Nouveau aux Grottes et à Wilson : disques et plaquettes de freins, rotules de direction et de suspension, triangles, batterie, ampoules. Autres travaux sur demande, avec devis.</p></div>
+   <div><h3 class="d">Leasing</h3><p>En partenariat avec ADAM TOURING, nous changeons pneus et roues de vos véhicules en leasing et nous nous occupons des démarches auprès de la société de leasing.</p></div>
+  </div>
+  <div class="brands">Pirelli · Dunlop · Yokohama · Hankook</div>
+ </div>
+</section>
+
+<section class="centres" id="ateliers">
+ <div class="wrap">
+  <h2 class="d">Quatre ateliers,<br>quatre numéros directs</h2>
+
+  <div class="ctr">
+   <h3 class="d">Eaux-Vives</h3>
+   <address>Rue des Eaux-Vives 61<br>1207 Genève</address>
+   <div><a class="tel" href="tel:+41227362184">022&nbsp;736&nbsp;21&nbsp;84</a><div class="fax">Fax 022&nbsp;736&nbsp;99&nbsp;15</div></div>
+   <a class="map" href="https://www.google.com/maps/search/?api=1&query=Rue+des+Eaux-Vives+61+1207+Gen%C3%A8ve">Itinéraire</a>
+  </div>
+  <div class="ctr">
+   <h3 class="d">Grottes</h3>
+   <address>Rue des Grottes 34<br>1201 Genève</address>
+   <div><a class="tel" href="tel:+41227331808">022&nbsp;733&nbsp;18&nbsp;08</a><div class="fax">Fax 022&nbsp;733&nbsp;83&nbsp;34</div><div class="note">Mécanique disponible</div></div>
+   <a class="map" href="https://www.google.com/maps/search/?api=1&query=Rue+des+Grottes+34+1201+Gen%C3%A8ve">Itinéraire</a>
+  </div>
+  <div class="ctr">
+   <h3 class="d">Wilson</h3>
+   <address>Rue J.-A.&nbsp;Gautier 1<br>1201 Genève</address>
+   <div><a class="tel" href="tel:+41227315314">022&nbsp;731&nbsp;53&nbsp;14</a><div class="fax">Fax 022&nbsp;731&nbsp;53&nbsp;03</div><div class="note">Mécanique disponible</div></div>
+   <a class="map" href="https://www.google.com/maps/search/?api=1&query=Rue+J.-A.+Gautier+1+1201+Gen%C3%A8ve">Itinéraire</a>
+  </div>
+  <div class="ctr">
+   <h3 class="d">Saint-Jean</h3>
+   <address>Chemin François-Furet 53<br>1203 Genève</address>
+   <div><a class="tel" href="tel:+41223449244">022&nbsp;344&nbsp;92&nbsp;44</a><div class="fax">Fax 022&nbsp;340&nbsp;40&nbsp;04</div></div>
+   <a class="map" href="https://www.google.com/maps/search/?api=1&query=Chemin+Fran%C3%A7ois-Furet+53+1203+Gen%C3%A8ve">Itinéraire</a>
+  </div>
+  <p class="note">Horaires de rendez-vous ci-dessus, identiques aux quatre adresses.</p>
+ </div>
+</section>
+
+<section id="tarifs">
+ <div class="wrap">
+  <h2 class="d">Tarifs affichés</h2>
+  <p class="lead">Prix par pneu, en francs suisses, tels que publiés sur le site actuel (colonne de droite : hors taxes).</p>
+  <div class="price" style="margin-top:22px">
+   <div class="board"><h3 class="d">Voitures</h3><p class="u">CHF par pneu · HT entre parenthèses</p><ul>
+    <li><span>Forfait acier</span><i></i><b>26.50 (24.50)</b></li>
+    <li><span>Forfait alu</span><i></i><b>29.50 (27.30)</b></li>
+    <li><span>Démontage</span><i></i><b>7 (6.50)</b></li>
+    <li><span>Démontage run flat</span><i></i><b>12 (11.10)</b></li>
+    <li><span>Équilibrage acier</span><i></i><b>10 (9.25)</b></li>
+    <li><span>Équilibrage alu</span><i></i><b>13 (12.05)</b></li>
+    <li><span>Dépose</span><i></i><b>9 (8.35)</b></li>
+    <li><span>Valve</span><i></i><b>2 (1.85)</b></li>
+    <li><span>Azote</span><i></i><b>6 (5.55)</b></li>
+    <li><span>Crevaison</span><i></i><b>33.50 (31)</b></li></ul></div>
+   <div class="board"><h3 class="d">4×4 et motos</h3><p class="u">CHF</p><ul>
+    <li><span>4×4 forfait acier ou alu</span><i></i><b>40 (37)</b></li>
+    <li><span>4×4 équilibrage</span><i></i><b>17.50 (16.20)</b></li>
+    <li><span>4×4 démontage</span><i></i><b>12 (11.10)</b></li>
+    <li><span>4×4 azote</span><i></i><b>8 (7.40)</b></li>
+    <li><span>Moto, forfait avant</span><i></i><b>35</b></li>
+    <li><span>Moto, forfait arrière</span><i></i><b>45</b></li></ul></div>
+   <div class="board"><h3 class="d">Stockage</h3><p class="u">CHF par pneu et par saison · HT entre parenthèses</p><ul>
+    <li><span>Pneu tourisme, dès</span><i></i><b>12 (11.10)</b></li>
+    <li><span>Roue tourisme + petit pneu 4×4, dès</span><i></i><b>14.50 (13.40)</b></li>
+    <li><span>Roue 4×4 + gros pneu 4×4, dès</span><i></i><b>17 (15.75)</b></li></ul></div>
+  </div>
+ </div>
+</section>
+
+<footer id="contact">
+ <div class="wrap">
+  <h2 class="d">Un appel,<br>un créneau</h2>
+  <p>Pneusengros – Touspneus SA, Genève<br>Eaux-Vives <a href="tel:+41227362184">022&nbsp;736&nbsp;21&nbsp;84</a> · Grottes <a href="tel:+41227331808">022&nbsp;733&nbsp;18&nbsp;08</a><br>Wilson <a href="tel:+41227315314">022&nbsp;731&nbsp;53&nbsp;14</a> · Saint-Jean <a href="tel:+41223449244">022&nbsp;344&nbsp;92&nbsp;44</a></p>
+  <p class="fine">Maquette gratuite proposée par houle.ai — ce site n'est pas en ligne.</p>
+ </div>
+</footer>
+</body>
+</html>

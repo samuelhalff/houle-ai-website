@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Centre Médico-Chirurgical de Cornavin – Urgences 7 j/7, Genève</title>
+<meta name="description" content="Centre médical à deux pas de la gare Cornavin, rue du Jura 1-3 à Genève : urgences adultes et enfants 7 j/7, médecine générale, spécialistes, radiologie, physiothérapie. Tél. 022 595 11 11.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1f4a3a">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Centre Médico-Chirurgical de Cornavin – Urgences 7 j/7, Genève">
+<meta property="og:description" content="Urgences adultes et enfants 7 j/7, médecins spécialistes et paramédicaux, rue du Jura 1-3, Genève.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:locale" content="fr_CH">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="facade-1300.webp" imagesrcset="facade-1300.webp 1300w, facade-2600.webp 2600w" imagesizes="100vw">
+<!--
+  DESIGN NOTES (houle.ai mock-up, 2026-10-29)
+  Artefact: the station departures board, because the centre sits beside Cornavin and its
+  real selling point is a timetable (emergency desk 7 days a week). The hours are set as a board.
+  Colours: board green #1f4a3a (the surface of the hours board and the contact band), green-grey
+  paper #eef1ea, shutter red #9b3a2c taken from the red shutters in the facade photo (used only
+  for the urgent line and the booking button), board amber #f3c969 for times on the board.
+  Exception (written): the brief asked for a terracotta-like accent; it is the shutter red,
+  brand-derived, not a cream+terracotta pairing: the paper is a cool green-grey.
+  Type: Newsreader (display, text optical size) + Source Sans 3 (humanist UI text) +
+  Barlow Condensed for the board only (station signage). Layout: asymmetric, left edge strong,
+  specialties and team set as timetable rows, no cards. Motion: none. Photo: their real facade.
+-->
+<style>
+:root{
+  --paper:#eef1ea; --paper-2:#e2e8de; --ink:#16241d; --muted:#4a5b51; --rule:#b9c6bb;
+  --board:#1f4a3a; --board-d:#173a2d; --on-board:#eaf1ea; --amber:#f3c969;
+  --red:#9b3a2c; --on-red:#fff4f0;
+  --serif:"Newsreader",Georgia,serif; --sans:"Source Sans 3",system-ui,sans-serif; --sign:"Barlow Condensed","Arial Narrow",sans-serif;
+  --gutter:clamp(16px,5vw,72px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.55 var(--sans);padding-bottom:calc(60px + env(safe-area-inset-bottom))}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--board);text-underline-offset:.18em}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.wrap{padding-inline:var(--gutter);max-width:1280px;margin-inline:auto}
+h1,h2,h3{font-family:var(--serif);font-weight:500;margin:0;line-height:1.05;letter-spacing:-.01em}
+h2{font-size:clamp(2rem,6vw,3.2rem);max-width:16ch}
+p{margin:0 0 1em;max-width:62ch}
+
+/* top bar */
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:12px}
+.mark{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.mark svg{width:34px;height:34px;flex:none}
+.mark b{font:500 1.15rem/1.05 var(--serif);display:block}
+.mark small{display:block;font-size:.8rem;color:var(--muted)}
+.top nav{display:none}
+.tel{font:600 1.05rem var(--sans);color:var(--ink);text-decoration:none;white-space:nowrap;border:2px solid var(--board);padding:.4em .8em;border-radius:3px}
+@media(min-width:900px){
+  .top nav{display:flex;gap:28px}
+  .top nav a{color:var(--ink);text-decoration:none;font-weight:600}
+  .top nav a:hover{text-decoration:underline}
+}
+
+/* hero */
+.hero{position:relative;background:var(--board-d);color:var(--on-board)}
+.hero picture img{width:100%;height:clamp(210px,40vw,520px);object-fit:cover;object-position:30% 40%}
+.hero .panel{background:var(--board);padding-block:clamp(28px,5vw,56px)}
+.hero h1{font-size:clamp(2.5rem,9.5vw,5.6rem);max-width:13ch;color:#fff}
+.hero h1 em{font-style:italic;color:var(--amber)}
+.hero .lead{font:400 clamp(1.1rem,3.4vw,1.35rem)/1.45 var(--serif);max-width:44ch;margin:1rem 0 1.6rem;color:#dbe7dd}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:.85em 1.3em;font-weight:600;text-decoration:none;border-radius:3px;font-size:1.05rem;min-height:48px}
+.btn.red{background:var(--red);color:var(--on-red)}
+.btn.ghost{border:2px solid #cfe0d2;color:#fff}
+.btn.red:hover{background:#862f23}
+.btn.ghost:hover{background:#ffffff1a}
+@media(min-width:900px){
+  .hero picture img{height:480px;object-position:30% 45%}
+  .hero{display:flex;flex-direction:column}
+  .hero picture{order:2}
+  .hero .panel{order:1}
+}
+
+/* board */
+.board-sec{background:var(--board-d);color:var(--on-board);padding-block:clamp(36px,6vw,72px)}
+.board-sec h2{color:#fff;margin-bottom:.4em}
+.board{font-family:var(--sign);font-weight:500;border-top:3px solid var(--amber);margin-top:1.6rem}
+.row{display:grid;grid-template-columns:1fr auto;gap:4px 16px;padding:14px 0;border-bottom:1px solid #ffffff2b;align-items:baseline}
+.row .d{font-size:clamp(1.35rem,4.6vw,2.1rem);letter-spacing:.02em;text-transform:uppercase}
+.row .t{font-size:clamp(1.5rem,5vw,2.3rem);color:var(--amber);font-weight:600;white-space:nowrap;text-align:right;font-variant-numeric:tabular-nums}
+.row .n{grid-column:1/-1;font:400 .95rem var(--sans);color:#c5d6c9;text-transform:none;letter-spacing:0}
+.row.head{border-bottom:0;padding:10px 0 4px;color:#9fb8a7;font:600 .85rem var(--sans);letter-spacing:.05em}
+.board-note{font-size:.95rem;color:#c5d6c9;margin-top:1.2rem;max-width:60ch}
+.board-grid{display:grid;gap:36px}
+@media(min-width:900px){.board-grid{grid-template-columns:5fr 7fr;gap:72px;align-items:start}.board-grid .board{margin-top:0}}
+
+/* centre */
+section{padding-block:clamp(44px,7vw,92px)}
+.centre .grid{display:grid;gap:28px}
+.facts{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.facts li{padding:14px 0;border-top:1px solid var(--rule)}
+.facts li:last-child{border-bottom:1px solid var(--rule)}
+.facts b{font-family:var(--serif);font-weight:500;font-size:1.25rem;display:block}
+.facts span{color:var(--muted)}
+@media(min-width:900px){.centre .grid{grid-template-columns:5fr 6fr;gap:80px}.centre h2{position:sticky;top:24px}}
+.big{font:400 clamp(1.3rem,3.6vw,1.7rem)/1.4 var(--serif);max-width:34ch;margin-top:1rem}
+
+/* specialties */
+.spec{background:var(--paper-2)}
+.spec .cols{display:grid;gap:40px;margin-top:2rem}
+.list{list-style:none;margin:0;padding:0}
+.list li{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-top:1px solid var(--rule);font-size:1.1rem}
+.list li:last-child{border-bottom:1px solid var(--rule)}
+.list li small{color:var(--muted);font-size:.9rem;text-align:right}
+.spec h3{font-size:1.5rem;margin-bottom:.6rem}
+@media(min-width:900px){.spec .cols{grid-template-columns:1fr 1fr;gap:80px}}
+
+/* team */
+.team .cols{display:grid;gap:36px;margin-top:2rem}
+.who{display:grid;grid-template-columns:1fr;gap:0}
+.who div{padding:12px 0;border-top:1px solid var(--rule)}
+.who b{font:500 1.25rem var(--serif);display:block}
+.who span{color:var(--muted)}
+@media(min-width:700px){.who{grid-template-columns:1fr 1fr;column-gap:40px}}
+@media(min-width:900px){.team .cols{grid-template-columns:8fr 4fr;gap:72px}}
+.side h3{font-size:1.5rem;margin-bottom:.5rem}
+.small{font-size:.95rem;color:var(--muted)}
+
+/* jobs */
+.jobs{background:var(--paper-2)}
+.jobs .grid{display:grid;gap:28px}
+.spec-tags{display:flex;flex-wrap:wrap;gap:8px;margin:1rem 0 1.4rem;padding:0;list-style:none}
+.spec-tags li{border:1.5px solid var(--board);padding:.3em .8em;border-radius:99px;font-weight:600}
+@media(min-width:900px){.jobs .grid{grid-template-columns:5fr 6fr;gap:80px}}
+
+/* contact */
+.contact{background:var(--board);color:var(--on-board)}
+.contact h2{color:#fff}
+.contact a{color:#fff}
+.contact .grid{display:grid;gap:36px;margin-top:1.6rem}
+.contact dl{margin:0}
+.contact dt{font:600 .85rem var(--sans);letter-spacing:.05em;color:#9fb8a7;margin-top:1.2rem}
+.contact dd{margin:.2rem 0 0;font:400 clamp(1.3rem,4vw,1.8rem)/1.25 var(--serif)}
+.contact .btn.red{margin-top:1.6rem}
+@media(min-width:900px){.contact .grid{grid-template-columns:6fr 5fr;gap:80px}}
+
+footer{padding-block:28px;font-size:.92rem;color:var(--muted)}
+footer p{max-width:none}
+
+/* bar */
+.preview{position:fixed;left:0;right:0;bottom:0;z-index:5;background:#101a15;color:#d4e0d7;font-size:.8rem;padding:10px var(--gutter) calc(10px + env(safe-area-inset-bottom));text-align:center}
+.preview a{color:#fff}
+</style>
+</head>
+<body>
+
+<header class="wrap top">
+  <a class="mark" href="#haut" id="haut">
+    <svg viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="6" fill="#1f4a3a"/><g stroke="#f2f0e6" stroke-width="3.2" stroke-linecap="round"><path d="M16 6v20M7.3 11l17.4 10M7.3 21l17.4-10"/></g></svg>
+    <span><b>Centre Médico-Chirurgical de Cornavin</b><small>Rue du Jura 1-3, Genève</small></span>
+  </a>
+  <nav aria-label="Navigation">
+    <a href="#horaires">Horaires</a><a href="#specialites">Spécialités</a><a href="#equipe">Équipe</a><a href="#emploi">Emploi</a><a href="#contact">Contact</a>
+  </nav>
+  <a class="tel" href="tel:+41225951111">022&nbsp;595&nbsp;11&nbsp;11</a>
+</header>
+
+<main>
+<div class="hero">
+  <picture>
+    <source media="(min-width:900px)" srcset="facade-2600.webp">
+    <img src="facade-1300.webp" srcset="facade-1300.webp 1300w, facade-2600.webp 2600w" sizes="100vw" width="1300" height="487" alt="L’entrée du Centre Médico-Chirurgical de Cornavin, rue du Jura, avec son auvent portant le nom du centre et ses volets rouges">
+  </picture>
+  <div class="panel">
+    <div class="wrap">
+      <h1>Un médecin à deux pas de la <em>gare.</em></h1>
+      <p class="lead">Urgences pour adultes et enfants, avec ou sans rendez-vous, tous les jours de la semaine y compris les jours fériés. Médecins généralistes et spécialistes dans le même bâtiment.</p>
+      <div class="cta">
+        <a class="btn red" href="https://www.onedoc.ch/fr/widget/82a12446b3ab93130418984de85a5289b6cd93f52ef8e8aa68627209d0ff97e8">Prendre rendez-vous en ligne</a>
+        <a class="btn ghost" href="tel:+41225951111">Appeler le 022&nbsp;595&nbsp;11&nbsp;11</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="board-sec" id="horaires">
+  <div class="wrap board-grid">
+    <div>
+      <h2>Prochains départs&nbsp;: les horaires</h2>
+      <p class="board-note">Les urgences accueillent adultes et enfants avec ou sans rendez-vous. Les consultations programmées ont lieu à l’heure de bureau, sur rendez-vous.</p>
+    </div>
+    <div class="board" role="table" aria-label="Horaires du centre">
+      <div class="row head" role="row"><span role="columnheader">URGENCES</span><span role="columnheader">HORAIRE</span></div>
+      <div class="row" role="row"><span class="d" role="cell">Lundi – vendredi</span><span class="t" role="cell">7h30 – 20h00</span></div>
+      <div class="row" role="row"><span class="d" role="cell">Samedi</span><span class="t" role="cell">8h00 – 20h00</span></div>
+      <div class="row" role="row"><span class="d" role="cell">Dimanche et jours fériés</span><span class="t" role="cell">10h00 – 18h00</span><span class="n">D’avril à septembre&nbsp;: 10h00 – 20h00. D’octobre à mars&nbsp;: 10h00 – 18h00.</span></div>
+      <div class="row head" role="row" style="padding-top:26px"><span role="columnheader">CONSULTATIONS PROGRAMMÉES ET ADMINISTRATION</span><span></span></div>
+      <div class="row" role="row"><span class="d" role="cell">Lundi – vendredi</span><span class="t" role="cell">8h30 – 12h30<br>14h00 – 18h00</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="centre" id="centre">
+  <div class="wrap grid">
+    <div>
+      <h2>Plus d’un siècle au cœur de Genève</h2>
+      <p class="big">Le CMC-Cornavin est installé depuis plus de cent ans dans le système de santé genevois. Il réunit urgences, médecine de famille, spécialistes et soins paramédicaux.</p>
+    </div>
+    <ul class="facts">
+      <li><b>Urgences 7&nbsp;j/7</b><span>Adultes et enfants, avec ou sans rendez-vous, jours fériés compris.</span></li>
+      <li><b>Assurance maladie</b><span>Tous les médecins ont le droit de pratiquer délivré par les autorités genevoises, avec facturation à charge de la LAMal.</span></li>
+      <li><b>Langues parlées</b><span>Français, anglais, arabe, portugais, espagnol, roumain, persan.</span></li>
+      <li><b>Accès</b><span>En plein centre de Genève, près de la gare Cornavin, bien desservi par les transports publics. Parking pour les patients, places en nombre limité.</span></li>
+      <li><b>Attente</b><span>Le système de prise en charge s’efforce de limiter au maximum le temps d’attente.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="spec" id="specialites">
+  <div class="wrap">
+    <h2>Spécialités et services</h2>
+    <div class="cols">
+      <div>
+        <h3>Consultations médicales</h3>
+        <ul class="list">
+          <li>Médecine générale et de famille</li>
+          <li>Pédiatrie et chirurgie pédiatrique</li>
+          <li>Gynécologie-obstétrique</li>
+          <li>Urologie et chirurgie urologique</li>
+          <li>Cardiologie</li>
+          <li>Psychiatrie</li>
+          <li>Orthopédie-traumatologie</li>
+          <li>Gériatrie</li>
+          <li>Médecine interne</li>
+          <li>Ultrasonographie</li>
+        </ul>
+        <p class="small" style="margin-top:1rem">Consultation sur rendez-vous, au cabinet du médecin au sein du centre.</p>
+      </div>
+      <div>
+        <h3>Services médicaux et paramédicaux</h3>
+        <ul class="list">
+          <li>Urgences médicales et chirurgicales <small>7&nbsp;j/7</small></li>
+          <li>Radiologie et échographie</li>
+          <li>Analyses médicales en urgence</li>
+          <li>Physiothérapie</li>
+          <li>Nutrition et diététique</li>
+          <li>Massothérapie et drainage lymphatique</li>
+          <li>Soins infirmiers</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="team" id="equipe">
+  <div class="wrap">
+    <h2>Les médecins et praticiens</h2>
+    <div class="cols">
+      <div class="who">
+        <div><b>Dr Francis Abihanna</b><span>Gynécologie – obstétrique</span></div>
+        <div><b>Dr Mouncef Berrada</b><span>Pédiatrie – chirurgie pédiatrique</span></div>
+        <div><b>Dr Amadou Cissé</b><span>Orthopédie – traumatologie</span></div>
+        <div><b>Dr Laurent Lacrosnière</b><span>Radiologie</span></div>
+        <div><b>Dr Adnane Loudiyi</b><span>Médecine générale et urgences, médecin responsable des urgences</span></div>
+        <div><b>Dr Cyril Moulin</b><span>Cardiologie</span></div>
+        <div><b>Dr Ovidiu Olteanu</b><span>Orthopédie – traumatologie</span></div>
+        <div><b>Dr Mircea Pascu</b><span>Médecine générale et urgences</span></div>
+        <div><b>Dr Jean-Michel Rouffilange</b><span>Urologie</span></div>
+        <div><b>Dr Gabriel Yanisse</b><span>Psychiatrie</span></div>
+        <div><b>Dr Juvénal Nitunga</b><span>Ophtalmologie</span></div>
+      </div>
+      <div class="side">
+        <h3>Paramédical</h3>
+        <div class="who" style="grid-template-columns:1fr">
+          <div><b>Amazigh Ait Salem</b><span>Physiothérapeute</span></div>
+          <div><b>Ivonne Bornet</b><span>Diététicienne</span></div>
+        </div>
+        <p class="small" style="margin-top:1.4rem">L’équipe compte aussi des infirmières et une équipe d’accueil et de facturation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="jobs" id="emploi">
+  <div class="wrap grid">
+    <h2>Médecins spécialistes&nbsp;: rejoignez-nous</h2>
+    <div>
+      <p>Le centre recherche des médecins spécialistes pour renforcer son équipe, dans un environnement de travail moderne, aux côtés d’autres spécialistes, d’infirmières qualifiées et de professionnels de la santé.</p>
+      <ul class="spec-tags" aria-label="Domaines recherchés">
+        <li>Cardiologie</li><li>Gynécologie</li><li>Gastro-entérologie</li><li>ORL</li><li>Dermatologie</li><li>Psychiatrie</li><li>et d’autres</li>
+      </ul>
+      <p>Condition&nbsp;: être autorisé à pratiquer à charge de la LAMal dans le canton de Genève. Envoyez votre CV et une lettre de motivation à <a href="mailto:contact@cmccornavin.ch?subject=Candidature">contact@cmccornavin.ch</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Nous trouver, nous appeler</h2>
+    <div class="grid">
+      <dl>
+        <dt>Adresse</dt>
+        <dd>Rue du Jura 1-3<br>1201 Genève</dd>
+        <dt>Téléphone</dt>
+        <dd><a href="tel:+41225951111">022&nbsp;595&nbsp;11&nbsp;11</a></dd>
+        <dt>Second numéro</dt>
+        <dd><a href="tel:+41225951102">022&nbsp;595&nbsp;11&nbsp;02</a></dd>
+        <dt>E-mail</dt>
+        <dd><a href="mailto:contact@cmccornavin.ch">contact@cmccornavin.ch</a></dd>
+      </dl>
+      <div>
+        <p>Pour une consultation, réservez directement le créneau d’un médecin. Pour une urgence, présentez-vous pendant les heures d’ouverture, sans rendez-vous.</p>
+        <a class="btn red" href="https://www.onedoc.ch/fr/widget/82a12446b3ab93130418984de85a5289b6cd93f52ef8e8aa68627209d0ff97e8">Prendre rendez-vous en ligne</a>
+        <p style="margin-top:1.2rem"><a href="https://www.google.com/maps/search/?api=1&amp;query=Rue+du+Jura+1-3+1201+Gen%C3%A8ve">Voir sur la carte</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="wrap">
+  <p>Centre Médico-Chirurgical de Cornavin · Rue du Jura 1-3 · 1201 Genève</p>
+</footer>
+
+<div class="preview" role="note">Aperçu de votre nouveau site, préparé par&nbsp;<a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
+</body>
+</html>

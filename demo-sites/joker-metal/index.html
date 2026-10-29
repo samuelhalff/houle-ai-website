@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Joker Metal SA – serrurerie et constructions métalliques, Cheseaux</title>
+<meta name="description" content="Serrurerie et construction métallique à Cheseaux-sur-Lausanne depuis 1987 : escaliers, portails, vérandas, vitrages, barrières. Acier, aluminium, inox. Tél. 021 731 19 51.">
+<!-- Maquette non publiée : retirer cette ligne à la mise en ligne -->
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1d2226">
+<meta property="og:title" content="Joker Metal SA – serrurerie et constructions métalliques">
+<meta property="og:description" content="Escaliers, portails, vérandas, vitrages : acier, aluminium, inox. Cheseaux-sur-Lausanne, depuis 1987.">
+<meta property="og:image" content="img/hero.webp">
+<meta property="og:locale" content="fr_CH">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,100..900;1,62..125,100..900&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HomeAndConstructionBusiness",
+  "name": "Joker Metal SA",
+  "description": "Serrurerie et constructions métalliques",
+  "url": "https://www.jokermetal.ch/",
+  "telephone": "+41 21 731 19 51",
+  "email": "jokermetal@bluewin.ch",
+  "foundingDate": "1987",
+  "image": "img/hero.webp",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Chemin de Praz-Lau 3",
+    "postalCode": "1033",
+    "addressLocality": "Cheseaux-sur-Lausanne",
+    "addressCountry": "CH"
+  }
+}
+</script>
+<!--
+  DIRECTION (fresh-web-design)
+  Matière du métier : l'acier brut sous apprêt, le plan d'atelier avec ses cotes et son cartouche, la tôle thermolaquée.
+  Lecteur : un propriétaire, un architecte ou une régie qui cherche qui peut fabriquer un escalier, un portail ou un vitrage
+  sur mesure ; il craint le prestataire qui ne sait pas faire ou qui n'est pas sérieux. Réponse : des chantiers en grand, la liste
+  des matières et l'homologation anti-feu, un numéro de téléphone sous le pouce.
+  Couleurs : graphite d'atelier (fond sombre, texte), gris galva (papier clair, froid), minium (l'orange de l'apprêt sur l'acier :
+  accent unique, boutons, bande anti-feu), blanc cassé froid. Exception assumée : l'orange vient de l'apprêt au minium, pas d'une palette.
+  Typo : Archivo, une seule famille mais ses deux extrêmes : très condensée et grasse pour les titres (écriture de tôle poinçonnée),
+  normale pour le texte. Pas de monospace.
+  Mise en page : bord gauche fort, héros sur graphite avec l'escalier colimaçon en pleine hauteur, un seul gros élément (EI 30 / 60 / 90),
+  réalisations en mosaïque asymétrique légendée, pas de cartes.
+  Détail signature : la cote d'atelier (trait avec repères aux deux bouts) autour du panneau « à saisir » ; le cartouche de plan pour le contact.
+  Mouvement : aucun.
+  Photos : celles de l'atelier, telles quelles (photos de chantier), recadrées ; aucune retouche de couleur.
+  Hachures du panneau : motif SVG, pas un dégradé décoratif.
+-->
+<style>
+:root{
+  --graphite:#1d2226; --graphite-2:#2b3236; --on-graphite:#eceeed; --on-graphite-muted:#b4bcbf;
+  --paper:#e9ebea; --paper-2:#dcdfde; --ink:#1d2226; --muted:#4a5357; --rule:#b7bdbf;
+  --minium:#c23c12; --minium-hi:#e8571f; --on-minium:#fff;
+  --measure:62ch;
+  --pad:clamp(1.1rem,4.5vw,3.2rem);
+  --maxw:1240px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"Archivo",system-ui,sans-serif;font-stretch:100%;font-size:1.0625rem;line-height:1.55}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--pad)}
+.pv{display:block;min-height:40px;padding:11px 16px;background:#0f172a;color:#f8fafc;font:400 14px/1.35 system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center}
+.pv a{color:#f8fafc;text-decoration:underline;padding:14px 2px}
+
+h1,h2,h3{font-family:"Archivo",sans-serif;font-stretch:62%;font-weight:850;line-height:.95;margin:0;text-transform:none;letter-spacing:.005em}
+h1{font-size:clamp(2.9rem,11.5vw,6.2rem)}
+h2{font-size:clamp(2.3rem,8vw,4.2rem)}
+h3{font-size:1.5rem;line-height:1}
+p{margin:0 0 1em;max-width:var(--measure)}
+
+/* header */
+.top{background:var(--graphite);color:var(--on-graphite)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:64px}
+.mark{display:flex;align-items:baseline;gap:.5rem;text-decoration:none}
+.mark b{font-stretch:62%;font-weight:900;font-size:1.9rem;line-height:1;letter-spacing:.01em;text-transform:uppercase}
+.mark i{font-style:normal;font-stretch:62%;font-weight:700;font-size:1.1rem;color:var(--minium-hi)}
+.top nav{display:none}
+.top nav a{text-decoration:none;font-weight:500;padding:.5rem .1rem;margin-left:1.6rem;color:var(--on-graphite-muted)}
+.top nav a:hover{color:#fff;box-shadow:inset 0 -3px 0 var(--minium-hi)}
+.tel{font-stretch:75%;font-weight:700;font-size:1.05rem;text-decoration:none;white-space:nowrap;border:2px solid var(--on-graphite-muted);padding:.4rem .75rem;min-height:44px;display:inline-flex;align-items:center}
+@media(min-width:900px){.top nav{display:block}}
+
+/* hero */
+.hero{background:var(--graphite);color:var(--on-graphite);overflow:hidden}
+.hero-in{display:grid}
+.hero-text{padding:2.2rem var(--pad) 2.6rem}
+.hero-text .where{font-weight:600;color:var(--minium-hi);margin:0 0 1rem;font-size:1.05rem}
+.hero h1{max-width:12ch}
+.hero .lead{font-size:1.2rem;margin-top:1.5rem;color:var(--on-graphite);max-width:34ch}
+.cta{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:.5rem 1.4rem;font-stretch:75%;font-weight:800;font-size:1.25rem;text-decoration:none;background:var(--minium);color:var(--on-minium)}
+.btn:hover{background:var(--minium-hi)}
+.btn.alt{background:transparent;border:2px solid var(--on-graphite-muted);color:var(--on-graphite)}
+.btn.alt:hover{border-color:#fff;background:transparent}
+.hero-img{position:relative;min-height:380px}
+.hero-img img{width:100%;height:100%;object-fit:cover;object-position:50% 40%;position:absolute;inset:0}
+@media(min-width:900px){
+  .hero-in{grid-template-columns:minmax(0,7fr) minmax(0,5fr);min-height:640px}
+  .hero-text{padding:4.5rem 3rem 4.5rem max(var(--pad),calc((100vw - var(--maxw))/2 + var(--pad)));align-self:center}
+  .hero-img{min-height:0}
+}
+
+/* anti-feu */
+.fire{background:var(--minium);color:var(--on-minium)}
+.fire .wrap{display:grid;gap:1.2rem;padding-block:2.4rem}
+.fire .ei{font-stretch:62%;font-weight:900;font-size:clamp(3.6rem,17vw,8.5rem);line-height:.84;margin:0}
+.fire .ei span{display:block}
+.fire p{max-width:44ch;font-size:1.15rem;margin:0}
+.fire p b{font-weight:800}
+@media(min-width:760px){.fire .wrap{grid-template-columns:auto 1fr;align-items:end;gap:4rem;padding-block:3.2rem}.fire .ei span{display:inline}.fire .ei span+span{margin-left:.3em}.fire .ei{font-size:clamp(3.6rem,8vw,6.4rem)}}
+
+/* savoir-faire */
+.sf{padding:3.6rem 0 3.2rem}
+.sf .wrap{display:grid;gap:2rem}
+.sf h2{max-width:11ch}
+.mat{border-top:3px solid var(--ink)}
+.mat div{display:grid;gap:.2rem;padding:1rem 0 1.1rem;border-bottom:1px solid var(--rule)}
+.mat dt{font-stretch:62%;font-weight:850;font-size:2.4rem;line-height:1}
+.mat dd{margin:0;color:var(--muted);max-width:52ch}
+.mat{margin:0}
+.sf .also{color:var(--muted);margin-top:1.2rem}
+@media(min-width:900px){.sf .wrap{grid-template-columns:5fr 7fr;gap:4rem;align-items:start}.mat div{grid-template-columns:11rem 1fr;align-items:baseline;gap:1.5rem}}
+
+/* réalisations */
+.real{background:var(--paper-2);padding:3.4rem 0 3.6rem}
+.real h2{margin-bottom:.6rem}
+.real .intro{color:var(--muted);margin-bottom:2rem}
+.mos{display:grid;gap:1.6rem 1rem;grid-template-columns:1fr}
+.mos figure{margin:0}
+.mos img{width:100%;object-fit:cover}
+.mos figcaption{padding-top:.5rem;font-weight:600;line-height:1.25}
+.mos figcaption small{display:block;font-weight:400;color:var(--muted);font-size:.95rem}
+.mos .tall img{aspect-ratio:3/4}
+.mos .wide img{aspect-ratio:4/3}
+.mos .pano img{aspect-ratio:16/9}
+.index{margin-top:2.4rem;padding-top:1rem;border-top:3px solid var(--ink);color:var(--muted);max-width:none}
+@media(min-width:640px){.mos{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){
+  .mos{grid-template-columns:repeat(12,1fr);gap:2.4rem 1.4rem;align-items:start}
+  .m1{grid-column:1/6}.m1 img{aspect-ratio:3/4}
+  .m2{grid-column:6/13;margin-top:4rem}
+  .m3{grid-column:1/8}
+  .m4{grid-column:8/13;margin-top:3rem}
+  .m4 img{aspect-ratio:3/4}
+  .m5{grid-column:1/5}.m5 img{aspect-ratio:4/3}
+  .m6{grid-column:5/9;margin-top:2rem}.m6 img{aspect-ratio:4/3}
+  .m7{grid-column:9/13}.m7 img{aspect-ratio:4/3}
+  .m8{grid-column:1/8}
+  .m9{grid-column:8/13;margin-top:2.5rem}.m9 img{aspect-ratio:4/3}
+}
+
+/* atelier */
+.at{padding:3.6rem 0}
+.at .wrap{display:grid;gap:2.4rem}
+.at h2{max-width:10ch}
+.chrono{list-style:none;margin:0;padding:0;border-left:3px solid var(--ink)}
+.chrono li{padding:0 0 1.6rem 1.3rem;position:relative}
+.chrono li:last-child{padding-bottom:0}
+.chrono li::before{content:"";position:absolute;left:-9px;top:.7rem;width:15px;height:15px;background:var(--minium)}
+.chrono b{display:block;font-stretch:62%;font-weight:900;font-size:2.7rem;line-height:1}
+.chrono span{display:block;max-width:40ch}
+.app{background:var(--graphite);color:var(--on-graphite);padding:1.6rem var(--pad) 1.8rem;margin-top:.5rem}
+.app h3{font-size:2rem;margin-bottom:.6rem}
+.app p{margin:0 0 .7em;max-width:46ch;color:var(--on-graphite)}
+.app a{color:#fff;font-weight:600}
+@media(min-width:900px){.at .wrap{grid-template-columns:5fr 7fr;gap:4rem}.at .right{display:grid;gap:2.4rem}}
+
+/* offre */
+.offer{background:var(--paper-2);padding:3.4rem 0}
+.offer .wrap{display:grid;gap:2rem}
+.offer h2{max-width:9ch}
+.offer .what{font-size:1.2rem;max-width:34ch}
+.offer .price{font-stretch:62%;font-weight:900;font-size:3.4rem;line-height:1;margin:.3rem 0 .2rem}
+.offer .price small{font-size:1.5rem;font-weight:700}
+.offer .fine{color:var(--muted);font-size:.98rem}
+.cote{display:grid;grid-template-columns:auto 1fr;grid-template-rows:auto auto;column-gap:.7rem;row-gap:.5rem;max-width:620px}
+.cote svg{display:block;width:100%;height:auto;grid-column:2;grid-row:2}
+.hdim{grid-column:2;grid-row:1;display:flex;align-items:center;gap:.6rem;font-stretch:75%;font-weight:700;font-size:1.05rem}
+.hdim::before,.hdim::after{content:"";flex:1;height:2px;background:var(--ink)}
+.hdim::before{box-shadow:-0 0 0 0 transparent}
+.vdim{grid-column:1;grid-row:2;writing-mode:vertical-rl;transform:rotate(180deg);display:flex;align-items:center;gap:.6rem;font-stretch:75%;font-weight:700;font-size:1.05rem}
+.vdim::before,.vdim::after{content:"";flex:1;width:2px;background:var(--ink)}
+@media(min-width:900px){.offer .wrap{grid-template-columns:5fr 7fr;gap:4rem;align-items:center}}
+
+/* contact / cartouche */
+.contact{background:var(--graphite);color:var(--on-graphite);padding:3.6rem 0 4.4rem}
+.contact h2{margin-bottom:1.6rem}
+.cart{display:grid;grid-template-columns:1fr;border:2px solid var(--on-graphite-muted);max-width:980px}
+.cart>div{padding:.9rem 1.1rem 1rem;border-top:1px solid var(--graphite-2);border-top-color:#4b555a}
+.cart>div:first-child{border-top:0}
+.cart dt{font-size:.92rem;color:var(--on-graphite-muted);font-weight:500}
+.cart dd{margin:.1rem 0 0;font-stretch:75%;font-weight:700;font-size:1.5rem;line-height:1.2}
+.cart dd a{text-decoration:none}
+.cart dd a:hover{text-decoration:underline;text-underline-offset:4px}
+.cart .big dd{font-size:2.5rem;font-stretch:62%;font-weight:850}
+.cart .big a{color:#fff}
+.cart .norm dd{font-stretch:100%;font-weight:500;font-size:1.1rem}
+.contact .cta{margin-top:1.6rem}
+.contact .note{margin-top:1.4rem;color:var(--on-graphite-muted);max-width:60ch;font-size:.98rem}
+@media(min-width:760px){
+  .cart{grid-template-columns:1.25fr 1fr 1fr}
+  .cart>div{border-top:1px solid #4b555a;border-left:1px solid #4b555a}
+  .cart>div:nth-child(-n+3){border-top:0}
+  .cart>div:nth-child(3n+1){border-left:0}
+  .cart .span2{grid-column:span 2}
+}
+.foot{background:#12171a;color:var(--on-graphite-muted);padding:1.2rem 0 5.4rem;font-size:.92rem}
+.foot .wrap{display:flex;flex-wrap:wrap;gap:.4rem 1.5rem;justify-content:space-between}
+@media(min-width:900px){.foot{padding-bottom:1.4rem}}
+
+/* barre d'appel mobile */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1.4fr 1fr;gap:8px;padding:8px 12px calc(8px + env(safe-area-inset-bottom));background:var(--graphite);border-top:2px solid var(--minium)}
+.bar a{display:flex;align-items:center;justify-content:center;min-height:48px;font-stretch:75%;font-weight:800;font-size:1.2rem;text-decoration:none}
+.bar .call{background:var(--minium);color:var(--on-minium)}
+.bar .go{border:2px solid var(--on-graphite-muted);color:var(--on-graphite)}
+@media(min-width:900px){.bar{display:none}}
+a:focus-visible{outline:3px solid var(--minium-hi);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="pv" role="note">Aperçu de votre nouveau site, préparé par&nbsp;<a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#haut" aria-label="Joker Metal SA, accueil"><b>Joker Metal</b><i>SA</i></a>
+    <nav aria-label="Principal">
+      <a href="#realisations">Réalisations</a>
+      <a href="#atelier">L’atelier</a>
+      <a href="#offres">Offres à saisir</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="tel" href="tel:+41217311951">021&nbsp;731&nbsp;19&nbsp;51</a>
+  </div>
+</header>
+
+<main id="haut">
+<section class="hero">
+  <div class="hero-in">
+    <div class="hero-text">
+      <p class="where">Serrurerie et constructions métalliques</p>
+      <h1>Du métal sur mesure, à Cheseaux depuis&nbsp;1987.</h1>
+      <p class="lead">Escaliers, portails, vérandas, vitrages, barrières : acier, aluminium et inox, travaillés par une petite entreprise familiale.</p>
+      <div class="cta">
+        <a class="btn" href="tel:+41217311951">Appeler l’atelier</a>
+        <a class="btn alt" href="mailto:jokermetal@bluewin.ch?subject=Demande%20de%20devis">Demander un devis</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="img/hero.webp" width="1500" height="2004" alt="Escalier colimaçon métallique gris anthracite avec rambarde à barreaux horizontaux, posé dans une cage d’escalier" fetchpriority="high">
+    </div>
+  </div>
+</section>
+
+<section class="fire" aria-labelledby="fire-t">
+  <div class="wrap">
+    <p class="ei" aria-hidden="true"><span>EI&nbsp;30</span><span>EI&nbsp;60</span><span>EI&nbsp;90</span></p>
+    <p id="fire-t"><b>Éléments anti-feu.</b> Joker Metal est homologué pour la fabrication d’éléments anti-feu EI&nbsp;30, EI&nbsp;60 et EI&nbsp;90 du système Jansen.</p>
+  </div>
+</section>
+
+<section class="sf" aria-labelledby="sf-t">
+  <div class="wrap">
+    <h2 id="sf-t">Tous les travaux de serrurerie.</h2>
+    <div>
+      <dl class="mat">
+        <div><dt>Acier</dt><dd>Escaliers tout métal brut ou thermolaqués, grilles caillebotis, portails zingués avec peinture duplex.</dd></div>
+        <div><dt>Aluminium</dt><dd>Vérandas, brise-soleil en tubes ou en tôles pliées, portail en tôle d’aluminium thermolaquée.</dd></div>
+        <div><dt>Inox</dt><dd>Portails, tôles perforées brossées, barrières, découpes au laser.</dd></div>
+      </dl>
+      <p class="also">Et tout ce qui touche aux produits normalisés. Le métal s’associe aussi au verre, au bois, à la pierre, au laiton ou au carrelage.</p>
+    </div>
+  </div>
+</section>
+
+<section class="real" id="realisations" aria-labelledby="real-t">
+  <div class="wrap">
+    <h2 id="real-t">Quelques réalisations</h2>
+    <p class="intro">Photos de chantier.</p>
+    <div class="mos">
+      <figure class="m1 tall"><img src="img/stair-spiral2.webp" width="1300" height="1733" loading="lazy" alt="Escalier colimaçon métallique extérieur le long d’une façade en bois, avec garde-corps"><figcaption>Escaliers métalliques<small>colimaçons, tout métal, marches en verre</small></figcaption></figure>
+      <figure class="m2 wide"><img src="img/gate-arch.webp" width="1800" height="1350" loading="lazy" alt="Portail à deux vantaux de teinte sombre, au cintre arrondi, entre deux piliers blancs"><figcaption>Portails<small>coulissants, battants, avec portillon de service</small></figcaption></figure>
+      <figure class="m3 pano"><img src="img/veranda.webp" width="1800" height="1347" loading="lazy" alt="Véranda octogonale en aluminium gris, toiture vitrée, devant une cheminée extérieure" style="aspect-ratio:3/2"><figcaption>Vérandas<small>en aluminium, à facettes ou posées en applique sur la façade</small></figcaption></figure>
+      <figure class="m4 tall"><img src="img/door-arch.webp" width="1800" height="1350" loading="lazy" alt="Porte-fenêtre vitrée à petits carreaux dans une arche en pierre jaune, devant une voiture" style="aspect-ratio:3/4;object-position:50% 50%"><figcaption>Vitrages et portes<small>métal et verre sur mesure</small></figcaption></figure>
+      <figure class="m5 wide"><img src="img/balcons.webp" width="1800" height="1350" loading="lazy" alt="Façade d’une maison à trois niveaux avec balcons à barrières en verre"><figcaption>Barrières en verre</figcaption></figure>
+      <figure class="m6 wide"><img src="img/canopy.webp" width="1800" height="1347" loading="lazy" alt="Auvent d’entrée en verre sur structure métallique sombre"><figcaption>Couverts d’entrée</figcaption></figure>
+      <figure class="m7 wide"><img src="img/gate-perf.webp" width="1800" height="1350" loading="lazy" alt="Portail et clôture à tôles perforées de carrés devant une villa"><figcaption>Tôles perforées<small>portail et clôture</small></figcaption></figure>
+      <figure class="m8 wide"><img src="img/stair-ext.webp" width="1800" height="1350" loading="lazy" alt="Escalier extérieur en métal et verre menant à une terrasse"><figcaption>Escaliers extérieurs<small>marches en grilles, garde-corps en verre</small></figcaption></figure>
+      <figure class="m9 tall"><img src="img/louvres.webp" width="1300" height="1737" loading="lazy" alt="Grand brise-soleil à lames horizontales noires sur une façade"><figcaption>Brise-soleil<small>en tubes d’aluminium, en tôles pliées, motorisés</small></figcaption></figure>
+    </div>
+    <p class="index">Au catalogue de l’atelier : barrières, barrières en verre, barrières en fer forgé, escaliers, portails, vérandas, vitrages et portes, couverts d’entrée, grilles de fenêtres, brise-soleil, boîtes aux lettres, portes de garage, supports et abris à vélos, abri pour joueurs, vitrines d’affichage.</p>
+  </div>
+</section>
+
+<section class="at" id="atelier" aria-labelledby="at-t">
+  <div class="wrap">
+    <h2 id="at-t">Une affaire de famille.</h2>
+    <div class="right">
+      <ol class="chrono">
+        <li><b>1987</b><span>Joker Metal SA est fondée par Jacques Metzger.</span></li>
+        <li><b>2003</b><span>Reprise par Georges Grando, le 1er juillet. Plus de 30 ans d’expérience dans la serrurerie et la construction métallique.</span></li>
+        <li><b>Aujourd’hui</b><span>Une petite entreprise familiale, équipée de machines récentes et performantes.</span></li>
+      </ol>
+      <div class="app">
+        <h3>Deux apprentis en permanence</h3>
+        <p>Pour transmettre leur savoir-faire et leur passion du métier, Joker Metal forme en permanence deux apprentis constructeurs métalliques.</p>
+        <p>Une question sur la formation&nbsp;? <a href="mailto:jokermetal@bluewin.ch?subject=Apprentissage">jokermetal@bluewin.ch</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="offer" id="offres" aria-labelledby="of-t">
+  <div class="wrap">
+    <div>
+      <h2 id="of-t">À saisir</h2>
+      <p class="what">2 panneaux alvéolés en polycarbonate, épaisseur 16&nbsp;mm.</p>
+      <p class="price">Fr.&nbsp;25.–<small> / m² + TVA (8&nbsp;%)</small></p>
+      <p class="fine">Découpe possible. Renseignements : <a href="tel:+41217311951">021&nbsp;731&nbsp;19&nbsp;51</a>.</p>
+    </div>
+    <div class="cote" role="img" aria-label="Panneau de 2000 sur 6000 millimètres">
+      <div class="hdim">6000&nbsp;mm</div>
+      <div class="vdim">2000&nbsp;mm</div>
+      <svg viewBox="0 0 600 200" preserveAspectRatio="none" aria-hidden="true">
+        <defs><pattern id="alv" width="12" height="12" patternUnits="userSpaceOnUse"><rect width="12" height="12" fill="#c9d3d5"/><rect x="0" width="2" height="12" fill="#8e9ca0"/></pattern></defs>
+        <rect x="1" y="1" width="598" height="198" fill="url(#alv)" stroke="#1d2226" stroke-width="2"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="ct-t">
+  <div class="wrap">
+    <h2 id="ct-t">Un devis, une soumission, une question technique.</h2>
+    <dl class="cart">
+      <div class="big"><dt>Téléphone</dt><dd><a href="tel:+41217311951">021&nbsp;731&nbsp;19&nbsp;51</a></dd></div>
+      <div><dt>Mobile</dt><dd><a href="tel:+41792785409">079&nbsp;278&nbsp;54&nbsp;09</a></dd></div>
+      <div><dt>Fax</dt><dd>021&nbsp;731&nbsp;19&nbsp;52</dd></div>
+      <div class="span2"><dt>Atelier</dt><dd>Chemin de Praz-Lau&nbsp;3<br>1033 Cheseaux-sur-Lausanne</dd></div>
+      <div><dt>E-mail</dt><dd><a href="mailto:jokermetal@bluewin.ch">jokermetal@bluewin.ch</a></dd></div>
+    </dl>
+    <div class="cta">
+      <a class="btn" href="mailto:jokermetal@bluewin.ch?subject=Demande%20de%20devis">Écrire à l’atelier</a>
+      <a class="btn alt" href="https://www.google.com/maps/search/?api=1&amp;query=Chemin+de+Praz-Lau+3+1033+Cheseaux-sur-Lausanne" rel="noopener">Itinéraire</a>
+    </div>
+    <p class="note">Joker Metal SA, serrurerie constructions métalliques, Bel-Air.</p>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap"><span>© Joker Metal SA, Cheseaux-sur-Lausanne</span><span>Photos : Joker Metal SA</span></div>
+</footer>
+
+<div class="bar" aria-label="Contact rapide">
+  <a class="call" href="tel:+41217311951">Appeler l’atelier</a>
+  <a class="go" href="mailto:jokermetal@bluewin.ch?subject=Demande%20de%20devis">Devis</a>
+</div>
+</body>
+</html>

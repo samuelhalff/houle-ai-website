@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marbrerie Rossi – marbriers à Carouge, Genève, depuis 1878</title>
+<meta name="description" content="Marbrerie Rossi SA, à Carouge depuis 1878 : marbre, granit et quartz pour salles de bains, cuisines, sols, escaliers, cheminées et extérieurs. Atelier, stock et pose. 022 342 03 42.">
+<!-- Maquette non publiée : retirer cette ligne à la mise en ligne -->
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#eceeed">
+<meta property="og:title" content="Marbrerie Rossi – marbriers à Carouge depuis 1878">
+<meta property="og:description" content="Marbre, granit et quartz : atelier, stock et pose, rue des Moraines à Carouge.">
+<meta property="og:image" content="img/dalles.webp">
+<meta property="og:locale" content="fr_CH">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;700&family=Brygada+1918:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
+<!--
+  DIRECTION (fresh-web-design)
+  Artefact : la tranche de dalle (leurs photos de stock montrent les plaques debout, vues par la tranche) et l'inscription
+  gravée des raisons sociales depuis 1878. Le site est lu par des particuliers qui refont une salle de bains
+  et par des architectes : ils veulent voir la pierre, pas des mots.
+  Couleurs : gris pierre froid (fond), encre anthracite, gris du logo (texte discret), orange du logo (#e5690b) en
+  grande surface (bande contact) avec texte anthracite. Pas de crème/terracotta : le fond est un gris froid.
+  Typo : Brygada 1918 (empattements taillés, lisible en gravure) + Albert Sans (texte).
+  Mise en page : bord gauche fort, photo-tranche de dalles en colonne haute, déroulé « du bloc à la pose » en vraie suite,
+  chronologie des raisons sociales en inscription.
+  Images : leurs photos, affichées sans agrandissement (max. 800 px à l'écran).
+  Mouvement : aucun.
+-->
+<style>
+:root{
+  --bg:#eceeed; --ink:#1d2123; --muted:#4f5558; --line:#cdd2d3; --stone:#dde1e1;
+  --orange:#e5690b; --on-orange:#1d2123; --link:#a8470a;
+  --measure:62ch;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#171a1b; --ink:#eceeed; --muted:#b4babc; --line:#33393b; --stone:#212627; --link:#f08a3c}
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:4.5rem}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 "Albert Sans",sans-serif}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:"Brygada 1918",serif;font-weight:700;line-height:1.1;margin:0;letter-spacing:-.005em}
+p{margin:0 0 1em;max-width:var(--measure)}
+.wrap{max-width:74rem;margin:0 auto;padding:0 1.25rem}
+@media (min-width:56rem){.wrap{padding:0 2.5rem}}
+:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+
+.top{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;gap:1.25rem;height:3.9rem}
+.logo{display:block;height:2.1rem;width:auto;flex:none}
+@media (prefers-color-scheme:dark){.logo{background:#eceeed;padding:.25rem .5rem;border-radius:2px}}
+.top nav{display:none;gap:1.5rem;margin-left:auto;font-weight:500}
+.top nav a{text-decoration:none}
+.top nav a:hover{color:var(--link)}
+.call{margin-left:auto;flex:none;text-decoration:none;font-weight:700;background:var(--orange);color:var(--on-orange);padding:.5rem .9rem;border-radius:2px}
+@media (min-width:56rem){.top nav{display:flex}.call{margin-left:0}}
+
+.hero{display:grid}
+.hero-text{padding:2.25rem 1.25rem 2.5rem}
+.hero h1{font-size:clamp(2.3rem,9vw,4.6rem);max-width:12ch}
+.hero .since{margin:0 0 1rem;font-weight:700;color:var(--link)}
+.hero .lede{font-size:1.25rem;color:var(--muted);margin:1.25rem 0 1.75rem}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;align-items:center}
+.btn{display:inline-block;text-decoration:none;font-weight:700;background:var(--ink);color:var(--bg);padding:.8rem 1.15rem;border-radius:2px}
+.btn:hover{background:var(--orange);color:var(--on-orange)}
+.textlink{font-weight:500;text-decoration-color:var(--orange);text-underline-offset:.25em;text-decoration-thickness:2px}
+.hero figure{margin:0}
+.hero figure img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 40%}
+@media (min-width:56rem){
+  .hero{grid-template-columns:minmax(0,7fr) minmax(0,5fr);min-height:30rem}
+  .hero-text{padding:4rem 3rem 4rem max(2.5rem,calc((100vw - 74rem)/2 + 2.5rem));align-self:center}
+  .hero figure{align-self:center}.hero figure img{height:34rem;aspect-ratio:auto;object-position:50% 50%}
+}
+
+section{padding:3.5rem 0}
+h2{font-size:clamp(1.8rem,5vw,2.9rem);margin-bottom:1rem}
+.split{display:grid;gap:1.75rem}
+@media (min-width:56rem){.split{grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:4rem}.split>:first-child{position:sticky;top:5.5rem;align-self:start}}
+.intro{color:var(--muted)}
+
+/* Du bloc à la pose */
+.steps{list-style:none;margin:0;padding:0;counter-reset:s}
+.steps li{display:grid;grid-template-columns:2.2rem 1fr;gap:.25rem 1rem;padding:1.1rem 0;border-top:1px solid var(--line);counter-increment:s}
+.steps li:last-child{border-bottom:1px solid var(--line)}
+.steps li::before{content:counter(s);font:700 1.5rem/1 "Brygada 1918",serif;color:var(--link);padding-top:.1rem}
+.steps strong{font-size:1.15rem}
+.steps span{display:block;color:var(--muted)}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:2rem}
+.pair img{width:100%;aspect-ratio:4/3;object-fit:cover}
+
+/* Réalisations */
+.work{background:var(--stone)}
+.gal{display:grid;grid-template-columns:1fr 1fr;gap:.75rem;margin-top:2rem}
+.gal figure{margin:0;position:relative}
+.gal img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.gal figcaption{font-weight:500;padding:.5rem 0 0}
+.gal .tall img{aspect-ratio:3/4}
+@media (min-width:48rem){.gal{grid-template-columns:repeat(3,1fr);gap:1.25rem}}
+.cats{margin:2rem 0 0;color:var(--muted)}
+
+/* Histoire */
+.hist{display:grid;gap:2rem}
+@media (min-width:56rem){.hist{grid-template-columns:minmax(0,5fr) minmax(0,5fr);gap:4rem;align-items:start}}
+.hist figure{margin:0}
+.hist img{width:100%;max-width:30rem}
+.hist figcaption{color:var(--muted);font-size:.95rem;margin-top:.5rem}
+.insc{list-style:none;margin:1.5rem 0;padding:0;font-family:"Brygada 1918",serif;font-size:1.2rem}
+.insc li{display:grid;grid-template-columns:4.2rem 1fr;padding:.35rem 0;border-bottom:1px solid var(--line)}
+.insc b{font-weight:700;color:var(--link)}
+.orgs{color:var(--muted);font-size:.98rem}
+
+/* Contact */
+.contact{background:var(--orange);color:var(--on-orange)}
+.contact h2{font-size:clamp(2rem,6vw,3.6rem)}
+.contact .grid{display:grid;gap:2rem}
+@media (min-width:56rem){.contact .grid{grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:4rem;align-items:end}}
+.contact a{font-weight:700;text-underline-offset:.2em}
+.tel{display:block;font:700 clamp(2rem,8vw,3.4rem)/1.1 "Brygada 1918",serif;text-decoration:none;margin-bottom:1rem}
+.contact address{font-style:normal;font-size:1.15rem}
+.contact .btn{background:var(--on-orange);color:#fff}
+.contact .btn:hover{background:#fff;color:var(--on-orange)}
+footer{padding:1.5rem 0;color:var(--muted);font-size:.95rem}
+.preview{display:block;min-height:40px;padding:11px 1rem;background:#0f172a;color:#f8fafc;font:400 14px/18px system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center}
+.preview a{color:#f8fafc;text-decoration:underline;text-underline-offset:2px}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a href="#" aria-label="Marbrerie Rossi, accueil"><img class="logo" src="img/logo.png" width="960" height="188" alt="Marbrerie Rossi, Carouge, depuis 1878"></a>
+    <nav aria-label="Navigation">
+      <a href="#savoir-faire">Savoir-faire</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#histoire">Histoire</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="call" href="tel:+41223420342">022&nbsp;342&nbsp;03&nbsp;42</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" style="padding:0">
+  <div class="hero-text">
+    <p class="since">Carouge, depuis 1878</p>
+    <h1>La pierre, travaillée rue des Moraines.</h1>
+    <p class="lede">Marbre, granit et quartz pour la salle de bains, la cuisine, les sols, les escaliers, la cheminée ou le jardin. De la sélection de la dalle à la pose sur place.</p>
+    <div class="actions">
+      <a class="btn" href="mailto:marbrerierossi@bluewin.ch?subject=Demande%20de%20devis">Demander un devis</a>
+      <a class="textlink" href="#realisations">Voir les réalisations</a>
+    </div>
+  </div>
+  <figure><img src="img/dalles.webp" width="1600" height="1200" alt="Dalles de pierre debout dans le dépôt, vues par la tranche : granits verts, gris et roses"></figure>
+</section>
+
+<section id="savoir-faire">
+  <div class="wrap">
+    <div class="split">
+      <div>
+        <h2>Du bloc à la pose</h2>
+        <p class="intro">Une équipe, un savoir-faire, de l’expérience, une passion. Chaque étape se fait à Carouge ou sur votre chantier.</p>
+      </div>
+      <div>
+        <ol class="steps">
+          <li><div><strong>Sélection</strong><span>Marbres, granits et quartz de qualité.</span></div></li>
+          <li><div><strong>Conseils et devis</strong><span>Conseils, choix, études de projets, devis.</span></div></li>
+          <li><div><strong>Relevés et plans</strong><span>Relevés sur place, plans de fabrication et de pose.</span></div></li>
+          <li><div><strong>Stock</strong><span>Un vaste stock de marbres et de granits dans notre dépôt.</span></div></li>
+          <li><div><strong>Atelier</strong><span>Un atelier, des machines performantes.</span></div></li>
+          <li><div><strong>Fourniture</strong><span>Fourniture à disposition, emballée.</span></div></li>
+          <li><div><strong>Finition</strong><span>Finition des détails, contrôle qualité.</span></div></li>
+          <li><div><strong>Pose sur site</strong><span>Pose par nos équipes, suivi des chantiers.</span></div></li>
+        </ol>
+        <div class="pair">
+          <img src="img/atelier.webp" width="1600" height="1200" alt="Deux ouvriers déplacent une grande plaque de pierre noire avec une ventouse de levage, à l’atelier" loading="lazy">
+          <img src="img/finition.webp" width="1600" height="1200" alt="Un marbrier polit un plan de travail en pierre à l’atelier" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="realisations" class="work">
+  <div class="wrap">
+    <h2>Réalisations</h2>
+    <p class="intro">Quelques chantiers, par type d’ouvrage.</p>
+    <div class="gal">
+      <figure><img src="img/bain.webp" width="1600" height="1200" alt="Baignoire îlot devant un mur en marbre veiné" loading="lazy"><figcaption>Salle de bains</figcaption></figure>
+      <figure><img src="img/plan.webp" width="1600" height="1200" alt="Cuisine avec plan de travail et crédence en pierre claire" loading="lazy"><figcaption>Plan de travail de cuisine</figcaption></figure>
+      <figure><img src="img/piscine.webp" width="1600" height="1200" alt="Piscine bordée de pierre dans un jardin" loading="lazy"><figcaption>Piscines</figcaption></figure>
+      <figure><img src="img/escalier.webp" width="1600" height="1200" alt="Escalier extérieur en pierre grise aux marches arrondies" loading="lazy"><figcaption>Escaliers</figcaption></figure>
+      <figure><img src="img/terrasse.webp" width="1600" height="1200" alt="Terrasse dallée en pierre claire le long d’une haie" loading="lazy"><figcaption>Terrasses</figcaption></figure>
+      <figure><img src="img/cheminee.webp" width="1600" height="1200" alt="Cheminée habillée de pierre sombre dans un salon" loading="lazy"><figcaption>Cheminées</figcaption></figure>
+      <figure><img src="img/sol.webp" width="1600" height="1200" alt="Sol d’entrée en pierre claire avec filet incrusté" loading="lazy"><figcaption>Sols intérieurs</figcaption></figure>
+      <figure><img src="img/revetement.webp" width="1600" height="1200" alt="Habillage mural en marbre vert dans un hall" loading="lazy"><figcaption>Revêtements</figcaption></figure>
+      <figure class="tall"><img src="img/fontaine.webp" width="1200" height="1600" alt="Fontaine en pierre blanche, un canal étroit dans un jardin" loading="lazy"><figcaption>Fontaines</figcaption></figure>
+    </div>
+    <p class="cats">Nous travaillons aussi l’art funéraire.</p>
+  </div>
+</section>
+
+<section id="histoire">
+  <div class="wrap hist">
+    <div>
+      <h2>Une marbrerie à Carouge depuis 1878</h2>
+      <p>En 1951, Louis Rossi, originaire de Poschiavo dans les Grisons, vient à Carouge travailler chez Alfred Minazzi. En 1964, il reprend la marbrerie du 14, rue des Moraines, déjà presque centenaire. Depuis, la marbrerie est sous l’égide de la famille Rossi.</p>
+      <ul class="insc" aria-label="Raisons sociales successives">
+        <li><b>1878</b><span>Bianchi &amp; Jolivet, puis Bianchi, Minazzi &amp; Aulas, Alfred Minazzi</span></li>
+        <li><b>1964</b><span>Rossi &amp; Leuzinger</span></li>
+        <li><b>1968</b><span>Louis Rossi</span></li>
+        <li><b>1985</b><span>L. Rossi &amp; Fils</span></li>
+        <li><b>2010</b><span>Marbrerie Rossi SA</span></li>
+      </ul>
+      <p class="orgs">Membre de la FER Genève, du Second Œuvre genevois, de l’Union genevoise des marbriers et de l’Association romande des métiers de la pierre.</p>
+    </div>
+    <figure>
+      <img src="img/maison-1964.webp" width="1002" height="995" alt="Photographie ancienne de la façade de la marbrerie, rue des Moraines" loading="lazy">
+      <figcaption>La marbrerie, rue des Moraines, sur une photographie d’archives.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap grid">
+    <div>
+      <h2>Parlons de votre projet.</h2>
+      <p style="margin-top:1rem">Décrivez-nous votre salle de bains, votre cuisine ou votre escalier : nous vous répondons avec un devis.</p>
+      <a class="tel" href="tel:+41223420342">022&nbsp;342&nbsp;03&nbsp;42</a>
+      <a class="btn" href="mailto:marbrerierossi@bluewin.ch?subject=Demande%20de%20devis">Écrire à la marbrerie</a>
+    </div>
+    <address>
+      <strong>Marbrerie Rossi SA</strong><br>
+      Rue des Moraines 14<br>
+      1227 Carouge, Genève<br><br>
+      <a href="mailto:marbrerierossi@bluewin.ch">marbrerierossi@bluewin.ch</a><br>
+      Fax&nbsp;: 022&nbsp;342&nbsp;51&nbsp;95<br><br>
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Rue+des+Moraines+14+1227+Carouge">Voir sur la carte</a>
+    </address>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">© Marbrerie Rossi SA, Carouge</div></footer>
+<div class="preview" role="note">Aperçu de votre nouveau site, préparé par&nbsp;<a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Marbrerie Rossi SA","telephone":"+41 22 342 03 42","email":"marbrerierossi@bluewin.ch","image":"img/dalles.webp","address":{"@type":"PostalAddress","streetAddress":"Rue des Moraines 14","postalCode":"1227","addressLocality":"Carouge","addressRegion":"GE","addressCountry":"CH"}}
+</script>
+</body>
+</html>

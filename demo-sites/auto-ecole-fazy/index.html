@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Auto-école Fazy – permis auto et moto à Genève depuis 1994</title>
+<meta name="description" content="Auto-école Fazy, boulevard James-Fazy à Genève, depuis 1994 : permis voiture et moto, premiers secours, sensibilisation, forfaits de leçons, cours 2 phases. 022 731 90 90.">
+<!-- Maquette non publiée : retirer cette ligne à la mise en ligne -->
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#14213f">
+<meta property="og:title" content="Auto-école Fazy – permis auto et moto à Genève">
+<meta property="og:description" content="Passer son permis ? Pensez à Fazy ! Voiture et moto, depuis 1994.">
+<meta property="og:image" content="img/logo.png">
+<meta property="og:locale" content="fr_CH">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800&display=swap" rel="stylesheet">
+<!--
+  DIRECTION (fresh-web-design)
+  Artefact : la plaque « L » de l'élève conducteur (carré bleu) et la voiture-école aux couleurs de la maison.
+  Lecteur : un jeune (ou un parent) qui se demande par où commencer et combien ça coûte. Réponse : la marche à suivre
+  en vraie suite d'étapes, les tarifs publiés en clair, un numéro à appeler.
+  Couleurs : jaune et rouge du logo en surfaces (bandeau d'ouverture, boutons), bleu marine (texte, en-tête où le
+  logo jaune reste lisible), bleu « L » pour les étapes. Pas de dégradés.
+  Typo : Rubik (arrondie comme leur logo), 800 pour les titres.
+  Mise en page : bandeau jaune plein, photo de leur voiture-école en inset (leur photo est petite),
+  étapes en colonne, forfaits en tableau, instructeurs en liste avec leurs spécialités.
+  Mouvement : aucun.
+-->
+<style>
+:root{
+  --bg:#f5f6f9; --ink:#14213f; --muted:#454f68; --line:#d3d8e3; --white:#fff;
+  --yellow:#ffe500; --red:#d4231a; --plate:#1f4fb4; --link:#1f4fb4;
+  --measure:62ch;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#0e1730; --ink:#eef0f6; --muted:#b2b9cb; --line:#2a3658; --link:#8fb0ff}
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:4.5rem}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 "Rubik",sans-serif}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{margin:0;font-weight:800;line-height:1.08}
+p{margin:0 0 1em;max-width:var(--measure)}
+.wrap{max-width:70rem;margin:0 auto;padding:0 1.25rem}
+@media (min-width:56rem){.wrap{padding:0 2.5rem}}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+
+.top{position:sticky;top:0;z-index:10;background:#14213f;color:#fff}
+.top .wrap{display:flex;align-items:center;gap:1rem;height:4rem}
+.top img{width:3rem;height:3rem;flex:none}
+.top .brand{display:none;font-weight:800;text-decoration:none;font-size:1.05rem;line-height:1.1}
+.top nav{display:none;gap:1.5rem;margin-left:auto;font-weight:500}
+.top nav a{text-decoration:none}
+.top nav a:hover{text-decoration:underline;text-underline-offset:.25em}
+.call{margin-left:auto;flex:none;text-decoration:none;font-weight:700;background:var(--red);color:#fff;padding:.5rem .85rem;border-radius:6px;white-space:nowrap}
+@media (min-width:40rem){.top .brand{display:block}}
+@media (min-width:56rem){.top nav{display:flex}.call{margin-left:1rem}}
+
+.hero{background:var(--yellow);color:#14213f}
+.hero .wrap{display:grid;gap:1.5rem;padding-top:2rem;padding-bottom:2.5rem}
+.hero h1{font-size:clamp(2.4rem,9.5vw,5rem);max-width:13ch}
+.hero .lede{font-size:1.25rem;font-weight:500;margin:1rem 0 1.5rem;max-width:34ch}
+.hero .photo{display:none}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem 1.25rem;align-items:center}
+.btn{display:inline-block;text-decoration:none;font-weight:700;background:var(--red);color:#fff;padding:.85rem 1.25rem;border-radius:6px}
+.btn:hover{background:#14213f}
+.btn.alt{background:#14213f}
+.btn.alt:hover{background:var(--red)}
+.perm{font-weight:500;margin:1.25rem 0 0}
+@media (min-width:48rem){
+  .hero .wrap{grid-template-columns:minmax(0,1fr) 13.5rem;gap:3rem;align-items:center;padding-top:3rem;padding-bottom:3rem}
+  .hero .photo{display:block}
+  .hero .photo img{width:100%;border-radius:6px}
+}
+.hero .photo-m{width:9rem;border-radius:6px}
+@media (min-width:48rem){.hero .photo-m{display:none}}
+
+.offres{background:#14213f;color:#fff}
+.offres .wrap{display:grid;gap:.4rem 3rem;padding-top:1.1rem;padding-bottom:1.1rem}
+.offres p{margin:0;font-weight:500}
+.offres b{color:var(--yellow);font-weight:800}
+@media (min-width:48rem){.offres .wrap{grid-template-columns:auto auto;justify-content:start}}
+
+section{padding:3.5rem 0}
+h2{font-size:clamp(1.8rem,5vw,2.8rem);margin-bottom:1.25rem}
+.sub{color:var(--muted);margin-bottom:2rem}
+
+/* Marche à suivre */
+.steps{list-style:none;margin:0;padding:0;counter-reset:s;max-width:46rem}
+.steps li{position:relative;padding:0 0 1.6rem 3.6rem;counter-increment:s}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:2.5rem;height:2.5rem;background:var(--plate);color:#fff;font-weight:800;font-size:1.25rem;display:grid;place-items:center;border-radius:4px}
+.steps li::after{content:"";position:absolute;left:1.2rem;top:2.7rem;bottom:.2rem;width:2px;background:var(--line)}
+.steps li:last-child::after{display:none}
+.steps h3{font-size:1.2rem;margin-bottom:.15rem}
+.steps .price{display:block;font-size:1rem;color:var(--plate)}
+@media (prefers-color-scheme:dark){.steps .price{color:var(--yellow)}}
+.steps p{margin:0;color:var(--muted)}
+.price{white-space:nowrap;font-weight:700;color:var(--ink)}
+
+/* Forfaits */
+.tarifs{background:var(--white);color:#14213f}
+@media (prefers-color-scheme:dark){.tarifs{background:#16224a;color:#eef0f6}}
+.cols{display:grid;gap:2.5rem}
+@media (min-width:56rem){.cols{grid-template-columns:1fr 1fr;gap:4rem}}
+table{border-collapse:collapse;width:100%}
+th,td{text-align:left;padding:.65rem 0;border-bottom:1px solid var(--line);font-weight:500}
+td:last-child,th:last-child{text-align:right;white-space:nowrap}
+td small{display:block;color:var(--muted);font-weight:400}
+tbody th{font-weight:500}
+caption{text-align:left;font-weight:800;font-size:1.3rem;padding-bottom:.5rem}
+.notes{margin:1.25rem 0 0;padding:0;list-style:none;color:var(--muted)}
+.notes li{margin-bottom:.35rem}
+.tarifs .notes{color:inherit;opacity:.85}
+
+/* Instructeurs */
+.team{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.team li{display:grid;grid-template-columns:7.5rem 1fr;gap:1.25rem;padding:1.25rem 0;border-top:1px solid var(--line);align-items:start}
+.team li:last-child{border-bottom:1px solid var(--line)}
+.team img{width:100%;aspect-ratio:3/4;object-fit:cover;object-position:50% 30%;border-radius:6px}
+.team .nophoto{display:block}
+.team h3{font-size:1.25rem;margin-bottom:.2rem}
+.team p{margin:0 0 .35rem;color:var(--muted)}
+.team .tel{color:var(--ink);font-weight:700;text-underline-offset:.2em}
+@media (min-width:48rem){.team{grid-template-columns:1fr 1fr;column-gap:3rem}.team li:nth-last-child(2):nth-child(odd){border-bottom:1px solid var(--line)}}
+
+.contact{background:#14213f;color:#fff}
+.contact .grid{display:grid;gap:2rem}
+@media (min-width:56rem){.contact .grid{grid-template-columns:1fr 1fr;gap:4rem}}
+.contact h2{color:var(--yellow)}
+.contact a{text-underline-offset:.2em}
+.bigtel{display:block;font-size:clamp(2rem,9vw,3.2rem);font-weight:800;color:var(--yellow);text-decoration:none;line-height:1.1;margin-bottom:.75rem}
+address{font-style:normal;margin-bottom:1.25rem}
+.contact h3{font-size:1.1rem;margin-bottom:.35rem}
+footer{padding:1.25rem 0;color:var(--muted);font-size:.95rem}
+.preview{display:block;min-height:40px;padding:11px 1rem;background:#0f172a;color:#f8fafc;font:400 14px/18px system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center}
+.preview a{color:#f8fafc;text-decoration:underline;text-underline-offset:2px}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <img src="img/logo.png" width="391" height="386" alt="Logo de l’auto-école Fazy">
+    <a class="brand" href="#">Auto-école Fazy<br><span style="font-weight:400;font-size:.85rem">Genève, depuis 1994</span></a>
+    <nav aria-label="Navigation">
+      <a href="#permis">Le chemin vers le permis</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#instructeurs">Instructeurs</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="call" href="tel:+41227319090">022&nbsp;731&nbsp;90&nbsp;90</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" style="padding:0">
+  <div class="wrap">
+    <div>
+      <h1>Passer son permis&nbsp;? Pensez à Fazy&nbsp;!</h1>
+      <p class="lede">Auto et moto, à Genève depuis 1994. Premiers secours, sensibilisation, leçons de conduite et préparation à l’examen.</p>
+      <div class="actions">
+        <a class="btn" href="tel:+41227319090">Appeler le 022&nbsp;731&nbsp;90&nbsp;90</a>
+        <a class="btn alt" href="mailto:info@autoecolefazy.ch">Écrire</a>
+      </div>
+      <p class="perm">Permanence téléphonique tous les jours, de 8h à 20h.</p>
+    </div>
+    <div class="photo"><img src="img/selim.webp" width="446" height="593" alt="Un instructeur devant une voiture-école aux couleurs de l’auto-école Fazy"></div>
+  </div>
+</section>
+
+<div class="offres"><div class="wrap">
+  <p><b>Forfait</b> sensibilisation + 5&nbsp;leçons de conduite&nbsp;: <b>480&nbsp;CHF</b></p>
+  <p><b>Premiers secours</b> à <b>89&nbsp;CHF</b> au lieu de 99&nbsp;CHF</p>
+</div></div>
+
+<section id="permis">
+  <div class="wrap">
+    <h2>Le chemin vers le permis</h2>
+    <p class="sub">Catégories A1 et A (moto) ou B (voiture) : les étapes, dans l’ordre.</p>
+    <ol class="steps">
+      <li><h3>Cours de premiers secours <span class="price">99&nbsp;CHF</span></h3><p>Suivi dans notre auto-école ; une attestation, valable 6&nbsp;ans, vous est remise à la fin.</p></li>
+      <li><h3>Examen de la vue <span class="price">20&nbsp;CHF</span></h3><p>Chez un opticien ou un médecin agréé. L’attestation ne doit pas dater de plus de 24&nbsp;mois.</p></li>
+      <li><h3>Permis d’élève conducteur</h3><p>À l’Office cantonal des automobiles et de la navigation, à Carouge, avec le formulaire, l’attestation de vue, une photo, une pièce d’identité et l’attestation de premiers secours. Vous pouvez vous inscrire en même temps à l’examen de théorie (70&nbsp;CHF).</p></li>
+      <li><h3>Théorie</h3><p>Cours de théorie privé à 60&nbsp;CHF l’heure. Vous pouvez aussi réviser gratuitement dans nos locaux, sur nos iPads, aux heures d’ouverture.</p></li>
+      <li><h3>Examen de théorie</h3><p>En cas de réussite, le permis d’élève vous est remis (90&nbsp;CHF) : vous pouvez commencer les cours pratiques.</p></li>
+      <li><h3>Cours pratiques et sensibilisation <span class="price">90&nbsp;CHF</span></h3><p>Leçons de conduite en voiture ou en moto-scooter, et cours de sensibilisation à la circulation.</p></li>
+      <li><h3>Examen pratique <span class="price">120&nbsp;CHF voiture · 90&nbsp;CHF moto</span></h3><p>Nous présentons et accompagnons nos élèves avec le véhicule des leçons ; vous pouvez aussi venir avec le vôtre.</p></li>
+      <li><h3>Cours 2&nbsp;phases</h3><p>Une journée obligatoire à effectuer dans l’année qui suit l’examen pratique.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="tarifs" class="tarifs">
+  <div class="wrap">
+    <h2>Tarifs des cours</h2>
+    <div class="cols">
+      <div>
+        <table>
+          <caption>Leçons de conduite en voiture</caption>
+          <tbody>
+            <tr><th scope="row">1 leçon (50&nbsp;min)</th><td>95&nbsp;CHF</td></tr>
+            <tr><th scope="row">Double leçon (100&nbsp;min)<small style="font-weight:400">85&nbsp;CHF par leçon</small></th><td>170&nbsp;CHF</td></tr>
+            <tr><th scope="row">Forfait 5&nbsp;leçons<small style="font-weight:400">80&nbsp;CHF par leçon</small></th><td>400&nbsp;CHF</td></tr>
+            <tr><th scope="row">Forfait 10&nbsp;leçons<small style="font-weight:400">75&nbsp;CHF par leçon</small></th><td>750&nbsp;CHF</td></tr>
+            <tr><th scope="row">Forfait 20&nbsp;leçons<small style="font-weight:400">70&nbsp;CHF par leçon</small></th><td>1400&nbsp;CHF</td></tr>
+            <tr><th scope="row">Présentation à l’examen pratique</th><td>180&nbsp;CHF</td></tr>
+          </tbody>
+        </table>
+        <ul class="notes">
+          <li>Boîte manuelle ou automatique, remorque (BE), course de contrôle pour personnes âgées et étrangères.</li>
+          <li>Les rendez-vous se prennent par téléphone, WhatsApp ou SMS, directement avec l’instructeur de votre choix.</li>
+        </ul>
+      </div>
+      <div>
+        <table>
+          <caption>Autres cours</caption>
+          <tbody>
+            <tr><th scope="row">Premiers secours</th><td>99&nbsp;CHF</td></tr>
+            <tr><th scope="row">Sensibilisation</th><td>90&nbsp;CHF</td></tr>
+            <tr><th scope="row">Théorie, révision sur iPad</th><td>Gratuit</td></tr>
+            <tr><th scope="row">Moto-scooter, 4&nbsp;heures</th><td>120&nbsp;CHF</td></tr>
+            <tr><th scope="row">Moto-scooter, 12&nbsp;heures</th><td>330&nbsp;CHF</td></tr>
+            <tr><th scope="row">Moto-scooter, initiation ou préparation à l’examen</th><td>170&nbsp;CHF</td></tr>
+          </tbody>
+        </table>
+        <ul class="notes">
+          <li>Éducation routière pour conducteurs récidivistes (CER) et cours 2&nbsp;phases : nous contacter.</li>
+          <li>Le paiement des cours se fait sur place, en espèces.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="instructeurs">
+  <div class="wrap">
+    <h2>Vos instructeurs</h2>
+    <p class="sub">Choisissez votre instructeur et prenez rendez-vous directement avec lui.</p>
+    <ul class="team">
+      <li><img src="img/selim.webp" width="446" height="593" alt="Selim Talib Corpataux devant une voiture-école" loading="lazy"><div><h3>Selim Talib Corpataux</h3><p>Voiture manuelle et automatique, moto-scooter. Instructeur de camps junior au TCS. Cours CER, théorie, sensibilisation. Français, anglais, italien, poschiavino.</p><a class="tel" href="tel:+41792722231">079&nbsp;272&nbsp;22&nbsp;31</a></div></li>
+      <li><img src="img/maude.webp" width="300" height="533" alt="Maude Ramazzina à la portière de sa voiture-école" loading="lazy"><div><h3>Maude Ramazzina</h3><p>Monitrice de conduite avec brevet fédéral, instructrice des premiers secours BLS-AED. Voiture automatique et manuelle, théorie, sensibilisation.</p><a class="tel" href="tel:+41795425374">079&nbsp;542&nbsp;53&nbsp;74</a></div></li>
+      <li><img src="img/vincent.webp" width="667" height="1000" alt="Vincent Gaillard devant une voiture-école rouge" loading="lazy"><div><h3>Vincent Gaillard</h3><p>Moniteur de conduite avec brevet fédéral. Voiture manuelle et automatique, cours CER, théorie, sensibilisation.</p><a class="tel" href="tel:+41794295455">079&nbsp;429&nbsp;54&nbsp;55</a></div></li>
+      <li><div class="nophoto"></div><div><h3>Michael Iline</h3><p>Moniteur de conduite avec brevet fédéral. Voiture manuelle et automatique, théorie, sensibilisation. Français, anglais, russe.</p><a class="tel" href="tel:+41787465159">078&nbsp;746&nbsp;51&nbsp;59</a></div></li>
+      <li><img src="img/thierry.webp" width="750" height="1000" alt="Thierry Bruchez appuyé contre une voiture jaune" loading="lazy"><div><h3>Thierry Bruchez</h3><p>Moniteur de conduite avec brevet fédéral. Voiture manuelle et automatique, moto-scooter, cours CER, théorie, sensibilisation. Français, anglais, espagnol.</p><a class="tel" href="tel:+41786794934">078&nbsp;679&nbsp;49&nbsp;34</a></div></li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap grid">
+    <div>
+      <h2>Nous joindre</h2>
+      <a class="bigtel" href="tel:+41227319090">022&nbsp;731&nbsp;90&nbsp;90</a>
+      <address>
+        <strong>Auto-école Fazy</strong><br>
+        Boulevard James-Fazy 3<br>
+        1201 Genève<br>
+        <a href="mailto:info@autoecolefazy.ch">info@autoecolefazy.ch</a>
+      </address>
+      <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Boulevard+James-Fazy+3+1201+Gen%C3%A8ve">Plan d’accès</a>
+    </div>
+    <div>
+      <h3>Bureau</h3>
+      <p>Lundi – jeudi, de 17h à 19h, ou sur rendez-vous.</p>
+      <h3>Permanence téléphonique</h3>
+      <p>Tous les jours, de 8h à 20h.</p>
+    </div>
+  </div>
+</section>
+</main>
+<footer><div class="wrap">© Auto-école Fazy, Genève</div></footer>
+<div class="preview" role="note">Aperçu de votre nouveau site, préparé par&nbsp;<a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"DrivingSchool","name":"Auto-école Fazy","telephone":"+41 22 731 90 90","email":"info@autoecolefazy.ch","logo":"img/logo.png","address":{"@type":"PostalAddress","streetAddress":"Boulevard James-Fazy 3","postalCode":"1201","addressLocality":"Genève","addressRegion":"GE","addressCountry":"CH"}}
+</script>
+</body>
+</html>

@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Centres ophtalmologiques de Genève – Rive, Cornavin, Lancy, Meyrin, Versoix</title>
+<meta name="description" content="Six centres ophtalmologiques à Genève, Lancy, Meyrin et Versoix : 37 ophtalmologues, orthoptistes et optométristes. Rendez-vous en ligne, urgences, Geneva Dry Eye Clinic. Tél. 022 959 75 75.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f3f6f8">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Centres ophtalmologiques de Genève">
+<meta property="og:description" content="Rive, Gare Cornavin, Lancy Pont-Rouge, Meyrin et Versoix : rendez-vous en ligne et urgences ophtalmologiques.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:locale" content="fr_CH">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;1,6..72,500&family=Albert+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<!--
+  DESIGN NOTES (houle.ai mock-up, 2026-10-29)
+  Artefacts: the eye chart (lines of letters that shrink), the appointment slot, the façade of each centre.
+  Colours: the blue of their logo (#0078b2) for links and the letter-chart; the red used for "Urgences"
+  as the only full-bleed surface; pale clinical grey for the page. No decorative colour.
+  Type: Newsreader (calm, readable serif) for statements, Albert Sans for the chart, labels and data.
+  Signature: the centres are listed as an eye chart, each line smaller than the last, and every line is
+  a real link to that centre. The temporarily closed centre is the smallest line.
+  Motion: none. Photography: their own centre photos (416 px), shown at 200 px so they stay sharp.
+-->
+<style>
+:root{
+  --bg:#f3f6f8; --paper:#fbfcfd; --ink:#15222c; --muted:#47565f; --rule:#c4d0d8;
+  --blue:#00628f; --blue-logo:#0078b2; --red:#c71f12; --on-red:#fff4f2;
+  --display:"Newsreader",Georgia,serif; --text:"Albert Sans",system-ui,sans-serif;
+  --gutter:clamp(16px,5vw,56px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.58 var(--text);padding-bottom:calc(66px + env(safe-area-inset-bottom))}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--blue);text-underline-offset:.18em}
+:focus-visible{outline:3px solid var(--blue-logo);outline-offset:3px}
+.wrap{max-width:1160px;margin-inline:auto;padding-inline:var(--gutter)}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.08;margin:0}
+p{margin:0 0 1em;max-width:62ch}
+
+.preview{padding:11px 16px;background:#0f172a;color:#f8fafc;font:400 14px/1.35 system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center}
+.preview a{color:#f8fafc;text-decoration:underline;padding:14px 2px}
+
+.top{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-block:14px}
+.top img{width:min(230px,58vw);height:auto}
+.top nav{display:none}
+.top .right{display:flex;align-items:center;gap:14px}
+.top .tel{font:700 1.1rem/1 var(--text);color:var(--ink);text-decoration:none;white-space:nowrap}
+.top .urg{display:none}
+@media(min-width:980px){
+  .top nav{display:flex;gap:24px}
+  .top nav a{color:var(--ink);text-decoration:none;font-weight:500;padding:8px 0;border-bottom:2px solid transparent}
+  .top nav a:hover{border-color:var(--blue-logo)}
+  .top .urg{display:inline-block;color:var(--red);font-weight:700;text-decoration:none}
+}
+.btn{display:inline-flex;align-items:center;padding:14px 22px;background:var(--blue);color:#fff;font:700 1rem/1 var(--text);text-decoration:none;min-height:48px;border-radius:999px}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.btn.red{background:var(--red)}
+.btn.white{background:#fff;color:var(--red)}
+.btn:hover{filter:brightness(.94)}
+
+/* Hero : tableau optométrique */
+.hero .wrap{display:grid;gap:34px;padding-block:28px 52px}
+.hero h1{font-size:clamp(2.2rem,8vw,3.6rem);max-width:17ch}
+.hero .lede{font-size:1.15rem;margin:18px 0 24px;max-width:44ch}
+.hero .acts{display:flex;flex-wrap:wrap;gap:12px}
+.chart{margin:0;padding:22px 0 0;list-style:none;border-top:2px solid var(--ink);display:grid;gap:6px;font-family:var(--text);font-weight:800;text-transform:uppercase;letter-spacing:.1em;line-height:1.05}
+.chart a{color:var(--ink);text-decoration:none;display:block}
+.chart a:hover{color:var(--blue)}
+.chart li:nth-child(1){font-size:clamp(3.4rem,15vw,6.4rem);letter-spacing:.14em}
+.chart li:nth-child(2){font-size:clamp(2.2rem,9.5vw,4rem)}
+.chart li:nth-child(3){font-size:clamp(1.6rem,6.8vw,2.9rem)}
+.chart li:nth-child(4){font-size:clamp(1.2rem,5vw,2.1rem)}
+.chart li:nth-child(5){font-size:clamp(.95rem,3.6vw,1.5rem)}
+.chart li:nth-child(6){font-size:.78rem;letter-spacing:.08em;font-weight:500;color:var(--muted);text-transform:none;margin-top:6px}
+@media(min-width:980px){.hero .wrap{grid-template-columns:1fr 1fr;gap:80px;align-items:center;padding-block:48px 72px}}
+
+/* Urgences */
+.urgences{background:var(--red);color:var(--on-red)}
+.urgences .wrap{display:grid;gap:18px;padding-block:34px}
+.urgences h2{font-size:clamp(2rem,7vw,3rem);color:#fff}
+.urgences p{max-width:46ch;margin:0 0 8px}
+.urgences .num{font:800 clamp(2rem,9vw,3rem)/1 var(--text);color:#fff;text-decoration:none}
+@media(min-width:980px){.urgences .wrap{grid-template-columns:1fr 1fr;align-items:center;gap:80px;padding-block:44px}}
+
+.s{padding-block:clamp(48px,8vw,88px)}
+.s h2{font-size:clamp(2rem,7.5vw,3.3rem);margin-bottom:12px}
+.sub{color:var(--muted);max-width:58ch;margin-bottom:30px}
+
+/* centres */
+.centres{display:grid;gap:0;border-top:2px solid var(--ink)}
+.centre{display:grid;grid-template-columns:132px 1fr;gap:18px;padding:22px 0;border-bottom:1px solid var(--rule);scroll-margin-top:12px}
+.centre img{width:132px;height:auto}
+.centre h3{font-size:1.7rem;margin-bottom:4px}
+.centre address{font-style:normal;color:var(--muted);margin-bottom:8px}
+.centre .hr{margin:0 0 10px;font-size:.98rem}
+.centre .acts{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center}
+.centre .acts .btn{padding:11px 18px;min-height:44px}
+.centre a.t{font-weight:700;color:var(--ink);text-decoration:none;white-space:nowrap}
+.centre .note{margin:0 0 8px;padding:10px 12px;background:#e6eef3;font-size:.96rem;max-width:none}
+@media(min-width:620px){.centre{grid-template-columns:200px 1fr;gap:26px}.centre img{width:200px}}
+@media(min-width:980px){.centres{grid-template-columns:1fr 1fr;column-gap:64px}}
+
+/* dry eye */
+.dry{background:var(--paper)}
+.dry .wrap{display:grid;gap:34px}
+.steps{margin:0;padding:0;list-style:none;display:grid;gap:0}
+.steps li{display:grid;grid-template-columns:5rem 1fr;gap:14px;padding:12px 0;border-top:1px solid var(--rule)}
+.steps b{font:800 1.2rem/1.3 var(--text);color:var(--blue)}
+.tarif{margin:22px 0 0;padding:16px 18px;box-shadow:inset 0 0 0 2px var(--ink);display:grid;grid-template-columns:auto 1fr;gap:6px 18px}
+.tarif span{color:var(--muted)}
+.tarif b{font-weight:800}
+@media(min-width:980px){.dry .wrap{grid-template-columns:1fr 1fr;gap:80px}}
+
+/* infos */
+.cols{display:grid;gap:34px}
+.cols h3{font-size:1.7rem;margin-bottom:8px}
+.cols ul{margin:0;padding-left:1.1em}
+.cols li{margin:.3em 0}
+@media(min-width:980px){.cols{grid-template-columns:repeat(3,1fr);gap:56px}}
+
+footer{padding-block:28px;color:var(--muted);font-size:.93rem;border-top:1px solid var(--rule)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:space-between}
+
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px 12px calc(8px + env(safe-area-inset-bottom));background:var(--bg);border-top:1px solid var(--rule)}
+.bar .btn{justify-content:center;padding:14px 8px}
+@media(min-width:980px){.bar{display:none}body{padding-bottom:0}}
+</style>
+</head>
+<body>
+<div class="preview" role="note">Aperçu de votre nouveau site, préparé par <a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
+
+<header class="wrap top">
+  <a href="#"><img src="logo.svg" width="389" height="61" alt="Centre ophtalmologique de Rive"></a>
+  <nav aria-label="Navigation">
+    <a href="#centres">Nos centres</a>
+    <a href="#dry-eye">Dry Eye Clinic</a>
+    <a href="#infos">Informations</a>
+  </nav>
+  <div class="right">
+    <a class="urg" href="#urgences">Urgences</a>
+    <a class="tel" href="tel:+41229597575">022&nbsp;959&nbsp;75&nbsp;75</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Six centres ophtalmologiques à Genève et alentours.</h1>
+      <p class="lede">37 ophtalmologues, orthoptistes et optométristes prennent soin de vos yeux, avec l’infrastructure nécessaire au diagnostic et au traitement médico-chirurgical d’un grand nombre de pathologies oculaires.</p>
+      <div class="acts">
+        <a class="btn" href="#centres">Prendre rendez-vous en ligne</a>
+        <a class="btn ghost" href="tel:+41229597575">Appeler</a>
+      </div>
+    </div>
+    <ol class="chart" aria-label="Nos centres">
+      <li><a href="#rive">Rive</a></li>
+      <li><a href="#cornavin">Cornavin</a></li>
+      <li><a href="#lancy">Lancy</a></li>
+      <li><a href="#vergers">Meyrin</a></li>
+      <li><a href="#versoix">Versoix</a></li>
+      <li><a href="#latour">Meyrin – La Tour : fermé provisoirement</a></li>
+    </ol>
+  </div>
+</section>
+
+<section class="urgences" id="urgences">
+  <div class="wrap">
+    <div>
+      <h2>Urgences ophtalmologiques, sur rendez-vous.</h2>
+      <p>Au Centre de Rive, du lundi au vendredi de 8&nbsp;h à 19&nbsp;h (18&nbsp;h en juillet et août), et le samedi de 9&nbsp;h à 13&nbsp;h. Rue Pierre-Fatio&nbsp;15, 1204 Genève.</p>
+    </div>
+    <div>
+      <p>Permanence téléphonique 24&nbsp;h sur 24, 7&nbsp;jours sur 7.</p>
+      <a class="num" href="tel:+41229597565">022&nbsp;959&nbsp;75&nbsp;65</a>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="centres">
+  <div class="wrap">
+    <h2>Nos centres.</h2>
+    <p class="sub">Pour un rendez-vous avec un médecin qui n’est pas listé en ligne, appelez le centre concerné.</p>
+    <div class="centres">
+      <article class="centre" id="rive">
+        <img src="rive.webp" width="416" height="526" alt="Façade vitrée du Centre de Rive" loading="lazy">
+        <div>
+          <h3>Rive</h3>
+          <address>Rue Pierre-Fatio&nbsp;15<br>1204 Genève</address>
+          <p class="hr">Lundi – vendredi, 8&nbsp;h – 18&nbsp;h. Le créneau 18&nbsp;h – 19&nbsp;h est réservé aux urgences.</p>
+          <div class="acts"><a class="btn" href="https://www.onedoc.ch/fr/ophtalmologue/geneve/pczxu/centre-ophtalmologique-rive">Rendez-vous en ligne</a><a class="t" href="tel:+41229597575">022&nbsp;959&nbsp;75&nbsp;75</a></div>
+        </div>
+      </article>
+      <article class="centre" id="cornavin">
+        <img src="cornavin.webp" width="416" height="527" alt="La gare de Genève Cornavin, à côté du centre" loading="lazy">
+        <div>
+          <h3>Gare Cornavin</h3>
+          <address>Place Cornavin&nbsp;7<br>1201 Genève</address>
+          <p class="hr">Lundi – vendredi, 8&nbsp;h – 18&nbsp;h.</p>
+          <div class="acts"><a class="btn" href="https://www.onedoc.ch/fr/ophtalmologue/geneve/pcwof/gare-cornavin-onedoc">Rendez-vous en ligne</a><a class="t" href="tel:+41229597574">022&nbsp;959&nbsp;75&nbsp;74</a></div>
+        </div>
+      </article>
+      <article class="centre" id="lancy">
+        <img src="lancy.webp" width="416" height="526" alt="Quartier de Pont-Rouge à Lancy" loading="lazy">
+        <div>
+          <h3>Lancy Pont-Rouge</h3>
+          <address>Place de Pont-Rouge&nbsp;5<br>1212 Grand-Lancy</address>
+          <p class="hr">Lundi – vendredi, 8&nbsp;h – 17&nbsp;h.</p>
+          <div class="acts"><a class="btn" href="https://www.onedoc.ch/fr/ophtalmologue/lancy/pczxt/centre-ophtalmologique-pont-rouge">Rendez-vous en ligne</a><a class="t" href="tel:+41229597576">022&nbsp;959&nbsp;75&nbsp;76</a></div>
+        </div>
+      </article>
+      <article class="centre" id="vergers">
+        <img src="vergers.webp" width="416" height="527" alt="Immeuble du quartier des Vergers à Meyrin" loading="lazy">
+        <div>
+          <h3>Meyrin-Vergers</h3>
+          <address>Place de la Diversité&nbsp;7<br>1217 Meyrin</address>
+          <p class="hr">Lundi – vendredi, 8&nbsp;h – 17&nbsp;h.</p>
+          <div class="acts"><a class="btn" href="https://www.onedoc.ch/fr/ophtalmologue/meyrin/pczxs/centre-ophtalmologique-meyrin">Rendez-vous en ligne</a><a class="t" href="tel:+41229597577">022&nbsp;959&nbsp;75&nbsp;77</a></div>
+        </div>
+      </article>
+      <article class="centre" id="versoix">
+        <img src="versoix.webp" width="416" height="484" alt="Immeuble Le Boléro à Versoix" loading="lazy">
+        <div>
+          <h3>Versoix</h3>
+          <address>Chemin Jean-Baptiste-Vandelle&nbsp;8, Immeuble Le Boléro, 3<sup>e</sup>&nbsp;étage<br>1290 Versoix</address>
+          <p class="hr">Lundi – vendredi, 8&nbsp;h – 17&nbsp;h.</p>
+          <div class="acts"><a class="btn" href="tel:+41229597575">Prendre rendez-vous</a><a class="t" href="tel:+41229597575">022&nbsp;959&nbsp;75&nbsp;75</a></div>
+        </div>
+      </article>
+      <article class="centre" id="latour">
+        <img src="latour.webp" width="416" height="527" alt="Bâtiment de l’Hôpital de La Tour" loading="lazy">
+        <div>
+          <h3>Meyrin – La Tour</h3>
+          <address>Hôpital de La Tour, bâtiment B11, 1<sup>er</sup>&nbsp;étage<br>Rue de Veyrot&nbsp;39, 1217 Meyrin</address>
+          <p class="note">Fermeture provisoire. Rendez-vous au Centre de Meyrin-Vergers, à 100&nbsp;m (tram 18, arrêt Hôpital de La Tour).</p>
+          <div class="acts"><a class="t" href="tel:+41229597577">022&nbsp;959&nbsp;75&nbsp;77</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="s dry" id="dry-eye">
+  <div class="wrap">
+    <div>
+      <h2>Geneva Dry Eye Clinic.</h2>
+      <p class="sub" style="margin-bottom:16px">Yeux secs, fatigués, rouges ou irrités&nbsp;? Ce sont des symptômes très fréquents, dont la cause est souvent liée à un problème de larmes et de paupières.</p>
+      <p>Le traitement IPL (Intense Pulsed Light) utilise une lumière pulsée intense, adaptée aux paupières. Il est proposé au Centre de Rive, au 6<sup>e</sup>&nbsp;étage.</p>
+      <p><strong>Rendez-vous&nbsp;:</strong> du lundi au vendredi, 9&nbsp;h – 18&nbsp;h (sauf le mercredi), au <a href="tel:+41229597575">022&nbsp;959&nbsp;75&nbsp;75</a> ou <a href="tel:+41229597521">022&nbsp;959&nbsp;75&nbsp;21</a>.</p>
+    </div>
+    <div>
+      <ol class="steps">
+        <li><b>30&nbsp;min</b><span>Bilan initial et première séance IPL.</span></li>
+        <li><b>15&nbsp;min</b><span>Deuxième séance, avec action manuelle indolore sur les glandes lacrymales.</span></li>
+        <li><b>15&nbsp;min</b><span>Troisième séance.</span></li>
+        <li><b>15&nbsp;min</b><span>Quatrième séance.</span></li>
+        <li><b>Bilan</b><span>Un bilan final permet de constater objectivement l’amélioration.</span></li>
+      </ol>
+      <div class="tarif"><span>Forfait 4 séances IPL</span><b>600&nbsp;CHF</b><span>Bilan initial</span><b>pris en charge par l’assurance de base</b><span>Bilan final</span><b>offert</b></div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="infos">
+  <div class="wrap cols">
+    <div>
+      <h3>Pathologies et solutions</h3>
+      <p>Des vidéos d’information présentent les pathologies rencontrées et nos interventions&nbsp;:</p>
+      <ul><li>Qu’est-ce que la cataracte&nbsp;?</li><li>Myopie</li><li>Glaucome, iridotomie</li><li>Injections intravitréennes</li><li>Rétine, angiographie fluorescéinique</li><li>Examen rétinien Optomap</li><li>Chalazion de la paupière</li><li>Hémorragie sous-conjonctivale</li></ul>
+    </div>
+    <div>
+      <h3>L’équipe</h3>
+      <p>Les six centres réunissent 37 ophtalmologues, orthoptistes et optométristes. Les centres sont certifiés «&nbsp;établissements de formation postgraduée&nbsp;».</p>
+    </div>
+    <div>
+      <h3>Contact</h3>
+      <p>Siège et prise de rendez-vous&nbsp;:<br><a href="tel:+41229597575"><strong>022&nbsp;959&nbsp;75&nbsp;75</strong></a></p>
+      <p>Centre de Rive<br>Rue Pierre-Fatio&nbsp;15, 1204 Genève</p>
+      <p><a href="https://www.google.com/maps/search/?api=1&amp;query=Rue+Pierre-Fatio+15+1204+Gen%C3%A8ve">Itinéraire vers le Centre de Rive</a></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Centres ophtalmologiques de Genève</span>
+    <span>Maquette préparée par <a href="https://houle.ai/fr/products/chat-website/">houle.ai</a> · ce site n’est pas en ligne</span>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="btn" href="#centres">Rendez-vous</a>
+  <a class="btn red" href="tel:+41229597565">Urgences</a>
+</div>
+</body>
+</html>

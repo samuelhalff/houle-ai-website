@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JOUX SA – Constructions métalliques au Mont-sur-Lausanne</title>
+<meta name="description" content="Escaliers, façades, garde-corps, charpentes et tôlerie en acier, inox et aluminium. Entreprise familiale depuis 1922, au Mont-sur-Lausanne et à Bulle. Tél. 021 624 82 83.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#e8e9e8">
+<meta property="og:type" content="website">
+<meta property="og:title" content="JOUX SA – Constructions métalliques">
+<meta property="og:description" content="Entreprise familiale depuis 1922 : acier, inox, aluminium, tôlerie, montage et levage.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:locale" content="fr_CH">
+<link rel="icon" href="logo.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+<!--
+  DESIGN NOTES (houle.ai mock-up, 2026-10-29)
+  Artefacts: the steel section and the maker's stamp; the stair, the balustrade, the glazed screen.
+  Colours: logo red-orange as a full-bleed surface (the "projet" band) and as the stamp colour; concrete
+  grey for the page, mill-scale charcoal for the technology section. No second accent.
+  Type: Archivo, whose width axis lets one family be condensed for display (stamped steel lettering)
+  and normal for reading.
+  Signature: the eight sectors are set as stamped plates (hard edge, rivet dots).
+  Layout: the gallery is a natural-ratio column flow (no cropping, no cards).
+  Motion: none. Photography: their own site photos, shown at <=620 css px so they stay sharp.
+-->
+<style>
+:root{
+  --bg:#e8e9e8; --paper:#f4f4f3; --ink:#1d2328; --muted:#4a535b; --rule:#bfc3c5;
+  --red:#d2301f; --red-logo:#ef4035; --on-red:#fff6f4;
+  --steel:#262d33; --on-steel:#e9ebec; --on-steel-muted:#b3bac0;
+  --display:"Archivo",system-ui,sans-serif;
+  --gutter:clamp(16px,5vw,56px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.58 "Archivo",system-ui,sans-serif;font-stretch:100%;padding-bottom:calc(66px + env(safe-area-inset-bottom))}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--red);text-underline-offset:.18em}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.wrap{max-width:1180px;margin-inline:auto;padding-inline:var(--gutter)}
+h1,h2,h3{font-family:var(--display);font-stretch:70%;font-weight:700;line-height:.95;margin:0;letter-spacing:.005em}
+p{margin:0 0 1em;max-width:62ch}
+
+.preview{padding:11px 16px;background:#0f172a;color:#f8fafc;font:400 14px/1.35 system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center}
+.preview a{color:#f8fafc;text-decoration:underline;padding:14px 2px}
+
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:16px}
+.top img{width:132px}
+.top nav{display:none}
+.top .tel{font-weight:700;font-stretch:80%;font-size:1.25rem;color:var(--ink);text-decoration:none;white-space:nowrap}
+@media(min-width:960px){
+  .top img{width:156px}
+  .top nav{display:flex;gap:26px}
+  .top nav a{color:var(--ink);text-decoration:none;font-weight:600;padding:8px 0;border-bottom:2px solid transparent}
+  .top nav a:hover{border-color:var(--red)}
+}
+.btn{display:inline-block;padding:14px 22px;background:var(--red);color:#fff;font-weight:700;font-stretch:80%;font-size:1.1rem;line-height:1;text-decoration:none;min-height:48px;display:inline-flex;align-items:center}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.btn.light{background:#fff;color:var(--ink)}
+.btn:hover{filter:brightness(.93)}
+
+.hero{display:grid;gap:26px;padding-block:10px 56px}
+.hero h1{font-size:clamp(2.9rem,12vw,5rem)}
+.hero .lede{font-size:1.2rem;margin:20px 0 24px;max-width:36ch}
+.hero .acts{display:flex;flex-wrap:wrap;gap:12px}
+.hero figure{margin:0}
+.hero img{width:100%;aspect-ratio:1/1;object-fit:cover}
+.hero figcaption{font-size:.9rem;color:var(--muted);padding-top:8px}
+@media(min-width:960px){
+  .hero{grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;padding-block:30px 80px}
+  .hero figure{max-width:560px;justify-self:end}
+}
+
+.s{padding-block:clamp(48px,8vw,92px)}
+.s h2{font-size:clamp(2.4rem,9vw,4.4rem);margin-bottom:26px}
+.lead{font-size:1.2rem;max-width:44ch}
+
+/* savoir-faire */
+.sf{display:grid;gap:36px}
+.prod{margin:0;padding:0;list-style:none;columns:2;column-gap:28px;font-weight:600;font-stretch:80%;font-size:1.5rem;line-height:1.5}
+.prod li{border-top:1px solid var(--ink);padding:4px 0;break-inside:avoid}
+.mat{margin:20px 0 0;color:var(--muted)}
+@media(min-width:960px){.sf{grid-template-columns:1fr 1fr;gap:80px;align-items:start}.prod{font-size:1.8rem}}
+
+/* plaques */
+.plates{margin:0;padding:0;list-style:none;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.plates li{position:relative;background:var(--paper);padding:20px 16px 16px;font-weight:700;font-stretch:72%;font-size:clamp(1.5rem,6vw,2.1rem);line-height:1;box-shadow:inset 0 0 0 2px var(--ink);min-height:96px;display:flex;align-items:flex-end}
+.plates li::before,.plates li::after{content:"";position:absolute;top:8px;width:6px;height:6px;border-radius:50%;background:var(--red)}
+.plates li::before{left:8px}.plates li::after{right:8px}
+@media(min-width:960px){.plates{grid-template-columns:repeat(4,1fr);gap:16px}.plates li{min-height:130px}}
+.plates-note{margin-top:20px;color:var(--muted)}
+
+/* réalisations */
+.gal{columns:1;column-gap:18px}
+.gal figure{margin:0 0 22px;break-inside:avoid}
+.gal img{width:100%}
+.gal figcaption{padding-top:6px;font-weight:600;font-stretch:85%}
+@media(min-width:620px){.gal{columns:2}}
+@media(min-width:960px){.gal{columns:3}}
+.refs{margin-top:18px;padding-top:18px;border-top:2px solid var(--ink);color:var(--muted);max-width:90ch}
+.refs strong{color:var(--ink)}
+
+/* technologie */
+.tech{background:var(--steel);color:var(--on-steel)}
+.tech h2{color:#fff}
+.tech .wrap{display:grid;gap:34px}
+.machines{display:grid;gap:26px}
+.machines h3{font-size:1.8rem;color:#fff;margin-bottom:8px;font-stretch:78%}
+.machines p{color:var(--on-steel-muted);margin:0}
+@media(min-width:960px){.tech .wrap{grid-template-columns:1fr 1.4fr;gap:80px}}
+
+/* histoire */
+.gen{margin:0;padding:0;list-style:none;display:grid;gap:0}
+.gen li{display:grid;grid-template-columns:5.2rem 1fr;gap:14px;padding:18px 0;border-top:1px solid var(--ink)}
+.gen b{font-weight:800;font-stretch:70%;font-size:2.4rem;line-height:1;color:var(--red)}
+.gen p{margin:0}
+@media(min-width:960px){.hist{display:grid;grid-template-columns:.8fr 1.4fr;gap:80px}.gen li{grid-template-columns:7rem 1fr}}
+
+/* engagements */
+.eng{display:grid;gap:22px}
+.eng h3{font-size:1.9rem;margin-bottom:6px;font-stretch:78%}
+.eng p{margin:0}
+@media(min-width:960px){.eng{grid-template-columns:repeat(4,1fr);gap:30px}}
+.iso{margin-top:28px;color:var(--muted)}
+
+/* contact */
+.proj{background:var(--red);color:var(--on-red)}
+.proj h2{color:#fff}
+.proj .wrap{display:grid;gap:30px}
+.sitesx{display:grid;gap:24px}
+.sitesx h3{font-size:1.9rem;color:#fff;margin-bottom:6px;font-stretch:78%}
+.sitesx address{font-style:normal}
+.proj a{color:#fff}
+.proj .btn{background:#fff;color:#8f1a0f}
+.proj .btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px #fff}
+.hours{margin-top:6px}
+.job{margin-top:8px;padding-top:16px;border-top:1px solid rgba(255,255,255,.55)}
+@media(min-width:960px){.proj .wrap{grid-template-columns:1fr 1.3fr;gap:80px}.sitesx{grid-template-columns:1fr 1fr}}
+
+footer{background:var(--steel);color:var(--on-steel-muted);padding-block:26px;font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center}
+footer img{width:170px}
+footer a{color:#fff}
+
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px 12px calc(8px + env(safe-area-inset-bottom));background:var(--bg);border-top:1px solid var(--rule)}
+.bar .btn{justify-content:center;padding:14px 8px}
+@media(min-width:960px){.bar{display:none}body{padding-bottom:0}}
+</style>
+</head>
+<body>
+<div class="preview" role="note">Aperçu de votre nouveau site, préparé par <a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
+
+<header class="wrap top">
+  <a href="#"><img src="logo.webp" width="520" height="81" alt="JOUX S.A."></a>
+  <nav aria-label="Navigation">
+    <a href="#savoir-faire">Savoir-faire</a>
+    <a href="#realisations">Réalisations</a>
+    <a href="#histoire">Histoire</a>
+    <a href="#engagements">Engagements</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a class="tel" href="tel:+41216248283">021&nbsp;624&nbsp;82&nbsp;83</a>
+</header>
+
+<main>
+<section class="wrap hero">
+  <div>
+    <h1>Escaliers, façades, garde-corps. En acier, inox et aluminium.</h1>
+    <p class="lede">Constructions métalliques depuis 1922. Entreprise familiale, au Mont-sur-Lausanne et à Bulle.</p>
+    <div class="acts">
+      <a class="btn" href="#contact">Parler de votre projet</a>
+      <a class="btn ghost" href="#realisations">Voir les réalisations</a>
+    </div>
+  </div>
+  <figure>
+    <img src="rosiers.webp" width="1200" height="1200" alt="Cage d’escalier avec garde-corps métallique et main courante en bois" fetchpriority="high">
+    <figcaption>Les Rosiers, Nyon.</figcaption>
+  </figure>
+</section>
+
+<section class="s" id="savoir-faire">
+  <div class="wrap sf">
+    <div>
+      <h2>Ce que l’atelier fabrique.</h2>
+      <p class="lead">Héritiers d’un savoir-faire authentique, nous réalisons vos ouvrages en acier, en inox ou en aluminium. Tout projet est unique pour nous, et notre premier objectif est votre satisfaction.</p>
+    </div>
+    <div>
+      <ul class="prod">
+        <li>Portes</li><li>Escaliers</li><li>Barrières</li><li>Vitrages</li><li>Façades</li><li>Charpentes</li><li>Tôlerie</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap" style="margin-top:56px">
+    <ul class="plates" aria-label="Les huit secteurs d’activité">
+      <li>Atelier acier</li><li>Atelier aluminium</li><li>Atelier inox</li><li>Tôlerie</li>
+      <li>Traitement</li><li>Montage</li><li>Levage</li><li>Bureau technique</li>
+    </ul>
+    <p class="plates-note">Huit secteurs d’activité réunis dans la même entreprise, pour mener un projet de l’étude à la pose. Environ 105 collaborateurs.</p>
+  </div>
+</section>
+
+<section class="s" id="realisations" style="padding-top:0">
+  <div class="wrap">
+    <h2>Réalisations.</h2>
+    <div class="gal">
+      <figure><img src="capitole.webp" width="1232" height="810" alt="Enseigne rouge Capitole et façade vitrée" loading="lazy"><figcaption>Cinéma Capitole, Lausanne</figcaption></figure>
+      <figure><img src="aubepine.webp" width="1080" height="1080" alt="Portes et vitrages métalliques d’un hall d’école" loading="lazy"><figcaption>Cycle d’orientation Aubépine, Genève</figcaption></figure>
+      <figure><img src="epfl.webp" width="1232" height="810" alt="Escalier hélicoïdal en acier galvanisé" loading="lazy"><figcaption>EPFL – Site de la RTS</figcaption></figure>
+      <figure><img src="montreux.webp" width="1232" height="810" alt="Garde-corps de balcons d’une façade avec stores jaunes" loading="lazy"><figcaption>Fairmont Le Montreux Palace</figcaption></figure>
+      <figure><img src="suettaz.webp" width="1080" height="1080" alt="Main courante et barreaudage d’un escalier" loading="lazy"><figcaption>La Suettaz, Nyon</figcaption></figure>
+      <figure><img src="beausobre.webp" width="1010" height="667" alt="Escalier de Beausobre vu d’en haut" loading="lazy"><figcaption>Escalier de Beausobre, Morges</figcaption></figure>
+      <figure><img src="manege.webp" width="1080" height="1080" alt="Bâtiment en bois et briques avec fenêtres métalliques" loading="lazy"><figcaption>Manège du Mont, Le Mont-sur-Lausanne</figcaption></figure>
+      <figure><img src="oree.webp" width="1232" height="810" alt="Immeuble avec garde-corps métalliques" loading="lazy"><figcaption>Quartier de l’Orée, Crissier</figcaption></figure>
+      <figure><img src="sousbois.webp" width="1200" height="1200" alt="Balcon avec garde-corps ajouré" loading="lazy"><figcaption>Sous-Bois, Yverdon-les-Bains</figcaption></figure>
+    </div>
+    <p class="refs"><strong>Aussi&nbsp;:</strong> Aéroport international de Genève, Campus Pictet de Rochemont (Genève), Centre des Congrès et d’Exposition de Montreux, STEP de Vidy (Lausanne), Collège de Vernerey (Chavornay), Collège des Parcs (Neuchâtel), Collège de Chanel (Morges), BCU Fribourg, TPG En Chardon (Vernier), Port-Gitana (Bellevue), IEPA FREMIS (Puplinge), EPFL.</p>
+  </div>
+</section>
+
+<section class="s tech">
+  <div class="wrap">
+    <div><h2>Les machines de l’atelier.</h2><p style="color:var(--on-steel-muted)">Ces outils, et d’autres de dernière génération, complètent les compétences de nos professionnels pour un suivi rigoureux de chaque projet.</p></div>
+    <div class="machines">
+      <div><h3>Presse plieuse à tôle</h3><p>Plus de 220 tonnes de force de pression, jusqu’à 4&nbsp;m de long, pour les pliages les plus délicats. Conforme aux standards de sécurité européens CE.</p></div>
+      <div><h3>Cisaille pendulaire</h3><p>Découpe des tôles d’acier et d’inox en réduisant l’angle de coupe, pour éviter la distorsion de la tôle. Format limité à 4&nbsp;m.</p></div>
+      <div><h3>Découpe hydro-abrasive au jet d’eau</h3><p>Une découpe de très haute précision, qui réduit les coûts et les délais.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="histoire">
+  <div class="wrap hist">
+    <h2>Quatre générations.</h2>
+    <ol class="gen">
+      <li><b>1922</b><p>Ernest Joux, serrurier-forgeron-charron, fonde son entreprise à Prilly. Un petit atelier de cinq employés.</p></li>
+      <li><b>1957</b><p>Ses deux fils, Marcel et Ernest junior, reprennent l’affaire, qui grandit jusqu’à vingt employés.</p></li>
+      <li><b>1976</b><p>Daniel Joux rejoint son père Marcel. L’aluminium et l’inox s’ajoutent à l’acier.</p></li>
+      <li><b>1994</b><p>Daniel et ses deux enfants, Sandrine et Frédéric Joux, reprennent la société sous le nom JOUX S.A.</p></li>
+      <li><b>2012</b><p>Pour les 90 ans de l’entreprise, toute l’équipe s’installe dans la nouvelle halle du Mont-sur-Lausanne, zone industrielle En Budron.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="s" id="engagements" style="padding-top:0">
+  <div class="wrap">
+    <h2>Engagements.</h2>
+    <div class="eng">
+      <div><h3>Employés</h3><p>Un environnement de travail sain et sûr, à la hauteur des attentes des collaborateurs.</p></div>
+      <div><h3>Formation</h3><p>Chaque année, des places d’apprentissage, en étroite collaboration avec le canton de Vaud.</p></div>
+      <div><h3>Qualité</h3><p>Appliquer chaque jour les meilleures pratiques nationales et internationales du métier.</p></div>
+      <div><h3>Environnement</h3><p>Atténuer notre impact, dans les processus, les orientations stratégiques et les décisions quotidiennes.</p></div>
+    </div>
+    <p class="iso">Certificats ISO&nbsp;9001 (qualité) et ISO&nbsp;45001 (santé et sécurité au travail) délivrés par Procert.</p>
+  </div>
+</section>
+
+<section class="s proj" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>Un projet&nbsp;?</h2>
+      <p>Racontez-nous ce que vous voulez construire. Nos spécialistes sont à votre écoute.</p>
+      <p><a class="btn" href="mailto:info@jouxsa.ch?subject=Projet">info@jouxsa.ch</a></p>
+      <p class="hours">Lundi – jeudi&nbsp;: 7&nbsp;h – 12&nbsp;h, 13&nbsp;h – 16&nbsp;h&nbsp;45<br>Vendredi&nbsp;: 7&nbsp;h – 12&nbsp;h, 13&nbsp;h – 15&nbsp;h&nbsp;45</p>
+      <p class="job"><strong>Emplois.</strong> Aucun poste n’est ouvert pour le moment, mais de nouvelles opportunités peuvent s’ouvrir à tout moment.</p>
+    </div>
+    <div class="sitesx">
+      <div>
+        <h3>Le Mont-sur-Lausanne</h3>
+        <address>JOUX S.A.<br>Ch. de Budron H22<br>1052 Le Mont-sur-Lausanne<br><a href="tel:+41216248283">021&nbsp;624&nbsp;82&nbsp;83</a></address>
+        <p style="margin-top:12px"><a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Chemin+de+Budron+H22+1052+Le+Mont-sur-Lausanne">Itinéraire</a></p>
+      </div>
+      <div>
+        <h3>Succursale de Bulle</h3>
+        <address>JOUX S.A.<br>Rue de l’Essert&nbsp;3<br>1630 Bulle<br><a href="tel:+41216248283">021&nbsp;624&nbsp;82&nbsp;83</a></address>
+        <p style="margin-top:12px"><a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Rue+de+l%27Essert+3+1630+Bulle">Itinéraire</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="logo-blanc.webp" width="700" height="163" alt="JOUX S.A., constructions métalliques">
+    <span>Maquette préparée par <a href="https://houle.ai/fr/products/chat-website/">houle.ai</a> · ce site n’est pas en ligne</span>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="btn" href="tel:+41216248283">Appeler</a>
+  <a class="btn ghost" href="mailto:info@jouxsa.ch?subject=Projet">Écrire</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hôtel Lavaux, Cully – 64 chambres sur le Léman, entre vignes et lac</title>
+<meta name="description" content="Hôtel 4 étoiles à Cully, au cœur du Lavaux (Unesco), entre Lausanne et Vevey. 64 chambres, suites et appartements, séminaires. Route Cantonale 1, +41 21 799 93 93.">
+<!-- Maquette non publiée : retirer cette ligne à la mise en ligne -->
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0e3a58">
+<meta property="og:title" content="Hôtel Lavaux, Cully – le grand paquebot posé sur le lac">
+<meta property="og:description" content="64 chambres, suites et appartements face au Léman et aux vignes de Lavaux. Réception 24h/24.">
+<meta property="og:image" content="img/aerien.webp">
+<meta property="og:locale" content="fr_CH">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&family=Libre+Franklin:wght@400;500;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Hotel","name":"Hôtel Lavaux","telephone":"+41 21 799 93 93","email":"info@hotellavaux.ch","address":{"@type":"PostalAddress","streetAddress":"Route Cantonale 1","postalCode":"1096","addressLocality":"Cully","addressCountry":"CH"}}
+</script>
+<!--
+  DIRECTION (fresh-web-design)
+  Artefact : le bâtiment lui-même, conçu par Alberto Sartoris, « grand paquebot posé sur le lac » :
+  fenêtres en bandeau, horizontales, pont par pont. Lecteur : voyageur d'affaires ou couple qui veut
+  réserver vite, et organisateur de séminaire.
+  Couleurs : bleu lac profond (bandeaux, texte), turquoise du Léman vu d'en haut (liens, filets),
+  blanc de façade légèrement bleuté (fond), vert de vigne chartreuse (bouton Réserver sur bleu).
+  Typo : Jost (descendante de Futura, l'époque Sartoris) pour les titres, Libre Franklin pour le texte.
+  Mise en page : tout est horizontal, comme des ponts : les chambres sont des « ponts » en rangées,
+  et un filet à fenêtres en bandeau sépare les sections. Photo pleine largeur de l'aérien en tête.
+  Détail signature : le filet à fenêtres en bandeau (rayures horizontales fines).
+  Photos : les leurs, en grand, sans filtre. Mouvement : aucun.
+-->
+<style>
+:root{
+  --lac:#0e3a58; --lac-2:#0a2c43; --turq:#17718a; --blanc:#f2f6f8; --encre:#10222d; --doux:#4a5e6a;
+  --vigne:#c3d23a; --vigne-fonce:#a9b92a; --trait:#c9d7de;
+  --disp:"Jost","Futura",system-ui,sans-serif; --txt:"Libre Franklin",system-ui,sans-serif;
+  --bandeau:repeating-linear-gradient(to bottom,var(--turq) 0 3px,transparent 3px 8px);
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:17px/1.65 var(--txt);color:var(--encre);background:var(--blanc)}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--turq)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.preview{background:#06141d;color:#b9c9d3;font-size:13px;line-height:1.4;text-align:center;padding:8px 14px}
+.preview a{color:#fff}
+/* en-tête */
+.top{position:absolute;z-index:5;left:0;right:0;color:#fff}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:18px;padding-bottom:12px}
+.marque{font:500 20px/1 var(--disp);letter-spacing:.2em;text-decoration:none;color:#fff;white-space:nowrap}
+.marque small{display:block;margin-top:6px;font:300 12px/1 var(--disp);letter-spacing:.34em;border-top:1px solid rgba(255,255,255,.6);padding-top:6px}
+.top nav{display:flex;align-items:center;gap:20px}
+.top nav a.lien{display:none;color:#fff;text-decoration:none;font:500 15px/1 var(--disp);letter-spacing:.04em}
+.btn{display:inline-block;background:var(--vigne);color:var(--lac-2);text-decoration:none;font:600 17px/1 var(--disp);letter-spacing:.03em;padding:15px 24px}
+.btn:hover{background:#d3e14a}
+.btn.ligne{background:none;color:#fff;border:1.5px solid #fff;padding:13.5px 22px}
+.top .btn{padding:12px 18px;font-size:16px}
+/* hero */
+.hero{position:relative;color:#fff;background:var(--lac-2);min-height:600px;display:flex;align-items:flex-end}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 50%}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(6,26,40,.82),rgba(6,26,40,.25) 55%,rgba(6,26,40,.15))}
+.hero .wrap{position:relative;z-index:2;padding-bottom:44px;padding-top:140px;width:100%}
+.hero h1{font:300 clamp(38px,8.2vw,84px)/.98 var(--disp);letter-spacing:-.01em;max-width:13ch}
+.hero h1 b{font-weight:600}
+.hero p{max-width:34em;margin-top:18px;font-size:18px;color:#e6eef2}
+/* barre de réservation */
+.resa{background:var(--lac);color:#fff}
+.resa .wrap{display:flex;flex-wrap:wrap;gap:14px 28px;align-items:center;padding-top:20px;padding-bottom:20px}
+.resa .btn{flex:0 0 auto}
+.resa .infos{font-size:15px;line-height:1.45;color:#cfe0e8}
+.resa .infos b{color:#fff;font-weight:500}
+.resa a{color:#fff}
+/* filet à fenêtres en bandeau */
+.bandeau{height:30px;background:var(--bandeau);opacity:.55;margin:0}
+section{padding:64px 0}
+h2{font:300 clamp(30px,5vw,48px)/1.05 var(--disp);color:var(--lac);margin-bottom:12px}
+h2 b{font-weight:600}
+.chapeau{max-width:36em;color:var(--doux);margin-bottom:34px}
+/* chambres : des « ponts » */
+.pont{display:grid;gap:14px;border-top:1.5px solid var(--lac);padding:22px 0 30px}
+.pont h3{font:500 26px/1.1 var(--disp);color:var(--lac)}
+.pont .m2{font:300 15px/1 var(--disp);letter-spacing:.06em;color:var(--turq);margin-top:8px}
+.pont .m2 strong{font-weight:600;font-size:28px;letter-spacing:0;margin-right:4px}
+.pont .lit{font-size:15px;color:var(--doux);margin-top:10px}
+.pont p{max-width:34em}
+.pont figure{aspect-ratio:16/9;overflow:hidden;background:var(--trait)}
+.pont figure img{width:100%;height:100%;object-fit:cover}
+.tous{display:grid;gap:10px;margin:8px 0 0;padding:18px 20px;background:#e3edf2;font-size:16px}
+.tous b{font:500 17px/1.2 var(--disp);color:var(--lac)}
+/* services */
+.services{background:#fff}
+.liste{display:grid;gap:0;margin:0;padding:0;list-style:none}
+.liste li{padding:16px 0;border-top:1px solid var(--trait)}
+.liste b{display:block;font:500 19px/1.2 var(--disp);color:var(--lac)}
+.liste span{font-size:16px;color:var(--doux)}
+.duo{display:grid;gap:26px}
+.duo figure{aspect-ratio:3/2;overflow:hidden}
+.duo figure img{width:100%;height:100%;object-fit:cover}
+/* séminaires */
+.sem{background:var(--lac);color:#e6eef2}
+.sem h2{color:#fff}
+.sem .chapeau{color:#c3d6df}
+.salles{display:grid;gap:18px;margin-top:8px}
+.salle{border-top:1.5px solid rgba(255,255,255,.55);padding-top:14px}
+.salle h3{font:500 24px/1.1 var(--disp);color:#fff}
+.salle .m2{font:300 15px/1.2 var(--disp);letter-spacing:.06em;color:var(--vigne);margin:6px 0 8px}
+.sem figure{aspect-ratio:3/2;overflow:hidden;margin-bottom:26px}
+.sem figure img{width:100%;height:100%;object-fit:cover}
+.sem a{color:#fff}
+/* accès */
+.acces{display:grid;gap:28px}
+.acces ul{list-style:none;padding:0}
+.acces li{padding:13px 0;border-top:1px solid var(--trait)}
+.acces li b{font:500 18px/1.2 var(--disp);color:var(--lac)}
+/* contact */
+.contact{background:var(--lac-2);color:#fff;padding:56px 0 40px}
+.contact h2{color:#fff}
+.contact .grid{display:grid;gap:26px}
+.contact address{font-style:normal;font-size:18px;line-height:1.6}
+.contact a{color:#fff}
+.contact .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:18px}
+.pied{margin-top:44px;padding-top:18px;border-top:1px solid rgba(255,255,255,.25);font-size:13px;line-height:1.5;color:#a9c0cc}
+.pied a{color:#d8e6ed}
+@media (min-width:760px){
+  body{font-size:18px}
+  .wrap{padding:0 32px}
+  .top nav a.lien{display:inline}
+  .hero{min-height:680px}
+  .pont{grid-template-columns:1fr 1.2fr;gap:36px;align-items:start}
+  .pont.inverse figure{order:-1}
+  .pont.sans{grid-template-columns:1fr}
+  .tous{grid-template-columns:auto 1fr;align-items:baseline;gap:20px}
+  .duo{grid-template-columns:1fr 1fr;align-items:center;gap:48px}
+  .liste{grid-template-columns:1fr 1fr;column-gap:40px}
+  .salles{grid-template-columns:1fr 1fr;gap:40px}
+  .acces{grid-template-columns:1fr 1fr;gap:56px}
+  .contact .grid{grid-template-columns:1.1fr 1fr;gap:48px}
+}
+</style>
+</head>
+<body>
+<div class="preview" role="note">Aperçu de votre nouveau site, préparé par&nbsp;<a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="marque" href="#">HÔTEL LAVAUX<small>CULLY</small></a>
+    <nav>
+      <a class="lien" href="#chambres">Chambres</a>
+      <a class="lien" href="#services">Services</a>
+      <a class="lien" href="#seminaires">Séminaires</a>
+      <a class="lien" href="#acces">Accès</a>
+      <a class="btn" href="https://reservations.hotel-spider.com/02U61a8cf172899a">Réserver</a>
+    </nav>
+  </div>
+</header>
+
+<div class="hero">
+  <img src="img/aerien.webp" alt="L'Hôtel Lavaux vu d'en haut, entre la route cantonale, les vignes et le lac Léman" width="2600" height="1462">
+  <div class="wrap">
+    <h1>Le grand paquebot <b>posé sur le lac.</b></h1>
+    <p>C'est ainsi que son architecte, Alberto Sartoris, décrivait l'Hôtel Lavaux. 64 chambres à Cully, entre les vignes classées à l'Unesco et le Léman.</p>
+  </div>
+</div>
+
+<div class="resa">
+  <div class="wrap">
+    <a class="btn" href="https://reservations.hotel-spider.com/02U61a8cf172899a">Réserver une chambre</a>
+    <p class="infos"><b>Réception ouverte 24h/24</b><br>
+      <a href="tel:+41217999393">+41 21 799 93 93</a> · <a href="mailto:info@hotellavaux.ch">info@hotellavaux.ch</a></p>
+  </div>
+</div>
+
+<div class="bandeau" aria-hidden="true"></div>
+
+<section id="chambres">
+  <div class="wrap">
+    <h2>64 chambres, <b>8 catégories</b></h2>
+    <p class="chapeau">De la chambre individuelle à la junior suite. Toutes sont équipées d'un plateau de courtoisie avec thé et café, d'un coffre-fort, d'une télévision avec chaînes satellites et de l'air conditionné.</p>
+
+    <article class="pont">
+      <div>
+        <h3>Chambre individuelle</h3>
+        <p class="m2"><strong>20</strong> m²</p>
+        <p class="lit">Lit individuel (120 × 200 cm)</p>
+        <p style="margin-top:12px">Avec ou sans vue sur le lac Léman. Confort et simplicité.</p>
+      </div>
+      <figure><img src="img/chambre-simple.webp" alt="Chambre individuelle de l'Hôtel Lavaux" width="1800" height="1384" loading="lazy"></figure>
+    </article>
+
+    <article class="pont inverse">
+      <div>
+        <h3>Chambre double</h3>
+        <p class="m2"><strong>22</strong> m²</p>
+        <p class="lit">Deux lits (2 × 90 × 200 cm) ou grand lit (180 × 200 cm)</p>
+        <p style="margin-top:12px">Préparée selon votre demande. Côté vignes, orientée nord&nbsp;; côté lac, orientée sud et appelée «&nbsp;double vue lac&nbsp;», certaines avec balcon.</p>
+      </div>
+      <figure><img src="img/chambre-lac.webp" alt="Chambre double vue lac, grande baie vitrée sur le Léman" width="1800" height="1230" loading="lazy"></figure>
+    </article>
+
+    <article class="pont">
+      <div>
+        <h3>Chambre double luxe</h3>
+        <p class="m2"><strong>24</strong> m²</p>
+        <p class="lit">Grand lit (180 × 200 cm)</p>
+        <p style="margin-top:12px">Au troisième et dernier étage&nbsp;: panorama complet sur le lac et les Alpes, depuis sa terrasse panoramique.</p>
+      </div>
+      <figure><img src="img/terrasse.webp" alt="Terrasse panoramique d'une chambre double luxe, vue sur le lac et les Alpes" width="1800" height="1200" loading="lazy"></figure>
+    </article>
+
+    <article class="pont inverse">
+      <div>
+        <h3>Chambre familiale</h3>
+        <p class="m2"><strong>40</strong> m²</p>
+        <p class="lit">Deux lits (2 × 90 × 200 cm)</p>
+        <p style="margin-top:12px">Deux chambres complètes avec porte communicante, pour deux adultes et deux enfants jusqu'à 12 ans.</p>
+      </div>
+      <figure><img src="img/chambre-fleurs.webp" alt="Chambre de l'Hôtel Lavaux avec fleurs et vue sur le lac" width="1800" height="1200" loading="lazy"></figure>
+    </article>
+
+    <article class="pont">
+      <div>
+        <h3>Les suites</h3>
+        <p class="m2"><strong>35</strong> m²</p>
+        <p class="lit">Grand lit (180 × 200 cm)</p>
+        <p style="margin-top:12px">Une chambre avec salle de bain attenante et un salon, orientée lac, avec balcon ou terrasse.</p>
+      </div>
+      <figure><img src="img/suite-salon.webp" alt="Salon d'une suite avec baie vitrée et terrasse" width="1800" height="1181" loading="lazy"></figure>
+    </article>
+
+    <div class="tous">
+      <b>Et aussi</b>
+      <span>Trois types d'appartements de tailles différentes, tous avec kitchenette, vue sur le lac et les Alpes, pour un séjour de plusieurs jours.</span>
+    </div>
+    <p style="margin-top:26px"><a class="btn" style="background:var(--lac);color:#fff" href="https://reservations.hotel-spider.com/02U61a8cf172899a">Réserver</a></p>
+  </div>
+</section>
+
+<div class="bandeau" aria-hidden="true"></div>
+
+<section id="services" class="services">
+  <div class="wrap">
+    <div class="duo">
+      <div>
+        <h2>À bord, <b>tout est là</b></h2>
+        <p class="chapeau" style="margin-bottom:0">Une réception ouverte jour et nuit, un hall lumineux, et de quoi travailler ou se détendre.</p>
+      </div>
+      <figure><img src="img/hall.webp" alt="Le hall de l'hôtel, escalier de verre et parquet" width="1800" height="1278" loading="lazy"></figure>
+    </div>
+    <ul class="liste" style="margin-top:34px">
+      <li><b>Petit-déjeuner buffet</b><span>Plats chauds et froids, salés et sucrés, tous les jours de 7h à 10h. CHF 18 par personne dès 13 ans, CHF 10 de 4 à 12 ans, gratuit jusqu'à 3 ans. Sur réservation à la réception.</span></li>
+      <li><b>Parking</b><span>Une trentaine de places gratuites devant l'hôtel, sans réservation. Places publiques à proximité.</span></li>
+      <li><b>Fitness</b><span>Un espace avec des équipements modernes.</span></li>
+      <li><b>Espace enfants</b><span>Livres, jouets et jeux de société pour les jeunes hôtes.</span></li>
+      <li><b>Wifi et business corner</b><span>Wifi gratuit dans tout l'établissement. Un ordinateur avec accès Internet haut débit&nbsp;; la réception imprime vos documents.</span></li>
+      <li><b>Salle d'exposition</b><span>Photos anciennes de la région de Lavaux.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="seminaires" class="sem">
+  <div class="wrap">
+    <h2>Séminaires, <b>sans standardisation</b></h2>
+    <p class="chapeau">Loin d'un grand hôtel et de ses grandes infrastructures&nbsp;: deux salles, un vrai charme. La restauration lors de vos événements est assurée par le restaurant partenaire Masaniello, cuisine aux saveurs italiennes.</p>
+    <figure><img src="img/salle-sartoris.webp" alt="Salle Sartoris, grande salle de réunion au plafond et parquet en bois" width="2600" height="1624" loading="lazy"></figure>
+    <div class="salles">
+      <div class="salle"><h3>Salle Panoramique</h3><p class="m2">24&nbsp;m² · jusqu'à 10&nbsp;personnes</p><p>Au troisième étage, avec un dégagement sur le lac. Pour petites réunions, comités, conseils.</p></div>
+      <div class="salle"><h3>Salle Sartoris</h3><p class="m2">122&nbsp;m² · jusqu'à 60&nbsp;personnes</p><p>Une grande salle dans un style de carnotzet contemporain, pour de plus grandes réunions.</p></div>
+    </div>
+    <p style="margin-top:28px"><a class="btn" href="mailto:info@hotellavaux.ch?subject=Demande%20s%C3%A9minaire">Demander une offre séminaire</a></p>
+  </div>
+</section>
+
+<section id="acces">
+  <div class="wrap acces">
+    <div>
+      <h2>Au bord de la <b>route cantonale</b></h2>
+      <p class="chapeau" style="margin-bottom:0">Au cœur de la région viticole de Lavaux, inscrite au patrimoine mondial de l'Unesco, entre Lausanne et Vevey.</p>
+    </div>
+    <ul>
+      <li><b>En train</b><br>Gare d'Epesses&nbsp;: 2&nbsp;minutes à pied. Gare de Cully&nbsp;: 15&nbsp;minutes à pied.</li>
+      <li><b>En voiture</b><br>Au bord de la route cantonale entre Lausanne et Vevey.</li>
+      <li><b>Distances</b><br>8&nbsp;km de Vevey, 12&nbsp;km de Lausanne.</li>
+    </ul>
+  </div>
+</section>
+
+<footer class="contact" id="contact">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <h2>Réservez votre <b>séjour</b></h2>
+        <address>Hôtel Lavaux<br>Route Cantonale 1<br>1096 Cully<br>
+          <a href="tel:+41217999393">+41 21 799 93 93</a><br>
+          <a href="mailto:info@hotellavaux.ch">info@hotellavaux.ch</a></address>
+        <div class="btns">
+          <a class="btn" href="https://reservations.hotel-spider.com/02U61a8cf172899a">Réserver</a>
+          <a class="btn ligne" href="https://www.google.com/maps/search/?api=1&amp;query=H%C3%B4tel+Lavaux+Route+Cantonale+1+1096+Cully">Voir sur la carte</a>
+        </div>
+      </div>
+      <p style="color:#c3d6df;align-self:end">Réception ouverte 24h/24, 7j/7.<br>Instagram&nbsp;: <a href="https://www.instagram.com/hotellavaux/">@hotellavaux</a></p>
+    </div>
+    <p class="pied">Maquette gratuite proposée par <a href="https://houle.ai/fr/products/chat-website/">houle.ai</a> — ce site n'est pas en ligne. Textes et photos&nbsp;: Hôtel Lavaux, Groupe Sidin Hotels.</p>
+  </div>
+</footer>
+</body>
+</html>

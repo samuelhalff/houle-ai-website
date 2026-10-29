@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elactis SA – drivers électroniques pour électrovannes, Gland</title>
+<meta name="description" content="Elactis conçoit à Gland des drivers électroniques pour électrovannes, solénoïdes et électroaimants : jusqu'à 90 % d'énergie en moins, ouverture et fermeture plus rapides, diagnostic. Membre du groupe Geva Sol.">
+<!-- Maquette non publiée : retirer cette ligne à la mise en ligne -->
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#0e3b30">
+<meta property="og:title" content="Elactis SA – l'électronique des électrovannes">
+<meta property="og:description" content="Drivers pour électrovannes et électroaimants, conçus à Gland. Jusqu'à 90 % d'énergie en moins.">
+<meta property="og:locale" content="fr_CH">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;0,600;1,400&family=Barlow+Semi+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Elactis SA",
+  "url": "http://www.elactis.com/",
+  "email": "info@elactis.com",
+  "telephone": "+41 22 364 65 85",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Route des Avouillons 6",
+    "postalCode": "1196",
+    "addressLocality": "Gland",
+    "addressCountry": "CH"
+  },
+  "parentOrganization": { "@type": "Organization", "name": "Geva Sol Group", "url": "http://www.gevasol.com" }
+}
+</script>
+<style>
+:root{
+  --paper:#eef0ea; --paper-2:#e2e6de; --ink:#101a17; --muted:#42524c; --line:#c4cbc1;
+  --mask:#0e3b30; --mask-2:#0a2c24; --on-mask:#e6efe9; --on-mask-muted:#b4c9bf; --trace:#e08a4a;
+  --copper:#9c4a17; --on-copper:#fff;
+  --measure:64ch;
+  --head:"Barlow Semi Condensed","Arial Narrow",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,monospace;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#0c1613; --paper-2:#12201c; --ink:#e6efe9; --muted:#a9bdb4; --line:#27403a;
+    --mask:#0e3b30; --mask-2:#0a2c24; --copper:#e08a4a; --on-copper:#101a17}
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:4.5rem}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 Barlow,sans-serif;font-kerning:normal}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:var(--head);font-weight:600;line-height:1.05;margin:0;letter-spacing:-.005em}
+p{margin:0 0 1em;max-width:var(--measure)}
+.wrap{max-width:72rem;margin:0 auto;padding:0 1.25rem}
+@media (min-width:56rem){.wrap{padding:0 2.5rem}}
+:focus-visible{outline:2px solid var(--trace);outline-offset:3px}
+.code{font-family:var(--mono);font-weight:500;font-size:.95em;letter-spacing:0}
+
+/* En-tête */
+.top{position:sticky;top:0;z-index:20;background:var(--mask-2);color:var(--on-mask)}
+.top .wrap{display:flex;align-items:center;gap:1.5rem;height:3.5rem}
+.brand{font-family:var(--head);font-weight:700;font-size:1.45rem;letter-spacing:.14em;text-decoration:none;display:flex;align-items:center;gap:.6rem}
+.brand i{display:block;width:1.5rem;height:1.1rem;border-top:3px solid var(--trace);border-bottom:3px solid var(--trace);position:relative}
+.brand i::after{content:"";position:absolute;left:0;right:.3rem;top:50%;height:3px;margin-top:-1.5px;background:var(--trace)}
+.top nav{display:none;gap:1.6rem;margin-left:auto;font-family:var(--head);font-weight:500;font-size:1.1rem}
+.top nav a{text-decoration:none;color:var(--on-mask-muted)}
+.top nav a:hover{color:#fff}
+.top .mail{margin-left:auto;font-family:var(--head);font-weight:600;text-decoration:none;color:var(--on-mask);border:1.5px solid var(--trace);padding:.3rem .8rem}
+.top .mail:hover{background:var(--trace);color:var(--mask-2)}
+@media (min-width:52rem){.top nav{display:flex}.top .mail{margin-left:0}}
+
+/* Ouverture */
+.hero{background:var(--mask);color:var(--on-mask);overflow:hidden}
+.hero .wrap{display:grid;gap:2rem;padding-top:2.75rem;padding-bottom:3rem}
+.hero h1{font-size:clamp(2.2rem,8vw,3.5rem);max-width:17ch;color:#fff}
+.hero .lede{font-size:1.25rem;color:var(--on-mask);margin:1.2rem 0 1.8rem;max-width:44ch}
+.actions{display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;align-items:center}
+.btn{display:inline-block;font-family:var(--head);font-weight:600;font-size:1.15rem;text-decoration:none;background:var(--trace);color:var(--mask-2);padding:.65rem 1.1rem}
+.btn:hover{background:#fff}
+.btn.solid{background:var(--copper);color:var(--on-copper)}
+.btn.solid:hover{background:var(--ink);color:var(--paper)}
+.textlink{font-weight:500;text-decoration-color:var(--trace);text-underline-offset:.25em;text-decoration-thickness:2px}
+.curve{margin:0;align-self:center}
+.curve svg{display:block;width:100%;height:auto}
+.curve .axis{stroke:var(--on-mask-muted);stroke-width:1.2;fill:none}
+.curve .ref{stroke:var(--on-mask-muted);stroke-width:1.5;stroke-dasharray:5 5;fill:none}
+.curve .drv{stroke:var(--trace);stroke-width:4;fill:none;stroke-linejoin:round;stroke-linecap:square;stroke-dasharray:1200;stroke-dashoffset:1200;animation:draw 2.2s .3s ease-out forwards}
+.curve text{font-family:Barlow,sans-serif;font-size:15px;fill:var(--on-mask)}
+.curve text.m{fill:var(--on-mask-muted)}
+.curve figcaption{font-size:.95rem;color:var(--on-mask-muted);margin-top:.6rem;max-width:46ch}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.curve .drv{animation:none;stroke-dashoffset:0}}
+@media (min-width:56rem){
+  .hero .wrap{grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:3rem;padding-top:4.5rem;padding-bottom:4.5rem}
+}
+
+/* Sections */
+section{padding:3.5rem 0}
+@media (min-width:56rem){section{padding:5rem 0}}
+.sec-head{display:grid;gap:.6rem;margin-bottom:2rem}
+.sec-head h2{font-size:clamp(1.9rem,5vw,3rem);max-width:20ch}
+.sec-head p{color:var(--muted);font-size:1.125rem}
+.on-mask .sec-head p{color:var(--on-mask-muted)}
+.rule-list{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.rule-list li{border-top:2px solid var(--copper);padding:.9rem 0 1.4rem;max-width:40rem}
+.rule-list h3{font-size:1.5rem;margin-bottom:.35rem}
+.rule-list p{margin:0;color:var(--muted)}
+@media (min-width:56rem){.rule-list{grid-template-columns:1fr 1fr;column-gap:3.5rem}}
+
+/* Nomenclature produits */
+.bom{border-top:2px solid var(--ink)}
+.bom .row{display:grid;gap:.25rem 1.5rem;padding:1rem 0 1.1rem;border-bottom:1px solid var(--line);align-items:baseline}
+.bom .row .code{font-size:1.2rem;color:var(--copper)}
+.bom .row p{margin:0;max-width:56ch}
+.bom .row a{font-weight:500;text-decoration-color:var(--copper);text-underline-offset:.25em;white-space:nowrap}
+@media (min-width:48rem){.bom .row{grid-template-columns:13rem 1fr auto}}
+.bom-note{margin-top:1.2rem;color:var(--muted)}
+
+/* Formats */
+.formats{background:var(--paper-2)}
+.formats .figs{display:flex;flex-wrap:wrap;gap:1.5rem 2rem;align-items:flex-end}
+.formats figure{margin:0;width:96px}
+.formats figure img{width:96px;height:auto}
+.formats figcaption{font-size:.9rem;color:var(--muted);line-height:1.3;margin-top:.5rem;width:96px}
+.formats .split{display:grid;gap:2rem}
+@media (min-width:56rem){.formats .split{grid-template-columns:minmax(0,6fr) minmax(0,5fr);align-items:end}}
+
+/* Applications */
+.apps{background:var(--mask);color:var(--on-mask)}
+.apps h2{color:#fff}
+.sectors{display:flex;flex-wrap:wrap;gap:.5rem .5rem;list-style:none;padding:0;margin:0 0 3rem}
+.sectors li{border:1.5px solid var(--trace);padding:.25rem .75rem;font-family:var(--head);font-weight:500;font-size:1.1rem}
+.cases{display:grid;gap:2.5rem}
+.case{border-top:2px solid var(--trace);padding-top:1rem}
+.case h3{font-size:1.5rem;color:#fff;margin-bottom:1rem;max-width:22ch}
+.case dl{margin:0;display:grid;gap:.4rem}
+.case dt{font-family:var(--head);font-weight:600;color:var(--trace);font-size:1.05rem;margin-top:.5rem}
+.case dd{margin:0;max-width:50ch}
+@media (min-width:56rem){.cases{grid-template-columns:repeat(3,1fr);gap:2.5rem}}
+.fine{color:var(--on-mask-muted);font-size:.95rem;margin-top:2rem}
+
+/* Sur mesure */
+.custom .wrap{display:grid;gap:1.5rem}
+.custom h2{font-size:clamp(1.9rem,5vw,3rem);max-width:16ch}
+@media (min-width:56rem){.custom .wrap{grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:4rem;align-items:start}}
+
+/* Entreprise */
+.company{background:var(--paper-2)}
+.company .cols{display:grid;gap:2.5rem}
+.company blockquote{margin:0 0 1.5rem;padding-left:1.1rem;border-left:4px solid var(--copper);font-family:var(--head);font-weight:500;font-size:1.5rem;line-height:1.25;max-width:30ch}
+.vals{list-style:none;margin:0;padding:0}
+.vals li{padding:.55rem 0;border-bottom:1px solid var(--line)}
+@media (min-width:56rem){.company .cols{grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:4rem}}
+
+/* Contact */
+.contact{background:var(--mask-2);color:var(--on-mask)}
+.contact h2{font-size:clamp(2rem,6vw,3.4rem);color:#fff;max-width:14ch}
+.contact .grid{display:grid;gap:2rem}
+.contact address{font-style:normal;font-size:1.2rem;line-height:1.5}
+.contact .big{display:block;font-family:var(--head);font-weight:600;font-size:clamp(1.6rem,6.5vw,2.4rem);color:#fff;text-decoration-color:var(--trace);text-underline-offset:.2em;text-decoration-thickness:2px;margin-bottom:.4rem}
+.contact .small{color:var(--on-mask-muted);margin:1rem 0 0}
+@media (min-width:56rem){.contact .grid{grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:4rem;align-items:start}}
+
+footer{background:#06201a;color:var(--on-mask-muted);padding:1.6rem 0 5rem;font-size:.95rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:.4rem 2rem}
+footer a{color:var(--on-mask)}
+
+.preview{position:fixed;left:0;right:0;bottom:0;z-index:30;background:#101a17;color:#e6efe9;text-align:center;font-size:.85rem;padding:.5rem 1rem;border-top:2px solid var(--trace)}
+.preview a{color:#fff}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Elactis, accueil"><i aria-hidden="true"></i>ELACTIS</a>
+    <nav aria-label="Navigation principale">
+      <a href="#produits">Produits</a>
+      <a href="#applications">Applications</a>
+      <a href="#entreprise">Entreprise</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="mail" href="mailto:info@elactis.com">Nous écrire</a>
+  </div>
+</header>
+
+<main id="top">
+
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Des électrovannes qui consomment moins et réagissent plus vite.</h1>
+      <p class="lede">Elactis conçoit à Gland l'électronique qui pilote les électrovannes, solénoïdes et électroaimants&nbsp;: jusqu'à 90&nbsp;% de puissance en moins, ouverture et fermeture optimisées, échauffement éliminé.</p>
+      <div class="actions">
+        <a class="btn" href="#produits">Voir les drivers</a>
+        <a class="textlink" href="mailto:info@elactis.com">info@elactis.com</a>
+      </div>
+    </div>
+    <figure class="curve">
+      <svg viewBox="0 0 480 270" role="img" aria-labelledby="curve-t curve-d">
+        <title id="curve-t">Courant dans la bobine</title>
+        <desc id="curve-d">Courbe schématique : sans driver, le courant reste plein pendant toute la durée de l'ouverture ; avec un driver Elactis, un fort courant enclenche la vanne puis un courant réduit la maintient.</desc>
+        <path class="axis" d="M40 20V230H460"/>
+        <text class="m" x="10" y="16">Courant</text>
+        <text class="m" x="410" y="252">Temps</text>
+        <path class="ref" d="M40 70H340V230"/>
+        <text class="m" x="190" y="60">Sans driver : courant plein</text>
+        <path class="drv" d="M40 230H90V36H138V176H340V230"/>
+        <text x="148" y="30">Enclenchement</text>
+        <text x="148" y="206">Maintien, courant réduit</text>
+      </svg>
+      <figcaption>Principe «&nbsp;hit and hold&nbsp;»&nbsp;: la vanne est enclenchée à fort courant, puis maintenue à courant réduit. Schéma de principe.</figcaption>
+    </figure>
+  </div>
+</div>
+
+<section id="avantages">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Ce que le driver change dans votre système</h2>
+      <p>Les avantages publiés par Elactis pour le pilotage des électrovannes, solénoïdes et électroaimants.</p>
+    </div>
+    <ul class="rule-list">
+      <li><h3>Consommation optimisée</h3><p>Jusqu'à 90&nbsp;% d'économie de puissance consommée. Intéressant pour les systèmes très gourmands, les équipements mobiles et toute application sur batterie.</p></li>
+      <li><h3>Ouverture et fermeture plus rapides</h3><p>Des machines plus rapides et plus efficaces, grâce à une commutation optimisée.</p></li>
+      <li><h3>Débit précis à moins de 1&nbsp;ms</h3><p>Une précision très recherchée pour les applications de dosage.</p></li>
+      <li><h3>Plus d'échauffement</h3><p>La chauffe est éliminée, ce qui augmente nettement la durée de vie des électrovannes, des électroaimants et des solénoïdes.</p></li>
+      <li><h3>Diagnostic et communication</h3><p>L'état de l'électrovanne est connu pour une maintenance préventive&nbsp;: plus besoin d'arrêter la production pour changer une vanne par précaution. Transmission de données et pilotage à distance possibles.</p></li>
+      <li><h3>Systèmes miniaturisés</h3><p>De très petites électrovannes (par exemple 4,2&nbsp;mm) associées à une électronique miniaturisée offrent des performances proches de celles de grosses électrovannes.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section id="produits" style="padding-top:0">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Les drivers standard</h2>
+      <p>Des drivers PWM qui couvrent une large plage de tensions, de courants et de types de connecteurs, y compris les connecteurs standard EN&nbsp;175301-803 (DIN&nbsp;43650). Les versions miniatures s'intègrent dans les plus petites électrovannes.</p>
+    </div>
+    <div class="bom">
+      <div class="row"><span class="code">ADRV0001</span><p>Connecteur d'économie d'énergie «&nbsp;hit and hold&nbsp;». Réduit la consommation jusqu'à 90&nbsp;% par PWM et limite fortement l'échauffement de la bobine.</p><span></span></div>
+      <div class="row"><span class="code">ADRV0002</span><p>Driver intelligent qui accélère la commutation et inclut des fonctions de diagnostic. Performance constante sur une large plage de tension.</p><span></span></div>
+      <div class="row"><span class="code">ADRV0003</span><p>Économie d'énergie quelles que soient l'alimentation et la température&nbsp;: la bobine reste maintenue malgré les variations.</p><span></span></div>
+      <div class="row"><span class="code">ADRV0007BI · ADRV0008A</span><p>Connecteurs d'économie d'énergie à tension universelle&nbsp;: une même bobine pour toutes les tensions d'alimentation.</p><a href="http://www.elactis.com/datasheets/ADRV0007BI.pdf">Fiche technique ADRV0007BI (PDF)</a></div>
+      <div class="row"><span class="code">ADRV1003W · ADRV1012K</span><p>Drivers de solénoïdes de grande puissance. L'ADRV1012K est programmable par le client et accepte une large plage de tensions d'alimentation.</p><a href="http://www.elactis.com/datasheets/ADRV1012K.pdf">Fiche technique ADRV1012K (PDF)</a></div>
+      <div class="row"><span class="code">MSD08</span><p>Une puce pour piloter un îlot de 8 électrovannes, avec commande série (SPI) et réduction de puissance PWM sur chaque vanne.</p><span></span></div>
+      <div class="row"><span class="code">ADRV1026</span><p>Petit driver à bas coût (10&nbsp;×&nbsp;20&nbsp;mm) pour les petites électrovannes, relais et électroaimants&nbsp;: la puissance descend à 10&nbsp;% de sa valeur initiale.</p><span></span></div>
+    </div>
+    <p class="bom-note">Pour les prix, écrivez à <a href="mailto:info@elactis.com">info@elactis.com</a>. Support technique&nbsp;: <a href="mailto:support@elactis.com">support@elactis.com</a>.</p>
+  </div>
+</section>
+
+<section class="formats" aria-labelledby="fmt">
+  <div class="wrap split">
+    <div class="sec-head" style="margin:0">
+      <h2 id="fmt">De la taille d'un connecteur, ou d'une puce</h2>
+      <p>Le driver se glisse dans le connecteur de la vanne ou se monte directement dans la bobine.</p>
+    </div>
+    <div class="figs">
+      <figure><img src="img/cao.webp" width="200" height="149" alt="Vue de conception d'un connecteur transparent avec sa carte électronique verte"><figcaption>La carte dans son connecteur</figcaption></figure>
+      <figure><img src="img/connecteur.webp" width="200" height="183" alt="Connecteur d'électrovanne transparent contenant l'électronique"><figcaption>Connecteur DIN&nbsp;43650</figcaption></figure>
+      <figure><img src="img/euro.webp" width="200" height="160" alt="Une carte électronique miniature posée à côté d'une pièce de 1 euro"><figcaption>Version miniature, à côté d'une pièce de 1&nbsp;euro</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="apps on-mask" id="applications">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2>Là où les électrovannes travaillent</h2>
+      <p>Secteurs cités par Elactis&nbsp;:</p>
+    </div>
+    <ul class="sectors">
+      <li>Commercial</li><li>Injection d'air</li><li>Vannes miniaturisées</li><li>Industriel / process</li><li>Médical</li><li>Instrumentation</li><li>Transport et ferroviaire</li><li>Actionneurs</li>
+    </ul>
+    <div class="cases">
+      <article class="case">
+        <h3>Analyseur de sang&nbsp;: 24 électrovannes au lieu de 12</h3>
+        <dl>
+          <dt>Problème</dt><dd>Le fabricant ne pouvait plus ajouter de vannes&nbsp;: la chaleur dissipée par les solénoïdes et l'alimentation limitaient l'instrument (jusqu'à douze vannes).</dd>
+          <dt>Solution</dt><dd>Le driver Elactis réduit la puissance de 75&nbsp;%. Douze vannes de plus entrent dans le même boîtier, avec la même alimentation.</dd>
+        </dl>
+      </article>
+      <article class="case">
+        <h3>Concentrateur d'oxygène&nbsp;: un an d'autonomie au lieu d'un mois</h3>
+        <dl>
+          <dt>Problème</dt><dd>Faire fonctionner une électrovanne miniature haute performance avec des piles de 1,5&nbsp;V. L'électronique standard gaspillait plus de 50&nbsp;% de l'énergie.</dd>
+          <dt>Solution</dt><dd>Le driver multiplie par 10 la durée de vie des piles&nbsp;: un an d'autonomie au lieu d'un mois avec 2 piles AA.</dd>
+        </dl>
+      </article>
+      <article class="case">
+        <h3>Verrouillage de porte d'ascenseur&nbsp;: bobine à 60&nbsp;°C</h3>
+        <dl>
+          <dt>Problème</dt><dd>Un petit solénoïde à forte force d'attraction, dans un espace confiné, chauffait au-delà de 120&nbsp;°C et exigeait un interrupteur thermique.</dd>
+          <dt>Solution</dt><dd>Un circuit miniature régule la puissance&nbsp;: la température tombe à 60&nbsp;°C, avec la force de maintien suffisante.</dd>
+        </dl>
+      </article>
+    </div>
+    <p class="fine">Cas publiés par Elactis, clients non nommés. Références détaillées sur demande à <a href="mailto:info@elactis.com">info@elactis.com</a>.</p>
+  </div>
+</section>
+
+<section class="custom">
+  <div class="wrap">
+    <h2>Un cas particulier&nbsp;? On le dessine avec vous.</h2>
+    <div>
+      <p>Elactis conçoit, développe et produit des solutions électroniques sur mesure liées au contrôle des fluides, jusqu'à des fonctions OEM complètes. L'équipe étudie avec vous les problèmes de solénoïdes et l'intégration possible dans vos systèmes.</p>
+      <p>Un accompagnement du lancement du projet jusqu'à la production en série.</p>
+      <div class="actions"><a class="btn solid" href="mailto:info@elactis.com?subject=Demande%20de%20solution%20sur%20mesure">Décrire votre projet</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="company" id="entreprise">
+  <div class="wrap cols">
+    <div>
+      <div class="sec-head"><h2>Une entreprise suisse, des clients dans le monde entier</h2></div>
+      <blockquote>Nous sommes le partenaire privilégié des fabricants de vannes et de solénoïdes qui tiennent à offrir des systèmes intelligents, très performants et auto-contrôlables.</blockquote>
+      <p>Elactis est une entreprise industrielle privée, spécialisée dans l'électronique de contrôle des fluides. Ses produits apportent une qualité suisse à un coût très compétitif.</p>
+      <p>Depuis le 1<sup>er</sup>&nbsp;juillet 2013, Elactis fait partie du groupe <a href="http://www.gevasol.com">Geva Sol</a>, dont elle est le centre de R&amp;D européen pour le contrôle des fluides.</p>
+    </div>
+    <div>
+      <h3 style="font-size:1.5rem;margin-bottom:.8rem">Ce que l'entreprise garantit</h3>
+      <ul class="vals">
+        <li>Le plus haut niveau de technologie et de qualité</li>
+        <li>Des produits et services satisfaisants</li>
+        <li>La confidentialité</li>
+        <li>Un partenaire socialement responsable</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap grid">
+    <div>
+      <h2>Parlons de vos électrovannes.</h2>
+      <p class="small">Notre centre de développement est situé entre Genève et Lausanne, à 35&nbsp;km de l'aéroport de Genève.</p>
+    </div>
+    <div>
+      <a class="big" href="tel:+41223646585">+41 22 364 65 85</a>
+      <a class="big" href="mailto:info@elactis.com">info@elactis.com</a>
+      <address>
+        Elactis SA<br>
+        Route des Avouillons 6<br>
+        1196 Gland, Suisse
+      </address>
+      <p class="small">Support technique&nbsp;: <a href="mailto:support@elactis.com">support@elactis.com</a><br>
+      <a href="https://www.openstreetmap.org/search?query=Route%20des%20Avouillons%206%2C%201196%20Gland">Voir sur la carte</a></p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>Elactis SA · Route des Avouillons 6 · 1196 Gland · CHE-113.533.588</span>
+    <a href="http://www.gevasol.com">Membre du groupe Geva Sol</a>
+  </div>
+</footer>
+
+<div class="preview" role="note">Aperçu de votre nouveau site, préparé par&nbsp;<a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
+</body>
+</html>

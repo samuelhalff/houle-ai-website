@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Carrosserie Binggeli – Tôlerie, peinture et dépannage à Nyon et Versoix</title>
+<meta name="description" content="Carrosserie à Nyon et à Versoix : tôlerie, peinture à l’eau, pare-brise, véhicules de collection, dépannage 24 h/24. Devis gratuit, gestion des sinistres. Tél. 022 361 29 07.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#f4f3f1">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Carrosserie Binggeli – Nyon et Versoix">
+<meta property="og:description" content="La qualité comme unique exigence : tôlerie, peinture, pare-brise, Classic Car et dépannage 24 h/24.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:locale" content="fr_CH">
+<link rel="icon" href="logo.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;1,600;1,700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<!--
+  DESIGN NOTES (houle.ai mock-up, 2026-10-29)
+  Artefacts: the repair order slip ("fiche d'atelier") that follows a car through tôlerie, cabine and
+  polissage; the spray booth (white walls, grated floor); the single emergency number.
+  Colours: logo red as a full-bleed surface (emergency band, site slips), graphite from the workshop
+  floor and lifts, booth-wall grey as page, no secondary accent.
+  Type: Barlow Condensed italic 700 echoes the slanted logo; Barlow for text.
+  Signature: the two sites are set as torn-off repair slips (Nyon, Versoix) with a perforation edge.
+  Motion: none. Photography: their own workshop and team photos, shown at <=960 css px so they stay sharp.
+-->
+<style>
+:root{
+  --bg:#f3f2f0; --surface:#e8e7e4; --ink:#1b1d20; --muted:#4d5258; --rule:#cfcdc8;
+  --red:#c8141f; --red-surface:#c8141f; --on-red:#fff4f3; --graphite:#1b1d20; --on-graphite:#eceae6; --on-graphite-muted:#b9b7b2;
+  --display:"Barlow Condensed","Arial Narrow",sans-serif; --text:"Barlow",system-ui,sans-serif;
+  --gutter:clamp(16px,5vw,56px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.55 var(--text);padding-bottom:calc(66px + env(safe-area-inset-bottom))}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--red);text-underline-offset:.18em}
+:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.wrap{max-width:1180px;margin-inline:auto;padding-inline:var(--gutter)}
+h1,h2,h3{font-family:var(--display);font-weight:700;line-height:.98;margin:0;letter-spacing:.005em}
+h1,h2{font-style:italic}
+p{margin:0 0 1em;max-width:62ch}
+
+.preview{padding:11px 16px;background:#0f172a;color:#f8fafc;font:400 14px/1.35 system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center}
+.preview a{color:#f8fafc;text-decoration:underline;padding:14px 2px}
+
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.top img{width:132px}
+.top nav{display:none}
+.top .tel{font:700 1.35rem/1 var(--display);color:var(--ink);text-decoration:none;white-space:nowrap}
+.top .tel small{font:500 .8rem var(--text);color:var(--muted);display:block;margin-bottom:2px}
+@media(min-width:900px){
+  .top nav{display:flex;gap:26px}
+  .top nav a{color:var(--ink);text-decoration:none;font-weight:600;padding:8px 0;border-bottom:2px solid transparent}
+  .top nav a:hover{border-color:var(--red)}
+}
+
+.btn{display:inline-block;padding:14px 22px;background:var(--red);color:#fff;font:700 1.15rem/1 var(--display);letter-spacing:.02em;text-decoration:none;min-height:48px}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.btn.light{background:#fff;color:var(--red)}
+.btn:hover{filter:brightness(.93)}
+
+/* Hero */
+.hero{display:grid;gap:22px;padding-block:8px 44px}
+.hero h1{font-size:clamp(2.9rem,12.5vw,6.2rem);text-transform:none}
+.hero .lede{font-size:1.2rem;margin:18px 0 22px;max-width:34ch}
+.hero .acts{display:flex;flex-wrap:wrap;gap:12px}
+.hero .hours{margin:20px 0 0;color:var(--muted);font-size:.98rem}
+.hero figure{margin:0}
+.hero img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.hero figcaption{font-size:.9rem;color:var(--muted);padding-top:8px}
+@media(min-width:900px){
+  .hero{grid-template-columns:1.05fr 1fr;align-items:center;gap:48px;padding-block:24px 64px}
+  .hero figure{max-width:600px}
+}
+
+/* Dépannage */
+.sos{background:var(--red-surface);color:var(--on-red)}
+.sos .wrap{display:grid;gap:18px;padding-block:34px}
+.sos h2{font-size:clamp(2rem,8vw,3.4rem);color:#fff}
+.sos .num{font:700 clamp(2.6rem,12vw,5rem)/1 var(--display);color:#fff;text-decoration:none;display:inline-block;margin-top:6px}
+.sos ol{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.sos li{padding-left:14px;border-left:3px solid #fff}
+.sos p{max-width:40ch}
+@media(min-width:900px){.sos .wrap{grid-template-columns:1.2fr 1fr;align-items:center;gap:60px;padding-block:44px}}
+
+/* Services */
+section.s{padding-block:clamp(44px,8vw,88px)}
+.head{margin-bottom:26px;max-width:36ch}
+.head h2{font-size:clamp(2.2rem,8vw,3.8rem)}
+.svc{display:grid;gap:16px;padding-block:30px;border-top:2px solid var(--ink)}
+.svc:first-of-type{border-top:0;padding-top:0}
+.svc h3{font-size:clamp(1.9rem,6vw,2.6rem);font-style:italic}
+.svc img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.svc ul{margin:0 0 1em;padding-left:1.1em}
+.svc li{margin:.25em 0}
+.svc .tag{display:inline-block;margin-top:2px;font-weight:600;font-size:.95rem;color:var(--muted)}
+@media(min-width:900px){
+  .svc{grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding-block:44px}
+  .svc:nth-of-type(even) .pic{order:2}
+  .svc .pic{max-width:520px}
+}
+
+/* Sinistre + devis */
+.devis{background:var(--surface)}
+.devis .wrap{display:grid;gap:34px}
+.devis h2{font-size:clamp(2.2rem,8vw,3.6rem)}
+.steps{margin:0;padding:0;list-style:none;display:grid;gap:14px}
+.steps li{display:grid;grid-template-columns:2.2rem 1fr;gap:10px}
+.steps b{font:700 1.7rem/1 var(--display);color:var(--red)}
+.ins{margin-top:18px;padding-top:14px;border-top:1px solid var(--rule);color:var(--muted)}
+@media(min-width:900px){.devis .wrap{grid-template-columns:1fr 1fr;gap:72px}}
+
+/* Équipes */
+.teams{display:grid;gap:34px}
+.teams figure{margin:0}
+.teams img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.teams figcaption{font-size:.9rem;color:var(--muted);padding-top:8px}
+.teams h3{font-size:2.1rem;margin-bottom:6px}
+.teams ul{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px 18px;color:var(--ink)}
+.teams li::before{content:"";display:inline-block;width:8px;height:8px;background:var(--red);margin-right:8px}
+@media(min-width:900px){.teams{grid-template-columns:1fr 1fr;gap:56px}.teams figure{max-width:560px}}
+.hist{margin-top:46px;display:grid;gap:12px}
+.hist dl{margin:0;display:grid;gap:14px}
+.hist dt{font:700 2.4rem/1 var(--display);color:var(--red)}
+.hist dd{margin:0}
+@media(min-width:900px){.hist dl{grid-template-columns:repeat(3,1fr);gap:34px}}
+.brands{margin-top:34px;padding:22px;background:var(--graphite);color:var(--on-graphite)}
+.brands p{margin:0;color:var(--on-graphite)}
+.brands strong{font:700 1.4rem var(--display);letter-spacing:.02em}
+
+/* Sites : fiches */
+.sites{background:var(--graphite);color:var(--on-graphite)}
+.sites h2{color:#fff;font-size:clamp(2.2rem,8vw,3.6rem);margin-bottom:26px}
+.slips{display:grid;gap:22px}
+.slip{position:relative;background:#f7f6f3;color:var(--ink);padding:26px 22px 22px}
+.slip::before{content:"";position:absolute;left:0;right:0;top:0;height:10px;background:radial-gradient(circle at 8px 0,var(--graphite) 5px,transparent 5.5px) 0 0/16px 10px repeat-x}
+.slip h3{font-size:2.3rem;color:var(--red);font-style:italic}
+.slip address{font-style:normal;margin:10px 0 14px}
+.slip dl{margin:0 0 16px;display:grid;grid-template-columns:auto 1fr;gap:4px 14px}
+.slip dt{color:var(--muted)}
+.slip dd{margin:0}
+.slip a{color:var(--ink)}
+.slip .acts{display:flex;flex-wrap:wrap;gap:10px}
+.slip .btn{padding:12px 18px}
+.slip img{width:100%;max-width:380px;aspect-ratio:3/2;object-fit:cover;margin-bottom:16px}
+@media(min-width:900px){.slips{grid-template-columns:1fr 1fr;gap:34px}}
+.rule{margin-top:26px;color:var(--on-graphite-muted);max-width:70ch}
+
+footer{padding-block:28px;color:var(--muted);font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:space-between}
+
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:50;display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px 12px calc(8px + env(safe-area-inset-bottom));background:var(--bg);border-top:1px solid var(--rule)}
+.bar .btn{text-align:center;padding:14px 8px}
+@media(min-width:900px){.bar{display:none}body{padding-bottom:0}}
+</style>
+</head>
+<body>
+<div class="preview" role="note">Aperçu de votre nouveau site, préparé par <a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
+
+<header class="wrap top">
+  <a href="#"><img src="logo.webp" width="426" height="109" alt="Binggeli, carrosserie"></a>
+  <nav aria-label="Navigation">
+    <a href="#services">Prestations</a>
+    <a href="#sinistre">Sinistre et devis</a>
+    <a href="#equipes">Équipes</a>
+    <a href="#sites">Nyon et Versoix</a>
+  </nav>
+  <a class="tel" href="tel:+41223612907"><small>Nyon</small>022&nbsp;361&nbsp;29&nbsp;07</a>
+</header>
+
+<main>
+<section class="wrap hero">
+  <div>
+    <h1>La qualité comme unique exigence.</h1>
+    <p class="lede">Carrosserie à Nyon et à Versoix&nbsp;: tôlerie, peinture à l’eau, pare-brise, véhicules de collection. Plus de 60 ans au service de l’automobile.</p>
+    <div class="acts">
+      <a class="btn" href="mailto:nyon@binggelicarrosserie.ch?subject=Demande%20de%20devis">Demander un devis gratuit</a>
+      <a class="btn ghost" href="tel:+41223612907">Appeler l’atelier</a>
+    </div>
+    <p class="hours">Lundi – vendredi&nbsp;: 7&nbsp;h&nbsp;30 – 12&nbsp;h et 13&nbsp;h&nbsp;30 – 18&nbsp;h</p>
+  </div>
+  <figure>
+    <img src="cabine.webp" width="1920" height="1280" alt="Véhicule dans la cabine de peinture de la carrosserie" fetchpriority="high">
+    <figcaption>La cabine de giclage, à l’eau.</figcaption>
+  </figure>
+</section>
+
+<section class="sos" aria-labelledby="sos-t">
+  <div class="wrap">
+    <div>
+      <h2 id="sos-t">Accident&nbsp;? Un seul numéro, 7&nbsp;j sur 7, 24&nbsp;h sur 24.</h2>
+      <a class="num" href="tel:+41223660303">022&nbsp;366&nbsp;03&nbsp;03</a>
+    </div>
+    <div>
+      <p>La carrosserie s’est associée à deux autres carrosseries de la région pour une centrale de dépannage commune.</p>
+      <ol>
+        <li>Composez le numéro et contactez le dépanneur.</li>
+        <li>Dites si vous avez besoin d’un véhicule de remplacement.</li>
+        <li>Le dépanneur prend en charge votre véhicule dans les plus brefs délais.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="services">
+  <div class="wrap">
+    <div class="head"><h2>Ce que nous faisons de votre voiture.</h2></div>
+
+    <article class="svc">
+      <div class="pic"><img src="atelier.webp" width="1920" height="1280" alt="Atelier de tôlerie avec ponts élévateurs" loading="lazy"></div>
+      <div>
+        <h3>Tôlerie</h3>
+        <p>Quelle que soit l’importance du dégât, nous apportons la réparation adéquate&nbsp;: redressage traditionnel de la tôle et de l’aluminium, débosselage, remplacement de pièces d’origine.</p>
+        <ul><li>Débosselage</li><li>Marbre de redressage</li><li>Traitement antirouille</li></ul>
+      </div>
+    </article>
+
+    <article class="svc">
+      <div class="pic"><img src="teintes.webp" width="1920" height="1280" alt="Mur de teintes et de produits de peinture" loading="lazy"></div>
+      <div>
+        <h3>Peinture</h3>
+        <p>On apprécie une voiture par sa silhouette, sa mécanique, mais aussi sa peinture. Notre atelier utilise des peintures à l’eau, moins polluantes que les solvants, avec les fabricants PPG et Glasurit.</p>
+        <ul>
+          <li>Cabine de giclage et four</li>
+          <li>Local de teintes avec spectromètre de dernière génération</li>
+          <li>Fours SAIMA à séchage rapide par panneaux UV</li>
+          <li>Réparation et peinture de jantes</li>
+          <li>Réparation plastique et fibre</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="svc">
+      <div class="pic"><img src="lavage.webp" width="1920" height="1280" alt="Station de lavage self-service de Nyon" loading="lazy"></div>
+      <div>
+        <h3>Entretien</h3>
+        <p>Polissage et nettoyage pour effacer micro-rayures et taches, traitement téflon ou céramique pour une protection de 12 à 24 mois (selon l’utilisation et l’entretien).</p>
+        <p>À Nyon, une station de lavage self-service ouverte toute l’année, 7&nbsp;j sur 7.</p>
+      </div>
+    </article>
+
+    <article class="svc">
+      <div class="pic"><img src="parebrise.webp" width="1920" height="1330" alt="Deux carrossiers polissant un pare-brise" loading="lazy"></div>
+      <div>
+        <h3>Visibilité</h3>
+        <p>Remplacement et réparation de pare-brise&nbsp;: grâce au partenariat Concept Parbrise avec Allianz, la Mobilière et la Vaudoise, nous nous occupons de l’administration et de la réparation de votre sinistre.</p>
+        <ul><li>Rénovation de phares en polycarbonate</li><li>Films solaires</li></ul>
+      </div>
+    </article>
+
+    <article class="svc">
+      <div class="pic"><img src="classic.webp" width="1920" height="1280" alt="Garage de véhicules de collection" loading="lazy"></div>
+      <div>
+        <h3>Classic Car</h3>
+        <p>Connue de nombreux collectionneurs en Suisse, la carrosserie restaure et entretient véhicules anciens et de prestige. Un gardiennage sécurisé, à l’abri des agressions extérieures, est à disposition.</p>
+        <p>Avec ou sans chauffeur, un véhicule ancien pour donner un «&nbsp;look rétro&nbsp;» à votre mariage.</p>
+      </div>
+    </article>
+
+    <article class="svc">
+      <div class="pic"><img src="scooter.webp" width="1920" height="1289" alt="Scooter masqué dans la cabine de peinture" loading="lazy"></div>
+      <div>
+        <h3>Autres prestations</h3>
+        <p>Rien ne se démode, rien ne se jette, tout se repeint&nbsp;: scooters, mobilier, électroménager. Parlez-nous de votre idée.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="s devis" id="sinistre">
+  <div class="wrap">
+    <div>
+      <h2>Sinistre&nbsp;: nous gérons le dossier avec vous.</h2>
+    </div>
+    <div>
+      <ol class="steps">
+        <li><b>1</b><span>Envoyez-nous une copie de la carte grise et des photos explicites des dégâts.</span></li>
+        <li><b>2</b><span>Nous établissons un devis gratuit, détaillé, avec les systèmes Audatex et Auto-i.</span></li>
+        <li><b>3</b><span>Nous conseillons et effectuons, dans la mesure du possible, les démarches auprès des assurances suisses ou étrangères.</span></li>
+      </ol>
+      <p class="ins">Les assurances Vaudoise et Axa font confiance à la carrosserie pour la gestion des sinistres.</p>
+      <a class="btn" href="mailto:nyon@binggelicarrosserie.ch?subject=Demande%20de%20devis">Écrire à Nyon</a>
+      <a class="btn ghost" href="mailto:versoix@binggelicarrosserie.ch?subject=Demande%20de%20devis">Écrire à Versoix</a>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="equipes">
+  <div class="wrap">
+    <div class="head"><h2>Deux équipes, vingt personnes.</h2></div>
+    <div class="teams">
+      <div>
+        <figure><img src="equipe-nyon.webp" width="1920" height="1280" alt="Une partie de l’équipe de la carrosserie devant l’atelier" loading="lazy"><figcaption>Une partie de l’équipe.</figcaption></figure>
+        <h3 style="margin-top:18px">Nyon&nbsp;: 14 personnes</h3>
+        <ul><li>5 peintres</li><li>1 apprenti peintre</li><li>5 tôliers</li><li>1 apprenti tôlier</li><li>2 gestionnaires de bureau</li></ul>
+      </div>
+      <div>
+        <figure><img src="equipe-versoix.webp" width="1920" height="1280" alt="L’équipe de Versoix" loading="lazy"><figcaption>L’équipe de Versoix.</figcaption></figure>
+        <h3 style="margin-top:18px">Versoix&nbsp;: 6 personnes</h3>
+        <ul><li>1 peintre</li><li>1 apprenti peintre</li><li>1 tôlier</li><li>1 chef d’atelier</li><li>2 gestionnaires de bureau</li></ul>
+      </div>
+    </div>
+    <div class="hist">
+      <dl>
+        <div><dt>1950</dt><dd>Gilbert Binggeli fonde la carrosserie à Versoix, premier atelier de réparations automobiles de la commune.</dd></div>
+        <div><dt>1976</dt><dd>Ouverture à Nyon pour répondre à une clientèle en augmentation. Depuis 1990, l’atelier est au chemin de la Vuarpillière, dans la zone industrielle de l’Asse.</dd></div>
+        <div><dt>Aujourd’hui</dt><dd>Jean-François Binggeli dirige l’entreprise, son neveu Jérôme travaille à ses côtés. Des apprentis sont formés en permanence.</dd></div>
+      </dl>
+    </div>
+    <div class="brands">
+      <p><strong>Partenaire de Mercedes, Volvo, Hyundai, Smart, Ford et Nissan.</strong> Ces marques imposent des critères de qualité très exigeants, contrôlés régulièrement, et assurent la formation continue de nos collaborateurs. Membre de la Fédération des Carrossiers Romands (FCR).</p>
+    </div>
+  </div>
+</section>
+
+<section class="s sites" id="sites">
+  <div class="wrap">
+    <h2>Nyon et Versoix.</h2>
+    <div class="slips">
+      <article class="slip">
+        <h3>Nyon</h3>
+        <img src="accueil.webp" width="1920" height="1280" alt="L’accueil de la carrosserie" loading="lazy">
+        <address>Chemin de la Vuarpillière&nbsp;9<br>1260 Nyon</address>
+        <dl>
+          <dt>Tél.</dt><dd><a href="tel:+41223612907">022&nbsp;361&nbsp;29&nbsp;07</a></dd>
+          <dt>E-mail</dt><dd><a href="mailto:nyon@binggelicarrosserie.ch">nyon@binggelicarrosserie.ch</a></dd>
+          <dt>Horaires</dt><dd>Lun – ven&nbsp;: 7&nbsp;h&nbsp;30 – 12&nbsp;h, 13&nbsp;h&nbsp;30 – 18&nbsp;h</dd>
+        </dl>
+        <div class="acts">
+          <a class="btn" href="tel:+41223612907">Appeler</a>
+          <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Chemin+de+la+Vuarpilli%C3%A8re+9+1260+Nyon">Itinéraire</a>
+        </div>
+      </article>
+      <article class="slip">
+        <h3>Versoix</h3>
+        <img src="versoix.webp" width="800" height="533" alt="Le bâtiment de la carrosserie à Versoix" loading="lazy">
+        <address>Route de Suisse&nbsp;28<br>1290 Versoix</address>
+        <dl>
+          <dt>Tél.</dt><dd><a href="tel:+41227551811">022&nbsp;755&nbsp;18&nbsp;11</a></dd>
+          <dt>E-mail</dt><dd><a href="mailto:versoix@binggelicarrosserie.ch">versoix@binggelicarrosserie.ch</a></dd>
+          <dt>Horaires</dt><dd>Lun – ven&nbsp;: 7&nbsp;h&nbsp;30 – 12&nbsp;h, 13&nbsp;h&nbsp;30 – 18&nbsp;h</dd>
+        </dl>
+        <div class="acts">
+          <a class="btn" href="tel:+41227551811">Appeler</a>
+          <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Route+de+Suisse+28+1290+Versoix">Itinéraire</a>
+        </div>
+      </article>
+    </div>
+    <p class="rule">Dépannage 7&nbsp;j sur 7, 24&nbsp;h sur 24&nbsp;: <a style="color:#fff" href="tel:+41223660303">022&nbsp;366&nbsp;03&nbsp;03</a>.</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Carrosserie Binggeli, Nyon et Versoix</span>
+    <span>Maquette préparée par <a href="https://houle.ai/fr/products/chat-website/">houle.ai</a> · ce site n’est pas en ligne</span>
+  </div>
+</footer>
+
+<div class="bar">
+  <a class="btn" href="tel:+41223660303">Dépannage 24&nbsp;h/24</a>
+  <a class="btn ghost" href="mailto:nyon@binggelicarrosserie.ch?subject=Demande%20de%20devis">Devis gratuit</a>
+</div>
+</body>
+</html>
