@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>LBLP Architectes – Bureau d’architecture à Morges</title>
+<meta name="description" content="Bernet &amp; Preitner Architectes à Morges : rénovation, transformation et construction en matériaux écologiques, de l’avant-projet à la réalisation. Tél. 079 305 49 04.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="LBLP Architectes – Morges">
+<meta property="og:description" content="Une architecture qui laisse s’exprimer les matériaux, sans artifices.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:locale" content="fr_CH">
+<meta name="theme-color" content="#eef0ea">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%232c3533'/%3E%3Ctext x='32' y='43' font-family='Futura,Jost,Arial' font-weight='700' font-size='30' text-anchor='middle' fill='%23e4d2ab'%3ELB%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300..700;1,400&family=Literata:opsz,wght@7..72,400..600&display=swap" rel="stylesheet">
+<!--
+  DESIGN NOTES (houle.ai mock-up, 2026-10-29)
+  Artefact: the dimensioned drawing (cotation): a line with end ticks and a figure in the middle.
+  Used as the section divider, each one carrying a real fact (address, year, place).
+  Colours: zinc-green (the zinc scales of the Refuge des Bouquetins) as the full-bleed band,
+  raw spruce as its text colour, a cool paper white for the page, moss green for links. No other accent.
+  Type: Jost (the geometric face of their existing LBLP wordmark, which is rebuilt as text) for display,
+  Literata for reading. Layout: asymmetric, big left edge, photos at natural ratios, one dark band.
+  Motion: none. Photography: only their own project photos, shown no larger than their pixels allow.
+-->
+<style>
+:root{
+  --paper:#eef0ea; --ink:#1e2624; --muted:#4b5753; --rule:#1e2624;
+  --zinc:#2c3533; --spruce:#e4d2ab; --spruce-muted:#c3c7bd;
+  --moss:#34553a;
+  --display:"Jost","Futura","Century Gothic",system-ui,sans-serif;
+  --text:"Literata",Georgia,serif;
+  --gutter:clamp(16px,5vw,64px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.65 var(--text);overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--moss);text-underline-offset:.2em}
+:focus-visible{outline:3px solid var(--moss);outline-offset:3px}
+.wrap{max-width:1160px;margin-inline:auto;padding-inline:var(--gutter)}
+h1,h2,h3{font-family:var(--display);font-weight:500;line-height:1.02;margin:0;letter-spacing:-.01em}
+p{margin:0 0 1em;max-width:62ch}
+
+.preview{padding:11px 16px;background:#0f172a;color:#f8fafc;font:400 14px/1.35 system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center}
+.preview a{color:#f8fafc;text-decoration:underline;padding:14px 2px}
+
+/* header */
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:18px}
+.mark{font-family:var(--display);font-size:1.7rem;line-height:1;color:var(--ink);text-decoration:none;white-space:nowrap}
+.mark b{font-weight:700;letter-spacing:.02em}
+.mark span{font-weight:300;font-size:1.3rem;margin-left:.3em}
+.top nav{display:none}
+.top .tel{font-family:var(--display);font-weight:500;font-size:1.1rem;color:var(--ink);text-decoration:none;white-space:nowrap}
+@media(min-width:900px){
+  .top nav{display:flex;gap:28px;font-family:var(--display);font-size:1.05rem}
+  .top nav a{color:var(--ink);text-decoration:none;padding:10px 0;border-bottom:2px solid transparent}
+  .top nav a:hover{border-color:var(--moss)}
+}
+
+/* cotation */
+.dim{position:relative;display:flex;align-items:center;gap:14px;font-family:var(--display);font-size:.95rem;color:var(--ink);margin:0}
+.dim::before,.dim::after{content:"";flex:1;height:1px;background:var(--rule);}
+.dim span{white-space:nowrap}
+.dim i{position:absolute;top:50%;width:1px;height:14px;background:var(--rule);transform:translateY(-50%)}
+.dim i:first-child{left:0}.dim i:last-child{right:0}
+.dim.on-zinc{color:var(--spruce)}
+.dim.on-zinc::before,.dim.on-zinc::after,.dim.on-zinc i{background:var(--spruce)}
+
+/* hero */
+.hero{padding-block:clamp(28px,6vw,70px) clamp(40px,7vw,90px);display:grid;gap:30px}
+.hero h1{font-size:clamp(2.5rem,10.5vw,4.3rem);max-width:16ch;font-weight:400}
+.hero h1 em{font-style:normal;font-weight:600}
+.hero .lede{font-size:1.15rem;max-width:40ch;margin:0}
+.hero figure{margin:0}
+.hero img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.hero figcaption{font-family:var(--display);font-size:.95rem;color:var(--muted);padding-top:8px}
+.hero .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:12px 22px;background:var(--zinc);color:var(--spruce);font-family:var(--display);font-weight:500;font-size:1.05rem;text-decoration:none}
+.btn:hover{background:#1e2624}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1.5px var(--ink)}
+.btn.ghost:hover{background:#dfe3da}
+@media(min-width:900px){
+  .hero{grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+  .hero figure{max-width:620px}
+}
+
+.s{padding-block:clamp(44px,7vw,92px)}
+.s h2{font-size:clamp(2rem,7vw,3.4rem);margin:26px 0 22px;font-weight:400}
+
+/* bureau */
+.bureau{display:grid;gap:34px}
+.bureau .big{font-family:var(--display);font-size:clamp(1.35rem,4.6vw,2rem);line-height:1.28;font-weight:400;max-width:30ch;margin-bottom:0}
+.people{display:grid;gap:26px;margin:0;padding:0;list-style:none}
+.people li{border-left:3px solid var(--moss);padding-left:16px}
+.people h3{font-size:1.5rem;margin-bottom:2px}
+.people .role{font-family:var(--display);color:var(--muted);margin:0 0 8px}
+.people p{margin:0 0 8px;font-size:1rem}
+@media(min-width:900px){.bureau{grid-template-columns:1fr 1fr;gap:80px}.people{grid-column:2}.bureau .intro{grid-column:1;grid-row:1 / span 2}}
+
+/* projets */
+.proj{display:grid;gap:44px}
+.proj figure{margin:0}
+.proj img{width:100%}
+.proj h3{font-size:1.6rem;margin:12px 0 2px;font-weight:500}
+.proj .where{font-family:var(--display);color:var(--muted);margin:0 0 8px}
+.proj p{margin:0;font-size:1rem}
+@media(min-width:900px){
+  .proj{grid-template-columns:repeat(12,1fr);gap:64px 32px;align-items:start}
+  .proj .a{grid-column:1 / span 7}
+  .proj .b{grid-column:8 / span 5;margin-top:90px}
+  .proj .c{grid-column:1 / span 5;margin-top:0}
+  .proj .d{grid-column:6 / span 7;margin-top:60px}
+  .proj .e{grid-column:1 / span 6}
+  .proj .f{grid-column:7 / span 6;margin-top:70px}
+  .proj .b img,.proj .c img,.proj .f img{aspect-ratio:3/2;object-fit:cover}
+}
+.more{margin-top:34px;font-family:var(--display)}
+
+/* bande zinc : démarche */
+.band{background:var(--zinc);color:var(--spruce)}
+.band h2{color:var(--spruce)}
+.band .cols{display:grid;gap:26px}
+.band h3{font-size:1.45rem;color:var(--spruce);margin-bottom:6px;font-weight:500}
+.band p{color:var(--spruce-muted);margin:0;font-size:1rem}
+.band .lead{font-family:var(--display);font-size:clamp(1.3rem,4.4vw,1.9rem);line-height:1.3;color:var(--spruce);max-width:26ch;margin-bottom:30px}
+@media(min-width:900px){.band .cols{grid-template-columns:repeat(3,1fr);gap:48px}}
+
+/* presse + actus */
+.two{display:grid;gap:44px}
+.list{margin:0;padding:0;list-style:none}
+.list li{padding:14px 0;border-top:1px solid #b9beb4;display:grid;grid-template-columns:6.4rem 1fr;gap:12px}
+.list li:last-child{border-bottom:1px solid #b9beb4}
+.list time{font-family:var(--display);color:var(--muted);font-size:.95rem;padding-top:2px}
+.list b{font-family:var(--display);font-weight:500;font-size:1.1rem;display:block;line-height:1.25}
+.list span{font-size:.95rem;color:var(--muted)}
+.two h3{font-size:1.5rem;margin-bottom:14px;font-weight:500}
+@media(min-width:900px){.two{grid-template-columns:1fr 1fr;gap:80px}}
+
+/* contact */
+.contact{background:var(--spruce);color:var(--ink)}
+.contact h2{margin-top:26px}
+.contact .grid{display:grid;gap:28px}
+.contact address{font-style:normal;font-size:1.15rem;line-height:1.6}
+.contact a{color:var(--ink);font-weight:500}
+.contact .tel{font-family:var(--display);font-size:clamp(1.9rem,8vw,3rem);font-weight:500;text-decoration:none;display:inline-block;padding:6px 0}
+.contact .acts{display:flex;flex-wrap:wrap;gap:12px}
+.contact .btn.ghost{box-shadow:inset 0 0 0 1.5px var(--ink)}
+.contact .btn.ghost:hover{background:#d9c598}
+@media(min-width:900px){.contact .grid{grid-template-columns:1.1fr .9fr;gap:80px;align-items:end}}
+
+footer{padding:26px 0 40px;font-family:var(--display);font-size:.95rem;color:var(--muted)}
+footer .wrap{display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:10;display:flex;background:var(--zinc);padding-bottom:env(safe-area-inset-bottom)}
+.mbar a{flex:1;text-align:center;padding:14px 8px;color:var(--spruce);font-family:var(--display);font-weight:500;text-decoration:none;min-height:50px}
+.mbar a+a{border-left:1px solid #4a5754}
+body{padding-bottom:calc(52px + env(safe-area-inset-bottom))}
+@media(min-width:900px){.mbar{display:none}body{padding-bottom:0}}
+</style>
+</head>
+<body>
+<div class="preview">Aperçu de votre nouveau site, préparé par&nbsp;<a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
+
+<header class="wrap top">
+  <a class="mark" href="#haut" aria-label="LBLP Architectes"><b>LBLP</b><span>Architectes</span></a>
+  <nav aria-label="Navigation">
+    <a href="#projets">Projets</a>
+    <a href="#bureau">Bureau</a>
+    <a href="#presse">Presse et actualités</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a class="tel" href="tel:+41793054904">079 305 49 04</a>
+</header>
+
+<main id="haut">
+<section class="wrap hero">
+  <div>
+    <h1>Des matériaux <em>sans artifices</em>, des détails soignés.</h1>
+    <p class="lede" style="margin-top:22px">Bureau d’architecture à Morges. Rénovation, transformation et construction, de l’avant-projet à la réalisation.</p>
+    <div class="acts">
+      <a class="btn" href="#projets">Voir les projets</a>
+      <a class="btn ghost" href="mailto:info@lblp.ch">Écrire au bureau</a>
+    </div>
+  </div>
+  <figure>
+    <img src="refuge.webp" width="1600" height="1212" alt="Intérieur en bois brut du refuge des Bouquetins, avec couchettes et échelle">
+    <figcaption>Refuge des Bouquetins, Arolla, 2024</figcaption>
+  </figure>
+</section>
+
+<section class="s wrap bureau" id="bureau">
+  <div class="intro">
+    <p class="dim" aria-hidden="true"><i></i><span>Bureau fondé en 2018</span><i></i></p>
+    <h2>Une vision plus large que l’architecture seule</h2>
+    <p class="big">Fondé en 2018 par Loïc Bernet et Loïc Preitner, le bureau choisit avec soin des matériaux et des techniques écologiques.</p>
+  </div>
+  <div>
+    <p>Notre architecture est respectueuse de son environnement et laisse s’exprimer les matériaux sans artifices. Cette mise en œuvre simple et réfléchie, avec un soin particulier porté aux détails, génère des atmosphères singulières.</p>
+    <p>La taille du bureau permet une relation privilégiée avec les mandants. De l’avant-projet jusqu’à la réalisation par des entreprises de la région ou en auto-construction, nous vous accompagnons ponctuellement ou de manière exhaustive.</p>
+  </div>
+  <ul class="people">
+    <li>
+      <h3>Loïc Bernet</h3>
+      <p class="role">architecte dipl. EPF / SIA</p>
+      <p>Diplômé de l’EPFL, orientation architecture et durabilité, mineure en design intégré. Lauréat du prix Durabilis en 2017 et 2018.</p>
+      <a href="mailto:bernet@lblp.ch">bernet@lblp.ch</a>
+    </li>
+    <li>
+      <h3>Loïc Preitner</h3>
+      <p class="role">architecte dipl. EPF / SIA</p>
+      <p>Diplômé de l’EPFL, orientation architecture et réhabilitation, spécialisation en théorie et techniques du projet de sauvegarde. Lauréat du prix de l’Union patronale des ingénieurs et des architectes vaudois en 2014.</p>
+      <a href="mailto:preitner@lblp.ch">preitner@lblp.ch</a>
+    </li>
+  </ul>
+</section>
+
+<section class="s wrap" id="projets">
+  <p class="dim" aria-hidden="true"><i></i><span>Projets choisis</span><i></i></p>
+  <h2>Réalisations</h2>
+  <div class="proj">
+    <figure class="a">
+      <img src="maison.webp" width="1800" height="1350" loading="lazy" alt="Maison en bois sombre à toit à deux pans, parmi la verdure">
+      <h3>Rénovation d’une maison mitoyenne</h3>
+      <p class="where">Projet du bureau</p>
+    </figure>
+    <figure class="b">
+      <img src="yens.webp" width="2000" height="1334" loading="lazy" alt="Salle de bains rénovée à Yens, mosaïque dorée et baignoire d’angle">
+      <h3>Rénovation à Yens</h3>
+      <p class="where">Yens, 2018</p>
+      <p>Une attention particulière aux détails et une grande sensibilité à l’existant : planelles en terre cuite poncées et conservées, poutres anciennes sablées.</p>
+    </figure>
+    <figure class="c">
+      <img src="campus.webp" width="2000" height="1333" loading="lazy" alt="Mobilier urbain en bois et bacs potagers sur la place nord de l’EPFL">
+      <h3>Campus Farmers</h3>
+      <p class="where">EPFL, 2017-18</p>
+      <p>Aménagement de la place nord, de la conception à la réalisation par les étudiants : assises de différentes hauteurs et bacs potagers en libre service, modulaires et déplaçables.</p>
+    </figure>
+    <figure class="d">
+      <img src="refuge.webp" width="1600" height="1212" loading="lazy" alt="Couchettes en bois brut du refuge des Bouquetins">
+      <h3>Refuge des Bouquetins</h3>
+      <p class="where">Arolla, 2024</p>
+      <p>Inspiré du pangolin, au-dessus du Haut Glacier d’Arolla, avec un revêtement en écailles de zinc. Pieux vissés, bois laissé brut, récupération des eaux de pluie.</p>
+    </figure>
+    <figure class="e">
+      <img src="parklet.webp" width="1280" height="853" loading="lazy" alt="Parklet en bois sur une rue de Lausanne">
+      <h3>Parklet lausannois</h3>
+      <p class="where">Lausanne, 2019</p>
+    </figure>
+    <figure class="f">
+      <img src="ponton.webp" width="1200" height="800" loading="lazy" alt="Ponton et tour de contrôle sur le lac, à Morges">
+      <h3>Ponton à Morges</h3>
+      <p class="where">Projet du bureau</p>
+    </figure>
+  </div>
+  <p class="more">Rénovations, immeubles en bois et en paille, signalétique, concours : la suite des projets est à découvrir avec le bureau.</p>
+</section>
+
+<section class="s band" id="demarche">
+  <div class="wrap">
+    <p class="dim on-zinc" aria-hidden="true"><i></i><span>De l’avant-projet à la réalisation</span><i></i></p>
+    <h2 style="margin-top:26px;font-weight:400">Ce que le bureau fait</h2>
+    <p class="lead">Vous êtes accompagnés ponctuellement ou de manière exhaustive.</p>
+    <div class="cols">
+      <div><h3>Relevés et plans</h3><p>Le relevé et la réalisation de plans sont les premières étapes de tout projet : une représentation précise de la structure existante.</p></div>
+      <div><h3>Images 3D</h3><p>Des images virtuelles pour découvrir le projet de façon détaillée et réaliste avant sa réalisation.</p></div>
+      <div><h3>Rénovation et densification</h3><p>Optimiser, densifier ou surélever le bâti existant, avec des matériaux et des techniques écologiques.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="s wrap" id="presse">
+  <p class="dim" aria-hidden="true"><i></i><span>Presse et actualités</span><i></i></p>
+  <div class="two" style="margin-top:26px">
+    <div>
+      <h3>Dans la presse</h3>
+      <ul class="list">
+        <li><time>29.03.2022</time><div><b>Faire rimer nature et architecture</b><span>Bien vivre</span></div></li>
+        <li><time>20.09.2019</time><div><b>Parklet à Lausanne</b><span>24 heures</span></div></li>
+        <li><time>01.12.2017</time><div><b>Campus Farmers</b><span>EPFL Magazine</span></div></li>
+        <li><time>01.12.2017</time><div><b>Prix Durabilis</b><span>EPFL Magazine</span></div></li>
+      </ul>
+    </div>
+    <div>
+      <h3>Actualités du bureau</h3>
+      <ul class="list">
+        <li><time>19.05.2025</time><div><b>Coopératives d’habitants : une autre manière d’habiter</b></div></li>
+        <li><time>01.02.2025</time><div><b>Assainissement des chauffages et boilers électriques</b></div></li>
+        <li><time>15.01.2025</time><div><b>Rénovation d’une salle de bain adaptée aux seniors</b></div></li>
+        <li><time>09.04.2024</time><div><b>Un engagement florissant</b><span>Parrainage d’un massif de tulipes à la Fête de la Tulipe de Morges</span></div></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="s contact" id="contact">
+  <div class="wrap">
+    <p class="dim" aria-hidden="true"><i></i><span>Morges</span><i></i></p>
+    <h2>Parlons de votre projet</h2>
+    <div class="grid">
+      <div>
+        <a class="tel" href="tel:+41793054904">+41 79 305 49 04</a>
+        <address>
+          Bernet &amp; Preitner Architectes Sàrl<br>
+          Ch. des Pétoleyres 25<br>
+          1110 Morges<br>
+          <a href="mailto:info@lblp.ch">info@lblp.ch</a>
+        </address>
+      </div>
+      <div class="acts">
+        <a class="btn" href="mailto:info@lblp.ch?subject=Mon%20projet">Écrire au bureau</a>
+        <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&amp;query=Chemin+des+P%C3%A9toleyres+25+1110+Morges">Voir sur la carte</a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>LBLP Architectes · Bernet &amp; Preitner Architectes Sàrl</span><a href="mailto:info@lblp.ch">info@lblp.ch</a></div></footer>
+
+<div class="mbar"><a href="tel:+41793054904">Appeler</a><a href="mailto:info@lblp.ch">Écrire</a><a href="#projets">Projets</a></div>
+</body>
+</html>

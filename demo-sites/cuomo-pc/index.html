@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cuomo PC – Informatique et dépannage à Lausanne</title>
+<meta name="description" content="Vente, réparation, assemblage de PC sur mesure et récupération de données à Lausanne, route d’Oron 4. Une entreprise de famille, présente depuis 1983. Tél. 021 657 10 60.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#92d050">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Cuomo PC – Informatique et dépannage à Lausanne">
+<meta property="og:description" content="Vente, réparation, PC sur mesure et récupération de données. Depuis 1983.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:locale" content="fr_CH">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2392d050'/%3E%3Cpath d='M44 22a15 15 0 1 0 0 20' fill='none' stroke='%23142208' stroke-width='9' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;800&display=swap" rel="stylesheet">
+<!--
+  DESIGN NOTES (houle.ai mock-up, 2026-10-29)
+  Artefact: the repair ticket from the bench ("bon d'atelier") and the watchmaker's comparison the owners make ("artisans de l'informatique").
+  Colours: the green of their "C" as a full-bleed surface (hero stripe, tariffs), deep green-black ink, off-white page. No second accent.
+  Type: Schibsted Grotesk, heavy for headings, regular for reading.
+  Signature: published flat rates are set as a bench ticket: a dashed tear line, price on the right, like the slip left with a PC.
+  Layout: the two brothers' photo is the hero; services run as alternating photo + text bands.
+  Motion: none. Photography: their own site photos, at or below native width.
+-->
+<style>
+:root{
+  --green:#92d050; --green-d:#2f6a0d; --ink:#142208; --muted:#46543c; --paper:#f6f8f2; --tint:#e6eed8; --rule:#c5d1b3;
+  --gutter:clamp(16px,5vw,56px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 "Schibsted Grotesk",system-ui,sans-serif;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--green-d);text-underline-offset:.18em}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.wrap{max-width:1160px;margin-inline:auto;padding-inline:var(--gutter)}
+h1,h2,h3{font-weight:800;line-height:1.02;margin:0;letter-spacing:-.025em}
+p{margin:0 0 1em;max-width:60ch}
+
+.preview{padding:11px 16px;background:#0f172a;color:#f8fafc;font:400 14px/1.35 system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center}
+.preview a{color:#f8fafc;text-decoration:underline;padding:14px 2px}
+
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:800;font-size:1.35rem;letter-spacing:.02em}
+.logo i{display:grid;place-items:center;width:38px;height:38px;border-radius:10px;background:var(--green);font:800 1.5rem/1 "Schibsted Grotesk",sans-serif;font-style:normal}
+.top nav{display:none}
+.top .tel{font-weight:800;color:var(--ink);text-decoration:none;white-space:nowrap}
+@media(min-width:960px){
+  .top nav{display:flex;gap:26px}
+  .top nav a{color:var(--ink);text-decoration:none;font-weight:600;padding:8px 0;border-bottom:3px solid transparent}
+  .top nav a:hover{border-color:var(--green)}
+}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:12px 22px;background:var(--ink);color:#fff;font-weight:800;text-decoration:none;border-radius:10px}
+.btn:hover{background:var(--green-d)}
+.btn.green{background:var(--green);color:var(--ink)}
+.btn.green:hover{background:#a7e066}
+.btn.line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+
+.hero{background:var(--green)}
+.hero .wrap{display:grid;gap:28px;padding-block:34px 0}
+.hero h1{font-size:clamp(2.6rem,11vw,5rem)}
+.hero .lede{font-size:1.2rem;margin:18px 0 24px;max-width:36ch}
+.hero .acts{display:flex;flex-wrap:wrap;gap:12px}
+.hero figure{margin:0;align-self:end}
+.hero figure img{width:100%;border-radius:12px 12px 0 0}
+@media(min-width:960px){
+  .hero .wrap{grid-template-columns:1fr 1fr;gap:64px;padding-top:64px;align-items:center}
+  .hero figure{align-self:end}
+}
+.strip{background:var(--ink);color:#e9f2dc}
+.strip .wrap{display:flex;flex-wrap:wrap;gap:6px 28px;padding-block:14px;font-weight:600}
+.strip a{color:#e9f2dc}
+
+.s{padding-block:clamp(48px,8vw,92px)}
+.s h2{font-size:clamp(2rem,7vw,3.4rem);margin-bottom:20px}
+
+.band{display:grid;gap:26px;padding-block:28px;border-top:2px solid var(--ink)}
+.band:first-of-type{border-top:0;padding-top:0}
+.band h3{font-size:clamp(1.7rem,6vw,2.4rem);margin-bottom:12px}
+.band img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:10px}
+.band ul{margin:0 0 1em;padding-left:1.1em}
+.band li{margin-bottom:.35em}
+@media(min-width:900px){
+  .band{grid-template-columns:1fr 1fr;gap:64px;align-items:center;padding-block:44px}
+  .band:nth-of-type(even) figure{order:2}
+  .band figure{margin:0}
+  .band img{max-width:560px}
+}
+.band figure{margin:0}
+
+/* tarifs = bons d'atelier */
+.tariffs{background:var(--tint)}
+.tickets{margin:26px 0 0;padding:0;list-style:none;display:grid;gap:0;max-width:760px}
+.tickets li{display:grid;grid-template-columns:1fr auto;gap:4px 20px;padding:18px 0;border-top:2px dashed var(--ink);align-items:baseline}
+.tickets li:last-child{border-bottom:2px dashed var(--ink)}
+.tickets h3{font-size:1.35rem;grid-column:1}
+.tickets .p{font-size:1.5rem;font-weight:800;grid-column:2;grid-row:1;white-space:nowrap}
+.tickets p{grid-column:1/-1;margin:0;color:var(--muted);max-width:56ch}
+.tariffs .note{margin-top:18px;color:var(--muted);font-size:.95rem}
+
+/* 5 axes */
+.axes{margin:0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:10px}
+.axes li{padding:12px 20px;border:2px solid var(--ink);font-weight:800;font-size:1.15rem;border-radius:999px}
+
+/* histoire */
+.hist{background:var(--ink);color:#e6efd8}
+.hist h2{color:#fff}
+.hist .cols{display:grid;gap:26px}
+.hist em{color:var(--green);font-style:normal;font-weight:800}
+@media(min-width:900px){.hist .cols{grid-template-columns:1fr 1fr;gap:70px}}
+
+/* contact */
+.contact{background:var(--green)}
+.contact .cols{display:grid;gap:34px}
+@media(min-width:900px){.contact .cols{grid-template-columns:1fr 1fr;gap:80px}}
+.bigtel{font-weight:800;font-size:clamp(2rem,9vw,3.4rem);line-height:1;color:var(--ink);text-decoration:none;display:inline-block;margin:6px 0 12px;letter-spacing:-.02em}
+.contact a{color:var(--ink);font-weight:600}
+.contact h3{font-size:1.2rem;margin-bottom:4px}
+footer{background:var(--ink);color:#b9c5aa;padding-block:20px;font-size:.9rem}
+footer p{margin:0;max-width:none}
+</style>
+</head>
+<body>
+<div class="preview" role="note">Aperçu de votre nouveau site, préparé par&nbsp;<a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
+
+<header class="wrap top">
+  <a class="logo" href="#"><i>C</i>CUOMO PC</a>
+  <nav aria-label="Navigation">
+    <a href="#services">Services</a>
+    <a href="#tarifs">Tarifs</a>
+    <a href="#famille">L’entreprise</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a class="tel" href="tel:+41216571060">021&nbsp;657&nbsp;10&nbsp;60</a>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Votre PC ne démarre plus&nbsp;? Apportez-le à l’atelier.</h1>
+      <p class="lede">Réparation, PC sur mesure, récupération de données et support à distance. Une entreprise de famille à Lausanne, depuis 1983.</p>
+      <div class="acts">
+        <a class="btn" href="tel:+41216571060">Appeler l’atelier</a>
+        <a class="btn line" href="#tarifs">Voir les tarifs</a>
+      </div>
+    </div>
+    <figure>
+      <img src="freres.webp" width="1400" height="933" alt="Deux hommes souriants derrière un iMac, dans le magasin Cuomo PC" fetchpriority="high">
+    </figure>
+  </div>
+</section>
+<div class="strip"><div class="wrap"><span>Route d’Oron 4, 1010 Lausanne</span><span>Lundi au vendredi, 13h30–18h00</span><a href="mailto:admin@cuomopc.ch">admin@cuomopc.ch</a></div></div>
+
+<section class="s" id="services">
+  <div class="wrap">
+    <h2>Ce qu’on fait à l’atelier.</h2>
+
+    <div class="band">
+      <figure><img src="clinique.webp" width="1400" height="1050" alt="Un stéthoscope posé sur le clavier d’un ordinateur portable" loading="lazy"></figure>
+      <div>
+        <h3>Dépannage et clinique informatique</h3>
+        <p>Votre ordinateur vous crée plus de soucis qu’autre chose&nbsp;? Prenez rendez-vous&nbsp;: on le répare, on le nettoie de ses virus, ou on le réinstalle. PC, portable ou Mac.</p>
+        <ul>
+          <li>Réparation à l’atelier, ou directement chez vous</li>
+          <li>Suppression des virus et logiciels espions</li>
+          <li>Intervention à domicile ou en entreprise, du conseil à la maintenance</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="band">
+      <figure><img src="assemblage.webp" width="1400" height="1050" alt="Mains installant une barrette de mémoire dans un ordinateur" loading="lazy"></figure>
+      <div>
+        <h3>PC et serveurs sur mesure</h3>
+        <p>Un peu comme des horlogers, on se définit comme des artisans de l’informatique. Vous choisissez le matériel, on assemble votre tour ou votre serveur selon vos besoins.</p>
+        <p>Vente de PC neufs et d’occasion, tours et portables. En acquérant un nouvel ordinateur, vous pouvez faire reprendre gratuitement l’ancien et transférer vos données sur la nouvelle machine.</p>
+      </div>
+    </div>
+
+    <div class="band">
+      <figure><img src="donnees.webp" width="1400" height="1050" alt="Mains tenant un disque SSD de 480 Go" loading="lazy"></figure>
+      <div>
+        <h3>Récupération de données</h3>
+        <p>Disque dur interne ou externe, SSD, clé USB, carte mémoire&nbsp;: photos, lettres, comptabilité. La confidentialité de vos données est garantie. Analyse et devis en général sous 24 heures ouvrables.</p>
+        <p>Si la récupération n’est pas possible à l’atelier, rien n’est facturé. Au besoin, vous êtes redirigé gratuitement vers un centre spécialisé avec salle blanche.</p>
+      </div>
+    </div>
+
+    <div class="band">
+      <figure><img src="depannage.webp" width="1400" height="934" alt="Mains sur le clavier d’un ordinateur portable" loading="lazy"></figure>
+      <div>
+        <h3>Support à distance et cloud</h3>
+        <p>Avec le logiciel AnyDesk, on se connecte à votre ordinateur pour régler vos problèmes et le maintenir à jour. Fixez un rendez-vous par téléphone, pour Windows comme pour Mac.</p>
+        <p>On peut aussi créer votre cloud personnel&nbsp;: vos données sont à vous, et rien qu’à vous.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s tariffs" id="tarifs">
+  <div class="wrap">
+    <h2>Des forfaits annoncés d’avance.</h2>
+    <p>Les tarifs publiés par l’atelier, en francs suisses.</p>
+    <ul class="tickets">
+      <li><h3>Devis ou diagnostic de panne</h3><span class="p">50.–</span><p>Apportez votre ordinateur, devis sous 24 à 48 heures. Offert si la réparation est faite chez Cuomo PC dans les 8 jours. (Diagnostic de composants pour PC «&nbsp;gamer&nbsp;»&nbsp;: 150.–.)</p></li>
+      <li><h3>Suppression de virus</h3><span class="p">200.–</span><p>Forfait. Le travail en atelier prend entre 2 et 5 heures&nbsp;: un forfait revient moins cher qu’un tarif horaire.</p></li>
+      <li><h3>Récupération de données</h3><span class="p">dès 130.–</span><p>Analyse et devis en général sous 24 heures ouvrables. Rien à payer si rien n’est récupéré.</p></li>
+      <li><h3>Support à distance</h3><span class="p">40.–</span><p>Prise en charge, puis 2.– par minute entamée.</p></li>
+      <li><h3>Rapport pour l’assurance</h3><span class="p">150.–</span><p>Rapport pour l’ECA ou votre assurance ménage, pris en charge par la plupart des assurances.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="s">
+  <div class="wrap">
+    <h2>Cinq axes, une mission.</h2>
+    <ul class="axes"><li>Sécurité</li><li>Dépannage</li><li>Support</li><li>Connectivité</li><li>Monitoring</li></ul>
+    <p style="margin-top:22px">Notre devise&nbsp;: à l’écoute du client, à la pointe de la technologie, et dans le respect du budget.</p>
+  </div>
+</section>
+
+<section class="s hist" id="famille">
+  <div class="wrap">
+    <h2>Une affaire de famille.</h2>
+    <div class="cols">
+      <p>Présente sur le marché romand depuis <em>1983</em>, la société Cuomo Computers a été fondée par Luigi Cuomo, puis reprise en 2012 par ses deux fils, Norberto et Marc Cuomo, sous le nom Cuomo PC.</p>
+      <p>Elle vend, installe, répare, transforme et monte à Lausanne des ordinateurs sur mesure, en fonction des besoins de chaque client. Pour un rendez-vous&nbsp;: téléphone ou courriel.</p>
+    </div>
+  </div>
+</section>
+
+<section class="s contact" id="contact">
+  <div class="wrap cols">
+    <div>
+      <h2>Passez à l’atelier.</h2>
+      <a class="bigtel" href="tel:+41216571060">021&nbsp;657&nbsp;10&nbsp;60</a>
+      <p><a href="mailto:admin@cuomopc.ch">admin@cuomopc.ch</a></p>
+    </div>
+    <div>
+      <h3>Adresse</h3>
+      <p>Cuomo PC<br>Route d’Oron 4<br>1010 Lausanne<br><a href="https://www.google.com/maps/search/?api=1&amp;query=Cuomo+PC+Route+d%27Oron+4+1010+Lausanne" rel="noopener">Voir le plan d’accès</a></p>
+      <h3>Horaires</h3>
+      <p>Lundi au vendredi, 13h30–18h00</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><p>Cuomo PC · Route d’Oron 4, 1010 Lausanne · 021&nbsp;657&nbsp;10&nbsp;60 · admin@cuomopc.ch</p></div></footer>
+</body>
+</html>

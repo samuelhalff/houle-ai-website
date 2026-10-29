@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ComputerShop Carouge – Spécialiste Apple depuis 1980</title>
+<meta name="description" content="Magasin et services spécialisés Apple à Carouge : conseil, vente neuf et occasion, assistance, formation, location et financement. Avenue Industrielle 9. Tél. 022 342 43 60.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1b1d22">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ComputerShop Carouge – Spécialiste Apple depuis 1980">
+<meta property="og:description" content="Vente, support, coaching, formations, reprises et occasions. Avenue Industrielle 9, Carouge.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:locale" content="fr_CH">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231b1d22'/%3E%3Cpath d='M12 20h40v5H12z' fill='%2361bb46'/%3E%3Cpath d='M12 27h40v5H12z' fill='%23fdb827'/%3E%3Cpath d='M12 34h40v5H12z' fill='%23f5821f'/%3E%3Cpath d='M12 41h40v5H12z' fill='%23e03a3e'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;700;800&display=swap" rel="stylesheet">
+<!--
+  DESIGN NOTES (houle.ai mock-up, 2026-10-29)
+  Artefact: the shop's own history with the Mac (they exhibit a collection and celebrated 40 years of the Mac in 2024): the six-stripe colour band of the early Apple era.
+  Colours: graphite ink and light grey paper, one blue for actions; the six stripe colours are used once, as a thin band, never as surfaces.
+  Type: Onest, tight and heavy for headings, regular for reading. No imagery of other places: the one photo is their own conference poster.
+  Layout: left-aligned hero, a dated event beside its poster, then services as a plain ledger and rental prices as a real table.
+  Motion: none.
+-->
+<style>
+:root{
+  --ink:#1b1d22; --muted:#4b4f59; --paper:#f3f3f1; --white:#fff; --rule:#cfd0cc; --blue:#1f5fbf; --blue-d:#174a96;
+  --gutter:clamp(16px,5vw,56px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 "Onest",system-ui,sans-serif;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--blue);text-underline-offset:.18em}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.wrap{max-width:1160px;margin-inline:auto;padding-inline:var(--gutter)}
+h1,h2,h3{font-weight:800;line-height:1.03;margin:0;letter-spacing:-.025em}
+p{margin:0 0 1em;max-width:62ch}
+
+.preview{padding:11px 16px;background:#0f172a;color:#f8fafc;font:400 14px/1.35 system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center}
+.preview a{color:#f8fafc;text-decoration:underline;padding:14px 2px}
+
+.stripes{height:8px;background:linear-gradient(#61bb46 0 16.66%,#fdb827 0 33.33%,#f5821f 0 50%,#e03a3e 0 66.66%,#963d97 0 83.33%,#009ddc 0)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{text-decoration:none;color:var(--ink);font-weight:800;font-size:1.4rem;letter-spacing:-.02em;line-height:1}
+.brand small{display:block;font-weight:500;font-size:.78rem;letter-spacing:0;color:var(--muted);margin-top:3px}
+.top nav{display:none}
+.top .tel{font-weight:800;color:var(--ink);text-decoration:none;white-space:nowrap}
+@media(min-width:960px){
+  .top nav{display:flex;gap:26px}
+  .top nav a{color:var(--ink);text-decoration:none;font-weight:500;padding:8px 0;border-bottom:2px solid transparent}
+  .top nav a:hover{border-color:var(--blue)}
+}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:12px 22px;background:var(--blue);color:#fff;font-weight:700;text-decoration:none;border-radius:8px}
+.btn:hover{background:var(--blue-d)}
+.btn.line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.btn.white{background:#fff;color:var(--ink)}
+
+.hero{padding-block:30px 64px;display:grid;gap:34px}
+.hero h1{font-size:clamp(2.8rem,12vw,5.8rem);max-width:12ch}
+.hero .lede{font-size:1.22rem;margin:22px 0 26px;max-width:38ch}
+.hero .acts{display:flex;flex-wrap:wrap;gap:12px}
+.facts{margin:0;padding:0;list-style:none;display:grid;gap:0;align-self:end}
+.facts li{padding:14px 0;border-top:2px solid var(--ink)}
+.facts b{display:block;font-size:1.05rem}
+.facts span{color:var(--muted)}
+@media(min-width:960px){.hero{grid-template-columns:1.3fr .7fr;gap:80px;align-items:end;padding-block:56px 90px}}
+
+.s{padding-block:clamp(48px,8vw,92px)}
+.s h2{font-size:clamp(2rem,7vw,3.5rem);margin-bottom:22px}
+
+/* événement */
+.event{background:var(--ink);color:#ececec}
+.event .wrap{display:grid;gap:34px}
+.event h2{color:#fff}
+.event a{color:#fff}
+.when{font-size:1.5rem;font-weight:800;color:#fff;margin:0 0 14px}
+.event dl{margin:20px 0 26px;display:grid;grid-template-columns:auto 1fr;gap:8px 18px}
+.event dt{font-weight:700;color:#fff}
+.event dd{margin:0}
+.event img{width:100%;max-width:360px;border-radius:6px}
+@media(min-width:900px){.event .wrap{grid-template-columns:1fr 360px;gap:80px;align-items:center}}
+
+/* services */
+.ledger{margin:0;padding:0;list-style:none}
+.ledger>li{display:grid;gap:8px;padding:24px 0;border-top:2px solid var(--ink)}
+.ledger h3{font-size:1.6rem}
+.ledger p{margin:0 0 .6em}
+.rate{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-top:1px solid var(--rule)}
+.rate b{white-space:nowrap}
+.rates{margin:14px 0 0;padding:0;list-style:none;max-width:560px}
+.rate span:first-child{max-width:40ch}
+@media(min-width:900px){.ledger>li{grid-template-columns:18rem 1fr;gap:48px}}
+
+/* location */
+.tbl-wrap{overflow-x:auto;margin-top:18px;-webkit-overflow-scrolling:touch}
+table{border-collapse:collapse;width:100%;min-width:0;font-variant-numeric:tabular-nums}
+th,td{padding:12px 10px 12px 0;text-align:right;border-top:1px solid var(--rule)}
+th:first-child,td:first-child{text-align:left}
+thead th{border-top:2px solid var(--ink);font-size:.9rem;font-weight:700;vertical-align:bottom}
+tbody th{font-weight:700}
+.note{color:var(--muted);font-size:.95rem;margin-top:14px}
+
+/* compétences */
+.skills{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px;padding:0;list-style:none}
+.skills li{padding:9px 16px;background:#fff;box-shadow:inset 0 0 0 1.5px var(--ink);font-weight:700;border-radius:999px}
+.two{display:grid;gap:30px}
+@media(min-width:900px){.two{grid-template-columns:1fr 1fr;gap:80px}}
+blockquote{margin:0 0 22px;padding:0 0 0 18px;border-left:4px solid var(--ink);max-width:56ch}
+blockquote p{margin:0 0 .4em}
+blockquote cite{font-style:normal;font-weight:700;font-size:.95rem}
+
+/* contact */
+.contact{background:#fff}
+.contact .cols{display:grid;gap:34px}
+@media(min-width:900px){.contact .cols{grid-template-columns:1fr 1fr;gap:80px}}
+.bigtel{font-weight:800;font-size:clamp(2rem,9vw,3.4rem);line-height:1;color:var(--ink);text-decoration:none;display:inline-block;margin:6px 0 12px;letter-spacing:-.025em}
+.contact h3{font-size:1.2rem;margin:0 0 4px}
+footer{background:var(--ink);color:#b8bbc4;padding-block:20px;font-size:.9rem}
+footer p{margin:0;max-width:none}
+</style>
+</head>
+<body>
+<div class="preview" role="note">Aperçu de votre nouveau site, préparé par&nbsp;<a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
+<div class="stripes" aria-hidden="true"></div>
+
+<header class="wrap top">
+  <a class="brand" href="#">ComputerShop<small>Carouge · Genève</small></a>
+  <nav aria-label="Navigation">
+    <a href="#evenement">Conférence</a>
+    <a href="#services">Services</a>
+    <a href="#location">Location</a>
+    <a href="#atelier">Le magasin</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a class="tel" href="tel:+41223424360">022&nbsp;342&nbsp;43&nbsp;60</a>
+</header>
+
+<main>
+<section class="wrap hero">
+  <div>
+    <h1>Votre spécialiste Apple depuis 1980.</h1>
+    <p class="lede">Conseil, vente de matériel neuf et d’occasion, assistance, formation, location. Un accompagnement personnalisé dans l’univers Apple&nbsp;: ordinateur, tablette, téléphone, montre et iCloud.</p>
+    <div class="acts">
+      <a class="btn" href="tel:+41223424360">Appeler le magasin</a>
+      <a class="btn line" href="#services">Voir les services</a>
+    </div>
+  </div>
+  <ul class="facts">
+    <li><b>Avenue Industrielle 9, Carouge</b><span>Tram 15, arrêt Industrielle</span></li>
+    <li><b>Lundi–jeudi 9h00–18h00</b><span>Vendredi 9h00–17h00 · samedi fermé</span></li>
+    <li><b>Entreprise formatrice</b><span>Le magasin forme des apprentis</span></li>
+  </ul>
+</section>
+
+<section class="s event" id="evenement">
+  <div class="wrap">
+    <div>
+      <p class="when">Jeudi 5 novembre 2026, 18h00–20h00</p>
+      <h2>«&nbsp;Du terrain à l’image&nbsp;», conférence de Bertrand Carlier.</h2>
+      <p>Le photographe professionnel présente son approche, basée sur l’humain, son équipement et ses travaux&nbsp;: expositions, reportages, livres. Dédicace de son dernier ouvrage, «&nbsp;L’Été des Reines&nbsp;» (Éditions Slatkine). Exposition de matériel&nbsp;: Apple, Leica, Eizo à toucher et à essayer. Apéritif et échanges.</p>
+      <dl>
+        <dt>Lieu</dt><dd>Leica Store Genève, place de Saint-Gervais 1, 1201 Genève</dd>
+        <dt>Tarif</dt><dd>Gratuit, inscription obligatoire</dd>
+      </dl>
+      <a class="btn white" href="mailto:info@computershop.ch?subject=Inscription%20conf%C3%A9rence%205%20novembre">S’inscrire par courriel</a>
+    </div>
+    <img src="conference.webp" width="746" height="1024" alt="Affiche de la conférence Du terrain à l’image, le 5 novembre 2026, avec le portrait du photographe et le gros plan d’une vache d’Hérens" loading="lazy">
+  </div>
+</section>
+
+<section class="s" id="services">
+  <div class="wrap">
+    <h2>Ce que fait le magasin.</h2>
+    <ul class="ledger">
+      <li>
+        <h3>Forfaits d’atelier</h3>
+        <div>
+          <p>Votre appareil prêt à l’emploi, préparé à l’atelier, avec prise en main individuelle.</p>
+          <ul class="rates">
+            <li class="rate"><span><strong>Tuning clé en main</strong><br>Mise en service, sauvegarde et reprise des données, comptes, messagerie, backup, prise en main</span><b>CHF&nbsp;490.–</b></li>
+            <li class="rate"><span><strong>Préparation basic (Neo)</strong><br>Mise en service, compte, messagerie, contrôle final</span><b>CHF&nbsp;190.–</b></li>
+            <li class="rate"><span><strong>Suivi préventif</strong><br>Diagnostic, contrôle des mises à jour et des sauvegardes, conseils de sécurité (environ une demi-heure)</span><b>CHF&nbsp;100.–</b></li>
+            <li class="rate"><span><strong>CleanUp Light</strong><br>Contrôle et nettoyage après intrusion ou arnaque</span><b>CHF&nbsp;290.–</b></li>
+          </ul>
+        </div>
+      </li>
+      <li>
+        <h3>Assistance et dépannage</h3>
+        <div><p>Assistance et dépannage, sur place, à distance ou à l’atelier. Une Carte MultiServices est proposée pour les besoins réguliers.</p></div>
+      </li>
+      <li>
+        <h3>Formation et ateliers</h3>
+        <div><p>Cours individuels et ateliers, par exemple l’atelier Sécurité et arnaques, accessible sans connaissances de base, ou une journée Lightroom. Des conférences régulières, comme celle du 5 novembre.</p></div>
+      </li>
+      <li>
+        <h3>Occasions garanties</h3>
+        <div><p>Appareils d’occasion révisés et garantis, avec le prix et la garantie indiqués pour chaque appareil. Reprise et recyclage écologique des anciens ordinateurs.</p></div>
+      </li>
+      <li>
+        <h3>Financement</h3>
+        <div><p>Leasing sur 24 à 48 mois pour les entreprises et les indépendants (Grenke), location adaptative de parc informatique (Ecofina). Pour les appareils loués, financement possible sur 12, 24, 36 ou 48 mois.</p></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<section class="s" id="location" style="background:#fff">
+  <div class="wrap">
+    <h2>Louer un Mac, de 2&nbsp;heures à une semaine.</h2>
+    <p>Pour une exposition, une conférence, un collaborateur temporaire, un test, ou un appareil de remplacement pendant une révision. Prix en CHF, TTC.</p>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th scope="col">Matériel</th><th scope="col">2 h – 24 h</th><th scope="col">2–3 jours</th><th scope="col">Semaine</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">iMac 24"</th><td>49.–</td><td>75.–</td><td>150.–</td></tr>
+          <tr><th scope="row">MacBook Air</th><td>35.–</td><td>49.–</td><td>90.–</td></tr>
+          <tr><th scope="row">MacBook Pro</th><td>50.–</td><td>78.–</td><td>158.–</td></tr>
+          <tr><th scope="row">iPad Pro</th><td>49.–</td><td>95.–</td><td>129.–</td></tr>
+          <tr><th scope="row">Écran</th><td>25.–</td><td>37.–</td><td>75.–</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Frais de dossier et caution en sus, selon l’appareil&nbsp;; la caution est restituée à la fin de la location. Retrait au magasin de Carouge ou sur rendez-vous au bureau de Lausanne (click &amp; collect). Livraison sur site possible sur devis.</p>
+  </div>
+</section>
+
+<section class="s" id="atelier">
+  <div class="wrap two">
+    <div>
+      <h2>Un magasin qui a connu tous les Mac.</h2>
+      <p>ComputerShop est avant tout un magasin spécialisé Apple, qui offre un service premium à sa clientèle depuis les années quatre-vingt. En 2024, il a célébré les 40&nbsp;ans du Mac en exposant au magasin les productions Apple les plus originales.</p>
+      <p>Showroom&nbsp;: solutions pour créatifs, home office avec l’iMac 24" et le Mac mini, portables MacBook Pro et MacBook Air, tablettes iPad et iPhone.</p>
+      <ul class="skills" aria-label="Compétences"><li>Spécialiste Apple</li><li>Adobe Certified Advanced Sales Professional</li><li>HP Business</li><li>Lenovo &amp; Eizo Partner</li></ul>
+    </div>
+    <div>
+      <h2 style="font-size:1.6rem">Ce que disent des clients.</h2>
+      <blockquote><p>«&nbsp;Non seulement ils venaient rapidement à mon domicile me dépanner, mais ils prenaient le temps nécessaire pour répondre à mes questions et m’expliquer comment ça avait pu se produire.&nbsp;»</p><cite>Eliane P., Genève</cite></blockquote>
+      <blockquote><p>«&nbsp;Depuis des années j’apprécie les compétences de toute l’équipe, la disponibilité pour me donner des explications par téléphone ou à domicile.&nbsp;»</p><cite>Claude M., Genève</cite></blockquote>
+      <p class="note">Témoignages publiés par le magasin sur son site actuel.</p>
+    </div>
+  </div>
+</section>
+
+<section class="s contact" id="contact">
+  <div class="wrap cols">
+    <div>
+      <h2>Passez au magasin.</h2>
+      <a class="bigtel" href="tel:+41223424360">022&nbsp;342&nbsp;43&nbsp;60</a>
+      <p><a href="mailto:info@computershop.ch">info@computershop.ch</a></p>
+    </div>
+    <div>
+      <h3>CSG ComputerShop SA</h3>
+      <p>Avenue Industrielle 9<br>1227 Carouge, Genève<br><a href="https://www.google.com/maps/search/?api=1&amp;query=CSG+ComputerShop+Avenue+Industrielle+9+1227+Carouge" rel="noopener">Voir l’itinéraire</a></p>
+      <h3>Horaires</h3>
+      <p>Lundi–jeudi 9h00–18h00<br>Vendredi 9h00–17h00<br>Samedi fermé</p>
+      <h3>Y venir</h3>
+      <p>Tram 15, arrêt Industrielle. Parkings&nbsp;: Coop Acacias, P+R Pont-Rouge, M-Parc, zones bleues.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><p>CSG ComputerShop SA · Avenue Industrielle 9, 1227 Carouge · 022&nbsp;342&nbsp;43&nbsp;60 · info@computershop.ch</p></div></footer>
+</body>
+</html>

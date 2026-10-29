@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Inter-Motos – Centre Kawasaki au Mont-sur-Lausanne</title>
+<meta name="description" content="Centre Kawasaki, Kymco, Beta, Malaguti, Hyosung et BSA au Mont-sur-Lausanne : motos neuves et d’occasion, atelier, hivernage et boutique du motard. Fondée en 1959. Tél. 021 323 12 90.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#141618">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Inter-Motos – Centre Kawasaki au Mont-sur-Lausanne">
+<meta property="og:description" content="Motos neuves et d’occasion, atelier, hivernage, boutique du motard. Depuis 1959.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:locale" content="fr_CH">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<!--
+  DESIGN NOTES (houle.ai mock-up, 2026-10-29)
+  Artefact: the workshop job tag (ordre de réparation) and the showroom floor with the brand wall.
+  Colours: Kawasaki-dealer palette on purpose, which is why green and black are used: white floor (the factory photos have white backgrounds),
+  black for the nameplate and footer, Kawasaki green only as one full-bleed surface (hours and contact), never as a text accent.
+  Type: Barlow Condensed (engine-plate lettering) for headings, Barlow for reading.
+  Signature: the "Security Check" is set as a job tag, a tag-shaped block with a punched hole and a ticked list.
+  Layout: the lineup is a showroom row, not cards: each bike on the floor line with its brand and warranty.
+  Motion: none. Photography: their own factory and shop images, shown at or below native size.
+-->
+<style>
+:root{
+  --black:#141618; --ink:#16191c; --muted:#4d545a; --white:#fff; --floor:#f2f3f3; --rule:#cdd1d3; --green:#6cbe45; --green-d:#2f6d12;
+  --gutter:clamp(16px,5vw,56px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--white);color:var(--ink);font:400 1.0625rem/1.6 "Barlow",system-ui,sans-serif;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--green-d);text-underline-offset:.18em}
+:focus-visible{outline:3px solid var(--green);outline-offset:3px}
+.wrap{max-width:1180px;margin-inline:auto;padding-inline:var(--gutter)}
+h1,h2,h3{font-family:"Barlow Condensed",system-ui,sans-serif;font-weight:800;line-height:.96;margin:0;letter-spacing:.005em;text-transform:none}
+p{margin:0 0 1em;max-width:62ch}
+
+.preview{padding:11px 16px;background:#0f172a;color:#f8fafc;font:400 14px/1.35 system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center}
+.preview a{color:#f8fafc;text-decoration:underline;padding:14px 2px}
+
+.plate{background:var(--black);color:#fff}
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.top .lg img{width:150px}
+.top nav{display:none}
+.top .tel{font:700 1.35rem/1 "Barlow Condensed",sans-serif;color:#fff;text-decoration:none;white-space:nowrap;letter-spacing:.02em}
+@media(min-width:960px){
+  .top .lg img{width:176px}
+  .top nav{display:flex;gap:28px}
+  .top nav a{color:#fff;text-decoration:none;font-weight:600;padding:8px 0;border-bottom:3px solid transparent}
+  .top nav a:hover{border-color:var(--green)}
+}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:12px 24px;background:var(--black);color:#fff;font:700 1.2rem/1 "Barlow Condensed",sans-serif;letter-spacing:.03em;text-decoration:none}
+.btn:hover{background:var(--green-d)}
+.btn.line{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.btn.line:hover{background:var(--ink);color:#fff}
+.btn.green{background:var(--green);color:var(--black)}
+.btn.green:hover{background:#82cf5e}
+
+.hero{display:grid;gap:26px;padding-block:30px 56px}
+.hero h1{font-size:clamp(3.2rem,15vw,6.6rem)}
+.hero .lede{font-size:1.2rem;margin:20px 0 26px;max-width:36ch}
+.hero .acts{display:flex;flex-wrap:wrap;gap:12px}
+.hero figure{margin:0}
+.hero figure img{width:100%;max-width:440px;margin-inline:auto}
+.hero figcaption{font-size:.9rem;color:var(--muted);padding-top:8px;max-width:440px;margin-inline:auto}
+@media(min-width:960px){
+  .hero{grid-template-columns:1.1fr .9fr;gap:60px;align-items:center;padding-block:56px 80px}
+}
+
+.s{padding-block:clamp(48px,8vw,92px)}
+.s h2{font-size:clamp(2.6rem,10vw,4.6rem);margin-bottom:22px}
+.floor{background:var(--floor)}
+
+/* gamme */
+.row{display:grid;gap:0}
+.bike{display:grid;grid-template-columns:1fr;gap:14px;padding:22px 0 26px;border-top:3px solid var(--ink);align-items:center}
+.bike img{width:100%;max-width:440px;mix-blend-mode:multiply}
+.bike h3{font-size:2.2rem;margin-bottom:8px}
+.bike p{margin:0 0 .5em}
+.bike .w{font-weight:600}
+@media(min-width:900px){
+  .bike{grid-template-columns:440px 1fr;gap:56px;padding:30px 0}
+  .bike:nth-child(even){grid-template-columns:1fr 440px}
+  .bike:nth-child(even) img{order:2}
+}
+.other{margin-top:26px;display:grid;gap:12px}
+.other p{margin:0;max-width:70ch}
+
+/* atelier = job tag */
+.work{display:grid;gap:34px}
+@media(min-width:900px){.work{grid-template-columns:1fr 1fr;gap:80px;align-items:start}}
+.list{margin:0;padding:0;list-style:none;columns:1}
+.list li{padding:9px 0;border-bottom:1px solid var(--rule);font-weight:500}
+@media(min-width:520px){.list{columns:2;column-gap:28px}.list li{break-inside:avoid}}
+.tag{position:relative;background:#fff;border:3px solid var(--ink);padding:30px 22px 22px;max-width:30rem}
+.tag::before{content:"";position:absolute;top:10px;left:50%;margin-left:-8px;width:16px;height:16px;border-radius:50%;border:3px solid var(--ink);background:var(--floor)}
+.tag h3{font-size:2rem;margin:6px 0 14px}
+.tag ul{margin:0;padding:0;list-style:none}
+.tag li{display:grid;grid-template-columns:1.6rem 1fr;gap:8px;padding:8px 0;border-top:1px solid var(--rule)}
+.tag li::before{content:"";width:16px;height:16px;margin-top:6px;border:2px solid var(--ink);background:var(--green)}
+.tag p{margin:14px 0 0;font-size:.97rem;color:var(--muted)}
+
+/* horaires + contact */
+.hrs{background:var(--green);color:var(--black)}
+.hrs h2,.hrs h3{color:var(--black)}
+.hrs a{color:var(--black);font-weight:600}
+.hrs .cols{display:grid;gap:34px}
+@media(min-width:900px){.hrs .cols{grid-template-columns:1.1fr .9fr;gap:80px}}
+.season{padding:12px 0;border-top:2px solid var(--black)}
+.season h3{font-size:1.5rem;margin-bottom:2px}
+.season p{margin:0}
+.bigtel{font:800 clamp(3rem,14vw,5rem)/1 "Barlow Condensed",sans-serif;color:var(--black);text-decoration:none;display:inline-block;margin:6px 0 10px;letter-spacing:.01em}
+
+/* équipe */
+.team{display:flex;flex-wrap:wrap;gap:22px 28px;margin:0;padding:0;list-style:none}
+.team li{width:130px}
+.team img{width:120px;height:120px;object-fit:cover;margin-bottom:8px}
+.team .ph{width:120px;height:120px;margin-bottom:8px;background:var(--floor);box-shadow:inset 0 0 0 2px var(--rule)}
+.team b{display:block;font:700 1.25rem/1.1 "Barlow Condensed",sans-serif}
+.team span{display:block;font-size:.92rem;color:var(--muted);line-height:1.3;margin-top:3px}
+
+footer{background:var(--black);color:#b9bec2;padding-block:22px;font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center}
+footer img{width:130px}
+footer p{margin:0;max-width:none}
+</style>
+</head>
+<body>
+<div class="preview" role="note">Aperçu de votre nouveau site, préparé par&nbsp;<a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
+
+<div class="plate">
+  <header class="wrap top">
+    <a class="lg" href="#"><img src="logo.webp" width="711" height="350" alt="Inter-Motos"></a>
+    <nav aria-label="Navigation">
+      <a href="#gamme">Les motos</a>
+      <a href="#atelier">Atelier</a>
+      <a href="#equipe">L’équipe</a>
+      <a href="#contact">Horaires et contact</a>
+    </nav>
+    <a class="tel" href="tel:+41213231290">021&nbsp;323&nbsp;12&nbsp;90</a>
+  </header>
+</div>
+
+<main>
+<section class="wrap hero">
+  <div>
+    <h1>Le centre Kawasaki du Mont-sur-Lausanne.</h1>
+    <p class="lede">Motos neuves et d’occasion, pièces, boutique du motard et atelier. Une maison fondée en 1959, qui se présente comme le plus ancien garage du canton de Vaud.</p>
+    <div class="acts">
+      <a class="btn" href="#gamme">Voir les motos</a>
+      <a class="btn line" href="#contact">Horaires et accès</a>
+    </div>
+  </div>
+  <figure>
+    <img src="atelier-bsa.webp" width="900" height="805" alt="Moto BSA rouge et chrome devant le mur Inter-Motos du showroom" fetchpriority="high">
+    <figcaption>Le showroom d’Inter-Motos, avec une BSA.</figcaption>
+  </figure>
+</section>
+
+<section class="s" id="gamme">
+  <div class="wrap">
+    <h2>Sur le plancher.</h2>
+    <p style="max-width:60ch">Toute la gamme Kawasaki et Kymco est disponible à l’essai. Voici quelques modèles présentés par le centre.</p>
+    <div class="row">
+      <article class="bike">
+        <img src="z1100.webp" width="888" height="608" alt="Kawasaki Z1100 2026, roadster noir, vue de trois quarts" loading="lazy">
+        <div>
+          <h3>Kawasaki Z1100</h3>
+          <p>Nouveauté 2026 de la gamme Kawasaki.</p>
+          <p class="w">Toute la gamme Kawasaki est prête à l’essai.</p>
+        </div>
+      </article>
+      <article class="bike">
+        <img src="z650s.webp" width="888" height="634" alt="Kawasaki Z650 S verte et noire" loading="lazy">
+        <div>
+          <h3>Kawasaki Z650 S</h3>
+          <p>Roadster Kawasaki, à essayer au centre.</p>
+          <p class="w">Une page dédiée présente aussi les modèles 35&nbsp;kW.</p>
+        </div>
+      </article>
+      <article class="bike">
+        <img src="ak550.webp" width="898" height="939" alt="Scooter Kymco AK 550i gris bronze" loading="lazy" style="max-width:300px">
+        <div>
+          <h3>Kymco AK&nbsp;550i</h3>
+          <p>Les scooters Kymco de 125&nbsp;cm³ et plus sont garantis 5&nbsp;ans ou 100&nbsp;000&nbsp;km.</p>
+          <p class="w">Également au catalogue&nbsp;: Agility 300i et Downtown 350i.</p>
+        </div>
+      </article>
+      <article class="bike">
+        <img src="dune.webp" width="888" height="587" alt="Malaguti Dune 125, moto trail blanche" loading="lazy">
+        <div>
+          <h3>Malaguti Dune&nbsp;125</h3>
+          <p>Garantie 2&nbsp;ans, comme les Malaguti Drakon&nbsp;125 et Dune&nbsp;X&nbsp;125.</p>
+          <p class="w">Aussi&nbsp;: Beta RR 50 et 125&nbsp;cm³, Hyosung 125 et 300&nbsp;cm³, garantis 2&nbsp;ans.</p>
+        </div>
+      </article>
+    </div>
+    <div class="other">
+      <p><strong>BSA, la légende est de retour</strong>&nbsp;: Legacy Edition, Midnight Black, Insignia Red, Shadow Black.</p>
+      <p>Un vaste choix d’occasions, toutes marques, un stock de pièces détachées et la boutique d’équipement du pilote. Motos de 125&nbsp;cm³ dès 16&nbsp;ans.</p>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="atelier">
+  <div class="wrap work">
+    <div>
+      <h2>L’atelier.</h2>
+      <p>Un espace généreux, un agencement moderne et des collaborateurs qualifiés, régulièrement formés sur les derniers modèles. Outillage et équipements sont entretenus et remplacés régulièrement, pour pouvoir soigner les modèles les plus récents.</p>
+      <ul class="list">
+        <li>Vente de motos neuves</li>
+        <li>Vente de motos d’occasion</li>
+        <li>Réparation et entretien</li>
+        <li>Service de dépannage</li>
+        <li>Peinture et peinture personnalisée</li>
+        <li>Montage d’accessoires</li>
+        <li>Motos de courtoisie</li>
+        <li>Hivernage de votre moto</li>
+        <li>Accessoires d’origine</li>
+        <li>Boutique du motard</li>
+      </ul>
+    </div>
+    <aside class="tag" aria-label="Security Check">
+      <h3>Security Check</h3>
+      <ul>
+        <li>Après chaque travail, un essai sur route méticuleux.</li>
+        <li>À chaque passage à l’atelier, contrôle gratuit des niveaux, de la pression des pneus et de l’éclairage.</li>
+        <li>Véhicule de remplacement possible&nbsp;: à réserver lors de la prise de rendez-vous.</li>
+      </ul>
+      <p>Votre sécurité nous tient à cœur.</p>
+    </aside>
+  </div>
+</section>
+
+<section class="s floor" id="equipe">
+  <div class="wrap">
+    <h2>L’équipe.</h2>
+    <p>Du sang de moto coule dans nos veines&nbsp;: l’expérience, le savoir-faire et l’enthousiasme pour vos exigences.</p>
+    <ul class="team">
+      <li><img src="francois.webp" width="250" height="250" alt="François Sedo" loading="lazy"><b>François Sedo</b><span>Le Boss</span></li>
+      <li><img src="mercedes.webp" width="822" height="822" alt="Mercedes Sedo" loading="lazy"><b>Mercedes Sedo</b><span>Comptabilité et administration</span></li>
+      <li><div class="ph" aria-hidden="true"><span style="font:800 2.4rem/120px 'Barlow Condensed',sans-serif;color:#9aa1a6;display:block;text-align:center;margin:0">AS</span></div><b>Axel Sedo</b><span>Conseiller de vente, pièces et accessoires</span></li>
+      <li><img src="francis.webp" width="822" height="822" alt="Francis Rollin" loading="lazy"><b>Francis Rollin</b><span>Mécanicien</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="s hrs" id="contact">
+  <div class="wrap cols">
+    <div>
+      <h2>Horaires.</h2>
+      <div class="season"><h3>Mars à octobre</h3><p>Mardi–vendredi&nbsp;: 7h30–12h00 et 13h00–18h00<br>Samedi&nbsp;: 8h00–16h00, non-stop</p></div>
+      <div class="season"><h3>Novembre et février</h3><p>Mardi–vendredi&nbsp;: 8h00–12h00 et 13h00–18h00<br>Samedi&nbsp;: 9h00–16h00, non-stop</p></div>
+      <div class="season"><h3>Décembre et janvier</h3><p>Mardi–vendredi&nbsp;: 9h00–12h00 et 13h00–17h00<br>Samedi&nbsp;: 9h00–16h00, non-stop</p></div>
+      <div class="season"><h3>Lundi</h3><p>Fermé</p></div>
+    </div>
+    <div>
+      <h2>Contact.</h2>
+      <a class="bigtel" href="tel:+41213231290">021&nbsp;323&nbsp;12&nbsp;90</a>
+      <p><a href="mailto:info@inter-motos.ch">info@inter-motos.ch</a></p>
+      <p>Inter-Motos SA<br>En Budron B1<br>1052 Le Mont-sur-Lausanne<br><a href="https://www.google.com/maps/search/?api=1&amp;query=Inter-Motos+SA+En+Budron+B1+1052+Le+Mont-sur-Lausanne" rel="noopener">Plan d’accès</a></p>
+      <p><a href="https://www.facebook.com/Inter-Motos-Kawasaki-185485215356520/" rel="noopener">Facebook</a> · <a href="https://www.instagram.com/inter_motos_ch/" rel="noopener">Instagram</a></p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><img src="logo.webp" width="711" height="350" alt="Inter-Motos"><p>Inter-Motos SA · En Budron B1, 1052 Le Mont-sur-Lausanne · 021&nbsp;323&nbsp;12&nbsp;90 · info@inter-motos.ch</p></div></footer>
+</body>
+</html>

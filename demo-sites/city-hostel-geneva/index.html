@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>City Hostel Geneva – chambres et dortoirs à Genève, rue Ferrier</title>
+<meta name="description" content="Auberge de jeunesse en ville de Genève, rue Ferrier 2 : chambres simples et doubles, dortoirs de 2 à 4 lits, cuisine commune, wifi et carte de transport gratuits.">
+<!-- Maquette non publiée : retirer cette ligne à la mise en ligne -->
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#1c3fa8">
+<meta property="og:title" content="City Hostel Geneva – un lit à Genève, rue Ferrier 2">
+<meta property="og:description" content="Chambres simples, doubles et dortoirs de 2 à 4 lits. Cuisine commune, wifi et carte de transport gratuits.">
+<meta property="og:image" content="img/casiers.webp">
+<meta property="og:locale" content="fr_CH">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Hostel","name":"City Hostel Geneva","telephone":"+41 22 901 15 00","email":"info@cityhostel.ch","address":{"@type":"PostalAddress","streetAddress":"Rue Ferrier 2","postalCode":"1202","addressLocality":"Genève","addressCountry":"CH"}}
+</script>
+<!--
+  DIRECTION (fresh-web-design)
+  Artefact : le casier. La salle des casiers jaunes numérotés est leur image la plus parlante, et c'est
+  ce qu'un voyageur à petit budget cherche : un lit propre, une porte qui ferme, un prix lisible.
+  Lecteur : voyageur seul ou en petit groupe, arrive de la gare, a peur du « mauvais plan » :
+  prix clairs, ce qui est inclus, où c'est. Le copy dit ce qui est inclus et ce qui ne l'est pas.
+  Couleurs : bleu enseigne (la façade, panneau d'accueil), jaune casier (étiquettes, boutons),
+  encre brun parquet (texte), blanc froid des chambres (fond). Le orange des armoires reste dans les photos.
+  Typo : Barlow Condensed (signalétique, plaques de casier) + Barlow (texte).
+  Mise en page : hero en deux pans, panneau bleu à gauche et photo des casiers à droite ; les chambres
+  sont des lignes de casier, pas des cartes : plaquette jaune = nombre de lits.
+  Détail signature : la plaquette jaune numérotée (nombre de lits réel de chaque chambre).
+  Photos : les leurs, grandes, sans filtre. Mouvement : aucun.
+-->
+<style>
+:root{
+  --bleu:#1c3fa8; --bleu-nuit:#14307f; --jaune:#ffd400; --encre:#1d1713; --doux:#5b5148; --fond:#f5f6f8; --trait:#d6d8de;
+  --disp:"Barlow Condensed","Arial Narrow",sans-serif; --txt:"Barlow",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font:17px/1.6 var(--txt);color:var(--encre);background:var(--fond)}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--bleu)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+.preview{background:#0d1020;color:#c3c8dc;font-size:13px;line-height:1.4;text-align:center;padding:8px 14px}
+.preview a{color:#fff}
+/* en-tête */
+header.top{background:var(--fond);border-bottom:1px solid var(--trait)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-top:12px;padding-bottom:12px}
+.marque{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--encre)}
+.marque .tag{background:var(--jaune);font:700 22px/1 var(--disp);padding:7px 7px 6px;border-radius:3px;color:#16171c}
+.marque b{font:700 22px/1 var(--disp);letter-spacing:.02em;text-transform:uppercase}
+.marque b small{display:block;font:600 12px/1.2 var(--txt);letter-spacing:.02em;text-transform:none;color:var(--doux);margin-top:2px}
+nav{display:flex;gap:22px;align-items:center}
+nav a{text-decoration:none;color:var(--encre);font-weight:500;font-size:16px}
+nav a:hover{color:var(--bleu)}
+.btn{display:inline-block;background:var(--jaune);color:#16171c;font:700 20px/1 var(--disp);letter-spacing:.02em;text-transform:uppercase;text-decoration:none;padding:13px 20px 12px;border-radius:3px;border:2px solid #16171c}
+.btn:hover{background:#ffe14d}
+.btn.ghost{background:transparent;color:#fff;border-color:#fff}
+.btn.ghost:hover{background:rgba(255,255,255,.12)}
+@media(max-width:760px){nav a:not(.btn){display:none}.btn{font-size:18px;padding:11px 14px 10px}}
+/* hero */
+.hero{display:grid;grid-template-columns:5fr 7fr;min-height:560px;background:var(--bleu);color:#fff}
+.hero .txt{padding:56px 40px 48px max(20px,calc((100vw - 1120px)/2 + 20px));display:flex;flex-direction:column;justify-content:center;align-items:flex-start;gap:22px}
+.hero h1{font:700 clamp(46px,5.6vw,76px)/.94 var(--disp);text-transform:uppercase;letter-spacing:.005em}
+.hero h1 em{font-style:normal;background:var(--jaune);color:#16171c;padding:0 .12em;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.hero p{font-size:18px;max-width:34ch;color:#e6ebff}
+.hero .acts{display:flex;gap:12px;flex-wrap:wrap}
+.hero .pic{position:relative;overflow:hidden;min-height:300px}
+.hero .pic img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+@media(max-width:860px){
+  .hero{grid-template-columns:1fr;min-height:0}
+  .hero .pic{order:-1;height:62vw;min-height:0;max-height:380px}
+  .hero .txt{padding:30px 20px 36px}
+  .hero h1{font-size:clamp(44px,13vw,60px)}
+}
+/* sections */
+section{padding:64px 0}
+h2{font:700 clamp(36px,4.6vw,54px)/.98 var(--disp);text-transform:uppercase;margin-bottom:12px}
+.lead{max-width:56ch;color:var(--doux);margin-bottom:34px}
+/* chambres : lignes de casier */
+.rows{border-top:2px solid var(--encre)}
+.row{display:grid;grid-template-columns:64px 190px 1fr auto;gap:22px;align-items:center;padding:18px 0;border-bottom:1px solid var(--trait)}
+.plaque{width:64px;height:64px;background:var(--jaune);border:2px solid #16171c;border-radius:3px;display:grid;place-items:center;font:700 40px/1 var(--disp);color:#16171c;position:relative}
+.plaque::after{content:"lit";position:absolute;bottom:2px;font:600 11px/1 var(--txt);text-transform:lowercase;color:#16171c}
+.plaque.p{font-size:36px;padding-bottom:7px}
+.row img{width:190px;height:126px;object-fit:cover;border-radius:3px}
+.row h3{font:700 28px/1.05 var(--disp);text-transform:uppercase;margin-bottom:4px}
+.row p{color:var(--doux);font-size:16px;line-height:1.45}
+.prix{text-align:right;font:700 30px/1 var(--disp);white-space:nowrap}
+.prix small{display:block;font:500 13px/1.3 var(--txt);color:var(--doux);margin-top:5px}
+@media(max-width:760px){
+  .row{grid-template-columns:56px 1fr;gap:6px 14px;padding:18px 0}
+  .plaque{width:56px;height:56px;font-size:34px}
+  .row img{grid-column:1/-1;grid-row:2;width:100%;height:auto;aspect-ratio:3/2;margin-top:8px}
+  .row .d{grid-column:2;grid-row:1}
+  .prix{grid-column:1/-1;grid-row:3;text-align:left;margin-top:6px}
+  .prix small{display:inline;margin-left:8px}
+}
+.note{margin-top:18px;font-size:15px;color:var(--doux);max-width:70ch}
+/* inclus */
+.inclus{background:var(--encre);color:#f1ede8}
+.inclus h2{color:#fff}
+.inclus .grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.inclus ul{list-style:none;padding:0;columns:2;column-gap:28px}
+.inclus li{break-inside:avoid;padding:9px 0 9px 34px;position:relative;border-bottom:1px solid #3b322b;font-size:16.5px;line-height:1.4}
+.inclus li::before{content:"";position:absolute;left:0;top:13px;width:18px;height:18px;background:var(--jaune);border-radius:2px}
+.inclus li::after{content:"";position:absolute;left:6px;top:16px;width:5px;height:9px;border:solid #16171c;border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
+.inclus li.non::before{background:transparent;border:2px solid #8b7d70}
+.inclus li.non::after{display:none}
+.inclus .vedette{background:var(--jaune);color:#16171c;padding:22px 22px 20px;border-radius:3px;margin-bottom:22px}
+.inclus .vedette b{display:block;font:700 30px/1 var(--disp);text-transform:uppercase;margin-bottom:6px}
+@media(max-width:860px){.inclus .grid{grid-template-columns:1fr;gap:26px}.inclus ul{columns:1}}
+/* espaces communs */
+.mosaic{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}
+.mosaic figure{position:relative;overflow:hidden;border-radius:3px;background:#ddd}
+.mosaic img{width:100%;height:100%;object-fit:cover}
+.mosaic figcaption{position:absolute;left:0;bottom:0;background:var(--jaune);color:#16171c;font:700 17px/1 var(--disp);text-transform:uppercase;padding:7px 10px 6px;border-top-right-radius:3px}
+.m1{grid-column:span 4;aspect-ratio:16/9}.m2{grid-column:span 2}.m3{grid-column:span 2}.m4{grid-column:span 2}.m5{grid-column:span 2}
+.m2,.m3,.m4,.m5{aspect-ratio:4/3}
+@media(max-width:760px){.mosaic{grid-template-columns:1fr 1fr}.m1{grid-column:span 2;aspect-ratio:3/2}.m2,.m3,.m4,.m5{grid-column:span 1;aspect-ratio:1/1}.mosaic figcaption{font-size:15px;padding:6px 8px 5px}}
+/* avis */
+.avis{background:#fff;border-top:1px solid var(--trait);border-bottom:1px solid var(--trait)}
+.avis .grid{display:grid;grid-template-columns:auto 1fr;gap:40px;align-items:center}
+.note-g{font:700 clamp(80px,12vw,132px)/.8 var(--disp);color:var(--bleu)}
+.note-g small{display:block;font:500 15px/1.3 var(--txt);color:var(--doux);margin-top:12px}
+blockquote{font:500 clamp(21px,2.4vw,27px)/1.35 var(--txt);border-left:6px solid var(--jaune);padding-left:20px;max-width:46ch}
+blockquote cite{display:block;font:500 15px/1.4 var(--txt);color:var(--doux);margin-top:12px;font-style:normal}
+@media(max-width:760px){.avis .grid{grid-template-columns:1fr;gap:24px}}
+/* venir */
+.venir .grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.venir address{font-style:normal;font-size:20px;line-height:1.5;margin-bottom:18px}
+.venir address b{font:700 30px/1 var(--disp);text-transform:uppercase;display:block;margin-bottom:6px}
+.venir ul{list-style:none;padding:0;margin:0 0 22px}
+.venir li{padding:8px 0;border-bottom:1px solid var(--trait)}
+.venir .duo{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.venir .duo img{border-radius:3px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.venir .cap{font-size:14px;color:var(--doux);margin-top:6px}
+@media(max-width:860px){.venir .grid{grid-template-columns:1fr;gap:28px}}
+/* pied */
+.reserve{background:var(--bleu);color:#fff;padding:58px 0 50px}
+.reserve .wrap{display:flex;gap:30px;align-items:flex-end;justify-content:space-between;flex-wrap:wrap}
+.reserve h2{margin:0 0 10px}
+.reserve p{max-width:44ch;color:#e6ebff}
+.reserve .acts{display:flex;gap:12px;flex-wrap:wrap}
+footer{background:var(--bleu-nuit);color:#c9d3f5;font-size:14px;padding:18px 0}
+footer a{color:#fff}
+</style>
+</head>
+<body>
+<div class="preview" role="note">Aperçu de votre nouveau site, préparé par&nbsp;<a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="marque" href="#"><span class="tag">CH</span><b>City Hostel<small>Genève · rue Ferrier 2</small></b></a>
+    <nav>
+      <a href="#chambres">Chambres</a>
+      <a href="#inclus">Inclus</a>
+      <a href="#espaces">Espaces</a>
+      <a href="#venir">Venir</a>
+      <a class="btn" href="#reserver">Réserver</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="hero">
+  <div class="txt">
+    <h1>Un lit à Genève, <em>un casier</em> qui ferme.</h1>
+    <p>Chambres simples et doubles, dortoirs de 2 à 4 lits, cuisine commune et carte de transport gratuite pour toute la ville.</p>
+    <div class="acts">
+      <a class="btn" href="#reserver">Demander une chambre</a>
+      <a class="btn ghost" href="#chambres">Voir les prix</a>
+    </div>
+  </div>
+  <div class="pic"><img src="img/casiers.webp" alt="Casiers jaunes numérotés à l'étage du City Hostel Geneva" width="2600" height="1733" fetchpriority="high"></div>
+</div>
+
+<section id="chambres">
+  <div class="wrap">
+    <h2>Chambres et dortoirs</h2>
+    <p class="lead">Six types de chambres, du dortoir à la chambre double. Le chiffre jaune est le nombre de lits. Prix par nuit, une fourchette selon la date.</p>
+    <div class="rows">
+      <div class="row">
+        <div class="plaque">1</div>
+        <img src="img/simple.webp" alt="Chambre simple du City Hostel Geneva" width="1800" height="1200" loading="lazy">
+        <div class="d"><h3>Chambre simple</h3><p>Un lit simple, pour une personne. Duvet, oreiller, serviettes, gel douche et savon inclus. Une version côté cour est aussi disponible.</p></div>
+        <div class="prix">CHF 60 – 130<small>par nuit</small></div>
+      </div>
+      <div class="row">
+        <div class="plaque">2</div>
+        <img src="img/double.webp" alt="Chambre double avec deux lits simples" width="1800" height="1200" loading="lazy">
+        <div class="d"><h3>Chambre double</h3><p>Deux lits simples. Duvet, oreillers, serviettes, gel douche et savon inclus.</p></div>
+        <div class="prix">CHF 75 – 140<small>par nuit</small></div>
+      </div>
+      <div class="row">
+        <div class="plaque">2</div>
+        <img src="img/dortoir2.webp" alt="Dortoir de 2 lits avec un lit superposé" width="1800" height="1200" loading="lazy">
+        <div class="d"><h3>Dortoir 2 lits</h3><p>Un lit superposé, une table et deux chaises. Serviette incluse. Le prix est par chambre.</p></div>
+        <div class="prix">CHF 68 – 140<small>par chambre et par nuit</small></div>
+      </div>
+      <div class="row">
+        <div class="plaque">3</div>
+        <img src="img/dortoir3.webp" alt="Dortoir de 3 lits avec lit superposé et lit simple" width="1800" height="1200" loading="lazy">
+        <div class="d"><h3>Dortoir 3 lits</h3><p>Un lit superposé et un lit simple. Draps et serviette inclus. Réservé aux 18 – 49 ans.</p></div>
+        <div class="prix">CHF 32 – 60<small>par nuit</small></div>
+      </div>
+      <div class="row">
+        <div class="plaque">4</div>
+        <img src="img/dortoir4.webp" alt="Dortoir de 4 lits avec lits superposés" width="1800" height="1200" loading="lazy">
+        <div class="d"><h3>Dortoir 4 lits</h3><p>Deux lits superposés, une table et deux chaises. Serviette incluse. Réservé aux 18 – 49 ans.</p></div>
+        <div class="prix">CHF 32 – 60<small>par nuit</small></div>
+      </div>
+    </div>
+    <p class="note">Aucune restriction d'âge dans les chambres privées. Lavabo et armoire dans chaque chambre, casiers dans les dortoirs de 3 et 4 lits. Toilettes et douches à l'étage.</p>
+  </div>
+</section>
+
+<section class="inclus" id="inclus">
+  <div class="wrap grid">
+    <div>
+      <h2>Ce qui est compris</h2>
+      <div class="vedette"><b>Transports publics gratuits</b>Une carte de transport gratuite pour Genève : pendant votre séjour, vous vous déplacez dans toute la ville en transports publics.</div>
+      <p style="color:#d8d0c8;max-width:44ch">Dit clairement, pour éviter les surprises à l'arrivée : pas de petit déjeuner, mais une cuisine commune à disposition.</p>
+    </div>
+    <ul>
+      <li>Wifi gratuit dans toute l'auberge</li>
+      <li>Cuisine commune, vaisselle et réfrigérateur</li>
+      <li>Serviettes, gel douche et savon</li>
+      <li>Lavabo dans chaque chambre</li>
+      <li>Armoire dans chaque chambre</li>
+      <li>Casiers dans les dortoirs de 3 et 4 lits</li>
+      <li>Buanderie</li>
+      <li>Terrasse sur cour</li>
+      <li class="non">Chambres strictement non-fumeur</li>
+      <li class="non">Pas de petit déjeuner</li>
+    </ul>
+  </div>
+</section>
+
+<section id="espaces">
+  <div class="wrap">
+    <h2>Les espaces communs</h2>
+    <p class="lead">Là où l'on se retrouve : un salon à l'entrée, la cuisine, la salle à manger, une terrasse et la buanderie.</p>
+    <div class="mosaic">
+      <figure class="m1"><img src="img/lobby.webp" alt="Salon d'accueil avec fauteuils et tables" width="2000" height="1330" loading="lazy"><figcaption>Le salon</figcaption></figure>
+      <figure class="m2"><img src="img/cuisine.webp" alt="Cuisine commune avec îlot et tabourets" width="1800" height="1200" loading="lazy"><figcaption>Cuisine commune</figcaption></figure>
+      <figure class="m3"><img src="img/salle.webp" alt="Salle à manger avec banquette" width="1800" height="1200" loading="lazy"><figcaption>Salle à manger</figcaption></figure>
+      <figure class="m4"><img src="img/terrasse.webp" alt="Terrasse sur cour avec chaises" width="1600" height="1067" loading="lazy"><figcaption>Terrasse</figcaption></figure>
+      <figure class="m5"><img src="img/buanderie.webp" alt="Buanderie avec machines à laver" width="1400" height="933" loading="lazy"><figcaption>Buanderie</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+
+<section class="venir" id="venir">
+  <div class="wrap grid">
+    <div>
+      <h2>Où nous trouver</h2>
+      <address><b>City Hostel Geneva</b>Rue Ferrier 2<br>1202 Genève</address>
+      <ul>
+        <li><a href="tel:+41229011500">+41 22 901 15 00</a></li>
+        <li><a href="mailto:info@cityhostel.ch">info@cityhostel.ch</a></li>
+        <li>Une carte de la ville, préparée par l'équipe, est à télécharger. Les événements : <a href="https://www.geneva-tourism.ch" rel="noopener">geneva-tourism.ch</a></li>
+      </ul>
+      <a class="btn" href="https://maps.google.com/?cid=623819526414577857" rel="noopener">Ouvrir dans Google Maps</a>
+    </div>
+    <div class="duo">
+      <div><img src="img/facade.webp" alt="Entrée du City Hostel Geneva, rue Ferrier" width="1000" height="667" loading="lazy"><p class="cap">L'entrée, rue Ferrier</p></div>
+      <div><img src="img/jetdeau.webp" alt="Le Jet d'eau et la rade de Genève" width="1698" height="1131" loading="lazy"><p class="cap">Le Jet d'eau, à Genève</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="reserve" id="reserver">
+  <div class="wrap">
+    <div>
+      <h2>Une chambre pour vos dates ?</h2>
+      <p>Écrivez-nous les dates, le nombre de personnes et le type de chambre. L'équipe vous répond.</p>
+    </div>
+    <div class="acts">
+      <a class="btn" href="mailto:info@cityhostel.ch?subject=Demande%20de%20chambre">Écrire à l'auberge</a>
+      <a class="btn ghost" href="tel:+41229011500">Appeler</a>
+    </div>
+  </div>
+</div>
+</main>
+<footer><div class="wrap">City Hostel Geneva · Rue Ferrier 2 · 1202 Genève · <a href="mailto:info@cityhostel.ch">info@cityhostel.ch</a></div></footer>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bischof SA – Visserie et outillage à Grand-Lancy</title>
+<meta name="description" content="Visserie, fournitures industrielles et outillage professionnel à Genève depuis plus de 50 ans. Chemin du Clos 6A, Grand-Lancy. Tél. 022 794 56 11.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#0b4fa8">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bischof SA – Visserie et outillage">
+<meta property="og:description" content="« Je visse à Genève, j’achète chez Bischof. » Visserie, fournitures industrielles et outillage depuis plus de 50 ans.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:locale" content="fr_CH">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+<!--
+  DESIGN NOTES (houle.ai mock-up)
+  Artefact: the labelled parts drawer and the trade counter. Product families are set as drawer labels
+  (card-holder frame, small rivets) on a cobalt cabinet-blue band, the colour of the Stahlwille roller
+  cabinets in their shop window.
+  Colours: cobalt #0b4fa8 (cabinets, logo), sign cyan #8fd3f0 (the Bischof sign), zinc #e7eaec page,
+  graphite ink, one signal yellow for the phone number only (cabinet-label tape).
+  Type: Barlow Condensed (DIN-like, stamped on bins and plates) + Barlow for text.
+  Signature: drawer labels. Layout: left-aligned, phone number is the oversized element. Motion: none.
+  Photography: their own shop-window photo at its native width; small product shots not used (too small).
+-->
+<style>
+:root{--bg:#e7eaec;--paper:#f6f7f7;--ink:#1b2127;--muted:#48525b;--blue:#0b4fa8;--blue-d:#093b7e;--cyan:#8fd3f0;--yellow:#f2c230;--on-blue:#eef5fc;--rule:#b9c0c5;--gutter:clamp(16px,5vw,56px)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.58 "Barlow",system-ui,sans-serif;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--blue);text-underline-offset:.18em}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.wrap{max-width:1160px;margin-inline:auto;padding-inline:var(--gutter)}
+h1,h2,h3{font-family:"Barlow Condensed",sans-serif;font-weight:700;line-height:.98;margin:0}
+p{margin:0 0 1em;max-width:60ch}
+.preview{padding:11px 16px;background:#0f172a;color:#f8fafc;font:400 14px/1.35 system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center}
+.preview a{color:#f8fafc;text-decoration:underline;padding:14px 2px}
+
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink)}
+.brand svg{width:38px;height:38px;flex:none}
+.brand b{font:700 1.7rem/1 "Barlow Condensed",sans-serif;letter-spacing:.01em}
+.brand b i{font-style:normal;color:var(--blue);margin-left:.18em}
+.top nav{display:none}
+.top .tel{font:700 1.3rem/1 "Barlow Condensed",sans-serif;color:var(--ink);text-decoration:none;white-space:nowrap;padding:12px 0}
+@media(min-width:900px){.top nav{display:flex;gap:28px}.top nav a{color:var(--ink);text-decoration:none;font-weight:500;padding:10px 0;border-bottom:2px solid transparent}.top nav a:hover{border-color:var(--blue)}}
+
+.hero{display:grid;gap:28px;padding-block:14px 56px}
+.hero h1{font-size:clamp(2.7rem,11.5vw,5.6rem);max-width:12ch}
+.hero h1 span{color:var(--blue)}
+.hero .lede{font-size:1.2rem;margin:18px 0 22px;max-width:34ch}
+.call{display:inline-flex;flex-direction:column;gap:2px;background:var(--yellow);color:var(--ink);text-decoration:none;padding:14px 20px 12px;box-shadow:6px 6px 0 var(--blue)}
+.call small{font:600 .95rem/1.2 "Barlow",sans-serif}
+.call strong{font:700 clamp(2.2rem,10vw,3.4rem)/1 "Barlow Condensed",sans-serif;letter-spacing:.01em}
+.call:hover{filter:brightness(.96)}
+.hero figure{margin:0}
+.hero img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.hero figcaption{font-size:.9rem;color:var(--muted);padding-top:8px}
+@media(min-width:900px){.hero{grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding-block:28px 84px}.hero figure{max-width:580px;justify-self:end}}
+
+.s{padding-block:clamp(48px,8vw,90px)}
+.s h2{font-size:clamp(2.3rem,8vw,4rem);margin-bottom:22px}
+
+/* tiroirs */
+.band{background:var(--blue);color:var(--on-blue)}
+.band h2{color:#fff}
+.band .wrap{display:grid;gap:34px}
+.band p{color:var(--on-blue)}
+.drawers{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.drawers li{background:#0a4390;box-shadow:inset 0 -3px 0 #07316b;padding:12px 14px 16px;display:grid;gap:8px}
+.drawers .lab{position:relative;background:var(--paper);color:var(--ink);padding:9px 22px 8px;font:700 1.55rem/1 "Barlow Condensed",sans-serif;border:2px solid var(--ink)}
+.drawers .lab::before,.drawers .lab::after{content:"";position:absolute;top:50%;width:6px;height:6px;margin-top:-3px;border-radius:50%;background:var(--ink)}
+.drawers .lab::before{left:7px}.drawers .lab::after{right:7px}
+.drawers p{margin:0;font-size:1rem;color:var(--on-blue)}
+@media(min-width:900px){.band .wrap{grid-template-columns:.8fr 1.2fr;gap:72px;align-items:start}}
+
+/* comptoir */
+.cmp{display:grid;gap:30px}
+.cmp .big{font:700 clamp(1.9rem,6.5vw,3rem)/1.05 "Barlow Condensed",sans-serif;max-width:20ch}
+.cmp .big em{font-style:normal;color:var(--blue)}
+@media(min-width:900px){.cmp{grid-template-columns:1fr 1fr;gap:80px;align-items:start}}
+.hist{margin:0;padding:18px 0 0;border-top:2px solid var(--ink);max-width:48ch}
+
+/* infos */
+.info{display:grid;gap:36px}
+.hours{width:100%;max-width:380px;border-collapse:collapse}
+.hours th,.hours td{text-align:left;padding:9px 0;border-top:1px solid var(--ink);font-weight:500}
+.hours td{text-align:right;font-variant-numeric:tabular-nums}
+.hours tr:last-child th,.hours tr:last-child td{border-bottom:1px solid var(--ink)}
+address{font-style:normal;font-size:1.2rem;line-height:1.5}
+.lines{display:grid;gap:4px;margin:18px 0}
+.lines a{font-size:1.2rem;font-weight:600}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:12px 20px;background:var(--blue);color:#fff;font:700 1.15rem/1 "Barlow Condensed",sans-serif;text-decoration:none}
+.btn:hover{background:var(--blue-d)}
+@media(min-width:900px){.info{grid-template-columns:1fr 1fr;gap:80px}}
+
+footer{background:#151a1f;color:#d5dade;padding:26px 0}
+footer p{margin:0;max-width:none;font-size:.95rem}
+</style>
+</head>
+<body>
+<div class="preview">Aperçu de votre nouveau site, préparé par&nbsp;<a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
+
+<header class="wrap top">
+  <a class="brand" href="#" aria-label="Bischof SA">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 4l24.2 14v28L32 60 7.8 46V18z" fill="#0b4fa8"/><circle cx="32" cy="32" r="10" fill="#e7eaec"/></svg>
+    <b>Bischof<i>SA</i></b>
+  </a>
+  <nav aria-label="Navigation"><a href="#assortiment">Assortiment</a><a href="#comptoir">Conseil</a><a href="#contact">Contact</a></nav>
+  <a class="tel" href="tel:+41227945611">022&nbsp;794&nbsp;56&nbsp;11</a>
+</header>
+
+<main>
+<section class="wrap hero">
+  <div>
+    <h1>Je visse à Genève, <span>j’achète chez Bischof.</span></h1>
+    <p class="lede">Visserie, fournitures industrielles et outillage professionnel, à Grand-Lancy depuis plus de 50&nbsp;ans.</p>
+    <a class="call" href="tel:+41227945611"><small>Une question, une référence&nbsp;? Appelez-nous</small><strong>022&nbsp;794&nbsp;56&nbsp;11</strong></a>
+  </div>
+  <figure>
+    <img src="vitrine.webp" width="1179" height="884" alt="Vitrine du magasin Bischof SA avec des servantes d’atelier bleues devant la devanture">
+    <figcaption>Le magasin, Chemin du Clos 6A.</figcaption>
+  </figure>
+</section>
+
+<section class="band s" id="assortiment">
+  <div class="wrap">
+    <div>
+      <h2>Ce qu’on trouve au comptoir</h2>
+      <p>Pour tous types d’industries : de la vis la mieux adaptée à votre appareil jusqu’à l’outil qui fera le travail.</p>
+    </div>
+    <ul class="drawers">
+      <li><span class="lab">Visserie</span><p>Spécialistes en visserie et fourniture industrielle, nous vous conseillons sur le choix des vis les plus adaptées pour tous types d’appareils.</p></li>
+      <li><span class="lab">Outillage</span><p>Pinces, clés, outillages électriques en tout genre&nbsp;: des outils professionnels, et notre expertise pour choisir le meilleur matériel selon votre besoin.</p></li>
+      <li><span class="lab">Fournitures industrielles</span><p>L’interlocuteur privilégié de tous types d’industries à Genève.</p></li>
+    </ul>
+  </div>
+</section>
+
+<section class="wrap s" id="comptoir">
+  <div class="cmp">
+    <p class="big">Une bonne raison de commander&nbsp;: <em>des conseils professionnels</em>, avec la visserie et les outils.</p>
+    <div>
+      <p>En commandant chez nous, vous avez accès non seulement à de la visserie et des outils de qualité, mais aussi à des conseils professionnels.</p>
+      <p>Vous doutez&nbsp;? Vous n’avez que 10&nbsp;chiffres à taper sur votre téléphone&nbsp;: <a href="tel:+41227945611">022&nbsp;794&nbsp;56&nbsp;11</a>. Nous connaissons les bons outils dont vous avez besoin.</p>
+      <p class="hist">Depuis plus de 50&nbsp;ans à Genève, Bischof SA fournit en visserie et outillage les entreprises de tous types d’industries.</p>
+    </div>
+  </div>
+</section>
+
+<section class="wrap s info" id="contact">
+  <div>
+    <h2>Passer au magasin</h2>
+    <address>Bischof SA<br>Chemin du Clos 6A<br>1212 Grand-Lancy</address>
+    <div class="lines">
+      <a href="tel:+41227945611">022&nbsp;794&nbsp;56&nbsp;11</a>
+      <a href="mailto:info@bischofsa.ch">info@bischofsa.ch</a>
+    </div>
+    <a class="btn" href="https://www.google.com/maps/search/?api=1&amp;query=Bischof+SA+Chemin+du+Clos+6A+1212+Lancy" rel="noopener">Voir sur la carte</a>
+  </div>
+  <div>
+    <h2>Heures d’ouverture</h2>
+    <table class="hours">
+      <tr><th scope="row">Lundi – jeudi</th><td>7&nbsp;h – 12&nbsp;h · 13&nbsp;h – 17&nbsp;h&nbsp;45</td></tr>
+      <tr><th scope="row">Vendredi</th><td>7&nbsp;h – 12&nbsp;h · 13&nbsp;h – 17&nbsp;h</td></tr>
+      <tr><th scope="row">Samedi – dimanche</th><td>Fermé</td></tr>
+    </table>
+  </div>
+</section>
+</main>
+<footer><div class="wrap"><p>© Bischof SA · Chemin du Clos 6A, 1212 Grand-Lancy</p></div></footer>
+</body>
+</html>

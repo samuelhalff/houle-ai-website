@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>IDM Immobilière de Morges – Courtage, gérance, estimation</title>
+<meta name="description" content="Agence immobilière au cœur de Morges depuis plus de 15 ans : courtage, gérance à tarif fixe, estimation. Rue des Charpentiers 22, 1110 Morges. Tél. 021 802 81 81.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#e0071d">
+<meta property="og:type" content="website">
+<meta property="og:title" content="IDM Immobilière de Morges">
+<meta property="og:description" content="Courtage, gérance à tarif fixe et estimation, dans le canton de Vaud et les cantons voisins.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:locale" content="fr_CH">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<!--
+  DESIGN NOTES (houle.ai mock-up, 2026-10-29)
+  Artefact: the property sheet (fiche de vente) and the logo's single continuous roofline.
+  Colours: logo red #e0071d as full-bleed surface (intro panel, estimation band, footer); ink #1b1a1c from the
+  wordmark; warm-grey paper. No second accent.
+  Type: Familjen Grotesk (wide-ish grotesque close to the logo lettering), one family, weight contrast only.
+  Layout: listings as a ledger of rows (photo + facts table), not cards; asymmetric hero with the red panel
+  overlapping the photo. Signature: the roofline stroke, drawn once across the red band.
+  Motion: none. Photography: their own listing photos, shown at sizes where they stay sharp.
+-->
+<style>
+:root{--red:#e0071d;--red-deep:#b80518;--ink:#1b1a1c;--muted:#55525a;--paper:#f3f1ee;--white:#fffdfb;--rule:#cfcac4;--on-red:#fff;--g:clamp(16px,5vw,56px)}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.58 "Familjen Grotesk",system-ui,sans-serif;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--red-deep);text-underline-offset:.18em}
+:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+.wrap{max-width:1180px;margin-inline:auto;padding-inline:var(--g)}
+h1,h2,h3{margin:0;font-weight:700;line-height:1;letter-spacing:-.02em}
+p{margin:0 0 1em;max-width:62ch}
+.preview{padding:11px 16px;background:#0f172a;color:#f8fafc;font:400 14px/1.35 system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center}
+.preview a{color:#f8fafc;text-decoration:underline;padding:14px 2px}
+
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-block:14px}
+.brand{display:flex;align-items:center;gap:12px;color:var(--ink);text-decoration:none}
+.brand img{width:48px;height:48px}
+.brand b{display:block;font-size:1.5rem;letter-spacing:.02em;line-height:1}
+.brand span{display:block;font-size:.9rem;color:var(--muted);line-height:1.2;margin-top:2px}
+.top nav{display:none}
+.tel{font-weight:700;color:var(--ink);text-decoration:none;font-size:1.1rem;white-space:nowrap;padding:12px 0}
+@media(min-width:900px){.top nav{display:flex;gap:28px;margin-left:auto;margin-right:32px}.top nav a{color:var(--ink);text-decoration:none;font-weight:500;padding:10px 0;border-bottom:2px solid transparent}.top nav a:hover{border-color:var(--red)}}
+@media(max-width:380px){.brand span{display:none}}
+
+.btn{display:inline-flex;align-items:center;min-height:50px;padding:0 24px;background:var(--ink);color:#fff;font-weight:700;font-size:1.05rem;text-decoration:none}
+.btn:hover{background:#000}
+.btn.w{background:#fff;color:var(--ink)}
+.btn.w:hover{background:var(--paper)}
+.btn.o{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+
+/* hero */
+.hero{position:relative}
+.hero>img{width:100%;height:clamp(300px,62vw,640px);object-fit:cover;object-position:50% 40%}
+.panel{background:var(--red);color:var(--on-red);padding:28px var(--g) 34px}
+.panel h1{font-size:clamp(2.5rem,10.5vw,5.2rem);max-width:13ch}
+.panel p{font-size:1.15rem;margin:18px 0 22px;max-width:40ch}
+.panel .acts{display:flex;flex-wrap:wrap;gap:12px}
+.cap{font-size:.85rem;color:var(--muted);padding:8px var(--g) 0}
+@media(min-width:900px){
+ .hero{display:grid;grid-template-columns:repeat(12,1fr);align-items:end}
+ .hero>img{grid-column:1/10;grid-row:1;height:clamp(520px,50vw,680px)}
+ .panel{grid-column:7/13;grid-row:1;padding:44px 48px 48px;margin-bottom:-36px;z-index:2}
+ .cap{grid-column:1/7;grid-row:2;padding-top:10px}
+}
+.hero-wrap{padding-bottom:36px}
+
+.s{padding-block:clamp(48px,8vw,96px)}
+.s h2{font-size:clamp(2.1rem,8vw,3.6rem);margin-bottom:26px;max-width:16ch}
+.lead{font-size:1.2rem;max-width:46ch}
+
+/* ledger */
+.row{display:grid;gap:16px;padding-block:28px;border-top:2px solid var(--ink)}
+.row:last-of-type{border-bottom:2px solid var(--ink)}
+.row img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.row h3{font-size:clamp(1.5rem,5vw,2.1rem);margin-bottom:10px;max-width:22ch}
+.price{font-size:clamp(1.7rem,6vw,2.4rem);font-weight:700;color:var(--red-deep);margin:0 0 14px;letter-spacing:-.02em}
+.facts{display:flex;flex-wrap:wrap;gap:6px 22px;margin:0 0 14px;padding:0;list-style:none;color:var(--muted)}
+.facts b{color:var(--ink)}
+.row p{color:var(--ink)}
+.row .loc{font-weight:600;margin-bottom:6px}
+@media(min-width:900px){.row{grid-template-columns:5fr 6fr;gap:48px;align-items:center;padding-block:36px}.row:nth-of-type(even){grid-template-columns:6fr 5fr}.row:nth-of-type(even) img{order:2}}
+
+/* métiers */
+.dark{background:var(--ink);color:#f1eeea}
+.dark h2{color:#fff}
+.jobs{display:grid;gap:0;margin:0;padding:0;list-style:none}
+.jobs li{padding:22px 0;border-top:1px solid #4a474d}
+.jobs h3{font-size:clamp(1.7rem,6vw,2.4rem);margin-bottom:8px}
+.jobs p{margin:0;color:#d9d4cd}
+@media(min-width:900px){.jobs li{display:grid;grid-template-columns:5fr 7fr;gap:48px;align-items:baseline;padding:30px 0}}
+.also{margin-top:26px;color:#d9d4cd}
+.also b{color:#fff}
+
+/* band */
+.band{position:relative;background:var(--red);color:#fff;padding-block:clamp(60px,9vw,110px) clamp(48px,7vw,80px);overflow:hidden}
+.band svg{position:absolute;left:0;right:0;top:0;width:100%;height:56px;opacity:.9}
+.band h2{font-size:clamp(2.2rem,8.5vw,4.4rem);max-width:14ch;margin-bottom:20px}
+.band p{font-size:1.2rem;max-width:44ch}
+
+/* vendus */
+.sold{display:grid;gap:22px;margin-top:8px}
+.sold figure{margin:0}
+.sold img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.sold figcaption{padding-top:10px;font-weight:600}
+.sold figcaption small{display:block;font-size:.95rem;font-weight:400;color:var(--muted);font-size:.95rem}
+@media(min-width:700px){.sold{grid-template-columns:repeat(3,1fr);gap:28px}}
+.tag{display:inline-block;background:var(--ink);color:#fff;font-size:.8rem;font-weight:700;padding:3px 9px;margin-right:6px;vertical-align:1px}
+
+/* about + contact */
+.two{display:grid;gap:36px}
+@media(min-width:900px){.two{grid-template-columns:1fr 1fr;gap:80px}}
+table{border-collapse:collapse;width:100%;max-width:420px}
+td{padding:8px 0;border-top:1px solid var(--rule);vertical-align:top}
+td:last-child{text-align:right;font-variant-numeric:tabular-nums}
+.contact{background:var(--white)}
+form{display:grid;gap:14px;max-width:520px}
+label{font-weight:600;display:grid;gap:5px}
+input,textarea{font:inherit;padding:13px;border:2px solid var(--ink);background:#fff;border-radius:0;width:100%}
+textarea{min-height:120px}
+address{font-style:normal}
+address a{color:var(--ink);font-weight:600}
+.c-line{margin:0 0 8px}
+footer{background:var(--ink);color:#d9d4cd;padding:30px var(--g);font-size:.95rem}
+footer a{color:#fff}
+.mobile-bar{display:none}
+@media(max-width:899px){.mobile-bar{display:grid;grid-template-columns:1fr 1fr;position:sticky;bottom:0;z-index:5}.mobile-bar a{display:flex;align-items:center;justify-content:center;min-height:54px;font-weight:700;text-decoration:none;color:#fff;background:var(--red-deep)}.mobile-bar a+a{background:var(--ink)}}
+</style>
+</head>
+<body>
+<div class="preview">Aperçu de votre nouveau site, préparé par&nbsp;<a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
+
+<header class="wrap top">
+  <a class="brand" href="#"><img src="favicon.png" width="48" height="48" alt=""><div><b>IDM</b><span>Immobilière de Morges</span></div></a>
+  <nav aria-label="Principal"><a href="#selection">Notre sélection</a><a href="#metiers">Nos services</a><a href="#infos">Informations utiles</a><a href="#apropos">À propos</a><a href="#contact">Contact</a></nav>
+  <a class="tel" href="tel:+41218028181">021&nbsp;802&nbsp;81&nbsp;81</a>
+</header>
+
+<main>
+<div class="hero-wrap">
+<section class="hero">
+  <img src="belmont.webp" width="2560" height="1920" alt="Vue sur le lac Léman et les Alpes depuis Belmont-sur-Lausanne">
+  <div class="panel">
+    <h1>Votre bien, au cœur de Morges.</h1>
+    <p>Courtage, gérance et estimation dans le canton de Vaud et les cantons voisins, par une agence installée à Morges depuis plus de 15&nbsp;ans.</p>
+    <div class="acts"><a class="btn w" href="#selection">Voir notre sélection</a><a class="btn o" href="#estimation">Faire estimer mon bien</a></div>
+  </div>
+  <p class="cap">Vue depuis Belmont-sur-Lausanne.</p>
+</section>
+</div>
+
+<section class="s" id="selection">
+ <div class="wrap">
+  <h2>Notre sélection</h2>
+  <p class="lead">Les biens actuellement présentés par l’agence.</p>
+
+  <article class="row">
+    <img src="attalens.webp" width="1600" height="1200" loading="lazy" alt="Maison de village rénovée à Attalens">
+    <div>
+      <p class="loc">Attalens, Fribourg · 1616</p>
+      <h3>Maison de village entièrement rénovée et agrandie en 2026</h3>
+      <p class="price">1&nbsp;780&nbsp;000&nbsp;CHF</p>
+      <ul class="facts"><li><b>4</b> chambres</li><li><b>3</b> salles de bain</li><li><b>220</b>&nbsp;m²</li><li>maison de village</li></ul>
+      <p>Une maison datant de 1800, rénovée et agrandie en 2026 avec des matériaux de qualité.</p>
+    </div>
+  </article>
+
+  <article class="row">
+    <img src="belmont.webp" width="2560" height="1920" loading="lazy" alt="Vue panoramique depuis l’appartement de Belmont-sur-Lausanne">
+    <div>
+      <p class="loc">Belmont-sur-Lausanne, VD · 1092</p>
+      <h3>Magnifique 4,5&nbsp;pièces avec vue panoramique</h3>
+      <p class="price">1&nbsp;595&nbsp;000&nbsp;CHF</p>
+      <ul class="facts"><li><b>3</b> chambres</li><li><b>2</b> salles de bain</li><li><b>130</b>&nbsp;m²</li><li>2 places de parc extérieures</li></ul>
+      <p>Au 1<sup>er</sup> étage d’une résidence contemporaine, un appartement rénové en 2012, calme et privilégié.</p>
+    </div>
+  </article>
+  <p style="margin-top:22px"><a href="#contact">Un bien en tête&nbsp;? Dites-nous ce que vous cherchez.</a></p>
+ </div>
+</section>
+
+<section class="s dark" id="metiers">
+ <div class="wrap">
+  <h2>Ce que fait l’agence</h2>
+  <ul class="jobs">
+    <li><h3>Courtage</h3><p>Notre secteur d’activité principal. La vente d’un bien est une affaire de confiance, menée par des professionnels qui connaissent tous les aspects de l’immobilier.</p></li>
+    <li><h3>Gérance</h3><p>De la mise en valeur au mandat total de gérance, un service complet à tarif fixe. Toutes les opérations menées pour la gestion du bien sont comprises dans ce tarif.</p></li>
+    <li><h3>Estimation</h3><p>Évaluer le bien au prix du marché, avec des outils professionnels, pour vendre rapidement. Si le mandat de vente nous est confié, l’estimation est gratuite.</p></li>
+  </ul>
+  <p class="also"><b>Aussi&nbsp;:</b> développement de projet, recherche personnalisée, revalorisation.</p>
+ </div>
+</section>
+
+<section class="band" id="estimation">
+  <svg viewBox="0 0 1200 56" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40 L90 40 L130 14 L170 40 L330 40 L380 6 L430 40 L520 40 L548 24 L576 40 L760 40 L800 16 L840 40 L1010 40 L1050 20 L1090 40 L1200 40" fill="none" stroke="#fff" stroke-width="5" vector-effect="non-scaling-stroke"/></svg>
+  <div class="wrap">
+    <h2>Quelle est la valeur de votre bien&nbsp;?</h2>
+    <p>Contactez-nous pour une estimation gratuite.</p>
+    <p style="margin-top:22px"><a class="btn w" href="#contact">Demander une estimation</a></p>
+  </div>
+</section>
+
+<section class="s" id="vendus">
+ <div class="wrap">
+  <h2>Déjà vendus</h2>
+  <div class="sold">
+    <figure><img src="duillier.webp" width="2000" height="1142" loading="lazy" alt="Chantier des Matins de Duillier vu du ciel"><figcaption><span class="tag">Vendu</span>Les Matins de Duillier<small>Duillier, VD · programme de deux immeubles</small></figcaption></figure>
+    <figure><img src="founex.webp" width="1800" height="1350" loading="lazy" alt="Villas mitoyennes de Founex"><figcaption><span class="tag">Vendu</span>Villas mitoyennes de 6,5&nbsp;pièces<small>Founex · Résidence du Bourg</small></figcaption></figure>
+    <figure><img src="morges.webp" width="1800" height="1125" loading="lazy" alt="Attique d’une résidence Minergie à Morges"><figcaption><span class="tag">Vendu</span>Attique de 4,5&nbsp;pièces<small>Morges · résidence Minergie</small></figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section class="s contact" id="infos">
+ <div class="wrap two">
+  <div>
+    <h2>Informations utiles pour acheter</h2>
+    <p>Dans le canton de Vaud, les frais d’achat représentent environ 5&nbsp;% du prix de vente&nbsp;:</p>
+    <table><tr><td>Droit de mutation</td><td>3,3&nbsp;%</td></tr><tr><td>Registre foncier</td><td>1,5&nbsp;%</td></tr><tr><td>Notaire</td><td>0,2&nbsp;%</td></tr></table>
+    <p style="margin-top:16px">Pour une résidence principale, les fonds propres doivent atteindre au minimum 20&nbsp;% de la valeur du bien.</p>
+  </div>
+  <div id="apropos">
+    <h2>À propos</h2>
+    <p>IDM Immobilière de Morges est une agence située au cœur de Morges depuis plus de 15&nbsp;ans. Ses collaborateurs travaillent en équipe pour assurer le meilleur suivi de chaque mandat.</p>
+    <p>Pour offrir un service complet, l’agence s’appuie sur des partenariats avec un bureau d’architecte, un architecte d’intérieur et des sociétés de la construction, et fait partie d’un réseau d’une trentaine d’agences.</p>
+  </div>
+ </div>
+</section>
+
+<section class="s" id="contact">
+ <div class="wrap two">
+  <div>
+    <h2>Nous contacter</h2>
+    <address>
+      <p class="c-line">IDM Immobilière de Morges Sàrl<br>Rue des Charpentiers 22<br>1110 Morges</p>
+      <p class="c-line"><a href="tel:+41218028181">+41 21 802 81 81</a></p>
+      <p class="c-line"><a href="mailto:info@i-d-m.ch">info@i-d-m.ch</a></p>
+      <p class="c-line"><a href="https://www.google.com/maps/search/?api=1&amp;query=Rue+des+Charpentiers+22+1110+Morges">Itinéraire sur la carte</a></p>
+    </address>
+    <table style="margin-top:20px"><tr><td>Lundi – jeudi</td><td>8h00 – 12h00 · 13h00 – 17h30</td></tr><tr><td>Vendredi</td><td>8h00 – 12h00 · 13h00 – 16h00</td></tr></table>
+  </div>
+  <form action="mailto:info@i-d-m.ch" method="post" enctype="text/plain">
+    <label>Nom<input name="nom" autocomplete="name"></label>
+    <label>Téléphone<input name="tel" type="tel" autocomplete="tel"></label>
+    <label>E-mail<input name="email" type="email" autocomplete="email"></label>
+    <label>Message<textarea name="message"></textarea></label>
+    <button class="btn" type="submit" style="border:0;cursor:pointer;justify-self:start">Envoyer</button>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer>IDM Immobilière de Morges Sàrl · Rue des Charpentiers 22, 1110 Morges · <a href="tel:+41218028181">021&nbsp;802&nbsp;81&nbsp;81</a> · <a href="mailto:info@i-d-m.ch">info@i-d-m.ch</a></footer>
+<div class="mobile-bar"><a href="tel:+41218028181">Appeler</a><a href="#contact">Écrire</a></div>
+</body>
+</html>

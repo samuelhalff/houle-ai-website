@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KD1 – Cabinet de pédodontie et d’orthodontie, Lausanne</title>
+<meta name="description" content="Cabinet dentaire pour enfants au centre de Lausanne : pédodontie, orthodontie, chirurgie orale, hygiène et prévention. Dr Joëlle Dulla Khoury et Dr Paul Khoury. Tél. 021 312 79 38.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#3b4a9a">
+<meta property="og:type" content="website">
+<meta property="og:title" content="KD1 – Pédodontie et orthodontie à Lausanne">
+<meta property="og:description" content="Un cabinet dentaire pour les enfants, de leurs premières dents de lait à leur dentition adulte.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:locale" content="fr_CH">
+<link rel="icon" href="logo.webp" type="image/webp">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Figtree:ital,wght@0,400..700;1,400&display=swap" rel="stylesheet">
+<!--
+  DESIGN NOTES (houle.ai mock-up, 2026-10-29)
+  Artefact: the orthodontic wire with its coloured ligatures, already drawn in the KD1 logo (the bunting under "Pédodontie & Orthodontie").
+  Signature: one wire runs down the left edge of the services; each service hangs from it on a coloured ligature square.
+  Colours (from the logo): indigo = hero and form-side surface, plum = contact surface, pale lilac paper for the page,
+  ligature pink / yellow / sky only as small squares, never as text.
+  Type: Bricolage Grotesque (rounded, a little playful at large sizes, serious when set tight) + Figtree for reading.
+  Photography: their own mascot and one portrait, shown within their native pixel size; otherwise typography.
+  Motion: none.
+-->
+<style>
+:root{
+  --indigo:#3b4a9a; --indigo-deep:#2c3877; --plum:#6b2370; --paper:#f6f4fa; --white:#fffffe;
+  --ink:#1f2144; --muted:#4d5075; --rule:#d9d5e8;
+  --lig-pink:#e8467f; --lig-yellow:#f4b30c; --lig-sky:#58b9e6; --lig-plum:#7c2c82;
+  --on-indigo:#f1f2fb; --on-indigo-muted:#c4c9ea;
+  --display:"Bricolage Grotesque",system-ui,sans-serif;
+  --gutter:clamp(18px,5vw,64px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.62 "Figtree",system-ui,sans-serif;padding-bottom:calc(68px + env(safe-area-inset-bottom));overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--indigo);text-underline-offset:.18em}
+:focus-visible{outline:3px solid var(--lig-yellow);outline-offset:3px}
+.wrap{max-width:1160px;margin-inline:auto;padding-inline:var(--gutter)}
+h1,h2,h3{font-family:var(--display);margin:0;font-weight:700;letter-spacing:-.015em;line-height:1.02}
+p{margin:0 0 1em;max-width:60ch}
+ul{margin:0;padding:0;list-style:none}
+
+.preview{padding:11px 16px;background:#0f172a;color:#f8fafc;font:400 14px/1.35 system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center}
+.preview a{color:#f8fafc;text-decoration:underline;padding:14px 2px}
+
+/* header */
+.top{background:var(--indigo);color:var(--on-indigo)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-block:14px}
+.mark{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none}
+.mark svg{width:30px;height:38px;flex:none}
+.mark b{font:800 2rem/1 var(--display);letter-spacing:-.02em}
+.mark span{display:none;font:500 .9rem/1.2 var(--display);color:var(--on-indigo-muted);max-width:11ch}
+.top nav{display:none}
+.top .tel{color:#fff;font-weight:700;text-decoration:none;white-space:nowrap;padding:10px 0}
+@media(min-width:760px){
+  .mark span{display:block}
+  .top nav{display:flex;gap:26px;margin-left:auto;margin-right:26px}
+  .top nav a{color:var(--on-indigo);text-decoration:none;font-weight:500;padding:8px 0}
+  .top nav a:hover{text-decoration:underline}
+}
+.btn{display:inline-block;background:var(--lig-yellow);color:#1f2144;font:700 1rem/1 var(--display);text-decoration:none;padding:15px 22px;border-radius:999px}
+.btn:hover{background:#ffc52e}
+.btn.line{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn.line:hover{background:rgba(255,255,255,.1)}
+
+/* hero */
+.hero{background:var(--indigo);color:var(--on-indigo);overflow:hidden}
+.hero .wrap{display:grid;gap:8px;padding-top:clamp(34px,7vw,84px);align-items:end}
+.hero h1{font-size:clamp(2.35rem,9.4vw,5.1rem);color:#fff;max-width:13ch;font-weight:800}
+.hero p.lead{font-size:1.15rem;color:var(--on-indigo);margin-top:20px;max-width:34ch}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 8px}
+.hero figure{margin:0;justify-self:end;width:min(66vw,310px);margin-right:-4px}
+@media(min-width:860px){
+  .hero .wrap{grid-template-columns:1.25fr .75fr;gap:40px}
+  .hero figure{width:320px;margin-right:0;margin-bottom:-2px}
+  .hero .txt{padding-bottom:clamp(40px,6vw,80px)}
+}
+/* wire */
+.wire{display:block;width:100%;height:46px;background:var(--paper)}
+
+/* vision */
+.vision{padding-block:clamp(44px,8vw,96px)}
+.vision .wrap{display:grid;gap:28px}
+.vision h2{font-size:clamp(1.9rem,6.4vw,3.2rem);max-width:18ch}
+.vision blockquote{margin:0;padding:0 0 0 18px;border-left:4px solid var(--lig-pink)}
+.vision blockquote p{font-size:1.1rem}
+.vision cite{display:block;font:600 .95rem/1.4 var(--display);font-style:normal;color:var(--muted)}
+@media(min-width:860px){.vision .wrap{grid-template-columns:1fr 1fr;gap:64px}}
+
+/* services on the wire */
+.services{padding-block:0 clamp(44px,8vw,96px)}
+.services>.wrap>h2{font-size:clamp(1.7rem,5.6vw,2.7rem);margin-bottom:34px;max-width:20ch}
+.rail{position:relative;padding-left:44px}
+.rail::before{content:"";position:absolute;left:11px;top:-10px;bottom:0;width:0;border-left:3px solid var(--ink)}
+.svc{position:relative;padding-bottom:44px}
+.svc::before{content:"";position:absolute;left:-44px;top:3px;width:25px;height:25px;border-radius:5px;background:var(--c);transform:rotate(var(--r,-6deg));box-shadow:0 0 0 5px var(--paper)}
+.svc h3{font-size:clamp(1.6rem,5vw,2.3rem);margin-bottom:10px}
+.svc p{color:var(--muted)}
+.svc ul{display:flex;flex-wrap:wrap;gap:8px 10px;margin-top:16px}
+.svc li{background:var(--white);border:1px solid var(--rule);border-radius:999px;padding:7px 15px;font-weight:500;font-size:.98rem}
+@media(min-width:900px){
+  .rail{padding-left:0;display:grid;grid-template-columns:repeat(3,1fr);gap:48px;border-top:3px solid var(--ink);margin-top:20px}
+  .rail::before{display:none}
+  .svc{padding-top:44px}
+  .svc::before{left:0;top:-15px}
+}
+
+/* portrait band */
+.band{background:var(--white);padding-block:clamp(40px,7vw,84px)}
+.band .wrap{display:grid;gap:30px;align-items:center}
+.band figure{margin:0;max-width:760px}
+.band figure img{border-radius:6px;width:100%}
+.band h2{font-size:clamp(1.7rem,5.2vw,2.6rem);margin-bottom:18px;max-width:16ch}
+.reasons li{padding:12px 0 12px 0;border-top:1px solid var(--rule)}
+.reasons li:last-child{border-bottom:1px solid var(--rule)}
+.reasons b{font-family:var(--display);font-weight:700}
+@media(min-width:900px){.band .wrap{grid-template-columns:1fr 1fr;gap:64px}}
+
+.pay{margin-top:26px;font:700 clamp(1.4rem,4.4vw,2rem)/1.1 var(--display);letter-spacing:-.01em;max-width:20ch}
+.pay span{display:block;margin-top:8px;font:400 1rem/1.5 "Figtree",sans-serif;color:var(--muted);letter-spacing:0;max-width:44ch}
+
+/* contact */
+.contact{background:var(--plum);color:#fbeefb;padding-block:clamp(44px,8vw,96px)}
+.contact h2{color:#fff;font-size:clamp(1.9rem,6.4vw,3.3rem);margin-bottom:28px;max-width:14ch}
+.contact .wrap{display:grid;gap:36px}
+.contact a{color:#fff}
+.contact dl{margin:0}
+.contact dt{font:600 .95rem/1.3 var(--display);color:#f0cdf1;margin-top:20px}
+.contact dd{margin:3px 0 0;font-size:1.12rem}
+.contact .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.hours{border-collapse:collapse;width:100%;max-width:420px}
+.hours th,.hours td{padding:13px 0;border-bottom:1px solid rgba(255,255,255,.28);text-align:left;font-weight:400}
+.hours th{font-family:var(--display);font-weight:600}
+.hours td{text-align:right;font-variant-numeric:tabular-nums}
+.hours caption{text-align:left;font:700 1.4rem/1.2 var(--display);color:#fff;padding-bottom:6px}
+@media(min-width:900px){.contact .wrap{grid-template-columns:1fr 1fr;gap:72px}}
+
+footer{background:var(--indigo-deep);color:var(--on-indigo-muted);padding:26px 0;font-size:.95rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between}
+footer a{color:#fff}
+
+.dock{position:fixed;left:0;right:0;bottom:0;display:flex;gap:10px;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:var(--white);border-top:1px solid var(--rule);z-index:5}
+.dock a{flex:1;text-align:center;padding:14px 8px;border-radius:999px;font:700 1rem/1 var(--display);text-decoration:none}
+.dock .a{background:var(--indigo);color:#fff}
+.dock .b{background:var(--lig-yellow);color:#1f2144}
+@media(min-width:900px){.dock{display:none}body{padding-bottom:0}}
+</style>
+</head>
+<body>
+<div class="preview" role="note">Aperçu de votre nouveau site, préparé par&nbsp;<a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#haut" aria-label="KD1, cabinet de pédodontie et d’orthodontie">
+      <svg viewBox="0 0 30 38" aria-hidden="true"><path fill="#fff" d="M8.5 1C4 1 .5 4.4.5 9.2c0 4.2 1.7 6.6 2.4 11 .6 3.8.9 12.8 3.6 16 1.4 1.7 3 .6 3.4-1.2.7-3 .9-8 3.1-8s2.4 5 3.1 8c.4 1.800 2 2.900 3.400 1.200 2.700-3.200 3-12.200 3.600-16 .7-4.400 2.400-6.800 2.400-11C29.500 4.400 26 1 21.500 1c-2.600 0-4.300 1.200-6.500 1.200S11.100 1 8.500 1z"/></svg>
+      <b>KD1</b><span>Pédodontie &amp; Orthodontie</span>
+    </a>
+    <nav aria-label="Principal"><a href="#soins">Nos soins</a><a href="#cabinet">Le cabinet</a><a href="#contact">Horaires et accès</a></nav>
+    <a class="tel" href="tel:+41213127938">021 312 79 38</a>
+  </div>
+</header>
+
+<main id="haut">
+<section class="hero">
+  <div class="wrap">
+    <div class="txt">
+      <h1>Des dents de lait aux dents d’adulte, au même cabinet.</h1>
+      <p class="lead">KD1 est un cabinet dentaire pour enfants au centre de Lausanne : pédodontie, orthodontie, chirurgie orale, hygiène et prévention.</p>
+      <div class="cta">
+        <a class="btn" href="https://khoury-dulla.ch/rdv-kd1/">Prendre rendez-vous</a>
+        <a class="btn line" href="tel:+41213127938">021&nbsp;312&nbsp;79&nbsp;38</a>
+      </div>
+    </div>
+    <figure><img src="garcon.webp" width="677" height="810" alt="Dessin d’un garçon à lunettes, souriant, avec un appareil dentaire" fetchpriority="high"></figure>
+  </div>
+</section>
+
+<!-- the wire -->
+<svg class="wire" viewBox="0 0 1200 46" preserveAspectRatio="none" aria-hidden="true" style="margin-top:-1px">
+  <rect width="1200" height="46" fill="#3b4a9a"/>
+  <path d="M0 8 C 200 40, 400 40, 600 24 S 1000 6, 1200 24 L1200 46 L0 46Z" fill="#f6f4fa"/>
+  <path d="M0 8 C 200 40, 400 40, 600 24 S 1000 6, 1200 24" fill="none" stroke="#1f2144" stroke-width="2.5" vector-effect="non-scaling-stroke"/>
+</svg>
+
+<section class="vision" id="cabinet">
+  <div class="wrap">
+    <h2>Un petit cabinet où chaque enfant est une personne, pas un numéro de dossier.</h2>
+    <div>
+      <blockquote>
+        <p>Nous croyons fortement à la dimension humaine de notre métier. La compassion, la patience et l’établissement d’un rapport de confiance avec nos patient·e·s sont la base de tout traitement.</p>
+        <p>Notre mission est de contribuer, le plus tôt possible, à une relation saine et harmonieuse avec la bouche et les dents.</p>
+        <cite>Joëlle A. Dulla Khoury et Paul M. Khoury, propriétaires du cabinet depuis 2016</cite>
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="soins">
+  <div class="wrap">
+    <h2>Ce que nous faisons pour votre enfant</h2>
+    <div class="rail">
+      <article class="svc" style="--c:var(--lig-sky);--r:-7deg">
+        <h3>Pédodontie</h3>
+        <p>La médecine dentaire des enfants, dès le premier contrôle.</p>
+        <ul>
+          <li>Premier contrôle dentaire</li><li>Gestion du comportement</li><li>Anesthésie</li><li>Sédation au protoxyde d’azote</li><li>Scellement de sillons</li><li>Séquence d’éruption des dents</li>
+        </ul>
+      </article>
+      <article class="svc" style="--c:var(--lig-pink);--r:5deg">
+        <h3>Orthodontie</h3>
+        <p>Pour tous les âges, de la première consultation à l’appareil.</p>
+        <ul>
+          <li>Première consultation</li><li>Occlusion dentaire</li><li>Appareils orthodontiques</li><li>Invisalign</li><li>Chirurgie orale</li>
+        </ul>
+      </article>
+      <article class="svc" style="--c:var(--lig-yellow);--r:-4deg">
+        <h3>Hygiène et prévention</h3>
+        <p>Apprendre tôt à prendre soin de ses dents pour éviter les caries.</p>
+        <ul>
+          <li>Premier rendez-vous chez l’hygiéniste dentaire</li><li>Prévention des caries</li><li>Suivi d’hygiène bucco-dentaire</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <figure><img src="sourire.webp" width="1950" height="702" alt="Portrait d’une jeune fille qui rit, la tête en arrière" loading="lazy" style="max-width:100%"></figure>
+    <div>
+      <h2>Pourquoi les familles viennent chez KD1</h2>
+      <ul class="reasons">
+        <li><b>Un cabinet pour enfants,</b> à jour, qui pratique la médecine dentaire numérique.</li>
+        <li><b>Une équipe humaine,</b> familiale et professionnelle.</li>
+        <li><b>Une prise en charge</b> personnalisée et complète.</li>
+        <li><b>Des arrangements de paiement</b> sans intérêts, ou des rabais pour les budgets restreints.</li>
+      </ul>
+      <p class="pay">Nos patients ne sont pas des clients.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <h2>Venir au cabinet</h2>
+      <dl>
+        <dt>Adresse</dt>
+        <dd>Rue Philippe-François-de-Langallerie&nbsp;1<br>1003 Lausanne</dd>
+        <dt>Téléphone</dt>
+        <dd><a href="tel:+41213127938">021 312 79 38</a></dd>
+        <dt>E-mail</dt>
+        <dd><a href="mailto:cabinetdentaire@khoury-dulla.ch">cabinetdentaire@khoury-dulla.ch</a></dd>
+      </dl>
+      <div class="cta">
+        <a class="btn" href="https://khoury-dulla.ch/rdv-kd1/">Prendre rendez-vous</a>
+        <a class="btn line" href="https://www.google.com/maps/search/?api=1&amp;query=Rue+Philippe-Fran%C3%A7ois-de-Langallerie+1+1003+Lausanne">Itinéraire</a>
+      </div>
+    </div>
+    <table class="hours">
+      <caption>Horaires</caption>
+      <tbody>
+        <tr><th scope="row">Lundi et mercredi</th><td>9&nbsp;h – 18&nbsp;h</td></tr>
+        <tr><th scope="row">Mardi et jeudi</th><td>8&nbsp;h – 17&nbsp;h</td></tr>
+        <tr><th scope="row">Vendredi</th><td>8&nbsp;h – 16&nbsp;h</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>KD1 Cabinet de pédodontie &amp; d’orthodontie · Lausanne</span>
+    <a href="https://khoury-dulla.ch/">Site actuel</a>
+  </div>
+</footer>
+
+<div class="dock"><a class="a" href="tel:+41213127938">Appeler</a><a class="b" href="https://khoury-dulla.ch/rdv-kd1/">Rendez-vous</a></div>
+</body>
+</html>

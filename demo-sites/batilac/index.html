@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BatiLAC SA – Promotion et construction à Genève</title>
+<meta name="description" content="Promotion immobilière, courtage et direction de travaux à Genève. Membre de l’APCG. Route de Florissant 81, 1206 Genève. Tél. 022 839 30 40.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#f2f4e6">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BatiLAC SA – Promotion et construction à Genève">
+<meta property="og:description" content="Pilotage de projet, courtage et direction de travaux, de la définition du programme à la livraison.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:locale" content="fr_CH">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+<!--
+  DESIGN NOTES (houle.ai mock-up, 2026-10-29)
+  Artefact: the BatiLAC mark itself (three vertical façade bays over a lake wave), rebuilt as SVG without its box.
+  Colours from the logo: green (#b2bf55) used as a full-bleed surface for the three métiers, split into three bays
+  by white joints; lake blue (#1a77aa) for the wave dividers, links and the contact band; deep blue-black ink; tinted paper.
+  Type: Schibsted Grotesk, heavy and tight for display, regular for text (a journalistic grotesque, not the usual set).
+  Layout: strong left edge, métiers as three bays, réalisations as a real chronology (year / name / place).
+  Motion: none. Photos: their own, shown at natural ratio, never upscaled.
+-->
+<style>
+:root{
+  --paper:#f2f4e6; --white:#fbfcf7; --ink:#12303e; --muted:#44596a;
+  --green:#b2bf55; --blue:#1a77aa; --blue-d:#0e5883; --on-blue:#f4faff;
+  --gutter:clamp(16px,5vw,56px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 1.0625rem/1.6 "Schibsted Grotesk",system-ui,sans-serif;padding-bottom:calc(64px + env(safe-area-inset-bottom));overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--blue-d);text-underline-offset:.18em}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+h1,h2,h3{margin:0;font-weight:900;line-height:1;letter-spacing:-.025em}
+p{margin:0 0 1em;max-width:62ch}
+.wrap{max-width:1180px;margin-inline:auto;padding-inline:var(--gutter)}
+
+.preview{padding:11px 16px;background:#0f172a;color:#f8fafc;font:400 14px/1.35 system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center}
+.preview a{color:#f8fafc;text-decoration:underline;padding:14px 2px}
+
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:16px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.brand svg{width:34px;height:40px;flex:none}
+.brand b{font-weight:900;font-size:1.45rem;letter-spacing:-.02em;line-height:1}
+.brand b i{font-style:normal;font-weight:500}
+.top nav{display:none}
+.top .tel{font-weight:800;color:var(--ink);text-decoration:none;white-space:nowrap}
+@media(min-width:900px){
+  .top nav{display:flex;gap:28px}
+  .top nav a{color:var(--ink);text-decoration:none;font-weight:500;padding:8px 0;border-bottom:2px solid transparent}
+  .top nav a:hover{border-color:var(--blue)}
+}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:12px 22px;background:var(--blue-d);color:#fff;font-weight:700;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.btn:hover{filter:brightness(1.12)}
+
+.hero{padding-block:clamp(20px,5vw,56px) 28px}
+.hero h1{font-size:clamp(2.7rem,11.4vw,6.4rem);max-width:12ch}
+.hero .lede{font-size:1.2rem;max-width:40ch;margin:22px 0 26px}
+.hero .acts{display:flex;flex-wrap:wrap;gap:12px}
+.apcg{margin-top:26px;font-size:.95rem;color:var(--muted)}
+.site{margin:30px 0 0}
+.site img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.site figcaption{padding-top:8px;font-size:.9rem;color:var(--muted)}
+@media(min-width:900px){.hero{padding-bottom:48px}}
+
+.wave{display:block;width:100%;height:36px;color:var(--blue)}
+
+/* métiers : trois travées */
+.bays{background:var(--green);color:var(--ink)}
+.bays .wrap{padding-block:clamp(40px,7vw,80px)}
+.bays h2{font-size:clamp(2.1rem,7vw,3.8rem);margin-bottom:28px;max-width:16ch}
+.bay-row{display:grid;gap:0;background:#fff}
+.bay{background:var(--green);padding:6px 0 26px}
+.bay + .bay{border-top:6px solid #fff}
+.bay h3{font-size:2rem;margin:14px 0 10px}
+.bay p{margin:0}
+@media(min-width:900px){
+  .bay-row{grid-template-columns:repeat(3,1fr)}
+  .bay{padding:6px 28px 8px 0}
+  .bay + .bay{border-top:0;border-left:6px solid #fff;padding-left:28px}
+}
+
+.s{padding-block:clamp(48px,8vw,92px)}
+.s h2{font-size:clamp(2.1rem,7vw,3.8rem);margin-bottom:26px}
+
+/* réalisations */
+.real{display:grid;gap:36px}
+.chrono{margin:0;padding:0;list-style:none}
+.chrono li{display:grid;grid-template-columns:3.6rem 1fr;gap:4px 14px;padding:13px 0;border-top:1px solid #b9c3a0}
+.chrono li:last-child{border-bottom:1px solid #b9c3a0}
+.chrono b{font-weight:800;color:var(--blue-d);font-variant-numeric:tabular-nums}
+.chrono span{font-weight:700}
+.chrono em{grid-column:2;font-style:normal;color:var(--muted);font-size:.95rem}
+@media(min-width:900px){.real{grid-template-columns:1fr 1fr;gap:72px;align-items:start}}
+.photos{display:grid;gap:16px;grid-template-columns:1fr 1fr;align-items:start}
+.photos figure{margin:0}
+.photos .wide{grid-column:1/-1}
+.photos img{width:100%}
+.photos figcaption{padding-top:6px;font-size:.9rem;color:var(--muted)}
+
+/* promotions */
+.promo{background:var(--white)}
+.promo-list{margin:0;padding:0;list-style:none;display:grid;gap:0}
+.promo-list li{display:grid;gap:2px;padding:20px 0;border-top:3px solid var(--ink)}
+.promo-list h3{font-size:1.7rem}
+.promo-list span{color:var(--muted)}
+@media(min-width:900px){.promo-list{grid-template-columns:repeat(4,1fr);gap:0 32px}}
+.promo p.note{margin-top:22px;color:var(--muted)}
+
+/* contact */
+.contact{background:var(--blue-d);color:var(--on-blue)}
+.contact h2{color:#fff}
+.contact .wrap{display:grid;gap:34px}
+.contact a{color:#fff}
+.contact .big{font-size:clamp(1.6rem,6vw,2.4rem);font-weight:800;letter-spacing:-.02em;line-height:1.15;word-break:break-word}
+.contact dl{margin:0;display:grid;gap:18px}
+.contact dt{font-weight:700;font-size:.95rem;color:#cfe6f5}
+.contact dd{margin:2px 0 0}
+.contact .btn{background:#fff;color:var(--blue-d)}
+.contact .btn.ghost{background:transparent;color:#fff;box-shadow:inset 0 0 0 2px #fff}
+.contact .acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+@media(min-width:900px){.contact .wrap{grid-template-columns:1fr 1fr;gap:80px}}
+
+footer{background:var(--ink);color:#c5d3da;padding-block:24px;font-size:.92rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between}
+footer a{color:#fff}
+
+.callbar{position:fixed;left:0;right:0;bottom:0;display:flex;gap:1px;background:var(--ink);padding-bottom:env(safe-area-inset-bottom);z-index:5}
+.callbar a{flex:1;text-align:center;padding:16px 8px;min-height:56px;color:#fff;text-decoration:none;font-weight:700;background:var(--blue-d)}
+.callbar a+a{background:var(--ink)}
+@media(min-width:900px){.callbar{display:none}body{padding-bottom:0}}
+</style>
+</head>
+<body>
+<div class="preview">Aperçu de votre nouveau site, préparé par&nbsp;<a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
+
+<header class="wrap top">
+  <a class="brand" href="#" aria-label="BatiLAC SA, accueil">
+    <svg viewBox="0 0 34 40" aria-hidden="true"><rect x="0" y="0" width="10" height="28" fill="#b2bf55"/><rect x="12" y="0" width="10" height="28" fill="#b2bf55"/><rect x="24" y="0" width="10" height="28" fill="#b2bf55"/><path d="M0 26c6-5 10-5 17 0s11 4 17-1v15H0z" fill="#1a77aa"/></svg>
+    <b>Bati<i>LAC</i> SA</b>
+  </a>
+  <nav aria-label="Navigation">
+    <a href="#metiers">Métiers</a><a href="#realisations">Réalisations</a><a href="#promotions">Promotions</a><a href="#contact">Contact</a>
+  </nav>
+  <a class="tel" href="tel:+41228393040">022&nbsp;839&nbsp;30&nbsp;40</a>
+</header>
+
+<main>
+<section class="wrap hero">
+  <h1>Promotion et construction à Genève.</h1>
+  <p class="lede">Pilotage de projet, courtage et direction de travaux&nbsp;: un suivi personnalisé du début à la fin de votre projet.</p>
+  <div class="acts"><a class="btn" href="mailto:demande@batilac.ch">Nous écrire</a><a class="btn ghost" href="#realisations">Voir les réalisations</a></div>
+  <p class="apcg">Membre de l’APCG, l’Association des Promoteurs et Constructeurs Genevois.</p>
+  <figure class="site">
+    <img src="chantier.webp" width="2560" height="1440" alt="Vue aérienne du chantier des Petites-Fontaines, avec la grue et l’immeuble en construction" fetchpriority="high">
+    <figcaption>Chantier Les Petites-Fontaines, janvier&nbsp;2025.</figcaption>
+  </figure>
+</section>
+
+<section class="bays" id="metiers">
+  <svg class="wave" viewBox="0 0 1200 36" preserveAspectRatio="none" aria-hidden="true" style="margin-top:-1px;color:var(--paper)"><path d="M0 0h1200v14C1000 40 900 -6 700 14S300 40 0 10z" fill="currentColor"/></svg>
+  <div class="wrap">
+    <h2>Trois métiers, un seul interlocuteur.</h2>
+    <div class="bay-row">
+      <article class="bay">
+        <h3>Pilotage</h3>
+        <p>Nous vous assistons dans la définition de votre programme, des aspects techniques et énergétiques aux objectifs esthétiques, pour un immeuble de logements ou commercial, locatif ou en PPE, comme pour une villa. Le coût reste notre repère du début à la fin.</p>
+      </article>
+      <article class="bay">
+        <h3>Courtage</h3>
+        <p>Nous nous chargeons de la commercialisation de votre bien, soit pour la vente à un nouvel utilisateur, soit dans le cadre d’une promotion en PPE. Un projet de développement auquel vous ne souhaitez pas participer&nbsp;: demandez-nous une offre.</p>
+      </article>
+      <article class="bay">
+        <h3>Direction de travaux</h3>
+        <p>Nous vous aidons à choisir les mandataires, préparons l’exécution pendant l’instruction de l’autorisation de construire, puis dirigeons le chantier jusqu’à la livraison à vos acheteurs ou vos locataires. En PPE, nous accompagnons vos acquéreurs dans leur projet.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="s wrap" id="realisations">
+  <h2>Réalisations</h2>
+  <div class="real">
+    <ol class="chrono" style="list-style:none">
+      <li><b>2021</b><span>Bella-Vista Parc</span><em>Veyrier (GE)</em></li>
+      <li><b>2021</b><span>Les Sciers</span><em>Plan-les-Ouates (GE)</em></li>
+      <li><b>2018</b><span>Villas des Grumes</span><em>Bex (VD)</em></li>
+      <li><b>2015</b><span>Pré Veyrier</span><em>Canton de Genève</em></li>
+      <li><b>2013</b><span>Hôtel La Réserve</span><em>Bellevue (GE)</em></li>
+      <li><b>2012</b><span>Résidence des Grumes</span><em>Bex (VD)</em></li>
+      <li><b>2012</b><span>Clinique La Colline</span><em>Genève</em></li>
+      <li><b>2008</b><span>Les Verchères</span><em>Thônex (GE)</em></li>
+      <li><b>2007</b><span>Résidence De Gallatin</span><em>Genève</em></li>
+      <li><b>2005</b><span>Petites Fontaines</span><em>Plan-les-Ouates (GE)</em></li>
+      <li><b>2004</b><span>Charmilles New Tech Center</span><em>Genève</em></li>
+      <li><b>2000</b><span>Le Millénium</span><em>Martigny (VS)</em></li>
+    </ol>
+    <div class="photos">
+      <figure><img src="sciers-1.webp" width="666" height="1325" alt="Façade d’un immeuble des Sciers et arbre au premier plan" loading="lazy"><figcaption>Les Sciers, Plan-les-Ouates</figcaption></figure>
+      <figure><img src="sciers-2.webp" width="666" height="1325" alt="Immeuble blanc à balcons des Sciers" loading="lazy"></figure>
+      <figure class="wide"><img src="facade.webp" width="1400" height="1050" alt="Immeuble de logements blancs au bord d’une pelouse" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="s promo" id="promotions">
+  <div class="wrap">
+    <h2>Promotions</h2>
+    <ul class="promo-list">
+      <li><h3>Bella Vista Parc</h3><span>Livré en 2021</span></li>
+      <li><h3>Les Sciers</h3><span>Livré en 2021</span></li>
+      <li><h3>Les Villas des Grumes</h3><span>Livré en 2018</span></li>
+      <li><h3>Les Petites-Fontaines</h3><span>Livraison annoncée début 2026</span></li>
+    </ul>
+    <p class="note">Vous souhaitez vendre, ou vous recherchez un pilote ou une direction de travaux&nbsp;? Parlons-en.</p>
+    <div class="photos" style="margin-top:34px;grid-template-columns:1fr;max-width:620px">
+      <figure><img src="parc.webp" width="1400" height="1053" alt="Immeuble de logements en retrait derrière une pelouse" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <svg class="wave" viewBox="0 0 1200 36" preserveAspectRatio="none" aria-hidden="true" style="margin-top:-1px;color:var(--white)"><path d="M0 0h1200v14C1000 40 900 -6 700 14S300 40 0 10z" fill="currentColor"/></svg>
+  <div class="wrap s">
+    <div>
+      <h2>Comment pouvons-nous aider&nbsp;?</h2>
+      <p class="big"><a href="tel:+41228393040">022&nbsp;839&nbsp;30&nbsp;40</a><br><a href="mailto:demande@batilac.ch">demande@batilac.ch</a></p>
+      <div class="acts"><a class="btn" href="mailto:demande@batilac.ch">Écrire à BatiLAC</a><a class="btn ghost" href="tel:+41228393040">Appeler</a></div>
+    </div>
+    <dl>
+      <div><dt>Adresse</dt><dd>BatiLAC SA<br>Route de Florissant 81<br>1206 Genève<br><a href="https://www.google.com/maps/search/?api=1&amp;query=Route+de+Florissant+81+1206+Gen%C3%A8ve">Voir sur la carte</a></dd></div>
+      <div><dt>Ailleurs</dt><dd><a href="https://www.linkedin.com/company/batilac-sa/">LinkedIn</a><br><a href="https://bati-drone.ch">Bati-Drone, prise de vue aérienne par drone</a></dd></div>
+    </dl>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap"><span>© BatiLAC SA · Route de Florissant 81, 1206 Genève</span><a href="mailto:demande@batilac.ch">demande@batilac.ch</a></div></footer>
+<div class="callbar"><a href="tel:+41228393040">Appeler</a><a href="mailto:demande@batilac.ch">Écrire</a></div>
+</body>
+</html>

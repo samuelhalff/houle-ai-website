@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Masset SA – Impression, GED et réseau en Suisse romande</title>
+<meta name="description" content="Entreprise familiale depuis plus de 70 ans : solutions d’impression, GED, solutions interactives, infrastructure et réseau. Quatre agences : Le Mont-sur-Lausanne, Satigny, Yverdon, Sion. Tél. 0848 800 847.">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#127ac0">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Masset SA – Impression, GED et réseau">
+<meta property="og:description" content="Entreprise familiale depuis plus de 70 ans, quatre agences en Suisse romande.">
+<meta property="og:image" content="og.jpg">
+<meta property="og:locale" content="fr_CH">
+<link rel="icon" href="favicon.png" type="image/png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<!--
+  DESIGN NOTES (houle.ai mock-up, 2026-10-29)
+  Artefact: the three arched columns of the Masset mark. They are the only decoration: services stand as three tall arches.
+  Colours: logo blue (#127ac0) as a full-bleed surface for the services; ink-navy for text; paper white; a pale blue tint for panels.
+  Type: Bricolage Grotesque (display, tight) + Public Sans (reading).
+  Layout: asymmetric hero with a photo cut in an arch; services as arches, not cards; agencies as a plain address ledger.
+  Motion: none. Photography: their own header photos only.
+-->
+<style>
+:root{
+  --blue:#127ac0; --blue-d:#0b5a92; --navy:#0f2233; --muted:#455566; --paper:#fbfcfd; --tint:#e9f2f9; --rule:#c8d6e2;
+  --gutter:clamp(16px,5vw,56px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--navy);font:400 1.0625rem/1.6 "Public Sans",system-ui,sans-serif;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--blue-d);text-underline-offset:.18em}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+.wrap{max-width:1180px;margin-inline:auto;padding-inline:var(--gutter)}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;font-weight:700;line-height:1.02;margin:0;letter-spacing:-.015em}
+p{margin:0 0 1em;max-width:62ch}
+
+.preview{padding:11px 16px;background:#0f172a;color:#f8fafc;font:400 14px/1.35 system-ui,-apple-system,"Segoe UI",sans-serif;text-align:center}
+.preview a{color:#f8fafc;text-decoration:underline;padding:14px 2px}
+
+.top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--navy)}
+.brand img{width:40px}
+.brand b{font:700 1.5rem/1 "Bricolage Grotesque",sans-serif;letter-spacing:.14em}
+.top nav{display:none}
+.top .tel{font-weight:600;color:var(--navy);text-decoration:none;white-space:nowrap}
+@media(min-width:960px){
+  .brand img{width:48px}
+  .top nav{display:flex;gap:28px}
+  .top nav a{color:var(--navy);text-decoration:none;font-weight:500;padding:8px 0;border-bottom:2px solid transparent}
+  .top nav a:hover{border-color:var(--blue)}
+}
+.btn{display:inline-flex;align-items:center;min-height:48px;padding:12px 22px;background:var(--blue);color:#fff;font-weight:600;text-decoration:none;border-radius:999px 999px 999px 4px}
+.btn:hover{background:var(--blue-d)}
+.btn.line{background:transparent;color:var(--navy);box-shadow:inset 0 0 0 2px var(--navy)}
+.btn.white{background:#fff;color:var(--navy)}
+
+.hero{display:grid;gap:30px;padding-block:18px 64px}
+.hero h1{font-size:clamp(2.4rem,10vw,3.9rem);text-wrap:balance}
+.hero .lede{font-size:1.2rem;margin:20px 0 26px;max-width:38ch}
+.hero .acts{display:flex;flex-wrap:wrap;gap:12px}
+.arch{margin:0;border-radius:999px 999px 0 0;overflow:hidden;background:var(--blue)}
+.arch img{width:100%;aspect-ratio:4/5;object-fit:cover}
+@media(min-width:960px){
+  .hero{grid-template-columns:1.15fr .85fr;gap:72px;align-items:end;padding-block:36px 90px}
+  .arch{max-width:460px;justify-self:end}
+}
+
+.s{padding-block:clamp(52px,8vw,96px)}
+.s h2{font-size:clamp(2rem,7vw,3.4rem);margin-bottom:22px}
+
+/* services = trois arches */
+.svc{background:var(--blue);color:#fff}
+.svc h2{color:#fff}
+.svc .intro{font-size:1.15rem;max-width:46ch;color:#fff}
+.arches{display:grid;gap:18px;margin-top:40px}
+.arches article{background:#fff;color:var(--navy);border-radius:999px 999px 0 0;padding:70px 26px 30px}
+.arches h3{font-size:1.9rem;margin-bottom:10px;text-align:center}
+.arches p{margin:0 auto 12px;text-align:center;max-width:30ch}
+.arches .more{display:block;text-align:center;font-size:.95rem;color:var(--muted);margin-top:14px;padding-top:14px;border-top:1px solid var(--rule)}
+@media(min-width:900px){.arches{grid-template-columns:repeat(3,1fr);gap:24px;align-items:end}.arches article{padding-top:110px}.arches article:nth-child(2){padding-top:150px}}
+.also{margin-top:28px;display:grid;gap:16px;border-top:1px solid rgba(255,255,255,.45);padding-top:24px}
+.also h3{font-size:1.4rem;color:#fff;margin-bottom:6px}
+.also p{margin:0;color:#fff}
+@media(min-width:900px){.also{grid-template-columns:1fr 1fr;gap:56px}}
+
+/* print */
+.split{display:grid;gap:34px}
+.split figure{margin:0}
+.split img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.brands{margin:18px 0 0;padding:0;list-style:none;display:flex;flex-wrap:wrap;gap:8px}
+.brands li{padding:7px 14px;background:var(--tint);font-weight:600;font-size:.95rem;border-radius:999px 999px 999px 4px}
+@media(min-width:960px){.split{grid-template-columns:1fr 1fr;gap:72px;align-items:center}.split.rev figure{order:2}}
+
+/* phases */
+.phases{margin:26px 0 0;padding:0;list-style:none;display:grid;gap:0;counter-reset:p}
+.phases li{counter-increment:p;display:grid;grid-template-columns:2.4rem 1fr;gap:12px;padding:14px 0;border-top:1px solid var(--rule)}
+.phases li::before{content:counter(p);font:700 1.6rem/1 "Bricolage Grotesque",sans-serif;color:var(--blue)}
+
+/* réseau */
+.net{background:var(--navy);color:#e8eef4}
+.net h2{color:#fff}
+.net a{color:#fff}
+.net .lead{color:#c9d6e2}
+
+/* histoire / groupe */
+.hist{background:var(--tint)}
+.hist .cols{display:grid;gap:26px}
+@media(min-width:900px){.hist .cols{grid-template-columns:1fr 1fr;gap:64px}}
+
+/* agences */
+.ledger{margin:0;padding:0;list-style:none;display:grid;gap:0}
+.ledger li{display:grid;gap:4px;padding:18px 0;border-top:2px solid var(--navy)}
+.ledger b{font:700 1.5rem/1.1 "Bricolage Grotesque",sans-serif}
+.ledger a{font-weight:600}
+@media(min-width:760px){.ledger{grid-template-columns:repeat(2,1fr);column-gap:48px}}
+@media(min-width:1000px){.ledger{grid-template-columns:repeat(4,1fr);column-gap:28px}}
+.hours{display:grid;gap:18px;margin-top:34px}
+@media(min-width:760px){.hours{grid-template-columns:repeat(3,1fr);gap:48px}}
+.hours h3{font-size:1.15rem;margin-bottom:4px}
+.hours p{margin:0}
+.bigtel{font:700 clamp(2rem,8vw,3.2rem)/1 "Bricolage Grotesque",sans-serif;color:var(--navy);text-decoration:none;display:inline-block;margin:6px 0 4px}
+
+footer{background:var(--navy);color:#c9d6e2;padding-block:34px;font-size:.95rem}
+footer a{color:#fff}
+footer p{margin:0 0 .5em;max-width:none}
+</style>
+</head>
+<body>
+<div class="preview" role="note">Aperçu de votre nouveau site, préparé par&nbsp;<a href="https://houle.ai/fr/products/chat-website/">houle.ai</a>&nbsp;·&nbsp;non&nbsp;publié</div>
+
+<header class="wrap top">
+  <a class="brand" href="#"><img src="mark.webp" width="600" height="533" alt=""><b>MASSET</b></a>
+  <nav aria-label="Navigation">
+    <a href="#services">Nos services</a>
+    <a href="#print">Impression</a>
+    <a href="#ged">GED</a>
+    <a href="#reseau">Réseau</a>
+    <a href="#groupe">Le groupe</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <a class="tel" href="tel:+41848800847">0848&nbsp;800&nbsp;847</a>
+</header>
+
+<main>
+<section class="wrap hero">
+  <div>
+    <h1>Vos documents, vos machines, votre réseau. Un seul interlocuteur.</h1>
+    <p class="lede">Entreprise familiale spécialisée dans les solutions d’impression et la gestion des systèmes d’information, depuis plus de 70&nbsp;ans, avec quatre agences en Suisse romande.</p>
+    <div class="acts">
+      <a class="btn" href="#contact">Parler à un conseiller</a>
+      <a class="btn line" href="#services">Voir nos services</a>
+    </div>
+  </div>
+  <figure class="arch">
+    <img src="print.webp" width="2000" height="1335" alt="Journal imprimé qui sort d’une rotative" fetchpriority="high">
+  </figure>
+</section>
+
+<section class="s svc" id="services">
+  <div class="wrap">
+    <h2>Trois métiers, une même exigence.</h2>
+    <p class="intro">Garantir sécurité, fiabilité et cohérence de l’ensemble de vos solutions informatiques et d’impression, et rester disponibles pour assurer la continuité de votre activité.</p>
+    <div class="arches">
+      <article id="print">
+        <h3>Print Solutions</h3>
+        <p>Imprimantes et multifonctions fiables et écologiques, pour les besoins de toute l’entreprise.</p>
+        <span class="more">Lexmark · Kyocera · RISO</span>
+      </article>
+      <article id="ged">
+        <h3>GED</h3>
+        <p>Gestion électronique des documents : indexer, classer et retrouver vos documents, en local ou dans le cloud.</p>
+        <span class="more">e-Doc Premium</span>
+      </article>
+      <article id="reseau">
+        <h3>Infrastructure &amp; réseau</h3>
+        <p>Sauvegardes, virtualisation et cloud suisse, pour que votre activité ne s’arrête pas.</p>
+        <span class="more">Masset Cloud Computing</span>
+      </article>
+    </div>
+    <div class="also">
+      <div><h3>Solutions interactives</h3><p>Écrans tactiles et tableaux interactifs pour vos réunions, vos présentations et vos salles de classe.</p></div>
+      <div><h3>Productive Printing</h3><p>Un département dédié aux professionnels de l’impression et aux centres éditique : jet d’encre de production et laser haut volume.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="s">
+  <div class="wrap split">
+    <div>
+      <h2>Imprimer mieux, pour moins cher.</h2>
+      <p>Utilisées au quotidien, les solutions d’impression peuvent vite engendrer des surcoûts financiers et environnementaux. Masset vous propose des solutions fiables et écologiques, de haute productivité.</p>
+      <p>Les produits sont choisis pour durer, avec moins d’interventions techniques et des composants à longue durée de vie. Pour les gros volumes, le département Productive Printing travaille avec trois technologies&nbsp;:</p>
+      <ul class="brands"><li>RISO, encre à froid</li><li>Kyocera, encre à chaud</li><li>Xerox, laser</li></ul>
+    </div>
+    <figure><img src="papier.webp" width="960" height="635" alt="Chemin du papier dans une presse numérique, éclairé en rouge" loading="lazy" style="max-width:460px"></figure>
+  </div>
+</section>
+
+<section class="s" style="background:var(--tint)">
+  <div class="wrap">
+    <h2>La GED, en quatre phases.</h2>
+    <p class="lead" style="max-width:52ch">Des flux de communication et de validation automatisés, pour éliminer les tâches administratives superflues et harmoniser le travail des collaborateurs.</p>
+    <ol class="phases" style="max-width:62ch">
+      <li><span>Analyse de vos besoins et de votre environnement de travail.</span></li>
+      <li><span>Préconisation de l’architecture de la solution.</span></li>
+      <li><span>Mise en place du nouveau processus documentaire.</span></li>
+      <li><span>Accompagnement de vos collaborateurs dans cette nouvelle gestion documentaire.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="s net">
+  <div class="wrap split rev">
+    <div>
+      <h2>Des sauvegardes que personne ne peut chiffrer.</h2>
+      <p class="lead">Face aux rançongiciels, Masset propose des sauvegardes immuables, non modifiables, qui peuvent s’installer dans votre infrastructure actuelle ou sur son cloud distant.</p>
+      <p class="lead">S’y ajoutent la sauvegarde à distance dans le cloud Masset, pour se protéger en cas de vol, d’incendie ou de dégât d’eau, et la virtualisation, pour plus de flexibilité sur votre matériel.</p>
+    </div>
+    <figure><img src="reseau.webp" width="1600" height="1069" alt="Tunnel de lumière composé de points lumineux, image de données en mouvement" loading="lazy"></figure>
+  </div>
+</section>
+
+<section class="s hist" id="groupe">
+  <div class="wrap">
+    <h2>Une PME locale à votre service.</h2>
+    <div class="cols">
+      <div>
+        <p>Masset est une entreprise familiale. Le groupe, engagé dès sa création en 1946 dans une démarche de développement durable, réunit deux entités&nbsp;: Masset&nbsp;SA, qui maîtrise vos flux documentaires (systèmes d’information, GED, impression, interactivité), et Maye&nbsp;SA, qui optimise vos espaces de travail en alliant esthétique et ergonomie.</p>
+        <p>Yan Bonzon, directeur général&nbsp;: «&nbsp;Dans un monde professionnel connecté où la relation homme-machine est quotidienne, avoir l’assurance que son matériel est adapté à son activité est primordial.&nbsp;»</p>
+      </div>
+      <div>
+        <p>Les techniciens sont répartis dans les différentes régions, avec un objectif&nbsp;: pouvoir vous dépanner dans la demi-journée. Ils suivent les formations des marques représentées.</p>
+        <p>Une assistance à distance est disponible par TeamViewer. La même philosophie s’applique à l’environnement&nbsp;: papier recyclé, recto-verso, collecte des consommables usagés.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="contact">
+  <div class="wrap">
+    <h2>Quatre agences, un seul numéro.</h2>
+    <a class="bigtel" href="tel:+41848800847">0848&nbsp;800&nbsp;847</a>
+    <p><a href="mailto:info@massetsa.ch">info@massetsa.ch</a></p>
+    <ul class="ledger" style="margin-top:28px">
+      <li><b>Lausanne</b><span>En Budron B7<br>1052 Le Mont-sur-Lausanne</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Masset+SA+En+Budron+B7+1052+Le+Mont-sur-Lausanne" rel="noopener">Plan d’accès</a></li>
+      <li><b>Genève</b><span>Pré-de-la-Fontaine 19<br>1242 Satigny</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Masset+SA+Pr%C3%A9-de-la-Fontaine+19+1242+Satigny" rel="noopener">Plan d’accès</a></li>
+      <li><b>Yverdon</b><span>Rue Galilée 15<br>1400 Yverdon-les-Bains</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Masset+SA+Rue+Galil%C3%A9e+15+1400+Yverdon-les-Bains" rel="noopener">Plan d’accès</a></li>
+      <li><b>Sion</b><span>Avenue de la Gare 39<br>1950 Sion</span><a href="https://www.google.com/maps/search/?api=1&amp;query=Masset+SA+Avenue+de+la+Gare+39+1950+Sion" rel="noopener">Plan d’accès</a></li>
+    </ul>
+    <div class="hours">
+      <div><h3>Bureaux</h3><p>7h30–12h00<br>13h30–17h00</p></div>
+      <div><h3>Standard téléphonique</h3><p>9h00–12h00<br>14h00–16h30</p></div>
+      <div><h3>Assistance à distance</h3><p>Téléchargement de TeamViewer disponible sur le site de Masset.</p></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><strong style="color:#fff">Masset SA</strong> · En Budron B7, 1052 Le Mont-sur-Lausanne · <a href="tel:+41848800847">0848&nbsp;800&nbsp;847</a> · <a href="mailto:info@massetsa.ch">info@massetsa.ch</a></p>
+  </div>
+</footer>
+</body>
+</html>
