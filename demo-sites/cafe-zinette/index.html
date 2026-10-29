@@ -107,7 +107,7 @@ p{margin:0 0 1em;max-width:var(--measure)}
 .hero .hero-photo{display:none}
 .hero img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:62% 50%}
 .hero-text{padding:2rem 1.25rem 2.75rem}
-.hero .mark{width:7.5rem;height:9.5rem;color:var(--ink);margin:0 0 1.25rem -.4rem}
+.hero .mark{width:6rem;height:7.6rem;color:var(--ink);margin:0 0 1.25rem -.4rem}
 .hero h1{font-size:var(--fs-3);max-width:13ch;letter-spacing:-.01em}
 .hero .lede{font-size:var(--fs-1);margin:1.1rem 0 1.75rem;color:var(--muted)}
 .actions{display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;align-items:center}
@@ -119,7 +119,7 @@ p{margin:0 0 1em;max-width:var(--measure)}
   .hero .hero-photo{display:block;order:2;padding:2.5rem max(2.5rem,calc((100vw - 74rem)/2 + 2.5rem)) 2.5rem 0}
   .hero .hero-photo{position:relative}
   .hero .hero-photo::before{content:"";position:absolute;inset:2.5rem max(2.5rem,calc((100vw - 74rem)/2 + 2.5rem)) 2.5rem 0;transform:translate(1.1rem,1.1rem);background:var(--accent);border-radius:999px 999px 0 0}
-  .hero .hero-photo img{position:relative;aspect-ratio:4/5;height:auto;border-radius:999px 999px 0 0}
+  .hero .hero-photo img{position:relative;aspect-ratio:4/3;height:auto;border-radius:999px 999px 0 0}
   .hero figure{order:2}
   .hero img{height:100%;aspect-ratio:auto}
   .hero-text{padding:3.5rem 3rem 3.5rem max(2.5rem,calc((100vw - 74rem)/2 + 2.5rem));align-self:center}
@@ -128,7 +128,8 @@ p{margin:0 0 1em;max-width:var(--measure)}
 
 /* La carte, sur ardoise */
 .carte{background:var(--slate);color:var(--chalk)}
-.carte .board{height:9rem;width:100%;object-fit:cover;object-position:0 30%}
+.carte .board{height:9rem;width:min(100%,38rem);margin-left:max(0px,calc((100% - 74rem)/2 + 2.5rem));object-fit:cover;object-position:0 30%}
+@media (min-width:56rem){.carte .board{margin-left:max(2.5rem,calc((100% - 74rem)/2 + 2.5rem))}}
 .carte .wrap{padding-top:3rem;padding-bottom:3.5rem}
 .carte h2{font-size:var(--fs-3)}
 .carte .intro{color:var(--chalk-muted);font-size:var(--fs-1);margin:1rem 0 2.5rem}
@@ -336,7 +337,7 @@ p{margin:0 0 1em;max-width:var(--measure)}
   <section class="kitchen" aria-label="En cuisine">
     <div class="wrap">
       <figure>
-        <img src="img/assiettes.webp" width="1000" height="666" alt="Assiettes dressées sur le passe" loading="lazy">
+        <img src="img/assiettes.webp" width="1280" height="853" alt="Assiettes dressées sur le passe" loading="lazy">
         <figcaption>Sur le passe.</figcaption>
       </figure>
       <figure>

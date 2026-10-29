@@ -69,7 +69,7 @@ h1{font:800 clamp(2.3rem,9vw,4.6rem)/.98 var(--disp);letter-spacing:-.025em;max-
 .intro .wrap{display:grid;gap:32px}
 h2{font:800 clamp(1.9rem,6vw,3rem)/1.02 var(--disp);letter-spacing:-.02em;margin-bottom:18px}
 .intro p+p{margin-top:14px}
-.intro figure img{width:100%;max-height:560px;object-fit:cover;object-position:center 30%}
+.intro figure img{width:100%;max-width:400px;max-height:560px;object-fit:cover;object-position:center 30%}
 .note{margin-top:22px;padding:14px 16px;background:var(--corail);border-radius:3px;font-weight:500}
 .chambres{background:var(--nuit);color:var(--clair);padding:60px 0}
 .chambres h2{color:var(--clair)}
@@ -112,7 +112,7 @@ h2{font:800 clamp(1.9rem,6vw,3rem)/1.02 var(--disp);letter-spacing:-.02em;margin
 .contact address{font-style:normal;font-size:20px;line-height:1.5}
 .contact a:not(.btn){color:#fff;text-underline-offset:3px}
 .gros-tel{display:block;font:800 clamp(2rem,9vw,3.4rem)/1 var(--disp);letter-spacing:-.02em;text-decoration:none;margin:10px 0 4px}
-.contact figure img{width:100%;max-width:420px;aspect-ratio:3/4;object-fit:cover}
+.contact figure img{width:100%;max-width:340px;aspect-ratio:3/4;object-fit:cover}
 .pied{margin-top:36px;padding-top:18px;border-top:1px solid #3d4a59;font-size:14px;color:#aab4be}
 .pied img{width:56px;margin-bottom:10px}
 @media(min-width:760px){
@@ -120,11 +120,12 @@ h2{font:800 clamp(1.9rem,6vw,3rem)/1.02 var(--disp);letter-spacing:-.02em;margin
   .top nav a.lien{display:inline-block}
   .hero{display:grid;grid-template-columns:1fr 1.15fr;align-items:stretch}
   .hero figure{order:2}
-  .hero figure img{height:100%;aspect-ratio:auto;min-height:560px}
+  .hero figure{align-self:center;background:var(--nuit)}
+  .hero figure img{height:400px;aspect-ratio:auto;min-height:0;object-position:40% center}
   .hero .wrap{order:1;display:flex;flex-direction:column;justify-content:center;padding:60px 40px 60px max(20px,calc((100vw - 1180px)/2 + 20px))}
   .intro .wrap{grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
   .plaques{grid-template-columns:1fr 1fr}
-  .chambres .wrap>div.grille{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+  .chambres .wrap>div.grille{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:start}
   .chambres .plaques{grid-template-columns:1fr;margin-top:0}
   .petitdej .wrap{grid-template-columns:1fr 1fr;gap:56px}
   .petitdej .wrap.bandeau{grid-template-columns:1fr 1fr 1fr;gap:8px}
@@ -159,7 +160,7 @@ h2{font:800 clamp(1.9rem,6vw,3rem)/1.02 var(--disp);letter-spacing:-.02em;margin
 
 <main>
 <section class="hero">
-  <figure><img src="img/accueil.webp" alt="La réception de The Pax Hôtel, mur corail et aquarium" width="1600" height="667"></figure>
+  <figure><img src="img/accueil.webp" alt="La réception de The Pax Hôtel, mur corail et aquarium" width="1920" height="800"></figure>
   <div class="wrap">
     <h1>Un hôtel de famille en haut des Eaux-Vives.</h1>
     <p>34 chambres, un petit-déjeuner buffet et un patio, à deux pas du Jet d'Eau.</p>
@@ -236,9 +237,9 @@ h2{font:800 clamp(1.9rem,6vw,3rem)/1.02 var(--disp);letter-spacing:-.02em;margin
     </div>
   </div>
   <div class="wrap bandeau">
-    <img src="img/petitdej-salle.webp" alt="Une des salles du petit-déjeuner" width="1600" height="500" loading="lazy">
-    <img src="img/buffet.webp" alt="Le buffet" width="1600" height="500" loading="lazy">
-    <img src="img/patio.webp" alt="Le patio extérieur" width="1600" height="500" loading="lazy">
+    <img src="img/petitdej-salle.webp" alt="Une des salles du petit-déjeuner" width="1920" height="600" loading="lazy">
+    <img src="img/buffet.webp" alt="Le buffet" width="1920" height="600" loading="lazy">
+    <img src="img/patio.webp" alt="Le patio extérieur" width="1920" height="600" loading="lazy">
   </div>
 </section>
 

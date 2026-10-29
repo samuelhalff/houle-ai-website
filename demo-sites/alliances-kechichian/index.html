@@ -10,7 +10,7 @@
 <meta name="theme-color" content="#6e1620">
 <meta property="og:title" content="Alliances Kechichian – bijouterie à Genève">
 <meta property="og:description" content="Plus de 350 modèles d'alliances, rue de Carouge 71. Conseil sur mesure. 022 320 66 86.">
-<meta property="og:image" content="img/alliances.webp">
+<meta property="og:image" content="img/facade-small.webp">
 <meta property="og:locale" content="fr_CH">
 <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -72,13 +72,13 @@ a{color:inherit}
 .btn{display:inline-block;background:var(--brass);color:#2a1a02;font-weight:600;padding:.85rem 1.4rem;text-decoration:none;border-radius:2px}
 .btn.ghost{background:none;color:var(--on-wine);box-shadow:inset 0 0 0 1.5px var(--on-wine-muted)}
 .hero figure{margin:0 calc(var(--pad)*-1);position:relative}
-.hero figure img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:left 40%}
+.hero figure img{width:100%;max-width:600px;height:auto;aspect-ratio:16/9;object-fit:cover;object-position:left 40%;margin-left:var(--pad)}
 .hero figcaption{position:absolute;left:var(--pad);bottom:.7rem;background:var(--wine);color:var(--on-wine);font-size:.85rem;padding:.25rem .6rem}
 @media(min-width:900px){
   .hero{display:grid;grid-template-columns:1.1fr 1fr;column-gap:3rem;align-items:end;padding-top:3.5rem}
   .hero .txt{padding-bottom:3rem}
   .hero figure{margin:0 calc(var(--pad)*-1) 0 0}
-  .hero figure img{aspect-ratio:3/2;object-position:30% 50%;height:auto}
+  .hero figure img{aspect-ratio:16/9;object-position:30% 50%;height:auto;margin:0 0 0 auto}
 }
 
 /* sections */
@@ -96,7 +96,7 @@ h2{font-family:'Bodoni Moda',serif;font-weight:500;font-size:clamp(1.9rem,6vw,3.
 .conseil .in{display:grid;gap:2rem}
 .conseil h2{color:#fff}
 .conseil p{max-width:56ch;margin:0 0 1rem}
-.conseil img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border:6px solid #fdf1f0}
+.conseil img{width:100%;max-width:360px;height:auto;aspect-ratio:3/2;object-fit:cover;border:6px solid #fdf1f0}
 .conseil .since{font-family:'Bodoni Moda',serif;font-style:italic;font-size:1.5rem;color:#f6d9a0}
 @media(min-width:900px){.conseil .in{grid-template-columns:1.2fr 1fr;gap:4rem;align-items:center}}
 
@@ -148,7 +148,7 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--brass);outline-offset
     </div>
   </div>
   <figure>
-    <img src="img/alliances.webp" width="725" height="500" alt="Deux alliances serties de diamants">
+    <img src="img/facade-small.webp" width="1510" height="678" alt="La façade de la bijouterie Alliances Kechichian, avec ses stores rouges, rue de Carouge">
     
   </figure>
 </div>
@@ -176,7 +176,7 @@ a:focus-visible,.btn:focus-visible{outline:3px solid var(--brass);outline-offset
       <p class="since">Depuis 1930, une affaire de famille au cœur de Genève.</p>
       <p>Un savoir-faire transmis de génération en génération.</p>
     </div>
-    <img src="img/facade-small.webp" width="1510" height="678" alt="La façade de la bijouterie Alliances Kechichian, avec ses stores rouges, rue de Carouge" loading="lazy">
+    <img src="img/alliances.webp" width="725" height="500" alt="Deux alliances serties de diamants" loading="lazy">
   </div>
 </section>
 

@@ -92,12 +92,12 @@ p{margin:0 0 1em;max-width:var(--measure)}
 .btn{display:inline-flex;align-items:center;min-height:48px;padding:.7rem 1.3rem;background:var(--note);color:#2b1700;font-weight:700;text-decoration:none;border-radius:999px}
 .btn:hover{background:#fff}
 .hero .textlink{color:var(--on-plum);display:inline-flex;align-items:center;min-height:44px;font-weight:500;text-underline-offset:.25em;text-decoration-thickness:2px;text-decoration-color:var(--note)}
-.hero figure{margin:0 -1.25rem}
-.hero figure img{width:100%;aspect-ratio:7/4;object-fit:cover;object-position:60% 50%}
+.hero figure{margin:0}
+.hero figure img{width:100%;max-width:340px;aspect-ratio:7/4;object-fit:cover;object-position:60% 50%;border-radius:999px 999px 0 0}
 @media(min-width:56rem){
   .hero .wrap{grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:3rem;align-items:end;padding-top:4.5rem}
   .hero figure{margin:0;align-self:end}
-  .hero figure img{aspect-ratio:3/2;object-position:75% 50%;border-radius:999px 999px 0 0}
+  .hero figure img{aspect-ratio:7/4;object-position:75% 50%;margin-left:auto}
 }
 
 /* Les trois temps */

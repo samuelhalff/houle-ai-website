@@ -70,14 +70,14 @@ h2{font-weight:500;font-size:clamp(1.6rem,5vw,2.3rem);line-height:1.12;margin:0 
 .dom{background:var(--dusk);color:var(--on-dusk);padding:2.6rem 1rem}
 .dom h2{color:#fff}
 .dom .cols{display:grid;gap:1.6rem}
-.dom img{width:100%;border-radius:2px}
+.dom img{width:100%;max-width:490px;border-radius:2px}
 .dom p{margin:.8rem 0 0;max-width:52ch}
 .dom q{display:block;margin-top:1.2rem;font:italic 400 1.35rem/1.4 "Newsreader",Georgia,serif;quotes:none;color:#fff}
 .dom .facts{display:flex;gap:2rem;margin:1.4rem 0 0}
 .dom .facts div{font-size:.95rem}
 .dom .facts strong{display:block;font-size:2.4rem;font-weight:300;line-height:1;color:var(--lime)}
 .expo{display:grid;gap:1.2rem;padding:2.6rem 1rem;background:var(--paper)}
-.expo img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.expo img{width:100%;max-width:390px;aspect-ratio:4/3;object-fit:cover}
 .expo p{margin:.6rem 0 0;max-width:46ch}
 .visit{padding:2.6rem 1rem 3rem}
 .visit .box{display:grid;gap:1.6rem}
@@ -90,7 +90,7 @@ h2{font-weight:500;font-size:clamp(1.6rem,5vw,2.3rem);line-height:1.12;margin:0 
 footer{padding:1.4rem 1rem 2rem;background:var(--paper);font-size:.9rem;color:var(--muted)}
 @media (min-width:860px){
  header{padding:1rem 2.5rem}header img{width:140px}
- .hero{display:grid;grid-template-columns:5fr 4fr;min-height:620px}
+ .hero{display:grid;grid-template-columns:5fr 4fr;min-height:500px}
  .hero img{height:100%;aspect-ratio:auto;grid-column:1}
  .hero .t{grid-column:2;grid-row:1;display:flex;flex-direction:column;justify-content:center;padding:3rem 3rem}
  .cuvees{padding-top:3.5rem}
@@ -116,7 +116,7 @@ footer{padding:1.4rem 1rem 2rem;background:var(--paper);font-size:.9rem;color:va
 </header>
 <main>
 <section class="hero">
-  <img src="img/maison.webp" alt="La maison du domaine au milieu des vignes, à la lumière du soir" width="1500" height="1000" fetchpriority="high">
+  <img src="img/maison.webp" alt="La maison du domaine au milieu des vignes, à la lumière du soir" width="1600" height="1067" fetchpriority="high">
   <div class="t">
     <h1><b>Satigny · Genève</b>De la nature au palais</h1>
     <p>Des vins élevés et récoltés à la propriété, pour le plaisir d’offrir.</p>
@@ -156,7 +156,7 @@ footer{padding:1.4rem 1rem 2rem;background:var(--paper);font-size:.9rem;color:va
 
 <section class="dom" id="domaine">
   <div class="cols">
-    <img src="img/raisin.webp" alt="Grappe de raisin bleu sur le cep" width="900" height="885" loading="lazy">
+    <img src="img/raisin.webp" alt="Grappe de raisin bleu sur le cep" width="1000" height="983" loading="lazy">
     <div>
       <h2>Un domaine, un chai voûté</h2>
       <p>Les Gondettes, ce sont douze hectares de vigne partagés entre sept cépages, et un chai dont la cave aux larges voûtes a un cachet architectural unique.</p>

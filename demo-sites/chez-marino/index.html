@@ -66,7 +66,7 @@ h1,h2,h3{font-family:var(--display);font-weight:800;line-height:.92;letter-spaci
 .top .tel span{color:var(--muted);font-family:var(--text);font-weight:400;font-size:.95rem;margin-right:.4em}
 
 /* Hero */
-.hero{position:relative;min-height:min(88svh,820px);display:flex;align-items:flex-end;color:#f7f1e6;background:#1b1510;overflow:hidden}
+.hero{position:relative;min-height:min(88svh,590px);max-height:600px;display:flex;align-items:flex-end;color:#f7f1e6;background:#1b1510;overflow:hidden}
 .hero picture,.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:38% 45%}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(18,13,9,.9) 0%,rgba(18,13,9,.55) 38%,rgba(18,13,9,0) 70%)}
 .hero .wrap{position:relative;z-index:1;width:100%;padding-block:0 clamp(28px,6vw,64px)}
@@ -75,6 +75,12 @@ h1,h2,h3{font-family:var(--display);font-weight:800;line-height:.92;letter-spaci
 .actions{display:flex;flex-wrap:wrap;gap:12px 22px;align-items:center}
 .btn{display:inline-block;background:var(--red);color:var(--on-red);font-family:var(--display);font-weight:700;font-size:1.35rem;letter-spacing:.02em;padding:.55em .9em .5em;text-decoration:none;border-radius:3px}
 .btn:hover{filter:brightness(1.08)}
+@media (min-width:900px){
+  .hero{min-height:600px;height:600px;background:#1b1510}
+  .hero picture,.hero img{inset:0 0 0 auto;width:min(790px,64%);height:100%}
+  .hero picture{-webkit-mask-image:linear-gradient(to right,transparent 0,#000 22%);mask-image:linear-gradient(to right,transparent 0,#000 22%)}
+  .hero img{width:100%}
+}
 .hero .more{color:#f7f1e6;font-size:1.1rem;display:inline-flex;align-items:center;min-height:44px}
 
 /* Story */
@@ -100,8 +106,8 @@ h1,h2,h3{font-family:var(--display);font-weight:800;line-height:.92;letter-spaci
 .strip-head p{margin:0;max-width:44ch;color:var(--muted)}
 .strip{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--gutter) 14px;margin:0;list-style:none;scrollbar-width:thin}
 .strip li{flex:0 0 auto;scroll-snap-align:start}
-.strip img{width:200px;height:222px;object-fit:cover;border-radius:2px}
-.strip li.oven img{width:200px}
+.strip img{width:120px;height:133px;object-fit:cover;border-radius:2px}
+.strip li.oven img{width:120px}
 
 /* Carte */
 .carte{padding-block:clamp(64px,10vw,120px) 40px}
@@ -299,15 +305,15 @@ footer ul a,.legend a,.maps,.top .tel{display:inline-flex;align-items:center;min
     <p>Quelques assiettes de la maison. Le pain aussi sort du four : il est élaboré par nos pizzaioli.</p>
   </div>
   <ul class="strip">
-    <li><img src="plat-1.webp" width="242" height="270" loading="lazy" alt="Pizza aux tomates fraîches, roquette et mozzarella"></li>
-    <li><img src="plat-3.webp" width="242" height="270" loading="lazy" alt="Pizza au salami"></li>
-    <li class="oven"><img src="plat-4.webp" width="242" height="270" loading="lazy" alt="Pains en train de cuire dans le four"></li>
-    <li><img src="plat-7.webp" width="242" height="270" loading="lazy" alt="Pizza au jambon cru"></li>
-    <li><img src="plat-5.webp" width="242" height="270" loading="lazy" alt="Pizza aux fruits de mer et basilic"></li>
-    <li><img src="plat-6.webp" width="242" height="270" loading="lazy" alt="Ravioli en sauce sur assiette noire"></li>
-    <li><img src="plat-8.webp" width="242" height="270" loading="lazy" alt="Pizza aux aubergines grillées et jambon"></li>
-    <li><img src="plat-2.webp" width="242" height="270" loading="lazy" alt="Pizza à la roquette et mozzarella"></li>
-    <li><img src="plat-9.webp" width="242" height="270" loading="lazy" alt="Pizza au salami et mozzarella"></li>
+    <li><img src="plat-1.webp" width="120" height="133" loading="lazy" alt="Pizza aux tomates fraîches, roquette et mozzarella"></li>
+    <li><img src="plat-3.webp" width="120" height="133" loading="lazy" alt="Pizza au salami"></li>
+    <li class="oven"><img src="plat-4.webp" width="120" height="133" loading="lazy" alt="Pains en train de cuire dans le four"></li>
+    <li><img src="plat-7.webp" width="120" height="133" loading="lazy" alt="Pizza au jambon cru"></li>
+    <li><img src="plat-5.webp" width="120" height="133" loading="lazy" alt="Pizza aux fruits de mer et basilic"></li>
+    <li><img src="plat-6.webp" width="120" height="133" loading="lazy" alt="Ravioli en sauce sur assiette noire"></li>
+    <li><img src="plat-8.webp" width="120" height="133" loading="lazy" alt="Pizza aux aubergines grillées et jambon"></li>
+    <li><img src="plat-2.webp" width="120" height="133" loading="lazy" alt="Pizza à la roquette et mozzarella"></li>
+    <li><img src="plat-9.webp" width="120" height="133" loading="lazy" alt="Pizza au salami et mozzarella"></li>
   </ul>
 </section>
 

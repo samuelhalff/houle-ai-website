@@ -78,7 +78,7 @@ p{margin:0 0 1em;max-width:var(--measure)}
 
 .hero figure{margin:0}
 .hero img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:50% 40%}
-@media(min-width:56rem){.hero img{aspect-ratio:21/9;object-position:50% 45%}}
+@media(min-width:56rem){.hero figure{max-width:46rem;margin-left:auto;margin-right:max(1.25rem,calc((100vw - 80rem)/2 + 1.25rem))}.hero img{aspect-ratio:16/10;object-position:50% 45%}}
 .hero .cap{display:flex;justify-content:space-between;gap:1rem;padding-top:.5rem;font-size:.9rem;color:var(--muted)}
 .hero .wrap>.txt{display:grid;gap:1.4rem;padding:2.5rem 0 3.5rem}
 .hero h1{font-size:clamp(3.4rem,15vw,9rem);font-weight:700}
@@ -106,8 +106,8 @@ p{margin:0 0 1em;max-width:var(--measure)}
   .mosaic .d{grid-column:7 / span 6;margin-top:3rem}
   .mosaic .e{grid-column:1 / span 5}
   .mosaic .f{grid-column:7 / span 6;margin-top:5rem}
-  .mosaic .g{grid-column:1 / span 12}
-  .mosaic .g img{aspect-ratio:21/9}
+  .mosaic .g{grid-column:1 / span 7}
+  .mosaic .g img{aspect-ratio:3/2}
 }
 
 /* Croquis / perspective */
@@ -116,6 +116,7 @@ p{margin:0 0 1em;max-width:var(--measure)}
 .paire .two{display:grid;gap:1.2rem}
 .paire figure{margin:0}
 .paire img{width:100%;aspect-ratio:4/3;object-fit:cover;background:#fff}
+.paire .row+.row img{aspect-ratio:16/10}
 .paire figcaption{padding-top:.5rem;font-size:.95rem}
 .paire .code{font-weight:700}
 @media(min-width:56rem){.paire .two{grid-template-columns:1fr 1fr;gap:1.5rem}.paire .row+.row{margin-top:2.5rem}}
@@ -183,7 +184,7 @@ p{margin:0 0 1em;max-width:var(--measure)}
 <main>
   <section class="hero">
     <figure>
-      <img src="img/bov4.webp" width="1400" height="1120" alt="Perspective d’une villa contemporaine en bois et verre avec piscine à débordement, dans un jardin en terrasses" fetchpriority="high">
+      <img src="img/bov4.webp" width="1500" height="1200" alt="Perspective d’une villa contemporaine en bois et verre avec piscine à débordement, dans un jardin en terrasses" fetchpriority="high">
     </figure>
     <div class="wrap">
       <div class="cap"><span>2024_BOV4</span><span>habitat individuel</span></div>
@@ -210,7 +211,7 @@ p{margin:0 0 1em;max-width:var(--measure)}
         <figure class="d"><img src="img/lomb15.webp" width="1400" height="1120" alt="Villa aux lignes horizontales et piscine d’eau claire" loading="lazy"><figcaption><span class="code">2025_LOMB15</span><span class="cat">habitat individuel</span></figcaption></figure>
         <figure class="e"><img src="img/meg12.webp" width="1400" height="1018" alt="Immeuble d’habitation blanc et bois, perspective dans un parc" loading="lazy"><figcaption><span class="code">2026_MEG12</span><span class="cat">habitat collectif</span></figcaption></figure>
         <figure class="f"><img src="img/rive-belle.webp" width="1400" height="933" alt="Maison de maître néoclassique entourée d’arbres" loading="lazy"><figcaption><span class="code">2026 villa RIVE-BELLE</span><span class="cat">lieu public</span></figcaption></figure>
-        <figure class="g"><img src="img/bois4.webp" width="1400" height="891" alt="Villa contemporaine face à son bassin, perspective à l’aquarelle" loading="lazy"><figcaption><span class="code">2026_BOIS4</span><span class="cat">habitat individuel</span></figcaption></figure>
+        <figure class="g"><img src="img/bois4.webp" width="1500" height="955" alt="Villa contemporaine face à son bassin, perspective à l’aquarelle" loading="lazy"><figcaption><span class="code">2026_BOIS4</span><span class="cat">habitat individuel</span></figcaption></figure>
       </div>
     </div>
   </section>
@@ -223,7 +224,7 @@ p{margin:0 0 1em;max-width:var(--measure)}
         <figure><img src="img/s13-rendu.webp" width="1400" height="1120" alt="Perspective de la même villa, avec piscine" loading="lazy"><figcaption><span class="code">2024_SC13</span> · perspective</figcaption></figure>
       </div>
       <div class="row">
-        <figure><img src="img/cologny-croquis.webp" width="1400" height="706" alt="Croquis d’une villa à Cologny" loading="lazy"><figcaption><span class="code">2020 Cologny G</span> · croquis</figcaption></figure>
+        <figure><img src="img/cologny-croquis.webp" width="1500" height="756" alt="Croquis d’une villa à Cologny" loading="lazy"><figcaption><span class="code">2020 Cologny G</span> · croquis</figcaption></figure>
         <figure><img src="img/cologny.webp" width="1400" height="1050" alt="Perspective de la villa de Cologny, au bord de l’eau" loading="lazy"><figcaption><span class="code">2020 Cologny G</span> · perspective</figcaption></figure>
       </div>
     </div>

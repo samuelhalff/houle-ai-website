@@ -104,11 +104,12 @@ p{margin:0 0 1em;max-width:62ch}
 .row{display:grid;gap:20px;padding-block:34px;border-top:2px solid var(--rule)}
 .row .tag{white-space:nowrap;font-family:var(--display);font-size:clamp(2.4rem,9vw,4rem);line-height:.95;color:var(--pink);font-weight:500}
 .row .tag span{display:block;font:700 .95rem/1.3 var(--text);color:var(--muted);margin-top:8px}
-.row .pic{border-radius:90px 90px 14px 14px;overflow:hidden;aspect-ratio:4/3;max-width:420px}
+.row .pic{border-radius:90px 90px 14px 14px;overflow:hidden;aspect-ratio:4/3;max-width:300px}
 .row .pic img{width:100%;height:100%;object-fit:cover}
 @media (min-width:900px){
   .row{grid-template-columns:260px 1fr 340px;gap:56px;align-items:start;padding-block:48px}
   .row.flip .pic{grid-column:3}
+  .row .pic{justify-self:end}
 }
 
 /* day */
@@ -183,7 +184,7 @@ footer a{color:var(--muted)}
       <a class="btn alt" href="mailto:info@montessori-rive-gauche.ch">Nous écrire</a>
     </div>
   </div>
-  <div class="arch"><img src="img/maison.webp" width="1400" height="787" alt="La maison jaune de l’école et son jardin fleuri" fetchpriority="high"></div>
+  <div class="arch"><img src="img/maison.webp" width="2100" height="1181" alt="La maison jaune de l’école et son jardin fleuri" fetchpriority="high"></div>
 </section>
 
 <section class="park" id="parc">
@@ -200,8 +201,8 @@ footer a{color:var(--muted)}
     </div>
     <div class="pics">
       <div class="leafimg wide"><img src="img/balancoires.webp" width="1100" height="619" alt="Balançoires sous les bambous, bac à sable et chaises longues" loading="lazy"></div>
-      <div class="leafimg b sq"><img src="img/bac-a-sable.webp" width="900" height="506" alt="Le bac à sable et les jardinières" loading="lazy"></div>
-      <div class="leafimg sq"><img src="img/terrasse.webp" width="900" height="506" alt="Table et chaises de jardin sous les arbres" loading="lazy"></div>
+      <div class="leafimg b sq"><img src="img/bac-a-sable.webp" width="1100" height="619" alt="Le bac à sable et les jardinières" loading="lazy"></div>
+      <div class="leafimg sq"><img src="img/terrasse.webp" width="1100" height="619" alt="Table et chaises de jardin sous les arbres" loading="lazy"></div>
     </div>
   </div>
 </section>
