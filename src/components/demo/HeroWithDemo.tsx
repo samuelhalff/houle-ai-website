@@ -5,7 +5,7 @@ export default function HeroWithDemo({ hero, demo }: { hero: ReactNode; demo: Re
   return (
     <div className="mx-auto max-w-[1200px] px-5 sm:px-8 lg:grid lg:grid-cols-2 lg:items-center lg:gap-8">
       {hero}
-      <div className="pb-14 lg:pb-0">{demo}</div>
+      <div className="pb-14 lg:py-12">{demo}</div>
     </div>
   );
 }

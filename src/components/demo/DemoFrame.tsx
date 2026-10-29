@@ -111,7 +111,7 @@ export default function DemoFrame({ labels: l, windowBody, panelBody, panelVaria
         className={`relative -mt-10 ml-auto mr-2 w-[86%] max-w-[300px] md:absolute md:bottom-0 md:right-0 md:mr-0 md:mt-0 md:w-[290px] ${PANEL[panelVariant]}`}
       >
         {panelVariant === "phone" && <div className="mx-auto mb-2 h-1 w-10 rounded-full bg-foreground/20" />}
-        <div className={`flex flex-col gap-2 ${panelVariant === "phone" ? "min-h-[290px] justify-end" : "min-h-[240px] justify-start"}`}>{panelBody(clock)}</div>
+        <div className={`flex flex-col gap-2 ${panelVariant === "phone" ? "min-h-[290px] justify-end" : "justify-start"}`}>{panelBody(clock)}</div>
       </div>
     </div>
   );
