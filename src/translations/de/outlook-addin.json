@@ -71,13 +71,13 @@
         "Contact": "Loslegen"
     },
     "Demo": {
-        "Label": "Illustration: Eine Kundin fragt per E-Mail nach einem Liefertermin; das Add-in entwirft eine Antwort, die in die Nachricht eingefügt wird.",
+        "Label": "Illustration: Eine Kundin fragt per E-Mail nach dem Liefertermin; Sie geben den Inhalt in einem Satz vor, das Add-in schreibt die vollständige Antwort in die Nachricht.",
         "MailSubject": "Liefertermin für unsere Bestellung",
         "MailBody": "Guten Tag, könnten Sie uns bitte den Liefertermin für unsere Bestellung bestätigen? Danke, Claire",
         "PaneTitle": "Assistent",
         "Action": "Antwort entwerfen",
         "Draft": "Guten Tag Claire, vielen Dank für Ihre Nachricht. Ich kläre den Termin mit der Werkstatt und bestätige ihn Ihnen morgen. Freundliche Grüsse, Marc",
-        "Insert": "In Antwort einfügen",
+        "Prompt": "Sag ihr, ich kläre es mit der Werkstatt, Antwort morgen.",
         "ReplyTitle": "Antwort",
         "Pause": "Animation anhalten",
         "Play": "Animation abspielen",

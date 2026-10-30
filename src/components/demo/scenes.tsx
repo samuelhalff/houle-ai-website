@@ -30,20 +30,19 @@ export function OutlookDemo({ labels: l }: L) {
           <p className="text-sm font-semibold text-foreground">{l.MailSubject}</p>
           <p className="text-xs text-muted-foreground">Claire Berger · Atelier Morel</p>
           <p className="mt-2 text-sm leading-6 text-foreground/80">{l.MailBody}</p>
-          <div className={`mt-4 min-h-[8.5rem] rounded-lg border p-3 text-sm ${hl(flash(7400, 9000))}`}>
+          <div className={`mt-4 min-h-[8.5rem] rounded-lg border p-3 text-sm ${hl(flash(4400, 9200))}`}>
             <p className="text-[10px] uppercase tracking-wider text-muted-foreground">{l.ReplyTitle}</p>
-            <p className={`mt-1 leading-6 text-foreground ${on(now >= 7400)}`}>{l.Draft}</p>
+            <p className="mt-1 leading-6 text-foreground">{now >= 4400 && <Typed text={l.Draft} now={now} start={4400} ms={35} />}</p>
           </div>
         </>
       )}
       panelBody={({ now }) => (
         <>
           <Title>{l.PaneTitle}</Title>
-          <Chip active={now >= 800 && now < 2000}>{l.Action}</Chip>
-          <p className="min-h-[9rem] rounded-lg bg-muted p-3 text-xs leading-5 text-foreground">
-            {now >= 1800 && <Typed text={l.Draft} now={now} start={1800} ms={35} />}
+          <p className="min-h-[4.5rem] rounded-lg bg-muted p-3 text-xs leading-5 text-foreground">
+            {now >= 800 && <Typed text={l.Prompt} now={now} start={800} ms={45} />}
           </p>
-          <Chip active={now >= 7000 && now < 8200}>{l.Insert}</Chip>
+          <Chip active={now >= 3600 && now < 4800}>{l.Action}</Chip>
         </>
       )}
     />

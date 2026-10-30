@@ -71,13 +71,13 @@
         "Contact": "Get Started"
     },
     "Demo": {
-        "Label": "Illustration: an email from a client asks for a delivery date; the add-in drafts a reply, and the draft is inserted into the reply box.",
+        "Label": "Illustration: a customer asks for a delivery date by email; you give the gist in one sentence and the add-in writes the full reply in the message.",
         "MailSubject": "Delivery date for our order",
         "MailBody": "Hello, could you confirm when our order will be delivered? Thank you, Claire",
         "PaneTitle": "Assistant",
         "Action": "Draft a reply",
         "Draft": "Hello Claire, thank you for your message. I am checking the date with the workshop and will confirm it by tomorrow. Best regards, Marc",
-        "Insert": "Insert in reply",
+        "Prompt": "Tell her I'm checking with the workshop, answer tomorrow.",
         "ReplyTitle": "Reply",
         "Pause": "Pause animation",
         "Play": "Play animation",

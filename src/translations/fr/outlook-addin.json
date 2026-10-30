@@ -71,13 +71,13 @@
         "Contact": "Commencer"
     },
     "Demo": {
-        "Label": "Illustration : un client demande une date de livraison par e-mail ; le complément rédige une réponse, qui est insérée dans le message.",
+        "Label": "Illustration : un client demande une date de livraison par e-mail ; vous donnez l'idée en une phrase, le complément rédige la réponse complète dans le message.",
         "MailSubject": "Date de livraison de notre commande",
         "MailBody": "Bonjour, pourriez-vous me confirmer la date de livraison de notre commande ? Merci, Claire",
         "PaneTitle": "Assistant",
         "Action": "Rédiger une réponse",
         "Draft": "Bonjour Claire, merci pour votre message. Je vérifie la date avec l'atelier et je vous la confirme demain. Cordialement, Marc",
-        "Insert": "Insérer dans la réponse",
+        "Prompt": "Dis-lui que je vérifie avec l'atelier, réponse demain.",
         "ReplyTitle": "Réponse",
         "Pause": "Mettre l'animation en pause",
         "Play": "Lancer l'animation",

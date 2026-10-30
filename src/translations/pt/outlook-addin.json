@@ -71,13 +71,13 @@
         "Contact": "Começar"
     },
     "Demo": {
-        "Label": "Ilustração: uma cliente pede por e-mail uma data de entrega; o add-in redige uma resposta, que é inserida na mensagem.",
+        "Label": "Ilustração: uma cliente pede uma data de entrega por e-mail; você dá a ideia em uma frase e o suplemento redige a resposta completa na mensagem.",
         "MailSubject": "Data de entrega do nosso pedido",
         "MailBody": "Olá, vocês podem confirmar a data de entrega do nosso pedido? Obrigada, Claire",
         "PaneTitle": "Assistente",
         "Action": "Redigir uma resposta",
         "Draft": "Olá Claire, obrigado pela sua mensagem. Estou confirmando a data com a oficina e retorno amanhã. Atenciosamente, Marc",
-        "Insert": "Inserir na resposta",
+        "Prompt": "Diga que estou verificando com a oficina, resposta amanhã.",
         "ReplyTitle": "Resposta",
         "Pause": "Pausar a animação",
         "Play": "Iniciar a animação",
