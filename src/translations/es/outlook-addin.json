@@ -1,77 +1,77 @@
 {
   "Hero": {
-    "Badge": "IA para Microsoft Word",
-    "Title": "Asistente IA para Word",
-    "Description": "Transforma tu flujo de trabajo de Word con asistencia impulsada por IA. Diseñado para privacidad, integrado perfectamente en tu entorno Microsoft 365 existente."
+    "Badge": "IA para Microsoft Outlook",
+    "Title": "Asistente IA para Outlook",
+    "Description": "Potencia tu gestión del correo con asistencia de IA. Redacta correos más rápido y gestiona tus comunicaciones mejor, todo dentro de tu entorno Microsoft 365."
   },
   "Features": {
-    "Title": "Potentes Características de IA",
-    "Description": "Todo lo que necesitas para escribir mejor, más rápido y más inteligente.",
+    "Title": "Funciones inteligentes para el correo",
+    "Description": "Todo lo que necesitas para comunicar mejor y gestionar tus correos con eficacia.",
     "Chat": {
-      "Title": "Asistente de Chat Inteligente",
-      "Description": "Haz preguntas, obtén sugerencias y refina tu contenido con conversaciones impulsadas por IA directamente en Word. Respuestas contextuales basadas en tu documento."
+      "Title": "Asistente de redacción de correos",
+      "Description": "Genera borradores de correo profesionales con IA. Recibe sugerencias de tono, mejora la claridad y redacta respuestas precisas en segundos según el contexto de la conversación."
     },
     "Templates": {
-      "Title": "Llenado Inteligente de Plantillas",
-      "Description": "Rellena automáticamente plantillas con datos de clientes de tu CRM. Genera contratos, propuestas e informes en segundos con extracción de datos impulsada por IA."
+      "Title": "Plantillas de correo inteligentes",
+      "Description": "Crea y rellena plantillas de correo con datos de clientes de tu CRM. Automatiza seguimientos, propuestas y comunicaciones con clientes con contenido personalizado generado por IA."
     },
-    "Suggestions": {
-      "Title": "Sugerencias en línea",
-      "Description": "Asistencia de escritura en tiempo real con sugerencias contextuales mientras escribes. Mejora tono, claridad y estilo sin abandonar tu flujo de documento."
+    "Summaries": {
+      "Title": "Resúmenes de hilos de correo",
+      "Description": "Obtén al instante resúmenes de cadenas de correo largas. Extrae automáticamente tareas, decisiones clave y fechas importantes de las conversaciones."
     },
     "Actions": {
-      "Title": "Acciones de Un Clic",
-      "Description": "Resume documentos, traduce contenido, ajusta tono o genera esquemas con acciones IA preconfiguradas. Personalizable para tu flujo de trabajo."
+      "Title": "Acciones rápidas de correo",
+      "Description": "Traduce correos, adapta el tono a cada destinatario, genera respuestas o programa seguimientos con acciones de IA en un clic, adaptadas a tu forma de trabajar."
     }
   },
   "Benefits": {
-    "Title": "Por qué elegir nuestro Complemento de Word",
+    "Title": "Por qué elegir nuestro complemento de Outlook",
     "Privacy": {
-      "Title": "Arquitectura centrada en privacidad",
-      "Description": "Tus documentos permanecen en tu entorno Microsoft 365. Todo procesamiento de IA respeta tu soberanía de datos. Opciones alojadas en Suiza disponibles."
+      "Title": "Privacidad del correo protegida",
+      "Description": "Tus correos y contactos permanecen en tu entorno Microsoft 365. El procesamiento de IA respeta la soberanía de tus datos. Opciones alojadas en Suiza para la máxima privacidad."
     },
     "Integration": {
-      "Title": "Integración Microsoft Perfecta",
-      "Description": "Autenticación nativa con Microsoft Entra ID. Funciona con tus políticas Office 365 y controles de seguridad existentes. No se requiere inicio de sesión separado."
+      "Title": "Integración nativa en Outlook",
+      "Description": "Autenticación transparente con Microsoft Entra ID. Funciona dentro de la interfaz de Outlook con tus políticas existentes. Sin inicio de sesión adicional ni sincronización de datos."
     },
     "Customization": {
-      "Title": "Adaptado a tu negocio",
-      "Description": "Consola de administración para configurar agentes IA, gestionar prompts y controlar características por usuario o equipo. Integra con tu CRM y sistemas internos."
+      "Title": "Flujos de correo a medida",
+      "Description": "Configura agentes de IA para distintos escenarios de correo. Crea plantillas de equipo, gestiona las instrucciones de forma centralizada e intégralo con tu CRM para personalizar automáticamente."
     },
     "Compliance": {
-      "Title": "Cumplimiento de Nivel Empresarial",
-      "Description": "Diseñado para industrias reguladas. Registro de actividades, pistas de auditoría y controles administrativos. Cumple con estándares suizos y de la UE de protección de datos."
+      "Title": "Cumplimiento normativo del correo empresarial",
+      "Description": "Diseñado para comunicaciones reguladas. Registro de auditoría completo, archivo de correos y controles de administración. Cumple las normas suizas y europeas de gestión del correo empresarial."
     }
   },
   "UseCases": {
-    "Title": "Diseñado para Proveedores de Servicios",
-    "Description": "Concebido para firmas de consultoría, prácticas legales y servicios profesionales en la región del Lago Lemán.",
-    "Legal": {
-      "Title": "Prácticas Legales",
-      "Description": "Genera documentos de clientes, contratos y correspondencia legal. Integra con sistemas de gestión de casos para llenado automático de plantillas."
+    "Title": "Ideal para la comunicación con clientes",
+    "Description": "Pensado para profesionales que gestionan un gran volumen de correos de clientes en la región del lago Lemán.",
+    "Sales": {
+      "Title": "Equipos comerciales",
+      "Description": "Genera correos de prospección personalizados, secuencias de seguimiento y comunicaciones de propuestas. Sigue las conversaciones con clientes y automatiza las respuestas habituales."
     },
-    "Consulting": {
-      "Title": "Firmas de consultoría",
-      "Description": "Crea propuestas, informes y entregables de clientes más rápido. Mantén marca y mensajes consistentes en todos los documentos."
+    "Support": {
+      "Title": "Atención al cliente",
+      "Description": "Responde más rápido a las consultas de clientes con respuestas sugeridas por la IA. Mantén un tono y una calidad coherentes en toda la atención."
     },
-    "Finance": {
-      "Title": "Servicios Financieros",
-      "Description": "Produce informes de cumplimiento, comunicaciones con clientes y análisis financieros. Asegura precisión con verificación de hechos impulsada por IA."
+    "Management": {
+      "Title": "Gestión de clientes",
+      "Description": "Resume los hilos de correo para tener el contexto al instante. Extrae tareas y plazos. Mantén la comunicación con clientes ordenada y accionable."
     }
   },
   "Pricing": {
-    "Title": "Precios Simples y Transparentes",
-    "Description": "Elige el plan que se ajuste al tamaño y necesidades de tu equipo.",
-    "Contact": "Contáctanos para precios empresariales y opciones de implementación personalizadas."
+    "Title": "Precios simples y transparentes",
+    "Description": "Elige el plan que se ajuste al volumen de correo y a las necesidades de tu equipo.",
+    "Contact": "Contáctanos para precios empresariales y opciones de despliegue a medida."
   },
   "CTA": {
-    "Title": "¿Listo para transformar tu flujo de Trabajo de Email?",
-    "Description": "Contáctanos para conocer cómo nuestro asistente de IA puede mejorar tu productividad de email.",
-    "Demo": "Solicitar Demo",
+    "Title": "¿Listo para transformar tu gestión del correo?",
+    "Description": "Contáctanos para descubrir cómo nuestro asistente de IA puede mejorar tu productividad con el correo.",
+    "Demo": "Solicitar una demo",
     "Contact": "Empezar"
   },
   "Demo": {
-    "Label": "Ilustración: una clienta pide una fecha de entrega por correo; usted da la idea en una frase y el complemento redacta la respuesta completa en el mensaje.",
+    "Label": "Ilustración: una clienta pide una fecha de entrega por correo; das la idea en una frase y el complemento redacta la respuesta completa en el mensaje.",
     "MailSubject": "Fecha de entrega de nuestro pedido",
     "MailBody": "Hola, ¿podrían confirmarme la fecha de entrega de nuestro pedido? Gracias, Claire",
     "PaneTitle": "Asistente",
