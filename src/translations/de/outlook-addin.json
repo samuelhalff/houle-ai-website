@@ -1,73 +1,73 @@
 {
     "Hero": {
-        "Badge": "KI für Microsoft Word",
-        "Title": "KI-Assistent für Word",
-        "Description": "Transformieren Sie Ihren Word-Workflow mit KI-gestützter Unterstützung. Entwickelt für Datenschutz, nahtlos integriert in Ihre bestehende Microsoft 365-Umgebung."
+        "Badge": "KI für Microsoft Outlook",
+        "Title": "KI-Assistent für Outlook",
+        "Description": "Beschleunigen Sie Ihre E-Mail-Arbeit mit KI-Unterstützung. E-Mails schneller verfassen und die Kommunikation besser organisieren, direkt in Ihrer Microsoft-365-Umgebung."
     },
     "Features": {
-        "Title": "Leistungsstarke KI-Funktionen",
-        "Description": "Alles, was Sie brauchen, um besser, schneller und intelligenter zu schreiben.",
+        "Title": "Intelligente E-Mail-Funktionen",
+        "Description": "Alles, was Sie brauchen, um besser zu kommunizieren und E-Mails effizient zu bearbeiten.",
         "Chat": {
-            "Title": "Intelligenter Chat-Assistent",
-            "Description": "Stellen Sie Fragen, erhalten Sie Vorschläge und verfeinern Sie Ihren Inhalt mit KI-gestützten Gesprächen direkt in Word. Kontextbezogene Antworten basierend auf Ihrem Dokument."
+            "Title": "Assistent für E-Mail-Entwürfe",
+            "Description": "Erstellen Sie professionelle E-Mail-Entwürfe mit KI. Erhalten Sie Vorschläge zum Ton, verbessern Sie die Klarheit und formulieren Sie passende Antworten in Sekunden, auf Basis des Gesprächsverlaufs."
         },
         "Templates": {
-            "Title": "Intelligentes Vorlagenausfüllen",
-            "Description": "Füllen Sie Vorlagen automatisch mit Kundendaten aus Ihrem CRM. Generieren Sie Verträge, Angebote und Berichte in Sekunden mit KI-gestützter Datenextraktion."
+            "Title": "Intelligente E-Mail-Vorlagen",
+            "Description": "Erstellen und befüllen Sie E-Mail-Vorlagen mit Kundendaten aus Ihrem CRM. Automatisieren Sie Nachfassaktionen, Angebote und Kundenkommunikation mit personalisierten, KI-generierten Inhalten."
         },
-        "Suggestions": {
-            "Title": "Inline-Vorschläge",
-            "Description": "Echtzeit-Schreibhilfe mit kontextbezogenen Vorschlägen während Sie tippen. Verbessern Sie Ton, Klarheit und Stil, ohne Ihren Dokumentenfluss zu unterbrechen."
+        "Summaries": {
+            "Title": "Zusammenfassungen von E-Mail-Verläufen",
+            "Description": "Erhalten Sie sofort Zusammenfassungen langer E-Mail-Ketten. Aufgaben, wichtige Entscheidungen und Termine werden automatisch aus den Gesprächen extrahiert."
         },
         "Actions": {
-            "Title": "Ein-Klick-Aktionen",
-            "Description": "Fassen Sie Dokumente zusammen, übersetzen Sie Inhalte, passen Sie den Ton an oder generieren Sie Gliederungen mit vorkonfigurierten KI-Aktionen. Anpassbar für Ihren Workflow."
+            "Title": "Schnelle E-Mail-Aktionen",
+            "Description": "E-Mails übersetzen, den Ton an verschiedene Empfänger anpassen, Antworten erstellen oder Nachfassaktionen planen, mit KI-Aktionen per Klick, abgestimmt auf Ihre Arbeitsweise."
         }
     },
     "Benefits": {
-        "Title": "Warum Unser Word Add-in Wählen",
+        "Title": "Warum unser Outlook-Add-in",
         "Privacy": {
-            "Title": "Datenschutzorientierte Architektur",
-            "Description": "Ihre Dokumente bleiben in Ihrer Microsoft 365-Umgebung. Alle KI-Verarbeitungen respektieren Ihre Datensouveränität. Schweizer Hosting-Optionen verfügbar."
+            "Title": "Geschützte E-Mail-Vertraulichkeit",
+            "Description": "Ihre E-Mails und Kontakte bleiben in Ihrer Microsoft-365-Umgebung. Die KI-Verarbeitung respektiert Ihre Datenhoheit. Optionen mit Hosting in der Schweiz für maximalen Datenschutz."
         },
         "Integration": {
-            "Title": "Nahtlose Microsoft-Integration",
-            "Description": "Native Authentifizierung mit Microsoft Entra ID. Funktioniert mit Ihren bestehenden Office 365-Richtlinien und Sicherheitskontrollen. Keine separate Anmeldung erforderlich."
+            "Title": "Native Outlook-Integration",
+            "Description": "Nahtlose Anmeldung über Microsoft Entra ID. Funktioniert in der Outlook-Oberfläche mit Ihren bestehenden Richtlinien. Keine zusätzliche Anmeldung, keine Datensynchronisierung."
         },
         "Customization": {
-            "Title": "Auf Ihr Unternehmen Zugeschnitten",
-            "Description": "Admin-Konsole zum Konfigurieren von KI-Agenten, Verwalten von Prompts und Steuern von Funktionen pro Benutzer oder Team. Integration mit Ihrem CRM und internen Systemen."
+            "Title": "Massgeschneiderte E-Mail-Abläufe",
+            "Description": "Konfigurieren Sie KI-Agenten für verschiedene E-Mail-Szenarien. Erstellen Sie Teamvorlagen, verwalten Sie Prompts zentral und binden Sie Ihr CRM für automatische Personalisierung an."
         },
         "Compliance": {
-            "Title": "Unternehmensweite Compliance",
-            "Description": "Entwickelt für regulierte Branchen. Aktivitätsprotokollierung, Audit-Trails und Admin-Kontrollen. Konform mit Schweizer und EU-Datenschutzstandards."
+            "Title": "E-Mail-Compliance für Unternehmen",
+            "Description": "Für regulierte Kommunikation gebaut. Vollständige Audit-Trails, E-Mail-Protokollierung und Admin-Kontrollen. Erfüllt Schweizer und EU-Standards für geschäftliche E-Mail-Verwaltung."
         }
     },
     "UseCases": {
-        "Title": "Entwickelt für Dienstleister",
-        "Description": "Konzipiert für Beratungsunternehmen, Anwaltskanzleien und professionelle Dienstleistungen in der Genferseeregion.",
-        "Legal": {
-            "Title": "Anwaltskanzleien",
-            "Description": "Generieren Sie Kundendokumente, Verträge und rechtliche Korrespondenz. Integration mit Fallverwaltungssystemen für automatisches Ausfüllen von Vorlagen."
+        "Title": "Ideal für die Kundenkommunikation",
+        "Description": "Für Fachleute, die in der Genferseeregion viele Kunden-E-Mails bearbeiten.",
+        "Sales": {
+            "Title": "Vertriebsteams",
+            "Description": "Erstellen Sie personalisierte Akquise-E-Mails, Nachfass-Sequenzen und Angebotskommunikation. Behalten Sie Kundengespräche im Blick und automatisieren Sie Routineantworten."
         },
-        "Consulting": {
-            "Title": "Beratungsunternehmen",
-            "Description": "Erstellen Sie Angebote, Berichte und Kundenlieferungen schneller. Pflegen Sie konsistentes Branding und Messaging in allen Dokumenten."
+        "Support": {
+            "Title": "Kundensupport",
+            "Description": "Beantworten Sie Kundenanfragen schneller mit KI-Antwortvorschlägen. Sorgen Sie für einheitlichen Ton und gleichbleibende Qualität im gesamten Support."
         },
-        "Finance": {
-            "Title": "Finanzdienstleistungen",
-            "Description": "Erstellen Sie Compliance-Berichte, Kundenkommunikation und Finanzanalysen. Gewährleisten Sie Genauigkeit mit KI-gestützter Faktenprüfung."
+        "Management": {
+            "Title": "Kundenbetreuung",
+            "Description": "Fassen Sie E-Mail-Verläufe für den schnellen Überblick zusammen. Extrahieren Sie Aufgaben und Fristen. Halten Sie die Kundenkommunikation geordnet und umsetzbar."
         }
     },
     "Pricing": {
-        "Title": "Einfache, Transparente Preisgestaltung",
-        "Description": "Wählen Sie den Plan, der zu Ihrer Teamgröße und Ihren Anforderungen passt.",
+        "Title": "Einfache, transparente Preise",
+        "Description": "Wählen Sie den Plan, der zum E-Mail-Volumen und zu den Bedürfnissen Ihres Teams passt.",
         "Contact": "Kontaktieren Sie uns für Unternehmenspreise und individuelle Bereitstellungsoptionen."
     },
     "CTA": {
-        "Title": "Bereit, Ihren E-Mail-Workflow zu transformieren?",
-        "Description": "Kontaktieren Sie uns, um zu erfahren, wie unser KI-Assistent Ihre E-Mail-Produktivität verbessern kann.",
-        "Demo": "Demo anfordern",
+        "Title": "Bereit, Ihre E-Mail-Arbeit zu verändern?",
+        "Description": "Kontaktieren Sie uns und erfahren Sie, wie unser KI-Assistent Ihre Produktivität bei E-Mails steigert.",
+        "Demo": "Demo anfragen",
         "Contact": "Loslegen"
     },
     "Demo": {

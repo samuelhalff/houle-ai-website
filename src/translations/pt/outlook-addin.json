@@ -1,73 +1,73 @@
 {
     "Hero": {
-        "Badge": "IA para Microsoft Word",
-        "Title": "Assistente IA para Word",
-        "Description": "Transforme seu fluxo de trabalho do Word com assistência impulsionada por IA. Projetado para privacidade, integrado perfeitamente ao seu ambiente Microsoft 365 existente."
+        "Badge": "IA para Microsoft Outlook",
+        "Title": "Assistente IA para Outlook",
+        "Description": "Potencialize a gestão dos seus e-mails com assistência de IA. Redija e-mails mais rápido e gerencie suas comunicações melhor, tudo dentro do seu ambiente Microsoft 365."
     },
     "Features": {
-        "Title": "Recursos IA Poderosos",
-        "Description": "Tudo que você precisa para escrever melhor, mais rápido e mais inteligente.",
+        "Title": "Recursos inteligentes para e-mail",
+        "Description": "Tudo o que você precisa para se comunicar melhor e gerenciar seus e-mails com eficiência.",
         "Chat": {
-            "Title": "Assistente de Chat Inteligente",
-            "Description": "Faça perguntas, obtenha sugestões e refine seu conteúdo com conversas impulsionadas por IA diretamente no Word. Respostas contextuais baseadas no seu documento."
+            "Title": "Assistente de redação de e-mails",
+            "Description": "Gere rascunhos de e-mail profissionais com IA. Receba sugestões de tom, melhore a clareza e redija respostas precisas em segundos com base no contexto da conversa."
         },
         "Templates": {
-            "Title": "Preenchimento Inteligente de Modelos",
-            "Description": "Preencha automaticamente modelos com dados de clientes do seu CRM. Gere contratos, propostas e relatórios em segundos com extração de dados impulsionada por IA."
+            "Title": "Modelos de e-mail inteligentes",
+            "Description": "Crie e preencha modelos de e-mail com dados de clientes do seu CRM. Automatize acompanhamentos, propostas e comunicações com clientes com conteúdo personalizado gerado por IA."
         },
-        "Suggestions": {
-            "Title": "Sugestões em linha",
-            "Description": "Assistência de escrita em tempo real com sugestões contextuais enquanto você digita. Melhore tom, clareza e estilo sem sair do seu fluxo de documento."
+        "Summaries": {
+            "Title": "Resumos de conversas de e-mail",
+            "Description": "Obtenha resumos instantâneos de longas cadeias de e-mail. Extraia automaticamente tarefas, decisões importantes e datas-chave das conversas."
         },
         "Actions": {
-            "Title": "Ações de Um Clique",
-            "Description": "Resuma documentos, traduza conteúdo, ajuste tom ou gere esboços com ações IA pré-configuradas. Personalizável para seu fluxo de trabalho."
+            "Title": "Ações rápidas de e-mail",
+            "Description": "Traduza e-mails, ajuste o tom para cada público, gere respostas ou agende acompanhamentos com ações de IA em um clique, adaptadas ao seu trabalho."
         }
     },
     "Benefits": {
-        "Title": "Por que escolher nosso Suplemento Word",
+        "Title": "Por que escolher nosso suplemento para Outlook",
         "Privacy": {
-            "Title": "Arquitetura Focada em Privacidade",
-            "Description": "Seus documentos permanecem no seu ambiente Microsoft 365. Todo processamento de IA respeita sua soberania de dados. Opções hospedadas na Suíça disponíveis."
+            "Title": "Privacidade dos e-mails protegida",
+            "Description": "Seus e-mails e contatos permanecem no seu ambiente Microsoft 365. O processamento de IA respeita a soberania dos seus dados. Opções hospedadas na Suíça para máxima privacidade."
         },
         "Integration": {
-            "Title": "Integração Microsoft Perfeita",
-            "Description": "Autenticação nativa com Microsoft Entra ID. Funciona com suas políticas Office 365 e controles de segurança existentes. Nenhum login separado necessário."
+            "Title": "Integração nativa ao Outlook",
+            "Description": "Autenticação transparente com Microsoft Entra ID. Funciona dentro da interface do Outlook com suas políticas existentes. Sem login adicional nem sincronização de dados."
         },
         "Customization": {
-            "Title": "Adaptado ao seu negócio",
-            "Description": "Console de administração para configurar agentes IA, gerenciar prompts e controlar recursos por usuário ou equipe. Integre com seu CRM e sistemas internos."
+            "Title": "Fluxos de e-mail sob medida",
+            "Description": "Configure agentes de IA para diferentes cenários de e-mail. Crie modelos de equipe, gerencie as instruções de forma centralizada e integre ao seu CRM para personalização automática."
         },
         "Compliance": {
-            "Title": "Conformidade de Nível Empresarial",
-            "Description": "Projetado para indústrias regulamentadas. Registro de atividades, trilhas de auditoria e controles administrativos. Conforme com padrões suíços e da UE de proteção de dados."
+            "Title": "Conformidade do e-mail corporativo",
+            "Description": "Projetado para comunicações regulamentadas. Trilha de auditoria completa, arquivamento de e-mails e controles administrativos. Atende às normas suíças e europeias de gestão de e-mail corporativo."
         }
     },
     "UseCases": {
-        "Title": "Desenvolvido para Provedores de Serviços",
-        "Description": "Projetado para empresas de consultoria, práticas jurídicas e serviços profissionais na região do Lago Lemano.",
-        "Legal": {
-            "Title": "Práticas Jurídicas",
-            "Description": "Gere documentos de clientes, contratos e correspondência jurídica. Integre com sistemas de gestão de casos para preenchimento automático de modelos."
+        "Title": "Ideal para a comunicação com clientes",
+        "Description": "Pensado para profissionais que gerenciam um grande volume de e-mails de clientes na região do Lago Léman.",
+        "Sales": {
+            "Title": "Equipes comerciais",
+            "Description": "Gere e-mails de prospecção personalizados, sequências de acompanhamento e comunicações de propostas. Acompanhe as conversas com clientes e automatize respostas de rotina."
         },
-        "Consulting": {
-            "Title": "Empresas de Consultoria",
-            "Description": "Crie propostas, relatórios e entregas de clientes mais rápido. Mantenha marca e mensagens consistentes em todos os documentos."
+        "Support": {
+            "Title": "Atendimento ao cliente",
+            "Description": "Responda mais rápido às solicitações de clientes com respostas sugeridas pela IA. Mantenha tom e qualidade consistentes em todo o atendimento."
         },
-        "Finance": {
-            "Title": "Serviços Financeiros",
-            "Description": "Produza relatórios de conformidade, comunicações com clientes e análises financeiras. Garanta precisão com verificação de fatos impulsionada por IA."
+        "Management": {
+            "Title": "Gestão de clientes",
+            "Description": "Resuma conversas de e-mail para ter o contexto na hora. Extraia tarefas e prazos. Mantenha a comunicação com clientes organizada e acionável."
         }
     },
     "Pricing": {
-        "Title": "Preços Simples e Transparentes",
-        "Description": "Escolha o plano que se ajusta ao tamanho e necessidades da sua equipe.",
-        "Contact": "Entre em contato para preços empresariais e opções de implantação personalizadas."
+        "Title": "Preços simples e transparentes",
+        "Description": "Escolha o plano que se ajusta ao volume de e-mails e às necessidades da sua equipe.",
+        "Contact": "Entre em contato para preços corporativos e opções de implantação sob medida."
     },
     "CTA": {
-        "Title": "Pronto para transformar seu fluxo de Trabalho de Email?",
-        "Description": "Entre em contato para saber como nosso assistente de IA pode melhorar sua produtividade de email.",
-        "Demo": "Solicitar Demonstração",
+        "Title": "Pronto para transformar a gestão dos seus e-mails?",
+        "Description": "Entre em contato para saber como nosso assistente de IA pode aumentar sua produtividade com e-mails.",
+        "Demo": "Solicitar uma demo",
         "Contact": "Começar"
     },
     "Demo": {
