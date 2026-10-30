@@ -25,24 +25,41 @@ export function OutlookDemo({ labels: l }: L) {
     <DemoFrame
       labels={l as never}
       panelVariant="pane"
+      loop={15000}
+      finalAt={13000}
       windowBody={({ now, flash }) => (
         <>
           <p className="text-sm font-semibold text-foreground">{l.MailSubject}</p>
           <p className="text-xs text-muted-foreground">Claire Berger · Atelier Morel</p>
-          <p className="mt-2 text-sm leading-6 text-foreground/80">{l.MailBody}</p>
-          <div className={`mt-4 min-h-[8.5rem] rounded-lg border p-3 text-sm ${hl(flash(4400, 9200))}`}>
+          <p className="mt-2 text-xs leading-5 text-foreground/80">{l.MailBody}</p>
+          <div className={`mt-3 rounded-lg border p-3 ${hl(flash(5400, 10800))}`}>
             <p className="text-[10px] uppercase tracking-wider text-muted-foreground">{l.ReplyTitle}</p>
-            <p className="mt-1 leading-6 text-foreground">{now >= 4400 && <Typed text={l.Draft} now={now} start={4400} ms={35} />}</p>
+            <p className="mt-1 whitespace-pre-line text-xs leading-5 text-foreground">
+              <Typed text={now >= 5400 ? l.Draft : ""} now={now} start={5400} ms={22} />
+              {now < 5400 && <span className="invisible">{l.Draft}</span>}
+            </p>
+            <span className={`mt-2 inline-flex items-center gap-1 rounded border px-2 py-0.5 text-[11px] text-foreground ${on(now >= 10200)}`}>
+              <span aria-hidden="true">📎</span>
+              {l.Attachment}
+            </span>
           </div>
         </>
       )}
       panelBody={({ now }) => (
         <>
           <Title>{l.PaneTitle}</Title>
-          <p className="min-h-[4.5rem] rounded-lg bg-muted p-3 text-xs leading-5 text-foreground">
-            {now >= 800 && <Typed text={l.Prompt} now={now} start={800} ms={45} />}
+          <p className="min-h-[3.25rem] rounded-lg bg-muted p-3 text-xs leading-5 text-foreground">
+            {now >= 600 && <Typed text={l.Prompt} now={now} start={600} ms={40} />}
           </p>
-          <Chip active={now >= 3600 && now < 4800}>{l.Action}</Chip>
+          <Chip active={now >= 2900 && now < 3900}>{l.Action}</Chip>
+          <ul className="space-y-1 text-xs text-foreground">
+            {[l.Check1, l.Check2, l.Check3].map((c, i) => (
+              <li key={c} className={`flex gap-2 ${on(now >= 3500 + i * 600)}`}>
+                <span aria-hidden="true" className="text-brand-hover dark:text-brand">✓</span>
+                {c}
+              </li>
+            ))}
+          </ul>
         </>
       )}
     />
