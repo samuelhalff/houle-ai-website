@@ -1946,30 +1946,6 @@
       "date": "2026-03-25",
       "references": [
         {
-          "labelKey": "Reglamento (UE) 2024/1689 sobre inteligencia artificial (EUR-Lex)",
-          "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
-        },
-        {
-          "labelKey": "Ley federal de protección de datos, nLPD (Fedlex)",
-          "url": "https://www.fedlex.admin.ch/eli/cc/2022/491/en"
-        },
-        {
-          "labelKey": "PFPDT – Encargado Federal de Protección de Datos y Transparencia",
-          "url": "https://www.edoeb.admin.ch/"
-        },
-        {
-          "labelKey": "Inteligencia artificial: panorama de la Cancillería Federal",
-          "url": "https://www.bk.admin.ch/en/artificial-intelligence"
-        },
-        {
-          "labelKey": "NIST AI Risk Management Framework",
-          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
-        },
-        {
-          "labelKey": "Guía de gobernanza de la IA: Microsoft Azure",
-          "url": "https://learn.microsoft.com/es-es/azure/cloud-adoption-framework/scenarios/ai/govern"
-        },
-        {
           "labelKey": "Collège des administrateurs | Artículo sobre IA y gobernanza",
           "url": "https://www.cas.ulaval.ca/wp-content/uploads/2025/09/College_Article_CA_et_IA_2025-09_v5-corrige.pdf"
         },
@@ -2003,10 +1979,6 @@
       "author": "Houle Team",
       "date": "2026-03-28",
       "references": [
-        {
-          "labelKey": "Carta y gobernanza de la IA en el trabajo",
-          "url": "https://www.erudit.org/fr/revues/admachina/2021-n5-admachina06837/1087042ar.pdf"
-        },
         {
           "labelKey": "Azure OpenAI Service - Página de producto de Azure",
           "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service"
@@ -3763,32 +3735,7 @@
       ],
       "topicId": "ia-family-office-reporting-documents",
       "topicFamily": "industry",
-      "references": [
-        {
-          "labelKey": "Microsoft Learn - Terms of Use",
-          "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
-        },
-        {
-          "labelKey": "Workwise Solutions : guide des agents IA pour family offices",
-          "url": "https://workwisesolutions.org/guides/best-ai-agents-family-offices-2026.html"
-        },
-        {
-          "labelKey": "Shubham Sharma : automatisation intelligente avec l’IA",
-          "url": "https://shubham-sharma.fr/articles/automatisation-ia-guide-complet/"
-        },
-        {
-          "labelKey": "MyReport : applications de l'IA dans le contrôle de gestion",
-          "url": "https://www.myreport.fr/blog/ia-controle-de-gestion/"
-        },
-        {
-          "labelKey": "Kairia : automatisation du reporting financier via l’IA",
-          "url": "https://kairia.fr/blog/finance-ia-automatiser-reporting"
-        },
-        {
-          "labelKey": "Les Essentiels Capital : l’IA et l’automatisation dans les directions financières en 2026",
-          "url": "https://lesessentiels-capital.fr/intelligence-artificielle-comment-les-directions-financieres-automatisent-leurs-reporting/"
-        }
-      ]
+      "references": []
     }
   ],
   "FAQ": {

@@ -1982,30 +1982,6 @@
       "date": "2026-03-25",
       "references": [
         {
-          "labelKey": "Regulation (EU) 2024/1689 on artificial intelligence (EUR-Lex)",
-          "url": "https://eur-lex.europa.eu/eli/reg/2024/1689/oj"
-        },
-        {
-          "labelKey": "Federal Act on Data Protection, FADP (Fedlex)",
-          "url": "https://www.fedlex.admin.ch/eli/cc/2022/491/en"
-        },
-        {
-          "labelKey": "FDPIC – Federal Data Protection and Information Commissioner",
-          "url": "https://www.edoeb.admin.ch/"
-        },
-        {
-          "labelKey": "Artificial intelligence: Federal Chancellery overview",
-          "url": "https://www.bk.admin.ch/en/artificial-intelligence"
-        },
-        {
-          "labelKey": "NIST AI Risk Management Framework",
-          "url": "https://www.nist.gov/itl/ai-risk-management-framework"
-        },
-        {
-          "labelKey": "AI governance guide: Microsoft Azure",
-          "url": "https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/scenarios/ai/govern"
-        },
-        {
           "labelKey": "Collège des administrateurs | Article on AI and governance",
           "url": "https://www.cas.ulaval.ca/wp-content/uploads/2025/09/College_Article_CA_et_IA_2025-09_v5-corrige.pdf"
         },
@@ -3772,32 +3748,7 @@
       ],
       "topicId": "ia-family-office-reporting-documents",
       "topicFamily": "industry",
-      "references": [
-        {
-          "labelKey": "Microsoft Learn - Terms of Use",
-          "url": "https://learn.microsoft.com/en-us/legal/termsofuse"
-        },
-        {
-          "labelKey": "Workwise Solutions : guide des agents IA pour family offices",
-          "url": "https://workwisesolutions.org/guides/best-ai-agents-family-offices-2026.html"
-        },
-        {
-          "labelKey": "Shubham Sharma : automatisation intelligente avec l’IA",
-          "url": "https://shubham-sharma.fr/articles/automatisation-ia-guide-complet/"
-        },
-        {
-          "labelKey": "MyReport : applications de l'IA dans le contrôle de gestion",
-          "url": "https://www.myreport.fr/blog/ia-controle-de-gestion/"
-        },
-        {
-          "labelKey": "Kairia : automatisation du reporting financier via l’IA",
-          "url": "https://kairia.fr/blog/finance-ia-automatiser-reporting"
-        },
-        {
-          "labelKey": "Les Essentiels Capital : l’IA et l’automatisation dans les directions financières en 2026",
-          "url": "https://lesessentiels-capital.fr/intelligence-artificielle-comment-les-directions-financieres-automatisent-leurs-reporting/"
-        }
-      ]
+      "references": []
     }
   ],
   "FAQ": {
