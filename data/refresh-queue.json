@@ -12,5 +12,8 @@
       "date": "2026-10-27",
       "reason": "refresh: [refresh] politique-usage-ia-clauses-gouvernance: research"
     }
-  ]
+  ],
+  "attempts": {
+    "agence-ia-geneve-services-comparer-offres": 1
+  }
 }
