@@ -52,7 +52,7 @@ INTERDITS = [
     (r"\bpartenaire officiel|\bofficial partner|\breseller\b|\brevendeur", "partenariat éditeur"),
     (r"\bfurthermore\b|\bmoreover\b|\badditionally\b", "connecteur proscrit (AGENTS.md)"),
     (r"[*_`#\[\]]", "caractère markdown"),
-    (r"\bmeilleur\w*|\bbest\b|\bbeste[nrs]?\b|\bmejor\w*|\bmelhor\w*|\bn[°o]\s?1\b|\bleader\b", "superlatif"),
+    (r"\bmeilleur\w*|\bbest\b|\bbeste[nrs]?\b|\bmejor(es)?\b|\bmelhor(es)?\b|\bn[°o]\s?1\b|\bleader\b", "superlatif"),
 ]
 BASE_NS = {
     "/": "home", "/products/ai-agents": "ai-agents", "/products/word-addin": "word-addin",
