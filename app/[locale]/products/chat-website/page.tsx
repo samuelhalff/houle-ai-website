@@ -275,7 +275,7 @@ const ChatWebsitePage = async (props: { params: Promise<{ locale: string }> }) =
             <SectionHeading title={s("Faq.Title")} align="center" className="mb-10" />
             <div className="space-y-4">
               {faqEntries.map((entry) => (
-                <details key={entry.question} className="group rounded-2xl border bg-background p-6 shadow-sm">
+                <details data-faq key={entry.question} className="group rounded-2xl border bg-background p-6 shadow-sm">
                   <summary className="cursor-pointer list-none font-semibold text-foreground">
                     {entry.question}
                   </summary>

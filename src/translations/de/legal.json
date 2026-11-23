@@ -44,9 +44,9 @@
       {
         "Title": "Webanalyse und wie Sie uns gefunden haben",
         "Blocks": [
-          { "type": "p", "text": "Wir messen die Nutzung unserer Website mit Google Analytics 4 und Google Consent Mode. Was erhoben wird, hängt von Ihrer Region und Ihrer Wahl im Cookie-Banner ab: In der Schweiz läuft die Analyse, sofern Sie nicht ablehnen; in der EU, im EWR und im Vereinigten Königreich wird nichts gespeichert, bevor Sie akzeptieren. Die verwendeten Cookies und die Möglichkeiten zur Ablehnung sind in unserer Cookie-Richtlinie beschrieben." },
+          { "type": "p", "text": "Wir messen die Nutzung unserer Website und die Wirksamkeit unserer Anzeigen mit Google Analytics 4 und Google Tag Manager, mit Google Consent Mode. Für alle Besucher, unabhängig vom Land, ist diese Messung ab der ersten Seite aktiv, außer Sie klicken im Cookie-Banner auf „Ablehnen“ oder später auf den Link „Cookie-Einstellungen“ am Seitenende. Was Sie in ein Feld eingeben, erfassen wir nie. Unsere Cookie-Richtlinie beschreibt im Einzelnen, was gemessen wird, wie lange es aufbewahrt wird und die Übermittlung in die USA." },
           { "type": "p", "text": "Wenn Sie uns über unser Kontaktformular eine Nachricht senden, fügen wir hinzu, wie Sie auf unsere Website gelangt sind: die zuerst besuchte Seite, die verweisende Website (nur die Domain), Kampagnenparameter (utm_source, utm_medium, utm_campaign, utm_term, utm_content), die Google-Ads-Klick-ID (gclid), falls vorhanden, und bis zu 20 während des Besuchs aufgerufene Seiten. Für diese Zuordnung speichern wir nie vollständige Adressen oder andere URL-Parameter." },
-          { "type": "p", "text": "Diese Informationen bleiben während des Besuchs im Arbeitsspeicher Ihres Browsers (und, falls Sie Cookies akzeptiert haben, im Session Storage, der beim Schließen des Tabs gelöscht wird). Sie werden nur zusammen mit Ihrer Nachricht über unseren Formularanbieter Formspark übermittelt und mit dieser aufbewahrt. Wir verwenden sie auf Grundlage unseres berechtigten Interesses, um zu verstehen, über welche Kanäle uns Anfragen erreichen." },
+          { "type": "p", "text": "Diese Informationen bleiben während des Besuchs im Arbeitsspeicher Ihres Browsers (und, außer wenn Sie Cookies abgelehnt haben, im Session Storage, der beim Schließen des Tabs gelöscht wird). Sie werden nur zusammen mit Ihrer Nachricht über unseren Formularanbieter Formspark übermittelt und mit dieser aufbewahrt. Wir verwenden sie auf Grundlage unseres berechtigten Interesses, um zu verstehen, über welche Kanäle uns Anfragen erreichen." },
           { "type": "p", "text": "Sofern Sie die Analyse nicht abgelehnt haben, fügen wir einer Nachricht, die Sie uns senden, außerdem die in Ihrem Browser gespeicherte Google-Analytics-Kennung hinzu, um sie mit unseren Besuchsstatistiken zu verknüpfen. Eine Ablehnung hindert Sie nicht daran, uns zu kontaktieren." }
         ]
       },
@@ -136,6 +136,7 @@
           { "type": "ul", "items": [
             "Länder der EU/des EWR mit angemessenem Datenschutz",
             "Microsoft-Azure-Rechenzentren mit angemessenen Garantien",
+            "US-Unternehmen, die nach dem Swiss-U.S. Data Privacy Framework zertifiziert sind, das der Bundesrat seit dem 15. September 2024 als angemessen anerkennt (zum Beispiel Google LLC für die Webanalyse)",
             "Drittländer mit angemessenen Garantien (Standardvertragsklauseln)"
           ] },
           { "type": "p", "text": "Alle internationalen Übermittlungen erfolgen mit angemessenen rechtlichen Garantien, damit Ihre Daten nach schweizerischem Standard geschützt bleiben." }
@@ -172,20 +173,18 @@
         "Title": "Einleitung",
         "Blocks": [
           { "type": "p", "text": "Diese Cookie-Richtlinie erläutert, wie houle.ai (West Bay SA) Cookies und ähnliche Tracking-Technologien auf unserer Website verwendet. Sie erklärt, was Cookies sind, wie wir sie einsetzen und welche Wahlmöglichkeiten Sie haben." },
-          { "type": "p", "text": "Je nachdem, wo Sie sich befinden, laufen einige dieser Technologien standardmäßig, andere nur mit Ihrer Einwilligung. Der folgende Abschnitt erklärt, was für Sie gilt und wie Sie ablehnen oder Ihre Wahl ändern können." }
+          { "type": "p", "text": "Für alle Besucher gilt dieselbe Regel, unabhängig vom Land: Analyse und Werbesignale sind aktiv, solange Sie sie nicht ablehnen. Der folgende Abschnitt erklärt, was wir messen und wie Sie ablehnen oder Ihre Wahl ändern können." }
         ]
       },
       {
         "Title": "Wie wir Besuche messen",
         "Blocks": [
-          { "type": "p", "text": "Wir verwenden Google Analytics 4 (Google Ireland Limited und Google LLC) mit Google Consent Mode. Das Google-Tag wird bei jedem Besuch geladen. Was es speichern darf, hängt davon ab, wo Sie sich befinden (von Google anhand Ihrer IP-Adresse geschätzt), und von Ihrer Wahl im Cookie-Banner. Wie bei jeder Google-Analytics-Einrichtung enthält jede Messung die Adresse der aufgerufenen Seite, mit Kampagnenparametern wie utm_source oder gclid, sofern sie im Link enthalten sind, dem Sie gefolgt sind." },
-          { "type": "ul", "items": [
-            "Schweiz: Analyse-Cookies (_ga, _ga_*) werden verwendet, sofern Sie nicht auf „Ablehnen“ klicken. Werbesignale (Werbe-Cookies, Nutzerdaten für Werbung und Anzeigenpersonalisierung) bleiben ausgeschaltet, bis Sie auf „Akzeptieren“ klicken.",
-            "Europäische Union, EWR und Vereinigtes Königreich: Es werden keine Analyse- oder Werbe-Cookies gesetzt, bis Sie auf „Akzeptieren“ klicken. Bis dahin sendet das Tag nur cookielose Messsignale (zum Beispiel einen Seitenaufruf oder ein gesendetes Formular), ohne eine Kennung, die Sie von einem Besuch zum nächsten wiedererkennt. Google erhält die technischen Daten, die in jeder Webanfrage enthalten sind, etwa Ihre IP-Adresse und Ihren Browsertyp, und verwendet diese Signale für aggregierte Statistiken.",
-            "Andere Länder: Analyse und Werbesignale sind standardmäßig eingeschaltet. Mit „Ablehnen“ können Sie sie ausschalten."
-          ] },
-          { "type": "p", "text": "Google Tag Manager wird, wo auch immer Sie sich befinden, erst geladen, nachdem Sie auf „Akzeptieren“ geklickt haben." },
-          { "type": "p", "text": "Das Cookie-Banner bietet zwei Optionen. „Akzeptieren“ erlaubt Analyse- und Werbe-Cookies und -Signale sowie Google Tag Manager. „Ablehnen“ schaltet Analyse- und Werbe-Cookies und -Signale aus; das Tag sendet dann nur die oben beschriebenen cookielosen Messsignale. Ihre Wahl wird in Ihrem Browser gespeichert (Cookie und Local-Storage-Eintrag „cookieConsent“, 12 Monate) und Sie können sie jederzeit über die Cookie-Schaltfläche am Seitenende ändern." }
+          { "type": "p", "text": "Die Regel ist für alle Besucher in allen Ländern gleich: Wenn Sie nicht auf „Ablehnen“ klicken, behandeln wir Sie genau so, als hätten Sie auf „Akzeptieren“ geklickt. Analyse und Werbesignale sind deshalb ab der ersten Seite aktiv. Das Cookie-Banner wird allen angezeigt und hat eine Schaltfläche „Ablehnen“." },
+          { "type": "p", "text": "Wir verwenden Google Analytics 4 und Google Tag Manager (Google Ireland Limited und Google LLC) mit Google Consent Mode. Google Tag Manager wird bei jedem Besuch geladen. Solange Sie nicht ablehnen, sind alle vier Signale von Consent Mode erteilt: Speicherung für die Analyse, Speicherung für Werbung, Nutzerdaten für Werbung und Anzeigenpersonalisierung. Wie bei jeder Google-Analytics-Einrichtung enthält jede Messung die Adresse der aufgerufenen Seite, mit Kampagnenparametern wie utm_source oder gclid, sofern sie im Link enthalten sind, dem Sie gefolgt sind." },
+          { "type": "p", "text": "Wir messen aufgerufene Seiten, wie weit Sie scrollen, Klicks auf Links und Schaltflächen, Datei-Downloads, die FAQ-Fragen, die Sie öffnen, und die Ladegeschwindigkeit der Seiten (Web Vitals). Wir erfassen auch, welcher KI-Assistent Sie zu uns geschickt hat (ChatGPT, Perplexity, Claude, Copilot, Gemini oder ein ähnlicher Dienst), anhand der verweisenden Website oder des Parameters utm_source im Link, und speichern nur den Namen des Assistenten. Wenn Sie uns über das Kontaktformular schreiben, enthält das erfasste Ereignis die Kampagnenparameter Ihres Besuchs. Was Sie in ein Feld eingeben, erfassen wir nie." },
+          { "type": "p", "text": "Google Analytics bewahrt Ereignisdaten 14 Monate auf, die Cookies _ga und _ga_* bleiben höchstens 2 Jahre in Ihrem Browser." },
+          { "type": "p", "text": "Google LLC ist ein US-Unternehmen, daher können Daten in die USA übermittelt werden. Google LLC ist nach dem Swiss-U.S. Data Privacy Framework zertifiziert, das der Bundesrat seit dem 15. September 2024 als angemessen anerkennt; Übermittlungen an Google LLC stützen sich auf diese Zertifizierung." },
+          { "type": "p", "text": "Zum Ablehnen klicken Sie im Banner auf „Ablehnen“ oder später auf den Link „Cookie-Einstellungen“ am Seitenende. Sie können Cookies auch in den Einstellungen Ihres Browsers blockieren oder löschen. Nach einer Ablehnung werden keine Analyse- oder Werbe-Cookies gesetzt. Google erhält dann nur noch cookielose Signale ohne Kennung (Pings von Consent Mode) sowie die technischen Daten, die in jeder Webanfrage enthalten sind, etwa Ihre IP-Adresse und Ihren Browsertyp. Ihre Wahl wird 12 Monate im Cookie und im Local-Storage-Eintrag „cookieConsent“ gespeichert. Eine Ablehnung hindert Sie nie daran, uns zu kontaktieren." }
         ]
       },
       {
@@ -228,7 +227,7 @@
             "Bereitstellung eines verbesserten Nutzererlebnisses"
           ] },
           { "type": "h3", "text": "4. Werbesignale" },
-          { "type": "p", "text": "Google-Werbesignale messen die Wirksamkeit von Werbung. Wo sie standardmäßig gelten und wo sie Ihre Einwilligung erfordern, wird oben unter „Wie wir Besuche messen“ erläutert." },
+          { "type": "p", "text": "Google-Werbesignale messen die Wirksamkeit unserer Anzeigen. Sie sind aktiv, solange Sie nicht auf „Ablehnen“ klicken (siehe „Wie wir Besuche messen“ oben)." },
           { "type": "box", "note": "Anbieter: Google (Werbesignale, Google Tag Manager)" }
         ]
       },

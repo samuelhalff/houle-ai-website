@@ -213,6 +213,10 @@ New namespace in all locales (`fr`, `en`, `de`, `es`, `pt`), rendered by `app/[l
 
 Block types: `p` (`text`), `h3` (`text`), `ul` (`items[]`), `box` (`heading?`, `lines?[]`, `items?[]`, `note?`), `rights` (`items[].{label,text}`), `links` (`heading`, `items[].{label,href}`). `scripts/validate-translations.js` fails the build when a locale's `legal.json` structure (sections, block types, list lengths, `href`s) differs from `en`. The privacy policy states that the Google Analytics identifier is added to a message unless the visitor refused analytics.
 
+## Same opt-out rule for every country (Nov 2026)
+
+No new keys. Changed values in all locales: `cookie:Text`; in `legal.json`, `Cookies.Sections[0]` (second paragraph), `Cookies.Sections[1]` ("How we measure visits", now six `p` blocks: rule, GA4 and GTM, what is measured, retention, US transfer, how to refuse; the regional list is gone), the advertising signals paragraph in `Cookies.Sections[3]`, `Privacy.Sections[3]` blocks 0 and 2, and a new item in the `Privacy.Sections[9]` list (Swiss-U.S. Data Privacy Framework). `PRIVACY_LAST_UPDATED` is 2026-11-23.
+
 ## Namespace: chat-website (chat-website.json) — chat-managed website product (Oct 2026)
 
 New namespace in all locales (`fr`, `en`, `de`, `es`, `pt`), rendered by `app/[locale]/products/chat-website/page.tsx` (`/products/chat-website/`, English slug shared by all locales).

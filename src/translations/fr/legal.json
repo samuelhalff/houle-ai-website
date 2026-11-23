@@ -44,9 +44,9 @@
       {
         "Title": "Mesure d'audience et provenance des visiteurs",
         "Blocks": [
-          { "type": "p", "text": "Nous mesurons l'utilisation de notre site avec Google Analytics 4 et Google Consent Mode. Ce qui est collecté dépend de votre région et de votre choix dans la bannière de cookies : en Suisse, la mesure d'audience est active sauf si vous la refusez ; dans l'UE, l'EEE et au Royaume-Uni, rien n'est enregistré avant votre accord. Les cookies utilisés et la manière de les refuser sont décrits dans notre politique de cookies." },
+          { "type": "p", "text": "Nous mesurons l'utilisation de notre site et l'efficacité de nos annonces avec Google Analytics 4 et Google Tag Manager, avec Google Consent Mode. Pour tous les visiteurs, quel que soit le pays, cette mesure est active dès la première page sauf si vous cliquez sur « Refuser » dans la bannière de cookies, ou plus tard sur le lien « Paramètres cookies » en bas de page. Nous n'enregistrons jamais ce que vous tapez dans un champ. Notre politique de cookies détaille ce qui est mesuré, les durées de conservation et le transfert aux États-Unis." },
           { "type": "p", "text": "Lorsque vous nous écrivez via notre formulaire de contact, nous ajoutons la façon dont vous êtes arrivé sur notre site : la première page consultée, le site d'origine (domaine uniquement), les paramètres de campagne (utm_source, utm_medium, utm_campaign, utm_term, utm_content), l'identifiant de clic Google Ads (gclid) s'il est présent, et jusqu'à 20 pages vues pendant la visite. Pour cette attribution, nous ne conservons jamais les adresses complètes ni les autres paramètres d'URL." },
-          { "type": "p", "text": "Ces informations restent dans la mémoire de votre navigateur pendant la visite (et, si vous avez accepté les cookies, dans le stockage de session, qui est vidé à la fermeture de l'onglet). Elles ne sont transmises qu'avec votre message, par l'intermédiaire de notre prestataire de formulaire Formspark, et conservées avec lui. Nous les utilisons, sur la base de notre intérêt légitime, pour comprendre quels canaux nous amènent des demandes." },
+          { "type": "p", "text": "Ces informations restent dans la mémoire de votre navigateur pendant la visite (et, sauf si vous avez refusé les cookies, dans le stockage de session, qui est vidé à la fermeture de l'onglet). Elles ne sont transmises qu'avec votre message, par l'intermédiaire de notre prestataire de formulaire Formspark, et conservées avec lui. Nous les utilisons, sur la base de notre intérêt légitime, pour comprendre quels canaux nous amènent des demandes." },
           { "type": "p", "text": "Sauf si vous avez refusé la mesure d'audience, nous ajoutons également à un message que vous nous envoyez l'identifiant Google Analytics enregistré dans votre navigateur, afin de le relier à nos statistiques de visite. Un refus ne vous empêche pas de nous contacter." }
         ]
       },
@@ -136,6 +136,7 @@
           { "type": "ul", "items": [
             "Des pays de l'UE/EEE offrant un niveau de protection des données adéquat",
             "Des centres de données Microsoft Azure bénéficiant de garanties appropriées",
+            "Des sociétés américaines certifiées selon le Swiss-U.S. Data Privacy Framework, que le Conseil fédéral reconnaît comme adéquat depuis le 15 septembre 2024 (par exemple Google LLC pour la mesure d'audience)",
             "Des pays tiers bénéficiant de garanties appropriées (clauses contractuelles types)"
           ] },
           { "type": "p", "text": "Tous les transferts internationaux sont assortis de garanties juridiques appropriées afin que vos données restent protégées selon les standards suisses." }
@@ -172,20 +173,18 @@
         "Title": "Introduction",
         "Blocks": [
           { "type": "p", "text": "Cette politique de cookies explique comment houle.ai (West Bay SA) utilise les cookies et les technologies de suivi similaires sur son site web. Elle indique ce qu'est un cookie, comment nous les utilisons et quels choix vous avez à leur sujet." },
-          { "type": "p", "text": "Selon l'endroit où vous vous trouvez, certaines de ces technologies sont actives par défaut et d'autres seulement avec votre consentement. La section ci-dessous explique ce qui s'applique à vous et comment refuser ou modifier votre choix." }
+          { "type": "p", "text": "La même règle s'applique à tous les visiteurs, quel que soit le pays : la mesure d'audience et les signaux publicitaires sont actifs sauf si vous les refusez. La section ci-dessous explique ce que nous mesurons et comment refuser ou modifier votre choix." }
         ]
       },
       {
         "Title": "Comment nous mesurons les visites",
         "Blocks": [
-          { "type": "p", "text": "Nous utilisons Google Analytics 4 (Google Ireland Limited et Google LLC) avec Google Consent Mode. La balise Google se charge à chaque visite. Ce qu'elle peut enregistrer dépend de l'endroit où vous vous trouvez, tel qu'estimé par Google à partir de votre adresse IP, et de votre choix dans la bannière de cookies. Comme dans toute configuration Google Analytics, chaque mesure comprend l'adresse de la page consultée, avec les paramètres de campagne tels que utm_source ou gclid lorsqu'ils figurent dans le lien que vous avez suivi." },
-          { "type": "ul", "items": [
-            "Suisse : les cookies de mesure d'audience (_ga, _ga_*) sont utilisés sauf si vous cliquez sur « Refuser ». Les signaux publicitaires (cookies publicitaires, données utilisateur pour la publicité et personnalisation des annonces) restent désactivés tant que vous ne cliquez pas sur « Accepter ».",
-            "Union européenne, EEE et Royaume-Uni : aucun cookie de mesure d'audience ou de publicité n'est déposé tant que vous ne cliquez pas sur « Accepter ». D'ici là, la balise envoie uniquement des signaux de mesure sans cookie (par exemple une page vue ou un formulaire envoyé), sans identifiant permettant de vous reconnaître d'une visite à l'autre. Google reçoit les données techniques contenues dans toute requête web, comme votre adresse IP et le type de navigateur, et utilise ces signaux pour des statistiques agrégées.",
-            "Autres pays : la mesure d'audience et les signaux publicitaires sont activés par défaut. Vous pouvez les désactiver avec « Refuser »."
-          ] },
-          { "type": "p", "text": "Google Tag Manager ne se charge qu'après un clic sur « Accepter », où que vous soyez." },
-          { "type": "p", "text": "La bannière de cookies propose deux choix. « Accepter » autorise les cookies et signaux de mesure d'audience et de publicité ainsi que Google Tag Manager. « Refuser » désactive les cookies et signaux de mesure d'audience et de publicité ; la balise n'envoie alors que les signaux sans cookie décrits ci-dessus. Votre choix est enregistré dans votre navigateur (cookie et entrée de stockage local « cookieConsent », 12 mois) et vous pouvez le modifier à tout moment avec le bouton cookies en bas de page." }
+          { "type": "p", "text": "La règle est la même pour tous les visiteurs, dans tous les pays : si vous ne cliquez pas sur « Refuser », nous considérons que vous avez accepté, exactement comme après un clic sur « Accepter ». La mesure d'audience et les signaux publicitaires sont donc actifs dès la première page. La bannière de cookies s'affiche pour tout le monde, avec un bouton « Refuser »." },
+          { "type": "p", "text": "Nous utilisons Google Analytics 4 et Google Tag Manager (Google Ireland Limited et Google LLC) avec Google Consent Mode. Google Tag Manager se charge à chaque visite. Tant que vous n'avez pas refusé, les quatre signaux de Consent Mode sont accordés : stockage pour la mesure d'audience, stockage publicitaire, données utilisateur pour la publicité et personnalisation des annonces. Comme dans toute configuration Google Analytics, chaque mesure comprend l'adresse de la page consultée, avec les paramètres de campagne tels que utm_source ou gclid lorsqu'ils figurent dans le lien que vous avez suivi." },
+          { "type": "p", "text": "Nous mesurons les pages vues, jusqu'où vous faites défiler une page, les clics sur les liens et les boutons, les téléchargements de fichiers, les questions de FAQ que vous ouvrez et la vitesse d'affichage des pages (web vitals). Nous relevons aussi quel assistant d'IA vous a envoyé vers nous (ChatGPT, Perplexity, Claude, Copilot, Gemini ou un service semblable), d'après le site d'origine ou le paramètre utm_source du lien, et nous ne gardons que le nom de l'assistant. Quand vous nous écrivez par le formulaire de contact, l'événement enregistré contient les paramètres de campagne de votre visite. Nous n'enregistrons jamais ce que vous tapez dans un champ." },
+          { "type": "p", "text": "Google Analytics conserve les données d'événements 14 mois, et ses cookies _ga et _ga_* restent au plus 2 ans dans votre navigateur." },
+          { "type": "p", "text": "Google LLC est une société américaine, et des données peuvent donc être transférées aux États-Unis. Google LLC est certifiée selon le Swiss-U.S. Data Privacy Framework, que le Conseil fédéral reconnaît comme offrant une protection adéquate depuis le 15 septembre 2024 ; les transferts vers Google LLC reposent sur cette certification." },
+          { "type": "p", "text": "Pour refuser, cliquez sur « Refuser » dans la bannière, ou plus tard sur le lien « Paramètres cookies » en bas de page. Vous pouvez aussi bloquer ou supprimer les cookies dans les paramètres de votre navigateur. Après un refus, aucun cookie de mesure d'audience ou de publicité n'est déposé. Google ne reçoit plus que des signaux sans cookie ni identifiant (les pings de Consent Mode), avec les données techniques contenues dans toute requête web, comme votre adresse IP et le type de navigateur. Votre choix est conservé 12 mois dans le cookie et l'entrée de stockage local « cookieConsent ». Refuser ne vous empêche jamais de nous contacter." }
         ]
       },
       {
@@ -228,7 +227,7 @@
             "Offrir une meilleure expérience utilisateur"
           ] },
           { "type": "h3", "text": "4. Signaux publicitaires" },
-          { "type": "p", "text": "Les signaux publicitaires de Google mesurent l'efficacité de la publicité. Les cas où ils s'appliquent par défaut et ceux où ils nécessitent votre consentement sont expliqués dans « Comment nous mesurons les visites » ci-dessus." },
+          { "type": "p", "text": "Les signaux publicitaires de Google mesurent l'efficacité de nos annonces. Ils sont actifs sauf si vous cliquez sur « Refuser » (voir « Comment nous mesurons les visites » ci-dessus)." },
           { "type": "box", "note": "Fournisseur : Google (signaux publicitaires, Google Tag Manager)" }
         ]
       },

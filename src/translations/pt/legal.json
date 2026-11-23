@@ -44,9 +44,9 @@
       {
         "Title": "Análise web e como você nos encontrou",
         "Blocks": [
-          { "type": "p", "text": "Medimos a utilização do nosso site com o Google Analytics 4 e o Google Consent Mode. O que é recolhido depende da sua região e da sua escolha no banner de cookies: na Suíça, a análise fica ativa, a menos que você a recuse; na UE, no EEE e no Reino Unido, nada é armazenado antes de você aceitar. Os cookies utilizados e a forma de os recusar são descritos na nossa política de cookies." },
+          { "type": "p", "text": "Medimos a utilização do nosso site e a eficácia dos nossos anúncios com o Google Analytics 4 e o Google Tag Manager, com o Google Consent Mode. Para todos os visitantes, seja qual for o país, esta medição está ativa desde a primeira página, a menos que você clique em \"Recusar\" no banner de cookies ou, mais tarde, no link \"Configurações de cookies\" no fundo da página. Nunca registamos o que escreve num campo. A nossa política de cookies detalha o que é medido, durante quanto tempo é guardado e a transferência para os Estados Unidos." },
           { "type": "p", "text": "Quando você envia uma mensagem pelo nosso formulário de contacto, acrescentamos a forma como chegou ao nosso site: a primeira página que visitou, o site de origem (apenas o domínio), os parâmetros de campanha (utm_source, utm_medium, utm_campaign, utm_term, utm_content), o identificador de clique do Google Ads (gclid), se existir, e até 20 páginas vistas durante a visita. Para esta atribuição, nunca guardamos endereços completos nem outros parâmetros de URL." },
-          { "type": "p", "text": "Estas informações permanecem na memória do seu navegador durante a visita (e, se você aceitou os cookies, no armazenamento de sessão, que é apagado quando fecha o separador). São enviadas apenas com a sua mensagem, através do nosso fornecedor de formulários Formspark, e guardadas junto com ela. Utilizamo-las, com base no nosso interesse legítimo, para compreender quais os canais que nos trazem pedidos de contacto." },
+          { "type": "p", "text": "Estas informações permanecem na memória do seu navegador durante a visita (e, a menos que você tenha recusado os cookies, no armazenamento de sessão, que é apagado quando fecha o separador). São enviadas apenas com a sua mensagem, através do nosso fornecedor de formulários Formspark, e guardadas junto com ela. Utilizamo-las, com base no nosso interesse legítimo, para compreender quais os canais que nos trazem pedidos de contacto." },
           { "type": "p", "text": "Salvo se você tiver recusado a análise, acrescentamos também o identificador do Google Analytics armazenado no seu navegador a uma mensagem que nos envie, para a associar às nossas estatísticas de visitas. Recusar não o impede de nos contactar." }
         ]
       },
@@ -136,6 +136,7 @@
           { "type": "ul", "items": [
             "Países da UE/EEE com proteção de dados adequada",
             "Centros de dados Microsoft Azure com garantias adequadas",
+            "Empresas americanas certificadas ao abrigo do Swiss-U.S. Data Privacy Framework, que o Conselho Federal suíço reconhece como adequado desde 15 de setembro de 2024 (por exemplo a Google LLC para a análise do site)",
             "Países terceiros com garantias adequadas (cláusulas contratuais-tipo)"
           ] },
           { "type": "p", "text": "Todas as transferências internacionais são feitas com garantias jurídicas adequadas, para assegurar que os seus dados permanecem protegidos segundo os padrões suíços." }
@@ -172,20 +173,18 @@
         "Title": "Introdução",
         "Blocks": [
           { "type": "p", "text": "Esta política de cookies explica como a houle.ai (West Bay SA) utiliza cookies e tecnologias de rastreamento semelhantes no nosso site. Explica o que são os cookies, como os utilizamos e quais as suas opções quanto à sua utilização." },
-          { "type": "p", "text": "Consoante o local onde você se encontra, algumas destas tecnologias funcionam por predefinição e outras apenas com o seu consentimento. A secção abaixo explica o que se aplica a você e como recusar ou alterar a sua escolha." }
+          { "type": "p", "text": "A mesma regra aplica-se a todos os visitantes, seja qual for o país: a análise e os sinais publicitários estão ativos, a menos que você os recuse. A secção abaixo explica o que medimos e como recusar ou alterar a sua escolha." }
         ]
       },
       {
         "Title": "Como medimos as visitas",
         "Blocks": [
-          { "type": "p", "text": "Utilizamos o Google Analytics 4 (Google Ireland Limited e Google LLC) com o Google Consent Mode. A tag do Google carrega em todas as visitas. O que ela pode armazenar depende do local onde você se encontra, estimado pela Google a partir do seu endereço IP, e da sua escolha no banner de cookies. Como em qualquer configuração do Google Analytics, cada medição inclui o endereço da página visualizada, com parâmetros de campanha como utm_source ou gclid quando constam do link que você seguiu." },
-          { "type": "ul", "items": [
-            "Suíça: os cookies de análise (_ga, _ga_*) são utilizados, a menos que você clique em \"Recusar\". Os sinais publicitários (cookies publicitários, dados de utilizador para anúncios e personalização de anúncios) permanecem desativados até você clicar em \"Aceitar\".",
-            "União Europeia, EEE e Reino Unido: nenhum cookie de análise ou publicitário é definido até você clicar em \"Aceitar\". Até lá, a tag envia apenas pings de medição sem cookies (por exemplo, uma visualização de página ou um formulário enviado), sem um identificador que o reconheça de uma visita para a seguinte. A Google recebe os dados técnicos contidos em qualquer pedido web, como o seu endereço IP e o tipo de navegador, e utiliza estes pings para estatísticas agregadas.",
-            "Outros países: a análise e os sinais publicitários estão ativados por predefinição. Você pode desativá-los com \"Recusar\"."
-          ] },
-          { "type": "p", "text": "O Google Tag Manager só carrega depois de você clicar em \"Aceitar\", independentemente do local onde se encontre." },
-          { "type": "p", "text": "O banner de cookies oferece duas opções. \"Aceitar\" permite os cookies e sinais de análise e publicitários e o Google Tag Manager. \"Recusar\" desativa os cookies e sinais de análise e publicitários; a tag passa então a enviar apenas os pings sem cookies descritos acima. A sua escolha é guardada no seu navegador (cookie e entrada de armazenamento local \"cookieConsent\", 12 meses) e você pode alterá-la a qualquer momento com o botão de cookies no fundo da página." }
+          { "type": "p", "text": "A regra é a mesma para todos os visitantes, em todos os países: se você não clicar em \"Recusar\", tratamo-lo exatamente como se tivesse clicado em \"Aceitar\". Por isso, a análise e os sinais publicitários estão ativos desde a primeira página. O banner de cookies é apresentado a todos e tem um botão \"Recusar\"." },
+          { "type": "p", "text": "Utilizamos o Google Analytics 4 e o Google Tag Manager (Google Ireland Limited e Google LLC) com o Google Consent Mode. O Google Tag Manager carrega em todas as visitas. Enquanto você não recusar, os quatro sinais do Consent Mode estão concedidos: armazenamento de análise, armazenamento de anúncios, dados de utilizador para anúncios e personalização de anúncios. Como em qualquer configuração do Google Analytics, cada medição inclui o endereço da página visualizada, com parâmetros de campanha como utm_source ou gclid quando constam do link que você seguiu." },
+          { "type": "p", "text": "Medimos as páginas visualizadas, até onde desloca a página, os cliques em links e botões, as transferências de ficheiros, as perguntas frequentes que abre e a velocidade de carregamento das páginas (web vitals). Também registamos qual o assistente de IA que o enviou para o nosso site (ChatGPT, Perplexity, Claude, Copilot, Gemini ou um serviço semelhante), com base no site de origem ou no parâmetro utm_source do link, e guardamos apenas o nome do assistente. Quando nos escreve através do formulário de contacto, o evento registado inclui os parâmetros de campanha da sua visita. Nunca registamos o que escreve num campo." },
+          { "type": "p", "text": "O Google Analytics guarda os dados de eventos durante 14 meses, e os cookies _ga e _ga_* ficam no seu navegador durante 2 anos, no máximo." },
+          { "type": "p", "text": "A Google LLC é uma empresa americana, pelo que podem ser transferidos dados para os Estados Unidos. A Google LLC está certificada ao abrigo do Swiss-U.S. Data Privacy Framework, que o Conselho Federal suíço reconhece como adequado desde 15 de setembro de 2024; as transferências para a Google LLC baseiam-se nessa certificação." },
+          { "type": "p", "text": "Para recusar, clique em \"Recusar\" no banner ou, mais tarde, no link \"Configurações de cookies\" no fundo da página. Também pode bloquear ou apagar os cookies nas definições do seu navegador. Depois de uma recusa, nenhum cookie de análise ou publicitário é definido. A Google passa a receber apenas sinais sem cookies e sem identificador (os pings do Consent Mode), juntamente com os dados técnicos contidos em qualquer pedido web, como o seu endereço IP e o tipo de navegador. A sua escolha é guardada durante 12 meses no cookie e na entrada de armazenamento local \"cookieConsent\". Recusar nunca o impede de nos contactar." }
         ]
       },
       {
@@ -228,7 +227,7 @@
             "Proporcionar uma experiência de utilização melhorada"
           ] },
           { "type": "h3", "text": "4. Sinais publicitários" },
-          { "type": "p", "text": "Os sinais publicitários da Google medem a eficácia da publicidade. Onde se aplicam por predefinição e onde precisam do seu consentimento é explicado em \"Como medimos as visitas\", acima." },
+          { "type": "p", "text": "Os sinais publicitários da Google medem a eficácia dos nossos anúncios. Estão ativos, a menos que você clique em \"Recusar\" (ver \"Como medimos as visitas\", acima)." },
           { "type": "box", "note": "Fornecedor: Google (sinais publicitários, Google Tag Manager)" }
         ]
       },

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { trackEvent } from "@/src/lib/analytics";
 
 const PlusIcon = ({ className }: { className?: string }) => (
   <svg
@@ -43,6 +44,10 @@ export default function FAQ({
   const [openItems, setOpenItems] = useState<Set<number>>(new Set());
 
   const toggleItem = (index: number) => {
+    const question = items[index]?.question;
+    if (!openItems.has(index) && typeof question === "string") {
+      trackEvent("faq_open", { faq_question: question.slice(0, 100) });
+    }
     setOpenItems((prev) => {
       const next = new Set(prev);
       if (next.has(index)) {

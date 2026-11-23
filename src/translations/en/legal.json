@@ -44,9 +44,9 @@
       {
         "Title": "Web analytics and how you found us",
         "Blocks": [
-          { "type": "p", "text": "We measure the use of our website with Google Analytics 4 and Google Consent Mode. What is collected depends on your region and your choice in the cookie banner: in Switzerland analytics run unless you refuse, in the EU, the EEA and the UK nothing is stored before you accept. The cookies used and how to refuse are described in our cookies policy." },
+          { "type": "p", "text": "We measure the use of our website and the effectiveness of our ads with Google Analytics 4 and Google Tag Manager, using Google Consent Mode. For every visitor, whatever the country, this measurement is active from the first page unless you click \"Refuse\" in the cookie banner, or later on the \"Cookie Settings\" link at the bottom of the page. We never record what you type into a field. Our cookies policy sets out what is measured, how long it is kept and the transfer to the United States." },
           { "type": "p", "text": "When you send a message through our contact form, we add how you reached our site: the first page you visited, the referring website (domain only), campaign parameters (utm_source, utm_medium, utm_campaign, utm_term, utm_content), the Google Ads click identifier (gclid) if present, and up to 20 pages viewed during the visit. For this attribution we never keep full addresses or other URL parameters." },
-          { "type": "p", "text": "This information stays in your browser's memory during the visit (and, if you accepted cookies, in session storage, which is cleared when you close the tab). It is only sent with your message, through our form provider Formspark, and kept with it. We use it, on the basis of our legitimate interest, to understand which channels bring us enquiries." },
+          { "type": "p", "text": "This information stays in your browser's memory during the visit (and, unless you refused cookies, in session storage, which is cleared when you close the tab). It is only sent with your message, through our form provider Formspark, and kept with it. We use it, on the basis of our legitimate interest, to understand which channels bring us enquiries." },
           { "type": "p", "text": "Unless you refused analytics, we also add the Google Analytics identifier stored in your browser to a message you send us, to link it to our visit statistics. Refusing does not prevent you from contacting us." }
         ]
       },
@@ -136,6 +136,7 @@
           { "type": "ul", "items": [
             "EU/EEA countries with adequate data protection",
             "Microsoft Azure data centres with appropriate safeguards",
+            "US companies certified under the Swiss-U.S. Data Privacy Framework, which the Swiss Federal Council has recognised as adequate since 15 September 2024 (for example Google LLC for web analytics)",
             "Third countries with appropriate safeguards (standard contractual clauses)"
           ] },
           { "type": "p", "text": "All international transfers are conducted with appropriate legal safeguards to ensure your data remains protected to Swiss standards." }
@@ -172,20 +173,18 @@
         "Title": "Introduction",
         "Blocks": [
           { "type": "p", "text": "This cookies policy explains how houle.ai (West Bay SA) uses cookies and similar tracking technologies on our website. It explains what cookies are, how we use them and your choices regarding their use." },
-          { "type": "p", "text": "Depending on where you are, some of these technologies run by default and others only with your consent. The section below explains what applies to you and how to refuse or change your choice." }
+          { "type": "p", "text": "The same rule applies to every visitor, whatever the country: analytics and advertising signals are active unless you refuse them. The section below explains what we measure and how to refuse or change your choice." }
         ]
       },
       {
         "Title": "How we measure visits",
         "Blocks": [
-          { "type": "p", "text": "We use Google Analytics 4 (Google Ireland Limited and Google LLC) with Google Consent Mode. The Google tag loads on every visit. What it may store depends on where you are, as estimated by Google from your IP address, and on your choice in the cookie banner. Like any Google Analytics setup, each measurement includes the address of the page viewed, with campaign parameters such as utm_source or gclid when they are in the link you followed." },
-          { "type": "ul", "items": [
-            "Switzerland: analytics cookies (_ga, _ga_*) are used unless you click \"Refuse\". Advertising signals (advertising cookies, ad user data and ad personalisation) stay off until you click \"Accept\".",
-            "European Union, EEA and United Kingdom: no analytics or advertising cookies are set until you click \"Accept\". Until then the tag only sends cookieless measurement pings (for example a page view or a form sent), without an identifier that recognises you from one visit to the next. Google receives the technical data contained in any web request, such as your IP address and browser type, and uses these pings for aggregated statistics.",
-            "Other countries: analytics and advertising signals are on by default. You can turn them off with \"Refuse\"."
-          ] },
-          { "type": "p", "text": "Google Tag Manager only loads after you click \"Accept\", wherever you are." },
-          { "type": "p", "text": "The cookie banner offers two choices. \"Accept\" allows analytics and advertising cookies and signals and Google Tag Manager. \"Refuse\" turns off analytics and advertising cookies and signals; the tag then only sends the cookieless pings described above. Your choice is saved in your browser (cookie and local storage entry \"cookieConsent\", 12 months) and you can change it at any time with the cookie button at the bottom of the page." }
+          { "type": "p", "text": "The rule is the same for every visitor in every country: if you do not click \"Refuse\", we treat you exactly as if you had clicked \"Accept\". Analytics and advertising signals are therefore active from the first page you open. The cookie banner is shown to everyone and has a \"Refuse\" button." },
+          { "type": "p", "text": "We use Google Analytics 4 and Google Tag Manager (Google Ireland Limited and Google LLC) with Google Consent Mode. Google Tag Manager loads on every visit. Unless you refuse, all four Consent Mode signals are granted: analytics storage, ad storage, ad user data and ad personalisation. Like any Google Analytics setup, each measurement includes the address of the page viewed, with campaign parameters such as utm_source or gclid when they are in the link you followed." },
+          { "type": "p", "text": "We measure pages viewed, how far you scroll, clicks on links and buttons, file downloads, the FAQ questions you open and page speed (web vitals). We also note which AI assistant sent you to us (ChatGPT, Perplexity, Claude, Copilot, Gemini or a similar service), based on the referring site or the utm_source of the link, and we keep only the assistant's name. When you write to us through the contact form, the event we record carries the campaign parameters of your visit. We never record anything you type into a field." },
+          { "type": "p", "text": "Google Analytics keeps event data for 14 months, and its _ga and _ga_* cookies stay in your browser for up to 2 years." },
+          { "type": "p", "text": "Google LLC is a US company, so data may be transferred to the United States. Google LLC is certified under the Swiss-U.S. Data Privacy Framework, which the Swiss Federal Council has recognised as providing adequate protection since 15 September 2024, and transfers to Google LLC rely on that certification." },
+          { "type": "p", "text": "To refuse, click \"Refuse\" in the banner, or later use the \"Cookie Settings\" link at the bottom of the page. You can also block or delete cookies in your browser settings. After a refusal no analytics or advertising cookies are set. Google then only receives cookieless signals without an identifier (Consent Mode pings), along with the technical data any web request contains, such as your IP address and browser type. Your choice is kept for 12 months in the cookie and local storage entry \"cookieConsent\". Refusing never prevents you from contacting us." }
         ]
       },
       {
@@ -228,7 +227,7 @@
             "Providing an enhanced user experience"
           ] },
           { "type": "h3", "text": "4. Advertising signals" },
-          { "type": "p", "text": "Google advertising signals measure the effectiveness of advertising. Where they apply by default and where they need your consent is explained in \"How we measure visits\" above." },
+          { "type": "p", "text": "Google advertising signals measure how well our ads work. They are active unless you click \"Refuse\" (see \"How we measure visits\" above)." },
           { "type": "box", "note": "Provider: Google (advertising signals, Google Tag Manager)" }
         ]
       },

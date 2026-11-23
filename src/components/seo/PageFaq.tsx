@@ -39,7 +39,7 @@ export default function PageFaq({
   const list = (
     <div className="space-y-3">
       {items.map((entry) => (
-        <details key={entry.question} className="group rounded-2xl border bg-background p-5 shadow-sm">
+        <details data-faq key={entry.question} className="group rounded-2xl border bg-background p-5 shadow-sm">
           <summary className="cursor-pointer list-none">
             <h3 className="inline text-base font-semibold text-foreground">{entry.question}</h3>
           </summary>

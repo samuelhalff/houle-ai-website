@@ -214,7 +214,7 @@ export default async function RootLayout({
             gtag.js. Must run before any other gtag call. */}
         <script
           nonce={nonce}
-          dangerouslySetInnerHTML={{ __html: buildConsentBootstrap(gaId) }}
+          dangerouslySetInnerHTML={{ __html: buildConsentBootstrap(gaId, "GTM-P6QT792D") }}
         />
         {nonce ? <meta name="csp-nonce" content={nonce} /> : null}
         <meta httpEquiv="Accept-CH" content="Sec-CH-Prefers-Color-Scheme" />
@@ -272,7 +272,6 @@ export default async function RootLayout({
               <ClientOnlyProviders
                 nonce={nonce}
                 locale={currentLocale}
-                gtmId="GTM-P6QT792D"
                 cookieLabels={cookieLabels}
               />
             </div>
