@@ -267,7 +267,7 @@ def ajouter_sujets(sujets: list[dict]) -> tuple[list[Path], list[Path]]:
 CONTROLES = [
     ("Lint", "npm run lint", "."),
     ("Tests (types, données structurées, rotation des sujets, redirections)", "npm test", "."),
-    ("FAQ (texte visible = JSON-LD, typographie, 3 à 6 / 3 à 5)", "npx --yes node@22 --test src/lib/faq-content.test.ts",
+    ("FAQ (texte visible = JSON-LD, typographie, 3 à 6 / 3 à 5)", 'PATH="$NODE22:$PATH" node --test src/lib/faq-content.test.ts',
      "."),
     ("File de sujets", "node scripts/article-topic-plan.js --check", "."),
     ("Liens internes des articles", "node scripts/fix-article-internal-links.js --check", "."),
