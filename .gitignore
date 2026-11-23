@@ -8,6 +8,8 @@ next-standalone.tar.gz
 *.txt
 !public/robots.txt
 !public/8090b768dce0dbff243585b086176e05.txt
+!app/llms-full.txt/
+!app/llms-full.txt/**
 .env*
 !.env.example
 # TypeScript incremental build info (do not commit)
