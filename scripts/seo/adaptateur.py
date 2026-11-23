@@ -33,6 +33,7 @@ DEPLOIEMENT_LLM = "gpt-4.1"
 VERSION_API_LLM = "2024-05-01-preview"
 APOSTROPHE_COURBE = False
 PREFIXE_COMMIT = "feat(seo): "
+CASSE = ["Microsoft 365", "SharePoint", "Azure OpenAI", "Swiss GPT", "Outlook", "Word", "Copilot", "OpenAI", "Anthropic", "Mistral", "Genève", "Geneva", "Suisse", "Switzerland", "Schweiz", "Suiza", "Suíça", "nLPD", "AI Act"]
 MARQUE = r"\bhoule\b"
 LOCALES = ["en", "fr", "de", "es", "pt"]
 THEME = ("conseil et intégration d'IA pour les entreprises en Suisse : agents IA, modèles open source hébergés en "
@@ -51,7 +52,7 @@ INTERDITS = [
     (r"\bpartenaire officiel|\bofficial partner|\breseller\b|\brevendeur", "partenariat éditeur"),
     (r"\bfurthermore\b|\bmoreover\b|\badditionally\b", "connecteur proscrit (AGENTS.md)"),
     (r"[*_`#\[\]]", "caractère markdown"),
-    (r"\bmeilleur\w*|\bbest\b|\bbeste\w*|\bmejor\w*|\bmelhor\w*|\bn[°o]\s?1\b|\bleader\b", "superlatif"),
+    (r"\bmeilleur\w*|\bbest\b|\bbeste[nrs]?\b|\bmejor\w*|\bmelhor\w*|\bn[°o]\s?1\b|\bleader\b", "superlatif"),
 ]
 BASE_NS = {
     "/": "home", "/products/ai-agents": "ai-agents", "/products/word-addin": "word-addin",
