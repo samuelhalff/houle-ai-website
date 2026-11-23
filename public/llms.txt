@@ -46,3 +46,8 @@ Illustrative scenarios (no named client, no invented figures) and a decision gui
 - Legal entity: West Bay SA, Chemin du Pré-Roset 19, 1294 Genthod (Geneva), Switzerland
 - Email: contact@houle.ai
 - Areas served: Geneva, Lausanne and the rest of Switzerland
+
+## Related sites
+
+- [Ark Fiduciaire](https://ark-fid.ch/en/): fiduciary firm in Geneva (accounting, tax, payroll, Odoo). houle built its AI quote agent, part of its accounting automation and its website.
+- [Ridger](https://ridger.ch/en/): digital multi-family office in Geneva, a brand of Ark Fiduciaire SA. houle built its website.

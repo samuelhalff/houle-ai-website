@@ -32,6 +32,7 @@ export default function Footer({ locale }: { locale?: string }) {
       termsOfService: "Terms of Service",
       cookiesPolicy: "Cookies Policy",
       cookieSettings: "Cookie Settings",
+      otherSites: "Our other sites:",
       tagline: "Independent AI consulting. The right model for each case, hosted in Switzerland when it matters.",
     },
     fr: {
@@ -52,6 +53,7 @@ export default function Footer({ locale }: { locale?: string }) {
       termsOfService: "Conditions d'utilisation",
       cookiesPolicy: "Politique des cookies",
       cookieSettings: "Paramètres cookies",
+      otherSites: "Nos autres sites :",
       tagline: "Conseil IA indépendant. Le bon modèle pour chaque cas, hébergé en Suisse quand il le faut.",
     },
     de: {
@@ -72,6 +74,7 @@ export default function Footer({ locale }: { locale?: string }) {
       termsOfService: "Nutzungsbedingungen",
       cookiesPolicy: "Cookie-Richtlinie",
       cookieSettings: "Cookie-Einstellungen",
+      otherSites: "Unsere weiteren Websites:",
       tagline: "Unabhängige KI-Beratung. Das richtige Modell für jeden Fall, in der Schweiz gehostet, wenn es darauf ankommt.",
     },
     es: {
@@ -92,6 +95,7 @@ export default function Footer({ locale }: { locale?: string }) {
       termsOfService: "Términos de servicio",
       cookiesPolicy: "Política de cookies",
       cookieSettings: "Ajustes de cookies",
+      otherSites: "Nuestros otros sitios:",
       tagline: "Consultoría de IA independiente. El modelo adecuado para cada caso, alojado en Suiza cuando hace falta.",
     },
     pt: {
@@ -112,6 +116,7 @@ export default function Footer({ locale }: { locale?: string }) {
       termsOfService: "Termos de serviço",
       cookiesPolicy: "Política de cookies",
       cookieSettings: "Configurações de cookies",
+      otherSites: "Os nossos outros sites:",
       tagline: "Consultoria de IA independente. O modelo certo para cada caso, hospedado na Suíça quando é preciso.",
     },
   };
@@ -268,6 +273,23 @@ export default function Footer({ locale }: { locale?: string }) {
         <span className="w-full text-center text-sm text-muted-foreground xs:text-start">
           © <span suppressHydrationWarning>{new Date().getFullYear()}</span>{" "}
           houle — A brand of West Bay SA, Genthod (Genève)
+          <br />
+          <span className="text-xs">
+            {t.otherSites}{" "}
+            <a
+              href={`https://ark-fid.ch/${activeLocale}/`}
+              className="hover:text-foreground hover:underline"
+            >
+              Ark Fiduciaire
+            </a>
+            <span aria-hidden="true"> · </span>
+            <a
+              href={`https://ridger.ch/${activeLocale}/`}
+              className="hover:text-foreground hover:underline"
+            >
+              Ridger
+            </a>
+          </span>
         </span>
       </div>
     </footer>
