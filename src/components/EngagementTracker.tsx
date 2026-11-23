@@ -3,7 +3,8 @@
 /**
  * GA4 engagement events on top of the Consent Mode tag (src/lib/engagement.ts):
  * scroll 25/50/75/90, outbound click with link_domain, file_download,
- * select_content on CTAs and service cards, faq_open, web_vitals.
+ * select_content on CTAs and service cards, faq_open, web_vitals. Also starts
+ * PostHog after load/idle and re-checks the replay rule on every route.
  * Events carry page structure only, never typed values.
  */
 import { useEffect, useRef } from "react";
@@ -11,6 +12,7 @@ import { usePathname } from "next/navigation";
 import { useReportWebVitals } from "next/web-vitals";
 import { trackEvent } from "@/src/lib/analytics";
 import { classifyLinkClick, newScrollThresholds, scrollPercent, webVitalParams } from "@/src/lib/engagement";
+import { startPostHogAfterLoad, syncSessionRecording } from "@/src/lib/posthog-lazy";
 
 export default function EngagementTracker() {
   const pathname = usePathname();
@@ -20,9 +22,14 @@ export default function EngagementTracker() {
     trackEvent("web_vitals", webVitalParams(metric));
   });
 
-  // New page: scroll thresholds start again.
+  useEffect(() => {
+    startPostHogAfterLoad();
+  }, []);
+
+  // New page: scroll thresholds start again, replay rule re-evaluated.
   useEffect(() => {
     sent.current = new Set();
+    syncSessionRecording();
   }, [pathname]);
 
   useEffect(() => {

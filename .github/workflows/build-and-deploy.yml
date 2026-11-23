@@ -51,6 +51,10 @@ env:
   GIT_CONFIG_COUNT: "1"
   GIT_CONFIG_KEY_0: init.defaultBranch
   GIT_CONFIG_VALUE_0: main
+  # Public client-side PostHog config (phc_ key is a public client key), own
+  # organisation "houle.ai", project "houle.ai website", EU cloud.
+  NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN: phc_yPVFpKM2iQY6RfnSUurQLiDoGgxwMioBbqeFQoovEBTH
+  NEXT_PUBLIC_POSTHOG_HOST: https://eu.i.posthog.com
 
 # Single job, same layout as ridger.ch (proven on this shared host): build,
 # upload, extract, then VERIFY. houle.ai's artifact also ships the tenant
@@ -164,6 +168,8 @@ jobs:
             "FORMSPARK_ACTION_URL",
             "RESTART_SECRET_TOKEN",
             "INDEXNOW_SECRET",
+            "NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN",
+            "NEXT_PUBLIC_POSTHOG_HOST",
           ]
           lines = [
             "PORT=5000",

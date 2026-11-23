@@ -1,5 +1,6 @@
 "use client";
 
+import posthog from "@/src/lib/posthog-lazy";
 import { getAttribution } from "@/src/lib/attribution";
 import { AI_SOURCE_KEY, gaClientIdFromCookies, readConsentChoice } from "@/src/lib/consent-mode";
 
@@ -15,6 +16,10 @@ import { AI_SOURCE_KEY, gaClientIdFromCookies, readConsentChoice } from "@/src/l
  */
 export type AnalyticsParams = Record<string, string | number | boolean>;
 
+const posthogConfigured = Boolean(process.env.NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN && process.env.NEXT_PUBLIC_POSTHOG_HOST);
+/** Events mirrored to PostHog (same set as ark-fid.ch, without its own product events). */
+const posthogEvents = new Set(["contact_form_start", "form_submit_error", "generate_lead"]);
+
 export function trackEvent(name: string, params?: AnalyticsParams) {
   if (name === "generate_lead") {
     params = { ...leadContext(), ...params };
@@ -22,6 +27,7 @@ export function trackEvent(name: string, params?: AnalyticsParams) {
   }
   try {
     if (typeof window === "undefined") return;
+    if (posthogConfigured && posthogEvents.has(name)) posthog.capture(name, params);
     const gtag = (window as { gtag?: (...args: unknown[]) => void }).gtag;
     if (typeof gtag !== "function") return;
     gtag("event", name, { transport_type: "beacon", ...params });

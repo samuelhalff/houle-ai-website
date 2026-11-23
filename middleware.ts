@@ -124,18 +124,24 @@ export function middleware(request: NextRequest) {
     return NextResponse.rewrite(internalUrl(request, target));
   }
 
+  // PostHog (EU cloud, project "houle.ai website"): scripts from the assets host, events to the API host.
+  const posthogHost = process.env.NEXT_PUBLIC_POSTHOG_HOST;
+  const posthogAssetsHost = posthogHost?.replace(".i.posthog.com", "-assets.i.posthog.com");
+  const posthogScriptSource = posthogAssetsHost ? ` ${posthogAssetsHost}` : "";
+  const posthogConnectSource = posthogHost ? ` ${posthogHost}` : "";
+
   // CSP: strict in production, relaxed in development for Next.js dev client
   const cspDirectives = (
     isProd
       ? [
           `default-src 'self'`,
           // Nonce-based inline scripts
-          `script-src 'self' 'nonce-${nonce}' 'strict-dynamic' https://maps.googleapis.com https://maps.gstatic.com`,
+          `script-src 'self' 'nonce-${nonce}' 'strict-dynamic' https://maps.googleapis.com https://maps.gstatic.com${posthogScriptSource}`,
           `script-src-attr 'none'`,
           // Allow inline styles for Tailwind and Next styles
           `style-src 'self' 'unsafe-inline'`,
           `font-src 'self' data:`,
-          `connect-src 'self' https: https://vitals.vercel-analytics.com https://api.formspark.io`,
+          `connect-src 'self' https: https://vitals.vercel-analytics.com https://api.formspark.io${posthogConnectSource}`,
           // Allow embedding Google Maps iframe & required map tiles/images
           `frame-src 'self' https://www.google.com https://maps.google.com https://maps.gstatic.com`,
           // Some map assets & JS served from these
@@ -144,6 +150,8 @@ export function middleware(request: NextRequest) {
           `base-uri 'self'`,
           `form-action 'self' https://api.formspark.io`,
           `object-src 'none'`,
+          // PostHog session replay compresses in a blob worker.
+          `worker-src 'self' blob:`,
         ]
       : [
           `default-src 'self'`,
@@ -159,6 +167,8 @@ export function middleware(request: NextRequest) {
           `base-uri 'self'`,
           `form-action 'self' https://api.formspark.io`,
           `object-src 'none'`,
+          // PostHog session replay compresses in a blob worker.
+          `worker-src 'self' blob:`,
         ]
   ).join("; ");
   // Allow Google's Trusted Types policy name used by Maps/Platform scripts
