@@ -210,5 +210,34 @@
         "Pause": "Animation anhalten",
         "Play": "Animation abspielen",
         "Fiction": "Beispiel"
+    },
+    "Faq": {
+        "Title": "Häufige Fragen",
+        "Items": [
+            {
+                "Question": "Wie wählt houle.ai die KI-Anwendungsfälle aus, die für ein Unternehmen geeignet sind?",
+                "Answer": "Wir beginnen mit einem Workshop mit Ihren Fach- und IT-Teams, um Prozesse, Volumina und Einschränkungen zu überprüfen. Anschließend bewerten wir die Ideen nach Wert, Machbarkeit und Risiko und wählen ein oder zwei aus."
+            },
+            {
+                "Question": "Ist die Beratung an einen bestimmten KI-Anbieter gebunden?",
+                "Answer": "Nein. Wir vergleichen Modelle von OpenAI, Anthropic, Mistral und Open-Source-Modelle wie Llama, Qwen oder Gemma anhand Ihres konkreten Falls. Die Wahl ist an keinen Anbieter gebunden."
+            },
+            {
+                "Question": "Was bedeutet 'in der Schweiz gehostet' konkret für ein KI-Projekt?",
+                "Answer": "Für jedes Projekt legen wir schriftlich fest, wo die Inferenz läuft, wo die Daten gespeichert werden, wer Zugang hat und was protokolliert wird."
+            },
+            {
+                "Question": "Wie läuft ein KI-Beratungsprojekt von der Entdeckung bis zur Produktion ab?",
+                "Answer": "Das Projekt folgt sechs Schritten: Entdeckungsworkshop, Auswahl der Anwendungsfälle, Modell- und Hosting-Wahl, gemessener Pilot, Produktionseinführung und Governance. Jeder Schritt hat ein Lieferobjekt und einen klaren Entscheidungspunkt."
+            },
+            {
+                "Question": "Wann ist ein in der Schweiz gehostetes Open-Source-Modell vorzuziehen?",
+                "Answer": "Ein Open-Source-Modell ist sinnvoll, wenn Daten dem Berufs- oder Arztgeheimnis unterliegen, die Aufgabe wiederkehrend und klar definiert ist oder Volumina die nutzungsbasierte Abrechnung teuer machen."
+            },
+            {
+                "Question": "Was passiert, wenn KI für einen Anwendungsfall nicht die richtige Lösung ist?",
+                "Answer": "Das sagen wir klar. Unsere Arbeit umfasst das Ausschließen von Fällen, in denen ein Fehler zu teuer wäre, die Regel nicht formuliert werden kann oder eine Tabellenkalkulation ausreicht."
+            }
+        ]
     }
 }

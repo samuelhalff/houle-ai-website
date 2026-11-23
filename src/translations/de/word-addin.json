@@ -82,5 +82,30 @@
         "Pause": "Animation anhalten",
         "Play": "Animation abspielen",
         "Fiction": "Beispiel"
+    },
+    "Faq": {
+        "Title": "Häufige Fragen",
+        "Items": [
+            {
+                "Question": "Wie schützt der KI-Assistent für Word die Vertraulichkeit von Dokumenten?",
+                "Answer": "Ihre Dokumente verbleiben in Ihrer Microsoft 365-Umgebung und die gesamte KI-Verarbeitung respektiert Ihre Datensouveränität. In der Schweiz gehostete Optionen sind verfügbar."
+            },
+            {
+                "Question": "Funktioniert das Word-Add-in mit meinen bestehenden Microsoft 365-Systemen?",
+                "Answer": "Ja, es verwendet die native Authentifizierung mit Microsoft Entra ID und arbeitet mit Ihren bestehenden Office 365-Richtlinien und Sicherheitskontrollen, ohne separate Anmeldung."
+            },
+            {
+                "Question": "Können Word-Vorlagen automatisch mit Kundendaten befüllt werden?",
+                "Answer": "Ja, das Add-in verbindet sich mit Ihrem CRM, um Vorlagen automatisch zu befüllen und Verträge, Angebote und Berichte in Sekunden zu generieren."
+            },
+            {
+                "Question": "Für welche Berufsgruppen ist der KI-Assistent in Word geeignet?",
+                "Answer": "Das Add-in ist für Anwaltskanzleien, Beratungsunternehmen und Finanzdienstleister in der Genferseeregion konzipiert, die regelmäßig Kundendokumente erstellen."
+            },
+            {
+                "Question": "Können die KI-Funktionen des Word-Add-ins pro Team angepasst werden?",
+                "Answer": "Ja, eine Administrationskonsole ermöglicht es, KI-Agenten zu konfigurieren, Prompts zu verwalten und Funktionen nach Benutzer oder Team zu steuern."
+            }
+        ]
     }
 }

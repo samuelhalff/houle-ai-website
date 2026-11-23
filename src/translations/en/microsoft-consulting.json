@@ -179,5 +179,30 @@
         "Pause": "Pause animation",
         "Play": "Play animation",
         "Fiction": "Example"
+    },
+    "Faq": {
+        "Title": "Frequently asked questions",
+        "Items": [
+            {
+                "Question": "Which Microsoft 365 tasks can be automated with Power Automate?",
+                "Answer": "Power Automate lets you build workflows between your Microsoft applications and hundreds of third-party services to eliminate tasks such as data collection, sending notifications, report creation and system synchronisation."
+            },
+            {
+                "Question": "Are Azure solutions hosted in Switzerland?",
+                "Answer": "Yes, our Azure solutions are hosted in Swiss data centres (Switzerland North), ensuring compliance with Swiss nLPD and GDPR for companies that require data residency in Switzerland."
+            },
+            {
+                "Question": "How does Power BI connect to existing company data?",
+                "Answer": "Power BI connects to your existing sources in Excel, SharePoint, your CRM or your management system, and creates dashboards that automatically refresh your key indicators."
+            },
+            {
+                "Question": "Will internal teams be able to maintain the solutions that are set up?",
+                "Answer": "Yes, we train your teams with sessions tailored to their level and clear documentation. The goal is to make your company self-sufficient."
+            },
+            {
+                "Question": "Can SharePoint do more than store files?",
+                "Answer": "Yes, SharePoint can structure information, automate business processes, improve collaboration and create modern intranets, all configured to your needs and governance best practices."
+            }
+        ]
     }
 }

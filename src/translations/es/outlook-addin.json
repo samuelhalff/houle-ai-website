@@ -86,5 +86,30 @@
     "Pause": "Pausar la animación",
     "Play": "Reproducir la animación",
     "Fiction": "Ejemplo"
+  },
+  "Faq": {
+    "Title": "Preguntas frecuentes",
+    "Items": [
+      {
+        "Question": "¿Cómo protege el complemento de Outlook la confidencialidad de los correos?",
+        "Answer": "Sus correos y contactos permanecen en su entorno de Microsoft 365. Hay opciones alojadas en Suiza disponibles para una confidencialidad máxima."
+      },
+      {
+        "Question": "¿El asistente IA de Outlook requiere un inicio de sesión o sincronización de datos separados?",
+        "Answer": "No, se autentica de forma nativa con Microsoft Entra ID y funciona dentro de la interfaz de Outlook con sus políticas existentes, sin inicio de sesión adicional."
+      },
+      {
+        "Question": "¿Puede la IA generar automáticamente respuestas de correo en Outlook?",
+        "Answer": "Sí, el complemento genera borradores profesionales en segundos basándose en el contexto de la conversación, con sugerencias de tono y mejoras de claridad."
+      },
+      {
+        "Question": "¿Cómo ayuda el complemento a gestionar hilos de correo largos?",
+        "Answer": "Produce resúmenes instantáneos de cadenas extensas, extrayendo automáticamente las acciones pendientes, las decisiones clave y las fechas importantes."
+      },
+      {
+        "Question": "¿Para qué perfiles profesionales está diseñado el asistente IA para Outlook?",
+        "Answer": "Está pensado para equipos de ventas, soporte al cliente y gestión de cuentas que gestionan grandes volúmenes de correos de clientes en la región del Lago Lemán."
+      }
+    ]
   }
 }

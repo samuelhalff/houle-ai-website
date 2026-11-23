@@ -82,12 +82,12 @@
     },
     "dynamic": {
         "articles": {
-            "titleTemplate": "{articleTitle} | houle - AI consulting Geneva",
-            "descriptionTemplate": "{articleDescription} | Expert insights from Geneva with Swiss data sovereignty.",
+            "titleTemplate": "{articleTitle} | houle",
+            "descriptionTemplate": "{articleDescription}",
             "keywords": "ai consulting geneva, ai solutions switzerland, open-source models hosted in switzerland, swiss data sovereignty"
         },
         "solutions": {
-            "titleTemplate": "{title} | houle - Swiss AI Agents",
+            "titleTemplate": "{title} | houle",
             "descriptionTemplate": "{description} | Swiss-hosted AI, human-in-the-loop, built for Microsoft 365.",
             "keywords": "ai agents switzerland, ai automation, swiss ai solutions, human-in-the-loop ai, microsoft 365 automation"
         }

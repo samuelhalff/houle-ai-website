@@ -210,5 +210,34 @@
         "Pause": "Pausar la animación",
         "Play": "Reproducir la animación",
         "Fiction": "Ejemplo"
+    },
+    "Faq": {
+        "Title": "Preguntas frecuentes",
+        "Items": [
+            {
+                "Question": "¿Cómo selecciona houle.ai los casos de uso de IA que vale la pena desarrollar?",
+                "Answer": "Comenzamos con un taller con sus equipos de negocio e informática para revisar procesos, volúmenes y restricciones. Luego clasificamos las ideas por valor, viabilidad y riesgo, y seleccionamos una o dos."
+            },
+            {
+                "Question": "¿El asesoramiento está vinculado a un proveedor de IA específico?",
+                "Answer": "No. Comparamos modelos de OpenAI, Anthropic, Mistral y modelos de código abierto como Llama, Qwen o Gemma en su caso concreto. La elección no está vinculada a ningún proveedor."
+            },
+            {
+                "Question": "¿Qué significa concretamente 'alojado en Suiza' para un proyecto de IA?",
+                "Answer": "Para cada proyecto, dejamos por escrito dónde se ejecuta la inferencia, dónde se almacenan los datos, quién tiene acceso y qué se registra."
+            },
+            {
+                "Question": "¿Cómo se desarrolla un proyecto de consultoría IA desde el descubrimiento hasta la producción?",
+                "Answer": "El proyecto sigue seis pasos: taller de descubrimiento, selección de casos de uso, elección del modelo y del alojamiento, piloto medido, puesta en producción y gobernanza. Cada paso tiene un entregable y una decisión clara."
+            },
+            {
+                "Question": "¿Cuándo es preferible un modelo de código abierto alojado en Suiza?",
+                "Answer": "Un modelo de código abierto resulta ventajoso cuando los datos están cubiertos por secreto profesional o médico, cuando la tarea es repetitiva y bien definida, o cuando los volúmenes hacen costosa la facturación por uso."
+            },
+            {
+                "Question": "¿Qué ocurre si la IA no es la solución adecuada para un caso de uso?",
+                "Answer": "Lo decimos claramente. Nuestro trabajo incluye descartar los casos en que un error sería demasiado costoso, donde la regla no puede escribirse o donde una hoja de cálculo es suficiente."
+            }
+        ]
     }
 }

@@ -116,7 +116,3 @@ jobs:
           FAIL_REASON: ${{ (steps.refresh.outcome != 'success' && format('refresh step {0}', steps.refresh.outcome)) || (steps.fix.outcome != 'success' && format('link fixer {0}', steps.fix.outcome)) || format('validation {0}', steps.validate.outcome) }}
         run: node scripts/refresh-next-article.js --finalize
 
-      - name: Ping sitemaps
-        if: always() && steps.finalize.outputs.status == 'done'
-        continue-on-error: true
-        run: node scripts/ping-sitemaps.js

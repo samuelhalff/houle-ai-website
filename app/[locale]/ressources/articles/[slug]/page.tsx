@@ -20,6 +20,7 @@ import RelatedArticles from "../components/RelatedArticles";
 import ArticleContextualCTA from "@/src/components/ui/article-contextual-cta";
 import { getCategoryService, splitArticleAtMidpoint } from "@/src/lib/articleCta";
 import { stripLeadingTitleH1 } from "@/src/lib/articleHeading";
+import PageFaq, { faqEntries } from "@/src/components/seo/PageFaq";
 import { buildInternalUrl } from "@/src/lib/paths";
 import { getWhatsAppLink } from "@/src/lib/whatsapp";
 import Breadcrumbs from "@/src/components/navigation/Breadcrumbs";
@@ -132,6 +133,7 @@ export default async function ArticlePage(props: Params) {
     inLanguage: locale,
     publisher: {
       "@type": "Organization",
+      "@id": `${baseUrl}/#organization`,
       name: "houle",
       logo: {
         "@type": "ImageObject",
@@ -205,12 +207,13 @@ export default async function ArticlePage(props: Params) {
           {ressources.By} <span className="font-medium text-foreground">{article.author}</span>
         </p>
         <p>
-          {ressources.Published} {formatDateDeterministic(article.date, locale)}
+          {ressources.Published}{" "}
+          <time dateTime={article.date}>{formatDateDeterministic(article.date, locale)}</time>
         </p>
-        {article.updated && (
+        {article.updated && article.updated !== article.date && (
           <p>
-            {ressources.LastUpdated}:{" "}
-            {formatDateDeterministic(article.updated, locale)}
+            {ressources.LastUpdated}{" "}
+            <time dateTime={article.updated}>{formatDateDeterministic(article.updated, locale)}</time>
           </p>
         )}
         {reading && (
@@ -279,6 +282,13 @@ export default async function ArticlePage(props: Params) {
           </ReactMarkdown>
         )}
       </article>
+
+      <PageFaq
+        compact
+        nonce={nonce}
+        title={ressources.FAQ?.Title || "FAQ"}
+        items={faqEntries(article.faq)}
+      />
 
       {references.length > 0 && (
         <section className="mt-10">
@@ -378,14 +388,16 @@ export async function generateMetadata(props: Params) {
     {
       articleTitle: article.title,
       articleDescription: article.description,
+      articleMetaTitle: article.metaTitle,
+      articleMetaDescription: article.metaDescription,
       validLocales,
     }
   );
 
   return {
+    // Title and description come from getPageMetadata: metaTitle and
+    // metaDescription when written, sized for the SERP otherwise.
     ...meta,
-    title: article.title,
-    description: article.description,
     robots: {
       index: true,
       follow: true,

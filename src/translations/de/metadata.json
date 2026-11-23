@@ -82,12 +82,12 @@
     },
     "dynamic": {
         "articles": {
-            "titleTemplate": "{articleTitle} | houle - KI-Beratung Genf",
-            "descriptionTemplate": "{articleDescription} | Expertenwissen aus Genf mit Schweizer Datensouveränität.",
+            "titleTemplate": "{articleTitle} | houle",
+            "descriptionTemplate": "{articleDescription}",
             "keywords": "ki-beratung genf, ki-lösungen schweiz, open-source-modelle schweiz gehostet, datensouveränität schweiz"
         },
         "solutions": {
-            "titleTemplate": "{title} | houle - Schweizer KI-Agenten",
+            "titleTemplate": "{title} | houle",
             "descriptionTemplate": "{description} | In der Schweiz gehostete KI, menschliche Prüfung, für Microsoft 365.",
             "keywords": "ki-agenten schweiz, ki-automatisierung, schweizer ki-lösungen, ki mit menschlicher prüfung, microsoft 365 automatisierung"
         }

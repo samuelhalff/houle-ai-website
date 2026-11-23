@@ -106,5 +106,34 @@
         "Pause": "Mettre l'animation en pause",
         "Play": "Lancer l'animation",
         "Fiction": "Exemple"
+    },
+    "Faq": {
+        "Title": "Questions fréquentes",
+        "Items": [
+            {
+                "Question": "Quels modèles d'IA sont disponibles dans Swiss GPT ?",
+                "Answer": "La plateforme donne accès à GPT-5, GPT-4.1, o3, Claude, Llama et Mistral, déployés sur l'infrastructure Azure en Suisse Nord."
+            },
+            {
+                "Question": "Les données sont-elles utilisées pour entraîner les modèles d'IA ?",
+                "Answer": "Non. La politique de rétention zéro garantit que vos données ne sont jamais utilisées pour l'entraînement des modèles."
+            },
+            {
+                "Question": "Swiss GPT est-il conforme à la LPD suisse et au RGPD ?",
+                "Answer": "Oui. Toutes les conversations et documents restent dans les centres de données suisses (Azure Suisse Nord, région de Zurich), en conformité totale avec la LPD suisse et le RGPD."
+            },
+            {
+                "Question": "Comment les entreprises s'authentifient-elles sur la plateforme Swiss GPT ?",
+                "Answer": "La plateforme propose une authentification unique avec Microsoft Entra ID ou votre fournisseur d'identité existant, avec authentification multifacteur obligatoire."
+            },
+            {
+                "Question": "Quelle est la différence entre Swiss GPT et ChatGPT standard ?",
+                "Answer": "Avec Swiss GPT, tout le traitement reste dans les centres de données suisses, les données ne sont jamais utilisées pour entraîner les modèles, et vous bénéficiez de contrôles d'entreprise, de journaux d'audit et du support SSO."
+            },
+            {
+                "Question": "Le support est-il disponible en français depuis la Suisse ?",
+                "Answer": "Oui, l'équipe de support est basée à Genève et disponible en français, allemand et anglais, avec une gestion de compte dédiée pour les clients entreprise."
+            }
+        ]
     }
 }

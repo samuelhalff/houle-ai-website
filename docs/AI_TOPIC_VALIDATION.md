@@ -209,4 +209,4 @@ When updating this validation:
 - `scripts/ai-ressources-update.js`: Main script with validation
 - `scripts/translate-articles.js`: Updated acronyms list for AI/tech terms
 - `scripts/lib/trends.js`: EVERGREEN_TOPICS already AI-focused
-- `.github/workflows/ai-ressources-every-4-days.yml`: CI workflow that runs the script
+- `.github/workflows/ai-ressources-weekly.yml`: CI workflow that runs the script

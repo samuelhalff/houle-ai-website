@@ -71,5 +71,30 @@
         "Pause": "Animation anhalten",
         "Play": "Animation abspielen",
         "Fiction": "Beispiel"
+    },
+    "Faq": {
+        "Title": "Häufige Fragen",
+        "Items": [
+            {
+                "Question": "Wo werden die KI-Agenten von houle.ai gehostet?",
+                "Answer": "Die Agenten werden in der Schweiz auf Azure mit Azure AI Foundry betrieben. Ihre Daten verbleiben im schweizerischen Perimeter und jede Entscheidung ist nachvollziehbar."
+            },
+            {
+                "Question": "Wie funktioniert die menschliche Validierung bei einem KI-Agenten?",
+                "Answer": "Vor jeder Aktion mit realer Wirkung prüft und genehmigt ein Mitarbeitender den Vorschlag des Agenten. Der Agent schlägt vor, der Mensch entscheidet: Sie behalten die Kontrolle und die endgültige Verantwortung."
+            },
+            {
+                "Question": "Welche Werkzeuge kann ein KI-Agent in meinem Unternehmen nutzen?",
+                "Answer": "Die Agenten verbinden sich mit Microsoft 365, SharePoint, Outlook, Ihrem ERP und Ihren internen APIs, um dort zu lesen und zu schreiben, wo die Arbeit tatsächlich stattfindet."
+            },
+            {
+                "Question": "Welche Geschäftsprozesse lassen sich mit einem KI-Agenten automatisieren?",
+                "Answer": "Zu den gefragtesten Anwendungsfällen zählen die Verarbeitung von Lieferantenrechnungen, die Sortierung von Kunden-E-Mails, Vertragsüberprüfungen, das Onboarding neuer Mitarbeitender, Besprechungsprotokolle und die Lead-Qualifizierung."
+            },
+            {
+                "Question": "Wie nimmt ein KI-Agent eine Situation wahr und entscheidet, was zu tun ist?",
+                "Answer": "Der Agent empfängt eine Eingabe (E-Mail, PDF, Formular), extrahiert die wichtigsten Informationen, unterteilt das Ziel gemäß Ihren Geschäftsregeln in Schritte und führt dann Aktionen über Ihre verbundenen Systeme aus."
+            }
+        ]
     }
 }

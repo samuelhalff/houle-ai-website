@@ -9,5 +9,22 @@
     "Name": "Name",
     "Email": "Email",
     "Message": "How can we help?"
+  },
+  "Faq": {
+    "Title": "Frequently asked questions",
+    "Items": [
+      {
+        "Question": "How can I reach houle.ai?",
+        "Answer": "You can book a call directly from the contact page, write to contact@houle.ai, send a WhatsApp message for a quick exchange, or fill in the online form."
+      },
+      {
+        "Question": "What should I include in a first message to houle.ai?",
+        "Answer": "Briefly describe your use case, your data constraints and your current tools. The more specific you are about your context, the more useful the initial exchange will be."
+      },
+      {
+        "Question": "What happens after the first contact?",
+        "Answer": "We start with a short call to discuss your use case and next steps, then identify together a small measured pilot to launch as a priority."
+      }
+    ]
   }
 }

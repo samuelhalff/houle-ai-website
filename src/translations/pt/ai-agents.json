@@ -71,5 +71,30 @@
         "Pause": "Pausar a animação",
         "Play": "Iniciar a animação",
         "Fiction": "Exemplo"
+    },
+    "Faq": {
+        "Title": "Perguntas frequentes",
+        "Items": [
+            {
+                "Question": "Onde são alojados os agentes IA da houle.ai?",
+                "Answer": "Os agentes são implementados no Azure na Suíça com o Azure AI Foundry. Os seus dados permanecem no perímetro suíço e cada decisão é rastreável."
+            },
+            {
+                "Question": "Como funciona a validação humana num agente IA?",
+                "Answer": "Antes de qualquer ação com efeito real, um colaborador revê e aprova o que o agente propõe. O agente age, o humano decide: você mantém o controlo e a responsabilidade final."
+            },
+            {
+                "Question": "Que ferramentas pode um agente IA utilizar na minha empresa?",
+                "Answer": "Os agentes ligam-se ao Microsoft 365, SharePoint, Outlook, ao seu ERP e às suas APIs internas para ler e escrever onde o trabalho realmente acontece."
+            },
+            {
+                "Question": "Que processos de negócio podem ser automatizados com um agente IA?",
+                "Answer": "Os casos de uso mais solicitados incluem o processamento de faturas de fornecedores, triagem de e-mails de clientes, revisão de contratos, integração de novos colaboradores, atas de reuniões e qualificação de leads."
+            },
+            {
+                "Question": "Como percebe um agente IA uma situação e decide o que fazer?",
+                "Answer": "O agente recebe uma entrada (e-mail, PDF, formulário), extrai as informações-chave, divide o objetivo em etapas de acordo com as suas regras de negócio e executa as ações através das suas ferramentas ligadas."
+            }
+        ]
     }
 }

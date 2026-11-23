@@ -190,6 +190,7 @@ export default async function RootLayout({
       "@type": "Corporation",
       name: "West Bay SA",
       legalName: "West Bay SA",
+      sameAs: ["https://www.zefix.ch/fr/search/entity/list/firm/3858"],
       taxID: "CHE-107.892.984",
       address: {
         "@type": "PostalAddress",

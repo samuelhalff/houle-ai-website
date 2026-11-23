@@ -210,5 +210,34 @@
         "Pause": "Pausar a animação",
         "Play": "Iniciar a animação",
         "Fiction": "Exemplo"
+    },
+    "Faq": {
+        "Title": "Perguntas frequentes",
+        "Items": [
+            {
+                "Question": "Como é que a houle.ai seleciona os casos de uso de IA que valem a pena para uma empresa?",
+                "Answer": "Começamos com um workshop com as suas equipas de negócio e TI para rever processos, volumes e restrições. Depois classificamos as ideias por valor, viabilidade e risco, e selecionamos uma ou duas."
+            },
+            {
+                "Question": "A consultoria está ligada a um fornecedor de IA específico?",
+                "Answer": "Não. Comparamos modelos da OpenAI, Anthropic, Mistral e modelos open source como Llama, Qwen ou Gemma no seu caso concreto. A escolha não está ligada a nenhum fornecedor."
+            },
+            {
+                "Question": "O que significa concretamente 'alojado na Suíça' para um projeto de IA?",
+                "Answer": "Para cada projeto, registamos por escrito onde corre a inferência, onde os dados são armazenados, quem tem acesso e o que é registado."
+            },
+            {
+                "Question": "Como decorre um projeto de consultoria IA desde a descoberta até à produção?",
+                "Answer": "O projeto segue seis etapas: workshop de descoberta, seleção de casos de uso, escolha do modelo e do alojamento, piloto medido, entrada em produção e governação. Cada etapa tem um entregável e uma decisão clara."
+            },
+            {
+                "Question": "Quando é preferível um modelo open source alojado na Suíça?",
+                "Answer": "Um modelo open source torna-se vantajoso quando os dados estão cobertos por sigilo profissional ou médico, quando a tarefa é repetitiva e bem definida, ou quando os volumes tornam a faturação por uso dispendiosa."
+            },
+            {
+                "Question": "O que acontece se a IA não for a solução certa para um caso de uso?",
+                "Answer": "Dizemo-lo claramente. O nosso trabalho inclui excluir os casos em que um erro seria demasiado caro, onde a regra não pode ser escrita ou onde uma folha de cálculo é suficiente."
+            }
+        ]
     }
 }

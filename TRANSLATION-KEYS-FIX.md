@@ -284,3 +284,31 @@ Top-level key `RelatedArticles` in `src/translations/<locale>/ressources.json`, 
 | de | Verwandte Artikel |
 | es | Artículos relacionados |
 | pt (Brazilian) | Artigos relacionados |
+
+### Article update date (`LastUpdated` key)
+
+Top-level key `LastUpdated` in `src/translations/<locale>/ressources.json`, used by `app/[locale]/ressources/articles/[slug]/page.tsx` before the `updated` date (rendered in a `<time datetime>` element, only when it differs from the publication date). The page showed ": 28/10/2026" without it.
+
+| Locale | Value |
+|--------|-------|
+| en | Updated on |
+| fr | Mis à jour le |
+| de | Aktualisiert am |
+| es | Actualizado el |
+| pt | Atualizado em |
+
+### Page FAQ (`Faq` key) and article FAQ (`faq` field)
+
+`Faq` in `src/translations/<locale>/{ai-agents,word-addin,outlook-addin,swiss-gpt,ai-consulting,microsoft-consulting,contact}.json`, shape `{ "Title": "...", "Items": [ { "Question": "...", "Answer": "..." } ] }` (3 to 6 items). Rendered by `src/components/seo/PageFaq.tsx`, which outputs the visible block (H2 title, H3 questions) and the FAQPage JSON-LD from the same strings.
+
+Each article in `ressources.json` has a `faq` array `[ { "q": "...", "a": "..." } ]` (3 to 5 items) shown under the article with the existing `FAQ.Title` heading. Former `## FAQ` sections of the Markdown moved into this field. The article workflows (`scripts/ai-ressources-update.js`, `scripts/lib/articleRefresh.js`) generate and translate it.
+
+| Locale | `Faq.Title` |
+|--------|-------------|
+| en | Frequently asked questions |
+| fr | Questions fréquentes |
+| de | Häufige Fragen |
+| es | Preguntas frecuentes |
+| pt | Perguntas frequentes |
+
+Checked by `src/lib/faq-content.test.ts` (counts, JSON-LD = visible text, no dashes or Markdown, U+202F in French).

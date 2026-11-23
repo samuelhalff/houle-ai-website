@@ -210,5 +210,34 @@
         "Pause": "Mettre l'animation en pause",
         "Play": "Lancer l'animation",
         "Fiction": "Exemple"
+    },
+    "Faq": {
+        "Title": "Questions fréquentes",
+        "Items": [
+            {
+                "Question": "Comment houle.ai choisit-il les cas d'usage IA à retenir pour une entreprise ?",
+                "Answer": "Nous commençons par un atelier avec vos équipes métier et informatique pour passer en revue vos processus, volumes et contraintes. Nous classons ensuite les idées selon leur valeur, leur faisabilité et leur risque, et en retenons une ou deux."
+            },
+            {
+                "Question": "Le conseil est-il lié à un éditeur d'IA en particulier ?",
+                "Answer": "Non. Nous comparons les modèles d'OpenAI, Anthropic, Mistral et les modèles open source comme Llama, Qwen ou Gemma sur votre cas précis. Le choix n'est lié à aucun éditeur."
+            },
+            {
+                "Question": "Que signifie concrètement « hébergé en Suisse » pour un projet IA ?",
+                "Answer": "Nous fixons par écrit l'emplacement de l'inférence, la localisation des données, la liste des personnes ayant accès et ce qui est journalisé, pour chaque projet."
+            },
+            {
+                "Question": "Comment se déroule un projet de conseil IA, de la découverte à la production ?",
+                "Answer": "Le projet suit six étapes : atelier de découverte, sélection des cas d'usage, choix du modèle et de l'hébergement, pilote mesuré, mise en production et gouvernance. Chaque étape a un livrable et une décision claire."
+            },
+            {
+                "Question": "Dans quelles situations un modèle open source hébergé en Suisse est-il préférable ?",
+                "Answer": "Un modèle open source devient intéressant quand les données sont couvertes par un secret professionnel ou médical, quand la tâche est répétitive et bien définie, ou quand les volumes rendent la facturation à l'usage coûteuse."
+            },
+            {
+                "Question": "Que se passe-t-il si l'IA n'est pas la bonne solution pour un cas d'usage ?",
+                "Answer": "Nous le disons. Notre travail inclut d'écarter les cas où une erreur coûterait trop cher, dont la règle ne peut pas être écrite ou pour lesquels un tableur suffit."
+            }
+        ]
     }
 }

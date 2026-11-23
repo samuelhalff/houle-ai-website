@@ -179,5 +179,30 @@
         "Pause": "Animation anhalten",
         "Play": "Animation abspielen",
         "Fiction": "Beispiel"
+    },
+    "Faq": {
+        "Title": "Häufige Fragen",
+        "Items": [
+            {
+                "Question": "Welche Microsoft 365-Aufgaben können mit Power Automate automatisiert werden?",
+                "Answer": "Power Automate ermöglicht es, Workflows zwischen Ihren Microsoft-Anwendungen und Hunderten von Drittanbieterdiensten zu erstellen, um Aufgaben wie Datenerfassung, Benachrichtigungen, Berichtserstellung und Systemsynchronisation zu eliminieren."
+            },
+            {
+                "Question": "Werden Azure-Lösungen in der Schweiz gehostet?",
+                "Answer": "Ja, unsere Azure-Lösungen werden in Schweizer Rechenzentren (Switzerland North) gehostet und gewährleisten die Konformität mit dem Schweizer DSG und der DSGVO für Unternehmen, die eine Datenhaltung in der Schweiz benötigen."
+            },
+            {
+                "Question": "Wie verbindet sich Power BI mit vorhandenen Unternehmensdaten?",
+                "Answer": "Power BI verbindet sich mit Ihren bestehenden Quellen in Excel, SharePoint, Ihrem CRM oder Ihrem Verwaltungssystem und erstellt Dashboards, die Ihre wichtigsten Kennzahlen automatisch aktualisieren."
+            },
+            {
+                "Question": "Können interne Teams die eingerichteten Lösungen pflegen?",
+                "Answer": "Ja, wir schulen Ihre Teams mit niveauangepassten Sitzungen und klarer Dokumentation. Das Ziel ist es, Ihr Unternehmen selbstständig zu machen."
+            },
+            {
+                "Question": "Kann SharePoint mehr als nur Dateien speichern?",
+                "Answer": "Ja, SharePoint kann Informationen strukturieren, Geschäftsprozesse automatisieren, die Zusammenarbeit verbessern und moderne Intranets erstellen, alles nach Ihren Anforderungen und Governance-Best-Practices konfiguriert."
+            }
+        ]
     }
 }

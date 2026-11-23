@@ -82,12 +82,12 @@
     },
     "dynamic": {
         "articles": {
-            "titleTemplate": "{articleTitle} | houle - Consultoria de IA Genebra",
-            "descriptionTemplate": "{articleDescription} | Expertise de Genebra com soberania de dados suíça.",
+            "titleTemplate": "{articleTitle} | houle",
+            "descriptionTemplate": "{articleDescription}",
             "keywords": "consultoria de ia genebra, soluções de ia suíça, modelos de código aberto hospedados na suíça, soberania de dados suíça"
         },
         "solutions": {
-            "titleTemplate": "{title} | houle - Agentes de IA suíços",
+            "titleTemplate": "{title} | houle",
             "descriptionTemplate": "{description} | IA hospedada na Suíça, validação humana, pensada para Microsoft 365.",
             "keywords": "agentes ia suíça, automação ia, soluções ia suíças, ia validação humana, automação microsoft 365"
         }

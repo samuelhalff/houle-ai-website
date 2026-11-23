@@ -86,5 +86,30 @@
         "Pause": "Animation anhalten",
         "Play": "Animation abspielen",
         "Fiction": "Beispiel"
+    },
+    "Faq": {
+        "Title": "Häufige Fragen",
+        "Items": [
+            {
+                "Question": "Wie schützt das Outlook-Add-in die Vertraulichkeit von E-Mails?",
+                "Answer": "Ihre E-Mails und Kontakte verbleiben in Ihrer Microsoft 365-Umgebung. In der Schweiz gehostete Optionen sind für maximale Vertraulichkeit verfügbar."
+            },
+            {
+                "Question": "Erfordert der KI-Assistent für Outlook eine separate Anmeldung oder Datensynchronisierung?",
+                "Answer": "Nein, er authentifiziert sich nativ mit Microsoft Entra ID und funktioniert in der Outlook-Oberfläche mit Ihren bestehenden Richtlinien, ohne zusätzliche Anmeldung."
+            },
+            {
+                "Question": "Kann die KI in Outlook automatisch E-Mail-Antworten generieren?",
+                "Answer": "Ja, das Add-in erstellt in Sekunden professionelle Entwürfe auf Basis des Gesprächskontexts, mit Tonvorschlägen und Verbesserungen der Klarheit."
+            },
+            {
+                "Question": "Wie hilft das Add-in bei der Verwaltung langer E-Mail-Verläufe?",
+                "Answer": "Es erstellt sofortige Zusammenfassungen langer E-Mail-Ketten und extrahiert automatisch Aufgaben, Schlüsselentscheidungen und wichtige Termine."
+            },
+            {
+                "Question": "Für welche Berufsprofile ist der KI-Assistent für Outlook konzipiert?",
+                "Answer": "Er ist für Vertriebsteams, Kundensupport und Account Management gedacht, die in der Genferseeregion hohe E-Mail-Volumina mit Kunden verwalten."
+            }
+        ]
     }
 }

@@ -106,5 +106,34 @@
         "Pause": "Pausar la animación",
         "Play": "Reproducir la animación",
         "Fiction": "Ejemplo"
+    },
+    "Faq": {
+        "Title": "Preguntas frecuentes",
+        "Items": [
+            {
+                "Question": "¿Qué modelos de IA están disponibles en Swiss GPT?",
+                "Answer": "La plataforma ofrece acceso a GPT-5, GPT-4.1, o3, Claude, Llama y Mistral, desplegados en la infraestructura de Azure en Switzerland North."
+            },
+            {
+                "Question": "¿Se usan los datos para entrenar los modelos de IA?",
+                "Answer": "No. Una política de retención cero garantiza que sus datos nunca se utilizan para el entrenamiento de los modelos."
+            },
+            {
+                "Question": "¿Es Swiss GPT conforme con la LPD suiza y el RGPD?",
+                "Answer": "Sí. Todas las conversaciones y documentos permanecen en centros de datos suizos (Azure Switzerland North, región de Zúrich), en plena conformidad con la LPD suiza y el RGPD."
+            },
+            {
+                "Question": "¿Cómo se autentican las empresas en la plataforma Swiss GPT?",
+                "Answer": "La plataforma ofrece inicio de sesión único con Microsoft Entra ID o su proveedor de identidad existente, con autenticación multifactor obligatoria."
+            },
+            {
+                "Question": "¿Cuál es la diferencia entre Swiss GPT y el ChatGPT estándar?",
+                "Answer": "Con Swiss GPT, todo el procesamiento permanece en centros de datos suizos, los datos nunca se usan para entrenar modelos, y usted obtiene controles empresariales, registros de auditoría y soporte SSO."
+            },
+            {
+                "Question": "¿Hay soporte disponible en español desde Suiza?",
+                "Answer": "El equipo de soporte está basado en Ginebra y disponible en francés, alemán e inglés, con gestión de cuenta dedicada para clientes empresariales."
+            }
+        ]
     }
 }

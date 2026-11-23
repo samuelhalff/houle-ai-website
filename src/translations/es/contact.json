@@ -9,5 +9,22 @@
     "Name": "Nombre",
     "Email": "Correo electrónico",
     "Message": "¿Cómo podemos ayudar?"
+  },
+  "Faq": {
+    "Title": "Preguntas frecuentes",
+    "Items": [
+      {
+        "Question": "¿Cómo puedo contactar con houle.ai?",
+        "Answer": "Puede reservar una llamada directamente desde la página de contacto, escribir a contact@houle.ai, enviar un mensaje por WhatsApp para un intercambio rápido, o rellenar el formulario en línea."
+      },
+      {
+        "Question": "¿Qué debo incluir en un primer mensaje a houle.ai?",
+        "Answer": "Describa brevemente su caso de uso, sus restricciones de datos y las herramientas que utiliza. Cuanto más concreto sea sobre su contexto, más útil será el primer intercambio."
+      },
+      {
+        "Question": "¿Qué ocurre después del primer contacto?",
+        "Answer": "Comenzamos con una breve llamada para hablar de su caso de uso y los siguientes pasos, y luego identificamos juntos un pequeño piloto medido que lanzar como prioridad."
+      }
+    ]
   }
 }

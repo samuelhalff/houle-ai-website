@@ -3,10 +3,11 @@ import Link from "next/link";
 import TrackedLink from "@/src/components/ui/tracked-link";
 import ServicePillarCard from "@/src/components/ui/service-pillar-card";
 import ServiceTypicalSituations from "@/src/components/ui/service-typical-situations";
-import { getTranslations, type Locale } from "@/src/lib/i18n";
+import { getTranslations, getTranslationsRecord, type Locale } from "@/src/lib/i18n";
 import { getCspNonce } from "@/src/lib/csp";
 import { generateMetadataForPage } from "@/src/lib/metadata";
 import StructuredData from "@/src/components/seo/StructuredData";
+import PageFaq, { faqEntries } from "@/src/components/seo/PageFaq";
 import {
   buildBreadcrumbList,
   buildServiceSchema,
@@ -36,6 +37,7 @@ export async function generateMetadata(
 const AIConsultingPage = async (props: { params: Promise<{ locale: string }> }) => {
   const params = await props.params;
   const nonce = await getCspNonce();
+  const faq = (getTranslationsRecord((params.locale as Locale), "ai-consulting").Faq ?? {}) as { Title?: string; Items?: unknown };
   const baseUrl = "https://houle.ai";
   const localePrefix = `/${params.locale}`;
   const tService = await getTranslations(params.locale as Locale, "ai-consulting");
@@ -331,6 +333,7 @@ const AIConsultingPage = async (props: { params: Promise<{ locale: string }> }) 
           </div>
         </Reveal>
       </div>
+      <PageFaq nonce={nonce} title={faq.Title || "FAQ"} items={faqEntries(faq.Items)} />
     </div>
   );
 };

@@ -71,5 +71,30 @@
         "Pause": "Pause animation",
         "Play": "Play animation",
         "Fiction": "Example"
+    },
+    "Faq": {
+        "Title": "Frequently asked questions",
+        "Items": [
+            {
+                "Question": "Where are houle.ai's AI agents hosted?",
+                "Answer": "The agents are deployed on Azure in Switzerland using Azure AI Foundry. Your data stays within the Swiss perimeter and every decision is traceable."
+            },
+            {
+                "Question": "How does human validation work in an AI agent?",
+                "Answer": "Before any action with real-world effect, a team member reviews and approves what the agent proposes. The agent acts, the human decides: you keep control and final responsibility."
+            },
+            {
+                "Question": "Which tools can an AI agent use within my company?",
+                "Answer": "Agents connect to Microsoft 365, SharePoint, Outlook, your ERP and your internal APIs to read and write where work actually happens."
+            },
+            {
+                "Question": "Which business processes can be automated with an AI agent?",
+                "Answer": "The most requested use cases include supplier invoice processing, customer email sorting, contract review, employee onboarding, meeting minutes and lead qualification."
+            },
+            {
+                "Question": "How does an AI agent perceive a situation and decide what to do?",
+                "Answer": "The agent receives an input (email, PDF, form), extracts the key information, breaks the goal into steps according to your business rules, then executes actions through your connected tools."
+            }
+        ]
     }
 }

@@ -82,5 +82,30 @@
         "Pause": "Pause animation",
         "Play": "Play animation",
         "Fiction": "Example"
+    },
+    "Faq": {
+        "Title": "Frequently asked questions",
+        "Items": [
+            {
+                "Question": "How does the AI assistant for Word protect document confidentiality?",
+                "Answer": "Your documents stay within your Microsoft 365 environment and all AI processing respects your data sovereignty. Swiss-hosted options are available."
+            },
+            {
+                "Question": "Does the Word add-in work with my existing Microsoft 365 systems?",
+                "Answer": "Yes, it uses native authentication with Microsoft Entra ID and works with your existing Office 365 policies and security controls, with no separate login required."
+            },
+            {
+                "Question": "Can Word templates be automatically filled with client data?",
+                "Answer": "Yes, the add-in connects to your CRM to automatically fill templates and generate contracts, proposals and reports in seconds."
+            },
+            {
+                "Question": "Which types of professionals can use the AI assistant in Word?",
+                "Answer": "The add-in is designed for law firms, consulting firms and financial services in the Lake Geneva region that regularly produce client-facing documents."
+            },
+            {
+                "Question": "Can the AI features in the Word add-in be customised per team?",
+                "Answer": "Yes, an admin console lets you configure AI agents, manage prompts and control features by user or team."
+            }
+        ]
     }
 }

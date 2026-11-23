@@ -4,6 +4,8 @@
 
 The site is available in French (master), English, German, Spanish and Portuguese under /fr/, /en/, /de/, /es/ and /pt/.
 
+Full text of every public page in French and English, as Markdown: [llms-full.txt](https://houle.ai/llms-full.txt)
+
 ## What houle does
 
 - AI consulting: discovery workshop, use-case selection, model and hosting choice (proprietary or open source), measured pilot, production, governance.

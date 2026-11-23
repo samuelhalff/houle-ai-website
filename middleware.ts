@@ -72,8 +72,9 @@ export function middleware(request: NextRequest) {
     .slice(0, 32);
   const isProd = process.env.NODE_ENV === "production";
   const host = request.headers.get("host") || "";
+  // URLs with a query string keep their indexable meta and canonical: a
+  // noindex header here contradicted both. Redirects carry no X-Robots-Tag.
   const shouldNoIndex =
-    request.nextUrl.search.length > 0 ||
     pathname.includes("/opengraph-image") ||
     pathname.includes("/twitter-image");
 
@@ -111,9 +112,7 @@ export function middleware(request: NextRequest) {
     // nextUrl carries the internal server port behind the tenant proxy;
     // public URLs are always :443.
     redirectUrl.port = "";
-    const response = NextResponse.redirect(redirectUrl, 308);
-    response.headers.set("X-Robots-Tag", "noindex, nofollow");
-    return response;
+    return NextResponse.redirect(redirectUrl, 308);
   }
 
   // Normalize locale-prefixed requests for common root assets (e.g. /en/favicon.png -> /favicon.png)
@@ -191,10 +190,6 @@ export function middleware(request: NextRequest) {
       const response = NextResponse.redirect(redirectUrl, 308);
       response.headers.set("x-pathname", pathname);
       applySecurityHeaders(response, { nonce, csp, isProd, noIndex: shouldNoIndex });
-      // Always noindex redirects to avoid "Page with redirect" indexing noise.
-      if (!response.headers.has("X-Robots-Tag")) {
-        response.headers.set("X-Robots-Tag", "noindex, nofollow");
-      }
       return response;
     };
 
@@ -263,9 +258,6 @@ export function middleware(request: NextRequest) {
       redirectUrl.search = request.nextUrl.search;
       const response = NextResponse.redirect(redirectUrl, 308);
       applySecurityHeaders(response, { nonce, csp, isProd, noIndex: shouldNoIndex });
-      if (!response.headers.has("X-Robots-Tag")) {
-        response.headers.set("X-Robots-Tag", "noindex, nofollow");
-      }
       return response;
     }
 
@@ -309,10 +301,6 @@ export function middleware(request: NextRequest) {
   response.headers.set("x-pathname", pathname);
   response.headers.set("Vary", "Accept-Language");
   applySecurityHeaders(response, { nonce, csp, isProd, noIndex: shouldNoIndex });
-  // Removed report-only header
-  if (!response.headers.has("X-Robots-Tag")) {
-    response.headers.set("X-Robots-Tag", "noindex, nofollow");
-  }
   return response;
 }
 

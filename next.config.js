@@ -6,6 +6,10 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
 /** @type {import('next').NextConfig} */
 const baseConfig = {
   trailingSlash: true,
+  // Blocking metadata for every user agent: title, description, canonical and
+  // hreflang stay in <head> (streamed metadata ended up in <body> for
+  // Googlebot and the AI crawlers that do not run JavaScript).
+  htmlLimitedBots: /.*/,
   // Let middleware own URL canonicalization so slashless requests do not hit
   // a framework-level redirect before locale normalization/noindex headers apply.
   skipTrailingSlashRedirect: true,
@@ -83,17 +87,15 @@ const baseConfig = {
           },
         ],
       },
-      // Cache public assets (images, svgs, css, js) with long TTL
+      // Public assets: names carry no content hash, so no "immutable" (a
+      // replaced file must reach visitors). Indexable: the JSON-LD logo, the
+      // share images and photos live here.
       {
         source: "/assets/:path*",
         headers: [
           {
             key: "Cache-Control",
-            value: "public, max-age=31536000, immutable",
-          },
-          {
-            key: "X-Robots-Tag",
-            value: "noindex, nofollow, noimageindex",
+            value: "public, max-age=2592000",
           },
         ],
       },

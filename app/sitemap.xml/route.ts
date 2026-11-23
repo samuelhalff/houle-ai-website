@@ -7,9 +7,37 @@ import { getTranslationsRecord } from "@/src/lib/i18n";
 
 const BASE = "https://houle.ai";
 const canonicalLocale: Locale = "fr";
-// Static/product pages carry no <lastmod>: CI checks out with the default
-// shallow clone (actions/checkout, depth 1), so git dates are not reliable and
-// no truthful date is available. Articles use their own `updated` or `date`.
+// CI checks out a shallow clone, so git dates are not available at build
+// time. Static, service, product and solution pages carry the date of their
+// last content change below: bump the entry when a page changes meaningfully
+// (a build date would mark every URL as modified on each deploy, and IndexNow
+// pings the URLs whose lastmod changed). Articles use `updated` or `date`.
+const STATIC_LASTMOD: Record<string, string> = {
+  "/": "2026-10-24",
+  "/services": "2026-10-28",
+  "/products": "2026-10-28",
+  "/ressources": "2026-10-28",
+  "/contact": "2026-10-26",
+  "/solutions": "2026-07-24",
+  "/legal/terms": "2026-10-26",
+  "/legal/privacy": "2026-10-26",
+  "/legal/cookies": "2026-10-26",
+  "/services/ai-consulting": "2026-10-28",
+  "/services/microsoft-consulting": "2026-10-28",
+  "/products/ai-agents": "2026-10-28",
+  "/products/word-addin": "2026-10-28",
+  "/products/outlook-addin": "2026-10-30",
+  "/products/swiss-gpt": "2026-10-28",
+  "/products/chat-website": "2026-10-27",
+};
+// Solution pages share one content file (solutions.json).
+const SOLUTIONS_LASTMOD = "2026-07-24";
+
+function lastmodFor(entry: PathEntry): string | undefined {
+  if (entry.path.startsWith("/ressources/articles/")) return entry.updated || entry.date;
+  if (entry.path.startsWith("/solutions/")) return SOLUTIONS_LASTMOD;
+  return STATIC_LASTMOD[entry.path];
+}
 
 function getPlaceholderLocales(): Set<string> {
   const raw = process.env.PLACEHOLDER_LOCALES || "";
@@ -121,36 +149,10 @@ export async function GET() {
       const basePath = p === "/" ? "" : p;
       const localized = basePath ? localizePath(basePath, locale) : "";
       const loc = `${BASE}/${locale}${localized}/`;
-      const lastmodValue = p.startsWith("/ressources/articles/")
-        ? pObj.updated || pObj.date
-        : undefined;
+      const lastmodValue = lastmodFor(pObj);
       const lastmodTag = lastmodValue
         ? `\n    <lastmod>${escapeXml(lastmodValue)}</lastmod>`
         : "";
-      const isHome = p === "/";
-      const isArticle = p.startsWith("/ressources/articles/");
-      const isResources = p.startsWith("/ressources") && !isArticle;
-      const isService = p.startsWith("/services");
-      const isLegal = p.startsWith("/legal/");
-      const changefreq =
-        isHome || isArticle
-          ? "weekly"
-          : isService || isResources
-            ? "monthly"
-            : isLegal
-              ? "yearly"
-              : "monthly";
-      const priority = isHome
-        ? "1.0"
-        : isArticle
-          ? "0.8"
-          : isService
-            ? "0.7"
-            : isResources
-              ? "0.6"
-              : isLegal
-                ? "0.3"
-                : "0.5";
 
       const alternates = [
         ...pathLocales.map((alt) => {
@@ -163,9 +165,6 @@ export async function GET() {
           )}" href="${escapeXml(href)}"/>`;
         }),
         (() => {
-          if (p === "/") {
-            return `    <xhtml:link rel="alternate" hreflang="x-default" href="${escapeXml(BASE)}"/>`;
-          }
           const xDefaultLocale = pathLocales.includes(canonicalLocale)
             ? canonicalLocale
             : pathLocales[0];
@@ -182,8 +181,6 @@ export async function GET() {
 
       return `  <url>
     <loc>${escapeXml(loc)}</loc>${lastmodTag}
-    <changefreq>${changefreq}</changefreq>
-    <priority>${priority}</priority>
 ${alternates}
   </url>`;
     });

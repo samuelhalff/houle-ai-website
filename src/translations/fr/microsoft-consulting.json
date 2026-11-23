@@ -179,5 +179,30 @@
         "Pause": "Mettre l'animation en pause",
         "Play": "Lancer l'animation",
         "Fiction": "Exemple"
+    },
+    "Faq": {
+        "Title": "Questions fréquentes",
+        "Items": [
+            {
+                "Question": "Quels outils Microsoft 365 peut-on automatiser avec Power Automate ?",
+                "Answer": "Power Automate permet de créer des workflows entre vos applications Microsoft et des centaines de services tiers pour éliminer des tâches comme la collecte de données, l'envoi de notifications, la création de rapports ou la synchronisation entre systèmes."
+            },
+            {
+                "Question": "Les solutions Azure sont-elles hébergées en Suisse ?",
+                "Answer": "Oui, nos solutions Azure sont hébergées dans les centres de données suisses (Switzerland North), garantissant la conformité avec la LPD suisse et le RGPD pour les entreprises qui nécessitent la résidence des données en Suisse."
+            },
+            {
+                "Question": "Comment Power BI se connecte-t-il aux données existantes de l'entreprise ?",
+                "Answer": "Power BI se connecte à vos sources existantes dans Excel, SharePoint, votre CRM ou votre système de gestion, et crée des tableaux de bord qui actualisent automatiquement vos indicateurs clés."
+            },
+            {
+                "Question": "Les équipes internes pourront-elles maintenir les solutions mises en place ?",
+                "Answer": "Oui, nous formons vos équipes avec des sessions adaptées à leur niveau et une documentation claire. L'objectif est de rendre votre entreprise autonome."
+            },
+            {
+                "Question": "SharePoint peut-il faire plus que stocker des fichiers ?",
+                "Answer": "Oui, SharePoint permet de structurer les informations, d'automatiser les processus métier, de faciliter la collaboration et de créer des intranets modernes, le tout selon vos besoins et les bonnes pratiques de gouvernance."
+            }
+        ]
     }
 }

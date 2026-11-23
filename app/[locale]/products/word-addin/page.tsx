@@ -1,9 +1,10 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { getTranslations, type Locale } from "@/src/lib/i18n";
+import { getTranslations, getTranslationsRecord, type Locale } from "@/src/lib/i18n";
 import { getCspNonce } from "@/src/lib/csp";
 import { generateMetadataForPage } from "@/src/lib/metadata";
 import StructuredData from "@/src/components/seo/StructuredData";
+import PageFaq, { faqEntries } from "@/src/components/seo/PageFaq";
 import { buildBreadcrumbList, buildOrganizationSchema } from "@/src/lib/structuredData";
 import { localizePath } from "@/src/lib/paths";
 import HeroWithDemo from "@/src/components/demo/HeroWithDemo";
@@ -25,6 +26,7 @@ export async function generateMetadata(props: { params: Promise<{ locale: string
 const WordAddinPage = async (props: { params: Promise<{ locale: string }> }) => {
   const params = await props.params;
   const nonce = await getCspNonce();
+  const faq = (getTranslationsRecord((params.locale as Locale), "word-addin").Faq ?? {}) as { Title?: string; Items?: unknown };
   const baseUrl = "https://houle.ai";
   const localePrefix = `/${params.locale}`;
   const t = await getTranslations(params.locale as Locale, "word-addin");
@@ -166,6 +168,7 @@ const WordAddinPage = async (props: { params: Promise<{ locale: string }> }) => 
           </div>
         </Reveal>
       </section>
+      <PageFaq nonce={nonce} title={faq.Title || "FAQ"} items={faqEntries(faq.Items)} />
     </div>
   );
 };

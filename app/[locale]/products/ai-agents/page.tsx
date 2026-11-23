@@ -4,6 +4,7 @@ import { getTranslations, getTranslationsRecord, type Locale } from "@/src/lib/i
 import { getCspNonce } from "@/src/lib/csp";
 import { generateMetadataForPage } from "@/src/lib/metadata";
 import StructuredData from "@/src/components/seo/StructuredData";
+import PageFaq, { faqEntries } from "@/src/components/seo/PageFaq";
 import {
   buildBreadcrumbList,
   buildOrganizationSchema,
@@ -37,6 +38,7 @@ const AIAgentsPage = async (props: { params: Promise<{ locale: string }> }) => {
   const params = await props.params;
   const activeLocale = params.locale as Locale;
   const nonce = await getCspNonce();
+  const faq = (getTranslationsRecord(activeLocale, "ai-agents").Faq ?? {}) as { Title?: string; Items?: unknown };
   const localePrefix = `/${params.locale}`;
   const t = await getTranslations(activeLocale, "ai-agents");
 
@@ -229,6 +231,7 @@ const AIAgentsPage = async (props: { params: Promise<{ locale: string }> }) => {
           </div>
         </Reveal>
       </section>
+      <PageFaq nonce={nonce} title={faq.Title || "FAQ"} items={faqEntries(faq.Items)} />
     </div>
   );
 };

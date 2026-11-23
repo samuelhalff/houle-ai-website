@@ -66,6 +66,12 @@ const {
   isTrustedDomain,
 } = require("./lib/referenceValidator");
 const { applyArticleTaxonomy } = require("./lib/article-taxonomy");
+const { fixCasing } = require("./lib/brandCasing");
+// Article FAQ: rendered under the article and sent as FAQPage JSON-LD
+// (app/[locale]/ressources/articles/[slug]/page.tsx), so it lives in its own
+// field instead of a "## FAQ" section of the Markdown.
+const FAQ_RULE =
+  "- faq : 3 à 5 questions formulées comme de vraies recherches Google sur le sujet, réponse directe dès la première phrase (1 à 3 phrases, 350 caractères au plus), uniquement des faits présents dans l'article, texte brut sans Markdown. Pas de section FAQ dans content.";
 const {
   buildStructureRules,
   buildNoFabricationRules,
@@ -193,7 +199,7 @@ const FR_PATH = path.join(TRANSLATIONS_DIR, "fr", "ressources.json");
 const LOCALES = ["en", "de", "es", "pt"];
 
 const BRAND_NAME = "houle";
-const AUTHOR_NAME = "Houle Team";
+const AUTHOR_NAME = "houle.ai";
 
 const SERVICES = [
   "conseil en ia indépendant des éditeurs (choix entre microsoft/openai, anthropic, mistral et modèles open source)",
@@ -550,11 +556,13 @@ function normalizeBrandCaseInText(input) {
     .replace(/\bHoule\b/g, BRAND_NAME);
 }
 
-function normalizeBrandCaseInArticle(article) {
+function normalizeBrandCaseInArticle(article, locale = "fr") {
   if (!article || typeof article !== "object") return;
-  if (typeof article.title === "string") article.title = normalizeBrandCaseInText(article.title);
+  // Product names, places and acronyms keep their standard casing
+  // (Microsoft, SharePoint, IA, Genève…): see scripts/lib/brandCasing.js.
+  if (typeof article.title === "string") article.title = fixCasing(normalizeBrandCaseInText(article.title), locale);
   if (typeof article.description === "string")
-    article.description = normalizeBrandCaseInText(article.description);
+    article.description = fixCasing(normalizeBrandCaseInText(article.description), locale);
   if (typeof article.content === "string") article.content = normalizeBrandCaseInText(article.content);
 }
 
@@ -879,7 +887,10 @@ function buildSystemPrompt(frJson, trendData = null) {
     "",
     lengthGuidance,
     ...longFormRequirements,
-    "- Style professionnel, humain, sans capitales superflues. Évite les tics d'écriture IA (\"Moreover\", \"Furthermore\", répétitions).",
+    FAQ_RULE,
+    "- Style professionnel et humain. Casse standard du français : majuscule en début de phrase et aux noms propres (Genève, Suisse, Microsoft 365, SharePoint, Power Automate, Azure), sigles en capitales (IA, PME, LPD), pas de majuscule à chaque mot du titre. Évite les tics d'écriture IA (\"Moreover\", \"Furthermore\", répétitions).",
+    "- Titre de 60 caractères au plus et description de 155 caractères au plus (affichés tels quels dans les résultats de recherche), avec le mot-clé principal.",
+    "- Tout le texte est en français, y compris les conseils et encadrés : aucun bloc en anglais.",
     "- Références: fournis 4 à 6 liens vérifiables (HTTP 200, pas de login), sans URL inventée.",
     "- Références: inclure au moins 1 source officielle ou institutionnelle (admin.ch, kmu.admin.ch, bfs.admin.ch, edoeb.admin.ch, nist.gov).",
     "- Références: inclure au moins 1 documentation technique d'éditeur ou de projet (learn.microsoft.com, docs.mistral.ai, huggingface.co, github.com…), sans privilégier un éditeur.",
@@ -894,6 +905,7 @@ function buildSystemPrompt(frJson, trendData = null) {
     '    "title": "<titre FR>",',
     '    "description": "<description FR>",',
     '    "content": "<contenu FR complet (Markdown autorisé)>",',
+    '    "faq": [ { "q": "<question FR, formulée comme une recherche>", "a": "<réponse FR, 1 à 3 phrases>" }, ... ],',
     `    "author": ${JSON.stringify(AUTHOR_NAME)},`,
     '    "date": "YYYY-MM-DD",',
     '    "references": [ { "labelKey": "Libellé FR", "url": "https://..." }, ... ]',
@@ -917,6 +929,7 @@ function buildTranslatePrompt(newArticle, newLabels, topic = null) {
     `La marque doit être en minuscules: écris toujours "${BRAND_NAME}" (jamais "Houle").`,
     "Fourni uniquement le JSON demandé, sans commentaire.",
     "IMPORTANT: Chaque locale (en, de, es, pt) doit être traduite. Ne retourne jamais le texte français pour une autre langue.",
+    "IMPORTANT: traduis aussi chaque question et réponse de faq (mêmes questions, même ordre).",
     "IMPORTANT: traduction complète. Conserve exactement le même nombre de sections (titres ##), tableaux, listes et questions éventuelles que la source; ne résume pas, ne supprime rien.",
     ...(keywordLines.length
       ? [
@@ -927,7 +940,7 @@ function buildTranslatePrompt(newArticle, newLabels, topic = null) {
     "",
     "Format attendu:",
     "{",
-    '  "en": { "Article": { "title": "...", "description": "...", "content": "..." }, "labels": { "Libellé FR": "English label" } },',
+    '  "en": { "Article": { "title": "...", "description": "...", "content": "...", "faq": [ { "q": "...", "a": "..." } ] }, "labels": { "Libellé FR": "English label" } },',
     '  "de": { "Article": { ... }, "labels": { ... } },',
     '  "es": { "Article": { ... }, "labels": { ... } },',
     '  "pt": { "Article": { ... }, "labels": { ... } }',
@@ -1070,7 +1083,8 @@ function buildDraftPromptFromResearch(research, validatedReferences) {
     "- Quand tu cites une source, écris simplement (source: <labelKey>).",
     "- Utilise exactement le slug, titre et description fournis.",
     "",
-    "Plan indicatif (adapte-le au sujet; pas de FAQ si elle n'apporte rien, au plus 3 questions):",
+    FAQ_RULE,
+    "Plan indicatif (adapte-le au sujet; pas de section FAQ dans le contenu, les questions vont dans le champ faq):",
     JSON.stringify(research.outline || [], null, 2),
     "",
     "Références disponibles (ne pas modifier, ne pas ajouter):",
@@ -1083,6 +1097,7 @@ function buildDraftPromptFromResearch(research, validatedReferences) {
     `    "title": ${JSON.stringify(research.title)},`,
     `    "description": ${JSON.stringify(research.description)},`,
     '    "content": "<contenu FR complet en Markdown (sans URLs)>",',
+    '    "faq": [ { "q": "<question FR, formulée comme une recherche>", "a": "<réponse FR, 1 à 3 phrases>" }, ... ],',
     `    "author": ${JSON.stringify(AUTHOR_NAME)},`,
     '    "date": "YYYY-MM-DD",',
     '    "references": [ { "labelKey": "Libellé FR", "url": "https://..." }, ... ]',
@@ -1164,7 +1179,7 @@ function buildDraftAppendPromptFromExistingArticle(article, { minWords }) {
     "IMPORTANT:",
     "- Ne modifie pas le texte existant: tu ajoutes uniquement de nouvelles sections à la fin.",
     "- Ajoute les sections H2 que le sujet exige encore (H3 si utile), sans remplissage.",
-    "- Tableau ou checklist uniquement s'ils apportent une information que le texte n'exprime pas mieux. Pas de FAQ ajoutée pour faire du volume (3 questions réelles au plus au total).",
+    "- Tableau ou checklist uniquement s'ils apportent une information que le texte n'exprime pas mieux. Pas de section FAQ dans le contenu (les questions vivent dans le champ faq de l'article).",
     "- Aucune anecdote, aucun cas client, aucun chiffre qui ne soit pas sourcé (références de l'article) ou légal.",
     "- N'inclus AUCUNE URL dans le texte (pas de http/https).",
     copilotRule(),
@@ -2962,7 +2977,7 @@ async function runRefresh() {
     },
     localize: async (entry, locale, article) => {
       const service = servicePaths[article.slug];
-      normalizeBrandCaseInArticle(entry);
+      normalizeBrandCaseInArticle(entry, locale);
       assertNoForbiddenTermsInArticle(entry, locale);
       const scope = topicScope.checkTopicScope({ title: entry.title, slug: entry.slug });
       if (!scope.ok) {
@@ -3222,6 +3237,7 @@ async function main() {
       title: articleTr.title,
       description: articleTr.description,
       content: articleTr.content,
+      ...(Array.isArray(articleTr.faq) && articleTr.faq.length ? { faq: articleTr.faq } : {}),
       author: newArticle.author,
       date: newArticle.date,
       updated: newArticle.updated,
@@ -3231,7 +3247,7 @@ async function main() {
       topicFamily: newArticle.topicFamily,
       references: newArticle.references,
     };
-    normalizeBrandCaseInArticle(localizedArticle);
+    normalizeBrandCaseInArticle(localizedArticle, locale);
     assertNoForbiddenTermsInArticle(localizedArticle, locale);
     // Hard scope gate on every localized output (translations can drift off-topic).
     {

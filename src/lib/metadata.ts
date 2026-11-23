@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { ogImageFor } from "./public-pages";
 import { Locale, locales } from "./i18n";
 import fs from "fs";
 import { join as pathJoin } from "path";
@@ -94,6 +95,10 @@ export async function getPageMetadata(
   customData?: {
     articleTitle?: string;
     articleDescription?: string;
+    /** Used verbatim as <title> when set (no brand suffix). */
+    articleMetaTitle?: string;
+    /** Used verbatim as meta description when set. */
+    articleMetaDescription?: string;
     validLocales?: Locale[];
   },
 ): Promise<Metadata> {
@@ -127,29 +132,43 @@ export async function getPageMetadata(
     normalizedPath.startsWith("/ressources/articles/") &&
     customData?.articleTitle
   ) {
-    title = config.dynamic.articles.titleTemplate.replace(
+    // SERP lengths: about 60 characters for the title, 155 for the
+    // description. A metaTitle/metaDescription written for the article wins;
+    // otherwise the brand suffix is only added when it still fits.
+    const branded = config.dynamic.articles.titleTemplate.replace(
       "{articleTitle}",
       customData.articleTitle,
     );
-    description = config.dynamic.articles.descriptionTemplate.replace(
-      "{articleDescription}",
-      customData.articleDescription || "",
-    );
+    title =
+      customData.articleMetaTitle ||
+      (branded.length <= 60 ? branded : customData.articleTitle);
+    description = customData.articleMetaDescription || customData.articleDescription || description;
   } else if (
     normalizedPath.startsWith("/solutions/") &&
     normalizedPath !== "/solutions" &&
     config.dynamic.solutions &&
     customData?.articleTitle
   ) {
-    title = config.dynamic.solutions.titleTemplate.replace(
+    const branded = config.dynamic.solutions.titleTemplate.replace(
       "{title}",
       customData.articleTitle,
     );
-    description = config.dynamic.solutions.descriptionTemplate.replace(
+    const promo = config.dynamic.solutions.descriptionTemplate.replace(
       "{description}",
       customData.articleDescription || "",
     );
+    title = branded.length <= 60 ? branded : customData.articleTitle;
+    description = promo.length <= 155 ? promo : customData.articleDescription || description;
   }
+
+  // The root layout appends " - houle" to plain titles. Titles that already
+  // name the brand, and article and solution titles (sized for the SERP
+  // above), are used as they are so the brand never appears twice.
+  const isDynamicPage =
+    normalizedPath.startsWith("/ressources/articles/") ||
+    (normalizedPath.startsWith("/solutions/") && normalizedPath !== "/solutions");
+  const documentTitle: Metadata["title"] =
+    isDynamicPage || /\bhoule\b/i.test(title) ? { absolute: title } : title;
 
   const canonicalPath = buildInternalUrl(normalizedPath, locale);
 
@@ -176,13 +195,18 @@ export async function getPageMetadata(
             ? "pt_PT"
             : "en_US";
 
-  const ogImageWebp = `/assets/og/og-${locale}.webp`;
+  // Per-page share image (FR/EN pages of the sitemap, src/lib/public-pages.ts);
+  // other locales and pages keep the per-language image.
+  const pageOgImage = await ogImageFor(locale, normalizedPath);
+  const ogImageWebp = pageOgImage ?? `/assets/og/og-${locale}.webp`;
   const ogImageAvif = `/assets/og/og-${locale}.avif`;
-  const ogAlt = `houle.ai — independent AI consulting in Geneva & Lausanne | open-source models hosted in Switzerland`;
+  const ogAlt = pageOgImage
+    ? title
+    : `houle.ai — independent AI consulting in Geneva & Lausanne | open-source models hosted in Switzerland`;
 
   const metadata: Metadata = {
     metadataBase: new URL(siteUrl),
-    title,
+    title: documentTitle,
     description,
     keywords: pageData.keywords || config.default.keywords,
     authors: [{ name: config.default.author }],
@@ -214,13 +238,17 @@ export async function getPageMetadata(
           alt: ogAlt,
           type: "image/webp",
         },
-        {
-          url: ogImageAvif,
-          width: 1200,
-          height: 630,
-          alt: ogAlt,
-          type: "image/avif",
-        },
+        ...(pageOgImage
+          ? []
+          : [
+              {
+                url: ogImageAvif,
+                width: 1200,
+                height: 630,
+                alt: ogAlt,
+                type: "image/avif",
+              },
+            ]),
       ],
     },
     twitter: {
@@ -421,6 +449,7 @@ export function generateOrganizationStructuredData() {
       "@type": "Corporation",
       name: "West Bay SA",
       legalName: "West Bay SA",
+      sameAs: ["https://www.zefix.ch/fr/search/entity/list/firm/3858"],
       address: {
         "@type": "PostalAddress",
         addressLocality: "Genthod",

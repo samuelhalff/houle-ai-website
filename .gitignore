@@ -7,7 +7,7 @@ next-standalone.tar.gz
 .next.bak.*
 *.txt
 !public/robots.txt
-!public/ebd95385d7154f45ba37d076b4efd008.txt
+!public/8090b768dce0dbff243585b086176e05.txt
 .env*
 !.env.example
 # TypeScript incremental build info (do not commit)

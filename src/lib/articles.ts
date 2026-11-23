@@ -13,6 +13,12 @@ export type ResourceArticle = {
   slug: string;
   title: string;
   description?: string;
+  /** SERP title (60 characters at most), used verbatim instead of the title template. */
+  metaTitle?: string;
+  /** SERP description (155 characters at most), used verbatim instead of the description. */
+  metaDescription?: string;
+  /** 3 to 5 questions and answers shown under the article and sent as FAQPage JSON-LD. */
+  faq?: Array<{ q: string; a: string }>;
   content?: string;
   date?: string;
   updated?: string;

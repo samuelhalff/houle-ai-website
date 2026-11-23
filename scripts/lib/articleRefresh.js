@@ -15,7 +15,7 @@ const path = require("path");
 // Fields a refresh is allowed to regenerate on the FR article. Everything else
 // (slug, date, category, author, image, tags, topicId, topicFamily, backlog and
 // SEO fields, unknown fields...) is preserved untouched.
-const GENERATED_FIELDS = ["title", "description", "content", "references"];
+const GENERATED_FIELDS = ["title", "description", "content", "references", "faq"];
 // Fields owned by the FR article and mirrored to locale entries when present.
 // tags/topicId/topicFamily are deliberately NOT mirrored: locale entries keep
 // their own (tags are localized, taxonomy ids are already identical).
@@ -130,13 +130,15 @@ function buildRefreshPrompt(
         title: article.title,
         description: article.description,
         content: article.content,
+        faq: Array.isArray(article.faq) ? article.faq : [],
       },
       null,
       2,
     ),
     "",
+    "faq : 3 à 5 questions formulées comme de vraies recherches, réponse directe dès la première phrase (1 à 3 phrases, 350 caractères au plus), uniquement des faits de l'article mis à jour, texte brut. Pas de section FAQ dans content.",
     "Retourne STRICTEMENT un JSON:",
-    '{ "article": { "title": "...", "description": "...", "content": "<Markdown>" }, "changeSummary": ["..."] }',
+    '{ "article": { "title": "...", "description": "...", "content": "<Markdown>", "faq": [ { "q": "...", "a": "..." } ] }, "changeSummary": ["..."] }',
   ].join("\n");
 }
 
@@ -155,7 +157,7 @@ function mergeRefreshedArticle(existing, generated) {
   const merged = { ...existing };
   for (const field of GENERATED_FIELDS) {
     const value = generated?.[field];
-    if (field === "references") {
+    if (field === "references" || field === "faq") {
       if (Array.isArray(value) && value.length) merged[field] = value;
       continue;
     }
@@ -168,6 +170,9 @@ function mergeRefreshedArticle(existing, generated) {
 function buildLocalizedArticle(frArticle, existingLocal, translation, labels = {}) {
   const base = existingLocal ? { ...existingLocal } : { ...frArticle };
   for (const field of TRANSLATED_FIELDS) base[field] = translation[field];
+  // FAQ (shown under the article + FAQPage JSON-LD): keep the current one
+  // when the translation does not return a new list.
+  if (Array.isArray(translation.faq) && translation.faq.length) base.faq = translation.faq;
   for (const field of MIRRORED_FIELDS) {
     if (frArticle[field] !== undefined) base[field] = frArticle[field];
   }

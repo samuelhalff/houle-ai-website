@@ -82,5 +82,30 @@
     "Pause": "Pausar la animación",
     "Play": "Reproducir la animación",
     "Fiction": "Ejemplo"
+  },
+  "Faq": {
+    "Title": "Preguntas frecuentes",
+    "Items": [
+      {
+        "Question": "¿Cómo protege el asistente IA para Word la confidencialidad de los documentos?",
+        "Answer": "Sus documentos permanecen en su entorno de Microsoft 365 y todo el procesamiento IA respeta su soberanía de datos. Hay opciones alojadas en Suiza disponibles."
+      },
+      {
+        "Question": "¿Funciona el complemento de Word con mis sistemas Microsoft 365 existentes?",
+        "Answer": "Sí, utiliza autenticación nativa con Microsoft Entra ID y funciona con sus políticas de Office 365 y controles de seguridad existentes, sin inicio de sesión separado."
+      },
+      {
+        "Question": "¿Se pueden rellenar automáticamente plantillas de Word con datos de clientes?",
+        "Answer": "Sí, el complemento se conecta a su CRM para rellenar plantillas automáticamente y generar contratos, propuestas e informes en segundos."
+      },
+      {
+        "Question": "¿Qué tipos de profesionales pueden usar el asistente IA en Word?",
+        "Answer": "El complemento está diseñado para despachos jurídicos, consultoras y servicios financieros de la región del Lago Lemán que producen documentos para clientes regularmente."
+      },
+      {
+        "Question": "¿Se pueden personalizar las funciones IA del complemento de Word por equipo?",
+        "Answer": "Sí, una consola de administración permite configurar agentes IA, gestionar prompts y controlar funciones por usuario o equipo."
+      }
+    ]
   }
 }

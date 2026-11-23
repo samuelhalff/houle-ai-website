@@ -148,7 +148,7 @@ Notes:
 
 - The script expects JSON responses matching the specified schema. If the agent returns non-JSON content, adjust the agent instructions to produce `application/json` payloads.
 - `AZURE_AGENT_NAME` must be a Foundry agent name (optionally pinned to a version like `web-deep-search:4`).
-- GitHub workflow `.github/workflows/ai-ressources-every-4-days.yml` automates the run every four days using OIDC-based Azure login.
+- GitHub workflow `.github/workflows/ai-ressources-weekly.yml` automates the run every Thursday using OIDC-based Azure login.
 
 ## Ressources Link Integrity
 

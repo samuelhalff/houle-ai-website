@@ -168,9 +168,6 @@ jobs:
             git push
           fi
 
-      - name: Ping sitemaps
-        continue-on-error: true
-        run: node scripts/ping-sitemaps.js
 
       - name: Notify Zapier webhook (LinkedIn publication)
         if: steps.detect-article.outputs.has_new == 'true'

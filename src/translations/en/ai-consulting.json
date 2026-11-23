@@ -210,5 +210,34 @@
         "Pause": "Pause animation",
         "Play": "Play animation",
         "Fiction": "Example"
+    },
+    "Faq": {
+        "Title": "Frequently asked questions",
+        "Items": [
+            {
+                "Question": "How does houle.ai select the AI use cases worth pursuing for a company?",
+                "Answer": "We start with a workshop with your business and IT teams to review your processes, volumes and constraints. We then rank the ideas by value, feasibility and risk, and shortlist one or two."
+            },
+            {
+                "Question": "Is the consulting tied to a specific AI vendor?",
+                "Answer": "No. We compare models from OpenAI, Anthropic, Mistral and open-source models such as Llama, Qwen or Gemma against your specific case. The choice is not tied to any vendor."
+            },
+            {
+                "Question": "What does 'hosted in Switzerland' mean in practice for an AI project?",
+                "Answer": "For each project, we put in writing where inference runs, where data is stored, who has access, and what is logged."
+            },
+            {
+                "Question": "How does an AI consulting project unfold from discovery to production?",
+                "Answer": "The project follows six steps: discovery workshop, use-case selection, model and hosting choice, measured pilot, production deployment and governance. Each step has a deliverable and a clear decision point."
+            },
+            {
+                "Question": "When is an open-source model hosted in Switzerland preferable?",
+                "Answer": "An open-source model becomes the right choice when data is covered by professional or medical secrecy, when the task is repetitive and well-defined, or when volumes make usage-based billing expensive."
+            },
+            {
+                "Question": "What happens if AI is not the right solution for a use case?",
+                "Answer": "We say so. Our work includes ruling out cases where an error would be too costly, where the rule cannot be written, or where a spreadsheet is enough."
+            }
+        ]
     }
 }

@@ -6,6 +6,9 @@ import { PhoneIcon } from "@/src/components/icons/PhoneIcon";
 import { WhatsAppIcon } from "@/src/components/icons/WhatsAppIcon";
 import { getWhatsAppContent, getWhatsAppLink } from "@/src/lib/whatsapp";
 import { ContactForm } from "@/src/components/ui/contact-form-client";
+import PageFaq, { faqEntries } from "@/src/components/seo/PageFaq";
+import { getCspNonce } from "@/src/lib/csp";
+import { getTranslationsRecord } from "@/src/lib/i18n";
 
 const BOOKING_URL = "https://outlook.office.com/bookwithme/user/409097336fec47ef9ad61beeef96c884@houle.ai/meetingtype/L5kPsZfevE6i7S7hiOL8Cg2?anonymous&amp;ismsaljsauthenabled&amp;ep=mlink";
 
@@ -257,6 +260,8 @@ export default async function ContactPage(
   const strings = copy[locale] || copy.en;
   const whatsapp = getWhatsAppContent(locale);
   const whatsappLink = getWhatsAppLink(locale);
+  const nonce = await getCspNonce();
+  const faq = (getTranslationsRecord(locale, "contact").Faq ?? {}) as { Title?: string; Items?: unknown };
 
   return (
     <div className="mx-auto w-full max-w-[1200px] px-5 py-8 sm:px-8 space-y-8">
@@ -356,6 +361,7 @@ export default async function ContactPage(
           strings={strings}
         />
       </div>
+      <PageFaq compact nonce={nonce} title={faq.Title || "FAQ"} items={faqEntries(faq.Items)} />
     </div>
   );
 }

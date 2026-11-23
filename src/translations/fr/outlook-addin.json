@@ -86,5 +86,30 @@
         "Pause": "Mettre l'animation en pause",
         "Play": "Lancer l'animation",
         "Fiction": "Exemple"
+    },
+    "Faq": {
+        "Title": "Questions fréquentes",
+        "Items": [
+            {
+                "Question": "Comment l'add-in Outlook protège-t-il la confidentialité des e-mails ?",
+                "Answer": "Vos e-mails et contacts restent dans votre environnement Microsoft 365. Des options hébergées en Suisse sont disponibles pour une confidentialité maximale."
+            },
+            {
+                "Question": "L'assistant IA Outlook nécessite-t-il une connexion ou synchronisation séparée ?",
+                "Answer": "Non, il s'authentifie de façon native avec Microsoft Entra ID et fonctionne dans l'interface d'Outlook avec vos politiques existantes, sans connexion supplémentaire."
+            },
+            {
+                "Question": "Peut-on générer automatiquement des réponses d'e-mails avec l'IA dans Outlook ?",
+                "Answer": "Oui, l'add-in génère des brouillons professionnels en quelques secondes à partir du contexte de la conversation, avec suggestions de ton et amélioration de la clarté."
+            },
+            {
+                "Question": "Comment l'add-in aide-t-il à gérer de longs fils d'e-mails ?",
+                "Answer": "Il produit des résumés instantanés des longues chaînes, en extrayant automatiquement les actions à effectuer, les décisions clés et les dates importantes."
+            },
+            {
+                "Question": "Pour quels profils professionnels l'assistant IA pour Outlook est-il conçu ?",
+                "Answer": "Il est pensé pour les équipes commerciales, le support client et la gestion de compte qui gèrent de gros volumes d'e-mails clients dans la région lémanique."
+            }
+        ]
     }
 }

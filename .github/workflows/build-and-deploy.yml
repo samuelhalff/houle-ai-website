@@ -117,6 +117,11 @@ jobs:
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         run: mkdir -p artifact && cp next-standalone.tar.gz artifact/next-standalone.tar.gz.part
 
+      - name: Snapshot live sitemap (IndexNow diff)
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        continue-on-error: true
+        run: node scripts/indexnow-changed.js --snapshot sitemap-before.xml
+
       - name: Upload release to server
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
         run: |
@@ -432,6 +437,15 @@ jobs:
           done
           echo "::error::Rolled back on disk to $PREV_BUILD_ID but the sites did not recover within 4 min; check router-status.log"
           exit 1
+
+      # Sends only the URLs whose lastmod changed (or that are new) to
+      # api.indexnow.org. Article workflows push to main, so their new and
+      # refreshed articles are announced here once they are live.
+      - name: IndexNow (changed URLs only)
+        if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+        continue-on-error: true
+        timeout-minutes: 3
+        run: node scripts/indexnow-changed.js --before sitemap-before.xml
 
       - name: Warm up caches (non-blocking)
         if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'

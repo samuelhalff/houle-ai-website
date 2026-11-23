@@ -7,7 +7,6 @@ on:
       - "src/**"
       - "public/**"
       - "scripts/validate-seo.js"
-      - "scripts/ping-sitemaps.js"
       - "next.config.js"
 
 jobs:
@@ -26,6 +25,3 @@ jobs:
         continue-on-error: true
         run: node scripts/validate-seo.js
 
-      - name: Ping sitemap (non-blocking)
-        continue-on-error: true
-        run: node scripts/ping-sitemaps.js --url https://houle.ai --path /sitemap.xml

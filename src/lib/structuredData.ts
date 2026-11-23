@@ -427,6 +427,7 @@ export function buildOrganizationSchema() {
       "@type": "Corporation",
       name: "West Bay SA",
       legalName: "West Bay SA",
+      sameAs: ["https://www.zefix.ch/fr/search/entity/list/firm/3858"],
       address: {
         "@type": "PostalAddress",
         addressLocality: "Genthod",

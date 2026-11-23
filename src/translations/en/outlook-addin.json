@@ -86,5 +86,30 @@
         "Pause": "Pause animation",
         "Play": "Play animation",
         "Fiction": "Example"
+    },
+    "Faq": {
+        "Title": "Frequently asked questions",
+        "Items": [
+            {
+                "Question": "How does the Outlook add-in protect email confidentiality?",
+                "Answer": "Your emails and contacts stay within your Microsoft 365 environment. Swiss-hosted options are available for maximum confidentiality."
+            },
+            {
+                "Question": "Does the Outlook AI assistant require a separate login or data sync?",
+                "Answer": "No, it authenticates natively with Microsoft Entra ID and works within the Outlook interface using your existing policies, with no additional login required."
+            },
+            {
+                "Question": "Can AI automatically generate email replies in Outlook?",
+                "Answer": "Yes, the add-in generates professional drafts in seconds based on conversation context, with tone suggestions and clarity improvements."
+            },
+            {
+                "Question": "How does the add-in help manage long email threads?",
+                "Answer": "It produces instant summaries of lengthy chains, automatically extracting action items, key decisions and important dates."
+            },
+            {
+                "Question": "Which professional profiles is the AI assistant for Outlook designed for?",
+                "Answer": "It is built for sales teams, customer support and account management who handle high volumes of client emails in the Lake Geneva region."
+            }
+        ]
     }
 }

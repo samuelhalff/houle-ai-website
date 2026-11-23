@@ -82,5 +82,30 @@
         "Pause": "Pausar a animação",
         "Play": "Iniciar a animação",
         "Fiction": "Exemplo"
+    },
+    "Faq": {
+        "Title": "Perguntas frequentes",
+        "Items": [
+            {
+                "Question": "Como é que o assistente IA para Word protege a confidencialidade dos documentos?",
+                "Answer": "Os seus documentos permanecem no seu ambiente Microsoft 365 e todo o processamento IA respeita a sua soberania de dados. Estão disponíveis opções alojadas na Suíça."
+            },
+            {
+                "Question": "O add-in do Word funciona com os meus sistemas Microsoft 365 existentes?",
+                "Answer": "Sim, utiliza autenticação nativa com Microsoft Entra ID e funciona com as suas políticas do Office 365 e controlos de segurança existentes, sem início de sessão separado."
+            },
+            {
+                "Question": "É possível preencher automaticamente modelos Word com dados de clientes?",
+                "Answer": "Sim, o add-in liga-se ao seu CRM para preencher automaticamente modelos e gerar contratos, propostas e relatórios em segundos."
+            },
+            {
+                "Question": "Que tipos de profissionais podem usar o assistente IA no Word?",
+                "Answer": "O add-in foi concebido para escritórios de advocacia, consultoras e serviços financeiros da região do Lago Lemano que produzem regularmente documentos para clientes."
+            },
+            {
+                "Question": "As funcionalidades IA do add-in do Word podem ser personalizadas por equipa?",
+                "Answer": "Sim, uma consola de administração permite configurar agentes IA, gerir prompts e controlar funcionalidades por utilizador ou equipa."
+            }
+        ]
     }
 }

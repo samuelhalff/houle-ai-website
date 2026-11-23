@@ -106,5 +106,34 @@
         "Pause": "Animation anhalten",
         "Play": "Animation abspielen",
         "Fiction": "Beispiel"
+    },
+    "Faq": {
+        "Title": "Häufige Fragen",
+        "Items": [
+            {
+                "Question": "Welche KI-Modelle sind in Swiss GPT verfügbar?",
+                "Answer": "Die Plattform bietet Zugang zu GPT-5, GPT-4.1, o3, Claude, Llama und Mistral, die auf der Azure-Infrastruktur in Switzerland North betrieben werden."
+            },
+            {
+                "Question": "Werden Daten zum Training der KI-Modelle verwendet?",
+                "Answer": "Nein. Eine Zero-Retention-Policy garantiert, dass Ihre Daten niemals für das Modell-Training verwendet werden."
+            },
+            {
+                "Question": "Ist Swiss GPT konform mit dem Schweizer DSG und der DSGVO?",
+                "Answer": "Ja. Alle Gespräche und Dokumente verbleiben in Schweizer Rechenzentren (Azure Switzerland North, Region Zürich), in vollständiger Konformität mit dem Schweizer DSG und der DSGVO."
+            },
+            {
+                "Question": "Wie authentifizieren sich Unternehmen auf der Swiss GPT-Plattform?",
+                "Answer": "Die Plattform bietet Single Sign-On mit Microsoft Entra ID oder Ihrem bestehenden Identitätsanbieter, mit obligatorischer Multi-Faktor-Authentifizierung."
+            },
+            {
+                "Question": "Was ist der Unterschied zwischen Swiss GPT und dem Standard-ChatGPT?",
+                "Answer": "Bei Swiss GPT findet die gesamte Verarbeitung in Schweizer Rechenzentren statt, Daten werden nie für das Modell-Training genutzt, und Sie erhalten Unternehmenskontrollen, Prüfprotokolle und SSO-Unterstützung."
+            },
+            {
+                "Question": "Ist Support auf Deutsch aus der Schweiz verfügbar?",
+                "Answer": "Ja, das Support-Team sitzt in Genf und ist auf Französisch, Deutsch und Englisch verfügbar, mit dediziertem Account-Management für Unternehmenskunden."
+            }
+        ]
     }
 }

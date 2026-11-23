@@ -82,12 +82,12 @@
     },
     "dynamic": {
         "articles": {
-            "titleTemplate": "{articleTitle} | houle - Conseil IA Genève",
-            "descriptionTemplate": "{articleDescription} | Expertise de Genève avec souveraineté des données suisse.",
+            "titleTemplate": "{articleTitle} | houle",
+            "descriptionTemplate": "{articleDescription}",
             "keywords": "conseil ia genève, solutions ia suisse, modèles open source hébergés en suisse, souveraineté données suisse"
         },
         "solutions": {
-            "titleTemplate": "{title} | houle - Agents IA suisses",
+            "titleTemplate": "{title} | houle",
             "descriptionTemplate": "{description} | IA hébergée en Suisse, validation humaine, pensée pour Microsoft 365.",
             "keywords": "agents ia suisse, automatisation ia, solutions ia suisses, ia validation humaine, automatisation microsoft 365"
         }

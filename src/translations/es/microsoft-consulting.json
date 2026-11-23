@@ -179,5 +179,30 @@
         "Pause": "Pausar la animación",
         "Play": "Reproducir la animación",
         "Fiction": "Ejemplo"
+    },
+    "Faq": {
+        "Title": "Preguntas frecuentes",
+        "Items": [
+            {
+                "Question": "¿Qué tareas de Microsoft 365 se pueden automatizar con Power Automate?",
+                "Answer": "Power Automate permite crear flujos de trabajo entre sus aplicaciones Microsoft y cientos de servicios de terceros para eliminar tareas como la recopilación de datos, el envío de notificaciones, la creación de informes y la sincronización entre sistemas."
+            },
+            {
+                "Question": "¿Las soluciones Azure están alojadas en Suiza?",
+                "Answer": "Sí, nuestras soluciones Azure están alojadas en centros de datos suizos (Switzerland North), garantizando la conformidad con la LPD suiza y el RGPD para las empresas que necesitan la residencia de datos en Suiza."
+            },
+            {
+                "Question": "¿Cómo se conecta Power BI a los datos existentes de la empresa?",
+                "Answer": "Power BI se conecta a sus fuentes existentes en Excel, SharePoint, su CRM o su sistema de gestión, y crea paneles que actualizan automáticamente sus indicadores clave."
+            },
+            {
+                "Question": "¿Podrán los equipos internos mantener las soluciones implementadas?",
+                "Answer": "Sí, formamos a sus equipos con sesiones adaptadas a su nivel y documentación clara. El objetivo es que su empresa sea autónoma."
+            },
+            {
+                "Question": "¿Puede SharePoint hacer más que almacenar archivos?",
+                "Answer": "Sí, SharePoint puede estructurar información, automatizar procesos de negocio, facilitar la colaboración y crear intranets modernos, todo configurado según sus necesidades y las buenas prácticas de gobernanza."
+            }
+        ]
     }
 }

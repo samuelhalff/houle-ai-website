@@ -148,6 +148,8 @@ const ContactForm: FC<ContactFormProps> = ({
       }
 
       trackEvent("generate_lead", {
+        // Standard GA4 conversion; the site-specific name travels as a parameter.
+        lead_name: "houle_contact_form",
         method: "contact_form",
         form_location: window.location.pathname,
       });
