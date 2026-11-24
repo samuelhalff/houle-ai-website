@@ -1,5 +1,6 @@
 import Link from "next/link";
 import TrackedLink from "@/src/components/ui/tracked-link";
+import StickyMobileCta from "@/src/components/StickyMobileCta";
 import FAQ from "@/src/components/FAQ";
 import { getTranslations, type Locale } from "@/src/lib/i18n";
 import { getPageMetadata } from "@/src/lib/metadata";
@@ -470,6 +471,10 @@ export default async function HomePage(
   } as const;
 
   const t = copy[locale] || copy.en;
+  // First sentence stays above the CTA, the rest follows it (same text, same page).
+  const splitAt = t.subtext.search(/[.!?](\s|$)/) + 1;
+  const heroIntro = splitAt > 0 ? t.subtext.slice(0, splitAt) : t.subtext;
+  const heroRest = splitAt > 0 ? t.subtext.slice(splitAt).trim() : "";
 
   return (
     <div className="w-full">
@@ -491,14 +496,15 @@ export default async function HomePage(
             <h1 className="mt-4 max-w-[16ch] text-balance text-5xl font-semibold leading-[0.98] tracking-tight text-foreground sm:text-6xl md:text-7xl lg:text-8xl">
               {t.headline}
             </h1>
-            <p className="site-hero-description mt-8 max-w-[52ch] text-lg leading-8 text-muted-foreground sm:text-xl">
-              {t.subtext}
+            <p className="site-hero-description mt-6 max-w-[52ch] text-lg leading-8 text-muted-foreground sm:mt-8 sm:text-xl">
+              {heroIntro}
             </p>
-            <div className="mt-10 flex w-full flex-col items-stretch gap-3 sm:w-auto sm:flex-row sm:items-center">
-              <TrackedLink cta="home_hero_contact" href={`${localePrefix}/contact/`} className="w-full sm:w-auto" prefetch={false}>
+            <div className="mt-6 flex sm:mt-10 w-full flex-col items-stretch gap-3 sm:w-auto sm:flex-row sm:items-center">
+              <TrackedLink id="home-hero-cta" cta="home_hero_contact" href={`${localePrefix}/contact/`} className="w-full sm:w-auto" prefetch={false}>
                 <Button
                   size="lg"
-                  className="btn-main-cta w-full rounded-full bg-foreground px-6 text-base text-background sm:w-auto"
+                  variant="brand"
+                  className="btn-main-cta w-full rounded-full px-6 text-base sm:w-auto"
                 >
                   <span>{t.ctaPrimary}</span>
                 </Button>
@@ -513,6 +519,11 @@ export default async function HomePage(
                 </Button>
               </TrackedLink>
             </div>
+            {heroRest && (
+              <p className="site-hero-description mt-8 max-w-[52ch] text-base leading-7 text-muted-foreground sm:text-lg">
+                {heroRest}
+              </p>
+            )}
 
             {/* Facts band */}
             <div className="mt-16 grid grid-cols-1 gap-8 border-t border-border/50 pt-10 sm:grid-cols-3 sm:gap-10">
@@ -533,6 +544,13 @@ export default async function HomePage(
           </Reveal>
         </div>
       </section>
+
+      <StickyMobileCta
+        href={`${localePrefix}/contact/`}
+        label={t.ctaPrimary}
+        cta="home_sticky_contact"
+        targetId="home-hero-cta"
+      />
 
       {/* ── Trust band ───────────────────────────────────────────────── */}
       <section
