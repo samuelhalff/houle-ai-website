@@ -16,7 +16,7 @@ test("no session replay on pages with client data", () => {
 test("PostHog loads late, masks inputs and follows consent", () => {
   const lazy = readFileSync(new URL("./posthog-lazy.ts", import.meta.url), "utf8");
   assert.match(lazy, /await import\("posthog-js"\)/, "posthog-js is imported dynamically");
-  assert.match(lazy, /addEventListener\("load", idle/, "after the load event");
+  assert.match(lazy, /afterFirstInteraction\(/, "on the first interaction, or late for readers");
   assert.match(lazy, /requestIdleCallback/, "in idle time");
   assert.match(lazy, /maskAllInputs: true/);
   assert.match(lazy, /blockSelector: "\.ph-no-capture"/);

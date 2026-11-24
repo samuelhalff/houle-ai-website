@@ -298,9 +298,9 @@ export function buildConsentBootstrap(measurementId: string, gtmId?: string): st
     `if(ai&&okc){try{window.sessionStorage.setItem(${JSON.stringify(AI_SOURCE_KEY)},ai);}catch(e){}}}`,
     "if(ai){window.__aiSource=ai;gtag('set','user_properties',{ai_source:ai});gtag('set',{ai_source:ai});g.push({ai_source:ai});}",
     "gtag('js',new Date());",
-    `gtag('config',${id});`,
-    // gtag.js and gtm.js wait for the load event, then idle time (3 s at
-    // most): the consent defaults and the js/config calls above are already
+    `gtag('config',${id},{page_location:location.href,page_referrer:document.referrer});`,
+    // gtag.js and gtm.js wait for the first interaction (or 15 s after load),
+    // then idle time (3 s at most): the consent defaults and the js/config calls above are already
     // queued and are read when the libraries arrive. The nonce is read now,
     // document.currentScript is gone once this script has run.
     "var cs=document.currentScript,nn=cs&&cs.nonce;",
@@ -314,8 +314,11 @@ export function buildConsentBootstrap(measurementId: string, gtmId?: string): st
         ]
       : []),
     "}",
-    "function idle(){if(typeof window.requestIdleCallback==='function'){window.requestIdleCallback(ld,{timeout:3000});}else{setTimeout(ld,1);}}",
-    "if(document.readyState==='complete'){idle();}else{window.addEventListener('load',idle,{once:true});}",
+    "var gone=false,tm=null,EV=['pointerdown','keydown','touchstart','scroll'];",
+    "function idle(){if(gone)return;gone=true;for(var q=0;q<EV.length;q++){window.removeEventListener(EV[q],idle);}if(tm)clearTimeout(tm);if(typeof window.requestIdleCallback==='function'){window.requestIdleCallback(ld,{timeout:3000});}else{setTimeout(ld,1);}}",
+    "for(var q=0;q<EV.length;q++){window.addEventListener(EV[q],idle,{passive:true,once:true});}",
+    "function arm(){tm=setTimeout(idle,15000);}",
+    "if(document.readyState==='complete'){arm();}else{window.addEventListener('load',arm,{once:true});}",
     "})();",
   ].join("");
 }

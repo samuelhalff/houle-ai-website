@@ -218,7 +218,7 @@ export default function CookieConsent({ locale = "fr", labels }: Props) {
         >
           <div
             ref={dialogRef}
-            className="mx-auto mb-4 max-w-4xl rounded-lg border border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/75 p-4 shadow-lg"
+            className="mx-auto mb-4 max-w-4xl rounded-lg border border-border bg-background p-4 shadow-lg"
           >
             <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
               <div className="text-sm leading-relaxed">

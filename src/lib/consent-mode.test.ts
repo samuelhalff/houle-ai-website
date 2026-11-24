@@ -27,8 +27,10 @@ function runBootstrap(opts: {
   search?: string;
   gtmId?: string;
   session?: Record<string, string>;
-}): Run & { fireLoad: () => void; flushIdle: () => void; idleOptions: unknown[] } {
+}): Run & { fireLoad: () => void; flushIdle: () => void; fireInteraction: () => void; fallbackTimers: (() => void)[]; idleOptions: unknown[] } {
   const loadListeners: (() => void)[] = [];
+  const interactionListeners: (() => void)[] = [];
+  const timers: (() => void)[] = [];
   const idleQueue: (() => void)[] = [];
   const idleOptions: unknown[] = [];
   const dataLayer: unknown[] = [];
@@ -40,7 +42,11 @@ function runBootstrap(opts: {
     window: {
       addEventListener: (type: string, fn: () => void) => {
         if (type === "load") loadListeners.push(fn);
+        else interactionListeners.push(fn);
       },
+      removeEventListener: () => {},
+      setTimeout: (fn: () => void) => timers.push(fn),
+      clearTimeout: () => {},
       requestIdleCallback: (fn: () => void, options: unknown) => {
         idleOptions.push(options);
         idleQueue.push(fn);
@@ -55,6 +61,8 @@ function runBootstrap(opts: {
       createElement: () => ({ src: "", async: false }),
     },
     navigator: { cookieEnabled: opts.cookiesEnabled !== false },
+    setTimeout: (fn: () => void) => timers.push(fn),
+    clearTimeout: () => {},
     location: { search: opts.search || "" },
     URL,
     URLSearchParams,
@@ -75,9 +83,11 @@ function runBootstrap(opts: {
   };
   vm.runInNewContext(buildConsentBootstrap("G-TEST1234", opts.gtmId), sandbox);
   const fireLoad = () => loadListeners.splice(0).forEach((fn) => fn());
+  const fireInteraction = () => interactionListeners.splice(0).forEach((fn) => fn());
   const flushIdle = () => idleQueue.splice(0).forEach((fn) => fn());
   if (!opts.hold) {
     fireLoad();
+    fireInteraction();
     flushIdle();
   }
   // Normalise objects created inside the vm realm.
@@ -97,6 +107,8 @@ function runBootstrap(opts: {
     win: sandbox.window,
     fireLoad,
     flushIdle,
+    fireInteraction,
+    fallbackTimers: timers,
     idleOptions,
   };
 }
@@ -127,6 +139,7 @@ test("bootstrap always loads gtm.js on its own layer with the same consent defau
   assert.deepEqual(firstGtm.slice(0, 2), ["consent", "default"]);
   assert.equal((firstGtm[2] as Record<string, unknown>).ad_personalization, "granted");
   run.fireLoad();
+  run.fireInteraction();
   run.flushIdle();
   assert.deepEqual(
     run.scripts.map((s) => s.src),
@@ -193,19 +206,30 @@ test("bootstrap sets ai_source as event param and user property before config", 
   assert.equal(none.calls.some((c) => c[0] === "set" && c[1] === "user_properties"), false);
 });
 
-test("bootstrap queues consent and config at once but loads gtag.js after load, in idle time", () => {
+test("bootstrap queues consent and config at once but loads gtag.js after the first interaction, in idle time", () => {
   const run = runBootstrap({ readyState: "loading", hold: true, nonce: "abc" });
   const commands = run.calls.map((c) => `${c[0]}:${c[1]}`);
   assert.deepEqual(commands.slice(0, 1), ["consent:default"]);
   assert.ok(commands.includes("config:G-TEST1234"));
   assert.equal(run.scripts.length, 0, "no script before the load event");
   run.fireLoad();
+  assert.equal(run.scripts.length, 0, "no script without an interaction");
+  run.fireInteraction();
   assert.equal(run.scripts.length, 0, "no script before idle time");
   assert.deepEqual(JSON.parse(JSON.stringify(run.idleOptions)), [{ timeout: 3000 }]);
   run.flushIdle();
   assert.equal(run.scripts.length, 1);
   assert.equal(run.scripts[0].src, "https://www.googletagmanager.com/gtag/js?id=G-TEST1234");
   assert.equal(run.scripts[0].nonce, "abc", "nonce captured before the deferral");
+});
+
+test("bootstrap loads gtag.js for a reader without interaction, after a fallback delay", () => {
+  const run = runBootstrap({ readyState: "loading", hold: true });
+  run.fireLoad();
+  assert.equal(run.fallbackTimers.length, 1);
+  run.fallbackTimers[0]();
+  run.flushIdle();
+  assert.equal(run.scripts.length, 1);
 });
 
 test("bootstrap applies a stored acceptance as an update without region", () => {

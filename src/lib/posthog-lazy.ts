@@ -4,8 +4,8 @@
  * PostHog, loaded late (same policy on ark-fid.ch, houle.ai and
  * guide-assurance.ch, Sam 23.11.2026). houle.ai has its own PostHog
  * organisation and project ("houle.ai website", EU cloud):
- * - posthog-js is imported dynamically after the load event, in idle time,
- *   so it stays out of the first-render bundle (never at instrumentation time);
+ * - posthog-js is imported dynamically on the first interaction (or 15 s after
+ *   load for readers), in idle time, so it stays out of the first-render bundle (never at instrumentation time);
  * - persistence follows the effective consent (hasEffectiveConsent): stored
  *   choice first, otherwise the default, granted everywhere since 23.11.2026
  *   (ignoring the banner = accepting): localStorage+cookie. "Refuser" →
@@ -20,6 +20,7 @@
  */
 import { hasEffectiveConsent } from "@/src/lib/consent-mode";
 import { isReplayExcluded } from "@/src/lib/replay-policy";
+import { afterFirstInteraction } from "@/src/lib/after-interaction";
 
 type Props = Record<string, unknown>;
 type PostHogLike = {
@@ -40,6 +41,7 @@ const HOST = process.env.NEXT_PUBLIC_POSTHOG_HOST;
 
 let instance: PostHogLike | null = null;
 let loading: Promise<void> | null = null;
+let landing: { url: string; referrer: string } | null = null;
 const queue: Call[] = [];
 const MAX_QUEUE = 100;
 const CLICK_EVENTS = new Set(["$autocapture", "$rageclick", "$dead_click", "$copy_autocapture", "$$heatmap"]);
@@ -103,6 +105,17 @@ async function load() {
     debug: process.env.NODE_ENV === "development",
   });
   instance = posthog as unknown as PostHogLike;
+  // Visitor navigated before PostHog arrived: keep the landing page, referrer
+  // and UTM parameters as a pageview of their own.
+  if (landing && landing.url !== window.location.href) {
+    const props: Props = { $current_url: landing.url, $referrer: landing.referrer };
+    try {
+      new URL(landing.url).searchParams.forEach((v, k) => {
+        if (/^utm_(source|medium|campaign|term|content)$/.test(k)) props[k] = v;
+      });
+    } catch {}
+    instance.capture("$pageview", props);
+  }
   for (const [method, args] of queue.splice(0)) {
     try {
       (instance[method] as (...a: unknown[]) => unknown)(...args);
@@ -119,21 +132,21 @@ async function load() {
   });
 }
 
-/** Starts PostHog after the load event, in idle time (3 s at most). */
+/** Starts PostHog on the first interaction, or 15 s after load for readers. */
 export function startPostHogAfterLoad() {
   if (typeof window === "undefined" || loading) return;
+  // Landing page and referrer as seen at hydration, before any navigation.
+  landing = { url: window.location.href, referrer: document.referrer };
   loading = new Promise<void>((resolve) => {
     const go = () => {
       load()
         .catch(() => {})
         .finally(resolve);
     };
-    const idle = () => {
+    afterFirstInteraction(() => {
       if (typeof window.requestIdleCallback === "function") window.requestIdleCallback(go, { timeout: 3000 });
       else window.setTimeout(go, 1);
-    };
-    if (document.readyState === "complete") idle();
-    else window.addEventListener("load", idle, { once: true });
+    });
   });
 }
 
