@@ -487,19 +487,19 @@ export default async function HomePage(
       )}
 
       {/* ── Hero ─────────────────────────────────────────────────────── */}
-      <section className="abstract-background relative w-full bg-background px-5 pb-16 pt-14 sm:px-8 sm:pb-20 sm:pt-18 lg:pt-24">
+      <section className="abstract-background relative w-full bg-background px-5 pb-16 pt-6 sm:px-8 sm:pb-20 sm:pt-18 lg:pt-24">
         <div className="mx-auto w-full max-w-[1200px]">
           <Reveal from="bottom">
             <p className="text-[0.68rem] font-semibold uppercase tracking-[0.26em] text-brand-hover dark:text-brand">
               {t.eyebrow}
             </p>
-            <h1 className="mt-4 max-w-[16ch] text-balance text-5xl font-semibold leading-[0.98] tracking-tight text-foreground sm:text-6xl md:text-7xl lg:text-8xl">
+            <h1 className="mt-2 max-w-[16ch] text-balance text-4xl sm:mt-4 sm:text-5xl font-semibold leading-[0.98] tracking-tight text-foreground sm:text-6xl md:text-7xl lg:text-8xl">
               {t.headline}
             </h1>
-            <p className="site-hero-description mt-6 max-w-[52ch] text-lg leading-8 text-muted-foreground sm:mt-8 sm:text-xl">
+            <p className="site-hero-description mt-3 max-w-[52ch] text-base leading-7 text-muted-foreground sm:mt-8 sm:text-xl sm:leading-8">
               {heroIntro}
             </p>
-            <div className="mt-6 flex sm:mt-10 w-full flex-col items-stretch gap-3 sm:w-auto sm:flex-row sm:items-center">
+            <div className="mt-4 flex sm:mt-10 w-full flex-col items-stretch gap-3 sm:w-auto sm:flex-row sm:items-center">
               <TrackedLink id="home-hero-cta" cta="home_hero_contact" href={`${localePrefix}/contact/`} className="w-full sm:w-auto" prefetch={false}>
                 <Button
                   size="lg"
