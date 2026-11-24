@@ -182,25 +182,17 @@ export default function CookieConsent({ locale = "fr", labels }: Props) {
               window.dispatchEvent(new CustomEvent("open-cookie-settings"));
             } catch {}
           }}
-          className="group fixed right-4 bottom-4 z-40 inline-flex size-12 items-center justify-center rounded-full border border-white/70 text-white transition-all duration-300 bg-[linear-gradient(180deg,#F2C77A_0%,#E59C2E_100%)] shadow-[0_12px_30px_-16px_rgba(229,156,46,0.9)] hover:-translate-y-0.5 hover:shadow-[0_16px_35px_-18px_rgba(229,156,46,1)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#E59C2E] focus-visible:ring-offset-2 motion-reduce:transform-none motion-reduce:transition-none"
+          className="group fixed bottom-3 left-3 z-40 inline-flex size-11 items-center justify-center rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background sm:bottom-5 sm:left-5"
           data-cookie-manage="true"
           aria-label={labels.Manage}
         >
           <span
-            className="absolute inset-0 rounded-full bg-[#E59C2E]/20 blur-lg transition-opacity duration-300 group-hover:opacity-80"
-            aria-hidden="true"
-          />
-          <span
-            className="absolute inset-0 rounded-full bg-white/12"
-            aria-hidden="true"
-          />
-          <span
-            className="pointer-events-none absolute right-[calc(100%+0.75rem)] top-1/2 hidden -translate-y-1/2 rounded-full border bg-background/95 px-3 py-1.5 text-xs font-medium text-foreground opacity-0 shadow-sm transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100 group-focus-visible:translate-x-0 group-focus-visible:opacity-100 sm:block"
+            className="flex size-9 items-center justify-center rounded-full border border-border bg-background text-muted-foreground transition-colors duration-200 group-hover:text-foreground"
             aria-hidden="true"
           >
-            {labels.Manage}
+            <CookieIcon className="size-5" />
           </span>
-          <CookieIcon className="relative size-5 text-white" />
+          <span className="sr-only">{labels.Manage}</span>
         </button>
       )}
 
