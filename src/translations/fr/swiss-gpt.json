@@ -1,8 +1,8 @@
 {
     "Hero": {
         "Badge": "Plateforme IA hébergée en Suisse",
-        "Title": "GPT d'entreprise pour la Suisse",
-        "Description": "Accédez aux derniers modèles d'IA avec une souveraineté complète des données. GPT-4.1, GPT-5, o3 et plus—déployés dans des centres de données suisses, sans jamais quitter votre juridiction."
+        "Title": "Swiss GPT : le chat IA privé de votre entreprise",
+        "Description": "Swiss GPT est l'espace IA de houle.ai pour les équipes : une plateforme hébergée sur Azure en Suisse, avec GPT, Claude, Mistral et Llama dans le même chat. Connexion par Microsoft Entra ID, journaux d'audit, et vos données ne servent jamais à entraîner les modèles."
     },
     "Features": {
         "Title": "IA d'entreprise sans compromis",

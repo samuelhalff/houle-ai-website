@@ -85,7 +85,7 @@ export default function WhatsAppButton({ locale }: { locale: Locale }) {
       onClick={() =>
         trackEvent("contact_channel_click", {
           channel: "whatsapp",
-          location: "floating_button",
+          placement: "floating_button",
         })
       }
       target="_blank"

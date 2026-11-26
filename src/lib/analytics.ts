@@ -17,8 +17,19 @@ import { AI_SOURCE_KEY, gaClientIdFromCookies, readConsentChoice } from "@/src/l
 export type AnalyticsParams = Record<string, string | number | boolean>;
 
 const posthogConfigured = Boolean(process.env.NEXT_PUBLIC_POSTHOG_PROJECT_TOKEN && process.env.NEXT_PUBLIC_POSTHOG_HOST);
-/** Events mirrored to PostHog (same set as ark-fid.ch, without its own product events). */
-const posthogEvents = new Set(["contact_form_start", "form_submit_error", "generate_lead"]);
+/**
+ * Events mirrored to PostHog: the contact form funnel plus the lead clicks
+ * (cta_click: links to /contact and other calls to action; contact_channel_click:
+ * booking, email, WhatsApp). Parameters carry paths and labels only, never
+ * what the visitor typed.
+ */
+const posthogEvents = new Set([
+  "contact_form_start",
+  "form_submit_error",
+  "generate_lead",
+  "cta_click",
+  "contact_channel_click",
+]);
 
 export function trackEvent(name: string, params?: AnalyticsParams) {
   if (name === "generate_lead") {

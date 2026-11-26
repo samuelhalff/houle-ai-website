@@ -265,7 +265,7 @@ const MobileMenu = ({
               onClick={() =>
                 trackEvent("contact_channel_click", {
                   channel: "email",
-                  location: "mobile_menu",
+                  placement: "mobile_menu",
                 })
               }
               className="flex min-h-11 items-center text-sm text-muted-foreground transition-colors hover:text-foreground"

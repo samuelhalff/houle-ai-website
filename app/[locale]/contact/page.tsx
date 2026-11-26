@@ -9,8 +9,9 @@ import { ContactForm } from "@/src/components/ui/contact-form-client";
 import PageFaq, { faqEntries } from "@/src/components/seo/PageFaq";
 import { getCspNonce } from "@/src/lib/csp";
 import { getTranslationsRecord } from "@/src/lib/i18n";
+import ContactChannelLink from "@/src/components/ui/contact-channel-link";
 
-const BOOKING_URL = "https://outlook.office.com/bookwithme/user/409097336fec47ef9ad61beeef96c884@houle.ai/meetingtype/L5kPsZfevE6i7S7hiOL8Cg2?anonymous&amp;ismsaljsauthenabled&amp;ep=mlink";
+const BOOKING_URL = "https://outlook.office.com/bookwithme/user/409097336fec47ef9ad61beeef96c884@houle.ai/meetingtype/L5kPsZfevE6i7S7hiOL8Cg2?anonymous&ismsaljsauthenabled&ep=mlink";
 
 export async function generateMetadata(
   props: { params: Promise<{ locale: string }> }
@@ -297,9 +298,15 @@ export default async function ContactPage(
               </p>
             </div>
             <Button asChild size="lg" className="btn-main-cta rounded-full bg-foreground px-6 text-background">
-              <a href={BOOKING_URL} target="_blank" rel="noopener noreferrer">
+              <ContactChannelLink
+                href={BOOKING_URL}
+                channel="booking"
+                placement="contact_page"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <span>{strings.bookingButton}</span>
-              </a>
+              </ContactChannelLink>
             </Button>
           </div>
 
@@ -307,8 +314,10 @@ export default async function ContactPage(
             <p className="text-sm font-medium text-foreground">
               {strings.writeLabel}
             </p>
-            <a
+            <ContactChannelLink
               href={whatsappLink}
+              channel="whatsapp"
+              placement="contact_page"
               target="_blank"
               rel="noopener noreferrer"
               aria-label={whatsapp.floatingAriaLabel}
@@ -325,9 +334,11 @@ export default async function ContactPage(
                   {strings.whatsappDescription}
                 </span>
               </span>
-            </a>
-            <a
+            </ContactChannelLink>
+            <ContactChannelLink
               href="mailto:contact@houle.ai"
+              channel="email"
+              placement="contact_page"
               className="flex items-start gap-3 rounded-xl border border-border/70 px-4 py-3 transition-colors hover:bg-accent/40"
               aria-label="Email contact@houle.ai"
             >
@@ -345,7 +356,7 @@ export default async function ContactPage(
                   contact@houle.ai
                 </span>
               </span>
-            </a>
+            </ContactChannelLink>
           </div>
       </div>
 

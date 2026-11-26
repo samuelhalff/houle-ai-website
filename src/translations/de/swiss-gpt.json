@@ -1,8 +1,8 @@
 {
     "Hero": {
         "Badge": "In der Schweiz gehostete KI-Plattform",
-        "Title": "Unternehmens-GPT für die Schweiz",
-        "Description": "Zugang zu den neuesten KI-Modellen mit vollständiger Datensouveränität. GPT-4.1, GPT-5, o3 und mehr—in Schweizer Rechenzentren bereitgestellt, verlässt nie Ihre Jurisdiktion."
+        "Title": "Swiss GPT: der private KI-Chat für Ihr Unternehmen",
+        "Description": "Swiss GPT ist der KI-Arbeitsplatz von houle.ai für Teams: eine Plattform auf Azure in der Schweiz, mit GPT, Claude, Mistral und Llama im selben Chat. Anmeldung über Microsoft Entra ID, Audit-Logs, und Ihre Daten werden nie zum Training von Modellen verwendet."
     },
     "Features": {
         "Title": "Unternehmens-KI ohne Kompromisse",

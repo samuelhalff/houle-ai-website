@@ -1,8 +1,8 @@
 {
     "Hero": {
         "Badge": "Swiss-Hosted AI Platform",
-        "Title": "Enterprise GPT for Switzerland",
-        "Description": "Access the latest AI models with complete data sovereignty. GPT-4.1, GPT-5, o3, and more—deployed in Swiss data centers, never leaving your jurisdiction."
+        "Title": "Swiss GPT: private AI chat for your company",
+        "Description": "Swiss GPT is houle.ai's AI workspace for teams: a platform hosted on Azure in Switzerland, with GPT, Claude, Mistral and Llama in the same chat. Sign-in through Microsoft Entra ID, audit logs, and your data is never used to train models."
     },
     "Features": {
         "Title": "Enterprise AI Without Compromise",

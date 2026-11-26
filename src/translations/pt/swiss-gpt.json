@@ -1,89 +1,89 @@
 {
     "Hero": {
-        "Badge": "Swiss-Hosted AI Platform",
-        "Title": "Enterprise GPT for Switzerland",
-        "Description": "Access the latest AI models with complete data sovereignty. GPT-4.1, GPT-5, o3, and more—deployed in Swiss data centers, never leaving your jurisdiction."
+        "Badge": "Plataforma de IA alojada na Suíça",
+        "Title": "Swiss GPT: o chat de IA privado da sua empresa",
+        "Description": "Swiss GPT é o espaço de IA da houle.ai para equipas: uma plataforma alojada no Azure na Suíça, com GPT, Claude, Mistral e Llama no mesmo chat. Acesso com Microsoft Entra ID, registos de auditoria, e os seus dados nunca são usados para treinar modelos."
     },
     "Features": {
-        "Title": "Enterprise AI Without Compromise",
-        "Description": "The most advanced language models, with Swiss privacy guarantees.",
+        "Title": "IA empresarial sem compromissos",
+        "Description": "Os modelos de linguagem mais avançados, com garantias suíças de privacidade.",
         "Models": {
-            "Title": "Latest AI Models",
-            "Description": "Access GPT-5, GPT-4.1, o3, Claude, Llama, and Mistral. Models deployed on Azure infrastructure in Switzerland North. Immediate access to new releases without data residency concerns."
+            "Title": "Últimos modelos de IA",
+            "Description": "Acesso a GPT-5, GPT-4.1, o3, Claude, Llama e Mistral. Modelos implementados na infraestrutura do Azure em Switzerland North. Acesso imediato a novas versões sem preocupações com a residência dos dados."
         },
         "Privacy": {
-            "Title": "Swiss Data Sovereignty",
-            "Description": "All conversations and documents remain in Swiss data centers. Zero-retention policy: your data is never used for model training. Full compliance with Swiss Federal Data Protection Act and GDPR."
+            "Title": "Soberania suíça dos dados",
+            "Description": "Todas as conversas e documentos permanecem em centros de dados suíços. Política de retenção zero: os seus dados nunca são usados para treinar modelos. Conformidade total com a Lei federal suíça sobre a proteção de dados e com o RGPD."
         },
         "Search": {
-            "Title": "Web-Grounded Responses",
-            "Description": "Real-time web search integration with Bing, keeping all queries within Swiss infrastructure. Get current information and cited sources for fact-checking. Configurable per user or team."
+            "Title": "Respostas baseadas na web",
+            "Description": "Pesquisa web em tempo real com o Bing, mantendo todas as consultas dentro da infraestrutura suíça. Obtenha informação atual e fontes citadas para verificação de factos. Configurável por utilizador ou por equipa."
         },
         "Enterprise": {
-            "Title": "Enterprise-Grade Platform",
-            "Description": "Single sign-on with Microsoft Entra ID or your existing identity provider. Admin controls for model access, usage quotas, and content filters. Activity logging and audit trails for compliance."
+            "Title": "Plataforma de nível empresarial",
+            "Description": "Início de sessão único com o Microsoft Entra ID ou o seu fornecedor de identidade atual. Controlos de administração para o acesso aos modelos, as quotas de utilização e os filtros de conteúdo. Registo de atividade e trilhos de auditoria para conformidade."
         }
     },
     "Benefits": {
-        "Title": "Built for Regulated Industries",
+        "Title": "Concebida para setores regulados",
         "Legal": {
-            "Title": "Legal Professionals",
-            "Description": "Analyze case law, draft contracts, and research precedents with AI assistance. Client confidentiality guaranteed with Swiss hosting. No risk of sensitive information leaving jurisdiction."
+            "Title": "Profissionais do direito",
+            "Description": "Analise jurisprudência, redija contratos e pesquise precedentes com apoio da IA. Confidencialidade do cliente garantida pelo alojamento na Suíça. Sem risco de a informação sensível sair da jurisdição."
         },
         "Finance": {
-            "Title": "Financial Services",
-            "Description": "Regulatory compliance analysis, report generation, and client communications. Meet FINMA requirements with data that never crosses borders. Full audit trails for regulatory review."
+            "Title": "Serviços financeiros",
+            "Description": "Análise de conformidade regulamentar, geração de relatórios e comunicações com clientes. Cumpra os requisitos da FINMA com dados que nunca atravessam fronteiras. Trilhos de auditoria completos para revisão regulamentar."
         },
         "Healthcare": {
-            "Title": "Healthcare Providers",
-            "Description": "Administrative automation and documentation assistance while maintaining patient confidentiality. Compliant with medical privacy regulations. Secure environment for sensitive health data."
+            "Title": "Prestadores de cuidados de saúde",
+            "Description": "Automatização administrativa e apoio à documentação, preservando a confidencialidade dos doentes. Em conformidade com a regulamentação de privacidade médica. Ambiente seguro para dados de saúde sensíveis."
         },
         "Professional": {
-            "Title": "Professional Services",
-            "Description": "Consultants, accountants, and advisors handling confidential client information. Competitive advantage through AI without compromising trust. Swiss quality and discretion."
+            "Title": "Serviços profissionais",
+            "Description": "Consultores, contabilistas e assessores que tratam informação confidencial de clientes. Vantagem competitiva graças à IA sem comprometer a confiança. Qualidade e discrição suíças."
         }
     },
     "Technical": {
-        "Title": "Technical Infrastructure",
+        "Title": "Infraestrutura técnica",
         "Location": {
-            "Title": "Swiss Data Center Location",
-            "Description": "Hosted in Azure Switzerland North (Zurich region). All processing, storage, and backups remain within Swiss borders. Network traffic never transits foreign jurisdictions."
+            "Title": "Localização do centro de dados na Suíça",
+            "Description": "Alojado no Azure Switzerland North (região de Zurique). Todo o processamento, armazenamento e cópias de segurança permanecem dentro das fronteiras suíças. O tráfego de rede nunca transita por jurisdições estrangeiras."
         },
         "Security": {
-            "Title": "Enterprise Security",
-            "Description": "Encryption at rest and in transit with Swiss-managed keys. Multi-factor authentication enforced. Role-based access controls and session management. SOC 2 Type II certified infrastructure."
+            "Title": "Segurança empresarial",
+            "Description": "Cifragem em repouso e em trânsito com chaves geridas na Suíça. Autenticação multifator obrigatória. Controlos de acesso baseados em funções e gestão de sessões. Infraestrutura certificada SOC 2 Type II."
         },
         "Integration": {
-            "Title": "Seamless Integration",
-            "Description": "API access for custom integrations with your internal systems. Connect to SharePoint, OneDrive, and Azure services. Webhook support for workflow automation."
+            "Title": "Integração fluida",
+            "Description": "Acesso por API para integrações personalizadas com os seus sistemas internos. Ligação ao SharePoint, ao OneDrive e aos serviços do Azure. Suporte de webhooks para automatização de fluxos de trabalho."
         },
         "Support": {
-            "Title": "Local Support",
-            "Description": "Geneva-based support team available in French, German, and English. Dedicated account management for enterprise clients. SLA guarantees with Swiss business hours coverage."
+            "Title": "Suporte local",
+            "Description": "Equipa de suporte sediada em Genebra, disponível em francês, alemão e inglês. Gestão de conta dedicada para clientes empresariais. Garantias de SLA com cobertura em horário de expediente suíço."
         }
     },
     "Comparison": {
-        "Title": "Why Not Standard ChatGPT?",
+        "Title": "Porque não o ChatGPT standard?",
         "Items": [
             {
-                "Issue": "Data leaves Switzerland",
-                "Solution": "All processing in Swiss data centers"
+                "Issue": "Os dados saem da Suíça",
+                "Solution": "Todo o processamento em centros de dados suíços"
             },
             {
-                "Issue": "Used for model training",
-                "Solution": "Zero-retention policy guaranteed"
+                "Issue": "Usados para treinar modelos",
+                "Solution": "Política de retenção zero garantida"
             },
             {
-                "Issue": "No compliance guarantees",
-                "Solution": "Swiss and EU regulatory compliance"
+                "Issue": "Sem garantias de conformidade",
+                "Solution": "Conformidade com a regulamentação suíça e da UE"
             },
             {
-                "Issue": "Consumer-grade platform",
-                "Solution": "Enterprise controls and audit logs"
+                "Issue": "Plataforma para consumidores",
+                "Solution": "Controlos empresariais e registos de auditoria"
             },
             {
-                "Issue": "No SSO integration",
-                "Solution": "Microsoft Entra ID and SAML support"
+                "Issue": "Sem integração SSO",
+                "Solution": "Suporte de Microsoft Entra ID e SAML"
             }
         ]
     },
