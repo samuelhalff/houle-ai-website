@@ -1,10 +1,14 @@
 {
   "queue": [
-    "modeles-open-source-heberges-en-suisse-guide-decision",
     "quest-ce-quun-agent-ia-fonctionnement",
     "cout-agent-ia-pme-suisse"
   ],
-  "done": [],
+  "done": [
+    {
+      "slug": "modeles-open-source-heberges-en-suisse-guide-decision",
+      "date": "2026-11-27"
+    }
+  ],
   "failed": [
     {
       "slug": "politique-usage-ia-clauses-gouvernance",
@@ -16,8 +20,5 @@
       "date": "2026-11-12",
       "reason": "refresh: [refresh] agence-ia-geneve-services-comparer-offres: draft"
     }
-  ],
-  "attempts": {
-    "modeles-open-source-heberges-en-suisse-guide-decision": 1
-  }
+  ]
 }
